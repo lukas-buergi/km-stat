@@ -2,10 +2,10 @@ from django.db import models
 
 class Uebersetzungen(models.Model):
 	""" Enthält alles, was übersetzt werden muss. """
-	de = models.TextField()
-	fr = models.TextField()
-	it = models.TextField()
-	en = models.TextField()
+	de = models.TextField(blank=True)
+	fr = models.TextField(blank=True)
+	it = models.TextField(blank=True)
+	en = models.TextField(blank=True)
 
 class Kontrollregimes(models.Model):
 	""" Die verschiedenen Kontrollregimes. Ich glaube im Moment macht es keinen Sinn das Datum des Inkrafttretens und Aufgehobenwordenseins zu speichern. Gibt schon länger nur die gleichen, oder? """
