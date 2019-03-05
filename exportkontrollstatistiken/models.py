@@ -2,11 +2,16 @@ from django.db import models
 
 class Uebersetzungen(models.Model):
 	""" Enthält alles, was übersetzt werden muss. """
+
 	de = models.TextField(blank=True)
 	fr = models.TextField(blank=True)
 	it = models.TextField(blank=True)
 	en = models.TextField(blank=True)
 
+	def __str__(self):
+		""" Sollte je nach Spracheinstellung die richtige Sprache zurückgeben und dann auf andere Sprachen zurückfallen wenn es diese nicht gibt. TODO. """
+		return(self.de)
+		
 class Kontrollregimes(models.Model):
 	""" Die verschiedenen Kontrollregimes. Ich glaube im Moment macht es keinen Sinn das Datum des Inkrafttretens und Aufgehobenwordenseins zu speichern. Gibt schon länger nur die gleichen, oder? """
 	name = models.ForeignKey(Uebersetzungen, on_delete=models.PROTECT)
@@ -39,13 +44,22 @@ class Laender(models.Model):
 
 class QuellenGeschaefte(models.Model):
 	""" Offizielle Quelle für jedes Geschäft. Eine Quelle ist normalerweise Quelle für viele Geschäfte."""
+
 	name = models.ForeignKey(Uebersetzungen, on_delete=models.PROTECT)
 	""" Der Name der Quelle, wie der Text des Downloadlinks auf der Secowebseite. Falls die eigentliche Quelle nur Deutsch ist, dann bei den anderen Sprachen zusätzlich Warnung, dass die Quelle Deutsch ist, "(allemand)". """
+
 	download = models.FileField()
 	""" Die Datei, die die Quelle darstellt. Eigene Kopie für den Fall, dass das Seco die Adressen ändert oder so. TODO: Sollte wohl validiert werden, dass die Dateien harmlos sind, obwohl der Upload ja nur von vertrauenswürdigen Menschen kommen sollte. """
-	link = models.URLField()
-	""" Link auf die Secoseite, wo der Downloadlink sein sollte. Nicht direkt auf die Datei. """
 
+	link = models.URLField(max_length=3000)
+	""" Link auf die Secoseite, wo der Downloadlink sein sollte. Nicht direkt auf die Datei. Die Adressen des Seco sind sehr lang (mindestens 1500 Zeichen lang gibt es) und es braucht hier eine maximale Länge."""
+
+	def __str__(self):
+		if(self.name != ""):
+			return(str(self.name))
+		else: # Ich glaube nicht dass das eine gute Lösung ist, andererseits sollte der Fall eh nicht eintreten.
+			return("QuellenGeschaefte " + self.pk)
+		
 class QuellenProbleme(models.Model):
 	""" Quellen für jedes Problem, als Link. """
 	link = models.URLField()
