@@ -11,13 +11,24 @@ class Uebersetzungen(models.Model):
 	def __str__(self):
 		""" Sollte je nach Spracheinstellung die richtige Sprache zurückgeben und dann auf andere Sprachen zurückfallen wenn es diese nicht gibt. TODO. """
 		return(self.de)
+
+	class Meta:
+		verbose_name = 'Übersetzung'
+		verbose_name_plural = 'Übersetzungen'
 		
 class Kontrollregimes(models.Model):
-	""" Die verschiedenen Kontrollregimes. Ich glaube im Moment macht es keinen Sinn das Datum des Inkrafttretens und Aufgehobenwordenseins zu speichern. Gibt schon länger nur die gleichen, oder? """
+	""" Die verschiedenen Kontrollregimes:
+	* KMV (Kriegsmaterial)
+	* GKV/GKG (946.202.1/946.202, zivil und militärisch verwendbare Güter, besondere militärische Güter sowie strategische Güter)
+	* ChKV (946.202.21, Chemikalien für Chemiewaffen)
+	* Safeguardsverordnung (732.12, gegen nukleare Proliferation)
+	* Verordnung über die Ausfuhr und Vermittlung von Gütern zur Internet- und Mobilfunküberwachung (946.202.3)
+	* EmbG (Embargos, nicht unbedingt irgendwas mit Kriegsmaterial im weistesten Sinn, oder?
+	TODO: Datum des Inkrafttretens und Aufgehobenwordenseins. """
 	name = models.ForeignKey(Uebersetzungen, on_delete=models.PROTECT)
 
 class Exportkontrollnummern(models.Model):
-	""" Enthält die Anhänge mit den Beschreibungen der Nummern. Wird erst bei Gelegenheit eingelesen. """
+	""" Enthält die Anhänge mit den Beschreibungen der Nummern. Die Beschreibung wird erst bei Gelegenheit eingelesen, aber zumindest die Nummern selbst braucht es bevor ein Geschäft mit dieser Nummer eingetragen wird. """
 	kontrollregime = models.ForeignKey(Kontrollregimes, on_delete=models.PROTECT)
 	""" Zu welchem Kontrollregime die Nummer gehört. Vor allem relevant falls es doppelte Nummern gibt oder der Inhalt der Listen geändert wird (dann würde man ein neues Kontrollregime erstellen und da eintragen). """
 	nummer = models.CharField(max_length=10)
@@ -26,14 +37,13 @@ class Exportkontrollnummern(models.Model):
 	""" Die Beschreibung aus der Liste. Ich bin nicht sicher ob die übersetzt werden, falls nicht bleiben die anderen Spalten der fehlenden Sprachen halt leer. """
 
 class Geschaeftstypen(models.Model):
-	""" Einzelbewilligung. Ist eine Spalte in den offiziellen Statistiken, deswegen hier halt auch. """
+	""" Ob es für das Geschäft oder die Geschäfte eine (oder mehrere) Einzelbewilligungen gebraucht hat, oder nicht. Für Kriegsmaterial braucht es immer eine Einzelbewilligung, sonst gibt es eine Liste von Ländern, für die es keine braucht. Wie heisst die andere Art von Bewilligung?"""
 	name = models.ForeignKey(Uebersetzungen, on_delete=models.PROTECT)
-	""" Einzelbewilligung und Übersetzungen. """
 
 class Geschaeftsrichtungen(models.Model):
-	""" Ausfuhr oder Vermittlung oder ??? """
+	""" Ausfuhr, Vermittlung, etc. Sehr theoretisch, habe bisher nur Ausfuhr gesehen. """
 	name = models.ForeignKey(Uebersetzungen, on_delete=models.PROTECT)
-	""" Ausfuhr oder Vermittlung oder ??? """
+	""" Ausfuhr, Vermittlung, etc. Sehr theoretisch, habe bisher nur Ausfuhr gesehen. """
 
 class Laender(models.Model):
 	""" Liste der Länder, in die exportiert wird. Vielleicht braucht das noch lat. und long., aber vielleicht eher nicht?"""
@@ -42,13 +52,16 @@ class Laender(models.Model):
 	name = models.ForeignKey(Uebersetzungen, on_delete=models.PROTECT)
 	""" Voller Name des Landes. """
 
+	def __str__(self):
+		return(self.code)
+
 class QuellenGeschaefte(models.Model):
 	""" Offizielle Quelle für jedes Geschäft. Eine Quelle ist normalerweise Quelle für viele Geschäfte."""
 
 	name = models.ForeignKey(Uebersetzungen, on_delete=models.PROTECT)
 	""" Der Name der Quelle, wie der Text des Downloadlinks auf der Secowebseite. Falls die eigentliche Quelle nur Deutsch ist, dann bei den anderen Sprachen zusätzlich Warnung, dass die Quelle Deutsch ist, "(allemand)". """
 
-	download = models.FileField()
+	download = models.FileField(upload_to='quellenGeschaefte/')
 	""" Die Datei, die die Quelle darstellt. Eigene Kopie für den Fall, dass das Seco die Adressen ändert oder so. TODO: Sollte wohl validiert werden, dass die Dateien harmlos sind, obwohl der Upload ja nur von vertrauenswürdigen Menschen kommen sollte. """
 
 	link = models.URLField(max_length=3000)
@@ -73,9 +86,13 @@ class Geschaefte(models.Model):
 	nummer = models.PositiveIntegerField(blank=True, null=True)
 	""" Offizielle Geschäftsnummer, wo vorhanden. Bei älteren Statistiken wo diese Nummer nicht vorhanden ist steht ein Eintrag für mehrere Geschäfte """
 	bestimmungsland = models.ForeignKey(Laender, on_delete=models.PROTECT)
-	""" Bestimmungsland oder Endempfängerstaat - TODO: Unterschied genau herausfinden und hier verbessern."""
+	""" Ist bei allen verwendeten Statistiken Endempfängerstaat, nicht Bestimmungsland, oder? - TODO: Genau herausfinden und hier verbessern."""
 	kontrollregime = models.ForeignKey(Kontrollregimes, on_delete=models.PROTECT)
-	""" Gesetzliche Grundlage für die Kontrolle, Kriegsmaterial, bes. mil. Güter, etc. Im Prinzip steht das bei der Exportkontrollnummer auch schon. Lassen?"""
+	""" TODO: Das sollte die abstrakte Kategorie sein, nicht das Gesetz. Also genau
+	* Kriegsmaterial
+	* Besondere militärische Güter - oder einfach nur Kriegsmaterial? Wenn man es separat macht kann man es nachher immer noch gleich anzeigen.
+	* Dual use
+	* Sanktionsgüter - Das sollte wohl normalerweise ausgenommen werden von den Totalen, oder?"""
 	typ = models.ForeignKey(Geschaeftstypen, on_delete=models.PROTECT)
 	""" Einzelbewilligung oder sonst etwas? """
 	richtung = models.ForeignKey(Geschaeftsrichtungen, on_delete=models.PROTECT)
