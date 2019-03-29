@@ -151,7 +151,7 @@ class Exportkontrollnummern(models.Model):
 	""" Zu welchem Kontrollregime die Nummer gehört. Vor allem relevant falls es doppelte Nummern gibt oder der Inhalt der Listen geändert wird (dann würde man ein neues Kontrollregime erstellen und da eintragen). """
 	nummer = models.CharField(max_length=10)
 	""" Die Nummer. """
-	beschreibung = models.ForeignKey(Uebersetzungen, on_delete=models.PROTECT, blank=True)
+	beschreibung = models.ForeignKey(Uebersetzungen, on_delete=models.PROTECT, blank=True, null=True)
 	""" Die Beschreibung aus der Liste. Ich bin nicht sicher ob die übersetzt werden, falls nicht bleiben die anderen Spalten der fehlenden Sprachen halt leer. Ist zumindest vorerst optional."""
 	
 	def __str__(self):
