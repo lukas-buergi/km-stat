@@ -188,9 +188,22 @@ class Geschaefte(models.Model):
 	quelle = models.ForeignKey(QuellenGeschaefte, on_delete=models.PROTECT)
 	""" Die offizielle Quelle für den Eintrag. Ich glaube es gibt die immer nur auf Deutsch, sonst müsste man das noch anpassen um auch die anderen anzubieten. """
 	
+	def __str__(self):
+		return(str(self.beginn)+"-"+str(self.endempfaengerstaat)+"-"+str(self.exportkontrollnummer)+"-"+str(self.umfang))
+	
 	class Meta:
 		verbose_name = 'Geschäft'
 		verbose_name_plural = 'Geschäfte'
+
+class GeschaefteImport(models.Model):
+	"""Hilfsmodell zum Import der alten Daten, hat gleiche Struktur wie "export" Tabelle dort."""
+	code = models.CharField(max_length=2)
+	art = models.CharField(max_length=40)
+	system = models.CharField(max_length=10)
+	kategorie = models.CharField(max_length=15)
+	datum = models.DateField()
+	betrag = models.PositiveIntegerField()
+	
 
 class ProblemArtenGesetz(models.Model):
 	""" Liste der Gesetzesabschnitte, die Gründe enthalten, warum Exporte verboten werden. """
