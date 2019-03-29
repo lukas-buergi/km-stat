@@ -15,29 +15,9 @@ class Uebersetzungen(models.Model):
 	class Meta:
 		verbose_name = 'Übersetzung'
 		verbose_name_plural = 'Übersetzungen'
-		
-class Kontrollregimes(models.Model):
-	""" Die verschiedenen Kontrollregimes:
-	* KMV (Kriegsmaterial)
-	* GKV/GKG (946.202.1/946.202, zivil und militärisch verwendbare Güter, besondere militärische Güter sowie strategische Güter)
-	* ChKV (946.202.21, Chemikalien für Chemiewaffen)
-	* Safeguardsverordnung (732.12, gegen nukleare Proliferation)
-	* Verordnung über die Ausfuhr und Vermittlung von Gütern zur Internet- und Mobilfunküberwachung (946.202.3)
-	* EmbG (Embargos, nicht unbedingt irgendwas mit Kriegsmaterial im weistesten Sinn, oder?
-	TODO: Datum des Inkrafttretens und Aufgehobenwordenseins. """
-	name = models.ForeignKey(Uebersetzungen, on_delete=models.PROTECT)
 
-class Exportkontrollnummern(models.Model):
-	""" Enthält die Anhänge mit den Beschreibungen der Nummern. Die Beschreibung wird erst bei Gelegenheit eingelesen, aber zumindest die Nummern selbst braucht es bevor ein Geschäft mit dieser Nummer eingetragen wird. """
-	kontrollregime = models.ForeignKey(Kontrollregimes, on_delete=models.PROTECT)
-	""" Zu welchem Kontrollregime die Nummer gehört. Vor allem relevant falls es doppelte Nummern gibt oder der Inhalt der Listen geändert wird (dann würde man ein neues Kontrollregime erstellen und da eintragen). """
-	nummer = models.CharField(max_length=10)
-	""" Die Nummer. """
-	beschreibung = models.ForeignKey(Uebersetzungen, on_delete=models.PROTECT)
-	""" Die Beschreibung aus der Liste. Ich bin nicht sicher ob die übersetzt werden, falls nicht bleiben die anderen Spalten der fehlenden Sprachen halt leer. """
-
-class Geschaeftstypen(models.Model):
-	""" Ob es für das Geschäft oder die Geschäfte eine (oder mehrere) Einzelbewilligungen gebraucht hat, oder nicht. Für Kriegsmaterial braucht es immer eine Einzelbewilligung, sonst gibt es eine Liste von Ländern, für die es keine braucht. Wie heisst die andere Art von Bewilligung?"""
+class Bewilligungstypen(models.Model):
+	""" Ob es für das Geschäft oder die Geschäfte eine (oder mehrere) Einzelbewilligungen gebraucht hat, oder nicht. Für Kriegsmaterial braucht es immer eine Einzelbewilligung, sonst gibt es eine Liste von Ländern, für die es keine braucht. Wie heisst die andere Art von Bewilligung? Siehe 514.51 12ff"""
 	name = models.ForeignKey(Uebersetzungen, on_delete=models.PROTECT)
 
 class Geschaeftsrichtungen(models.Model):
@@ -70,7 +50,7 @@ class QuellenGeschaefte(models.Model):
 	def __str__(self):
 		if(self.name != ""):
 			return(str(self.name))
-		else: # Ich glaube nicht dass das eine gute Lösung ist, andererseits sollte der Fall eh nicht eintreten.
+		else: # Ich glaube nicht dass das eine gute Lösung ist, andererseits sollte der Fall eh nicht eintreten. TODO
 			return("QuellenGeschaefte " + self.pk)
 		
 class QuellenProbleme(models.Model):
@@ -80,20 +60,53 @@ class QuellenProbleme(models.Model):
 	sprache = models.CharField(max_length=2)
 	""" Code für die Sprache der Quelle, DE, FR, IT, EN. """
 
-class Geschaefte(models.Model):
-	""" Ein Eintrag steht für ein oder mehrere Geschäfte, je nach Datenlage. """
-	
-	nummer = models.PositiveIntegerField(blank=True, null=True)
-	""" Offizielle Geschäftsnummer, wo vorhanden. Bei älteren Statistiken wo diese Nummer nicht vorhanden ist steht ein Eintrag für mehrere Geschäfte """
-	bestimmungsland = models.ForeignKey(Laender, on_delete=models.PROTECT)
-	""" Ist bei allen verwendeten Statistiken Endempfängerstaat, nicht Bestimmungsland, oder? - TODO: Genau herausfinden und hier verbessern."""
-	kontrollregime = models.ForeignKey(Kontrollregimes, on_delete=models.PROTECT)
-	""" TODO: Das sollte die abstrakte Kategorie sein, nicht das Gesetz. Also genau
+class GueterArten(models.Model):
+	""" Warum das Gut reguliert wird.
 	* Kriegsmaterial
 	* Besondere militärische Güter - oder einfach nur Kriegsmaterial? Wenn man es separat macht kann man es nachher immer noch gleich anzeigen.
 	* Dual use
 	* Sanktionsgüter - Das sollte wohl normalerweise ausgenommen werden von den Totalen, oder?"""
-	typ = models.ForeignKey(Geschaeftstypen, on_delete=models.PROTECT)
+	name = models.ForeignKey(Uebersetzungen, on_delete=models.PROTECT)
+
+class Kontrollregimes(models.Model):
+	""" Die verschiedenen Kontrollregimes:
+	* KMV (Kriegsmaterial): Anhang 1, KM1-KM22
+	* GKV/GKG (946.202.1/946.202, zivil und militärisch verwendbare Güter, besondere militärische Güter sowie strategische Güter):
+		* Anhänge 1 und 2: Dual Use, MTCR, NSG, CWÜ, Australische Gruppe: [0-9][A-Z][0-9]{3}[a-z][0-9]+
+		* Anhang 3: bes. mil. Güter, ML1-ML22
+		* Anhang 4: strategische Güter, LEER
+		* Anhang 5: k.A., "Güter, die nationalen Ausfuhrkontrollen unterliegen", https://www.admin.ch/opc/de/classified-compilation/20151950/index.html#app4ahref1
+	* ChKV (946.202.21, Chemikalien für Chemiewaffen):
+		* Liste 1-3: abnehmende Gefährlichkeit, Form [1-3][AB][0-9]+, aber vielleicht haben diese Sachen auch eine Nummer in GKV Anhang 2 Teil 2 um 1C350 rum.
+	* Safeguardsverordnung (732.12, gegen nukleare Proliferation): Keine Liste (?), es geht nur um wenige Güter die im Gesetzestext definiert sind.
+	* Verordnung über die Ausfuhr und Vermittlung von Gütern zur Internet- und Mobilfunküberwachung (946.202.3): Im Anhang sind GKN aus GKV Anhang 2 aufgelistet
+	* EmbG (946.231, Embargos, nicht unbedingt irgendwas mit Kriegsmaterial im weistesten Sinn, oder?): Keine Ahnung wo die Listen sind. """
+	name = models.ForeignKey(Uebersetzungen, on_delete=models.PROTECT)
+	gueterArt = models.ForeignKey(GueterArten, on_delete=models.PROTECT)
+	inkrafttreten = models.DateField()
+	aufgehobenwerden = models.DateField(blank=True)
+
+class Exportkontrollnummern(models.Model):
+	""" Enthält die Anhänge mit den Beschreibungen der Nummern. Die Beschreibung wird erst bei Gelegenheit eingelesen, aber zumindest die Nummern selbst braucht es bevor ein Geschäft mit dieser Nummer eingetragen wird. """
+	kontrollregime = models.ForeignKey(Kontrollregimes, on_delete=models.PROTECT)
+	""" Zu welchem Kontrollregime die Nummer gehört. Vor allem relevant falls es doppelte Nummern gibt oder der Inhalt der Listen geändert wird (dann würde man ein neues Kontrollregime erstellen und da eintragen). """
+	nummer = models.CharField(max_length=10)
+	""" Die Nummer. """
+	beschreibung = models.ForeignKey(Uebersetzungen, on_delete=models.PROTECT, blank=True)
+	""" Die Beschreibung aus der Liste. Ich bin nicht sicher ob die übersetzt werden, falls nicht bleiben die anderen Spalten der fehlenden Sprachen halt leer. Ist zumindest vorerst optional."""
+
+class Geschaefte(models.Model):
+	""" Ein Eintrag steht für ein oder mehrere Geschäfte, je nach Datenlage. Die Daten gibt es von
+	* https://www.seco.admin.ch/seco/de/home/Aussenwirtschaftspolitik_Wirtschaftliche_Zusammenarbeit/Wirtschaftsbeziehungen/exportkontrollen-und-sanktionen/industrieprodukte--dual-use--und-besondere-militaerische-gueter/statistik/2015.html
+	* https://www.seco.admin.ch/seco/de/home/Aussenwirtschaftspolitik_Wirtschaftliche_Zusammenarbeit/Wirtschaftsbeziehungen/exportkontrollen-und-sanktionen/ruestungskontrolle-und-ruestungskontrollpolitik--bwrp-/zahlen-und-statistiken0.html """
+	
+	nummer = models.PositiveIntegerField(blank=True, null=True)
+	""" Offizielle Geschäftsnummer, wo vorhanden. Bei Statistiken wo diese Nummer nicht vorhanden ist steht ein Eintrag für mehrere Geschäfte """
+	endempfaengerstaat = models.ForeignKey(Laender, on_delete=models.PROTECT)
+	""" Ist bei allen verwendeten Statistiken Endempfängerstaat, nicht Bestimmungsland, oder? - TODO: Genau herausfinden und hier verbessern."""
+	art = models.ForeignKey(GueterArten, on_delete=models.PROTECT)
+	
+	bewilligungstyp = models.ForeignKey(Bewilligungstypen, on_delete=models.PROTECT)
 	""" Einzelbewilligung oder sonst etwas? """
 	richtung = models.ForeignKey(Geschaeftsrichtungen, on_delete=models.PROTECT)
 	""" Ausfuhr, Vermittlung, sonstwas? """
@@ -111,7 +124,7 @@ class Geschaefte(models.Model):
 class ProblemArtenGesetz(models.Model):
 	""" Liste der Gesetzesabschnitte, die Gründe enthalten, warum Exporte verboten werden. """
 	gesetz = models.CharField(max_length=30)
-	""" Gesetz in Kurzschreibweise wie "KMV 5 IId". TODO: Übersetzung?"""
+	""" Gesetz in Kurzschreibweise wie "514.511 5 IId". Dann kann man automatisch eine sprachabhängige längere Variante generieren. """
 
 class ProblemArten(models.Model):
 	""" Kategorisierung der Probleme unter anderem nach Erwähnung in KMV. Einträge sollten mindestens sein:
