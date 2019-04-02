@@ -72,6 +72,7 @@ class apiParam():
         # countries
         if(countries=="all"):
             self.countries=~Q()
+            self.countriesSingle=False
         else:
             while(len(countries)>=2):
                 code=countries[:2]
@@ -82,12 +83,15 @@ class apiParam():
                     raise(ValueError)
             if(len(countries)!=0):
                 raise(ValueError)
-                
+
+            self.countriesSingle = len(self.countries) == 1
+            
             # or the countries together
             qcountries=Q()
             for q in self.countries:
                 qcountries |= q
             self.countries=qcountries
+
     
 
 def gapi(request, granularity, countries, types, year1, year2, sortby, perpage, pageNumber):
@@ -143,10 +147,15 @@ def gapi(request, granularity, countries, types, year1, year2, sortby, perpage, 
     elif(p.granularity=="individual"):
         queryset = queryset.order_by(p.sortBy)
         queryset = queryset[perpage*(pageNumber-1):perpage*pageNumber]
+        
+        titleRow=["Datum", "Art", "EKN", "Umfang"]
+        if(not p.countriesSingle):
+            titleRow = ["Ländercode", "Land"] + titleRow
+        writer.writerow(titleRow)
+        
         for g in queryset:
             row=[g.beginn, g.exportkontrollnummer.kontrollregime.gueterArt.name.de, g.exportkontrollnummer, g.umfang]
-            if(len(countries)>2):
-                # more than one 2 letter country code given
+            if(not p.countriesSingle):
                 row = [g.endempfaengerstaat.code, g.endempfaengerstaat.name.de] + row
             writer.writerow(row)
 

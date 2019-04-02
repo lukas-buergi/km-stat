@@ -1,9 +1,12 @@
-{% if queryset %}
-    <ul>
-    {% for g in queryset %}
-        <li> {{ g.umfang }} </li>
-    {% endfor %}
-    </ul>
-{% else %}
-    <p>Keine Geschäfte vorhanden.</p>
-{% endif %}
+{% load static %}
+
+<!DOCTYPE html>
+<meta charset='utf-8'>
+<html>
+  <head>
+    <script src="http://d3js.org/d3.v5.js" charset="utf-8"></script>
+  </head>
+  <body>
+    <script type='text/javascript' src="{% static 'exportkontrollstatistiken/script.js' %}"></script>
+  </body>
+</html>
