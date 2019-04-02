@@ -3,5 +3,6 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path('', views.index, name='index'),
+    path('api/g/<granularity>/<countries>/<types>/<int:year1>/<int:year2>/<sortby>/<int:perpage>/<int:pageNumber>', views.gapi, name='gapi'),
+    path('', views.table, name='table'),
 ]

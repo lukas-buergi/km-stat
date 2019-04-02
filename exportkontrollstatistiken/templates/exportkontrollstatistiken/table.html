@@ -1,0 +1,9 @@
+{% if queryset %}
+    <ul>
+    {% for g in queryset %}
+        <li> {{ g.umfang }} </li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>Keine Geschäfte vorhanden.</p>
+{% endif %}

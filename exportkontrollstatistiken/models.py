@@ -120,7 +120,7 @@ class GueterArten(models.Model):
 class Kontrollregimes(models.Model):
 	""" Die verschiedenen Kontrollregimes:
 	* KMV (Kriegsmaterial): Anhang 1, KM1-KM22
-	* GKV/GKG (946.202.1/946.202, zivil und militärisch verwendbare Güter, besondere militärische Güter sowie strategische Güter):
+	* GKV/GKG (946.202, zivil und militärisch verwendbare Güter, besondere militärische Güter sowie strategische Güter):
 		* Anhänge 1 und 2: Dual Use, MTCR, NSG, CWÜ, Australische Gruppe: [0-9][A-Z][0-9]{3}[a-z][0-9]+
 		* Anhang 3: bes. mil. Güter, ML1-ML22
 		* Anhang 4: strategische Güter, LEER
@@ -174,9 +174,9 @@ class Geschaefte(models.Model):
 	endempfaengerstaat = models.ForeignKey(Laender, on_delete=models.PROTECT)
 	""" Ist bei allen verwendeten Statistiken Endempfängerstaat, nicht Bestimmungsland, oder? - TODO: Genau herausfinden und hier verbessern."""	
 	bewilligungstyp = models.ForeignKey(Bewilligungstypen, on_delete=models.PROTECT)
-	""" Einzelbewilligung oder sonst etwas? """
+	""" Einzelbewilligung. Alles andere ist nicht implementiert."""
 	richtung = models.ForeignKey(Geschaeftsrichtungen, on_delete=models.PROTECT)
-	""" Ausfuhr, Vermittlung, sonstwas? """
+	""" Ausfuhr. Alles andere ist nicht implementiert. """
 	exportkontrollnummer = models.ForeignKey(Exportkontrollnummern, on_delete=models.PROTECT)
 	""" Was wurde exportiert? Vielleicht sollten da mehrere Nummern erlaubt sein, weil ein Gut vielleicht unter mehrere Kontrollregime fallen kann. """
 	umfang = models.PositiveIntegerField()
@@ -185,7 +185,7 @@ class Geschaefte(models.Model):
 	""" Der Beginn des Geschäfts. Normalerweise der 1. Januar des Jahres, weil nichts genaueres bekannt ist. """
 	ende = models.DateField()
 	""" Das Ende des Geschäftes. Geschäfte können über mehrere Jahren gehen stand irgendwo auf der Secowebseite (macht ja Sinn). Ich schätze das sieht man bei neueren Statistiken an der Nummer und bei älteren wurde das Geschäft wahrscheinlich nur in einem Jahr einbezogen nehme ich an (keine Ahnung). """
-	quelle = models.ForeignKey(QuellenGeschaefte, on_delete=models.PROTECT)
+	quelle = models.ForeignKey(QuellenGeschaefte, on_delete=models.PROTECT, blank=True, null=True)
 	""" Die offizielle Quelle für den Eintrag. Ich glaube es gibt die immer nur auf Deutsch, sonst müsste man das noch anpassen um auch die anderen anzubieten. """
 	
 	def __str__(self):
@@ -226,7 +226,11 @@ class ProblemArten(models.Model):
 	* Internationaler bew. Konflikt (KMV 5 IIa)
 	* Gibt es ein hohes Risiko, dass das Kriegsmaterial gegen die Zivilbevölkerung eingesetzt wird? (KMV 5 IId)
 	* Interner bew. Konflikt (KMV 5 IIa)
-	* Gibt es ein hohes Risiko, dass das Kriegsmaterial unerlaubt weitergegeben wird? (KMV 5 IIe)"""
+	* Gibt es ein hohes Risiko, dass das Kriegsmaterial unerlaubt weitergegeben wird? (KMV 5 IIe)
+
+	Gute Quellen dafür sind mindestens:
+	* AI Berichte zur Menschenrechtslage
+	* Uppsala Conflict Data Program https://ucdp.uu.se"""
 	kurzbeschreibung = models.ForeignKey(Uebersetzungen, on_delete=models.PROTECT)
 	""" Kurze Beschreibung des Problems. """
 	gesetz = models.ForeignKey(ProblemArtenGesetz, blank=True, null=True, on_delete=models.PROTECT)
