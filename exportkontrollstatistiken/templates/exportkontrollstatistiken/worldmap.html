@@ -165,19 +165,9 @@ const margin = {top: 0, right: 0, bottom: 0, left: 0};
 const width = 960 - margin.left - margin.right;
 const height = 500 - margin.top - margin.bottom;
 
-const color = d3.scaleQuantile()
-  .range([
-    'rgb(247,251,255)',
-    'rgb(222,235,247)', 
-    'rgb(198,219,239)', 
-    'rgb(158,202,225)',
-    'rgb(107,174,214)',
-    'rgb(66,146,198)',
-    'rgb(33,113,181)',
-    'rgb(8,81,156)',
-    'rgb(8,48,107)',
-    'rgb(3,19,43)'
-  ]);
+const color = d3.scaleLog()
+  .domain([10e5,10e9])
+  .range(["white", "red"]);
 
 
 const svg = d3.select('body')
@@ -210,21 +200,6 @@ function ready(error, geography, data) {
 
   data.forEach(d => { colorVariableValueByID[d[geoIDVariable]] = d[colorVariable]; });
   geography.features.forEach(d => { d[colorVariable] = colorVariableValueByID[d.id] });
-
-  // set the domain of the color scale based on our data
-  color
-   .domain([
-     10000,
-     100000,
-     500000,
-     1000000,
-     5000000,
-     10000000,
-     50000000,
-     100000000,
-     500000000,
-     1500000000
-   ]);
 
   svg.append('g')
     .attr('class', 'countries')
