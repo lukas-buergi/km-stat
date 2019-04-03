@@ -82,9 +82,8 @@
 <script src="http://d3js.org/topojson.v1.min.js"></script>
 <script src="https://d3js.org/d3-geo-projection.v1.min.js"></script>
 <script src="static/exportkontrollstatistiken/d3-tip.js"></script>
-<script src='https://unpkg.com/simple-statistics@2.0.0/dist/simple-statistics.min.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.10.3/babel.min.js'></script>
-<script lang='babel' type='text/babel'>
+
+<script type='text/javascript'>
 // configuration
 const colorVariable = 'population';
 const geoIDVariable = 'id';
@@ -212,36 +211,20 @@ function ready(error, geography, data) {
   data.forEach(d => { colorVariableValueByID[d[geoIDVariable]] = d[colorVariable]; });
   geography.features.forEach(d => { d[colorVariable] = colorVariableValueByID[d.id] });
 
-  // calculate ckmeans clusters
-  // then use the max value of each cluster
-  // as a break
-  const numberOfClasses = color.range().length - 1;
-  const ckmeansClusters = ss.ckmeans(data.map(d => d[colorVariable]), numberOfClasses);
-  const ckmeansBreaks = ckmeansClusters.map(d => d3.min(d));
-  console.log('numberOfClasses', numberOfClasses);
-  console.log('ckmeansClusters', ckmeansClusters);
-  console.log('ckmeansBreaks', ckmeansBreaks);
-
   // set the domain of the color scale based on our data
   color
-    .domain(ckmeansBreaks);
-  //
-  // .domain(jenksNaturalBreaks)
-  //
-  // .domain(d3.extent(data, d => d[colorVariable]));
-  //
-  // .domain([
-  //   10000,
-  //   100000,
-  //   500000,
-  //   1000000,
-  //   5000000,
-  //   10000000,
-  //   50000000,
-  //   100000000,
-  //   500000000,
-  //   1500000000
-  // ]);
+   .domain([
+     10000,
+     100000,
+     500000,
+     1000000,
+     5000000,
+     10000000,
+     50000000,
+     100000000,
+     500000000,
+     1500000000
+   ]);
 
   svg.append('g')
     .attr('class', 'countries')

@@ -170,9 +170,11 @@ def table(request):
     return HttpResponse(template.render(context, request))
 
 def worldmap(request):
-    #queryset = Geschaefte.objects.all()[:5]
     template = loader.get_template('exportkontrollstatistiken/worldmap.html')
-    context = {
-    #    'queryset': queryset,
-    }
+    context = {}
+    return HttpResponse(template.render(context, request))
+
+def index(request):
+    template = loader.get_template('exportkontrollstatistiken/index.html')
+    context = {}
     return HttpResponse(template.render(context, request))
