@@ -52,7 +52,10 @@ class apiParam():
         if(sortby not in self.sortByChoices):
             raise(ValueError)
         self.sortBy=self.sortByChoices[sortby]
-        
+
+        if(self.granularity=="summed" and self.sortBy not in ["-umfang", "umfang"]):
+            raise(ValueError)
+                
         if(0>year1 or year1 > year2):
             raise(ValueError)
 
@@ -92,6 +95,9 @@ class apiParam():
                 qcountries |= q
             self.countries=qcountries
 
+        if(self.granularity=="summedPerYear" and not self.countriesSingle and self.sortBy in ["-beginn", "beginn"]):
+            raise(NotImplementedError)
+
     
 
 def gapi(request, granularity, countries, types, year1, year2, sortby, perpage, pageNumber):
@@ -121,28 +127,72 @@ def gapi(request, granularity, countries, types, year1, year2, sortby, perpage, 
         # sort by country
         # sum up consecutive entries
         # until the country changes
-        # sort by descending value TODO: Complain if other sort requested
+        # sort by value TODO: Complain if other sort requested
         queryset = queryset.order_by("endempfaengerstaat")
         sums=dict()
         curCountry = None
         for g in queryset:
             if(g.endempfaengerstaat!=curCountry):
                 curCountry=g.endempfaengerstaat
-                curSum=0
+                curSum=g.umfang
                 sums[curCountry] = curSum
             else:
                 sums[curCountry]+=g.umfang
 
-        for country in sorted(sums, key=sums.get, reverse=True):
+        if(p.sortBy=="-umfang"):
+            reverse=True
+        else:
+            reverse=False
+        
+        for country in sorted(sums, key=sums.get, reverse=reverse):
             writer.writerow([country.code, country.name.de, sums[country]])
                 
         
     elif(p.granularity=="summedPerYear"):
-        raise(NotImplementedError)
         # sort by country, year
         # sum up consecutive entries
         # until country or year changes
-        # sort according to p.sortBy
+        # sort according to p.sortBy, but only certain combinations are valid:
+        # * date asc+des, for a single country (that's the original order after the summing algorithm)
+        # * value, descending (sort like for p.granularity=="summed")
+
+        if(p.sortBy in ["beginn","-beginn"]):
+            firstSort=p.sortBy
+        else:
+             # in that case it can be either because later it's sorted again anyway
+            firstSort="beginn"
+            
+        queryset = queryset.order_by("endempfaengerstaat", firstSort)
+
+        for g in queryset:
+            print(g)
+
+        sums=dict()
+        curCountry = None
+        curYear = None
+        for g in queryset:
+            if(g.endempfaengerstaat!=curCountry or g.beginn.year!=curYear):
+                curCountry = g.endempfaengerstaat
+                curYear = g.beginn.year
+                curSum = g.umfang
+                sums[str(curCountry) + str(curYear)] = [curSum, curYear, curCountry]
+            else:
+                sums[str(curCountry) + str(curYear)][0] += g.umfang
+
+        reverse=None
+        if(p.sortBy == "-umfang"):
+            reverse=True
+        elif(p.sortBy == "umfang"):
+            reverse=False
+        
+        if(reverse==None):
+            order=sums
+        else:
+            order=sorted(sums, key=lambda key : sums.get(key)[0], reverse=reverse) # does this work? TODO
+        
+        for country in order:
+            writer.writerow([sums[country][2].code, sums[country][2].name.de, sums[country][1], sums[country][0]])
+
         
     elif(p.granularity=="individual"):
         queryset = queryset.order_by(p.sortBy)

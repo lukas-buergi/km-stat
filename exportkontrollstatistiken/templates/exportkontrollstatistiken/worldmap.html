@@ -158,16 +158,16 @@ tip.offset(function(d) { // [top, left]
 })
 
 d3.select('body')
-    .style('overflow', 'hidden');
+    //.style('overflow', 'hidden');
 
 const parentWidth = d3.select('body').node().getBoundingClientRect().width;
 const margin = {top: 0, right: 0, bottom: 0, left: 0};
-const width = 960 - margin.left - margin.right;
-const height = 500 - margin.top - margin.bottom;
+const width = parentWidth - margin.left - margin.right;
+const height = parentWidth/2 - margin.top - margin.bottom;
 
 const color = d3.scaleLog()
   .domain([10e5,10e9])
-  .range(["white", "red"]);
+  .range(['rgb(255,200,200)', "red"]);
 
 
 const svg = d3.select('body')
@@ -178,7 +178,7 @@ const svg = d3.select('body')
   .attr('class', 'map');
 
 const projection = d3.geoRobinson()
-  .scale(148)
+  //.scale(100)
   .rotate([352, 0, 0])
   .translate( [width / 2, height / 2]);
 
