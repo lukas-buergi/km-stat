@@ -770,8 +770,8 @@ Programmschnittstellen
 \end_layout
 
 \begin_layout Itemize
-eine für jede Tabellenart von oben, die als get-Parameter alle relevanten
- Filterparameter unterstützt
+eine für jede Tabellenart von oben, die alle relevanten Filterparameter
+ unterstützt
 \end_layout
 
 \begin_deeper
@@ -812,8 +812,23 @@ Geplante Schritte:
 \end_layout
 
 \begin_layout Enumerate
-Daten vom Seco zusammensuchen/beschaffen und in neue Datenbank eintragen,
- vorerst nur diejenigen die in der alten Datenbank noch nicht sind
+Kartenskalierungsapi
+\end_layout
+
+\begin_layout Enumerate
+Kartencode weiter aufräumen, muss auf neuere d3-Version.
+\end_layout
+
+\begin_layout Enumerate
+Filtermasken schreiben
+\end_layout
+
+\begin_layout Enumerate
+Zusammenbauen zur Seite für mehrere Länder
+\end_layout
+
+\begin_layout Enumerate
+Daten vom Seco zusammensuchen/beschaffen und in neue Datenbank eintragen
 \end_layout
 
 \begin_deeper
@@ -822,17 +837,17 @@ von der Webseite
 \end_layout
 
 \begin_layout Enumerate
-vielleicht Kontakt aufnehmen und schauen ob es noch mehr gibt
+vielleicht Kontakt aufnehmen und schauen ob die PDFs auch als Tabellenformat
+ gibt.
 \end_layout
 
 \end_deeper
 \begin_layout Enumerate
-Die Daten aus der neuen in die alte Datenbank kopieren, damit mittelfristig
- die Webseite wieder auf dem neuen Stand ist
+Aufräumen
 \end_layout
 
 \begin_layout Enumerate
-Die Webseite für die neue Datenbank bauen/anpassen
+Problem/Skandaldatenbank ausbauen, Detailseite für einzelne Länder schreiben
 \end_layout
 
 \begin_layout Section

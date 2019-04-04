@@ -566,7 +566,8 @@ Array mit den Stücken der Transformation
 \end_layout
 
 \begin_layout Enumerate
-Koordinate auf ganze Grade gerundet könnte Index sein
+Koordinate auf ganze Grade gerundet könnte Index sein (wenn man für jedes
+ Grad eine Skalierung will, sonst eine ähnliche Rechnung)
 \end_layout
 
 \end_deeper
@@ -769,8 +770,8 @@ Programmschnittstellen
 \end_layout
 
 \begin_layout Itemize
-eine für jede Tabellenart von oben, die als get-Parameter alle relevanten
- Filterparameter unterstützt
+eine für jede Tabellenart von oben, die alle relevanten Filterparameter
+ unterstützt
 \end_layout
 
 \begin_deeper
