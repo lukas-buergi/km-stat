@@ -1,0 +1,320 @@
+%% LyX 2.3.2 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[english]{article}
+\usepackage[T1]{fontenc}
+\usepackage[latin9]{inputenc}
+\usepackage{amstext}
+\usepackage{babel}
+\usepackage{listings}
+\renewcommand{\lstlistingname}{Listing}
+
+\begin{document}
+
+\section{Ordner-Struktur:}
+\begin{description}
+\item [{.}] Wordpress
+\item [{./map}] Zweckgebaute CakePHP 3 Seite
+\item [{./site}] Kriegsmaterialexportverbotsabstimmungswebseite, statisches
+HTML?
+\item [{./kriegsmaterialwiki}] MediaWiki auf das die CakePHP 3 Seite verlinkt
+\end{description}
+
+\section{Wordpress, ``Ausgeschossen''-Kampagne}
+
+HINWEIS: Wurde von Lukas ausgeschalten, entfernt.
+
+\subsection{Ansprechpersonen}
+\begin{itemize}
+\item Lukas
+\item vielleicht Andi
+\item wer hat die ursprünglich gemacht?
+\end{itemize}
+
+\subsection{Infos}
+\begin{itemize}
+\item Gar nicht so viel Inhalt glaube ich, aber war von der Darstellung
+mal schön/extra angepasst
+\item Passwort für Account admin im Wordpress: ohp3aiTha6eengohri2A
+\item Wartungsmodus durch SeedPod Coming Soon Page and Maintenance Mode
+Lite Plugin, unbedingt wieder deinstallieren wenn nicht mehr gebraucht.
+Für eingeloggte Benutzer ist die Seite normal erreichbar.
+\item 2019-02-24 aktualisiert worden, inkl. Plugins
+\end{itemize}
+
+\subsection{Zu tun}
+\begin{itemize}
+\item Das Übersetzungsplugin macht die Hauptseite kaputt, wenn es aktiviert
+wird.
+\item Das Theme Concept macht die Hauptseite kaputt, wenn es aktiviert wird
+\item Andere 404-Probleme haben mit kaputten Links zu tun, die statt auf
+kriegsmaterial.ch auf kriegsmaterial.ch.augustus.sui-inter.net/kriegsmaterial/
+verweisen.
+\item Wahrscheinlich gibt es weitere Probleme
+\end{itemize}
+
+\section{MediaWiki, Exportskandale und -informationen}
+\begin{itemize}
+\item Die Seite mit den Exportstatistiken verlinkt auf Seiten dieses Wiki,
+von denen es für jeden Skandal eine geben sollte
+\item Problem mit CSS/Theme
+\item Sonst scheint es oberflächlich betrachtet zu funktionieren
+\item Braucht Aktualisierung (nehme ich an)
+\item Die paar Artikel die ich angeschaut habe brauchen alle eine Überarbeitung
+bzw. sind weit von der Qualität von z.B. der GSoA-Zeitung entfernt.
+\end{itemize}
+
+\section{Karte Exportstatistiken und Skandale}
+
+\subsection{Ansprechpersonen:}
+\begin{itemize}
+\item Lukas buergi.lukas@gmail.com
+\item Andi andi@gsoa.ch
+\item Kaju Bubanja hat das ursprünglich geschrieben
+\end{itemize}
+
+\subsection{Infos alte Webseite}
+\begin{description}
+\item [{git}] https://github.com/Kaju-Bubanja/GSOA
+\item [{DB-Config:}] kriegsmaterial/config/app.php
+\item [{Startseite:}] kriegsmaterial/src/Template/Export/test.ctp
+\item [{Controller,}] der AJAX-Request beantwortet: kriegsmaterial/src/Controller/ExportController.php
+\item [{Statistiken:}] 
+\begin{itemize}
+\item https://www.seco.admin.ch/seco/de/home/Aussenwirtschaftspolitik\_Wirtschaftliche\_Zusammenarbeit/Wirtschaftsbeziehungen/exportkontrollen-und-sanktionen/industrieprodukte-{}-dual-use-{}-und-besondere-militaerische-gueter/statistik/2015.html
+\item https://www.seco.admin.ch/seco/de/home/Aussenwirtschaftspolitik\_Wirtschaftliche\_Zusammenarbeit/Wirtschaftsbeziehungen/exportkontrollen-und-sanktionen/ruestungskontrolle-und-ruestungskontrollpolitik-{}-bwrp-/zahlen-und-statistiken0.html
+\end{itemize}
+\item [{Coding-Stil}] Deutsch und Englisch gemischt. Ich (Lukas) bin ausnahmsweise
+für Deutsch.
+\end{description}
+
+\subsection{Datenbanklayout alt}
+
+\subsubsection{export-Tabelle}
+\begin{description}
+\item [{Code:}] Ländercode, Bestimmungsland oder Endempfängerstaat?
+\item [{Art:}] Kriegsmaterial, bes. mil. Güter, Dual Use: 
+\begin{lstlisting}
+SELECT *, COUNT(*) FROM export GROUP BY Art
+\end{lstlisting}
+
+\begin{description}
+\item [{Kriegsmaterial:}] nur nach System Wassenaar und in diversen Kategorien:
+\begin{lstlisting}
+SELECT *, COUNT(*) FROM export WHERE export.Art="Kriegsmaterial" GROUP BY System, Kategorie
+\end{lstlisting}
+\item [{Besondere~militärische~Güter:}] nur nach System ML und in diversen
+Kategorien: 
+\begin{lstlisting}
+SELECT *, COUNT(*) FROM export WHERE export.Art="Besondere militärische Güter" GROUP BY System, Kategorie
+\end{lstlisting}
+\item [{Dual-Use-Güter:}] in diversen Systemen und Kategorien, Systeme:
+Anhang 5, ChKV, NSGI, NSGII, Sanktionen, Wassenaar
+\begin{lstlisting}
+SELECT *, COUNT(*) FROM export WHERE export.Art="Dual-Use-Güter" GROUP BY System, Kategorie 
+\end{lstlisting}
+\end{description}
+\item [{System:}] Wassenaar, ML, Anhang 5, ChKV, NSGI, NSGII, Sanktionen
+\item [{Kategorie:}] 333 Stück, zum Teil Fehler drin.
+\end{description}
+
+\subsection{Datenbanklayout neu}
+
+Siehe models.py
+
+\subsection{Seiten neu}
+
+\subsubsection{Mehrere Länder}
+
+Von oben nach unten:
+\begin{itemize}
+\item Header
+\item Totalexportvolumen
+\item Karte
+\item Filtermaske
+\item Tabelle mit Ländertotalen 10 Zeilen. Ländertotale aus ganzem Datensatz
+vorausgewählt. Tabelle nach schlimmsten Exporten sortieren.
+\end{itemize}
+
+\subsubsection{Ein Land}
+
+Von oben nach unten:
+\begin{itemize}
+\item Header
+\item Totalexportvolumen
+\item Karte
+\item Filtermaske
+\item Diagramm mit Problem und Exportvolumen
+\item Tabelle mit Geschäften 10 Zeilen nach Datum von neu zu alt.
+\end{itemize}
+
+\subsubsection{Bauteile}
+\begin{itemize}
+\item Karte
+\begin{itemize}
+\item Pseudokartogramm nach Tobler, ohne zoom oder pan. Dabei wird jedes
+Längen- und Breitengrad in einer normalen Kartenprojektion einzeln
+skaliert. Jedes relevante Land hat eine Mindestgrösse, jedes Grad
+eine kleine Mindestgrösse und der Rest des Platzes wird proportional
+verteilt, abhängig von Geldwerten und Lage in dem Land. Begründung:
+\begin{itemize}
+\item Eine normale voll zoom- und verschiebbare Karte ist weder übersichtlich
+noch effizient
+\item Anforderungen:
+\begin{itemize}
+\item Alle relevanten Länder erkennbar
+\item geographischer Zusammenhang erkennbar
+\end{itemize}
+\end{itemize}
+\item Konkretisierung: Jedes Grad hat eine Mindestgrösse. Ein (Teil eines
+oder vielfaches eines) Grades in dem ein relevantes Land ist, hat
+eine grössere Mindestgrösse, die skaliert wird mit der Länge des Landes.
+Der Rest des Platzes wird proportional nach Exportzahlen verteilt,
+die Exportzahlen von Ländern mit Skandalen werden doppelt (oder anderer
+Faktor) gezählt.
+\item Implementierung: Sollte $\Theta\left(\left|\text{relevante Länder}\right|\right)$
+sein, also voll ok.
+\begin{itemize}
+\item $\frac{\pi}{n}$ (Breite) und $\frac{2\pi}{2n}$ (Länge) Teile, vielleicht
+$n=180$ (dann hätten wir Abschnitte von einem Längen- und Breitengrad)
+\item Die Skalierung der Breite und Länge ist vollkommen unabhängig voneinander
+\item Backend:
+\begin{itemize}
+\item Für jedes Land: Gehe durch alle Abschnitte, die das Land schneiden
+und erhöhe das Maximum des Geldes pro Grad des Grades wenn nötig.
+\item API gibt $3n$ Werte abhängig von den Filtern
+\end{itemize}
+\item Das Frontend macht mit den Werten eine Koordinatentransformation
+\begin{itemize}
+\item Definiere Transformationsfunktion
+\begin{enumerate}
+\item Array mit den Stücken der Transformation
+\item Koordinate auf ganze Grade gerundet könnte Index sein (wenn man für
+jedes Grad eine Skalierung will, sonst eine ähnliche Rechnung)
+\end{enumerate}
+\item Wende diese auf die Koordinaten an
+\item Aktualisiere die Darstellung
+\end{itemize}
+\end{itemize}
+\end{itemize}
+\item Diagramm inspiriert von dem Diagramm auf https://www.nzz.ch/schweiz/die-schweiz-exportiert-waffen-an-die-beiden-erzfeinde-indien-und-pakistan-ld.1463126
+\begin{itemize}
+\item x-Achse Zeit, y-Achse Geldwerte bzw. Art der Probleme
+\item Balkendiagramm mit vertikalen Balken für Exportzahlen
+\item horizontale Balken auf verschiedenen Höhen für bewaffnete Konflikte
+und andere Probleme aus Datenbank
+\end{itemize}
+\item Filter für mehrere Länder:
+\begin{itemize}
+\item Länderauswahl (drop down Liste, leitet auf Länderseiten weiter, vorauswahl
+``Alle''. Später anständig.)
+\item Filter Güterauswahl
+\item Ländertotal vs einzelne Geschäfte (später, erst nur Ländertotale)
+\item Zeitauswahl
+\item sortieren nach
+\begin{itemize}
+\item Betrag aufwärts/abwärts
+\item neu/alt nicht bei Ländertotalen, nur bei einzelnen Geschäften (später,
+erst wenn hier auch einzelne Geschäfte implementiert sind)
+\end{itemize}
+\item Zeilen pro Seite (Dropdown 10, 50, 100, 200, 500 oder so)
+\end{itemize}
+\item Filter für ein Land:
+\begin{itemize}
+\item Alle Länder (Link)
+\item Filter Güterauswahl
+\item Zeitauswahl
+\item sortieren nach
+\begin{itemize}
+\item Betrag aufwärts/abwärts
+\item neu/alt
+\end{itemize}
+\item Zeilen pro Seite (Dropdown 10, 50, 100, 200, 500 oder so)
+\end{itemize}
+\item Filter Zeitauswahl: Von (Jahr), Bis (Jahr)
+\item Filter Güterauswahl: Kriegsmaterial, Kriegsmaterial ohne besondere
+miliärische Güter, besondere militärische Güter, Dual Use, Embargo
+\item Tabelle mit Ländertotalen: ganze Zeile Link auf jeweiliges Land
+\begin{itemize}
+\item Flagge (nicht aus Datenbank/API)
+\item Ländercode
+\item Land
+\item Volumen
+\end{itemize}
+\item Tabelle mit Jahrestotalen: Wie Tabelle mit Ländertotalen, nur mit
+zusätzlicher Spalte für das Jahr
+\item Tabelle mit Geschäften:
+\begin{itemize}
+\item Flagge (nicht aus Datenbank/API)
+\item Ländercode
+\item Land (falls Platz)
+\item Zeit (nur Jahr falls genau ein Jahr, sonst genau von-bis)
+\item Art
+\item Was (so genau wie möglich)
+\item Volumen
+\end{itemize}
+\item Tabelle für einzelnes Land: Wie Tabelle mit Geschäften/Jahrestotalen,
+nur ohne die Spalten die das Land bezeichnen.
+\end{itemize}
+
+\subsubsection{Programmschnittstellen}
+\begin{itemize}
+\item eine für jede Tabellenart von oben, die als get-Parameter alle relevanten
+Filterparameter unterstützt
+\begin{itemize}
+\item individuelle Geschäfte
+\item Summen pro Land in dem Zeitraum
+\item Summen pro Jahr und Land in dem Zeitraum
+\end{itemize}
+Jeweils genau dann mit Ländercode und -namen falls mehr als ein Land
+ausgewählt ist.
+\item eine für die Kartentransformation, die die selben Parameter nimmt,
+aber nur die Skalierfaktoren zurückgibt. Ähnlich wie Summen pro Land
+in dem Zeitraum.
+\item eine für die Problemanzeige in Tabellen und den Doppelbalkendiagramme
+\end{itemize}
+
+\subsection{Zu tun}
+
+Geplante Schritte:
+\begin{enumerate}
+\item Daten vom Seco zusammensuchen/beschaffen und in neue Datenbank eintragen,
+vorerst nur diejenigen die in der alten Datenbank noch nicht sind
+\begin{enumerate}
+\item von der Webseite
+\item vielleicht Kontakt aufnehmen und schauen ob es noch mehr gibt
+\end{enumerate}
+\item Die Daten aus der neuen in die alte Datenbank kopieren, damit mittelfristig
+die Webseite wieder auf dem neuen Stand ist
+\item Die Webseite für die neue Datenbank bauen/anpassen
+\end{enumerate}
+
+\section{Abstimmungswebseite Kriegsmaterialexportverbot}
+
+\subsection{Ansprechpersonen}
+\begin{itemize}
+\item Lukas
+\item wer hat die ursprünglich gemacht?
+\end{itemize}
+
+\subsection{Infos}
+\begin{itemize}
+\item Ich weiss nicht, wie die Webseite funktioniert (hat). Abgesehen von
+statischem html habe ich nur einen sehr erwachsen benannten ``fckeditor''
+gefunden.
+\item Wurden die aktiven Teile einfach gelöscht? Das würde zum 404 passen,
+den man bekommt, wenn man einen Kommentar schreiben will
+\end{itemize}
+
+\subsection{Zu tun}
+\begin{itemize}
+\item Popup das behauptet die Webseite sei erst im Aufbau muss weg
+\item Vielleicht archivieren?
+\begin{itemize}
+\item Also Adressen und Inhalte für Suchmaschinen und andere erhalten
+\item in jede Seite oben Warnung und Link auf GSoA-Seite und/oder zur neu
+reparierten/aufgebauten Kriegsmaterialseite
+\item Restliche aktive Teile und Kommentarformulare entfernen.
+\end{itemize}
+\end{itemize}
+
+\end{document}
