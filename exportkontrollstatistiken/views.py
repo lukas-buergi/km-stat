@@ -8,7 +8,7 @@ import csv
 import itertools
 import datetime
 
-# TODO: Where does this belong?
+# TODO: Transform all of this into a class based view
 class apiParam():
     """Parst die Parameter und stellt sie in praktischeren Formen zur Verfügung bzw. stoppt wenn sie falsch sind."""
     
@@ -101,6 +101,7 @@ class apiParam():
 
 def individual(p, queryset, writer):
     queryset = queryset.order_by(p.sortBy)
+    # TODO: this exact slicing expression is used in 3 places
     queryset = queryset[p.perPage*(p.pageNumber-1):p.perPage*p.pageNumber]
     
     titleRow=["Datum", "Art", "EKN", "Umfang"]
@@ -153,10 +154,14 @@ def summedPerYear(p, queryset, writer):
         reverse=False
     
     if(reverse==None):
-        order=sums
+        order=sums.keys()
+        # need this so order is an array in both cases
     else:
         order=sorted(sums, key=lambda key : sums.get(key)[0], reverse=reverse)
-    
+
+    # TODO: this exact slicing expression is used in 3 places
+    order=order[p.perPage*(p.pageNumber-1):p.perPage*p.pageNumber]
+
     for country in order:
         writer.writerow([sums[country][2].code, sums[country][2].name.de, sums[country][1], sums[country][0]])
 
@@ -181,8 +186,13 @@ def summed(p, queryset, writer):
         reverse=True
     else:
         reverse=False
+
+    order = sorted(sums, key=sums.get, reverse=reverse)
     
-    for country in sorted(sums, key=sums.get, reverse=reverse):
+    # TODO: this exact slicing expression is used in 3 places
+    order = order[p.perPage*(p.pageNumber-1):p.perPage*p.pageNumber]
+    
+    for country in order:
         writer.writerow([country.code, country.name.de, sums[country]])
 
 def gapi(request, granularity, countries, types, year1, year2, sortBy, perPage, pageNumber):
@@ -216,6 +226,9 @@ def gapi(request, granularity, countries, types, year1, year2, sortBy, perPage, 
         individual(p, queryset, writer)
 
     return(response)
+
+# TODO: Restructure table and worldmap so that they can be included in other pages. Include them on the index.
+# TODO: Make table and worldmap take arguments
 
 def table(request):
     queryset = Geschaefte.objects.all()[:5]
