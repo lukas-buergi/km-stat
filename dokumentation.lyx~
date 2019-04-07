@@ -627,7 +627,7 @@ Filter Güterauswahl
 \end_layout
 
 \begin_layout Itemize
-Ländertotal vs einzelne Geschäfte (später, erst nur Ländertotale)
+Granularität (einzeln/Jahr/total)
 \end_layout
 
 \begin_layout Itemize
@@ -644,8 +644,7 @@ Betrag aufwärts/abwärts
 \end_layout
 
 \begin_layout Itemize
-neu/alt nicht bei Ländertotalen, nur bei einzelnen Geschäften (später, erst
- wenn hier auch einzelne Geschäfte implementiert sind)
+neu/alt nicht bei Ländertotalen, nur bei einzelnen Geschäften
 \end_layout
 
 \end_deeper
@@ -665,6 +664,10 @@ Alle Länder (Link)
 
 \begin_layout Itemize
 Filter Güterauswahl
+\end_layout
+
+\begin_layout Itemize
+Granularität=einzeln, ausgeblendet
 \end_layout
 
 \begin_layout Itemize
@@ -695,8 +698,9 @@ Filter Zeitauswahl: Von (Jahr), Bis (Jahr)
 \end_layout
 
 \begin_layout Itemize
-Filter Güterauswahl: Kriegsmaterial, Kriegsmaterial ohne besondere miliärische
- Güter, besondere militärische Güter, Dual Use, Embargo
+Filter Güterauswahl: Checkboxes für Kriegsmaterial, besondere militärische
+ Güter, Dual Use.
+ Wenn KM und DU aktiviert, dann automatisch auch BMG.
 \end_layout
 
 \begin_layout Itemize
@@ -812,8 +816,134 @@ Geplante Schritte:
 \end_layout
 
 \begin_layout Enumerate
-Daten vom Seco zusammensuchen/beschaffen und in neue Datenbank eintragen,
- vorerst nur diejenigen die in der alten Datenbank noch nicht sind
+Kartenskalierungsapi
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Ländercodes in json-Karte zu 2-char codes wechseln
+\end_layout
+
+\begin_layout Enumerate
+Ländergrössen (in L-/Bgraden) aus der json-Karte auslesen
+\end_layout
+
+\begin_layout Enumerate
+Ländernamen aus json-Karte entfernen
+\end_layout
+
+\begin_layout Enumerate
+karten-js anpassen, sodass es immer noch geht
+\end_layout
+
+\begin_layout Enumerate
+eigentliche api schreiben, vielleicht vorher schon auf view-Klassen umstrukturie
+ren
+\end_layout
+
+\begin_layout Enumerate
+js-funktion schreiben, die die Transformation macht
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Kartencode weiter aufräumen
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+muss auf neuere d3-Version
+\end_layout
+
+\begin_layout Enumerate
+Leerraum um Karte rum muss weg
+\end_layout
+
+\begin_layout Enumerate
+Pfeile wären schön? Ich denke dünne, alle gleich.
+ Vielleicht mit 3D Effekt, aber weiss nicht wie das geht.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Zusammenbauen zur Seite für mehrere Länder
+\end_layout
+
+\begin_layout Enumerate
+Filtermasken
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Filtermaske schreiben.
+ Wahrscheinlich am besten direkt in JS.
+\end_layout
+
+\begin_layout Enumerate
+Bei Veränderung
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+wird API-Parameter String neu generiert
+\end_layout
+
+\begin_layout Enumerate
+funktion zur Aktualisierung wird aufgerufen, die für Karte/Tabelle/etc.
+ jeweils eine Aktualisierungsfunktion aufruft
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+übergänge in js schreiben
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+karte
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Datenbankanfrage senden
+\end_layout
+
+\begin_layout Enumerate
+Animation zu neutraler Karte starten (kein Info-Popups, keine Verzerrung)
+\end_layout
+
+\begin_layout Enumerate
+Zu neuer Karte wechseln sobald Daten angekommen, ohne Animation
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+tabelle
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Datenbankanfrage senden
+\end_layout
+
+\begin_layout Enumerate
+Kontrast der Tabelle in Animation verringern.
+\end_layout
+
+\begin_layout Enumerate
+Zu neuer Tabelle wechseln sobald Daten angekommen, ohne Animation
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+url in js anpassen: https://stackoverflow.com/questions/824349/how-do-i-modify-th
+e-url-without-reloading-the-page
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Daten vom Seco zusammensuchen/beschaffen und in neue Datenbank eintragen
 \end_layout
 
 \begin_deeper
@@ -822,17 +952,29 @@ von der Webseite
 \end_layout
 
 \begin_layout Enumerate
-vielleicht Kontakt aufnehmen und schauen ob es noch mehr gibt
+vielleicht Kontakt aufnehmen und schauen ob die PDFs auch als Tabellenformat
+ gibt.
 \end_layout
 
 \end_deeper
 \begin_layout Enumerate
-Die Daten aus der neuen in die alte Datenbank kopieren, damit mittelfristig
- die Webseite wieder auf dem neuen Stand ist
+Aufräumen
 \end_layout
 
 \begin_layout Enumerate
-Die Webseite für die neue Datenbank bauen/anpassen
+wahrscheinlich haufenweise optimierungen+caching
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+wahrscheinlich sollte ich teilsummen speichern, vielleicht in 2 Dimensionen:
+ Güterart und Zeit, für jedes Land einzeln.
+ Oder für jede Güterart einzeln 1D.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Problem/Skandaldatenbank ausbauen, Detailseite für einzelne Länder schreiben
 \end_layout
 
 \begin_layout Section

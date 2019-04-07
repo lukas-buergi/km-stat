@@ -208,13 +208,12 @@ und andere Probleme aus Datenbank
 \item Länderauswahl (drop down Liste, leitet auf Länderseiten weiter, vorauswahl
 ``Alle''. Später anständig.)
 \item Filter Güterauswahl
-\item Ländertotal vs einzelne Geschäfte (später, erst nur Ländertotale)
+\item Granularität (einzeln/Jahr/total)
 \item Zeitauswahl
 \item sortieren nach
 \begin{itemize}
 \item Betrag aufwärts/abwärts
-\item neu/alt nicht bei Ländertotalen, nur bei einzelnen Geschäften (später,
-erst wenn hier auch einzelne Geschäfte implementiert sind)
+\item neu/alt nicht bei Ländertotalen, nur bei einzelnen Geschäften
 \end{itemize}
 \item Zeilen pro Seite (Dropdown 10, 50, 100, 200, 500 oder so)
 \end{itemize}
@@ -222,6 +221,7 @@ erst wenn hier auch einzelne Geschäfte implementiert sind)
 \begin{itemize}
 \item Alle Länder (Link)
 \item Filter Güterauswahl
+\item Granularität=einzeln, ausgeblendet
 \item Zeitauswahl
 \item sortieren nach
 \begin{itemize}
@@ -231,8 +231,8 @@ erst wenn hier auch einzelne Geschäfte implementiert sind)
 \item Zeilen pro Seite (Dropdown 10, 50, 100, 200, 500 oder so)
 \end{itemize}
 \item Filter Zeitauswahl: Von (Jahr), Bis (Jahr)
-\item Filter Güterauswahl: Kriegsmaterial, Kriegsmaterial ohne besondere
-miliärische Güter, besondere militärische Güter, Dual Use, Embargo
+\item Filter Güterauswahl: Checkboxes für Kriegsmaterial, besondere militärische
+Güter, Dual Use. Wenn KM und DU aktiviert, dann automatisch auch BMG.
 \item Tabelle mit Ländertotalen: ganze Zeile Link auf jeweiliges Land
 \begin{itemize}
 \item Flagge (nicht aus Datenbank/API)
@@ -278,9 +278,49 @@ in dem Zeitraum.
 Geplante Schritte:
 \begin{enumerate}
 \item Kartenskalierungsapi
-\item Kartencode weiter aufräumen, muss auf neuere d3-Version.
-\item Filtermasken schreiben
+\begin{enumerate}
+\item Ländercodes in json-Karte zu 2-char codes wechseln
+\item Ländergrössen (in L-/Bgraden) aus der json-Karte auslesen
+\item Ländernamen aus json-Karte entfernen
+\item karten-js anpassen, sodass es immer noch geht
+\item eigentliche api schreiben, vielleicht vorher schon auf view-Klassen
+umstrukturieren
+\item js-funktion schreiben, die die Transformation macht
+\end{enumerate}
+\item Kartencode weiter aufräumen
+\begin{enumerate}
+\item muss auf neuere d3-Version
+\item Leerraum um Karte rum muss weg
+\item Pfeile wären schön? Ich denke dünne, alle gleich. Wenn man die Mitte
+der Pfeile etwas nach oben zieht sollte das einen 3D-Effekt erzeugen.
+\end{enumerate}
 \item Zusammenbauen zur Seite für mehrere Länder
+\item Filtermasken
+\begin{enumerate}
+\item Filtermaske schreiben. Wahrscheinlich am besten direkt in JS.
+\item Bei Veränderung
+\begin{enumerate}
+\item wird API-Parameter String neu generiert
+\item funktion zur Aktualisierung wird aufgerufen, die für Karte/Tabelle/etc.
+jeweils eine Aktualisierungsfunktion aufruft
+\end{enumerate}
+\item übergänge in js schreiben
+\begin{enumerate}
+\item karte
+\begin{enumerate}
+\item Datenbankanfrage senden
+\item Animation zu neutraler Karte starten (kein Info-Popups, keine Verzerrung)
+\item Zu neuer Karte wechseln sobald Daten angekommen, ohne Animation
+\end{enumerate}
+\item tabelle
+\begin{enumerate}
+\item Datenbankanfrage senden
+\item Kontrast der Tabelle in Animation verringern.
+\item Zu neuer Tabelle wechseln sobald Daten angekommen, ohne Animation
+\end{enumerate}
+\end{enumerate}
+\item url in js anpassen: https://stackoverflow.com/questions/824349/how-do-i-modify-the-url-without-reloading-the-page
+\end{enumerate}
 \item Daten vom Seco zusammensuchen/beschaffen und in neue Datenbank eintragen
 \begin{enumerate}
 \item von der Webseite
@@ -288,6 +328,12 @@ Geplante Schritte:
 gibt.
 \end{enumerate}
 \item Aufräumen
+\item wahrscheinlich haufenweise optimierungen+caching
+\begin{enumerate}
+\item wahrscheinlich sollte ich teilsummen speichern, vielleicht in 2 Dimensionen:
+Güterart und Zeit, für jedes Land einzeln. Oder für jede Güterart
+einzeln 1D.
+\end{enumerate}
 \item Problem/Skandaldatenbank ausbauen, Detailseite für einzelne Länder
 schreiben
 \end{enumerate}

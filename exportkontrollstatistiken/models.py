@@ -47,11 +47,17 @@ class Geschaeftsrichtungen(models.Model):
 
 
 class Laender(models.Model):
-	""" Liste der Länder, in die exportiert wird. Vielleicht braucht das noch lat. und long., aber vielleicht eher nicht?"""
+	""" Liste der Länder, in die exportiert wird. """
 	code = models.CharField(max_length=2)
-	""" Ländercode, 2 Grossbuchstaben. """
+	""" Ländercode, 2 Grossbuchstaben. ISO 3166-1 alpha-2 (hoffentlich)"""
 	name = models.ForeignKey(Uebersetzungen, on_delete=models.PROTECT)
 	""" Voller Name des Landes. """
+
+	breitengradMin = models.FloatField()
+	breitengradMax = models.FloatField()
+	laengengradMin = models.FloatField()
+	laengengradMax = models.FloatField()
+
 
 	def __str__(self):
 		return(self.code)

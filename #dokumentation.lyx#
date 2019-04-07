@@ -847,25 +847,9 @@ js-funktion schreiben, die die Transformation macht
 
 \end_deeper
 \begin_layout Enumerate
-Kartencode weiter aufräumen
+Kartencode weiter aufräumen, muss auf neuere d3-Version.
 \end_layout
 
-\begin_deeper
-\begin_layout Enumerate
-muss auf neuere d3-Version
-\end_layout
-
-\begin_layout Enumerate
-Leerraum um Karte rum muss weg
-\end_layout
-
-\begin_layout Enumerate
-Pfeile wären schön? Ich denke dünne, alle gleich.
- Wenn man die Mitte der Pfeile etwas nach oben zieht sollte das einen 3D-Effekt
- erzeugen.
-\end_layout
-
-\end_deeper
 \begin_layout Enumerate
 Zusammenbauen zur Seite für mehrere Länder
 \end_layout
