@@ -14,7 +14,7 @@ d3.csv('api/g/i/DE/kbd/1900/2100/v/5/1').then(function (data) {
       matrix.push(d3.values(data[value]))
     }
   }
-  var table = d3.select("body").append("table")
+  var table = d3.select('div.table').append("table")
   var thead = table.append("thead")
   var tbody = table.append("tbody")
 
