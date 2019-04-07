@@ -33,3 +33,15 @@ f.close()
 f = open('/home/t4b/persönlich/engagement/gsoa/webseite/django/kriegsmaterialch/exportkontrollstatistiken/static/exportkontrollstatistiken/world_population.tsv', 'w')
 f.write(d)
 f.close()
+
+# replace names with codes
+filename='/home/t4b/persönlich/engagement/gsoa/webseite/django/kriegsmaterialch/exportkontrollstatistiken/static/exportkontrollstatistiken/worldmap.js'
+with open(filename, "r") as f:
+    d = f.read()
+with open(filename, "w") as f:
+  with open('/home/t4b/persönlich/engagement/gsoa/webseite/django/kriegsmaterialch/iso3166-2019-04-05.csv', 'r', newline='') as isof:
+    iso = csv.reader(isof)
+    iso.__next__()
+    for countryCodes in iso:
+      d = d.replace("(d.properties.name === '" + countryCodes[0] + "')", "(d.id === '" + countryCodes[2] + "')")
+    f.write(d)
