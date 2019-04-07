@@ -78,6 +78,23 @@
     .details{
       color: white;
     }
+  /* doesn't work, makes it worse */
+  .worldmap {
+      display: inline-block;
+      position: relative;
+      width: 100%;
+      padding-bottom: 50%; /* aspect ratio */
+      vertical-align: top;
+      overflow: hidden;
+  }
+  
+  .worldmap-svg {
+      display: inline-block;
+      position: absolute;
+      top: 0;
+      left: 0;
+  }
+  
   </style>
   <head>
     <script src="http://d3js.org/d3.v5.min.js" charset="utf-8"></script>
@@ -85,14 +102,17 @@
     <script src="http://d3js.org/topojson.v1.min.js"></script>
     <script src="https://d3js.org/d3-geo-projection.v1.min.js"></script>
     <script src="static/exportkontrollstatistiken/d3-tip.js"></script>
-    <script src="static/exportkontrollstatistiken/worldmap.js"></script>
+    <script src="{% static 'exportkontrollstatistiken/worldmap.js' %}"></script>
+    <script src="{% static 'exportkontrollstatistiken/table.js' %}"></script>
   </head>
   <body>
-    <h1>Schweizer Waffenexporte</h1>
-    <a href="https://www.gsoa.ch"><img alt="GSoA Logo" src="https://www.kriegsmaterial.ch/map/img/GSoA-Logo.png"></a>
+    <h1>
+      Schweizer Waffenexporte
+      <a href="https://www.gsoa.ch"><img alt="GSoA Logo" src="https://www.kriegsmaterial.ch/map/img/GSoA-Logo.png"></a>
+    </h1>
     <div class="worldmap"></div>
     <div class="table"></div>
     <script type='text/javascript'>worldmap();</script>
-    <script type='text/javascript' src="{% static 'exportkontrollstatistiken/table.js' %}"></script>
+    <script type='text/javascript'>table('api/g/i/DE/kbd/1900/2100/v/5/1');</script>
   </body>
 </html>

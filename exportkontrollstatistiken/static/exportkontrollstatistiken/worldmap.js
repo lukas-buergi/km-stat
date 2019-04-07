@@ -40,7 +40,7 @@ function worldmap(){
     // Americas
     if (d.properties.name === 'Greenland') return [10, -10];
     if (d.properties.name === 'Canada') return [24, -28];
-    if (d.id === 'USA') return [-5, 8];
+    if (d.id === 'US') return [-5, 8];
     if (d.properties.name === 'Mexico') return [12, 10];
     if (d.properties.name === 'Chile') return [0, -15];
     // Europe
@@ -72,30 +72,29 @@ function worldmap(){
     return [-10, 0];
   })
 
-  d3.select('body')
-      //.style('overflow', 'hidden');
+   // const parentWidth = d3.select('body').node().getBoundingClientRect().width;
+    //const margin = {top: 0, right: 0, bottom: 0, left: 0};
+    //const width = parentWidth - margin.left - margin.right;
+    //const height = parentWidth/2 - margin.top - margin.bottom;
 
-  const parentWidth = d3.select('body').node().getBoundingClientRect().width;
-  const margin = {top: 0, right: 0, bottom: 0, left: 0};
-  const width = parentWidth - margin.left - margin.right;
-  const height = parentWidth/2 - margin.top - margin.bottom;
 
   const color = d3.scaleLog()
     .domain([10e5,10e9])
     .range(['rgb(255,200,200)', "red"]);
 
-
+    // TODO responsive
   const svg = d3.select('div.worldmap')
     .append('svg')
-    .attr('width', width)
-    .attr('height', height)
+    .attr("preserveAspectRatio", "xMinYMin meet")
+    .attr("viewBox", "0 0 1000 500")
+    .classed("worldmap-svg", true)
     .append('g')
     .attr('class', 'map');
 
   const projection = d3.geoRobinson()
     //.scale(100)
-    .rotate([352, 0, 0])
-    .translate( [width / 2, height / 2]);
+    //.rotate([352, 0, 0]);
+    //.translate( [width / 2, height / 2]);
 
   const path = d3.geoPath().projection(projection);
 
