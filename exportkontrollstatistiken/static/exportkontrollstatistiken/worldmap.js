@@ -1,14 +1,15 @@
-function worldmap(){
-  // configuration
-  const colorVariable = 'population';
-  const geoIDVariable = 'id';
-  const format = d3.format(','); // TODO: Swiss monetary value formatting
+function worldmap(src, colorVariable, geoIDVariable){
+  const locale = d3.formatLocale({"decimal": ".",
+    "thousands": "\'",
+    "grouping": [3],
+    "currency": ['Fr. ', '']});
+  const format = locale.format('$,'); // TODO: Swiss monetary value formatting
 
   // Set tooltips
   const tip = d3.tip()
     .attr('class', 'd3-tip')
     .offset([-10, 0])
-    .html(d => `<strong>Country: </strong><span class='details'>${d['name']}<br></span><strong>Population: </strong><span class='details'>${format(d[colorVariable])}</span>`);
+    .html(d => `<strong>Country: </strong><span class='details'>${d['name']}<br></span><strong>${colorVariable}: </strong><span class='details'>${format(d[colorVariable])}</span>`);
 
   tip.direction(function(d) {
     if (d.id === 'AQ') return 'n';
@@ -93,7 +94,7 @@ function worldmap(){
 
   Promise.all([
     d3.json('static/exportkontrollstatistiken/world_countries.json'),
-    d3.tsv('static/exportkontrollstatistiken/world_population.tsv'),
+    d3.csv(src),
   ]).then(([geography, data]) => ready(geography, data));
 
   function ready(geography, data) {

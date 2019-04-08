@@ -122,6 +122,7 @@
     <script src="{% static 'exportkontrollstatistiken/topojson.v1.min.js' %}"></script>
     <script src="{% static 'exportkontrollstatistiken/d3-geo-projection.v1.min.js' %}"></script>
     <script src="{% static 'exportkontrollstatistiken/d3-tip.js' %}"></script>
+    <script src="{% static 'exportkontrollstatistiken/d3-format.v1.min.js' %}"></script>
     <script src="{% static 'exportkontrollstatistiken/worldmap.js' %}"></script>
     <script src="{% static 'exportkontrollstatistiken/table.js' %}"></script>
   </head>
@@ -130,9 +131,11 @@
       Schweizer Waffenexporte
       <a class="logo" href="https://www.gsoa.ch"><img alt="GSoA Logo" src="{% static 'exportkontrollstatistiken/gsoa-logo.png' %}"></a>
     </h1>
+    {# should we display the chosen filter parameters here, too? #}
     <div class="worldmap"></div>
+    <div class="filter"></div>
     <div class="table"></div>
-    <script type='text/javascript'>worldmap();</script>
-    <script type='text/javascript'>table('api/g/i/DE/kbd/1900/2100/v/5/1');</script>
+    <script type='text/javascript'>worldmap('api/g/s/all/kbd/1900/2100/v/300/1', 'Exporte', 'id');</script>
+    <script type='text/javascript'>table('api/g/s/all/kbd/1900/2100/v/20/1');</script>
   </body>
 </html>

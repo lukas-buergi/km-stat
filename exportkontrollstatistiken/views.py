@@ -174,6 +174,7 @@ def summed(p, queryset, writer):
     queryset = queryset.order_by("endempfaengerstaat")
     sums=dict()
     curCountry = None
+    # TODO: this addition takes forever
     for g in queryset:
         if(g.endempfaengerstaat!=curCountry):
             curCountry=g.endempfaengerstaat
@@ -188,9 +189,12 @@ def summed(p, queryset, writer):
         reverse=False
 
     order = sorted(sums, key=sums.get, reverse=reverse)
-    
+
     # TODO: this exact slicing expression is used in 3 places
     order = order[p.perPage*(p.pageNumber-1):p.perPage*p.pageNumber]
+
+    titleRow=["id", "name", "Exporte"]
+    writer.writerow(titleRow)
     
     for country in order:
         writer.writerow([country.code, country.name.de, sums[country]])
@@ -205,6 +209,7 @@ def gapi(request, granularity, countries, types, year1, year2, sortBy, perPage, 
     except ValueError:
         raise # TODO: This line is not for production.
         return(HttpResponse("Invalid parameter."))
+
     
     # prepare queryset as far as possible
     queryset = Geschaefte.objects.filter(ende__gte=datetime.date(year1, 1, 1))
@@ -212,6 +217,7 @@ def gapi(request, granularity, countries, types, year1, year2, sortBy, perPage, 
     queryset = queryset.filter(p.types)
     queryset = queryset.filter(p.countries)
 
+    
     # prepare response
     response = HttpResponse(content_type='text/csv')
     response['Content-Disposition'] = 'attachment; filename="exporte-' + countries + "-" + types + "-" + str(year1) + "-" + str(year2) + "-" + str(pageNumber) + '.csv"'
