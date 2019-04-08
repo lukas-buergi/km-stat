@@ -2,13 +2,13 @@ function worldmap(){
   // configuration
   const colorVariable = 'population';
   const geoIDVariable = 'id';
-  const format = d3.format(',');
+  const format = d3.format(','); // TODO: Swiss monetary value formatting
 
   // Set tooltips
   const tip = d3.tip()
     .attr('class', 'd3-tip')
     .offset([-10, 0])
-    .html(d => `<strong>Country: </strong><span class='details'>${d.properties.name}<br></span><strong>Population: </strong><span class='details'>${format(d[colorVariable])}</span>`);
+    .html(d => `<strong>Country: </strong><span class='details'>${d['name']}<br></span><strong>Population: </strong><span class='details'>${format(d[colorVariable])}</span>`);
 
   tip.direction(function(d) {
     if (d.id === 'AQ') return 'n';
@@ -80,7 +80,7 @@ function worldmap(){
   const svg = d3.select('div.worldmap')
     .append('svg')
     .attr("preserveAspectRatio", "xMinYMin meet")
-    .attr("viewBox", "0 0 1000 500")
+    .attr("viewBox", "0 0 1000 500") // magic values
     .classed("worldmap-svg", true)
     .append('g')
     .attr('class', 'map');
@@ -94,17 +94,24 @@ function worldmap(){
   Promise.all([
     d3.json('static/exportkontrollstatistiken/world_countries.json'),
     d3.tsv('static/exportkontrollstatistiken/world_population.tsv'),
-  ]).then(([geography, data]) => ready(null, geography, data));
+  ]).then(([geography, data]) => ready(geography, data));
 
-  function ready(error, geography, data) {
+  function ready(geography, data) {
     data.forEach(d => {
       d[colorVariable] = Number(d[colorVariable].replace(',', ''));
     })
 
-    const colorVariableValueByID = {};
+    const dataByID = {};
+    data.forEach(d => {
+        dataByID[d[geoIDVariable]] = {"color":d[colorVariable], "name":d['name']};
+    });
 
-    data.forEach(d => { colorVariableValueByID[d[geoIDVariable]] = d[colorVariable]; });
-    geography.features.forEach(d => { d[colorVariable] = colorVariableValueByID[d.id] });
+    geography.features.forEach(d => {
+        if(d.id in dataByID){
+            d[colorVariable] = dataByID[d.id]['color']
+            d['name'] = dataByID[d.id]['name']
+        }
+    });
 
     svg.append('g')
       .attr('class', 'countries')
@@ -113,8 +120,8 @@ function worldmap(){
       .enter().append('path')
         .attr('d', path)
         .style('fill', d => {
-          if (typeof colorVariableValueByID[d.id] !== 'undefined') {
-            return color(colorVariableValueByID[d.id])
+          if (d.id in dataByID) {
+            return color(dataByID[d.id]['color'])
           } 
           return 'white'
         })

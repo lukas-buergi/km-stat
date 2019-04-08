@@ -821,10 +821,6 @@ Kartenskalierungsapi
 
 \begin_deeper
 \begin_layout Enumerate
-Ländercodes in json-Karte zu 2-char codes wechseln
-\end_layout
-
-\begin_layout Enumerate
 Ländergrössen (in L-/Bgraden) aus der json-Karte auslesen
 \end_layout
 
@@ -852,10 +848,6 @@ Kartencode weiter aufräumen
 
 \begin_deeper
 \begin_layout Enumerate
-muss auf neuere d3-Version
-\end_layout
-
-\begin_layout Enumerate
 Leerraum um Karte rum muss weg
 \end_layout
 
@@ -866,10 +858,6 @@ Pfeile wären schön? Ich denke dünne, alle gleich.
 \end_layout
 
 \end_deeper
-\begin_layout Enumerate
-Zusammenbauen zur Seite für mehrere Länder
-\end_layout
-
 \begin_layout Enumerate
 Filtermasken
 \end_layout
