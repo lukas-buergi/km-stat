@@ -821,10 +821,6 @@ Kartenskalierungsapi
 
 \begin_deeper
 \begin_layout Enumerate
-Ländercodes in json-Karte zu 2-char codes wechseln
-\end_layout
-
-\begin_layout Enumerate
 Ländergrössen (in L-/Bgraden) aus der json-Karte auslesen
 \end_layout
 
@@ -847,13 +843,21 @@ js-funktion schreiben, die die Transformation macht
 
 \end_deeper
 \begin_layout Enumerate
-Kartencode weiter aufräumen, muss auf neuere d3-Version.
+Kartencode weiter aufräumen
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Leerraum um Karte rum muss weg
 \end_layout
 
 \begin_layout Enumerate
-Zusammenbauen zur Seite für mehrere Länder
+Pfeile wären schön? Ich denke dünne, alle gleich.
+ Wenn man die Mitte der Pfeile etwas nach oben zieht sollte das einen 3D-Effekt
+ erzeugen.
 \end_layout
 
+\end_deeper
 \begin_layout Enumerate
 Filtermasken
 \end_layout
@@ -952,9 +956,45 @@ wahrscheinlich haufenweise optimierungen+caching
 
 \begin_deeper
 \begin_layout Enumerate
-wahrscheinlich sollte ich teilsummen speichern, vielleicht in 2 Dimensionen:
- Güterart und Zeit, für jedes Land einzeln.
- Oder für jede Güterart einzeln 1D.
+Unbedingt Teilsummen speichern.
+ Summieren von 3000 Einträgen geht 10s!
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Oder für jede Güterart einzeln 1D.
+ Abfragen: 2 pro Güterart und Land, also ca 
+\begin_inset Formula $6\cdot150=900$
+\end_inset
+
+ für alle.
+\end_layout
+
+\begin_layout Itemize
+2D pro Land geht auf jeden Fall: Die beiden Achsen sind Güterart und Zeit+pk.
+ Abfragen: 4 pro Land, also ca.
+ 
+\begin_inset Formula $4\cdot150=600$
+\end_inset
+
+ für alle.
+\end_layout
+
+\begin_layout Itemize
+Oder 3D mit Ländern als 3.
+ Achse würde vor allem etwas bringen um Summen über alle Länder zu bilden.
+ Wie verallgemeinert man das Schema überhaupt in 3D? Abfragen: Vermutlich
+ 8 pro Länderblock.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+Zusammengefasst: 1D und 2D sind für alle Länder ziemlich schlecht.
+ Für einzelne Länder ist aber 3D auch schlecht.
+\end_layout
+
+\begin_layout Itemize
+2D pro Land in separater Tabelle:
 \end_layout
 
 \end_deeper

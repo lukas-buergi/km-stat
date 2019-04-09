@@ -173,10 +173,14 @@ def summed(p, queryset, writer):
     
     queryset = queryset.order_by("endempfaengerstaat")
     sums=dict()
-    curCountry = None
+    
+    # use dummy country here so we can compare pk instead of whole objects
+    # which probably saves one db query per db entry
+    # didn't provide a big speed up, but still some I think
+    curCountry = Laender("XX", None, 0,0,0,0)
     # TODO: this addition takes forever
     for g in queryset:
-        if(g.endempfaengerstaat!=curCountry):
+        if(g.endempfaengerstaat.pk!=curCountry.pk):
             curCountry=g.endempfaengerstaat
             curSum=g.umfang
             sums[curCountry] = curSum

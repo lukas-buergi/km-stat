@@ -201,6 +201,67 @@ class Geschaefte(models.Model):
 		verbose_name = 'Geschäft'
 		verbose_name_plural = 'Geschäfte'
 
+class Geschaeftsjahressummen(models.Model):
+	"""Hilfsmodell, das Teilsummen pro Land, Jahr und Güterart enthält."""
+	endempfaengerstaat = models.ForeignKey(Laender, on_delete=models.PROTECT)
+	gueterArt = models.ForeignKey(GueterArten, on_delete=models.PROTECT)
+	umfang = models.PositiveIntegerField()
+	"""Summe aller Exporte bis zu dem Jahr inklusive."""
+	jahr = models.PositiveIntegerField()
+
+	def recalculate():
+		"""Delete all entries and calculate new entries from Geschaefte entries.
+		This needs to be run after any relevant changes to the Geschaefte entries.
+		So it's not performance-relevant, allowed to run for tens of seconds or longer."""
+		Geschaeftsjahressummen.objects.all().delete()
+		geschaefte = Geschaefte.objects.all().order_by("endempfaengerstaat", "exportkontrollnummer__kontrollregime__gueterArt", "beginn")
+
+		# get the first separately
+		firstG = next(geschaefte.__iter__())
+		curSum = Geschaeftsjahressummen(endempfaengerstaat=firstG.endempfaengerstaat, gueterArt=firstG.exportkontrollnummer.kontrollregime.gueterArt, umfang=firstG.umfang, jahr=firstG.beginn.year)
+		curSum.save()
+		# then iterate over the rest
+		for g in geschaefte:
+			if(g.beginn.year!=curSum.jahr):
+				if(g.endempfaengerstaat!=curSum.endempfaengerstaat or g.exportkontrollnummer.kontrollregime.gueterArt!=curSum.gueterArt):
+					curSum = Geschaeftsjahressummen(endempfaengerstaat=g.endempfaengerstaat, gueterArt=g.exportkontrollnummer.kontrollregime.gueterArt, umfang=g.umfang, jahr=g.beginn.year)
+					curSum.save()
+				else:
+					curSum = Geschaeftsjahressummen(endempfaengerstaat=g.endempfaengerstaat, gueterArt=g.exportkontrollnummer.kontrollregime.gueterArt, umfang=curSum.umfang+g.umfang, jahr=g.beginn.year)
+					curSum.save()
+			else:
+				curSum.umfang += g.umfang
+				curSum.save()
+		# now all the entries that change are here, but zero entries and
+		# entries that have zero difference to the previous year are still missing
+		for country in Laender.objects.all():
+			for gueterArt in GueterArten.objects.all():
+				cur=None
+				for jahr in range(2000, 2020):
+					try:
+						cur=Geschaeftsjahressummen.objects.filter(jahr=jahr, gueterArt=gueterArt, endempfaengerstaat=country).get()
+					except Geschaeftsjahressummen.DoesNotExist:
+						if(cur==None):
+							cur=Geschaeftsjahressummen(endempfaengerstaat=country, gueterArt=gueterArt, jahr=jahr, umfang=0)
+							cur.save()
+						else:
+							# copy cur with new year
+							cur.pk=None
+							cur.jahr=jahr
+							cur.save()
+		
+
+class Geschaeftssummen(models.Model):
+	"""Hilfsmodell, das Teilsummen pro Jahr und Güterart enthält."""
+	gueterArt = models.ForeignKey(GueterArten, on_delete=models.PROTECT)
+	umfang = models.PositiveIntegerField()
+	"""Summe aller Exporte bis zu dem Jahr inklusive."""
+	jahr = models.PositiveIntegerField()
+
+	def recalculate():
+		"""Delete all entries and calculate new entries Geschaeftsjahressummen."""
+		pass # TODO
+
 class GeschaefteImport(models.Model):
 	"""Hilfsmodell zum Import der alten Daten, hat gleiche Struktur wie "export" Tabelle dort."""
 	code = models.CharField(max_length=2)

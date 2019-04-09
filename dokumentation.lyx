@@ -956,11 +956,58 @@ wahrscheinlich haufenweise optimierungen+caching
 
 \begin_deeper
 \begin_layout Enumerate
-wahrscheinlich sollte ich teilsummen speichern, vielleicht in 2 Dimensionen:
- Güterart und Zeit, für jedes Land einzeln.
- Oder für jede Güterart einzeln 1D.
+Unbedingt Teilsummen speichern.
+ Summieren von 3000 Einträgen geht 10s!
 \end_layout
 
+\begin_deeper
+\begin_layout Itemize
+Oder für jede Güterart einzeln 1D.
+ Abfragen: 2 pro Güterart und Land, also ca 
+\begin_inset Formula $6\cdot150=900$
+\end_inset
+
+ für alle.
+\end_layout
+
+\begin_layout Itemize
+2D pro Land geht auf jeden Fall: Die beiden Achsen sind Güterart und Zeit+pk.
+ Abfragen: 4 pro Land, also ca.
+ 
+\begin_inset Formula $4\cdot150=600$
+\end_inset
+
+ für alle.
+\end_layout
+
+\begin_layout Itemize
+Oder 3D mit Ländern als 3.
+ Achse würde vor allem etwas bringen um Summen über alle Länder zu bilden.
+ Wie verallgemeinert man das Schema überhaupt in 3D? Abfragen: Vermutlich
+ 8 pro Länderblock.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+Zusammengefasst: 1D und 2D sind für alle Länder ziemlich schlecht.
+ Für einzelne Länder ist aber 3D auch schlecht.
+\end_layout
+
+\begin_layout Itemize
+1D pro Land und Güterart in separater Tabelle:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+1 Abfrage für alle Länder und Gesamter Zeitraum, eine Addition weniger als
+ Güterarten pro Land
+\end_layout
+
+\begin_layout Itemize
+2 Abfragen, 1 Subtraktion pro Landund beliebiger Zeitraum
+\end_layout
+
+\end_deeper
 \end_deeper
 \begin_layout Enumerate
 Problem/Skandaldatenbank ausbauen, Detailseite für einzelne Länder schreiben

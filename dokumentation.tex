@@ -327,10 +327,28 @@ gibt.
 \item Aufräumen
 \item wahrscheinlich haufenweise optimierungen+caching
 \begin{enumerate}
-\item wahrscheinlich sollte ich teilsummen speichern, vielleicht in 2 Dimensionen:
-Güterart und Zeit, für jedes Land einzeln. Oder für jede Güterart
-einzeln 1D.
+\item Unbedingt Teilsummen speichern. Summieren von 3000 Einträgen geht
+10s!
+\begin{itemize}
+\item Oder für jede Güterart einzeln 1D. Abfragen: 2 pro Güterart und Land,
+also ca $6\cdot150=900$ für alle.
+\item 2D pro Land geht auf jeden Fall: Die beiden Achsen sind Güterart und
+Zeit+pk. Abfragen: 4 pro Land, also ca. $4\cdot150=600$ für alle.
+\item Oder 3D mit Ländern als 3. Achse würde vor allem etwas bringen um
+Summen über alle Länder zu bilden. Wie verallgemeinert man das Schema
+überhaupt in 3D? Abfragen: Vermutlich 8 pro Länderblock.
+\end{itemize}
 \end{enumerate}
+Zusammengefasst: 1D und 2D sind für alle Länder ziemlich schlecht.
+Für einzelne Länder ist aber 3D auch schlecht.
+\begin{itemize}
+\item 1D pro Land und Güterart in separater Tabelle:
+\begin{itemize}
+\item 1 Abfrage für alle Länder und Gesamter Zeitraum, eine Addition weniger
+als Güterarten pro Land
+\item 2 Abfragen, 1 Subtraktion pro Landund beliebiger Zeitraum
+\end{itemize}
+\end{itemize}
 \item Problem/Skandaldatenbank ausbauen, Detailseite für einzelne Länder
 schreiben
 \end{enumerate}
