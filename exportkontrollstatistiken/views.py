@@ -59,6 +59,8 @@ class apiParam():
                 
         if(0>year1 or year1 > year2):
             raise(ValueError)
+        self.year1=year1
+        self.year2=year2
 
         # types
         for c in types:
@@ -99,7 +101,12 @@ class apiParam():
         if(self.granularity=="summedPerYear" and not self.countriesSingle and self.sortBy in ["-beginn", "beginn"]):
             raise(NotImplementedError)
 
-def individual(p, queryset, writer):
+def individual(p, writer):
+    queryset = Geschaefte.objects.filter(ende__gte=datetime.date(p.year1, 1, 1))
+    queryset = queryset.filter(beginn__lte=datetime.date(p.year2, 12, 31))
+    queryset = queryset.filter(p.types)
+    queryset = queryset.filter(p.countries)
+    
     queryset = queryset.order_by(p.sortBy)
     # TODO: this exact slicing expression is used in 3 places
     queryset = queryset[p.perPage*(p.pageNumber-1):p.perPage*p.pageNumber]
@@ -115,7 +122,7 @@ def individual(p, queryset, writer):
             row = [g.endempfaengerstaat.code, g.endempfaengerstaat.name.de] + row
         writer.writerow(row)
 
-def summedPerYear(p, queryset, writer):
+def summedPerYear(p, writer):
     """Return transactions summed per year. Algorithm:
         * sort by country, year
         * sum up consecutive entries until country or year changes
@@ -123,7 +130,11 @@ def summedPerYear(p, queryset, writer):
             * date asc+des, for a single country (that's the original order after the summing algorithm)
             * value"""
     
-
+    queryset = Geschaefte.objects.filter(ende__gte=datetime.date(p.year1, 1, 1))
+    queryset = queryset.filter(beginn__lte=datetime.date(p.year2, 12, 31))
+    queryset = queryset.filter(p.types)
+    queryset = queryset.filter(p.countries)
+    
     if(p.sortBy in ["beginn","-beginn"]):
         firstSort=p.sortBy
     else:
@@ -165,11 +176,16 @@ def summedPerYear(p, queryset, writer):
     for country in order:
         writer.writerow([sums[country][2].code, sums[country][2].name.de, sums[country][1], sums[country][0]])
 
-def summed(p, queryset, writer):
+def summed(p, writer):
     """Sum transactions per country. Algorithm:
         * sort by country
         * sum up consecutive entries until the country changes
         * sort by value"""
+
+    queryset = Geschaefte.objects.filter(ende__gte=datetime.date(p.year1, 1, 1))
+    queryset = queryset.filter(beginn__lte=datetime.date(p.year2, 12, 31))
+    queryset = queryset.filter(p.types)
+    queryset = queryset.filter(p.countries)
     
     queryset = queryset.order_by("endempfaengerstaat")
     sums=dict()
@@ -213,14 +229,6 @@ def gapi(request, granularity, countries, types, year1, year2, sortBy, perPage, 
     except ValueError:
         raise # TODO: This line is not for production.
         return(HttpResponse("Invalid parameter."))
-
-    
-    # prepare queryset as far as possible
-    queryset = Geschaefte.objects.filter(ende__gte=datetime.date(year1, 1, 1))
-    queryset = queryset.filter(beginn__lte=datetime.date(year2, 12, 31))
-    queryset = queryset.filter(p.types)
-    queryset = queryset.filter(p.countries)
-
     
     # prepare response
     response = HttpResponse(content_type='text/csv')
@@ -229,11 +237,11 @@ def gapi(request, granularity, countries, types, year1, year2, sortBy, perPage, 
 
     # write response
     if(p.granularity=="summed"):
-        summed(p, queryset, writer)
+        summed(p, writer)
     elif(p.granularity=="summedPerYear"):
-        summedPerYear(p, queryset, writer)
+        summedPerYear(p, writer)
     elif(p.granularity=="individual"):
-        individual(p, queryset, writer)
+        individual(p, writer)
 
     return(response)
 
