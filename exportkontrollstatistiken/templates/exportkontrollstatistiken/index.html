@@ -107,12 +107,14 @@
     margin: 0 auto; /* center table */
   }
 
-  h1 {
+  .header {
     background-color: #EEEEEE;
+    text-align: center;
   }
 
-  .logo {
-    float: right;
+  .mainbox {
+    display: flex;
+    flex-direction: column;
   }
   
   </style>
@@ -127,15 +129,21 @@
     <script src="{% static 'exportkontrollstatistiken/table.js' %}"></script>
   </head>
   <body>
-    <h1>
-      Schweizer Waffenexporte
-      <a class="logo" href="https://www.gsoa.ch"><img alt="GSoA Logo" src="{% static 'exportkontrollstatistiken/gsoa-logo.png' %}"></a>
-    </h1>
-    {# should we display the chosen filter parameters here, too? #}
-    <div class="worldmap"></div>
-    <div class="filter"></div>
-    <div class="table"></div>
-    <script type='text/javascript'>worldmap('api/g/s/all/kbd/1900/2100/v/300/1', 'Exporte', 'id');</script>
-    <script type='text/javascript'>table('api/g/s/all/kbd/1900/2100/v/20/1');</script>
+    <div class="mainbox">
+      <div class="header">
+        <h1>Schweizer Waffenexporte</h1>
+        präsentiert von der<br>
+        <a class="logo" href="https://www.gsoa.ch">
+          <img alt="GSoA Logo" height="15em" src="{% static 'exportkontrollstatistiken/gsoa-logo.svg' %}">
+        </a>
+      </div>
+      {# should we display the chosen filter parameters here, too? #}
+      <div class="worldmap"></div>
+      <div class="filter"></div>
+      <div class="table"></div>
+    </div>
+
+    <script type='text/javascript'>worldmap('api/g/s/all/kbd/2001/2019/v/300/1', 'Exporte', 'id');</script>
+    <script type='text/javascript'>table('api/g/s/all/kbd/2001/2019/v/300/1');</script>
   </body>
 </html>

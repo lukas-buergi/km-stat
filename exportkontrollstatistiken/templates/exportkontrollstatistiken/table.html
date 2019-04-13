@@ -5,9 +5,10 @@
 <html>
   <head>
     <script src="http://d3js.org/d3.v5.min.js" charset="utf-8"></script>
+    <script src="{% static 'exportkontrollstatistiken/table.js' %}"></script>
   </head>
   <body>
     <div class="table"></div>
-    <script type='text/javascript' src="{% static 'exportkontrollstatistiken/table.js' %}"></script>
+    <script type='text/javascript'>table('api/g/s/all/kbd/2001/2019/v/300/1');</script>
   </body>
 </html>

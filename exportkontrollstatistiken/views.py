@@ -2,7 +2,7 @@ from django.http import HttpResponse
 from django.template import loader
 from django.db.models import Q
 
-from exportkontrollstatistiken.models import Geschaefte, Uebersetzungen, Laender
+from exportkontrollstatistiken.models import Geschaefte, Uebersetzungen, Laender, Geschaeftslaendersummen
 
 import csv
 import itertools
@@ -31,7 +31,7 @@ class apiParam():
         "b" : "Besondere militärische Güter",
         "d" : "Dual Use Güter",
     }
-    types=[]
+    types=[] # types in typesChoices
 
     # sortby
     sortByChoices = {
@@ -67,13 +67,7 @@ class apiParam():
             if(c not in self.typesChoices):
                 raise(ValueError)
             else:
-                self.types.append(Q(exportkontrollnummer__kontrollregime__gueterArt__name=Uebersetzungen.objects.get(de=self.typesChoices[c])))
-
-        # or the types together
-        qtypes=Q()
-        for q in self.types:
-            qtypes |= q
-        self.types=qtypes
+                self.types.append(c)
         
         # countries
         if(countries=="all"):
@@ -101,10 +95,22 @@ class apiParam():
         if(self.granularity=="summedPerYear" and not self.countriesSingle and self.sortBy in ["-beginn", "beginn"]):
             raise(NotImplementedError)
 
+    def getTypes(self, typeFieldName):
+        """Get a Q object with the types ORd together. This depends on the field name so it must be given in parameter (values are often exportkontrollnummer__kontrollregime__gueterArt__name or gueterArt__name)."""
+        qtypes=Q()
+        for c in self.types:
+            args = {typeFieldName : Uebersetzungen.objects.get(de=self.typesChoices[c])}
+            qtypes |= Q(**args)
+        return(qtypes)
+
+    def getPage(self, queryset):
+        """Slice a queryset or other sliceable object. The queryset is not evaluated at this point I think. """
+        return(queryset[self.perPage*(self.pageNumber-1):self.perPage*self.pageNumber])
+        
 def individual(p, writer):
     queryset = Geschaefte.objects.filter(ende__gte=datetime.date(p.year1, 1, 1))
     queryset = queryset.filter(beginn__lte=datetime.date(p.year2, 12, 31))
-    queryset = queryset.filter(p.types)
+    queryset = queryset.filter(p.getTypes("exportkontrollnummer__kontrollregime__gueterArt__name"))
     queryset = queryset.filter(p.countries)
     
     queryset = queryset.order_by(p.sortBy)
@@ -132,7 +138,7 @@ def summedPerYear(p, writer):
     
     queryset = Geschaefte.objects.filter(ende__gte=datetime.date(p.year1, 1, 1))
     queryset = queryset.filter(beginn__lte=datetime.date(p.year2, 12, 31))
-    queryset = queryset.filter(p.types)
+    queryset = queryset.filter(p.getTypes("exportkontrollnummer__kontrollregime__gueterArt__name"))
     queryset = queryset.filter(p.countries)
     
     if(p.sortBy in ["beginn","-beginn"]):
@@ -177,47 +183,56 @@ def summedPerYear(p, writer):
         writer.writerow([sums[country][2].code, sums[country][2].name.de, sums[country][1], sums[country][0]])
 
 def summed(p, writer):
-    """Sum transactions per country. Algorithm:
-        * sort by country
-        * sum up consecutive entries until the country changes
-        * sort by value"""
+    """Sum transactions per country.
 
-    queryset = Geschaefte.objects.filter(ende__gte=datetime.date(p.year1, 1, 1))
-    queryset = queryset.filter(beginn__lte=datetime.date(p.year2, 12, 31))
-    queryset = queryset.filter(p.types)
-    queryset = queryset.filter(p.countries)
+    Begin and end are both inclusive.
     
-    queryset = queryset.order_by("endempfaengerstaat")
-    sums=dict()
-    
-    # use dummy country here so we can compare pk instead of whole objects
-    # which probably saves one db query per db entry
-    # didn't provide a big speed up, but still some I think
-    curCountry = Laender("XX", None, 0,0,0,0)
-    # TODO: this addition takes forever
-    for g in queryset:
-        if(g.endempfaengerstaat.pk!=curCountry.pk):
-            curCountry=g.endempfaengerstaat
-            curSum=g.umfang
-            sums[curCountry] = curSum
+    Format: csv, columns:
+        1. 'id', 2 letter iso country code
+        2. <translated column description>, the name of the country
+        3. <translated column description>, the sum of of the exports
+
+    Algorithm:
+        * Get entries for year2 sorted by country
+        * Get entries for (year1-1) sorted by country
+        * Slice both of them correctly
+        * Iterate through both sets in parallel and subtract the latter from the former in each entry
+        * Sort according to p.sortBy
+    """
+
+    # TYPES BROKEN
+    queryset2 = Geschaeftslaendersummen.objects.filter(jahr=p.year2)
+    queryset2 = queryset2.filter(p.getTypes("gueterArt__name"))
+    queryset2 = queryset2.filter(p.countries)
+    queryset2 = queryset2.order_by("endempfaengerstaat")
+
+    queryset1 = Geschaeftslaendersummen.objects.filter(jahr=(p.year1-1))
+    queryset1 = queryset1.filter(p.getTypes("gueterArt__name"))
+    queryset1 = queryset1.filter(p.countries)
+    queryset1 = queryset1.order_by("endempfaengerstaat")
+    # TODO: Should I make a method for the above duplicate code?
+
+    sums = dict()
+    for country in zip(queryset1, queryset2):
+        if(country[0].endempfaengerstaat.code in sums):
+            sums[country[0].endempfaengerstaat.code][1] += country[1].umfang - country[0].umfang
         else:
-            sums[curCountry]+=g.umfang
+            sums[country[0].endempfaengerstaat.code]=[country[0].endempfaengerstaat, (country[1].umfang-country[0].umfang)]
 
+    
     if(p.sortBy=="-umfang"):
         reverse=True
     else:
         reverse=False
 
-    order = sorted(sums, key=sums.get, reverse=reverse)
-
-    # TODO: this exact slicing expression is used in 3 places
-    order = order[p.perPage*(p.pageNumber-1):p.perPage*p.pageNumber]
+    order = sorted(sums, key=lambda key : sums.get(key)[1], reverse=reverse)
+    order = p.getPage(order)
 
     titleRow=["id", "name", "Exporte"]
     writer.writerow(titleRow)
     
     for country in order:
-        writer.writerow([country.code, country.name.de, sums[country]])
+        writer.writerow([country, sums[country][0].name.de, sums[country][1]])
 
 def gapi(request, granularity, countries, types, year1, year2, sortBy, perPage, pageNumber):
     """Die view, die die Geschäftsdaten an das Frontend liefert.
@@ -249,11 +264,8 @@ def gapi(request, granularity, countries, types, year1, year2, sortBy, perPage, 
 # TODO: Make table and worldmap take arguments
 
 def table(request):
-    queryset = Geschaefte.objects.all()[:5]
     template = loader.get_template('exportkontrollstatistiken/table.html')
-    context = {
-        'queryset': queryset,
-    }
+    context = {}
     return HttpResponse(template.render(context, request))
 
 def worldmap(request):
