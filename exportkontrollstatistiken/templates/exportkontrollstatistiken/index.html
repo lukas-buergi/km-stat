@@ -112,9 +112,36 @@
     text-align: center;
   }
 
+  .title {
+    font-size: 4em;
+  }
+
   .mainbox {
     display: flex;
     flex-direction: column;
+  }
+
+  .filter {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:center;
+    align-content:center;
+  }
+
+  .gueterArten {
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-content:center;
+  }
+
+  .filterLabel {
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-content:center;
+    padding:0.5em
   }
   
   </style>
@@ -131,15 +158,66 @@
   <body>
     <div class="mainbox">
       <div class="header">
-        <h1>Schweizer Waffenexporte</h1>
+        <div class="title">Schweizer Waffenexporte</div>
         präsentiert von der<br>
         <a class="logo" href="https://www.gsoa.ch">
           <img alt="GSoA Logo" height="15em" src="{% static 'exportkontrollstatistiken/gsoa-logo.svg' %}">
         </a>
       </div>
-      {# should we display the chosen filter parameters here, too? #}
+      {# xxx Franken Exporte von Kriegsmaterial, besonderen militärischen Gütern und Dual Use Gütern total in unserer Datenbank. #}
+      {# Zur Anzeige ausgewählt: Exporte von <GüterartListe> an <Länderliste> zwischen <Anfang> und <Ende>. #}
       <div class="worldmap"></div>
-      <div class="filter"></div>
+      <div class="filter">
+        <div class="filterLabel"><div>Export von </div></div>
+        <div class="gueterArten">
+          {# TODO automatisch generieren #}
+          <div>
+            <input type="checkbox" id="k" name="Kriegsmaterial"
+                   checked>
+            <label for="k">Kriegsmaterial</label>
+          </div>
+          <div>
+            <input type="checkbox" id="b" name="Besondere militärische Güter"
+                   checked>
+            <label for="b">Besondere militärische Güter</label>
+          </div>
+          <div>
+            <input type="checkbox" id="d" name="Dual Use Güter"
+                   checked>
+            <label for="d">Dual Use Güter</label>
+          </div>
+        </div>
+        <label class="filterLabel" for="laender"> an </label>
+        <select id="laender">
+            <option value="all">Alle Länder</option>
+            <optgroup label="Kontinente und Regionen">
+              {# AF,Africa
+NA,North America
+OC,Oceania
+AN,Antarctica
+AS,Asia
+EU,Europe
+SA,South America #}
+              <option value="0AF">Afrika</option>
+              <option value="0NA">Nordamerika</option>
+            </optgroup>
+            <optgroup label="Länder einzeln">
+              <option value="SA">Saudi-Arabien</option>
+            </optgroup>
+        </select>
+        
+        {# Zwei Zahleneingabefehlder für Beginn und Ende, die Range sollte dynamisch angepasst werden, d.h. wenn man den einen verschiebt wird das min/max des anderen angepasst. #}
+        <label class="filterLabel" for="beginn"> ab (inklusiv) </label><input id="beginn" type="number" placeholder="Jahr" value="2000" step="1" min="2000" max="2020">
+        <label class="filterLabel" for="ende"> bis (inklusiv) </label><input id="ende" type="number" placeholder="Jahr" value="2020" step="1" min="2000" max="2020">
+        
+        {# Drop down Granularität #}
+        <label class="filterLabel" for="granularität"> Darstellungsart:</label>
+        <select id="granularität">
+            <option value="i">Geschäfte einzeln und detailliert</option>
+            <option value="y">Summen pro Land und Jahr</option>
+            <option value="s">Summen pro Land über gesamten Zeitraum</option>
+        </select>
+      </div>
       <div class="table"></div>
     </div>
 
