@@ -90,60 +90,58 @@ function worldmap(src, colorVariable, geoIDVariable, numberFormat){
   Promise.all([
     d3.json('/static/exportkontrollstatistiken/world_countries.json'), /* TODO BROKEN */
     d3.csv(src),
-  ]).then(([geography, data]) => ready(geography, data));
+  ]).then(([geography, data]) => ready(geography, data, colorVariable, geoIDVariable, svg, path, color, tip));
+}
 
-  function ready(geography, data) {
-    data.forEach(d => {
-      d[colorVariable] = Number(d[colorVariable].replace(',', ''));
-    })
-
-    const dataByID = {};
-    data.forEach(d => {
-        dataByID[d[geoIDVariable]] = {"color":d[colorVariable], "name":d['name']};
-    });
-
-    geography.features.forEach(d => {
-        if(d.id in dataByID){
-            d[colorVariable] = dataByID[d.id]['color']
-            d['name'] = dataByID[d.id]['name']
-        }
-    });
-
-    svg.append('g')
-      .attr('class', 'countries')
-      .selectAll('path')
-      .data(geography.features)
-      .enter().append('path')
-        .attr('d', path)
-        .style('fill', d => {
-          if (d.id in dataByID) {
-            return color(dataByID[d.id]['color'])
-          } 
-          return 'white'
-        })
-        .style('fill-opacity',0.8)
-        .style('stroke', d => {
-            if (d[colorVariable] !== 0) {
-            return 'white';
-          } 
-          return 'lightgray';
-        })
-        .style('stroke-width', 1)
-        .style('stroke-opacity', 0.5)
-        // tooltips
-        .on('mouseover',function(d){
-          tip.show(d);
-          d3.select(this)
-            .style('fill-opacity', 1)
-            .style('stroke-opacity', 1)
-            .style('stroke-width', 2)
-        })
-        .on('mouseout', function(d){
-          tip.hide(d);
-          d3.select(this)
-            .style('fill-opacity', 0.8)
-            .style('stroke-opacity', 0.5)
-            .style('stroke-width', 1)
-        });
+function mouseOverCountry(d, i, nodes, dataByID, tip){
+  if(d.id in dataByID){
+    tip.show(d);
+    d3.select(nodes[i]).style('fill', 'black')
   }
+}
+
+function mouseOutCountry(d, i, nodes, dataByID, color, tip){
+  if(d.id in dataByID){
+        tip.hide(d);
+        d3.select(nodes[i]).style('fill', color(dataByID[d.id]['color']))
+  }
+}
+
+function countryColor(d, dataByID, color){
+  if (d.id in dataByID) {
+    return color(dataByID[d.id]['color'])
+  } else {
+    return 'white'
+  }
+}
+
+function ready(geography, data, colorVariable, geoIDVariable, svg, path, color, tip) {
+  data.forEach(d => {
+    d[colorVariable] = Number(d[colorVariable].replace(',', ''));
+  })
+
+  const dataByID = {};
+  data.forEach(d => {
+      dataByID[d[geoIDVariable]] = {"color":d[colorVariable], "name":d['name']};
+  });
+
+  geography.features.forEach(d => {
+      if(d.id in dataByID){
+          d[colorVariable] = dataByID[d.id]['color']
+          d['name'] = dataByID[d.id]['name']
+      }
+  });
+
+  svg.append('g')
+    .attr('class', 'countries')
+    .selectAll('path')
+    .data(geography.features)
+    .enter().append('path')
+      .attr('d', path)
+      .style('fill', d => countryColor(d, dataByID, color))
+      .style('stroke-width', 0)
+      .on('mouseover', (d, i, nodes) => mouseOverCountry(d, i, nodes, dataByID, tip))
+      .on('mouseout', (d, i, nodes) => mouseOutCountry(d, i, nodes, dataByID, color, tip));
+  
+  d3.select('div.loadingMessage').remove()
 }
