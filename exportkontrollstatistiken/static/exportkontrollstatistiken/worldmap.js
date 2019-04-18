@@ -1,16 +1,11 @@
-function worldmap(src, colorVariable, geoIDVariable){
-  const locale = d3.formatLocale({"decimal": ".",
-    "thousands": "\'",
-    "grouping": [3],
-    "currency": ['Fr. ', '']});
-  const format = locale.format('$,'); // TODO: Swiss monetary value formatting
-
+function worldmap(src, colorVariable, geoIDVariable, numberFormat){
   // Set tooltips
   const tip = d3.tip()
     .attr('class', 'd3-tip')
     .offset([-10, 0])
-    .html(d => `<strong>Country: </strong><span class='details'>${d['name']}<br></span><strong>${colorVariable}: </strong><span class='details'>${format(d[colorVariable])}</span>`);
+    .html(d => `<strong>Country: </strong><span class='details'>${d['name']}<br></span><strong>${colorVariable}: </strong><span class='details'>${numberFormat(d[colorVariable])}</span>`);
 
+    // both of those stupid tables should be replaced with some simple logic making the damn box follow the mouse pointer and avoid the borders of the map
   tip.direction(function(d) {
     if (d.id === 'AQ') return 'n';
     // Americas
@@ -75,8 +70,8 @@ function worldmap(src, colorVariable, geoIDVariable){
   })
 
   const color = d3.scaleLog()
-    .domain([10e5,10e9])
-    .range(['rgb(255,200,200)', "red"]);
+    .domain([10e4,10e8]) /* TODO: Choose good values. If I'm crazy, use the fancy algorithm that originally came with the map */
+    .range(['#ffffff', '#FF0000']);
 
   const svg = d3.select('div.worldmap')
     .append('svg')
@@ -93,7 +88,7 @@ function worldmap(src, colorVariable, geoIDVariable){
   svg.call(tip);
 
   Promise.all([
-    d3.json('static/exportkontrollstatistiken/world_countries.json'),
+    d3.json('/static/exportkontrollstatistiken/world_countries.json'), /* TODO BROKEN */
     d3.csv(src),
   ]).then(([geography, data]) => ready(geography, data));
 
@@ -150,10 +145,5 @@ function worldmap(src, colorVariable, geoIDVariable){
             .style('stroke-opacity', 0.5)
             .style('stroke-width', 1)
         });
-
-    svg.append('path')
-      .datum(topojson.mesh(geography.features, (a, b) => a.id !== b.id))
-      .attr('class', 'names')
-      .attr('d', path);
   }
 }

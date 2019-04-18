@@ -10,26 +10,24 @@ import datetime
 
 # TODO: Transform all of this into a class based view
 class apiParam():
-    """Parst die Parameter und stellt sie in praktischeren Formen zur Verfügung bzw. stoppt wenn sie falsch sind."""
+    """Parses the parameters and provides them in a more practical form or stops if they are wrong."""
     
     # granularity
     granularities = {
-        "s" : "summed",
-        "i" : "individual",
-        "y" : "summedPerYear",
+        "i" : ["individual", "Geschäfte einzeln und detailliert"],
+        "y" : ["summedPerYear", "Summen pro Land und Jahr"],
+        "s" : ["summed", "Summen pro Land über gesamten Zeitraum"],
     }
     granularity=None
-
-    
 
     # countries
     countries=[]
 
     # types
-    typesChoices={
-        "k" : "Kriegsmaterial",
-        "b" : "Besondere militärische Güter",
-        "d" : "Dual Use Güter",
+    typesChoices = { # case 1, case 2, no idea how they are called
+        "k" : ["Kriegsmaterial", "Kriegsmaterial"],
+        "b" : ["Besondere militärische Güter", "Besonderen militärischen Gütern"],
+        "d" : ["Dual Use Güter", "Dual Use Gütern"],
     }
     types=[] # types in typesChoices
 
@@ -43,12 +41,14 @@ class apiParam():
     sortBy=None
     
     def __init__(self, granularity, countries, types, year1, year2, sortBy, perPage, pageNumber):
+        self._str = granularity + '/' + countries + '/' + types + '/' + str(year1) + '/' + str(year2) + '/' + sortBy + '/' + str(perPage) + '/' + str(pageNumber)
+        
         self.perPage=perPage
         self.pageNumber=pageNumber
         
         if(granularity not in self.granularities):
             raise(ValueError)
-        self.granularity=self.granularities[granularity]
+        self.granularity=self.granularities[granularity][0]
         
         if(sortBy not in self.sortByChoices):
             raise(ValueError)
@@ -95,18 +95,21 @@ class apiParam():
         if(self.granularity=="summedPerYear" and not self.countriesSingle and self.sortBy in ["-beginn", "beginn"]):
             raise(NotImplementedError)
 
+    def __str__(self):
+        return(self._str)
+
     def getTypes(self, typeFieldName):
         """Get a Q object with the types ORd together. This depends on the field name so it must be given in parameter (values are often exportkontrollnummer__kontrollregime__gueterArt__name or gueterArt__name)."""
         qtypes=Q()
         for c in self.types:
-            args = {typeFieldName : Uebersetzungen.objects.get(de=self.typesChoices[c])}
+            args = {typeFieldName : Uebersetzungen.objects.get(de=self.typesChoices[c][0])}
             qtypes |= Q(**args)
         return(qtypes)
 
     def getPage(self, queryset):
         """Slice a queryset or other sliceable object. The queryset is not evaluated at this point I think. """
         return(queryset[self.perPage*(self.pageNumber-1):self.perPage*self.pageNumber])
-        
+
 def individual(p, writer):
     queryset = Geschaefte.objects.filter(ende__gte=datetime.date(p.year1, 1, 1))
     queryset = queryset.filter(beginn__lte=datetime.date(p.year2, 12, 31))
@@ -273,7 +276,29 @@ def worldmap(request):
     context = {}
     return HttpResponse(template.render(context, request))
 
-def index(request):
+def mainpage(request, granularity, countries, types, year1, year2, sortBy, perPage, pageNumber):
+    # input validation and preparation
+    try:
+        params=apiParam(granularity, countries, types, year1, year2, sortBy, perPage, pageNumber)
+    except ValueError:
+        raise # TODO: This line is not for production.
+        return(HttpResponse("Invalid parameter."))
     template = loader.get_template('exportkontrollstatistiken/index.html')
-    context = {}
+    regions = { # TODO THIS REALLY DOESN'T BELONG HERE
+        "AF":"Africa",
+        "NA":"North America",
+        "OC":"Oceania",
+        "AN":"Antarctica",
+        "AS":"Asia",
+        "EU":"Europe",
+        "SA":"South America",
+    }
+    context = {
+        'p' : params,
+        'regions' : regions,
+        'countries' : Laender.objects.all(),
+    }
     return HttpResponse(template.render(context, request))
+
+def index(request):
+    return(mainpage(request, "s", "all", "kbd", 2001, 2019, "v", 300, 1))
