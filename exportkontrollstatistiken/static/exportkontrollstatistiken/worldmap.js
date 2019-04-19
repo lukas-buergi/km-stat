@@ -17,15 +17,15 @@ function mouseOverCountry(d, i, nodes, dataByID, numberFormat, colorVariable){
   if(d.id in dataByID){
     d3.select('#country').text(d['name']);
     d3.select('#exports').text(numberFormat(d[colorVariable]));
-    d3.select('div.worldmap').on( "mousemove", () => movePopup(this) );
+    d3.select('div.worldmap').on( "mousemove", movePopup );
     d3.select('div.popup').style('visibility', 'visible');
     d3.select(nodes[i]).style('fill', '#AAAAAA');
   }
 }
 
-function movePopup(context){
-  console.log();
+function movePopup(){
   d3.select('div.popup')
+    // two elaborate ways to calculate mouse position and popup position and that's the best I could find
     .style('top', (d3.mouse(document.querySelector('div.worldmap'))[1] - document.querySelector('div.popup').offsetHeight -2) + "px")
     .style('left', (d3.event.clientX - document.querySelector('div.popup').offsetWidth/2) + "px");
 }

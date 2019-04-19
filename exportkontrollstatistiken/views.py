@@ -21,7 +21,6 @@ class apiParam():
     granularity=None
 
     # countries
-    countries=[]
 
     # types
     typesChoices = { # case 1, case 2, no idea how they are called
@@ -63,6 +62,7 @@ class apiParam():
         self.year2=year2
 
         # types
+        self.types=[]
         for c in types:
             if(c not in self.typesChoices):
                 raise(ValueError)
