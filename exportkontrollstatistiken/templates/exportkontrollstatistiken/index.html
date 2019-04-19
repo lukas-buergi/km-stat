@@ -131,6 +131,15 @@
     background-color: #ffebf1;
   }
 
+  .pageNavigation {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:center;
+    align-content:center;
+    background-color: #F4F4F4;
+  }
+
   .gueterArten {
     display: flex;
     flex-direction: column;
@@ -145,6 +154,18 @@
     align-content:center;
     padding:0.5em
   }
+
+  .popup {
+    position: absolute;
+    top: 0; left: 0;
+    visibility: hidden;
+    background-color: #AAAAAA;
+    border-radius: 0.1em;
+    border: solid;
+    border-width: 1px;
+    border-color: #000000;
+    z-index: 10;
+  }
   
   </style>
   <head>
@@ -152,7 +173,6 @@
     <script src="{% static 'exportkontrollstatistiken/queue.v1.min.js' %}"></script>
     <script src="{% static 'exportkontrollstatistiken/topojson.v1.min.js' %}"></script>
     <script src="{% static 'exportkontrollstatistiken/d3-geo-projection.v1.min.js' %}"></script>
-    <script src="{% static 'exportkontrollstatistiken/d3-tip.js' %}"></script>
     <script src="{% static 'exportkontrollstatistiken/d3-format.v1.min.js' %}"></script>
     <script src="{% static 'exportkontrollstatistiken/worldmap.js' %}"></script>
     <script src="{% static 'exportkontrollstatistiken/table.js' %}"></script>
@@ -169,6 +189,20 @@
       {# xxx Franken Exporte von Kriegsmaterial, besonderen militärischen Gütern und Dual Use Gütern total in unserer Datenbank. #}
       {# Zur Anzeige ausgewählt: Exporte von <GüterartListe> an <Länderliste> zwischen <Anfang> und <Ende>. #}
       <div class="worldmap">
+        <div class="popup">
+          <table>
+            <tbody>
+              <tr>
+                <td>{% trans "Land" %}:</td>
+                <td id="country"></td>
+              </tr>
+              <tr>
+                <td>{% trans "Exporte" %}:</td>
+                <td id="exports"></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
         <div class="loadingMessage title">Loading map...</div>
       </div>
       <div class="filter">
@@ -209,10 +243,21 @@
               <option value="{{ key }}" {% if p.granularity == key %}selected{% endif %}>{{ value.1 }}</option>
             {% endfor %}
         </select>
+        {# TODO: Sort, rows per page#}
+      </div>
+      {# TODO: page navigation. Should be buttons, not links. #}
+      <div class="pageNavigation">
+        <input id="firstPage" type="button" value="{% trans "Erste Seite" %}" onclick="firstPage();" />
+        <input id="previousPage" type="button" value="{% trans "Vorherige Seite" %}" onclick="previousPage();" />
+        <select id="jumpToPage">
+          <option value="{{ 1 }}" {# if 1==currentPage %}selected{% endif #}>{% trans "Gehe zu Seite " %}1</option>
+        </select>
+        <input id="nextPage" type="button" value="{% trans "Nächste Seite" %}" onclick="nextPage();" />
+        <input id="lastPage" type="button" value="{% trans "Letzte Seite" %}" onclick="lastPage();" />
       </div>
       <div class="table"></div>
+      {# TODO: next, previous, etc. #}
     </div>
-    <script type='text/javascript'>table('/api/g/{{ p }}');</script>
     <script type='text/javascript'>
       const locale = d3.formatLocale({"decimal": ".",
         "thousands": "\'",
@@ -220,6 +265,7 @@
         "currency": ['Fr. ', '']});
       const format = locale.format('$,');
       worldmap('/api/g' + window.location.pathname, 'Exporte', 'id', format);
+      table('/api/g/{{ p }}');
     </script>
   </body>
 </html>
