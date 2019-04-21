@@ -9,14 +9,14 @@ function worldmap(src, colorVariable, geoIDVariable, numberFormat){
 
   Promise.all([
     d3.json('/static/exportkontrollstatistiken/world_countries.json'), /* TODO BROKEN */
-    d3.csv(src),
+    d3.json(src),
   ]).then(([geography, data]) => ready(geography, data, colorVariable, geoIDVariable, path, color, numberFormat));
 }
 
-function mouseOverCountry(d, i, nodes, dataByID, numberFormat, colorVariable){
+function mouseOverCountry(d, i, nodes, dataByID, numberFormat){
   if(d.id in dataByID){
     d3.select('#country').text(d['name']);
-    d3.select('#exports').text(numberFormat(d[colorVariable]));
+    d3.select('#exports').text(numberFormat(d['color']));
     d3.select('div.worldmap').on( "mousemove", movePopup );
     d3.select('div.popup').style('visibility', 'visible');
     d3.select(nodes[i]).style('fill', '#AAAAAA');
@@ -46,19 +46,20 @@ function countryColor(d, dataByID, color){
 }
 
 function ready(geography, data, colorVariable, geoIDVariable, path, color, numberFormat) {
-  data.forEach(d => {
-    d[colorVariable] = Number(d[colorVariable].replace(',', ''));
+  // TODO: colorVariable, geoIDVariable ignored
+  data['data'].forEach(d => {
+    d[2] = Number(d[2]);
   })
 
   const dataByID = {};
-  data.forEach(d => {
-      dataByID[d[geoIDVariable]] = {"color":d[colorVariable], "name":d['name']};
+  data['data'].forEach(d => {
+      dataByID[d[0]] = {"color":d[2], "name":d[1]};
   });
 
   // combine map and numeric data - bad design TODO
   geography.features.forEach(d => {
       if(d.id in dataByID){
-          d[colorVariable] = dataByID[d.id]['color']
+          d['color'] = dataByID[d.id]['color']
           d['name'] = dataByID[d.id]['name']
       }
   });
@@ -85,7 +86,7 @@ function ready(geography, data, colorVariable, geoIDVariable, path, color, numbe
   // color map and add mouseovers
   map
       .style('fill', d => countryColor(d, dataByID, color))
-      .on('mouseover', (d, i, nodes) => mouseOverCountry(d, i, nodes, dataByID, numberFormat, colorVariable))
+      .on('mouseover', (d, i, nodes) => mouseOverCountry(d, i, nodes, dataByID, numberFormat))
       .on('mouseout', (d, i, nodes) => mouseOutCountry(d, i, nodes, dataByID, color));
       
   /* can change map data later: */

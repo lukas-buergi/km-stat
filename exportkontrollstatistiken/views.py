@@ -1,12 +1,14 @@
 from django.http import HttpResponse
 from django.template import loader
 from django.db.models import Q
+from django.conf import settings
 
 from exportkontrollstatistiken.models import Geschaefte, Uebersetzungen, Laender, Geschaeftslaendersummen
 
 import csv
 import itertools
 import datetime
+import json
 
 # TODO: Transform all of this into a class based view
 class apiParam():
@@ -110,6 +112,69 @@ class apiParam():
         """Slice a queryset or other sliceable object. The queryset is not evaluated at this point I think. """
         return(queryset[self.perPage*(self.pageNumber-1):self.perPage*self.pageNumber])
 
+class apiData():
+    """The data that is returned by an API query. Methods to add data and return json of accumulated data. Does some sanity checks on the data.
+    The JSON contains exactly the following dict:
+        {
+        'total' : amount of results on all pages
+        'cnames' : [column title 1, ..., column title n,],
+        'ctypes' :   [ country code, country name, date, money, untreated ],
+        'countries' :
+            {
+                'country code 1' : 0,
+                'country code 2' : 1,
+                ...
+                'country code m' : m-1,
+            }
+        'data' :
+            [
+                [data country 1 column 1, ..., data country 1 column n],
+                ...
+                [data country m column 1, ..., data country m column n],
+            ]
+        }
+    The 'ctypes' entry has the types of the columns in order.
+    The 'countries' entry exists only if we know the countries are unique in all data rows and need to index the data by country. """
+    data = dict()
+    """This attribute is the one that is converted to json and sent."""
+    def __init__(self, uniqueCountry, columnNames, columnTypes):
+        assert(len(columnNames) == len(columnTypes))
+        if(uniqueCountry):
+            self.data['countries'] = dict()
+            self.uniqueCountry = True
+        self.data['total'] = 0
+        self.data['cnames'] = columnNames
+        self.data['ctypes'] = columnTypes
+        self.countryCodeColumn = None
+        for (index, t) in enumerate(columnTypes):
+            if(t=='country code'):
+                if(self.countryCodeColumn == None):
+                    self.countryCodeColumn = index
+                else:
+                    # doesn't make sense to have multiple
+                    raise(ValueError)
+        if(self.countryCodeColumn == None):
+            raise(ValueError)
+            
+        self.data['data'] = []
+
+    def addRow(self, row):
+        if(self.uniqueCountry):
+            self.data['countries'][row[self.countryCodeColumn]] = len(self.data['data'])
+        self.data['data'].append(row)
+        self.data['total'] += 1
+
+    def addRows(self, rows):
+        for row in rows:
+            self.addRow(row)
+    
+    def getJSON(self):
+        """ Returns a string that is the JSON representation of self.data. """
+        if(settings.DEBUG):
+            return(json.dumps(self.data, indent=2))
+        else:
+            return(json.dumps(self.data, separators=(',', ':')))
+
 def individual(p, writer):
     queryset = Geschaefte.objects.filter(ende__gte=datetime.date(p.year1, 1, 1))
     queryset = queryset.filter(beginn__lte=datetime.date(p.year2, 12, 31))
@@ -152,9 +217,6 @@ def summedPerYear(p, writer):
         
     queryset = queryset.order_by("endempfaengerstaat", firstSort)
 
-    for g in queryset:
-        print(g)
-
     sums=dict()
     curCountry = None
     curYear = None
@@ -185,25 +247,21 @@ def summedPerYear(p, writer):
     for country in order:
         writer.writerow([sums[country][2].code, sums[country][2].name.de, sums[country][1], sums[country][0]])
 
-def summed(p, writer):
+def summed(p):
     """Sum transactions per country.
 
     Begin and end are both inclusive.
-    
-    Format: csv, columns:
-        1. 'id', 2 letter iso country code
-        2. <translated column description>, the name of the country
-        3. <translated column description>, the sum of of the exports
 
     Algorithm:
         * Get entries for year2 sorted by country
         * Get entries for (year1-1) sorted by country
         * Slice both of them correctly
-        * Iterate through both sets in parallel and subtract the latter from the former in each entry
+        * Iterate through both sets in parallel
+            * subtract the latter from the former in each entry
+            * add up the selected types
         * Sort according to p.sortBy
     """
 
-    # TYPES BROKEN
     queryset2 = Geschaeftslaendersummen.objects.filter(jahr=p.year2)
     queryset2 = queryset2.filter(p.getTypes("gueterArt__name"))
     queryset2 = queryset2.filter(p.countries)
@@ -215,6 +273,7 @@ def summed(p, writer):
     queryset1 = queryset1.order_by("endempfaengerstaat")
     # TODO: Should I make a method for the above duplicate code?
 
+    # TODO: This can be done more elegantly with the new apiData class
     sums = dict()
     for country in zip(queryset1, queryset2):
         if(country[0].endempfaengerstaat.code in sums):
@@ -231,11 +290,10 @@ def summed(p, writer):
     order = sorted(sums, key=lambda key : sums.get(key)[1], reverse=reverse)
     order = p.getPage(order)
 
-    titleRow=["id", "name", "Exporte"]
-    writer.writerow(titleRow)
-    
+    result = apiData(True, ["id", "Name", "Exporte"], ['country code', 'country name', 'money'])
     for country in order:
-        writer.writerow([country, sums[country][0].name.de, sums[country][1]])
+        result.addRow([country, sums[country][0].name.de, sums[country][1]])
+    return(result.getJSON())
 
 def gapi(request, granularity, countries, types, year1, year2, sortBy, perPage, pageNumber):
     """Die view, die die Geschäftsdaten an das Frontend liefert.
@@ -251,20 +309,21 @@ def gapi(request, granularity, countries, types, year1, year2, sortBy, perPage, 
     # prepare response
     response = HttpResponse(content_type='text/csv')
     response['Content-Disposition'] = 'attachment; filename="exporte-' + countries + "-" + types + "-" + str(year1) + "-" + str(year2) + "-" + str(pageNumber) + '.csv"'
-    writer = csv.writer(response)
 
     # write response
     if(p.granularity=="summed"):
-        summed(p, writer)
+        response.write(summed(p))
     elif(p.granularity=="summedPerYear"):
+        writer = csv.writer(response)
         summedPerYear(p, writer)
     elif(p.granularity=="individual"):
+        writer = csv.writer(response)
         individual(p, writer)
 
     return(response)
 
-# TODO: Restructure table and worldmap so that they can be included in other pages. Include them on the index.
-# TODO: Make table and worldmap take arguments
+# TODO: Do I want to keep/update those separate views? They don't currently work.
+# Would probably be a good idea.
 
 def table(request):
     template = loader.get_template('exportkontrollstatistiken/table.html')

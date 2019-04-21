@@ -175,9 +175,14 @@
         <div class="filter">
           <label class="filterLabel" for="perPage">{% trans "Einträge pro Seite:" %}</label>
           <select id="perPage">
-            {% with '10 20 50 100 200 500' as list %}{% for perPage in list.split %}
-              <option value="{{ perPage }}">{{ perPage }}</option>
-            {% endfor %}{% endwith %}
+            {% with '10 20 50 100 200 500' as list %}
+              {% if p.perPage not in list.split %}
+                <option value="{{ p.perPage }}" selected>{{ p.perPage }}</option>
+              {% endif %}
+              {% for perPage in list.split %}
+                <option value="{{ perPage }}" {% if perPage == p.perPage %}selected{% endif %}>{{ perPage }}</option>
+              {% endfor %}
+            {% endwith %}
           </select>
         </div>
       </div>
@@ -185,7 +190,7 @@
         <input id="firstPage" type="button" value="{% trans "Erste Seite" %}" onclick="firstPage();" />
         <input id="previousPage" type="button" value="{% trans "Vorherige Seite" %}" onclick="previousPage();" />
         <select id="jumpToPage">
-          <option value="{{ 1 }}" {# if 1==currentPage %}selected{% endif #}>{% trans "Gehe zu Seite " %}1</option>
+          <option value="{{ p.pageNumber }}" selected>{% trans "Gehe zu Seite " %}{{ p.pageNumber }}</option>
         </select>
         <input id="nextPage" type="button" value="{% trans "Nächste Seite" %}" onclick="nextPage();" />
         <input id="lastPage" type="button" value="{% trans "Letzte Seite" %}" onclick="lastPage();" />
