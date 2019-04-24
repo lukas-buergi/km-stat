@@ -18,8 +18,11 @@
     }
     .text {
       background-color: #EEEEEE;
+      text-align: center;
     }
-    
+    h2 {
+      font-size: 1.5em;
+    }
     {# TODO: Prefix all sub-component class and id identifiers with <their component>_ #}
     {% include "exportkontrollstatistiken/worldmap.css" only %}
     {% include "exportkontrollstatistiken/filter.css" only %}
@@ -49,8 +52,9 @@
       {% include "exportkontrollstatistiken/filter.html" %}
       <div class="text">
         {% blocktrans %}
-          Auf der Karte wird für jedes Land ein Total über die ausgewählten Exporte angezeigt. In der Tabelle kann man die Exporte im Detail betrachten, je nach ausgewählter Darstellungsart und Sortierreihenfolge. <br>
-          Machen Sie sich selbst ein Bild über die Waffenexporte der Schweiz! <br>
+          <h2>Machen Sie sich selbst ein Bild über die Waffenexporte der Schweiz!</h2><br>
+          Auf der Karte wird für jedes Land ein Total über die ausgewählten Exporte angezeigt.<br>
+          In der Tabelle kann man die Exporte im Detail betrachten, je nach ausgewählter Darstellungsart und Sortierreihenfolge. <br>
           Die Exportzahlen stammen alle vom Staatssekretariat für Wirtschaft SECO, sind also offizielle Daten vom Bund.
           {% endblocktrans %}
       </div>

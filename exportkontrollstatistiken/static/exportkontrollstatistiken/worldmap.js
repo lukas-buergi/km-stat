@@ -30,17 +30,17 @@ function worldmap(src, colorVariable, geoIDVariable, numberFormat){
       .style('stroke-width', '1px')
       .style('stroke', 'white')
       .style('fill-opacity', 0);
-      
-  Promise.all([
-    d3.json('/static/exportkontrollstatistiken/world_countries.json'), /* TODO BROKEN (well, not really, but it will be if the path changes) */
-    d3.json(src),
-  ]).then(([geography, data]) => ready(geography, data, colorVariable, geoIDVariable, numberFormat, path, map));
+
+  /* TODO BROKEN (well, not really, but it will be if the path changes) */
+  d3.json('/static/exportkontrollstatistiken/world_countries.json')
+    .then(geography => drawCountries(geography, path, map))
+    .then(blankCountriesMap => setRemoteData(blankCountriesMap, src, colorVariable, geoIDVariable, numberFormat, path, map));
 }
 
 function mouseOverCountry(d, i, nodes, dataByID, numberFormat){
   if(d.id in dataByID){
-    d3.select('#worldmap_country').text(d['name']);
-    d3.select('#worldmap_exports').text(numberFormat(d['color']));
+    d3.select('#worldmap_country').text(dataByID[d.id]['name']);
+    d3.select('#worldmap_exports').text(numberFormat(dataByID[d.id]['color']));
     d3.select('div.worldmap').on( "mousemove", movePopup );
     d3.select('div.worldmap_popup').style('visibility', 'visible');
     d3.select(nodes[i]).style('fill', '#AAAAAA');
@@ -71,7 +71,26 @@ function countryColor(d, dataByID, color){
   }
 }
 
-function ready(geography, data, colorVariable, geoIDVariable, numberFormat, path, map) {
+function drawCountries(geography, path, map){
+  // draw white map
+  blankCountriesMap = map
+    .append('g')
+    .attr('class', 'countries')
+    .selectAll('path')
+    .data(geography.features)
+    .enter()
+      .append('path')
+      .attr('d', path)
+      .style('stroke-width', 0)
+      .style('fill', 'white');
+  return(blankCountriesMap);
+}
+
+function setRemoteData(blankCountriesMap, src, colorVariable, geoIDVariable, numberFormat, path, map){
+  d3.json(src).then(data => setData(blankCountriesMap, data, colorVariable, geoIDVariable, numberFormat, path, map));
+}
+
+function setData(blankCountriesMap, data, colorVariable, geoIDVariable, numberFormat, path, map) {
   const color = d3.scaleLog()
     .domain([10e4,10e8]) /* TODO: Choose good values. If I'm crazy, use the fancy algorithm that originally came with the map */
     .range(['#ffffff', '#FF0000']);
@@ -86,27 +105,8 @@ function ready(geography, data, colorVariable, geoIDVariable, numberFormat, path
   data['data'].forEach(d => {
       dataByID[d[0]] = {"color":d[2], "name":d[1]};
   });
-
-  // combine map and numeric data - bad design TODO
-  geography.features.forEach(d => {
-      if(d.id in dataByID){
-          d['color'] = dataByID[d.id]['color']
-          d['name'] = dataByID[d.id]['name']
-      }
-  });
-
   
-  // draw white map
-  blankCountriesMap = map
-    .append('g')
-    .attr('class', 'countries')
-    .selectAll('path')
-    .data(geography.features)
-    .enter()
-      .append('path')
-      .attr('d', path)
-      .style('stroke-width', 0)
-      .style('fill', 'white');
+  
   // color map and add mouseovers
   dataCountriesMap = blankCountriesMap
       .style('fill', d => countryColor(d, dataByID, color))
