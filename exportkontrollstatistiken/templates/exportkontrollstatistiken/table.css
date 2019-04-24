@@ -1,0 +1,20 @@
+.pageNavigation {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content:center;
+  align-content:center;
+  background-color: #F4F4F4;
+}
+.table {
+  background-color: #EEEEEE;
+}
+table {
+  margin: 0 auto; /* center table */
+}
+.table tbody tr:nth-child(odd){
+  background-color: #F4F4F4;
+}
+.table tbody tr:nth-child(even){
+  background-color: #EEEEEE;
+}

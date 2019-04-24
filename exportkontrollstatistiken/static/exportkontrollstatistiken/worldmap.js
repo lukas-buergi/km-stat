@@ -7,10 +7,10 @@ function worldmap(src, colorVariable, geoIDVariable, numberFormat){
 
 function mouseOverCountry(d, i, nodes, dataByID, numberFormat){
   if(d.id in dataByID){
-    d3.select('#country').text(d['name']);
-    d3.select('#exports').text(numberFormat(d['color']));
+    d3.select('#worldmap_country').text(d['name']);
+    d3.select('#worldmap_exports').text(numberFormat(d['color']));
     d3.select('div.worldmap').on( "mousemove", movePopup );
-    d3.select('div.popup').style('visibility', 'visible');
+    d3.select('div.worldmap_popup').style('visibility', 'visible');
     d3.select(nodes[i]).style('fill', '#AAAAAA');
   }
 }
@@ -18,15 +18,15 @@ function mouseOverCountry(d, i, nodes, dataByID, numberFormat){
 function movePopup(){
   // TODO: Don't leave the window
   const popupAboveMouse = 15;
-  d3.select('div.popup')
+  d3.select('div.worldmap_popup')
     // two elaborate ways to calculate mouse position and popup position and that's the best I could find
-    .style('top', (d3.mouse(document.querySelector('div.worldmap'))[1] - document.querySelector('div.popup').offsetHeight - popupAboveMouse) + "px")
-    .style('left', (d3.event.clientX - document.querySelector('div.popup').offsetWidth/2) + "px");
+    .style('top', (d3.mouse(document.querySelector('div.worldmap'))[1] - document.querySelector('div.worldmap_popup').offsetHeight - popupAboveMouse) + "px")
+    .style('left', (d3.event.clientX - document.querySelector('div.worldmap_popup').offsetWidth/2) + "px");
 }
 
 function mouseOutCountry(d, i, nodes, dataByID, color){
   if(d.id in dataByID){
-    d3.select('div.popup').style('visibility', 'hidden');
+    d3.select('div.worldmap_popup').style('visibility', 'hidden');
     d3.select(nodes[i]).style('fill', color(dataByID[d.id]['color']));
   }
 }
@@ -67,19 +67,19 @@ function ready(geography, data, colorVariable, geoIDVariable, numberFormat) {
   });
 
   const bounds = path.bounds(geography);
-  console.log(bounds);
 
   const svg = d3.select('div.worldmap')
     .style("padding-bottom", bounds[1][1] / bounds[1][0] * 100 + "%")
     .append('svg')
       .attr("preserveAspectRatio", "xMinYMin meet")
       .attr("viewBox", "0 0 " + bounds[1][0] + " " + bounds[1][1])
-      .classed("worldmap-svg", true)
+      .classed("worldmap_svg", true)
       .append('g')
         .attr('class', 'map');
 
 
   // TODO: draw empty coordinate system first (i.e. projected lat. and long. lines), then wait for map data
+  // as far as I can see the only way to get a coordinate system is to draw it from geojson the same way as the map itself
   
   // draw white map
   map=svg
@@ -101,5 +101,5 @@ function ready(geography, data, colorVariable, geoIDVariable, numberFormat) {
   /* can change map data later: */
   //map.style('fill', d => 'black');
 
-  d3.select('div.loadingMessage').remove()
+  d3.select('div.worldmap_loadingMessage').remove()
 }

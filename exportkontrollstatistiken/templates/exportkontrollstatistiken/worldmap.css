@@ -1,0 +1,35 @@
+.worldmap {
+      /* for scaling */
+      display: inline-block;
+      position: relative;
+      width: 100%;
+      padding-bottom: 0; {# set in js once geography arrives #}
+      vertical-align: top;
+      //overflow: hidden;
+      /* colors */
+      background-color: #EEEEFF;
+}
+.worldmap_svg {
+  /* for scaling */
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.worldmap_loadingMessage {
+  font-size: 4em;
+  text-align: center;
+}
+{# this should start in the middle. Sometimes (for example when scrolling) it's not moved with the mouse pointer. #}
+.worldmap_popup {
+  position: absolute;
+  top: 0; left: 0;
+  visibility: hidden;
+  background-color: #AAAAAA;
+  border-radius: 5px;
+  border: solid;
+  border-width: 1px;
+  border-color: #000000;
+  z-index: 10;
+  text-align: left;
+}

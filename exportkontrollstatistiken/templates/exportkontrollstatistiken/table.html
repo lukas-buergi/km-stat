@@ -1,14 +1,22 @@
-{% load static %}
-
-<!DOCTYPE html>
-<meta charset='utf-8'>
-<html>
-  <head>
-    <script src="http://d3js.org/d3.v5.min.js" charset="utf-8"></script>
-    <script src="{% static 'exportkontrollstatistiken/table.js' %}"></script>
-  </head>
-  <body>
-    <div class="table"></div>
-    <script type='text/javascript'>table('api/g/s/all/kbd/2001/2019/v/300/1');</script>
-  </body>
-</html>
+{# Only for inclusion in other templates, it's not a a whole page. #}
+{% load i18n %}
+<div class="pageNavigation">
+  <input id="firstPage" type="button" value="{% trans "Erste Seite" %}" onclick="firstPage();" />
+  <input id="previousPage" type="button" value="{% trans "Vorherige Seite" %}" onclick="previousPage();" />
+  <select id="jumpToPage">
+    <option value="{{ p.pageNumber }}" selected>{% trans "Gehe zu Seite " %}{{ p.pageNumber }}</option>
+  </select>
+  <input id="nextPage" type="button" value="{% trans "Nächste Seite" %}" onclick="nextPage();" />
+  <input id="lastPage" type="button" value="{% trans "Letzte Seite" %}" onclick="lastPage();" />
+</div>
+<div class="table">
+  <table>
+    <thead></thead>
+    <tbody>
+      <tr><td>{% trans "Tabelleneinträge am Laden..." %}</td></tr>
+      <tr><td>{% trans "Tabelleneinträge am Laden..." %}</td></tr>
+      <tr><td>{% trans "Tabelleneinträge am Laden..." %}</td></tr>
+    </tbody>
+  </table>
+</div>
+{# TODO: display page navigation again #}
