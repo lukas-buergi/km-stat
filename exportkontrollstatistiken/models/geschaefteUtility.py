@@ -9,9 +9,13 @@ from .geschaefte import Geschaefte
 class Geschaeftslaendersummen(models.Model):
   """Hilfsmodell, das Teilsummen pro Land, Jahr und Güterart enthält. TODO: Neues Feld für nur die Summe von dem Jahr."""
   endempfaengerstaat = models.ForeignKey(Laender, on_delete=models.PROTECT)
+  """ Wie bei einzelnen Geschäften. """
   gueterArt = models.ForeignKey(GueterArten, on_delete=models.PROTECT)
+  """ Wie bei einzelnen Geschäften. """
   umfang = models.PositiveIntegerField()
   """Summe aller Exporte bis zu dem Jahr inklusive."""
+  umfangJahr = models.PositiveIntegerField()
+  """ Summe aller Exporte in dem Jahr. """
   jahr = models.PositiveIntegerField()
 
   @staticmethod
@@ -24,19 +28,38 @@ class Geschaeftslaendersummen(models.Model):
 
     # get the first separately
     firstG = next(geschaefte.__iter__())
-    curSum = Geschaeftslaendersummen(endempfaengerstaat=firstG.endempfaengerstaat, gueterArt=firstG.exportkontrollnummer.kontrollregime.gueterArt, umfang=firstG.umfang, jahr=firstG.beginn.year)
+    curSum = Geschaeftslaendersummen(
+      endempfaengerstaat=firstG.endempfaengerstaat,
+      gueterArt=firstG.exportkontrollnummer.kontrollregime.gueterArt,
+      umfang=firstG.umfang,
+      umfangJahr=firstG.umfang,
+      jahr=firstG.beginn.year)
     curSum.save()
     # then iterate over the rest
     for g in geschaefte:
       if(g.beginn.year!=curSum.jahr):
         if(g.endempfaengerstaat!=curSum.endempfaengerstaat or g.exportkontrollnummer.kontrollregime.gueterArt!=curSum.gueterArt):
-          curSum = Geschaeftslaendersummen(endempfaengerstaat=g.endempfaengerstaat, gueterArt=g.exportkontrollnummer.kontrollregime.gueterArt, umfang=g.umfang, jahr=g.beginn.year)
+          # start calculating partial sums for new country+type combination
+          curSum = Geschaeftslaendersummen(
+            endempfaengerstaat=g.endempfaengerstaat,
+            gueterArt=g.exportkontrollnummer.kontrollregime.gueterArt,
+            umfang=g.umfang,
+            umfangJahr=g.umfang,
+            jahr=g.beginn.year)
           curSum.save()
         else:
-          curSum = Geschaeftslaendersummen(endempfaengerstaat=g.endempfaengerstaat, gueterArt=g.exportkontrollnummer.kontrollregime.gueterArt, umfang=curSum.umfang+g.umfang, jahr=g.beginn.year)
+          # new year, but same row of partial sums
+          curSum = Geschaeftslaendersummen(
+            endempfaengerstaat=g.endempfaengerstaat,
+            gueterArt=g.exportkontrollnummer.kontrollregime.gueterArt,
+            umfang=curSum.umfang+g.umfang,
+            umfangJahr=curSum.umfang,
+            jahr=g.beginn.year)
           curSum.save()
       else:
+        # same year+country+type, add
         curSum.umfang += g.umfang
+        curSum.umfangJahr += g.umfang
         curSum.save()
     # now all the entries that change are here, but zero entries and
     # entries that have zero difference to the previous year are still missing
@@ -48,12 +71,13 @@ class Geschaeftslaendersummen(models.Model):
             cur=Geschaeftslaendersummen.objects.filter(jahr=jahr, gueterArt=gueterArt, endempfaengerstaat=country).get()
           except Geschaeftslaendersummen.DoesNotExist:
             if(cur==None):
-              cur=Geschaeftslaendersummen(endempfaengerstaat=country, gueterArt=gueterArt, jahr=jahr, umfang=0)
+              cur=Geschaeftslaendersummen(endempfaengerstaat=country, gueterArt=gueterArt, jahr=jahr, umfang=0, umfangJahr=0)
               cur.save()
             else:
               # copy cur with new year
               cur.pk=None
               cur.jahr=jahr
+              cur.umfangJahr=0
               cur.save()
 
   @staticmethod
