@@ -12,6 +12,9 @@ import datetime
 # TODO: Transform all of this into a class based view
 class apiParam():
   """Parses the parameters and provides them in a more practical form or stops if they are wrong."""
+
+  # TODO: I wasn't quite aware I was declaring lots of static fields here when I wrote that. So...
+  # it seems to work now, but should probably go partly into constructor
   
   # granularity
   granularities = {
@@ -131,7 +134,7 @@ def gapi(request, granularity, countries, types, year1, year2, sortBy, perPage, 
   if(p.granularity=="summed"):
     response.write(Geschaeftslaendersummen.getJSONSummed(p))
   elif(p.granularity=="summedPerYear"):
-    response.write(Geschaefte.getJSONSummedPerYear(p))
+    response.write(Geschaeftslaendersummen.getJSONSummedPerYear(p))
   elif(p.granularity=="individual"):
     response.write(Geschaefte.getJSON(p))
 

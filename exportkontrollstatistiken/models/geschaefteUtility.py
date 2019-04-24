@@ -129,6 +129,35 @@ class Geschaeftslaendersummen(models.Model):
         result.addRow([country, sums[country][0].name.de, sums[country][1]])
     return(result.getJSON())
 
+  @staticmethod
+  def getJSONSummedPerYear(p):
+    """Return transactions summed per year, sort according to p.sortBy (even if some combinations might not make much sense, they are available too for free). """
+
+    result = apiData(False, ["id", "Name", "Jahr", "Exporte"], ['country code', 'country name', 'untreated', 'money'])
+
+    queryset = Geschaeftslaendersummen.objects
+    queryset = queryset.filter(jahr__gte=p.year1)
+    queryset = queryset.filter(jahr__lte=p.year2)
+    queryset = queryset.filter(p.getTypes("gueterArt__name"))
+    queryset = queryset.filter(p.countries)
+
+    # TODO p class should probably be updated instead of translating the values here
+    sortTrans = {
+      'beginn' : 'jahr',
+      '-beginn' : '-jahr',
+      'umfang' : 'umfangJahr',
+      '-umfang' : '-umfangJahr',
+    }
+
+    sort = sortTrans[p.sortBy]
+    
+    queryset = queryset.order_by(sort)
+    
+    result.setTotal(queryset.count())
+    
+    for ysum in p.getPage(queryset):
+      result.addRow([ysum.endempfaengerstaat.code, ysum.endempfaengerstaat.name.de, ysum.jahr, ysum.umfangJahr])
+    return(result.getJSON())
 
 class Geschaeftssummen(models.Model):
   """Hilfsmodell, das Teilsummen pro Jahr und Güterart enthält."""

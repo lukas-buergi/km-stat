@@ -89,7 +89,6 @@ class Uebersetzungen(models.Model):
     verbose_name = 'Übersetzung'
     verbose_name_plural = 'Übersetzungen'
 
-
 class Laender(models.Model):
   """ Liste der Länder, in die exportiert wird. """
   code = models.CharField(max_length=2)
