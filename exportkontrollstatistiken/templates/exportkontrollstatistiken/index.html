@@ -14,11 +14,13 @@
       text-align: center;
     }
     .worldmap {
+      /* for the loading text */
+      text-align: center;
       /* for scaling */
       display: inline-block;
       position: relative;
       width: 100%;
-      padding-bottom: 50%;
+      padding-bottom: 0; {# set in js once geography arrives #}
       vertical-align: top;
       //overflow: hidden;
       /* colors */
@@ -56,8 +58,19 @@
       margin: 0 auto; /* center table */
     }
 
+    .table tbody tr:nth-child(odd){
+      background-color: #F4F4F4;
+    }
+    .table tbody tr:nth-child(even){
+      background-color: #EEEEEE;
+    }
+
     .title {
       font-size: 4em;
+    }
+
+    .text {
+      background-color: #EEEEEE;
     }
 
     .gueterArten {
@@ -75,6 +88,7 @@
       padding:0.5em
     }
 
+    {# this should start in the middle. Sometimes (for example when scrolling) it's not moved with the mouse pointer. #}
     .popup {
       position: absolute;
       top: 0; left: 0;
@@ -85,6 +99,7 @@
       border-width: 1px;
       border-color: #000000;
       z-index: 10;
+      text-align: left;
     }
   </style>
   <head>
@@ -186,6 +201,13 @@
           </select>
         </div>
       </div>
+      <div class="text">
+        {% blocktrans %}
+          Auf der Karte wird für jedes Land ein Total über die ausgewählten Exporte angezeigt. In der Tabelle kann man die Exporte im Detail betrachten, je nach ausgewählter Darstellungsart und Sortierreihenfolge. <br>
+          Machen Sie sich selbst ein Bild über die Waffenexporte der Schweiz! <br>
+          Die Exportzahlen stammen alle vom Staatssekretariat für Wirtschaft SECO, sind also offizielle Daten vom Bund.
+          {% endblocktrans %}
+      </div>
       <div class="pageNavigation">
         <input id="firstPage" type="button" value="{% trans "Erste Seite" %}" onclick="firstPage();" />
         <input id="previousPage" type="button" value="{% trans "Vorherige Seite" %}" onclick="previousPage();" />
@@ -195,7 +217,16 @@
         <input id="nextPage" type="button" value="{% trans "Nächste Seite" %}" onclick="nextPage();" />
         <input id="lastPage" type="button" value="{% trans "Letzte Seite" %}" onclick="lastPage();" />
       </div>
-      <div class="table"></div>
+      <div class="table">
+        <table>
+          <thead></thead>
+          <tbody>
+            <tr><td>{% trans "Tabelleneinträge am Laden..." %}</td></tr>
+            <tr><td>{% trans "Tabelleneinträge am Laden..." %}</td></tr>
+            <tr><td>{% trans "Tabelleneinträge am Laden..." %}</td></tr>
+          </tbody>
+        </table>
+      </div>
       {# TODO: next, previous, etc. #}
     </div>
     <script type='text/javascript'>
@@ -204,8 +235,8 @@
         "grouping": [3],
         "currency": ['Fr. ', '']});
       const format = locale.format('$,');
-      worldmap('/api/g' + window.location.pathname, 'Exporte', 'id', format);
-      table('/api/g/{{ p }}');
+      worldmap('/api/g/{{ p }}', 'Exporte', 'id', format); // window.location.pathname
+      table('/api/g/{{ p }}'); // don't read this from the window, {{p}} is best.
     </script>
   </body>
 </html>

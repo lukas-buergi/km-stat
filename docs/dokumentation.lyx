@@ -642,6 +642,10 @@ Tabelle für einzelnes Land: Wie Tabelle mit Geschäften/Jahrestotalen, nur
 Programmschnittstellen
 \end_layout
 
+\begin_layout Paragraph
+json für die Daten:
+\end_layout
+
 \begin_layout Itemize
 eine für jede Tabellenart von oben, die alle relevanten Filterparameter
  unterstützt
@@ -676,6 +680,88 @@ eine für die Kartentransformation, die die selben Parameter nimmt, aber
 eine für die Problemanzeige in Tabellen und den Doppelbalkendiagramme
 \end_layout
 
+\begin_layout Paragraph
+js-komponenten:
+\end_layout
+
+\begin_layout Itemize
+constructor:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+dataCounter = 0
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+getData(src url):
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+nummer=dataCounter
+\end_layout
+
+\begin_layout Enumerate
+dataCounter ++
+\end_layout
+
+\begin_layout Enumerate
+Hole Daten
+\end_layout
+
+\begin_layout Enumerate
+.then(setData(nummer, Daten))
+\end_layout
+
+\begin_layout Enumerate
+starte Übergang zu neutraler/leerer Darstellung
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+setData(nummer, data):
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+falls wir schon bei einer grösseren Nummer sind, stop.
+\end_layout
+
+\begin_layout Itemize
+ersetze Daten (evt.
+ mit ca.
+ 50ms Animation)
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+initialize(src url):
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+zeige 
+\begin_inset Quotes eld
+\end_inset
+
+<komponente> am Laden
+\begin_inset Quotes erd
+\end_inset
+
+ an.
+\end_layout
+
+\begin_layout Itemize
+setData(leeres Gerüst, Tabelle, Koordinatensystem)
+\end_layout
+
+\begin_layout Itemize
+setRemoteData(src url)
+\end_layout
+
+\end_deeper
 \begin_layout Subsection
 Zu tun
 \end_layout

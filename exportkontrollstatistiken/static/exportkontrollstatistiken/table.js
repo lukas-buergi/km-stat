@@ -3,9 +3,9 @@ function table(src){
 }
 
 function drawTable(data) {
-  var table = d3.select('div.table').append("table");
-  var thead = table.append("thead");
-  var tbody = table.append("tbody");
+  var table = d3.select('div.table table');
+  var thead = table.select("thead");
+  var tbody = table.select("tbody");
   
   /*
    * This snippet was copied from the d3 doc on .data()
@@ -21,7 +21,7 @@ function drawTable(data) {
     .join("td")
       .text(d => d);
   // TODO: Array rows are somehow mixed. The order is not random, but seems like multiple correctly sorted parts interleaved. Columns stay correct.
-  console.log(data['data'])
+  // console.log(data['data'])
   tbody
     .selectAll("tr")
     .data(data['data'])

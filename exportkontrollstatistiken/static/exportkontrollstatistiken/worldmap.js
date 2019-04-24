@@ -1,16 +1,8 @@
 function worldmap(src, colorVariable, geoIDVariable, numberFormat){
-  const color = d3.scaleLog()
-    .domain([10e4,10e8]) /* TODO: Choose good values. If I'm crazy, use the fancy algorithm that originally came with the map */
-    .range(['#ffffff', '#FF0000']);
-
-  const projection = d3.geoRobinson()
-
-  const path = d3.geoPath().projection(projection);
-
   Promise.all([
-    d3.json('/static/exportkontrollstatistiken/world_countries.json'), /* TODO BROKEN */
+    d3.json('/static/exportkontrollstatistiken/world_countries.json'), /* TODO BROKEN (well, not really, but it will be if the path changes) */
     d3.json(src),
-  ]).then(([geography, data]) => ready(geography, data, colorVariable, geoIDVariable, path, color, numberFormat));
+  ]).then(([geography, data]) => ready(geography, data, colorVariable, geoIDVariable, numberFormat));
 }
 
 function mouseOverCountry(d, i, nodes, dataByID, numberFormat){
@@ -24,9 +16,11 @@ function mouseOverCountry(d, i, nodes, dataByID, numberFormat){
 }
 
 function movePopup(){
+  // TODO: Don't leave the window
+  const popupAboveMouse = 15;
   d3.select('div.popup')
     // two elaborate ways to calculate mouse position and popup position and that's the best I could find
-    .style('top', (d3.mouse(document.querySelector('div.worldmap'))[1] - document.querySelector('div.popup').offsetHeight -2) + "px")
+    .style('top', (d3.mouse(document.querySelector('div.worldmap'))[1] - document.querySelector('div.popup').offsetHeight - popupAboveMouse) + "px")
     .style('left', (d3.event.clientX - document.querySelector('div.popup').offsetWidth/2) + "px");
 }
 
@@ -45,7 +39,15 @@ function countryColor(d, dataByID, color){
   }
 }
 
-function ready(geography, data, colorVariable, geoIDVariable, path, color, numberFormat) {
+function ready(geography, data, colorVariable, geoIDVariable, numberFormat) {
+  const color = d3.scaleLog()
+    .domain([10e4,10e8]) /* TODO: Choose good values. If I'm crazy, use the fancy algorithm that originally came with the map */
+    .range(['#ffffff', '#FF0000']);
+
+  const projection = d3.geoRobinson().fitWidth('1000', geography);
+
+  const path = d3.geoPath().projection(projection);
+  
   // TODO: colorVariable, geoIDVariable ignored
   data['data'].forEach(d => {
     d[2] = Number(d[2]);
@@ -64,14 +66,21 @@ function ready(geography, data, colorVariable, geoIDVariable, path, color, numbe
       }
   });
 
-  const svg = d3.select('div.worldmap')
-    .append('svg')
-    .attr("preserveAspectRatio", "xMinYMin meet")
-    .attr("viewBox", "0 0 1000 500") // magic values
-    .classed("worldmap-svg", true)
-    .append('g')
-    .attr('class', 'map');
+  const bounds = path.bounds(geography);
+  console.log(bounds);
 
+  const svg = d3.select('div.worldmap')
+    .style("padding-bottom", bounds[1][1] / bounds[1][0] * 100 + "%")
+    .append('svg')
+      .attr("preserveAspectRatio", "xMinYMin meet")
+      .attr("viewBox", "0 0 " + bounds[1][0] + " " + bounds[1][1])
+      .classed("worldmap-svg", true)
+      .append('g')
+        .attr('class', 'map');
+
+
+  // TODO: draw empty coordinate system first (i.e. projected lat. and long. lines), then wait for map data
+  
   // draw white map
   map=svg
     .append('g')

@@ -202,6 +202,8 @@ nur ohne die Spalten die das Land bezeichnen.
 \end{itemize}
 
 \subsubsection{Programmschnittstellen}
+
+\paragraph{json für die Daten:}
 \begin{itemize}
 \item eine für jede Tabellenart von oben, die alle relevanten Filterparameter
 unterstützt
@@ -216,6 +218,33 @@ ausgewählt ist.
 aber nur die Skalierfaktoren zurückgibt. Ähnlich wie Summen pro Land
 in dem Zeitraum.
 \item eine für die Problemanzeige in Tabellen und den Doppelbalkendiagramme
+\end{itemize}
+
+\paragraph{js-komponenten:}
+\begin{itemize}
+\item constructor:
+\begin{itemize}
+\item dataCounter = 0
+\end{itemize}
+\item getData(src url):
+\begin{enumerate}
+\item nummer=dataCounter
+\item dataCounter ++
+\item Hole Daten
+\item .then(setData(nummer, Daten))
+\item starte Übergang zu neutraler/leerer Darstellung
+\end{enumerate}
+\item setData(nummer, data):
+\begin{itemize}
+\item falls wir schon bei einer grösseren Nummer sind, stop.
+\item ersetze Daten (evt. mit ca. 50ms Animation)
+\end{itemize}
+\item initialize(src url):
+\begin{itemize}
+\item zeige ``<komponente> am Laden'' an.
+\item setData(leeres Gerüst, Tabelle, Koordinatensystem)
+\item setRemoteData(src url)
+\end{itemize}
 \end{itemize}
 
 \subsection{Zu tun}

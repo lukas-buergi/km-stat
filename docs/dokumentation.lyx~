@@ -642,6 +642,10 @@ Tabelle für einzelnes Land: Wie Tabelle mit Geschäften/Jahrestotalen, nur
 Programmschnittstellen
 \end_layout
 
+\begin_layout Paragraph
+json für die Daten:
+\end_layout
+
 \begin_layout Itemize
 eine für jede Tabellenart von oben, die alle relevanten Filterparameter
  unterstützt
@@ -676,6 +680,68 @@ eine für die Kartentransformation, die die selben Parameter nimmt, aber
 eine für die Problemanzeige in Tabellen und den Doppelbalkendiagramme
 \end_layout
 
+\begin_layout Paragraph
+js-komponenten:
+\end_layout
+
+\begin_layout Itemize
+setRemoteData(src url)
+\end_layout
+
+\begin_layout Itemize
+setData(data):
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Hole Daten
+\end_layout
+
+\begin_layout Itemize
+starte Animation
+\end_layout
+
+\begin_layout Itemize
+warte bis Daten angekommen
+\end_layout
+
+\begin_layout Itemize
+beende Animation
+\end_layout
+
+\begin_layout Itemize
+ersetze Daten (evt.
+ mit ca.
+ 50ms Animation)
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+initialize(src url):
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+zeige 
+\begin_inset Quotes eld
+\end_inset
+
+<komponente> am Laden
+\begin_inset Quotes erd
+\end_inset
+
+ an.
+\end_layout
+
+\begin_layout Itemize
+setData(leeres Gerüst, Tabelle, Koordinatensystem)
+\end_layout
+
+\begin_layout Itemize
+setRemoteData(src url)
+\end_layout
+
+\end_deeper
 \begin_layout Subsection
 Zu tun
 \end_layout
@@ -752,7 +818,12 @@ API-Parameter String generieren
 \end_layout
 
 \begin_layout Enumerate
-und damit Anfragen tätigen
+url anpassen: https://stackoverflow.com/questions/824349/how-do-i-modify-the-url-
+without-reloading-the-page
+\end_layout
+
+\begin_layout Enumerate
+Anfragen tätigen
 \end_layout
 
 \begin_layout Enumerate
@@ -760,6 +831,7 @@ für die veränderten Elemente die Funktion aufrufen, die diese malt.
  Möglichst die selbe wie beim ursprünglichen Malen.
 \end_layout
 
+\end_deeper
 \end_deeper
 \begin_layout Enumerate
 übergänge in js schreiben
@@ -802,12 +874,6 @@ Zu neuer Tabelle wechseln sobald Daten angekommen, ohne Animation
 \end_layout
 
 \end_deeper
-\end_deeper
-\begin_layout Enumerate
-url in js anpassen: https://stackoverflow.com/questions/824349/how-do-i-modify-th
-e-url-without-reloading-the-page
-\end_layout
-
 \end_deeper
 \begin_layout Enumerate
 Kartenskalierung
