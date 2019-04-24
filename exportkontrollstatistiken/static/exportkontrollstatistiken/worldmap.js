@@ -1,8 +1,40 @@
 function worldmap(src, colorVariable, geoIDVariable, numberFormat){
+  const reticuleFeature = {
+      "type": "Feature",
+      "geometry": d3.geoGraticule10(),
+      "id" : "reticules",
+  };
+  const outline = {type: "Sphere"};
+  const reticuleFeaturesCollection = {"type":"FeatureCollection","features": [reticuleFeature, outline]};
+  const projection = d3.geoRobinson().fitWidth('1000', reticuleFeaturesCollection);
+  const path = d3.geoPath().projection(projection);
+  const bounds = path.bounds(reticuleFeaturesCollection);
+
+  map = d3.select('div.worldmap')
+    .style("padding-bottom", bounds[1][1] / bounds[1][0] * 100 + "%")
+    .append('svg')
+      .attr("preserveAspectRatio", "xMinYMin meet")
+      .attr("viewBox", "0 0 " + bounds[1][0] + " " + bounds[1][1])
+      .classed("worldmap_svg", true)
+      .append('g')
+        .attr('class', 'map');
+
+  graticules = map
+    .append('g')
+    .attr('class', 'worldmap_reticules')
+    .selectAll('path')
+    .data(reticuleFeaturesCollection.features)
+    .enter()
+      .append('path')
+      .attr('d', path)
+      .style('stroke-width', '1px')
+      .style('stroke', 'white')
+      .style('fill-opacity', 0);
+      
   Promise.all([
     d3.json('/static/exportkontrollstatistiken/world_countries.json'), /* TODO BROKEN (well, not really, but it will be if the path changes) */
     d3.json(src),
-  ]).then(([geography, data]) => ready(geography, data, colorVariable, geoIDVariable, numberFormat));
+  ]).then(([geography, data]) => ready(geography, data, colorVariable, geoIDVariable, numberFormat, path, map));
 }
 
 function mouseOverCountry(d, i, nodes, dataByID, numberFormat){
@@ -39,14 +71,11 @@ function countryColor(d, dataByID, color){
   }
 }
 
-function ready(geography, data, colorVariable, geoIDVariable, numberFormat) {
+function ready(geography, data, colorVariable, geoIDVariable, numberFormat, path, map) {
   const color = d3.scaleLog()
     .domain([10e4,10e8]) /* TODO: Choose good values. If I'm crazy, use the fancy algorithm that originally came with the map */
     .range(['#ffffff', '#FF0000']);
 
-  const projection = d3.geoRobinson().fitWidth('1000', geography);
-
-  const path = d3.geoPath().projection(projection);
   
   // TODO: colorVariable, geoIDVariable ignored
   data['data'].forEach(d => {
@@ -66,23 +95,9 @@ function ready(geography, data, colorVariable, geoIDVariable, numberFormat) {
       }
   });
 
-  const bounds = path.bounds(geography);
-
-  const svg = d3.select('div.worldmap')
-    .style("padding-bottom", bounds[1][1] / bounds[1][0] * 100 + "%")
-    .append('svg')
-      .attr("preserveAspectRatio", "xMinYMin meet")
-      .attr("viewBox", "0 0 " + bounds[1][0] + " " + bounds[1][1])
-      .classed("worldmap_svg", true)
-      .append('g')
-        .attr('class', 'map');
-
-
-  // TODO: draw empty coordinate system first (i.e. projected lat. and long. lines), then wait for map data
-  // as far as I can see the only way to get a coordinate system is to draw it from geojson the same way as the map itself
   
   // draw white map
-  map=svg
+  blankCountriesMap = map
     .append('g')
     .attr('class', 'countries')
     .selectAll('path')
@@ -93,7 +108,7 @@ function ready(geography, data, colorVariable, geoIDVariable, numberFormat) {
       .style('stroke-width', 0)
       .style('fill', 'white');
   // color map and add mouseovers
-  map
+  dataCountriesMap = blankCountriesMap
       .style('fill', d => countryColor(d, dataByID, color))
       .on('mouseover', (d, i, nodes) => mouseOverCountry(d, i, nodes, dataByID, numberFormat))
       .on('mouseout', (d, i, nodes) => mouseOutCountry(d, i, nodes, dataByID, color));

@@ -685,7 +685,7 @@ js-komponenten:
 \end_layout
 
 \begin_layout Itemize
-constructor:
+initialize(src url):
 \end_layout
 
 \begin_deeper
@@ -693,18 +693,38 @@ constructor:
 dataCounter = 0
 \end_layout
 
+\begin_layout Itemize
+setData(0, leeres Gerüst, Tabelle, Koordinatensystem)
+\end_layout
+
+\begin_layout Itemize
+entferne die 
+\begin_inset Quotes eld
+\end_inset
+
+<komponente> am Laden
+\begin_inset Quotes erd
+\end_inset
+
+ Nachricht, die irgendwo statisch im html stehen muss
+\end_layout
+
+\begin_layout Itemize
+setRemoteData(src url)
+\end_layout
+
 \end_deeper
 \begin_layout Itemize
-getData(src url):
+setRemoteData(src url):
 \end_layout
 
 \begin_deeper
 \begin_layout Enumerate
-nummer=dataCounter
+dataCounter ++
 \end_layout
 
 \begin_layout Enumerate
-dataCounter ++
+nummer=dataCounter
 \end_layout
 
 \begin_layout Enumerate
@@ -716,7 +736,8 @@ Hole Daten
 \end_layout
 
 \begin_layout Enumerate
-starte Übergang zu neutraler/leerer Darstellung
+starte Übergang zu neutraler/leerer Darstellung, das sollte so langsam gehen
+ wie schlimmstenfalls das Laden der Daten ungefähr gehen wird
 \end_layout
 
 \end_deeper
@@ -733,32 +754,6 @@ falls wir schon bei einer grösseren Nummer sind, stop.
 ersetze Daten (evt.
  mit ca.
  50ms Animation)
-\end_layout
-
-\end_deeper
-\begin_layout Itemize
-initialize(src url):
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-zeige 
-\begin_inset Quotes eld
-\end_inset
-
-<komponente> am Laden
-\begin_inset Quotes erd
-\end_inset
-
- an.
-\end_layout
-
-\begin_layout Itemize
-setData(leeres Gerüst, Tabelle, Koordinatensystem)
-\end_layout
-
-\begin_layout Itemize
-setRemoteData(src url)
 \end_layout
 
 \end_deeper
@@ -920,7 +915,7 @@ Karte verschönern
 
 \begin_deeper
 \begin_layout Enumerate
-Leerraum um Karte rum muss weg
+Etwas leerer Rand um die Karte rum
 \end_layout
 
 \begin_layout Enumerate

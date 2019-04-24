@@ -57,13 +57,14 @@
       {% include "exportkontrollstatistiken/table.html" %}
     </div>
     <script type='text/javascript'>
+      {# TODO: Complete this into a page controller. Should probably go into filter.js later. #}
       const locale = d3.formatLocale({"decimal": ".",
         "thousands": "\'",
         "grouping": [3],
         "currency": ['Fr. ', '']});
       const format = locale.format('$,');
-      worldmap('/api/g/{{ p }}', 'Exporte', 'id', format); // window.location.pathname
-      table('/api/g/{{ p }}'); // don't read this from the window, {{p}} is best.
+      worldmap('/api/g/{{ p }}', 'Exporte', 'id', format); {# window.location.pathname #}
+      table('/api/g/{{ p }}'); {# don't read this from the window, {{p}} is best (doesn't work with default values and empty url params otherwise) #}
     </script>
   </body>
 </html>

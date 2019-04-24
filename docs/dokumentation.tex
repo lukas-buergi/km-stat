@@ -222,28 +222,27 @@ in dem Zeitraum.
 
 \paragraph{js-komponenten:}
 \begin{itemize}
-\item constructor:
+\item initialize(src url):
 \begin{itemize}
 \item dataCounter = 0
+\item setData(0, leeres Gerüst, Tabelle, Koordinatensystem)
+\item entferne die ``<komponente> am Laden'' Nachricht, die irgendwo statisch
+im html stehen muss
+\item setRemoteData(src url)
 \end{itemize}
-\item getData(src url):
+\item setRemoteData(src url):
 \begin{enumerate}
-\item nummer=dataCounter
 \item dataCounter ++
+\item nummer=dataCounter
 \item Hole Daten
 \item .then(setData(nummer, Daten))
-\item starte Übergang zu neutraler/leerer Darstellung
+\item starte Übergang zu neutraler/leerer Darstellung, das sollte so langsam
+gehen wie schlimmstenfalls das Laden der Daten ungefähr gehen wird
 \end{enumerate}
 \item setData(nummer, data):
 \begin{itemize}
 \item falls wir schon bei einer grösseren Nummer sind, stop.
 \item ersetze Daten (evt. mit ca. 50ms Animation)
-\end{itemize}
-\item initialize(src url):
-\begin{itemize}
-\item zeige ``<komponente> am Laden'' an.
-\item setData(leeres Gerüst, Tabelle, Koordinatensystem)
-\item setRemoteData(src url)
 \end{itemize}
 \end{itemize}
 
@@ -296,7 +295,7 @@ umstrukturieren
 \end{enumerate}
 \item Karte verschönern
 \begin{enumerate}
-\item Leerraum um Karte rum muss weg
+\item Etwas leerer Rand um die Karte rum
 \item Schweiz rot mit Schweizerkreuz
 \item Pfeile wären schön? Ich denke dünne, alle gleich. Wenn man die Mitte
 der Pfeile etwas nach oben zieht sollte das einen 3D-Effekt erzeugen.

@@ -685,17 +685,7 @@ js-komponenten:
 \end_layout
 
 \begin_layout Itemize
-constructor:
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-dataCounter = 0
-\end_layout
-
-\end_deeper
-\begin_layout Itemize
-getData(src url):
+setRemoteData(src url):
 \end_layout
 
 \begin_deeper
@@ -715,6 +705,10 @@ Hole Daten
 .then(setData(nummer, Daten))
 \end_layout
 
+\begin_layout Enumerate
+starte Übergang zu neutraler/leerer Darstellung
+\end_layout
+
 \end_deeper
 \begin_layout Itemize
 setData(nummer, data):
@@ -723,22 +717,6 @@ setData(nummer, data):
 \begin_deeper
 \begin_layout Itemize
 falls wir schon bei einer grösseren Nummer sind, stop.
-\end_layout
-
-\begin_layout Itemize
-Hole Daten
-\end_layout
-
-\begin_layout Itemize
-starte Animation
-\end_layout
-
-\begin_layout Itemize
-warte bis Daten angekommen
-\end_layout
-
-\begin_layout Itemize
-beende Animation
 \end_layout
 
 \begin_layout Itemize
@@ -754,7 +732,15 @@ initialize(src url):
 
 \begin_deeper
 \begin_layout Itemize
-zeige 
+dataCounter = 0
+\end_layout
+
+\begin_layout Itemize
+setData(0, leeres Gerüst, Tabelle, Koordinatensystem)
+\end_layout
+
+\begin_layout Itemize
+entferne die 
 \begin_inset Quotes eld
 \end_inset
 
@@ -762,11 +748,7 @@ zeige
 \begin_inset Quotes erd
 \end_inset
 
- an.
-\end_layout
-
-\begin_layout Itemize
-setData(leeres Gerüst, Tabelle, Koordinatensystem)
+ Nachricht, die irgendwo statisch im html stehen muss
 \end_layout
 
 \begin_layout Itemize
