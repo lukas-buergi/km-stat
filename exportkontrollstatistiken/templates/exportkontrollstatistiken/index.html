@@ -29,6 +29,7 @@
     {% include "exportkontrollstatistiken/table.css" only %}
   </style>
   <head>
+    {# should I include them using templates? might speed things up... or not. Quite possibly if using template caching. #}
     <script src="{% static 'exportkontrollstatistiken/d3.v5.min.js' %}" charset="utf-8"></script>
     <script src="{% static 'exportkontrollstatistiken/queue.v1.min.js' %}"></script>
     <script src="{% static 'exportkontrollstatistiken/topojson.v1.min.js' %}"></script>
@@ -36,6 +37,7 @@
     <script src="{% static 'exportkontrollstatistiken/d3-format.v1.min.js' %}"></script>
     <script src="{% static 'exportkontrollstatistiken/worldmap.js' %}"></script>
     <script src="{% static 'exportkontrollstatistiken/table.js' %}"></script>
+    <script src="{% static 'exportkontrollstatistiken/filter.js' %}"></script>
   </head>
   <body>
     <div class="mainbox">
@@ -46,29 +48,23 @@
           <img alt="{% trans "GSoA Logo" %}" height="15em" src="{% static 'exportkontrollstatistiken/gsoa-logo.svg' %}">
         </a>
       </div>
+      <div class="text">
+        {% blocktrans %}
+          <h2>Machen Sie sich selbst ein Bild über die Waffenexporte der Schweiz!</h2><br>
+          Auf der Karte wird für jedes ausgewählte Land ein Total über die ausgewählten Exporte angezeigt.<br>
+          In der Tabelle unten kann man die Exporte im Detail betrachten, je nach ausgewählter Darstellungsart und Sortierreihenfolge. <br>
+          Die Exportzahlen stammen alle vom Staatssekretariat für Wirtschaft SECO, sind also offizielle Daten vom Bund.
+          {% endblocktrans %}
+      </div>
       {# xxx Franken Exporte von Kriegsmaterial, besonderen militärischen Gütern und Dual Use Gütern total in unserer Datenbank. #}
       {# Zur Anzeige ausgewählt: Exporte von <GüterartListe> an <Länderliste> zwischen <Anfang> und <Ende>. #}
       {% include "exportkontrollstatistiken/worldmap.html" only %}
       {% include "exportkontrollstatistiken/filter.html" %}
-      <div class="text">
-        {% blocktrans %}
-          <h2>Machen Sie sich selbst ein Bild über die Waffenexporte der Schweiz!</h2><br>
-          Auf der Karte wird für jedes Land ein Total über die ausgewählten Exporte angezeigt.<br>
-          In der Tabelle kann man die Exporte im Detail betrachten, je nach ausgewählter Darstellungsart und Sortierreihenfolge. <br>
-          Die Exportzahlen stammen alle vom Staatssekretariat für Wirtschaft SECO, sind also offizielle Daten vom Bund.
-          {% endblocktrans %}
-      </div>
       {% include "exportkontrollstatistiken/table.html" %}
     </div>
+    {# for some reason the worldmap only works if this is down here, not if it's in the head. The table works fine in either case. #}
     <script type='text/javascript'>
-      {# TODO: Complete this into a page controller. Should probably go into filter.js later. #}
-      const locale = d3.formatLocale({"decimal": ".",
-        "thousands": "\'",
-        "grouping": [3],
-        "currency": ['Fr. ', '']});
-      const format = locale.format('$,');
-      worldmap('/api/g/{{ p }}', 'Exporte', 'id', format); {# window.location.pathname #}
-      table('/api/g/{{ p }}'); {# don't read this from the window, {{p}} is best (doesn't work with default values and empty url params otherwise) #}
+      filter.initialize({{ p|safe }});
     </script>
   </body>
 </html>

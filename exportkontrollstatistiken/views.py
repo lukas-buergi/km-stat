@@ -12,68 +12,65 @@ import datetime
 # TODO: Transform all of this into a class based view
 class apiParam():
   """Parses the parameters and provides them in a more practical form or stops if they are wrong."""
-
-  # TODO: I wasn't quite aware I was declaring lots of static fields here when I wrote that. So...
-  # it seems to work now, but should probably go partly into constructor
   
-  # granularity
   granularities = {
     "i" : ["individual", "Geschäfte einzeln und detailliert"],
     "y" : ["summedPerYear", "Summen pro Land und Jahr"],
     "s" : ["summed", "Summen pro Land über gesamten Zeitraum"],
   }
-  granularity=None
 
-  # countries
-
-  # types
   typesChoices = { # case 1, case 2, no idea how they are called
     "k" : ["Kriegsmaterial", "Kriegsmaterial"],
     "b" : ["Besondere militärische Güter", "Besonderen militärischen Gütern"],
     "d" : ["Dual Use Güter", "Dual Use Gütern"],
   }
-  types=[] # types in typesChoices
 
-  # sortby
   sortByChoices = {
     "v"   : "-umfang",
     "va"  : "umfang",
     "t"   : "-beginn",
     "ta"  : "beginn",
   }
-  sortBy=None
   
-  def __init__(self, granularity, countries, types, year1, year2, sortBy, perPage, pageNumber):
-    self._str = granularity + '/' + countries + '/' + types + '/' + str(year1) + '/' + str(year2) + '/' + sortBy + '/' + str(perPage) + '/' + str(pageNumber)
+  def __init__(self, *args):
+    # save the parameters as given. Note that if they aren't (more or less) valid, this will cause an exception later in the constructor, so it's safe to assume they are (more or less) valid.
+    self.parameterNames = [ 'granularity', 'countries', 'types', 'year1', 'year2', 'sortBy', 'perPage', 'pageNumber' ]
+    if(len(args) != len(self.parameterNames)):
+      raise(TypeError)
+    self.parameters = dict(zip(self.parameterNames, args))
     
-    self.perPage=perPage
-    self.pageNumber=pageNumber
+
+    # save the parameters individually in useful, validated formats
+    self.perPage=self.parameters['perPage']
+    self.pageNumber=self.parameters['pageNumber']
     
-    if(granularity not in self.granularities):
+    if(self.parameters['granularity'] not in self.granularities):
       raise(ValueError)
-    self.granularity=self.granularities[granularity][0]
+    self.granularity=self.granularities[self.parameters['granularity']][0]
     
-    if(sortBy not in self.sortByChoices):
+    if(self.parameters['sortBy'] not in self.sortByChoices):
       raise(ValueError)
-    self.sortBy=self.sortByChoices[sortBy]
+    self.sortBy=self.sortByChoices[self.parameters['sortBy']]
 
     if(self.granularity=="summed" and self.sortBy not in ["-umfang", "umfang"]):
       raise(ValueError)
         
-    if(0>year1 or year1 > year2):
+    if(0>self.parameters['year1'] or self.parameters['year1'] > self.parameters['year2']):
       raise(ValueError)
-    self.year1=year1
-    self.year2=year2
+    self.year1=self.parameters['year1']
+    self.year2=self.parameters['year2']
 
     # types
     self.types=[]
-    for c in types:
+    for c in self.parameters['types']:
       if(c not in self.typesChoices):
         raise(ValueError)
       else:
         self.types.append(c)
     
     # countries
+    # TODO: needs more advanced parser. Codes are prefix free, 2 chars for countries, 3 chars for groups of countries
+    countries=self.parameters['countries']
     if(countries=="all"):
       self.countries=~Q()
       self.countriesSingle=False
@@ -97,11 +94,21 @@ class apiParam():
         qcountries |= q
       self.countries=qcountries
 
+    # TODO: I have implemented this, right?
     if(self.granularity=="summedPerYear" and not self.countriesSingle and self.sortBy in ["-beginn", "beginn"]):
       raise(NotImplementedError)
 
   def __str__(self):
-    return(self._str)
+    jsParamObject = dict()
+    urlStr = ""
+    for param in self.parameterNames:
+      urlStr += str(self.parameters[param]) + '/'
+    urlStr = urlStr[:-1] # this is a happy slicing expression. Also the last slash has to be removed
+    jsParamObject['url'] = '/api/g/' + urlStr
+    jsParamObject['params'] = self.parameters
+    jsParamObject['paramNames'] = self.parameterNames
+    jsCodeString = str(jsParamObject)
+    return(jsCodeString)
 
   def getTypes(self, typeFieldName):
     """Get a Q object with the types ORd together. This depends on the field name so it must be given in parameter (values are often exportkontrollnummer__kontrollregime__gueterArt__name or gueterArt__name)."""

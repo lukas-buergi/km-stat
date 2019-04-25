@@ -101,6 +101,28 @@ Kaju Bubanja hat das ursprünglich geschrieben
 \end_layout
 
 \begin_layout Subsection
+Siehe auch bzw.
+ mögliche Integration mit:
+\end_layout
+
+\begin_layout Itemize
+https://srfdata.github.io/2017-02-kriegsmaterial/#r-script__daten
+\end_layout
+
+\begin_layout Itemize
+AI Menschenrechtsberichte, kann man daraus Daten extrahieren?
+\end_layout
+
+\begin_layout Itemize
+Human Development Index
+\end_layout
+
+\begin_layout Itemize
+Anzahl Arbeitsplätze pro Exportvolumen und Jahr und das den Toten und Verletzten
+ in den Ländern gege
+\end_layout
+
+\begin_layout Subsection
 Infos alte Webseite
 \end_layout
 
@@ -685,48 +707,6 @@ js-komponenten:
 \end_layout
 
 \begin_layout Itemize
-setRemoteData(src url):
-\end_layout
-
-\begin_deeper
-\begin_layout Enumerate
-nummer=dataCounter
-\end_layout
-
-\begin_layout Enumerate
-dataCounter ++
-\end_layout
-
-\begin_layout Enumerate
-Hole Daten
-\end_layout
-
-\begin_layout Enumerate
-.then(setData(nummer, Daten))
-\end_layout
-
-\begin_layout Enumerate
-starte Übergang zu neutraler/leerer Darstellung
-\end_layout
-
-\end_deeper
-\begin_layout Itemize
-setData(nummer, data):
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-falls wir schon bei einer grösseren Nummer sind, stop.
-\end_layout
-
-\begin_layout Itemize
-ersetze Daten (evt.
- mit ca.
- 50ms Animation)
-\end_layout
-
-\end_deeper
-\begin_layout Itemize
 initialize(src url):
 \end_layout
 
@@ -753,6 +733,50 @@ entferne die
 
 \begin_layout Itemize
 setRemoteData(src url)
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+setRemoteData(src url):
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+dataCounter ++
+\end_layout
+
+\begin_layout Enumerate
+nummer=dataCounter
+\end_layout
+
+\begin_layout Enumerate
+Hole Daten
+\end_layout
+
+\begin_layout Enumerate
+.then(setData(nummer, Daten))
+\end_layout
+
+\begin_layout Enumerate
+zeige Nachricht an und starte Übergang zu neutraler/leerer Darstellung,
+ das sollte so langsam gehen wie schlimmstenfalls das Laden der Daten ungefähr
+ gehen wird
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+setData(nummer, data):
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+falls wir schon bei einer grösseren Nummer sind, stop.
+\end_layout
+
+\begin_layout Itemize
+ersetze Daten (evt.
+ mit ca.
+ 50ms Animation)
 \end_layout
 
 \end_deeper
@@ -914,7 +938,7 @@ Karte verschönern
 
 \begin_deeper
 \begin_layout Enumerate
-Leerraum um Karte rum muss weg
+Etwas leerer Rand um die Karte rum
 \end_layout
 
 \begin_layout Enumerate

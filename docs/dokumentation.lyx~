@@ -101,6 +101,23 @@ Kaju Bubanja hat das ursprünglich geschrieben
 \end_layout
 
 \begin_layout Subsection
+Siehe auch bzw.
+ mögliche Integration mit:
+\end_layout
+
+\begin_layout Itemize
+https://srfdata.github.io/2017-02-kriegsmaterial/#r-script__daten
+\end_layout
+
+\begin_layout Itemize
+AI Menschenrechtsberichte, kann man daraus Daten extrahieren?
+\end_layout
+
+\begin_layout Itemize
+Human Development Index
+\end_layout
+
+\begin_layout Subsection
 Infos alte Webseite
 \end_layout
 
@@ -736,8 +753,9 @@ Hole Daten
 \end_layout
 
 \begin_layout Enumerate
-starte Übergang zu neutraler/leerer Darstellung, das sollte so langsam gehen
- wie schlimmstenfalls das Laden der Daten ungefähr gehen wird
+zeige Nachricht an und starte Übergang zu neutraler/leerer Darstellung,
+ das sollte so langsam gehen wie schlimmstenfalls das Laden der Daten ungefähr
+ gehen wird
 \end_layout
 
 \end_deeper
@@ -915,7 +933,7 @@ Karte verschönern
 
 \begin_deeper
 \begin_layout Enumerate
-Leerraum um Karte rum muss weg
+Etwas leerer Rand um die Karte rum
 \end_layout
 
 \begin_layout Enumerate
