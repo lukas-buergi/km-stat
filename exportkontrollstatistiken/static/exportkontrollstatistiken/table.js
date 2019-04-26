@@ -25,9 +25,11 @@ table = {
     this.setRemoteData();
   },
   update : function(params){
-    if(this.params != params){
+    if(!this.params.isEqualTo(params)){
       this.params = params;
       this.setRemoteData();
+    } else {
+      console.log('detected it was not necessary to update');
     }
   },
   setRemoteData : function(){

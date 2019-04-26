@@ -5,7 +5,7 @@ from django.conf import settings
 
 from .models import Geschaefte, Uebersetzungen, Laender, Geschaeftslaendersummen
 
-import csv
+import json
 import itertools
 import copy
 import datetime
@@ -63,11 +63,14 @@ class apiParam():
 
     # types
     self.types=[]
-    for c in self.parameters['types']:
-      if(c not in self.typesChoices):
-        raise(ValueError)
-      else:
-        self.types.append(c)
+    if(self.parameters['types'] == 'none'):
+      pass
+    else:
+      for c in self.parameters['types']:
+        if(c not in self.typesChoices):
+          raise(ValueError)
+        else:
+          self.types.append(c)
     
     # countries
     # TODO: needs more advanced parser. Codes are prefix free, 2 chars for countries, 3 chars for groups of countries
@@ -103,16 +106,23 @@ class apiParam():
 
   def __str__(self):
     jsParamObject = copy.copy(self.parameters)
+    for t in self.typesChoices:
+      if t in self.types:
+        jsParamObject[t] = True
+      else:
+        jsParamObject[t] = False
     jsParamObject['paramNames'] = self.parameterNames
-    jsCodeString = str(jsParamObject)
+    jsCodeString = json.dumps(jsParamObject, separators=(',', ':'))
     return(jsCodeString)
 
   def getTypes(self, typeFieldName):
     """Get a Q object with the types ORd together. This depends on the field name so it must be given in parameter (values are often exportkontrollnummer__kontrollregime__gueterArt__name or gueterArt__name)."""
-    qtypes=Q()
+    # always false q object
+    qtypes=Q(pk=None)
     for c in self.types:
       args = {typeFieldName : Uebersetzungen.objects.get(de=self.typesChoices[c][0])}
       qtypes |= Q(**args)
+    print(qtypes)
     return(qtypes)
 
   def getPage(self, queryset):
