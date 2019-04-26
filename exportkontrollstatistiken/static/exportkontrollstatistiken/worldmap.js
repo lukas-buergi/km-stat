@@ -1,13 +1,8 @@
 worldmap = {
   initialize : function (params, countriesSource, numberFormat){
     // TODO: Maybe make configurable which columns contain which data
-    this.params = params;
-    // map is not paginated
-    this.params.params.perPage = 300;
-    this.params.params.pageNumber = 1;
-    // ... and needs sums per country
-    this.params.params.granularity = 's';
-    this.params.recalculateURL();
+    this.params = this.treatParams(params);
+    
     this.countriesSource = countriesSource;
     this.numberFormat = numberFormat;
 
@@ -55,11 +50,26 @@ worldmap = {
     // TODO: there is a problem when the data arrives before the countries
     // (which is only likely to happen if I optimize the data query by
     //  a huge amount, but...)
-    this.setRemoteData(this.params.url);
+    this.setRemoteData(this.params.getAPIURL());
   },
-  setRemoteData : function(src){
+  treatParams : function(params){
+    // map is not paginated
+    params.perPage = 300;
+    params.pageNumber = 1;
+    // ... and needs sums per country
+    params.granularity = 's';
+    return(params);
+  },
+  update : function(params){
+    treated = this.treatParams(params);
+    if(!this.params.isEqualTo(treated)){
+      this.params = treated;
+      this.setRemoteData();
+    }
+  },
+  setRemoteData : function(){
     this.dataCounter++;
-    d3.json(src).then(data => this.setData(this.dataCounter, data));
+    d3.json(this.params.getAPIURL()).then(data => this.setData(this.dataCounter, data));
     // TODO: Display some data change/loading indicator
   },
   setData : function(number, data) {

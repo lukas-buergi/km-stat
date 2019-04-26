@@ -13,7 +13,7 @@ table = {
     const loading = 'loading';
     const row = [loading, loading, loading, loading];
     rows = [];
-    for(var i=0; i<this.params.params.perPage; i++){
+    for(var i=0; i<this.params.perPage; i++){
       rows.push(row);
     }
     data = {
@@ -24,9 +24,15 @@ table = {
 
     this.setRemoteData();
   },
+  update : function(params){
+    if(this.params != params){
+      this.params = params;
+      this.setRemoteData();
+    }
+  },
   setRemoteData : function(){
     this.dataCounter++;
-    d3.json(this.params.url).then(data => this.setData(this.dataCounter, data));
+    d3.json(this.params.getAPIURL()).then(data => this.setData(this.dataCounter, data));
     // TODO: Display some data change/loading indicator.
   },
   setData : function(number, data) {
@@ -40,7 +46,7 @@ table = {
 
     // set up page selection only if we aren't on the first pseudo data set
     if(number!=0){
-      this.numberOfPages = Math.ceil(data.total / this.params.params.perPage);
+      this.numberOfPages = Math.ceil(data.total / this.params.perPage);
 
       //drop down
       pageList = [];
@@ -57,22 +63,21 @@ table = {
           .text(d => "Gehe zu Seite " + d)
           .attr('value', d=>d)
           .attr('selected', d => {
-            if(d==this.params.params.pageNumber){
+            if(d==this.params.pageNumber){
               return true;
             }else{
               return null;
             }
           });
       pageDropDown.on('change', () => {
-        this.params.params.pageNumber = pageDropDown.property("value");
-        this.params.recalculateURL();
+        this.params.pageNumber = pageDropDown.property("value");
         this.setRemoteData();
       });
 
       // deactivate some buttons
-      onFirstPage = this.params.params.pageNumber == 1;
+      onFirstPage = this.params.pageNumber == 1;
       if(!onFirstPage){onFirstPage=null;}
-      onLastPage = this.params.params.pageNumber == this.numberOfPages;
+      onLastPage = this.params.pageNumber == this.numberOfPages;
       if(!onLastPage){onLastPage=null;}
       // deactivate the two back buttons
       d3.select('#table_firstPage').attr('disabled', onFirstPage);
@@ -106,23 +111,19 @@ table = {
         .text(d => d);
   },
   firstPage : function(){
-    this.params.params.pageNumber = 1;
-    this.params.recalculateURL();
+    this.params.pageNumber = 1;
     this.setRemoteData();
   },
   previousPage : function(){
-    this.params.params.pageNumber = Math.max(1, this.params.params.pageNumber-1);
-    this.params.recalculateURL();
+    this.params.pageNumber = Math.max(1, this.params.pageNumber-1);
     this.setRemoteData();
   },
   nextPage : function(){
-    this.params.params.pageNumber = Math.min(this.numberOfPages, this.params.params.pageNumber+1);
-    this.params.recalculateURL();
+    this.params.pageNumber = Math.min(this.numberOfPages, this.params.pageNumber+1);
     this.setRemoteData();
   },
   lastPage : function(){
-    this.params.params.pageNumber = this.numberOfPages;
-    this.params.recalculateURL();
+    this.params.pageNumber = this.numberOfPages;
     this.setRemoteData();
   },
 }

@@ -7,6 +7,7 @@ from .models import Geschaefte, Uebersetzungen, Laender, Geschaeftslaendersummen
 
 import csv
 import itertools
+import copy
 import datetime
 
 # TODO: Transform all of this into a class based view
@@ -101,13 +102,7 @@ class apiParam():
       raise(NotImplementedError)
 
   def __str__(self):
-    jsParamObject = dict()
-    urlStr = ""
-    for param in self.parameterNames:
-      urlStr += str(self.parameters[param]) + '/'
-    urlStr = urlStr[:-1] # this is a happy slicing expression. Also the last slash has to be removed
-    jsParamObject['url'] = '/api/g/' + urlStr
-    jsParamObject['params'] = self.parameters
+    jsParamObject = copy.copy(self.parameters)
     jsParamObject['paramNames'] = self.parameterNames
     jsCodeString = str(jsParamObject)
     return(jsCodeString)
@@ -184,6 +179,7 @@ def mainpage(request, granularity, countries, types, year1, year2, sortBy, perPa
     'regions' : regions,
     'countries' : Laender.objects.all(),
   }
+  print(params)
   return HttpResponse(template.render(context, request))
 
 def index(request):

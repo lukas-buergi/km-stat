@@ -6,9 +6,9 @@
     <div class="gueterArten">
       {% for key, value in p.typesChoices.items %}
       <div>
-        <input type="checkbox" id="{{ key }}" name="gueterArten"
+        <input type="checkbox" id="table_{{ key }}" name="gueterArten"
                {% if key in p.types %}checked{% endif %}>
-        <label for="{{ key }}">{{ value.1 }}</label>
+        <label for="table_{{ key }}">{{ value.1 }}</label>
       </div>
       {% endfor %}
     </div>
@@ -42,8 +42,8 @@
   </div>
   <div class="filter">
     {# Drop down Granularität #}
-    <label class="filter_label" for="granularität">{% trans "Darstellungsart" %}:</label>
-    <select id="granularität">
+    <label class="filter_label" for="table_granularity">{% trans "Darstellungsart" %}:</label>
+    <select id="table_granularity">
         {% for key, value in p.granularities.items %}
           <option value="{{ key }}" {% if p.granularity == key %}selected{% endif %}>{{ value.1 }}</option>
         {% endfor %}
@@ -51,8 +51,9 @@
     {# TODO: Sort, rows per page#}
   </div>
   <div class="filter">
-    <label class="filter_label" for="perPage">{% trans "Einträge pro Seite:" %}</label>
-    <select id="perPage">
+    <label class="filter_label" for="filter_perPage">{% trans "Einträge pro Seite:" %}</label>
+    <select id="filter_perPage">
+      {# this does not work #}
       {% with '10 20 50 100 200 500' as list %}
         {% if p.perPage not in list.split %}
           <option value="{{ p.perPage }}" selected>{{ p.perPage }}</option>
