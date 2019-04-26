@@ -24,7 +24,9 @@
         </optgroup>
         <optgroup label="{% trans "Länder einzeln" %}">
           {% for country in countries %}
-            <option value="{{ country.code }}">{{ country.name.de }}</option>
+            {% if country.code != 'CH' %}
+              <option value="{{ country.code }}">{{ country.name.de }}</option>
+            {% endif %}
           {% endfor %}
         </optgroup>
     </select>

@@ -119,6 +119,8 @@ worldmap = {
   countryColor : function(d, dataByID, color){
     if (d.id in dataByID) {
       return color(dataByID[d.id]['color']);
+    } else if(d.id == 'CH'){
+      return 'red';
     } else {
       return 'white';
     }

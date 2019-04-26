@@ -24,6 +24,6 @@ filter = {
     this.format = this.locale.format('$,');
 
     worldmap.initialize(p.getCopy(), '/static/exportkontrollstatistiken/world_countries.json', this.format);
-    table.initialize(p.getCopy());
+    table.initialize(p.getCopy(), this.format);
   },
 }

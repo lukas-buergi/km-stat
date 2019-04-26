@@ -72,12 +72,14 @@ class apiParam():
     # TODO: needs more advanced parser. Codes are prefix free, 2 chars for countries, 3 chars for groups of countries
     countries=self.parameters['countries']
     if(countries=="all"):
-      self.countries=~Q()
+      self.countries=~Q(endempfaengerstaat=Laender.objects.get(code='CH'))
       self.countriesSingle=False
     else:
       self.countries=[]
       while(len(countries)>=2):
         code=countries[:2]
+        if(code=='CH'):
+          continue
         countries=countries[2:]
         try:
           self.countries.append(Q(endempfaengerstaat=Laender.objects.get(code=code)))
@@ -185,4 +187,4 @@ def mainpage(request, granularity, countries, types, year1, year2, sortBy, perPa
   return HttpResponse(template.render(context, request))
 
 def index(request):
-  return(mainpage(request, "s", "all", "kbd", 2001, 2019, "v", 300, 1))
+  return(mainpage(request, "s", "all", "kbd", 2001, 2019, "v", 10, 1))

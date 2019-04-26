@@ -1,7 +1,9 @@
 table = {
-  initialize : function(params){
+  initialize : function(params, format){
     this.dataCounter = 0;
     this.params = params;
+    this.format = format;
+    // TODO: format money columns using format
 
     this.table = d3.select('div.table table');
     this.thead = this.table.select("thead");
