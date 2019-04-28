@@ -55,7 +55,6 @@ filter = {
     worldmap.initialize(this.p.getCopy(), '/static/exportkontrollstatistiken/world_countries.json', this.format);
     table.initialize(this.p.getCopy(), this.format);
 
-    // TODO: Register listeners
     d3.select('#filter_perPage').on('change', (d, i, nodes) => {
       this.p.perPage = d3.select(nodes[i]).property("value");
       this.updateWidgets();
@@ -65,6 +64,20 @@ filter = {
       this.updateWidgets();
     });
 
+    d3.select('#table_beginn').on('change', (d, i, nodes) => {
+      // TODO: change min/max
+      this.p.year1 = d3.select(nodes[i]).property("value");
+      this.updateWidgets();
+    });
+
+    d3.select('#table_ende').on('change', (d, i, nodes) => {
+      // TODO: change min/max
+      this.p.year2 = d3.select(nodes[i]).property("value");
+      this.updateWidgets();
+    });
+
+    // TODO: Register country selection listener
+  
     types=['k', 'b', 'd'];
     for(var t=0; t<=2; t++){
       d3.select('#table_' + types[t]).on('change', (d, i, nodes) => {

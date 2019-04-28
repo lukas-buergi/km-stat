@@ -703,7 +703,8 @@ eine für die Problemanzeige in Tabellen und den Doppelbalkendiagramme
 \end_layout
 
 \begin_layout Paragraph
-js-komponenten:
+js-komponenten: TODO: Bug: Es wird manchmal nicht das neueste Datenset angezeigt
+, wenn man schnell die Filter ändert.
 \end_layout
 
 \begin_layout Itemize
@@ -789,90 +790,12 @@ Geplante Schritte:
 \end_layout
 
 \begin_layout Enumerate
-JS-Controller:
-\end_layout
-
-\begin_deeper
-\begin_layout Enumerate
-\begin_inset Quotes eld
-\end_inset
-
-Karte wird geladen
-\begin_inset Quotes erd
-\end_inset
-
- mit leerer Karte ersetzen
+url anpassen, browser back/forward buttons: https://stackoverflow.com/questions/8
+24349/how-do-i-modify-the-url-without-reloading-the-page
 \end_layout
 
 \begin_layout Enumerate
-\begin_inset Quotes eld
-\end_inset
-
-Tabelle wird geladen
-\begin_inset Quotes erd
-\end_inset
-
- und so anzeigen.
- Das wohl besser in Template.
-\end_layout
-
-\begin_layout Enumerate
-Parameter aus URL auslesen und in interner Darstellung speichern
-\end_layout
-
-\begin_layout Enumerate
-API-Parameter String für Karte und Tabelle generieren
-\end_layout
-
-\begin_layout Enumerate
-Anfragen an API tätigen
-\end_layout
-
-\begin_layout Enumerate
-Filter und Knöpfe aus interner Darstellung aktualisieren
-\end_layout
-
-\begin_layout Enumerate
-Karte und Tabelle anzeigen
-\end_layout
-
-\begin_layout Enumerate
-Bei Veränderung der Filter oder Knopfdruck:
-\end_layout
-
-\begin_deeper
-\begin_layout Enumerate
-Überprüfen ob der neue Werte gültig ist.
- Wenn nicht stop oder andere Werte ändern, damit das ganze wieder gültig
- wird.
-\end_layout
-
-\begin_layout Enumerate
-Neue Werte in interner Darstellung speichern
-\end_layout
-
-\begin_layout Enumerate
-API-Parameter String generieren
-\end_layout
-
-\begin_layout Enumerate
-url anpassen: https://stackoverflow.com/questions/824349/how-do-i-modify-the-url-
-without-reloading-the-page
-\end_layout
-
-\begin_layout Enumerate
-Anfragen tätigen
-\end_layout
-
-\begin_layout Enumerate
-für die veränderten Elemente die Funktion aufrufen, die diese malt.
- Möglichst die selbe wie beim ursprünglichen Malen.
-\end_layout
-
-\end_deeper
-\end_deeper
-\begin_layout Enumerate
-übergänge in js schreiben
+animierte übergänge schreiben
 \end_layout
 
 \begin_deeper
@@ -886,7 +809,8 @@ Datenbankanfrage senden
 \end_layout
 
 \begin_layout Enumerate
-Animation zu leerer Karte starten (kein Info-Popups, keine Verzerrung)
+Animation zu leerer Karte starten (kein Info-Popups, keine Verzerrung),
+ mit Lademeldung
 \end_layout
 
 \begin_layout Enumerate
@@ -908,7 +832,8 @@ Kontrast der Tabelle in Animation verringern.
 \end_layout
 
 \begin_layout Enumerate
-Zu neuer Tabelle wechseln sobald Daten angekommen, ohne Animation
+Zu neuer Tabelle wechseln sobald Daten angekommen, ohne Animation, mit Lademeldu
+ng
 \end_layout
 
 \end_deeper
@@ -976,50 +901,6 @@ Aufräumen
 wahrscheinlich haufenweise optimierungen+caching
 \end_layout
 
-\begin_deeper
-\begin_layout Enumerate
-Unbedingt Teilsummen speichern.
- Summieren von 3000 Einträgen geht 10s!
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-Oder für jede Güterart einzeln 1D.
-\end_layout
-
-\begin_layout Itemize
-2D pro Land geht auf jeden Fall: Die beiden Achsen sind Güterart und Zeit+pk.
-\end_layout
-
-\begin_layout Itemize
-Oder 3D mit Ländern als 3.
- Achse würde vor allem etwas bringen um Summen über alle Länder zu bilden.
- Wie verallgemeinert man das Schema überhaupt in 3D? Abfragen: Vermutlich
- 8 pro Länderblock.
-\end_layout
-
-\end_deeper
-\begin_layout Standard
-Zusammengefasst: 1D und 2D sind für alle Länder ziemlich schlecht.
- Für einzelne Länder ist aber 3D auch schlecht.
-\end_layout
-
-\begin_layout Itemize
-1D pro Land und Güterart in separater Tabelle:
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-1 Abfrage für alle Länder und Gesamter Zeitraum, eine Addition weniger als
- Güterarten pro Land
-\end_layout
-
-\begin_layout Itemize
-2 Abfragen, 1 Subtraktion pro Land und beliebiger Zeitraum
-\end_layout
-
-\end_deeper
-\end_deeper
 \begin_layout Enumerate
 Problem/Skandaldatenbank ausbauen, Detailseite für einzelne Länder schreiben
 \end_layout

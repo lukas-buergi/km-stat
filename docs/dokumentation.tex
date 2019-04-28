@@ -229,7 +229,8 @@ in dem Zeitraum.
 \item eine für die Problemanzeige in Tabellen und den Doppelbalkendiagramme
 \end{itemize}
 
-\paragraph{js-komponenten:}
+\paragraph{js-komponenten: TODO: Bug: Es wird manchmal nicht das neueste Datenset
+angezeigt, wenn man schnell die Filter ändert.}
 \begin{itemize}
 \item initialize(src url):
 \begin{itemize}
@@ -260,40 +261,22 @@ ungefähr gehen wird
 
 Geplante Schritte:
 \begin{enumerate}
-\item JS-Controller:
-\begin{enumerate}
-\item ``Karte wird geladen'' mit leerer Karte ersetzen
-\item ``Tabelle wird geladen'' und so anzeigen. Das wohl besser in Template.
-\item Parameter aus URL auslesen und in interner Darstellung speichern
-\item API-Parameter String für Karte und Tabelle generieren
-\item Anfragen an API tätigen
-\item Filter und Knöpfe aus interner Darstellung aktualisieren
-\item Karte und Tabelle anzeigen
-\item Bei Veränderung der Filter oder Knopfdruck:
-\begin{enumerate}
-\item Überprüfen ob der neue Werte gültig ist. Wenn nicht stop oder andere
-Werte ändern, damit das ganze wieder gültig wird.
-\item Neue Werte in interner Darstellung speichern
-\item API-Parameter String generieren
-\item url anpassen: https://stackoverflow.com/questions/824349/how-do-i-modify-the-url-without-reloading-the-page
-\item Anfragen tätigen
-\item für die veränderten Elemente die Funktion aufrufen, die diese malt.
-Möglichst die selbe wie beim ursprünglichen Malen.
-\end{enumerate}
-\end{enumerate}
-\item übergänge in js schreiben
+\item url anpassen, browser back/forward buttons: https://stackoverflow.com/questions/824349/how-do-i-modify-the-url-without-reloading-the-page
+\item animierte übergänge schreiben
 \begin{enumerate}
 \item karte
 \begin{enumerate}
 \item Datenbankanfrage senden
-\item Animation zu leerer Karte starten (kein Info-Popups, keine Verzerrung)
+\item Animation zu leerer Karte starten (kein Info-Popups, keine Verzerrung),
+mit Lademeldung
 \item Zu neuer Karte wechseln sobald Daten angekommen, ohne Animation
 \end{enumerate}
 \item tabelle
 \begin{enumerate}
 \item Datenbankanfrage senden
 \item Kontrast der Tabelle in Animation verringern.
-\item Zu neuer Tabelle wechseln sobald Daten angekommen, ohne Animation
+\item Zu neuer Tabelle wechseln sobald Daten angekommen, ohne Animation,
+mit Lademeldung
 \end{enumerate}
 \end{enumerate}
 \item Kartenskalierung
@@ -319,28 +302,6 @@ gibt.
 \end{enumerate}
 \item Aufräumen
 \item wahrscheinlich haufenweise optimierungen+caching
-\begin{enumerate}
-\item Unbedingt Teilsummen speichern. Summieren von 3000 Einträgen geht
-10s!
-\begin{itemize}
-\item Oder für jede Güterart einzeln 1D.
-\item 2D pro Land geht auf jeden Fall: Die beiden Achsen sind Güterart und
-Zeit+pk.
-\item Oder 3D mit Ländern als 3. Achse würde vor allem etwas bringen um
-Summen über alle Länder zu bilden. Wie verallgemeinert man das Schema
-überhaupt in 3D? Abfragen: Vermutlich 8 pro Länderblock.
-\end{itemize}
-\end{enumerate}
-Zusammengefasst: 1D und 2D sind für alle Länder ziemlich schlecht.
-Für einzelne Länder ist aber 3D auch schlecht.
-\begin{itemize}
-\item 1D pro Land und Güterart in separater Tabelle:
-\begin{itemize}
-\item 1 Abfrage für alle Länder und Gesamter Zeitraum, eine Addition weniger
-als Güterarten pro Land
-\item 2 Abfragen, 1 Subtraktion pro Land und beliebiger Zeitraum
-\end{itemize}
-\end{itemize}
 \item Problem/Skandaldatenbank ausbauen, Detailseite für einzelne Länder
 schreiben
 \end{enumerate}

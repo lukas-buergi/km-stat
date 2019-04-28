@@ -89,6 +89,14 @@ class Uebersetzungen(models.Model):
     verbose_name = 'Übersetzung'
     verbose_name_plural = 'Übersetzungen'
 
+class LaenderGruppen(models.Model):
+  """ Groups of countries for easy selection, say "Africa", "European Union" or "Middle East". """
+  name = models.ForeignKey(Uebersetzungen, on_delete=models.PROTECT)
+  """ Name of the group. """
+  code = models.CharField(max_length=2)
+  """ Two character made up id. It's ok if they collide with country codes."""
+  
+
 class Laender(models.Model):
   """ Liste der Länder, in die exportiert wird. """
   code = models.CharField(max_length=2)

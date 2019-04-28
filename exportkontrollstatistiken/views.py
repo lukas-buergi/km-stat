@@ -122,7 +122,6 @@ class apiParam():
     for c in self.types:
       args = {typeFieldName : Uebersetzungen.objects.get(de=self.typesChoices[c][0])}
       qtypes |= Q(**args)
-    print(qtypes)
     return(qtypes)
 
   def getPage(self, queryset):
@@ -189,7 +188,6 @@ def mainpage(request, granularity, countries, types, year1, year2, sortBy, perPa
     'regions' : regions,
     'countries' : Laender.objects.all(),
   }
-  print(params)
   return HttpResponse(template.render(context, request))
 
 def index(request):
