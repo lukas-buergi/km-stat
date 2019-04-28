@@ -3,7 +3,7 @@ from django.template import loader
 from django.db.models import Q
 from django.conf import settings
 
-from .models import Geschaefte, Uebersetzungen, Laender, Geschaeftslaendersummen
+from .models import Geschaefte, Uebersetzungen, Laender, Laendergruppen, Geschaeftslaendersummen
 
 import json
 import itertools
@@ -73,7 +73,7 @@ class apiParam():
           self.types.append(c)
     
     # countries
-    # TODO: needs more advanced parser. Codes are prefix free, 2 chars for countries, 3 chars for groups of countries
+    # TODO: needs more advanced parser. Codes are prefix free, 2 chars for countries, 3 chars for groups of countries. all for all, or 0 followed by 2 char region code for other groups of countries.
     countries=self.parameters['countries']
     if(countries=="all"):
       self.countries=~Q(endempfaengerstaat=Laender.objects.get(code='CH'))
@@ -174,19 +174,10 @@ def mainpage(request, granularity, countries, types, year1, year2, sortBy, perPa
     raise # TODO: This line is not for production.
     return(HttpResponse("Invalid parameter."))
   template = loader.get_template('exportkontrollstatistiken/index.html')
-  regions = { # TODO THIS REALLY DOESN'T BELONG HERE
-    "AF":"Africa",
-    "NA":"North America",
-    "OC":"Oceania",
-    "AN":"Antarctica",
-    "AS":"Asia",
-    "EU":"Europe",
-    "SA":"South America",
-  }
   context = {
     'p' : params,
-    'regions' : regions,
-    'countries' : Laender.objects.all(),
+    'regions' : Laendergruppen.objects.all(), # TODO: sort by active language
+    'countries' : Laender.objects.all(), # TODO: same as above
   }
   return HttpResponse(template.render(context, request))
 

@@ -26,7 +26,7 @@ for g in GeschaefteImport.objects.filter(art="Besondere militärische Güter"):
 
 
 # bes. mil. Güter importieren
-# pk 21099, 21100, 21104, 21971 in der alten Datenbank haben zwei EKN, die zweite EKN hat im Schema keinen Platz und wurde gelöscht
+# pk 21099, 21100, 21104, 21971 in der alten Datenbank haben zwei EKN, die zweite EKN hat im Schema keinen Platz und wurde gelöscht TODO
 mlekn = set()
 for g in GeschaefteImport.objects.filter(art="Besondere militärische Güter"):
   mlekn.add(g.kategorie)
@@ -39,3 +39,6 @@ for g in GeschaefteImport.objects.filter(art="Besondere militärische Güter"):
   land=Laender.objects.get(code=g.code)
   ekn=Exportkontrollnummern.objects.get(nummer="ML" + g.kategorie)
   Geschaefte(endempfaengerstaat=land, bewilligungstyp=einzelbewilligung, richtung=ausfuhr, exportkontrollnummer=ekn, umfang=g.betrag, beginn=g.datum, ende=g.datum).save()
+
+# dual use importieren
+# TODO

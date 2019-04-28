@@ -77,7 +77,8 @@ class GueterArten(models.Model):
 class Kontrollregimes(models.Model):
   """ Die verschiedenen Kontrollregimes:
   * KMV (Kriegsmaterial): Anhang 1, KM1-KM22
-  * GKV/GKG (946.202, zivil und militärisch verwendbare Güter, besondere militärische Güter sowie strategische Güter):
+  * GKV/GKG (946.202 Gesetz, 946.202.1
+ Verordnung, zivil und militärisch verwendbare Güter, besondere militärische Güter sowie strategische Güter):
     * Anhänge 1 und 2: Dual Use, MTCR, NSG, CWÜ, Australische Gruppe: [0-9][A-Z][0-9]{3}[a-z][0-9]+
     * Anhang 3: bes. mil. Güter, ML1-ML22
     * Anhang 4: strategische Güter, LEER
@@ -134,7 +135,7 @@ class Geschaefte(models.Model):
   """ Einzelbewilligung. Alles andere ist nicht implementiert."""
   richtung = models.ForeignKey(Geschaeftsrichtungen, on_delete=models.PROTECT)
   """ Ausfuhr. Alles andere ist nicht implementiert. """
-  exportkontrollnummer = models.ForeignKey(Exportkontrollnummern, on_delete=models.PROTECT)
+  exportkontrollnummer = models.ForeignKey(Exportkontrollnummern, on_delete=models.PROTECT) # TODO: make manytomany
   """ Was wurde exportiert? Vielleicht sollten da mehrere Nummern erlaubt sein, weil ein Gut vielleicht unter mehrere Kontrollregime fallen kann. """
   umfang = models.PositiveIntegerField()
   """ Umfang des Geschäfts in Schweizer Franken. """

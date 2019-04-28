@@ -89,13 +89,19 @@ class Uebersetzungen(models.Model):
     verbose_name = 'Übersetzung'
     verbose_name_plural = 'Übersetzungen'
 
-class LaenderGruppen(models.Model):
+class Laendergruppen(models.Model):
   """ Groups of countries for easy selection, say "Africa", "European Union" or "Middle East". """
   name = models.ForeignKey(Uebersetzungen, on_delete=models.PROTECT)
   """ Name of the group. """
   code = models.CharField(max_length=2)
   """ Two character made up id. It's ok if they collide with country codes."""
+
+  def __str__(self):
+    return(self.code)
   
+  class Meta:
+    verbose_name = 'Ländergruppe'
+    verbose_name_plural = 'Ländergruppen'
 
 class Laender(models.Model):
   """ Liste der Länder, in die exportiert wird. """
@@ -103,11 +109,16 @@ class Laender(models.Model):
   """ Ländercode, 2 Grossbuchstaben. ISO 3166-1 alpha-2 (hoffentlich)"""
   name = models.ForeignKey(Uebersetzungen, on_delete=models.PROTECT)
   """ Voller Name des Landes. """
-
+  gruppen = models.ManyToManyField(Laendergruppen)
+  """ Groups that this country is a member of. """
   breitengradMin = models.FloatField()
+  """ Der minimale Breitengrad, der dieses Land schneidet. """
   breitengradMax = models.FloatField()
+  """ Der maximale Breitengrad, der dieses Land schneidet. """
   laengengradMin = models.FloatField()
+  """ Der minimale Längengrad, der dieses Land schneidet. """
   laengengradMax = models.FloatField()
+  """ Der maximale Längengrad, der dieses Land schneidet. """
 
 
   def __str__(self):

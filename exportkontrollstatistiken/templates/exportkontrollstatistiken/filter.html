@@ -18,8 +18,8 @@
     <select id="laender">
         <option value="000">{% trans "Alle Länder" %}</option>
         <optgroup label="{% trans "Kontinente und Regionen" %}">
-          {% for code, name in regions.items %}
-            <option value="{{ code }}">{{ name }}</option>
+          {% for region in regions %}
+            <option value="{{ region.code }}">{{ region.name.de }}</option>
           {% endfor %}
         </optgroup>
         <optgroup label="{% trans "Länder einzeln" %}">
