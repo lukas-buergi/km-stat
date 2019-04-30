@@ -14,14 +14,14 @@
     </div>
   </div>
   <div class="filter">
-    <label class="filter_label" for="laender">{% trans "an" %}</label>
-    <select id="laender">
+    <label class="filter_label" for="filter_laender">{% trans "an" %}</label>
+    <select id="filter_laender">
         <option value="000">{% trans "Alle Länder" %}</option>
-        <optgroup label="{% trans "Kontinente und Regionen" %}">
-          {% for region in regions %}
-            <option value="{{ region.code }}">{{ region.name.de }}</option>
-          {% endfor %}
-        </optgroup>
+        {#<optgroup label="{% trans "Kontinente und Regionen" %}">#}
+          {#{% for region in regions %}#}
+            {#<option value="{{ region.code }}">{{ region.name.de }}</option>#}
+          {#{% endfor %}#}
+        {#</optgroup>#}
         <optgroup label="{% trans "Länder einzeln" %}">
           {% for country in countries %}
             {% if country.code != 'CH' %}

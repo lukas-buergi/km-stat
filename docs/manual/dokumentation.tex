@@ -64,7 +64,8 @@ SELECT *, COUNT(*) FROM export WHERE export.Art="Besondere militärische Güter" G
 \item [{Dual-Use-Güter:}] in diversen Systemen und Kategorien, Systeme:
 Anhang 5, ChKV, NSGI, NSGII, Sanktionen, Wassenaar
 \begin{lstlisting}
-SELECT *, COUNT(*) FROM export WHERE export.Art="Dual-Use-Güter" GROUP BY System, Kategorie 
+SELECT *, COUNT(*) FROM export WHERE export.Art="Dual-Use-Güter" GROUP BY System, Kategorie
+SELECT *, COUNT(*) FROM exportkontrollstatistiken_geschaefteimport WHERE art="Dual-Use-Güter" GROUP BY system, kategorie 
 \end{lstlisting}
 \end{description}
 \item [{System:}] Wassenaar, ML, Anhang 5, ChKV, NSGI, NSGII, Sanktionen

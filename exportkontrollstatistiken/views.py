@@ -122,10 +122,13 @@ class apiParam():
     for c in self.types:
       args = {typeFieldName : Uebersetzungen.objects.get(de=self.typesChoices[c][0])}
       qtypes |= Q(**args)
+    print(qtypes)
     return(qtypes)
 
   def getPage(self, queryset):
     """Slice a queryset or other sliceable object. The queryset is not evaluated at this point I think. """
+    assert(self.perPage>0)
+    assert(self.pageNumber>0)
     return(queryset[self.perPage*(self.pageNumber-1):self.perPage*self.pageNumber])
 
 def gapi(request, granularity, countries, types, year1, year2, sortBy, perPage, pageNumber):
@@ -174,6 +177,10 @@ def mainpage(request, granularity, countries, types, year1, year2, sortBy, perPa
     raise # TODO: This line is not for production.
     return(HttpResponse("Invalid parameter."))
   template = loader.get_template('exportkontrollstatistiken/index.html')
+  params.typesChoices = { # hides du from interface. TODO: finish import
+    "k" : ["Kriegsmaterial", "Kriegsmaterial"],
+    "b" : ["Besondere militärische Güter", "Besonderen militärischen Gütern"],
+  } 
   context = {
     'p' : params,
     'regions' : Laendergruppen.objects.all(), # TODO: sort by active language

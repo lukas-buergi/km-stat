@@ -95,7 +95,7 @@ class Geschaeftslaendersummen(models.Model):
             * add up the selected types
         * Sort according to p.sortBy
     """
-
+    # TODO BUG: This returns empty for du exports
     queryset2 = Geschaeftslaendersummen.objects.filter(jahr=p.year2)
     queryset2 = queryset2.filter(p.getTypes("gueterArt__name"))
     queryset2 = queryset2.filter(p.countries)

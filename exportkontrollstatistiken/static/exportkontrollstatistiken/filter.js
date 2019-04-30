@@ -77,6 +77,10 @@ filter = {
     });
 
     // TODO: Register country selection listener
+    d3.select('#filter_laender').on('change', (d, i, nodes) => {
+      this.p.countries = d3.select(nodes[i]).property("value");
+      this.updateWidgets();
+    });
   
     types=['k', 'b', 'd'];
     for(var t=0; t<=2; t++){

@@ -107,7 +107,7 @@ class Exportkontrollnummern(models.Model):
   """ Enthält die Anhänge mit den Beschreibungen der Nummern. Die Beschreibung wird erst bei Gelegenheit eingelesen, aber zumindest die Nummern selbst braucht es bevor ein Geschäft mit dieser Nummer eingetragen wird. """
   kontrollregime = models.ForeignKey(Kontrollregimes, on_delete=models.PROTECT)
   """ Zu welchem Kontrollregime die Nummer gehört. Vor allem relevant falls es doppelte Nummern gibt oder der Inhalt der Listen geändert wird (dann würde man ein neues Kontrollregime erstellen und da eintragen). """
-  nummer = models.CharField(max_length=10)
+  nummer = models.CharField(max_length=15)
   """ Die Nummer. """
   beschreibung = models.ForeignKey(Uebersetzungen, on_delete=models.PROTECT, blank=True, null=True)
   """ Die Beschreibung aus der Liste. Ich bin nicht sicher ob die übersetzt werden, falls nicht bleiben die anderen Spalten der fehlenden Sprachen halt leer. Ist zumindest vorerst optional."""
@@ -150,7 +150,7 @@ class Geschaefte(models.Model):
   def getJSON(p):
     cnames = ['Datum', 'Art', 'EKN', 'Umfang']
     ctypes = ['untreated', 'untreated', 'untreated', 'money']
-    if(not p.countriesSingle):
+    if(True): # not p.countriesSingle
       cnames = ['Ländercode', 'Land'] + cnames
       ctypes = ['country code', 'country name'] + ctypes
     result = apiData(False, cnames, ctypes)
@@ -166,6 +166,8 @@ class Geschaefte(models.Model):
     
     for g in p.getPage(queryset):
       row=[str(g.beginn), g.exportkontrollnummer.kontrollregime.gueterArt.name.de, g.exportkontrollnummer.nummer, g.umfang]
+      if(g.exportkontrollnummer.beschreibung != None and g.exportkontrollnummer.beschreibung.de!=""):
+        row[2]=g.exportkontrollnummer.beschreibung.de
       if(not p.countriesSingle):
         row = [g.endempfaengerstaat.code, g.endempfaengerstaat.name.de] + row
       result.addRow(row)
