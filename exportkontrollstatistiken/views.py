@@ -194,3 +194,6 @@ def index(request):
 
 def webmanifest(request):
   return(render(request, 'exportkontrollstatistiken/favicon/site.webmanifest', {}))
+
+def test(request):
+  return(render(request, 'exportkontrollstatistiken/test', {}))
