@@ -1,0 +1,14 @@
+{% load static %}
+
+<!DOCTYPE html>
+<meta charset='utf-8'>
+<html>
+  <head>
+    <script src="{% static 'exportkontrollstatistiken/d3.v5.min.js' %}" charset="utf-8"></script>
+  </head>
+  <body>
+    <script type='text/javascript'>
+      d3.json('https://static.alohcheigee0ou7ooqu3.t4b.me/exportkontrollstatistiken/world_countries.json').then(console.log("Loaded countries."));
+    </script>
+  </body>
+</html>
