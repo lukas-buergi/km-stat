@@ -2,6 +2,7 @@ from django.http import HttpResponse
 from django.template import loader
 from django.db.models import Q
 from django.conf import settings
+from django.shortcuts import render
 
 from .models import Geschaefte, Uebersetzungen, Laender, Laendergruppen, Geschaeftslaendersummen
 
@@ -190,3 +191,6 @@ def mainpage(request, granularity, countries, types, year1, year2, sortBy, perPa
 
 def index(request):
   return(mainpage(request, "s", "all", "kbd", 2001, 2019, "v", 10, 1))
+
+def webmanifest(request):
+  return(render(request, 'exportkontrollstatistiken/favicon/site.webmanifest', {}))

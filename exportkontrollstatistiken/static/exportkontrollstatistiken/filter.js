@@ -1,6 +1,6 @@
 // TODO: Complete this into a page controller?
 filter = {
-  initialize : function(p){
+  initialize : function(p, countriesURL){
     // TODO: learn to code javascript
     p.getURL = function(){
       this.assembleTypes();
@@ -52,7 +52,7 @@ filter = {
       "currency": ['Fr. ', '']});
     this.format = this.locale.format('$,');
 
-    worldmap.initialize(this.p.getCopy(), '/static/exportkontrollstatistiken/world_countries.json', this.format);
+    worldmap.initialize(this.p.getCopy(), countriesURL, this.format);
     table.initialize(this.p.getCopy(), this.format);
 
     d3.select('#filter_perPage').on('change', (d, i, nodes) => {

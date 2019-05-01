@@ -18,8 +18,6 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
 
-ALLOWED_HOSTS = []
-
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
@@ -99,4 +97,4 @@ USE_L10N = True
 USE_TZ = True
 
 from .settingsLocal import *
-# should contain STATIC_ROOT, STATIC_URL, MEDIA_ROOT, MEDIA_URL, DEBUG, DATABASES, SECRET_KEY
+# should contain ALLOWED_HOSTS, STATIC_ROOT, STATIC_URL, MEDIA_ROOT, MEDIA_URL, DEBUG, DATABASES, SECRET_KEY
