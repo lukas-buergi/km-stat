@@ -16,10 +16,11 @@ worldmap = {
     };
     const outline = {type: "Sphere"};
     const mapDecoration = {"type":"FeatureCollection","features": [graticuleFeature, outline]};
-    const projection = d3.geoRobinson().fitWidth('1000', mapDecoration);
+    const projection = d3.geoRobinson().fitWidth('1000', mapDecoration); // TODO: Why 1000?
     this.path = d3.geoPath().projection(projection);
     const bounds = this.path.bounds(mapDecoration);
 
+    // draw empty svg
     this.map = d3.select('div.worldmap')
       .style("padding-bottom", bounds[1][1] / bounds[1][0] * 100 + "%")
       .append('svg')
@@ -29,6 +30,7 @@ worldmap = {
         .append('g')
           .attr('class', 'map');
 
+    // draw grid onto map
     this.graticule = this.map
       .append('g')
       .attr('class', 'worldmap_reticules')
@@ -41,16 +43,14 @@ worldmap = {
         .style('stroke', 'white')
         .style('fill-opacity', 0);
 
-    d3.json(this.countriesSource)
+    // draw countries, then add data
+    this.worldmap = d3.json(this.countriesSource)
       .then(countries => {
         this.countries = countries;
         this.drawCountries();
         d3.select('div.worldmap_loadingMessage').remove();
       });
-    // TODO: there is a problem when the data arrives before the countries
-    // (which is only likely to happen if I optimize the data query by
-    //  a huge amount, but...)
-    this.setRemoteData(this.params.getAPIURL());
+    this.setRemoteData();
   },
   treatParams : function(params){
     // map is not paginated
@@ -69,7 +69,10 @@ worldmap = {
   },
   setRemoteData : function(){
     this.dataCounter++;
-    d3.json(this.params.getAPIURL()).then(data => this.setData(this.dataCounter, data));
+    d3.json(this.params.getAPIURL())
+      .then(data => {
+        this.setData(this.dataCounter, data);
+      });
     // TODO: Display some data change/loading indicator
   },
   setData : function(number, data) {
@@ -78,30 +81,33 @@ worldmap = {
       // data set is discarded
       return;
     }
-    const color = d3.scaleLog()
-      .domain([10e4,10e8]) /* TODO: Choose good values. If I'm crazy, use the fancy algorithm that originally came with the map */
-      .range(['#ffffff', '#FF0000']);
+    // the following is executed once the worldmap is loaded, or
+    // immediately if it already was loaded
+    this.worldmap.then( () => {
+      const color = d3.scaleLog()
+        .domain([10e4,10e8]) /* TODO: Choose good values. If I'm crazy, use the fancy algorithm that originally came with the map */
+        .range(['#ffffff', '#FF0000']);
 
-    
-    data['data'].forEach(d => {
-      d[2] = Number(d[2]);
-    })
+      
+      data['data'].forEach(d => {
+        d[2] = Number(d[2]);
+      })
 
-    const dataByID = {};
-    data['data'].forEach(d => {
-        dataByID[d[0]] = {"color":d[2], "name":d[1]};
+      const dataByID = {};
+      data['data'].forEach(d => {
+          dataByID[d[0]] = {"color":d[2], "name":d[1]};
+      });
+      
+      
+      // color map and add mouseovers
+      dataCountriesMap = this.blankCountriesMap
+          .style('fill', d => this.countryColor(d, dataByID, color))
+          .on('mouseover', (d, i, nodes) => this.mouseOverCountry(d, i, nodes, dataByID, this.numberFormat))
+          .on('mouseout', (d, i, nodes) => this.mouseOutCountry(d, i, nodes, dataByID, color));
+          
+      /* can change map data later: */
+      //map.style('fill', d => 'black');
     });
-    
-    
-    // color map and add mouseovers
-    dataCountriesMap = this.blankCountriesMap
-        .style('fill', d => this.countryColor(d, dataByID, color))
-        .on('mouseover', (d, i, nodes) => this.mouseOverCountry(d, i, nodes, dataByID, this.numberFormat))
-        .on('mouseout', (d, i, nodes) => this.mouseOutCountry(d, i, nodes, dataByID, color));
-        
-    /* can change map data later: */
-    //map.style('fill', d => 'black');
-
   },
   mouseOverCountry : function(d, i, nodes, dataByID){
     if(d.id in dataByID){
