@@ -45,23 +45,17 @@
     <label class="filter_label" for="table_granularity">{% trans "Darstellungsart" %}:</label>
     <select id="table_granularity">
         {% for key, value in p.granularities.items %}
-          <option value="{{ key }}" {% if p.granularity == key %}selected{% endif %}>{{ value.1 }}</option>
+          <option value="{{ key }}" {% if p.granularity == value.0 %}selected{% endif %}>{{ value.1 }}</option>
         {% endfor %}
     </select>
-    {# TODO: Sort, rows per page#}
+    {# TODO: Sort #}
   </div>
   <div class="filter">
     <label class="filter_label" for="filter_perPage">{% trans "Einträge pro Seite:" %}</label>
     <select id="filter_perPage">
-      {# this does not work #}
-      {% with '10 20 50 100 200 500' as list %}
-        {% if p.perPage not in list.split %}
-          <option value="{{ p.perPage }}" selected>{{ p.perPage }}</option>
-        {% endif %}
-        {% for perPage in list.split %}
+        {% for perPage in p.perPageChoices %}
           <option value="{{ perPage }}" {% if perPage == p.perPage %}selected{% endif %}>{{ perPage }}</option>
         {% endfor %}
-      {% endwith %}
     </select>
   </div>
 </div>

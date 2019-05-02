@@ -43,9 +43,19 @@ class apiParam():
     
 
     # save the parameters individually in useful, validated formats
+
+    # pages
+    if(self.parameters['perPage'] < 1 or self.parameters['pageNumber'] < 1 ):
+      raise(ValueError)
     self.perPage=self.parameters['perPage']
     self.pageNumber=self.parameters['pageNumber']
-    
+
+    self.perPageChoices = [10, 20, 50, 100, 200, 500]
+    if(self.perPage not in self.perPageChoices):
+      self.perPageChoices+=[self.perPage]
+      self.perPageChoices=sorted(self.perPageChoices)
+
+    # various options
     if(self.parameters['granularity'] not in self.granularities):
       raise(ValueError)
     self.granularity=self.granularities[self.parameters['granularity']][0]
@@ -190,10 +200,14 @@ def mainpage(request, granularity, countries, types, year1, year2, sortBy, perPa
   return HttpResponse(template.render(context, request))
 
 def index(request):
-  return(mainpage(request, "s", "all", "kbd", 2001, 2019, "v", 10, 1))
+  return(mainpage(request, "s", "all", "kb", 2001, 2018, "v", 15, 1))
 
 def webmanifest(request):
   return(render(request, 'exportkontrollstatistiken/favicon/site.webmanifest', {}))
 
 def test(request):
-  return(render(request, 'exportkontrollstatistiken/test.html', {}))
+  params=apiParam("s", "all", "kb", 2001, 2018, "v", 35, 1)
+  context = {
+    'p' : params,
+  }
+  return(render(request, 'exportkontrollstatistiken/test.html', context))
