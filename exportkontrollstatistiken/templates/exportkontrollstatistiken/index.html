@@ -30,7 +30,7 @@
   </style>
   <head>
     <title>{% trans "Schweizer Waffenexporte" %}</title>
-    {% include "exportkontrollstatistiken/favicon/favicon.html" only %}
+    {#{% include "exportkontrollstatistiken/favicon/favicon.html" only %}#}
     {# should I include them using templates? might speed things up... or not. Quite possibly if using template caching. #}
     <script src="{% static 'exportkontrollstatistiken/d3.v5.min.js' %}" charset="utf-8"></script>
     <script src="{% static 'exportkontrollstatistiken/queue.v1.min.js' %}"></script>
