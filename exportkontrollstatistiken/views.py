@@ -133,7 +133,6 @@ class apiParam():
     for c in self.types:
       args = {typeFieldName : Uebersetzungen.objects.get(de=self.typesChoices[c][0])}
       qtypes |= Q(**args)
-    print(qtypes)
     return(qtypes)
 
   def getPage(self, queryset):

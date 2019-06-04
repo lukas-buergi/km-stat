@@ -1,12 +1,14 @@
 
-ALLOWED_HOSTS = [ 'alohcheigee0ou7ooqu3.t4b.me' ]
+ALLOWED_HOSTS = [       '83f4738c4e5247f88ee107fd4add919e.yatu.ws',
+                        'ahch4chaiw1ofieg4ain.t4b.me'
+                ]
 
 # SECURITY WARNING: keep the secret key used in production secret!
 # just generate an arbitrary string of similar strength to replace this!
-SECRET_KEY = '77j1FoPOl3ZohEJT8JoGBHLiPhVBG2Kp4Dbpjx1WViw7TKvTyD4d331hxJQoSVBM'
+SECRET_KEY = ''
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
@@ -14,18 +16,18 @@ DEBUG = False
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'kriegsmaterialch',
+        'NAME': 'export-stat-staging',
         'HOST' : 'localhost',
-        'USER' : 'kriegsmaterialch',
-        'PASSWORD' : 'Ze5uukaephooth3aivah',
+        'USER' : 'export-stat-staging',
+        'PASSWORD' : '',
     }
 }
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
-STATIC_URL = 'https://static.alohcheigee0ou7ooqu3.t4b.me/'
-STATIC_ROOT = '/var/www/km-stat/static/'
+STATIC_URL = '/static/'
+STATIC_ROOT = '/lamp0/web/vhosts/default/static/'
 
-MEDIA_URL = 'https://media.alohcheigee0ou7ooqu3.t4b.me/'
-MEDIA_ROOT = '/var/www/km-stat/media/'
+MEDIA_URL = '/media/'
+MEDIA_ROOT = '/lamp0/web/vhosts/default/media/'
