@@ -1,8 +1,17 @@
 Kriegsmaterialexportstatistiken
 ===============================
 
-Installation:
-* Clone, create virtualenv,
-* pip install Django mysqlclient
-* setup local settings
-* run ./manage collectstatic, point server to wsgi.py file...
+Push to staging:
+* Commit
+* Push to staging
+* ./manage collectstatic
+* sftp static folder to server
+* reload application from control interface
+
+Local installation:
+* Clone
+* Create virtualenv
+* pip install stuff in requirements.txt file
+* setup local settings (copy example)
+* setup database
+* ./manage runserver

@@ -11,6 +11,7 @@
 }
 table {
   margin: 0 auto; /* center table */
+  overflow: auto;
 }
 .table tbody tr:nth-child(odd){
   background-color: #F4F4F4;
