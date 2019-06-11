@@ -6,16 +6,16 @@
     <div class="gueterArten">
       {% for key, value in p.typesChoices.items %}
       <div>
-        <input type="checkbox" id="table_{{ key }}" name="gueterArten"
+        <input type="checkbox" id="{{ name }}_filter_{{ key }}" name="gueterArten"
                {% if key in p.types %}checked{% endif %}>
-        <label for="table_{{ key }}">{{ value.1 }}</label>
+        <label for="{{ name }}_filter_{{ key }}">{{ value.1 }}</label>
       </div>
       {% endfor %}
     </div>
   </div>
   <div class="filter">
-    <label class="filter_label" for="filter_laender">{% trans "an" %}</label>
-    <select id="filter_laender">
+    <label class="filter_label" for="{{ name }}_filter_laender">{% trans "an" %}</label>
+    <select id="{{ name }}_filter_laender">
         <option value="all">{% trans "Alle Länder" %}</option>
         {#<optgroup label="{% trans "Kontinente und Regionen" %}">#}
           {#{% for region in regions %}#}
@@ -33,17 +33,17 @@
   </div>
   <div class="filter">
     {# Zwei Zahleneingabefehlder für Beginn und Ende, die Range sollte dynamisch angepasst werden, d.h. wenn man den einen verschiebt wird das min/max des anderen angepasst. #}
-    <label class="filter_label" for="table_beginn">{% trans "ab (inklusiv)" %}</label>
-    <input id="table_beginn" type="number" placeholder="Jahr" value="{{ p.year1 }}" step="1" min="2000" max="2020">
+    <label class="filter_label" for="{{ name }}_filter_beginn">{% trans "ab (inklusiv)" %}</label>
+    <input id="{{ name }}_filter_beginn" type="number" placeholder="Jahr" value="{{ p.year1 }}" step="1" min="2000" max="2020">
   </div>
   <div class="filter">
-    <label class="filter_label" for="table_ende">{% trans "bis (inklusiv)" %}</label>
-    <input id="table_ende" type="number" placeholder="Jahr" value="{{ p.year2 }}" step="1" min="2000" max="2020">
+    <label class="filter_label" for="{{ name }}_filter_ende">{% trans "bis (inklusiv)" %}</label>
+    <input id="{{ name }}_filter_ende" type="number" placeholder="Jahr" value="{{ p.year2 }}" step="1" min="2000" max="2020">
   </div>
   <div class="filter">
     {# Drop down Granularität #}
-    <label class="filter_label" for="table_granularity">{% trans "Darstellungsart" %}:</label>
-    <select id="table_granularity">
+    <label class="filter_label" for="{{ name }}_filter_granularity">{% trans "Darstellungsart" %}:</label>
+    <select id="{{ name }}_filter_granularity">
         {% for key, value in p.granularities.items %}
           <option value="{{ key }}" {% if p.granularity == value.0 %}selected{% endif %}>{{ value.1 }}</option>
         {% endfor %}
@@ -51,8 +51,8 @@
     {# TODO: Sort #}
   </div>
   <div class="filter">
-    <label class="filter_label" for="filter_perPage">{% trans "Einträge pro Seite:" %}</label>
-    <select id="filter_perPage">
+    <label class="filter_label" for="{{ name }}_filter_perPage">{% trans "Einträge pro Seite:" %}</label>
+    <select id="{{ name }}_filter_perPage">
         {% for perPage in p.perPageChoices %}
           <option value="{{ perPage }}" {% if perPage == p.perPage %}selected{% endif %}>{{ perPage }}</option>
         {% endfor %}

@@ -84,6 +84,8 @@ worldmap = {
     // the following is executed once the worldmap is loaded, or
     // immediately if it already was loaded
     this.worldmap.then( () => {
+      this.hidePopup(); // if this is not the first data set, a popup might be visible containing old data
+      
       const color = d3.scaleLog()
         .domain([10e4,10e8]) /* TODO: Choose good values. If I'm crazy, use the fancy algorithm that originally came with the map */
         .range(['#ffffff', '#FF0000']);
@@ -126,9 +128,12 @@ worldmap = {
       .style('top', (d3.mouse(document.querySelector('div.worldmap'))[1] - document.querySelector('div.worldmap_popup').offsetHeight - popupAboveMouse) + "px")
       .style('left', (d3.event.clientX - document.querySelector('div.worldmap_popup').offsetWidth/2) + "px");
   },
+  hidePopup : function(){
+    d3.select('div.worldmap_popup').style('visibility', 'hidden');
+  },
   mouseOutCountry : function(d, i, nodes, dataByID, color){
     if(d.id in dataByID){
-      d3.select('div.worldmap_popup').style('visibility', 'hidden');
+      this.hidePopup();
       d3.select(nodes[i]).style('fill', color(dataByID[d.id]['color']));
     }
   },

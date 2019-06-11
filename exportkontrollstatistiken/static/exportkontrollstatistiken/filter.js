@@ -1,4 +1,3 @@
-// TODO: Complete this into a page controller?
 function Params(p){
   // Takes either json as returned by Python view or another js Params object
   this.paramNames = p.paramNames;
@@ -56,53 +55,90 @@ function Params(p){
   };
 }
 
-function Filter(p){
-  this.p = new Params(p);
+function InputField(id, paramName, propertyName){
+  return({
+    id : id,
+    paramName : paramName,
+    propertyName : propertyName
+  });
+}
+
+function Filter(name, p){
+  // method definitions
+  this.update = function(p){
+    this.p = new Params(p);
+    for(var i=0; i<this.InputFields.length; i++){
+      id = this.InputFields[i].id;
+      pa = this.InputFields[i].paramName;
+      pr = this.InputFields[i].propertyName;
+      this.setInputField(id, pa, pr);
+    }
+  };
+  this.updateWidgets = function(){
+    controller.updateWidgets(this.p);
+  };
+  this.addInputListener = function(id, paramName, propertyName){
+    d3.select(id).on('change', (d, i, nodes) => {
+      this.p[paramName] = d3.select(nodes[i]).property(propertyName);
+      this.updateWidgets();
+    });
+  };
+  this.setInputField = function(id, paramName, propertyName){
+    d3.select(id).property(propertyName, this.p[paramName]);
+  };
   
-  d3.select('#filter_perPage').on('change', (d, i, nodes) => {
-    this.p.perPage = d3.select(nodes[i]).property("value");
-    this.updateWidgets();
-  });
-  d3.select('#table_granularity').on('change', (d, i, nodes) => {
-    this.p.granularity = d3.select(nodes[i]).property("value");
-    this.updateWidgets();
-  });
+  // constructor
+  
+  this.name = name;
+  this.p = new Params(p);
 
-  d3.select('#table_beginn').on('change', (d, i, nodes) => {
+  // define input fields belonging to this filter
+  this.InputFields = [
+    new InputField('#' + this.name + '_filter_perPage',       'perPage',        'value'),
+    new InputField('#' + this.name + '_filter_granularity',   'granularity',    'value'),
+    new InputField('#' + this.name + '_filter_laender',       'countries',      'value'),
+  ];
+  types=['k', 'b', 'd'];
+  for(var t=0; t<=2; t++){
+    this.InputFields.push(
+      new InputField('#' + this.name + '_filter_' + types[t],  types[t],        'checked'),
+    );
+  }
+
+  // add listeners
+  for(var i=0; i<this.InputFields.length; i++){
+    id = this.InputFields[i].id;
+    pa = this.InputFields[i].paramName;
+    pr = this.InputFields[i].propertyName;
+    this.addInputListener(id, pa, pr);
+  }
+
+  // those two fields still need special treatment
+  d3.select('#' + this.name + '_filter_beginn').on('change', (d, i, nodes) => {
     // TODO: change min/max
-    this.p.year1 = d3.select(nodes[i]).property("value");
-    this.updateWidgets();
+    newValue = d3.select(nodes[i]).property("value");
+    if(newValue <= this.p.year2){
+      this.p.year1 = d3.select(nodes[i]).property("value");
+      this.updateWidgets();
+    } else {
+      console.log("Error, year1>year2.");
+    }
   });
 
-  d3.select('#table_ende').on('change', (d, i, nodes) => {
+  d3.select('#' + this.name + '_filter_ende').on('change', (d, i, nodes) => {
     // TODO: change min/max
     this.p.year2 = d3.select(nodes[i]).property("value");
     this.updateWidgets();
   });
-
-  d3.select('#filter_laender').on('change', (d, i, nodes) => {
-    this.p.countries = d3.select(nodes[i]).property("value");
-    this.updateWidgets();
-  });
-
-  types=['k', 'b', 'd'];
-  for(var t=0; t<=2; t++){
-    d3.select('#table_' + types[t]).on('change', (d, i, nodes) => {
-      type = d3.select(nodes[i]).attr('id').slice(-1);
-      this.p[type] = d3.select(nodes[i]).property("checked");
-      this.updateWidgets();
-    });
-  }
-
-  this.updateWidgets = function(){
-    controller.updateWidgets(this.p);
-  };
 }
 
 function Controller(p, countriesURL){
   this.updateWidgets = function(p){
     table.update(new Params(p));
     worldmap.update(new Params(p));
+    for(var i=0; i<this.widgets.length; i++){
+      this.widgets[i].update(p);
+    }
   };
   
   this.p = new Params(p);
@@ -113,7 +149,12 @@ function Controller(p, countriesURL){
     "currency": ['Fr. ', '']});
   this.format = this.locale.format('$,');
 
-  this.filter = new Filter(new Params(this.p));
+  this.widgets = [];
+
+  this.filter1 = new Filter("top", this.p);
+  this.widgets.push(this.filter1);
+  this.filter2 = new Filter("middle", this.p);
+  this.widgets.push(this.filter2);
   worldmap.initialize(new Params(this.p), countriesURL, this.format);
   table.initialize(new Params(this.p), this.format);
 }

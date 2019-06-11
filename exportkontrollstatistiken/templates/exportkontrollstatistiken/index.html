@@ -23,6 +23,12 @@
       background-color: #EEEEEE;
       text-align: center;
     }
+    .paragraph {
+      margin: 0 auto;
+      text-align: justify;
+      max-width: 35em;
+    }
+    
     h2 {
       font-size: 1.5em;
     }
@@ -54,17 +60,20 @@
         </a>
       </div>
       <div class="text">
-        {% blocktrans %}
-          <h2>Machen Sie sich selbst ein Bild über die Waffenexporte der Schweiz!</h2><br>
-          Auf der Karte wird für jedes ausgewählte Land ein Total über die ausgewählten Exporte angezeigt.<br>
-          In der Tabelle unten kann man die Exporte im Detail betrachten, je nach ausgewählter Darstellungsart und Sortierreihenfolge. <br>
-          Die Exportzahlen stammen alle vom Staatssekretariat für Wirtschaft SECO, sind also offizielle Daten vom Bund.
-          {% endblocktrans %}
+          <h2>{% trans "Machen Sie sich selbst ein Bild über die Waffenexporte der Schweiz!" %}</h2><br>
+          <div class="paragraph">
+            {% blocktrans %}
+              Auf der Karte wird für jedes ausgewählte Land ein Total über die ausgewählten Exporte angezeigt.<br>
+              In der Tabelle unten kann man die Exporte im Detail betrachten, je nach ausgewählter Darstellungsart und Sortierreihenfolge. <br>
+              Die Exportzahlen stammen alle vom Staatssekretariat für Wirtschaft SECO, sind also offizielle Daten vom Bund.
+            {% endblocktrans %}
+          </div>
       </div>
       {# xxx Franken Exporte von Kriegsmaterial, besonderen militärischen Gütern und Dual Use Gütern total in unserer Datenbank. #}
-      {# Zur Anzeige ausgewählt: Exporte von <GüterartListe> an <Länderliste> zwischen <Anfang> und <Ende>. #}
+      {# Davon zur Anzeige ausgewählt: <Nichts|xxx Franken> #}
+      {% include "exportkontrollstatistiken/filter.html" with name="top" %}
       {% include "exportkontrollstatistiken/worldmap.html" only %}
-      {% include "exportkontrollstatistiken/filter.html" %}
+      {% include "exportkontrollstatistiken/filter.html" with name="middle" %}
       {% include "exportkontrollstatistiken/table.html" %}
     </div>
     {# for some reason the worldmap only works if this is down here, not if it's in the head. The table works fine in either case. #}

@@ -42,7 +42,6 @@ table = {
       console.log('discarding data set ' + number);
       return;
     }
-    // TODO: Set up navigation drop down, disable buttons that don't make sense
 
     // set up page selection only if we aren't on the first pseudo data set
     if(number!=0){
