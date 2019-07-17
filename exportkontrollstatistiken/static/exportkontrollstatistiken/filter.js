@@ -72,7 +72,13 @@ function Filter(name, p){
       pa = this.InputFields[i].paramName;
       pr = this.InputFields[i].propertyName;
       this.setInputField(id, pa, pr);
+      if(pa == 'year1'){
+        d3.select(id).property('max', this.p['year2']);
+      } else if(pa == 'year2'){
+        d3.select(id).property('min', this.p['year1']);
+      }
     }
+    
   };
   this.updateWidgets = function(){
     controller.updateWidgets(this.p);
@@ -97,6 +103,8 @@ function Filter(name, p){
     new InputField('#' + this.name + '_filter_perPage',       'perPage',        'value'),
     new InputField('#' + this.name + '_filter_granularity',   'granularity',    'value'),
     new InputField('#' + this.name + '_filter_laender',       'countries',      'value'),
+    new InputField('#' + this.name + '_filter_beginn',        'year1',      'value'),
+    new InputField('#' + this.name + '_filter_ende',          'year2',      'value'),
   ];
   types=['k', 'b', 'd'];
   for(var t=0; t<=2; t++){
@@ -112,32 +120,15 @@ function Filter(name, p){
     pr = this.InputFields[i].propertyName;
     this.addInputListener(id, pa, pr);
   }
-
-  // those two fields still need special treatment
-  d3.select('#' + this.name + '_filter_beginn').on('change', (d, i, nodes) => {
-    // TODO: change min/max
-    newValue = d3.select(nodes[i]).property("value");
-    if(newValue <= this.p.year2){
-      this.p.year1 = d3.select(nodes[i]).property("value");
-      this.updateWidgets();
-    } else {
-      console.log("Error, year1>year2.");
-    }
-  });
-
-  d3.select('#' + this.name + '_filter_ende').on('change', (d, i, nodes) => {
-    // TODO: change min/max
-    this.p.year2 = d3.select(nodes[i]).property("value");
-    this.updateWidgets();
-  });
 }
 
 function Controller(p, countriesURL){
   this.updateWidgets = function(p){
+    this.p = new Params(p);
     table.update(new Params(p));
     worldmap.update(new Params(p));
     for(var i=0; i<this.widgets.length; i++){
-      this.widgets[i].update(p);
+      this.widgets[i].update(this.p);
     }
   };
   

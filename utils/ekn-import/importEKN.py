@@ -1,6 +1,6 @@
 NICHT AUSFÜHREN - das ist kein fertiges Skript, nur Schnipsel für die interaktive Konsole
 
-Es geht hier darum so weit wie möglich automatisiert die Beschreibungen der ekn in die Datenbank zu laden - bei denen, die auf admin.ch als html beschrieben werden, sollte das weitestgehend funktionieren. Das sind wenn ich mich nicht täusche KM, ML, ChKV und Anhang 5.
+Es geht hier darum so weit wie möglich automatisiert die Beschreibungen der ekn in die Datenbank zu laden - bei denen, die auf admin.ch als html beschrieben werden, sollte das weitestgehend funktionieren. Das sind wenn ich mich nicht täusche KM, ChKV und Anhang 5.
 
 Anhang 5 ist so kurz, dass ich es komplett von Hand gemacht habe.
 

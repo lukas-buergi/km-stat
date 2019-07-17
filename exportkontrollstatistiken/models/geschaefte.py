@@ -147,6 +147,15 @@ class Geschaefte(models.Model):
   """ Die offizielle Quelle für den Eintrag. Ich glaube es gibt die immer nur auf Deutsch, sonst müsste man das noch anpassen um auch die anderen anzubieten. """
 
   @staticmethod
+  def getFirstYear():
+    return(Geschaefte.objects.order_by('beginn')[0].beginn.year)
+    
+
+  @staticmethod
+  def getLastYear():
+    return(Geschaefte.objects.order_by('-ende')[0].ende.year)
+
+  @staticmethod
   def getJSON(p):
     cnames = ['Datum', 'Art', 'EKN', 'Umfang']
     ctypes = ['untreated', 'untreated', 'untreated', 'money']

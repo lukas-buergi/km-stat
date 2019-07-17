@@ -34,11 +34,11 @@
   <div class="filter">
     {# Zwei Zahleneingabefehlder für Beginn und Ende, die Range sollte dynamisch angepasst werden, d.h. wenn man den einen verschiebt wird das min/max des anderen angepasst. #}
     <label class="filter_label" for="{{ name }}_filter_beginn">{% trans "ab (inklusiv)" %}</label>
-    <input id="{{ name }}_filter_beginn" type="number" placeholder="Jahr" value="{{ p.year1 }}" step="1" min="2000" max="2020">
+    <input id="{{ name }}_filter_beginn" type="number" placeholder="Jahr" value="{{ p.year1 }}" step="1" min="{{ firstYear }}" max="{{ p.year2 }}">
   </div>
   <div class="filter">
     <label class="filter_label" for="{{ name }}_filter_ende">{% trans "bis (inklusiv)" %}</label>
-    <input id="{{ name }}_filter_ende" type="number" placeholder="Jahr" value="{{ p.year2 }}" step="1" min="2000" max="2020">
+    <input id="{{ name }}_filter_ende" type="number" placeholder="Jahr" value="{{ p.year2 }}" step="1" min="{{ p.year1 }}" max="{{ lastYear }}">
   </div>
   <div class="filter">
     {# Drop down Granularität #}

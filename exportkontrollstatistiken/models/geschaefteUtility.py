@@ -66,7 +66,8 @@ class Geschaeftslaendersummen(models.Model):
     for country in Laender.objects.all():
       for gueterArt in GueterArten.objects.all():
         cur=None
-        for jahr in range(2000, 2020):
+        for jahr in range(Geschaefte.getFirstYear()-1,
+                          Geschaefte.getLastYear()+1):
           try:
             cur=Geschaeftslaendersummen.objects.filter(jahr=jahr, gueterArt=gueterArt, endempfaengerstaat=country).get()
           except Geschaeftslaendersummen.DoesNotExist:
@@ -96,6 +97,7 @@ class Geschaeftslaendersummen(models.Model):
         * Sort according to p.sortBy
     """
     # TODO BUG: This returns empty for du exports
+    # TODO: I think I fixed this
     queryset2 = Geschaeftslaendersummen.objects.filter(jahr=p.year2)
     queryset2 = queryset2.filter(p.getTypes("gueterArt__name"))
     queryset2 = queryset2.filter(p.countries)
@@ -179,3 +181,16 @@ class GeschaefteImport(models.Model):
   datum = models.DateField()
   betrag = models.PositiveIntegerField()
   
+
+class GeschaefteCSVImport(models.Model):
+  """ Hilfsmodell zum Import von BMG, DU, etc. aus den Tabellendateien."""
+  nummer = models.CharField(max_length=20)
+  endempfaengerstaat = models.CharField(max_length=100)
+  gueterArt = models.CharField(max_length=100)
+  bewilligungstyp = models.CharField(max_length=100)
+  richtung = models.CharField(max_length=100)
+  ekn = models.CharField(max_length=100)
+  umfang = models.CharField(max_length=100)
+  importiert = models.BooleanField()
+  beginn = models.DateField()
+  ende = models.DateField()

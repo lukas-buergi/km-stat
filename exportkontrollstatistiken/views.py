@@ -195,11 +195,13 @@ def mainpage(request, granularity, countries, types, year1, year2, sortBy, perPa
     'p' : params,
     'regions' : Laendergruppen.objects.all(), # TODO: sort by active language
     'countries' : Laender.objects.all(), # TODO: same as above
+    'firstYear' : Geschaefte.getFirstYear(),
+    'lastYear' : Geschaefte.getLastYear(),
   }
   return HttpResponse(template.render(context, request))
 
 def index(request):
-  return(mainpage(request, "s", "all", "kb", 2001, 2018, "v", 15, 1))
+  return(mainpage(request, "s", "all", "kb", Geschaefte.getFirstYear(), Geschaefte.getLastYear(), "v", 15, 1))
 
 def webmanifest(request):
   return(render(request, 'exportkontrollstatistiken/favicon/site.webmanifest', {}))

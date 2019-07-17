@@ -32,17 +32,20 @@ table = {
   },
   setRemoteData : function(){
     this.dataCounter++;
-    d3.json(this.params.getAPIURL()).then(data => this.setData(this.dataCounter, data));
+    d3.json(this.params.getAPIURL()).then(
+      (number =>
+        (data => this.setData(number, data))
+      )
+      (this.dataCounter)
+    );
     // TODO: Display some data change/loading indicator.
   },
   setData : function(number, data) {
     if(this.dataCounter>number){
       // some other data was requested in the mean time, so this
       // data set is discarded
-      console.log('discarding data set ' + number);
       return;
     }
-
     // set up page selection only if we aren't on the first pseudo data set
     if(number!=0){
       this.numberOfPages = Math.ceil(data.total / this.params.perPage);

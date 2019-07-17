@@ -58,6 +58,8 @@ worldmap = {
     params.pageNumber = 1;
     // ... and needs sums per country
     params.granularity = 's';
+    // ... and sorted by value
+    params.sortBy = 'v';
     return(params);
   },
   update : function(params){
@@ -69,10 +71,12 @@ worldmap = {
   },
   setRemoteData : function(){
     this.dataCounter++;
-    d3.json(this.params.getAPIURL())
-      .then(data => {
-        this.setData(this.dataCounter, data);
-      });
+    d3.json(this.params.getAPIURL()).then(
+      (number =>
+        (data => this.setData(number, data))
+      )
+      (this.dataCounter)
+    );
     // TODO: Display some data change/loading indicator
   },
   setData : function(number, data) {
@@ -85,12 +89,7 @@ worldmap = {
     // immediately if it already was loaded
     this.worldmap.then( () => {
       this.hidePopup(); // if this is not the first data set, a popup might be visible containing old data
-      
-      const color = d3.scaleLog()
-        .domain([10e4,10e8]) /* TODO: Choose good values. If I'm crazy, use the fancy algorithm that originally came with the map */
-        .range(['#ffffff', '#FF0000']);
 
-      
       data['data'].forEach(d => {
         d[2] = Number(d[2]);
       })
@@ -99,6 +98,49 @@ worldmap = {
       data['data'].forEach(d => {
           dataByID[d[0]] = {"color":d[2], "name":d[1]};
       });
+
+      if(data['data'].length == 0){
+        console.log("Empty dataset");
+        domain = [];
+        colorRange = [];
+      } else if(data['data'].length == 1){
+        colorRange = ['#ff0000'];
+        domain = [0];
+      } else {
+        colorRange = [d3.rgb(255,255,255)];
+        amountOfPartitions = Math.min(30,data['data'].length);
+        for(i=0; i<amountOfPartitions-1; i++){
+          n = 255*(amountOfPartitions-i)/amountOfPartitions
+          colorRange.push(d3.rgb(255, n, n));
+        }
+        colorRange.push(d3.rgb(255, 0, 0));
+        
+        dataLog = [];
+        data['data'].forEach(d => {
+          if(d[2]==0){
+            dataLog.push(0);
+          } else {
+            dataLog.push(Math.log(d[2]));
+          }
+        });
+
+        // TODO: fix bug, why is 0 twice at the beginning?
+        domainLog = jenks(dataLog, amountOfPartitions - 1);
+        
+        domain = []
+        domainLog.forEach(d => {
+          if(d==0){
+            domain.push(0);
+          } else {
+            domain.push(Math.exp(d));
+          }
+        });
+        console.log(domain);
+      }
+      
+      const color = d3.scaleQuantile() //scaleLog()
+        .domain(domain)
+        .range(colorRange);
       
       
       // color map and add mouseovers
