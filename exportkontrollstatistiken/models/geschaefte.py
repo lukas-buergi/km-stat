@@ -137,7 +137,7 @@ class Geschaefte(models.Model):
   """ Ausfuhr. Alles andere ist nicht implementiert. """
   exportkontrollnummer = models.ForeignKey(Exportkontrollnummern, on_delete=models.PROTECT) # TODO: make manytomany
   """ Was wurde exportiert? Vielleicht sollten da mehrere Nummern erlaubt sein, weil ein Gut vielleicht unter mehrere Kontrollregime fallen kann. """
-  umfang = models.PositiveIntegerField()
+  umfang = models.FloatField()
   """ Umfang des Geschäfts in Schweizer Franken. """
   beginn = models.DateField()
   """ Der Beginn des Geschäfts. Normalerweise der 1. Januar des Jahres, weil nichts genaueres bekannt ist. """

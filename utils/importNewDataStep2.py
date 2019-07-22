@@ -1,60 +1,131 @@
 from exportkontrollstatistiken.models import *
+import re
+from pprint import pprint
 
-einzelbewilligung=Bewilligungstypen.objects.get(name=Uebersetzungen.objects.get(de="Einzelbewilligung"))
-ausfuhr=Geschaeftsrichtungen.objects.get(name=Uebersetzungen.objects.get(de="Ausfuhr"))
-for g in GeschaefteCSVImport.objects.filter(importiert=False):
-  if(g.bewilligungstyp != 'Einzelbewilligung'):
-    continue
-  if(g.richtung != 'Ausfuhr'):
-    continue
-  try:
-    land = Laender.objects.get(name__de=g.endempfaengerstaat)
-  except Laender.DoesNotExist:
-    print(g.endempfaengerstaat + " misspelled or missing")
-    continue
+def importWassenaarML(ekn):
+  if(ekn == ""):
+    raise(ValueError("empty ekn not possible"))
+    
+  tmp = ekn
+  for char in ['.', ',', ':', ')', '(']:
+    tmp = ekn.replace(char, '')
   
-  if(g.gueterArt != 'Besondere militärische Güter'):
-    continue
-  # TODO
-  try:
-    ekn=Exportkontrollnummern.objects.get(nummer=g.ekn)
-  except Exportkontrollnummern.DoesNotExist:
-    print(g.ekn + " missing or wrong")
-    continue
-  try:
-    Geschaefte(endempfaengerstaat=land, bewilligungstyp=einzelbewilligung, richtung=ausfuhr, exportkontrollnummer=g.ekn, umfang=g.betrag, beginn=g.beginn, ende=g.ende)
-    #g.save()
-    g.importiert = True
-  except:
-    continue
+  parts = []
+  letters = True
+  while(len(tmp)!=0):
+    if(letters):
+      regex = '[a-zA-Z]+'
+    else:
+      regex = '[0-9]+'
+    part = re.search(regex, tmp)
+    if(part):
+      parts.append(part.group())
+      tmp = tmp[part.end():]
+      letters = not letters
+    else:
+      raise(ValueError(ekn + ' is not parseable'))
+  
+  parts[0] = parts[0].upper()
+  if(parts[0] not in ['ML', 'KM']):
+    raise(ValueError(ekn + ' must begin with ML or KM'))
+  
+  if(len(parts)<2):
+    raise(ValueError(ekn + " is too short to be valid"))
+  
+  if(parts[0] == "KM"):
+    gueterArt="Kriegsmaterial"
+  else:
+    gueterArt="Besondere militärische Güter"
+  
+  kontrollregime = Kontrollregimes.objects.get(gueterArt__name__de=gueterArt)
+  toAdd = [parts[0]]
+  while(toAdd != parts):
+    toAdd.append(parts[len(toAdd)])
+    number = ""
+    for part in toAdd:
+      number += part
+    try:
+      Exportkontrollnummern.objects.get(kontrollregime=kontrollregime, nummer=number)
+      #print(number + " already exists, skipped")
+    except Exportkontrollnummern.DoesNotExist:
+      Exportkontrollnummern(kontrollregime=kontrollregime, nummer=number).save()
+      #print(number + " added to database")
+    except Exportkontrollnummern.MultipleObjectsReturned:
+      print(number + " exists multiple times in DB")
 
-for g in GeschaefteCSVImport.objects.filter(importiert=False):
-  for char in ['.']:
-    if(g.ekn not in ["5.1", "5.2"]):
-      g.ekn = g.ekn.replace(char, '')
-  g.endempfaengerstaat = g.endempfaengerstaat.replace('Mazedonien (ehemalige jugoslawische Republik)', 'Republik Nordmazedonien')
-  g.save()
-
-# get an overview
-for g in GeschaefteCSVImport.objects.filter(importiert=False):
-  try:
-    ekn = Exportkontrollnummern.objects.get(nummer=g.ekn)
-  except Exportkontrollnummern.DoesNotExist:
-    print(g.ekn)
-  except Exportkontrollnummern.MultipleObjectsReturned:
-    print(g.ekn + " exists multiple times:")
-    for gd in GeschaefteCSVImport.objects.filter(nummer=g.ekn):
-      print(gd)
-
-# import ML EKN
-ekns = set()
-for g in GeschaefteCSVImport.objects.filter(importiert=False):
-  if(g.ekn[0:2]=='ML'):
-    ekns.add(g.ekn)
-
-eknsLower = set()
-for ekn in ekns:
-  eknsLower.add('ML' + ekn[2:].lower())
-
-for ekn in eknsLower:
-  print(ekn)
+def importAll():
+  einzelbewilligung=Bewilligungstypen.objects.get(name=Uebersetzungen.objects.get(de="Einzelbewilligung"))
+  ausfuhr=Geschaeftsrichtungen.objects.get(name=Uebersetzungen.objects.get(de="Ausfuhr"))
+  for g in GeschaefteCSVImport.objects.filter(importiert=False):
+    if(g.bewilligungstyp != 'Einzelbewilligung'):
+      # no support for this type of entry
+      continue
+    if(g.richtung != 'Ausfuhr'):
+      # no support for this type of entry
+      continue
+      
+    # correct previously encountered mistakes in country names
+    corrections = [
+      [['Mazedonien (ehemalige jugoslawische Republik)'], 'Republik Nordmazedonien'],
+      [['Korea, Republik (Südkorea)', 'Korea (Süd)'], 'Republik Korea'],
+      [['China', 'China, Volksrepublik'], 'Volksrepublik China'],
+      [['China, Taiwan'], 'Republik China (Taiwan)'],
+      [['Bosnien-Herzegowina', 'Bosnien und Herzeg.'], 'Bosnien und Herzegowina'],
+      [['Rwanda'], 'Republik Ruanda'],
+      [['Elfenbeinküste'], 'Republik Côte d’Ivoire'],
+      [['Ekuador'], 'Republik Ecuador'],
+      [['Moldova'], 'Republik Moldova'],
+      [['Fidschi'], 'Republik Fidschi'],
+      [['Vatikan'], 'Staat Vatikanstadt'],
+      [['Albanien'], 'Republik Albanien'],
+      [['Kongo, Republik'], 'Republik Kongo'],
+      [['Somalia'], 'Bundesrepublik Somalia'],
+      [['Georgien, Republik'], 'Georgien'],
+      [['Trinidad und Tobago'], 'Republik Trinidad und Tobago'],
+      [['Djibouti'], 'Republik Dschibuti'],
+      [['Myanmar (Union)'], 'Republik der Union Myanmar'],
+      [['Macau', 'Macao'], 'Sonderverwaltungszone Macau der Volksrepublik China'],
+      [['Arabische Emirate'], 'Vereinigte Arabische Emirate'],
+      [['U.S.A'], 'Vereinigte Staaten von Amerika'],
+      [['Dominikanische Rep'], 'Dominikanische Republik'],
+      [['Tschechische Rep.'], 'Tschechische Republik'],
+      [['Slowakei'], 'Slowakische Republik'],
+      [['Katar', 'Qatar'], 'Staat Katar'],
+      [['Bangladesh', 'Bangladesch'], 'Volksrepublik Bangladesch'],
+    ]
+    for c in corrections:
+      if(g.endempfaengerstaat in c[0]):
+        g.endempfaengerstaat=c[1]
+        break
+    
+    try:
+      land = Laender.objects.get(name__de=g.endempfaengerstaat)
+    except Laender.DoesNotExist:
+      print(g.endempfaengerstaat + " misspelled or missing")
+      continue
+    
+    if(g.gueterArt in ['Kriegsmaterial', 'Besondere militärische Güter']):
+      try:
+        importWassenaarML(g.ekn)
+      except ValueError:
+        print("skipping " + g.ekn)
+        continue
+      
+      # in principle this must succeed, but no reason to remove extra checks
+      try:
+        ekn=Exportkontrollnummern.objects.get(nummer=g.ekn)
+      except Exportkontrollnummern.DoesNotExist:
+        print(g.ekn + " missing or wrong")
+        continue
+      except Exportkontrollnummern.MultipleObjectsReturned:
+        print(g.ekn + "multiple exist")
+        continue
+    else:
+      continue
+    
+    try:
+      Geschaefte(endempfaengerstaat=land, bewilligungstyp=einzelbewilligung, richtung=ausfuhr, exportkontrollnummer=ekn, umfang=g.umfang, beginn=g.beginn, ende=g.ende).save()
+      g.importiert = True
+      g.save()
+    except:
+      raise

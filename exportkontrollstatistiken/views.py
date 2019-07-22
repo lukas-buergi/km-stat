@@ -193,8 +193,8 @@ def mainpage(request, granularity, countries, types, year1, year2, sortBy, perPa
   } 
   context = {
     'p' : params,
-    'regions' : Laendergruppen.objects.all(), # TODO: sort by active language
-    'countries' : Laender.objects.all(), # TODO: same as above
+    'regions' : Laendergruppen.objects.all().order_by('name__de'), # TODO: sort by active language
+    'countries' : Laender.objects.all().order_by('name__de'), # TODO: same as above
     'firstYear' : Geschaefte.getFirstYear(),
     'lastYear' : Geschaefte.getLastYear(),
   }
