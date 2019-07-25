@@ -97,7 +97,7 @@ Andi andi@gsoa.ch
 \end_layout
 
 \begin_layout Itemize
-Kaju Bubanja hat das ursprünglich geschrieben
+Kaju Bubanja hat eine erste Version der Webseite geschrieben
 \end_layout
 
 \begin_layout Subsection
@@ -122,6 +122,18 @@ Anzahl Arbeitsplätze pro Exportvolumen und Jahr und das den Toten und Verletzte
  in den Ländern gegenüberstellen
 \end_layout
 
+\begin_layout Itemize
+https://www.seco.admin.ch/seco/de/home/Aussenwirtschaftspolitik_Wirtschaftliche_Zus
+ammenarbeit/Wirtschaftsbeziehungen/exportkontrollen-und-sanktionen/industrieprod
+ukte--dual-use--und-besondere-militaerische-gueter/statistik/2015.html
+\end_layout
+
+\begin_layout Itemize
+https://www.seco.admin.ch/seco/de/home/Aussenwirtschaftspolitik_Wirtschaftliche_Zus
+ammenarbeit/Wirtschaftsbeziehungen/exportkontrollen-und-sanktionen/ruestungskont
+rolle-und-ruestungskontrollpolitik--bwrp-/zahlen-und-statistiken0.html
+\end_layout
+
 \begin_layout Subsection
 Infos alte Webseite
 \end_layout
@@ -143,34 +155,6 @@ Controller, der AJAX-Request beantwortet: kriegsmaterial/src/Controller/ExportCo
 ntroller.php
 \end_layout
 
-\begin_layout Description
-Statistiken: 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-https://www.seco.admin.ch/seco/de/home/Aussenwirtschaftspolitik_Wirtschaftliche_Zus
-ammenarbeit/Wirtschaftsbeziehungen/exportkontrollen-und-sanktionen/industrieprod
-ukte--dual-use--und-besondere-militaerische-gueter/statistik/2015.html
-\end_layout
-
-\begin_layout Itemize
-https://www.seco.admin.ch/seco/de/home/Aussenwirtschaftspolitik_Wirtschaftliche_Zus
-ammenarbeit/Wirtschaftsbeziehungen/exportkontrollen-und-sanktionen/ruestungskont
-rolle-und-ruestungskontrollpolitik--bwrp-/zahlen-und-statistiken0.html
-\end_layout
-
-\end_deeper
 \begin_layout Subsection
 Datenbanklayout alt
 \end_layout
@@ -709,8 +693,7 @@ eine für die Problemanzeige in Tabellen und den Doppelbalkendiagramme
 \end_layout
 
 \begin_layout Paragraph
-js-komponenten: TODO: Bug: Es wird manchmal nicht das neueste Datenset angezeigt
-, wenn man schnell die Filter ändert.
+js-komponenten:
 \end_layout
 
 \begin_layout Itemize
@@ -834,12 +817,11 @@ Datenbankanfrage senden
 \end_layout
 
 \begin_layout Enumerate
-Kontrast der Tabelle in Animation verringern.
+Kontrast der Tabelle in Animation verringern, mit Lademeldung
 \end_layout
 
 \begin_layout Enumerate
-Zu neuer Tabelle wechseln sobald Daten angekommen, ohne Animation, mit Lademeldu
-ng
+Zu neuer Tabelle wechseln sobald Daten angekommen, ohne Animation
 \end_layout
 
 \end_deeper
@@ -869,7 +851,8 @@ Karte verschönern
 
 \begin_deeper
 \begin_layout Enumerate
-Etwas leerer Rand um die Karte rum
+Etwas leerer Rand um die Karte rum, oder den Globus blau und der restliche
+ Hintergrund weiss
 \end_layout
 
 \begin_layout Enumerate
@@ -885,51 +868,11 @@ Pfeile wären schön? Ich denke dünne, alle gleich.
 
 \end_deeper
 \begin_layout Enumerate
-Daten vom Seco zusammensuchen/beschaffen und in neue Datenbank eintragen
-\end_layout
-
-\begin_deeper
-\begin_layout Enumerate
-von der Webseite
-\end_layout
-
-\begin_layout Enumerate
-vielleicht Kontakt aufnehmen und schauen ob die PDFs auch als Tabellenformat
- gibt.
-\end_layout
-
-\end_deeper
-\begin_layout Enumerate
 Aufräumen
 \end_layout
 
 \begin_layout Enumerate
-wahrscheinlich haufenweise optimierungen+caching
-\end_layout
-
-\begin_layout Enumerate
 Problem/Skandaldatenbank ausbauen, Detailseite für einzelne Länder schreiben
-\end_layout
-
-\begin_layout Section
-Ordner-Struktur kriegsmaterial.ch aktuell
-\end_layout
-
-\begin_layout Description
-.
- Wordpress
-\end_layout
-
-\begin_layout Description
-./map Zweckgebaute CakePHP 3 Seite
-\end_layout
-
-\begin_layout Description
-./site Kriegsmaterialexportverbotsabstimmungswebseite, statisches HTML?
-\end_layout
-
-\begin_layout Description
-./kriegsmaterialwiki MediaWiki auf das die CakePHP 3 Seite verlinkt
 \end_layout
 
 \begin_layout Section
@@ -946,6 +889,7 @@ Ausgeschossen
 
 \begin_layout Standard
 HINWEIS: Wurde von Lukas ausgeschalten, entfernt.
+ Archivierung wäre zu viel Aufwand.
 \end_layout
 
 \begin_layout Subsection
@@ -1027,10 +971,6 @@ Sonst scheint es oberflächlich betrachtet zu funktionieren
 \end_layout
 
 \begin_layout Itemize
-Braucht Aktualisierung (nehme ich an)
-\end_layout
-
-\begin_layout Itemize
 Die paar Artikel die ich angeschaut habe brauchen alle eine Überarbeitung
  bzw.
  sind weit von der Qualität von z.B.
@@ -1058,6 +998,10 @@ Infos
 \end_layout
 
 \begin_layout Itemize
+https://kriegsmaterialexportverbotsinitiative.archiv.gsoa.ch/
+\end_layout
+
+\begin_layout Itemize
 Ich weiss nicht, wie die Webseite funktioniert (hat).
  Abgesehen von statischem html habe ich nur einen sehr erwachsen benannten
  
@@ -1081,27 +1025,12 @@ Zu tun
 \end_layout
 
 \begin_layout Itemize
-Popup das behauptet die Webseite sei erst im Aufbau muss weg
-\end_layout
-
-\begin_layout Itemize
-Vielleicht archivieren?
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-Also Adressen und Inhalte für Suchmaschinen und andere erhalten
-\end_layout
-
-\begin_layout Itemize
-in jede Seite oben Warnung und Link auf GSoA-Seite und/oder zur neu reparierten/
-aufgebauten Kriegsmaterialseite
+Archivmeldung auf jede Seite statt nur Hauptseite
 \end_layout
 
 \begin_layout Itemize
 Restliche aktive Teile und Kommentarformulare entfernen.
 \end_layout
 
-\end_deeper
 \end_body
 \end_document

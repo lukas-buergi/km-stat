@@ -97,7 +97,7 @@ Andi andi@gsoa.ch
 \end_layout
 
 \begin_layout Itemize
-Kaju Bubanja hat das ursprünglich geschrieben
+Kaju Bubanja hat eine erste Version der Webseite geschrieben
 \end_layout
 
 \begin_layout Subsection
@@ -254,7 +254,13 @@ status open
 \begin_layout Plain Layout
 
 SELECT *, COUNT(*) FROM export WHERE export.Art="Dual-Use-Güter" GROUP BY
- System, Kategorie 
+ System, Kategorie
+\end_layout
+
+\begin_layout Plain Layout
+
+SELECT *, COUNT(*) FROM exportkontrollstatistiken_geschaefteimport WHERE
+ art="Dual-Use-Güter" GROUP BY system, kategorie 
 \end_layout
 
 \end_inset
@@ -703,8 +709,7 @@ eine für die Problemanzeige in Tabellen und den Doppelbalkendiagramme
 \end_layout
 
 \begin_layout Paragraph
-js-komponenten: TODO: Bug: Es wird manchmal nicht das neueste Datenset angezeigt
-, wenn man schnell die Filter ändert.
+js-komponenten:
 \end_layout
 
 \begin_layout Itemize
@@ -828,12 +833,11 @@ Datenbankanfrage senden
 \end_layout
 
 \begin_layout Enumerate
-Kontrast der Tabelle in Animation verringern.
+Kontrast der Tabelle in Animation verringern, mit Lademeldung
 \end_layout
 
 \begin_layout Enumerate
-Zu neuer Tabelle wechseln sobald Daten angekommen, ohne Animation, mit Lademeldu
-ng
+Zu neuer Tabelle wechseln sobald Daten angekommen, ohne Animation
 \end_layout
 
 \end_deeper
@@ -863,7 +867,8 @@ Karte verschönern
 
 \begin_deeper
 \begin_layout Enumerate
-Etwas leerer Rand um die Karte rum
+Etwas leerer Rand um die Karte rum, oder den Globus blau und der restliche
+ Hintergrund weiss
 \end_layout
 
 \begin_layout Enumerate
@@ -879,26 +884,7 @@ Pfeile wären schön? Ich denke dünne, alle gleich.
 
 \end_deeper
 \begin_layout Enumerate
-Daten vom Seco zusammensuchen/beschaffen und in neue Datenbank eintragen
-\end_layout
-
-\begin_deeper
-\begin_layout Enumerate
-von der Webseite
-\end_layout
-
-\begin_layout Enumerate
-vielleicht Kontakt aufnehmen und schauen ob die PDFs auch als Tabellenformat
- gibt.
-\end_layout
-
-\end_deeper
-\begin_layout Enumerate
 Aufräumen
-\end_layout
-
-\begin_layout Enumerate
-wahrscheinlich haufenweise optimierungen+caching
 \end_layout
 
 \begin_layout Enumerate
@@ -1052,6 +1038,10 @@ Infos
 \end_layout
 
 \begin_layout Itemize
+https://kriegsmaterialexportverbotsinitiative.archiv.gsoa.ch/
+\end_layout
+
+\begin_layout Itemize
 Ich weiss nicht, wie die Webseite funktioniert (hat).
  Abgesehen von statischem html habe ich nur einen sehr erwachsen benannten
  
@@ -1075,27 +1065,12 @@ Zu tun
 \end_layout
 
 \begin_layout Itemize
-Popup das behauptet die Webseite sei erst im Aufbau muss weg
-\end_layout
-
-\begin_layout Itemize
-Vielleicht archivieren?
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-Also Adressen und Inhalte für Suchmaschinen und andere erhalten
-\end_layout
-
-\begin_layout Itemize
-in jede Seite oben Warnung und Link auf GSoA-Seite und/oder zur neu reparierten/
-aufgebauten Kriegsmaterialseite
+Archivmeldung auf jede Seite statt nur Hauptseite
 \end_layout
 
 \begin_layout Itemize
 Restliche aktive Teile und Kommentarformulare entfernen.
 \end_layout
 
-\end_deeper
 \end_body
 \end_document

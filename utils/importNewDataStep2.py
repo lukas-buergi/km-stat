@@ -6,10 +6,11 @@ def importWassenaarML(ekn):
   if(ekn == ""):
     raise(ValueError("empty ekn not possible"))
     
-  tmp = ekn
+  eknFormatted = ekn
   for char in ['.', ',', ':', ')', '(']:
-    tmp = ekn.replace(char, '')
-  
+    eknFormatted = eknFormatted.replace(char, '')
+
+  tmp=eknFormatted
   parts = []
   letters = True
   while(len(tmp)!=0):
@@ -19,7 +20,9 @@ def importWassenaarML(ekn):
       regex = '[0-9]+'
     part = re.search(regex, tmp)
     if(part):
-      parts.append(part.group())
+      part=part.group()
+      part.lstrip('0') # UNTESTED: Should remove preceding 0s
+      parts.append(part)
       tmp = tmp[part.end():]
       letters = not letters
     else:
@@ -52,6 +55,8 @@ def importWassenaarML(ekn):
       #print(number + " added to database")
     except Exportkontrollnummern.MultipleObjectsReturned:
       print(number + " exists multiple times in DB")
+  
+  return(eknFormatted)
 
 def importAll():
   einzelbewilligung=Bewilligungstypen.objects.get(name=Uebersetzungen.objects.get(de="Einzelbewilligung"))
@@ -66,7 +71,7 @@ def importAll():
       
     # correct previously encountered mistakes in country names
     corrections = [
-      [['Mazedonien (ehemalige jugoslawische Republik)'], 'Republik Nordmazedonien'],
+      [['Mazedonien (ehemalige jugoslawische Republik)', 'Nordmazedonien, Republik'], 'Republik Nordmazedonien'],
       [['Korea, Republik (Südkorea)', 'Korea (Süd)'], 'Republik Korea'],
       [['China', 'China, Volksrepublik'], 'Volksrepublik China'],
       [['China, Taiwan'], 'Republik China (Taiwan)'],
@@ -106,14 +111,14 @@ def importAll():
     
     if(g.gueterArt in ['Kriegsmaterial', 'Besondere militärische Güter']):
       try:
-        importWassenaarML(g.ekn)
+        eknFormatted = importWassenaarML(g.ekn)
       except ValueError:
         print("skipping " + g.ekn)
         continue
       
       # in principle this must succeed, but no reason to remove extra checks
       try:
-        ekn=Exportkontrollnummern.objects.get(nummer=g.ekn)
+        ekn=Exportkontrollnummern.objects.get(nummer=eknFormatted)
       except Exportkontrollnummern.DoesNotExist:
         print(g.ekn + " missing or wrong")
         continue
@@ -122,6 +127,10 @@ def importAll():
         continue
     else:
       continue
+
+    g.umfang = g.umfang.replace('CHF', '')
+    g.umfang = g.umfang.replace(',', '')
+    g.umfang = g.umfang.strip()
     
     try:
       Geschaefte(endempfaengerstaat=land, bewilligungstyp=einzelbewilligung, richtung=ausfuhr, exportkontrollnummer=ekn, umfang=g.umfang, beginn=g.beginn, ende=g.ende).save()

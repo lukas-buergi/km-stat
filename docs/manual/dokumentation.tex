@@ -1,4 +1,4 @@
-%% LyX 2.3.2 created this file.  For more info, see http://www.lyx.org/.
+%% LyX 2.3.3 created this file.  For more info, see http://www.lyx.org/.
 %% Do not edit unless you really know what you are doing.
 \documentclass[english]{article}
 \usepackage[T1]{fontenc}
@@ -16,7 +16,7 @@
 \begin{itemize}
 \item Lukas buergi.lukas@gmail.com
 \item Andi andi@gsoa.ch
-\item Kaju Bubanja hat das ursprünglich geschrieben
+\item Kaju Bubanja hat eine erste Version der Webseite geschrieben
 \end{itemize}
 
 \subsection{Siehe auch bzw. mögliche Integration mit:}
@@ -26,6 +26,8 @@
 \item Human Development Index
 \item Anzahl Arbeitsplätze pro Exportvolumen und Jahr und das den Toten
 und Verletzten in den Ländern gegenüberstellen
+\item https://www.seco.admin.ch/seco/de/home/Aussenwirtschaftspolitik\_Wirtschaftliche\_Zusammenarbeit/Wirtschaftsbeziehungen/exportkontrollen-und-sanktionen/industrieprodukte-{}-dual-use-{}-und-besondere-militaerische-gueter/statistik/2015.html
+\item https://www.seco.admin.ch/seco/de/home/Aussenwirtschaftspolitik\_Wirtschaftliche\_Zusammenarbeit/Wirtschaftsbeziehungen/exportkontrollen-und-sanktionen/ruestungskontrolle-und-ruestungskontrollpolitik-{}-bwrp-/zahlen-und-statistiken0.html
 \end{itemize}
 
 \subsection{Infos alte Webseite}
@@ -34,11 +36,6 @@ und Verletzten in den Ländern gegenüberstellen
 \item [{DB-Config:}] kriegsmaterial/config/app.php
 \item [{Startseite:}] kriegsmaterial/src/Template/Export/test.ctp
 \item [{Controller,}] der AJAX-Request beantwortet: kriegsmaterial/src/Controller/ExportController.php
-\item [{Statistiken:}] 
-\begin{itemize}
-\item https://www.seco.admin.ch/seco/de/home/Aussenwirtschaftspolitik\_Wirtschaftliche\_Zusammenarbeit/Wirtschaftsbeziehungen/exportkontrollen-und-sanktionen/industrieprodukte-{}-dual-use-{}-und-besondere-militaerische-gueter/statistik/2015.html
-\item https://www.seco.admin.ch/seco/de/home/Aussenwirtschaftspolitik\_Wirtschaftliche\_Zusammenarbeit/Wirtschaftsbeziehungen/exportkontrollen-und-sanktionen/ruestungskontrolle-und-ruestungskontrollpolitik-{}-bwrp-/zahlen-und-statistiken0.html
-\end{itemize}
 \end{description}
 
 \subsection{Datenbanklayout alt}
@@ -230,8 +227,7 @@ in dem Zeitraum.
 \item eine für die Problemanzeige in Tabellen und den Doppelbalkendiagramme
 \end{itemize}
 
-\paragraph{js-komponenten: TODO: Bug: Es wird manchmal nicht das neueste Datenset
-angezeigt, wenn man schnell die Filter ändert.}
+\paragraph{js-komponenten:}
 \begin{itemize}
 \item initialize(src url):
 \begin{itemize}
@@ -275,9 +271,8 @@ mit Lademeldung
 \item tabelle
 \begin{enumerate}
 \item Datenbankanfrage senden
-\item Kontrast der Tabelle in Animation verringern.
-\item Zu neuer Tabelle wechseln sobald Daten angekommen, ohne Animation,
-mit Lademeldung
+\item Kontrast der Tabelle in Animation verringern, mit Lademeldung
+\item Zu neuer Tabelle wechseln sobald Daten angekommen, ohne Animation
 \end{enumerate}
 \end{enumerate}
 \item Kartenskalierung
@@ -289,36 +284,22 @@ umstrukturieren
 \end{enumerate}
 \item Karte verschönern
 \begin{enumerate}
-\item Etwas leerer Rand um die Karte rum
+\item Etwas leerer Rand um die Karte rum, oder den Globus blau und der restliche
+Hintergrund weiss
 \item Schweiz rot mit Schweizerkreuz
 \item Pfeile wären schön? Ich denke dünne, alle gleich. Wenn man die Mitte
 der Pfeile etwas nach oben zieht sollte das einen 3D-Effekt erzeugen.
 Ist ein 3D Effekt überhaupt gut?
 \end{enumerate}
-\item Daten vom Seco zusammensuchen/beschaffen und in neue Datenbank eintragen
-\begin{enumerate}
-\item von der Webseite
-\item vielleicht Kontakt aufnehmen und schauen ob die PDFs auch als Tabellenformat
-gibt.
-\end{enumerate}
 \item Aufräumen
-\item wahrscheinlich haufenweise optimierungen+caching
 \item Problem/Skandaldatenbank ausbauen, Detailseite für einzelne Länder
 schreiben
 \end{enumerate}
 
-\section{Ordner-Struktur kriegsmaterial.ch aktuell}
-\begin{description}
-\item [{.}] Wordpress
-\item [{./map}] Zweckgebaute CakePHP 3 Seite
-\item [{./site}] Kriegsmaterialexportverbotsabstimmungswebseite, statisches
-HTML?
-\item [{./kriegsmaterialwiki}] MediaWiki auf das die CakePHP 3 Seite verlinkt
-\end{description}
-
 \section{Wordpress, ``Ausgeschossen''-Kampagne}
 
-HINWEIS: Wurde von Lukas ausgeschalten, entfernt.
+HINWEIS: Wurde von Lukas ausgeschalten, entfernt. Archivierung wäre
+zu viel Aufwand.
 
 \subsection{Ansprechpersonen}
 \begin{itemize}
@@ -355,7 +336,6 @@ verweisen.
 von denen es für jeden Skandal eine geben sollte
 \item Problem mit CSS/Theme
 \item Sonst scheint es oberflächlich betrachtet zu funktionieren
-\item Braucht Aktualisierung (nehme ich an)
 \item Die paar Artikel die ich angeschaut habe brauchen alle eine Überarbeitung
 bzw. sind weit von der Qualität von z.B. der GSoA-Zeitung entfernt.
 \end{itemize}
@@ -370,6 +350,7 @@ bzw. sind weit von der Qualität von z.B. der GSoA-Zeitung entfernt.
 
 \subsection{Infos}
 \begin{itemize}
+\item https://kriegsmaterialexportverbotsinitiative.archiv.gsoa.ch/
 \item Ich weiss nicht, wie die Webseite funktioniert (hat). Abgesehen von
 statischem html habe ich nur einen sehr erwachsen benannten ``fckeditor''
 gefunden.
@@ -379,14 +360,8 @@ den man bekommt, wenn man einen Kommentar schreiben will
 
 \subsection{Zu tun}
 \begin{itemize}
-\item Popup das behauptet die Webseite sei erst im Aufbau muss weg
-\item Vielleicht archivieren?
-\begin{itemize}
-\item Also Adressen und Inhalte für Suchmaschinen und andere erhalten
-\item in jede Seite oben Warnung und Link auf GSoA-Seite und/oder zur neu
-reparierten/aufgebauten Kriegsmaterialseite
+\item Archivmeldung auf jede Seite statt nur Hauptseite
 \item Restliche aktive Teile und Kommentarformulare entfernen.
-\end{itemize}
 \end{itemize}
 
 \end{document}

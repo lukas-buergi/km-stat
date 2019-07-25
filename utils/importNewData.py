@@ -9,8 +9,8 @@ import calendar
 # ML importieren (also Geschäfte Zeilenweise)
 def MLImport():
   for year in []:
-    for quarter in [1, 2, 3, 4]:
-      with open('/home/t4b/persönlich/engagement/gsoa/webseite/django/kriegsmaterialch/utils/original-statistiken/Dual Use und besondere militärische Güter/Erteilte Ausfuhrbewilligungen/' + str(year) + '-' + str(quarter) + ' Erteilte Ausfuhrbewilligungen.csv', newline='') as f:
+    for quarter in []:
+      with open('/home/t4b/persönlich/engagement/gsoa/webseite/django/kriegsmaterialch/utils/original-statistiken/Dual Use und besondere militärische Güter/csv-konvertiert/' + str(year) + '-' + str(quarter) + ' Erteilte Ausfuhrbewilligungen.csv', newline='') as f:
         reader = csv.reader(f)
         rows = iter(reader)
         next(rows)
