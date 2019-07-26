@@ -35,6 +35,13 @@ class indentedStructure():
     except TypeError:
       return(b == int(a) + 1)
 
+  def prev(self, a):
+    """ Return the symbol before a, for a a char or an int. """
+    try:
+      return(chr(ord(a)-1))
+    except TypeError:
+      return(a - 1)
+
   def closeNote(self, line):
     if(self.openNote):
       if(self.openNoteLastLetter==chr(ord("a")-1)):
@@ -49,6 +56,7 @@ class indentedStructure():
     strippedParts = []
     for part in parts:
       strippedParts.append(part.strip())
+    strippedParts.pop()
     return(strippedParts)
 
   def makeEnoughLevels(self):
@@ -62,14 +70,13 @@ class indentedStructure():
     self.makeEnoughLevels()
     if(char in ["a", "1"]):
       self.level += 1
-    elif(chr(ord(char)-1) in self.levels[0:self.level+1]):
+    elif(self.prev(char) in self.levels[0:self.level+1]):
         while(not self.follows(self.levels[self.level], char)):
           self.level -= 1
     else:
       print("Error: Preceding point not found for line: " + line)
       return()
     self.makeEnoughLevels()
-    pprint(self.levels)
     self.levels[self.level] = char
   
   def addLine(self, line):
@@ -88,7 +95,7 @@ class indentedStructure():
       
       if(self.endsWithColon(line)):
         self.openNote=True
-        self.openNoteLastLetter=chr(ord("a")-1)
+        self.openNoteLastLetter=self.prev("a")
     elif(self.letterLevel(line)):
       letter = self.letterLevel(line).group(1)
       if(self.openNote and self.follows(self.openNoteLastLetter, letter)):
@@ -103,15 +110,22 @@ class indentedStructure():
         self.addIndentedLine(line)
     elif(self.digitLevel(line)):
       self.closeNote(line)
-      digit = self.digitLevel(line).group(1)
+      digit = int(self.digitLevel(line).group(1))
       self.findAndSetLevels(digit, line)
       self.addIndentedLine(line)
     elif(self.beginsWithReference(line)):
       self.closeNote(line)
       #set first levels to the parts of the reference, closing all deeper lists
-      self.levels=self.getParts(self.beginsWithReference(line).group(0))
-      print("beginsWithReference")
-      pprint(self.levels)
+      self.levels = self.getParts(self.beginsWithReference(line).group(0))
+      self.level = 0
+      self.addIndentedLine(line)
+      self.level = len(self.levels) - 1
+      print("Notice: Added line that begins with reference")
+    else:
+      print("Error: Encountered unrecognized line: " + line)
+      self.addIndentedLine(line)
+    pprint(self.levels)
+    print(self.resultLines[-1])
 
   def addIndentedLine(self, line):
     """ Add a line with regular indentation as per level. """
@@ -119,7 +133,7 @@ class indentedStructure():
 
   def addAll(self):
     textFilePath = '/home/t4b/km-stat/kriegsmaterialch/utils/wassenaar-lists/2018/15 - WA-LIST (18) 1 - ML - Without header, footer and notes 1 and 2.txt'
-    with open(textFilePath, 'r') as f:
+    with open(textFilePath, 'r', encoding='utf-8-sig') as f:
       waml1 = f.readlines()
   
     waml2 = []
@@ -129,3 +143,8 @@ class indentedStructure():
         waml2.append(stripped)
     for line in waml2:
       self.addLine(line)
+
+    outFile = '/home/t4b/km-stat/kriegsmaterialch/utils/wassenaar-lists/2018/15 - WA-LIST (18) 1 - ML - processed.txt'
+    with open(outFile, 'w') as f:
+      for line in self.resultLines:
+        f.write("%s\n" % line)
