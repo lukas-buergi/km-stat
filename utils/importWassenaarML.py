@@ -1,9 +1,5 @@
-# work on WA-ML list in txt format exported from openoffice to structure
-# it so that in the end it can go into the database
-import re
-from pprint import pprint
-class indentedStructure():
-  """ Aids in restoring structure to lines of text. """
+# first try, delete soon
+class numberedListMLBlob():
 
   firstLevel = re.compile('^ML').search
   letterLevel = re.compile('^([a-z])\.').search
