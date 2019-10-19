@@ -1,16 +1,16 @@
 {# Only for inclusion in other templates, it's not a a whole page. #}
 {% load i18n %}
-<div class="table_pageNavigation">
-  <input id="table_firstPage" type="button" value="{% trans "Erste Seite" %}" onclick="table.firstPage();" />
-  <input id="table_previousPage" type="button" value="{% trans "Vorherige Seite" %}" onclick="table.previousPage();" />
-  <select id="table_jumpToPage">
-    <option value="{{ p.pageNumber }}" selected>{% trans "Gehe zu Seite " %}{{ p.pageNumber }}</option>
-  </select>
-  <input id="table_nextPage" type="button" value="{% trans "Nächste Seite" %}" onclick="table.nextPage();" />
-  <input id="table_lastPage" type="button" value="{% trans "Letzte Seite" %}" onclick="table.lastPage();" />
-</div>
-<div class="table">
-  <table>
+<div class="table_container">
+  <div class="table_pageNavigation">
+    <input id="table_firstPage" type="button" value="{% trans "Erste Seite" %}" onclick="table.firstPage();" />
+    <input id="table_previousPage" type="button" value="{% trans "Vorherige Seite" %}" onclick="table.previousPage();" />
+    <select id="table_jumpToPage">
+      <option value="{{ p.pageNumber }}" selected>{% trans "Gehe zu Seite " %}{{ p.pageNumber }}</option>
+    </select>
+    <input id="table_nextPage" type="button" value="{% trans "Nächste Seite" %}" onclick="table.nextPage();" />
+    <input id="table_lastPage" type="button" value="{% trans "Letzte Seite" %}" onclick="table.lastPage();" />
+  </div>
+  <table class="table_content">
     <thead></thead>
     <tbody>
       <tr><td>{% trans "Tabelleneinträge am Laden..." %}</td></tr>
@@ -18,5 +18,5 @@
       <tr><td>{% trans "Tabelleneinträge am Laden..." %}</td></tr>
     </tbody>
   </table>
+  {# TODO: display page navigation again? #}
 </div>
-{# TODO: display page navigation again #}

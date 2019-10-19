@@ -123,7 +123,7 @@ class numberedList():
         matchingLevels.append(level)
       for ilevel in level.getInnerClasses():
         instance = ilevel(tail=self.tail, outer=level)
-        if(type(instance) != type(level.inner) and instance.check()):
+        if(type(instance) != type(level.inner) and instance.check()): # cond. for all elements of level.inner
           matchingLevels.append(instance)
     
     

@@ -1,17 +1,17 @@
 .worldmap {
-      /* for scaling */
-      display: inline-block;
-      position: relative;
-      width: 100%;
-      padding-bottom: 0; {# set in js once geography arrives #}
-      vertical-align: top;
-      //overflow: hidden;
-      /* colors */
-      background-color: #EEEEFF;
+  border: 1px solid;
+  border-radius: 5px;
+  padding:  2px;
+  margin: 1px 0;
+  /* for scaling */
+  /*display: inline-block;*/
+  position: relative;
+  width: 100%;
+  padding-bottom: 0;
+  overflow: visible; {# overflow-x and -y don't seem to work #}
 }
 .worldmap_svg {
   /* for scaling */
-  display: inline-block;
   position: absolute;
   top: 0;
   left: 0;
@@ -25,11 +25,12 @@
   position: absolute;
   top: 0; left: 0;
   visibility: hidden;
-  background-color: #AAAAAA;
+  background-color: #FFFFFF;
   border-radius: 5px;
   border: solid;
   border-width: 1px;
   border-color: #000000;
-  z-index: 10;
+  box-shadow: 1px 1px 1px 0px #000000;
+  z-index: 2;
   text-align: left;
 }

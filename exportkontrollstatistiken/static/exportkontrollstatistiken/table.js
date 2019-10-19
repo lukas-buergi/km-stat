@@ -3,9 +3,8 @@ table = {
     this.dataCounter = 0;
     this.params = params;
     this.format = format;
-    // TODO: format money columns using format
-
-    this.table = d3.select('div.table table');
+    
+    this.table = d3.select('table.table_content');
     this.thead = this.table.select("thead");
     this.tbody = this.table.select("tbody");
     
@@ -46,7 +45,7 @@ table = {
       // data set is discarded
       return;
     }
-    // set up page selection only if we aren't on the first pseudo data set
+    // set up page selection and data format only if we aren't on the first pseudo data set
     if(number!=0){
       this.numberOfPages = Math.ceil(data.total / this.params.perPage);
 
@@ -87,12 +86,22 @@ table = {
       // deactivate the two forward buttons
       d3.select('#table_lastPage').attr('disabled', onLastPage);
       d3.select('#table_nextPage').attr('disabled', onLastPage);
+
+      // treat the data
+      // format monetary amounts
+      data.ctypes.forEach(function (type, typeIndex) {
+        if(type == "money"){
+          console.log(type, typeIndex);
+          data.data.forEach(function (row, rowIndex){
+            data.data[rowIndex][typeIndex] = this.format(data.data[rowIndex][typeIndex]);
+          }, this);
+        }
+      }, this);
+      // TODO: Right-align monetary amounts. Remove manual right-align in css file.
+      // TODO: replace country codes with flag pictures
     }
-    
-    /*
-     * The following snippet was copied from the d3 doc on .data()
-     * */
-    
+
+    // Display data. The following snippet was copied from the d3 doc on .data()
     this.thead
       .selectAll("tr")
       .data([data['cnames']])

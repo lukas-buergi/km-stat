@@ -15,7 +15,7 @@ worldmap = {
         "id" : "reticules",
     };
     const outline = {type: "Sphere"};
-    const mapDecoration = {"type":"FeatureCollection","features": [graticuleFeature, outline]};
+    const mapDecoration = {"type":"FeatureCollection","features": [outline, graticuleFeature]};
     const projection = d3.geoRobinson().fitWidth('1000', mapDecoration); // TODO: Why 1000?
     this.path = d3.geoPath().projection(projection);
     const bounds = this.path.bounds(mapDecoration);
@@ -41,7 +41,9 @@ worldmap = {
         .attr('d', this.path)
         .style('stroke-width', '1px')
         .style('stroke', 'white')
-        .style('fill-opacity', 0);
+        .style('fill', '#EEEEFF');
+        //.style('fill-opacity', '1')
+        //.attr('paint-order', 'stroke');
 
     // draw countries, then add data
     this.worldmap = d3.json(this.countriesSource)
