@@ -7,7 +7,7 @@ table = {
     this.table = d3.select('table.table_content');
     this.thead = this.table.select("thead");
     this.tbody = this.table.select("tbody");
-    
+    /*
     // TODO: Make empty table more sensible/prettier
     const loading = 'loading';
     const row = [loading, loading, loading, loading];
@@ -18,9 +18,10 @@ table = {
     data = {
       cnames : row,
       data : rows,
+      pseudo : true,
     }
     this.setData(0, data);
-
+    */
     this.setRemoteData();
   },
   update : function(params){
@@ -37,7 +38,7 @@ table = {
       )
       (this.dataCounter)
     );
-    // TODO: Display some data change/loading indicator.
+    loading("table"); // TODO: Display some data change/loading indicator.
   },
   setData : function(number, data) {
     if(this.dataCounter>number){
@@ -46,7 +47,7 @@ table = {
       return;
     }
     // set up page selection and data format only if we aren't on the first pseudo data set
-    if(number!=0){
+    if(!('pseudo' in data)){
       this.numberOfPages = Math.ceil(data.total / this.params.perPage);
 
       //drop down
@@ -99,6 +100,7 @@ table = {
       }, this);
       // TODO: Right-align monetary amounts. Remove manual right-align in css file.
       // TODO: replace country codes with flag pictures
+      notLoading("table");
     }
 
     // Display data. The following snippet was copied from the d3 doc on .data()

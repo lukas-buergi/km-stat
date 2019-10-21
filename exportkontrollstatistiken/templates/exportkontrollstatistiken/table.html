@@ -1,6 +1,7 @@
 {# Only for inclusion in other templates, it's not a a whole page. #}
 {% load i18n %}
 <div class="table_container">
+  {% include "exportkontrollstatistiken/loading.html" with name="table" %}
   <div class="table_pageNavigation">
     <input id="table_firstPage" type="button" value="{% trans "Erste Seite" %}" onclick="table.firstPage();" />
     <input id="table_previousPage" type="button" value="{% trans "Vorherige Seite" %}" onclick="table.previousPage();" />
@@ -13,9 +14,7 @@
   <table class="table_content">
     <thead></thead>
     <tbody>
-      <tr><td>{% trans "Tabelleneinträge am Laden..." %}</td></tr>
-      <tr><td>{% trans "Tabelleneinträge am Laden..." %}</td></tr>
-      <tr><td>{% trans "Tabelleneinträge am Laden..." %}</td></tr>
+      <tr><td>{% trans "Tabelleneinträge am Laden. Wenn diese Nachricht längere Zeit angezeigt wird liegt ein technisches Problem vor." %}</td></tr>
     </tbody>
   </table>
   {# TODO: display page navigation again? #}

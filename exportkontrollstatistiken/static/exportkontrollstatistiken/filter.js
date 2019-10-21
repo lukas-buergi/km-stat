@@ -1,3 +1,23 @@
+function showExtended(){
+  var list = document.getElementsByClassName("extended");
+  for (var i = 0; i < list.length; i++) {
+    list[i].style.display = 'flex';
+  }
+  var list = document.getElementsByClassName("minimized");
+  for (var i = 0; i < list.length; i++) {
+    list[i].style.display = 'none';
+  }
+}
+function hideExtended(){
+  var list = document.getElementsByClassName("extended");
+  for (var i = 0; i < list.length; i++) {
+    list[i].style.display = 'none';
+  }
+  var list = document.getElementsByClassName("minimized");
+  for (var i = 0; i < list.length; i++) {
+    list[i].style.display = 'flex';
+  }
+}
 function Params(p){
   // Takes either json as returned by Python view or another js Params object
   this.paramNames = p.paramNames;

@@ -72,6 +72,7 @@ worldmap = {
     }
   },
   setRemoteData : function(){
+    loading("worldmap");
     this.dataCounter++;
     d3.json(this.params.getAPIURL()).then(
       (number =>
@@ -150,7 +151,8 @@ worldmap = {
           .style('fill', d => this.countryColor(d, dataByID, color))
           .on('mouseover', (d, i, nodes) => this.mouseOverCountry(d, i, nodes, dataByID, this.numberFormat))
           .on('mouseout', (d, i, nodes) => this.mouseOutCountry(d, i, nodes, dataByID, color));
-          
+
+      notLoading("worldmap");
       /* can change map data later: */
       //map.style('fill', d => 'black');
     });

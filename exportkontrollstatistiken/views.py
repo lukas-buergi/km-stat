@@ -201,7 +201,7 @@ def mainpage(request, granularity, countries, types, year1, year2, sortBy, perPa
   return HttpResponse(template.render(context, request))
 
 def index(request):
-  return(mainpage(request, "s", "all", "kb", Geschaefte.getFirstYear(), Geschaefte.getLastYear(), "v", 15, 1))
+  return(mainpage(request, "s", "all", "kb", Geschaefte.getFirstYear(), Geschaefte.getLastYear(), "v", 10, 1))
 
 def webmanifest(request):
   return(render(request, 'exportkontrollstatistiken/favicon/site.webmanifest', {}))
