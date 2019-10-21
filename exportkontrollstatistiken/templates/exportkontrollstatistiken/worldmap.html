@@ -1,20 +1,22 @@
 {# Only for inclusion in other templates, it's not a a whole page. #}
 {% load i18n %}
-<div class="worldmap">
-  {% include "exportkontrollstatistiken/loading.html" with name="worldmap" %}
-  <div class="worldmap_popup">
-    <table>
-      <tbody>
-        <tr>
-          <td>{% trans "Land" %}:</td>
-          <td id="worldmap_country"></td>
-        </tr>
-        <tr>
-          <td>{% trans "Exporte" %}:</td>
-          <td id="worldmap_exports"></td>
-        </tr>
-      </tbody>
-    </table>
+<div class="worldmap_container">
+  <div class="worldmap">
+    {% include "exportkontrollstatistiken/loading.html" with name="worldmap" %}
+    <div class="worldmap_popup">
+      <table>
+        <tbody>
+          <tr>
+            <td>{% trans "Land" %}:</td>
+            <td id="worldmap_country"></td>
+          </tr>
+          <tr>
+            <td>{% trans "Exporte" %}:</td>
+            <td id="worldmap_exports"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="worldmap_loadingMessage">{% trans "Karte am Laden..." %}</div>
   </div>
-  <div class="worldmap_loadingMessage">{% trans "Karte am Laden..." %}</div>
 </div>

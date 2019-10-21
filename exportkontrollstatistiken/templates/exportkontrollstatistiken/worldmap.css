@@ -1,16 +1,18 @@
-.worldmap {
+.worldmap_container {
   /*
   border: 1px solid;
   border-radius: 5px;
   * */
   background-color: #F4F4F4;
-  padding:  2px;
+  padding: 5px 1px;
   /*margin: 1px 0;*/
   /* for scaling */
   /*display: inline-block;*/
+
+}
+.worldmap {
   position: relative;
   width: 100%;
-  padding-bottom: 0;
   overflow: visible; {# overflow-x and -y don't seem to work #}
 }
 .worldmap_svg {
