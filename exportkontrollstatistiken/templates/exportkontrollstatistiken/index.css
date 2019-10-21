@@ -21,7 +21,7 @@
   margin: 0 0 2rem 0;
 }
 .title {
-  font-size: 5em;
+  font-size: 5.4vw;
   font-variant: all-small-caps;
   overflow-wrap: break-word;
   hyphens: manual;
@@ -38,5 +38,5 @@
 }
 
 h2 {
-  font-size: 1.5em;
+  font-size: 1.8vw;
 }
