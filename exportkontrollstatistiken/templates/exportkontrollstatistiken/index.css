@@ -21,10 +21,8 @@
   margin: 0 0 2rem 0;
 }
 .title {
-  font-size: 5.4vw;
-  font-variant: all-small-caps;
-  overflow-wrap: break-word;
-  hyphens: manual;
+  max-width: 50rem;
+  padding: 1rem;
 }
 .text {
   text-align: center;
