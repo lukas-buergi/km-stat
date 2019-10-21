@@ -3,7 +3,7 @@
   border: 1px solid;
   border-radius: 5px;
   * */
-  background-color: #EEEEEE;
+  background-color: #FAFAFA;
   padding: 5px 0;
   /*margin: 1px 0;*/
   
@@ -43,7 +43,7 @@
 
 .table_content thead {
   font-weight: bold;
-  background-color: #F4F4F4;
+  background-color: #FAFAFA;
 }
 .table_content td{
   padding: 10px;
