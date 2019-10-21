@@ -1,8 +1,11 @@
 .worldmap {
+  /*
   border: 1px solid;
   border-radius: 5px;
+  * */
+  background-color: #F4F4F4;
   padding:  2px;
-  margin: 1px 0;
+  /*margin: 1px 0;*/
   /* for scaling */
   /*display: inline-block;*/
   position: relative;

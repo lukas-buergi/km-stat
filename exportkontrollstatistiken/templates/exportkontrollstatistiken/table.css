@@ -1,8 +1,11 @@
 .table_container {
+  /*
   border: 1px solid;
   border-radius: 5px;
+  * */
+  background-color: #EEEEEE;
   padding:  2px;
-  margin: 1px 0;
+  /*margin: 1px 0;*/
   
   width: 100%;
 
@@ -40,6 +43,7 @@
 
 .table_content thead {
   font-weight: bold;
+  background-color: #F4F4F4;
 }
 .table_content td{
   padding: 10px;

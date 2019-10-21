@@ -8,10 +8,13 @@
 }
 .intro {
   width: 100%;
+  /*
   border: 1px solid;
   border-radius: 5px;
+  * */
+  background-color: #EEEEEE;
   padding:  2px;
-  margin: 0 0 1px 0;
+  /*margin: 0 0 1px 0;*/
 }
 .header {
   text-align: center;
