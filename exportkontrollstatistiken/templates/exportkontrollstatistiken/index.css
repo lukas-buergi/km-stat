@@ -23,7 +23,8 @@
 .title {
   font-size: 5em;
   font-variant: all-small-caps;
-  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: manual;
 }
 .text {
   text-align: center;
