@@ -1,11 +1,9 @@
-
-ALLOWED_HOSTS = [       '83f4738c4e5247f88ee107fd4add919e.yatu.ws',
-                        'ahch4chaiw1ofieg4ain.t4b.me'
-                ]
+ALLOWED_HOSTS = ['d9408ee71d4f4b3aa363bbe592098b4f.testing-url.ws']
 
 # SECURITY WARNING: keep the secret key used in production secret!
 # just generate an arbitrary string of similar strength to replace this!
-SECRET_KEY = ''
+# for example pwgen -sy 60
+SECRET_KEY = 'lBE{Bk,0rIR8gj?L6D8|@4(d0,M85Fu}yUyY:2)q$)\;.-Y,wv%@|N&k:'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -19,7 +17,7 @@ DATABASES = {
         'NAME': 'export-stat-staging',
         'HOST' : 'localhost',
         'USER' : 'export-stat-staging',
-        'PASSWORD' : '',
+        'PASSWORD' : '6nWEV7V4GqYgADm',
     }
 }
 

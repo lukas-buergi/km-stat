@@ -20,6 +20,7 @@
 .title {
   font-size: 5em;
   font-variant: all-small-caps;
+  word-wrap: break-word;
 }
 .text {
   text-align: center;
