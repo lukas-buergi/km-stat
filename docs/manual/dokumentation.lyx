@@ -106,23 +106,6 @@ Siehe auch bzw.
 \end_layout
 
 \begin_layout Itemize
-https://srfdata.github.io/2017-02-kriegsmaterial/#r-script__daten
-\end_layout
-
-\begin_layout Itemize
-AI Menschenrechtsberichte, kann man daraus Daten extrahieren?
-\end_layout
-
-\begin_layout Itemize
-Human Development Index
-\end_layout
-
-\begin_layout Itemize
-Anzahl Arbeitsplätze pro Exportvolumen und Jahr und das den Toten und Verletzten
- in den Ländern gegenüberstellen
-\end_layout
-
-\begin_layout Itemize
 https://www.seco.admin.ch/seco/de/home/Aussenwirtschaftspolitik_Wirtschaftliche_Zus
 ammenarbeit/Wirtschaftsbeziehungen/exportkontrollen-und-sanktionen/industrieprod
 ukte--dual-use--und-besondere-militaerische-gueter/statistik/2015.html
@@ -851,18 +834,12 @@ Karte verschönern
 
 \begin_deeper
 \begin_layout Enumerate
-Etwas leerer Rand um die Karte rum, oder den Globus blau und der restliche
- Hintergrund weiss
-\end_layout
-
-\begin_layout Enumerate
 Schweiz rot mit Schweizerkreuz
 \end_layout
 
 \begin_layout Enumerate
-Pfeile wären schön? Ich denke dünne, alle gleich.
- Wenn man die Mitte der Pfeile etwas nach oben zieht sollte das einen 3D-Effekt
- erzeugen.
+Pfeile wären schön? Oder auch nicht? Dünne, alle gleich? Wenn man die Mitte
+ der Pfeile etwas nach oben zieht sollte das einen 3D-Effekt erzeugen.
  Ist ein 3D Effekt überhaupt gut?
 \end_layout
 
@@ -873,6 +850,23 @@ Aufräumen
 
 \begin_layout Enumerate
 Problem/Skandaldatenbank ausbauen, Detailseite für einzelne Länder schreiben
+\end_layout
+
+\begin_layout Enumerate
+Look at: https://srfdata.github.io/2017-02-kriegsmaterial/#r-script__daten
+\end_layout
+
+\begin_layout Enumerate
+AI Menschenrechtsberichte, kann man daraus Daten extrahieren?
+\end_layout
+
+\begin_layout Enumerate
+Integrate Human Development Index?
+\end_layout
+
+\begin_layout Enumerate
+Anzahl Arbeitsplätze pro Exportvolumen und Jahr und das den Toten und Verletzten
+ in den Ländern gegenüberstellen?
 \end_layout
 
 \begin_layout Section

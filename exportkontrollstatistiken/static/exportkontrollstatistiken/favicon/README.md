@@ -1,23 +1,5 @@
-# Your Favicon Package
+Most of the favicon files were generated with [RealFaviconGenerator](https://realfavicongenerator.net/) [v0.16](https://realfavicongenerator.net/change_log#v0.16).
 
-This package was generated with [RealFaviconGenerator](https://realfavicongenerator.net/) [v0.16](https://realfavicongenerator.net/change_log#v0.16)
-
-## Install instructions
-
-To install this package:
-
-Extract this package in <code>&lt;web site&gt;/static/</code>. If your site is <code>http://www.example.com</code>, you should be able to access a file named <code>http://www.example.com/static/favicon.ico</code>.
-
-Insert the following code in the `head` section of your pages:
-
-    <link rel="apple-touch-icon" sizes="180x180" href="/static/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/static/favicon-16x16.png">
-    <link rel="manifest" href="/static/site.webmanifest">
-    <link rel="mask-icon" href="/static/safari-pinned-tab.svg" color="#b40e44">
-    <link rel="shortcut icon" href="/static/favicon.ico">
-    <meta name="msapplication-TileColor" content="#603cba">
-    <meta name="msapplication-config" content="/static/browserconfig.xml">
-    <meta name="theme-color" content="#ffffff">
-
-*Optional* - Check your favicon with the [favicon checker](https://realfavicongenerator.net/favicon_checker)
+They are all based on a hand-tuned svg file that I Lukas Bürgi created.
+Someone probably has a copyright and/or trademark on the GSoA logo, I
+don't know.

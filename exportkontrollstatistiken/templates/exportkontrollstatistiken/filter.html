@@ -1,17 +1,40 @@
+{% comment %}
+Copyright Lukas Bürgi 2019.
+
+This file is part of km-stat.
+
+km-stat is free software: you can redistribute it and/or modify it
+under the terms of the GNU Affero General Public License as published
+by the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+km-stat is distributed in the hope that it will be useful, but WITHOUT
+ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
+FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Affero General Public
+License for more details.
+
+You should have received a copy of the GNU Affero General Public
+License along with km-stat.  If not, see
+<https://www.gnu.org/licenses/>.
+{% endcomment %}
+
 {# Only for inclusion in other templates, it's not a a whole page. #}
 {% load i18n %}
 <div class="filter-box">
   <div class="filter">
     {# Zwei Zahleneingabefehlder für Beginn und Ende, die Range sollte dynamisch angepasst werden, d.h. wenn man den einen verschiebt wird das min/max des anderen angepasst. #}
-    <label class="filter_label" for="{{ name }}_filter_beginn">{% trans "Exporte ab (inklusiv)" %}</label>
+    <label class="filter_label" for="{{ name }}_filter_beginn">{% trans "Exporte von" %}</label>
     <input id="{{ name }}_filter_beginn" type="number" placeholder="Jahr" value="{{ p.year1 }}" step="1" min="{{ firstYear }}" max="{{ p.year2 }}">
   </div>
   <div class="filter">
-    <label class="filter_label" for="{{ name }}_filter_ende">{% trans "bis (inklusiv)" %}</label>
+    <label class="filter_label" for="{{ name }}_filter_ende">{% trans "bis" %}</label>
     <input id="{{ name }}_filter_ende" type="number" placeholder="Jahr" value="{{ p.year2 }}" step="1" min="{{ p.year1 }}" max="{{ lastYear }}">
   </div>
+  <div class="filter">
+    {% trans "(jeweils inklusive)." %}
+  </div>
   <div class="filter minimized">
-    .&nbsp;<a href="#" onclick="showExtended(); return false;">{% trans "Mehr Optionen" %}</a>.
+    <a href="#" onclick="showExtended(); return false;">{% trans "Mehr Optionen" %}</a>.
   </div>
   <div class="filter extended">
     <div class="filter_label"><div>{% trans "Art:" %}</div></div>
@@ -26,7 +49,7 @@
     </div>
   </div>
   <div class="filter extended">
-    <label class="filter_label" for="{{ name }}_filter_laender">{% trans "an" %}</label>
+    <label class="filter_label" for="{{ name }}_filter_laender">{% trans "Empfänger: " %}</label>
     <select id="{{ name }}_filter_laender">
         <option value="all">{% trans "Alle Länder" %}</option>
         {#<optgroup label="{% trans "Kontinente und Regionen" %}">#}

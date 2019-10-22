@@ -122,6 +122,18 @@ Anzahl Arbeitsplätze pro Exportvolumen und Jahr und das den Toten und Verletzte
  in den Ländern gegenüberstellen
 \end_layout
 
+\begin_layout Itemize
+https://www.seco.admin.ch/seco/de/home/Aussenwirtschaftspolitik_Wirtschaftliche_Zus
+ammenarbeit/Wirtschaftsbeziehungen/exportkontrollen-und-sanktionen/industrieprod
+ukte--dual-use--und-besondere-militaerische-gueter/statistik/2015.html
+\end_layout
+
+\begin_layout Itemize
+https://www.seco.admin.ch/seco/de/home/Aussenwirtschaftspolitik_Wirtschaftliche_Zus
+ammenarbeit/Wirtschaftsbeziehungen/exportkontrollen-und-sanktionen/ruestungskont
+rolle-und-ruestungskontrollpolitik--bwrp-/zahlen-und-statistiken0.html
+\end_layout
+
 \begin_layout Subsection
 Infos alte Webseite
 \end_layout
@@ -143,34 +155,6 @@ Controller, der AJAX-Request beantwortet: kriegsmaterial/src/Controller/ExportCo
 ntroller.php
 \end_layout
 
-\begin_layout Description
-Statistiken: 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-https://www.seco.admin.ch/seco/de/home/Aussenwirtschaftspolitik_Wirtschaftliche_Zus
-ammenarbeit/Wirtschaftsbeziehungen/exportkontrollen-und-sanktionen/industrieprod
-ukte--dual-use--und-besondere-militaerische-gueter/statistik/2015.html
-\end_layout
-
-\begin_layout Itemize
-https://www.seco.admin.ch/seco/de/home/Aussenwirtschaftspolitik_Wirtschaftliche_Zus
-ammenarbeit/Wirtschaftsbeziehungen/exportkontrollen-und-sanktionen/ruestungskont
-rolle-und-ruestungskontrollpolitik--bwrp-/zahlen-und-statistiken0.html
-\end_layout
-
-\end_deeper
 \begin_layout Subsection
 Datenbanklayout alt
 \end_layout
@@ -892,27 +876,6 @@ Problem/Skandaldatenbank ausbauen, Detailseite für einzelne Länder schreiben
 \end_layout
 
 \begin_layout Section
-Ordner-Struktur kriegsmaterial.ch aktuell
-\end_layout
-
-\begin_layout Description
-.
- Wordpress
-\end_layout
-
-\begin_layout Description
-./map Zweckgebaute CakePHP 3 Seite
-\end_layout
-
-\begin_layout Description
-./site Kriegsmaterialexportverbotsabstimmungswebseite, statisches HTML?
-\end_layout
-
-\begin_layout Description
-./kriegsmaterialwiki MediaWiki auf das die CakePHP 3 Seite verlinkt
-\end_layout
-
-\begin_layout Section
 Wordpress, 
 \begin_inset Quotes eld
 \end_inset
@@ -926,6 +889,7 @@ Ausgeschossen
 
 \begin_layout Standard
 HINWEIS: Wurde von Lukas ausgeschalten, entfernt.
+ Archivierung wäre zu viel Aufwand.
 \end_layout
 
 \begin_layout Subsection
@@ -1004,10 +968,6 @@ Problem mit CSS/Theme
 
 \begin_layout Itemize
 Sonst scheint es oberflächlich betrachtet zu funktionieren
-\end_layout
-
-\begin_layout Itemize
-Braucht Aktualisierung (nehme ich an)
 \end_layout
 
 \begin_layout Itemize
