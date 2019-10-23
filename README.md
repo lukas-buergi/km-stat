@@ -1,7 +1,8 @@
 km-stat: arms export statistics
 ===============================
 
-This project is intended to help fight against arms exports.
+This project is intended to provide accurate and accessible information
+about arms exports.
 
 ## Documentation
 
@@ -32,6 +33,7 @@ worked on the database in the past have some database-copyright on it.
 
 * Some problems with formatting when using the two non-default display styles
 * Sort needs to be enabled in front end
+* Go through the map and country list and fix the remaining non-working countries.
 * Display table with one row as sentence instead?
 * world map data pop up always towards middle and upwards respective to mouse pointer / touch event
 * change year selection to drop down for better mobile support
@@ -74,3 +76,10 @@ cd /lamp0/web/vhosts/default/
 put -r static
 * necessary to sftp config file to server?
 * reload application from control interface
+
+## Contributors
+
+* Kaju Bubanja (first version in PHP)
+* Andreas Weibel (maintenance work of first version and database)
+* Lukas Bürgi (current rewrite)
+* Judith Schmid (inputs on design)

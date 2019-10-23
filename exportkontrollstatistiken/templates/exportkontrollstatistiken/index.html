@@ -36,6 +36,7 @@ License along with km-stat.  If not, see
     <title>{% trans "Schweizer Waffenexporte - GSoA" %}</title>
     {% include "exportkontrollstatistiken/favicon/favicon.html" only %}
     {# should I include them using templates? might speed things up... or not. Quite possibly if using template caching. #}
+    {# Possibly those scripts should actually not go in the head? Could speed up initial display? #}
     <script src="{% static 'exportkontrollstatistiken/d3.v5.min.js' %}" charset="utf-8"></script>
     <script src="{% static 'exportkontrollstatistiken/queue.v1.min.js' %}"></script>
     <script src="{% static 'exportkontrollstatistiken/topojson.v1.min.js' %}"></script>
@@ -76,6 +77,13 @@ License along with km-stat.  If not, see
       {% include "exportkontrollstatistiken/table.html" %}
       {% include "exportkontrollstatistiken/worldmap.html" only %}
       {# {% include "exportkontrollstatistiken/filter.html" with name="middle" %} #}
+    </div>
+    <div class="footer">
+      {% blocktrans %}
+        Kontakt: <a href="mailto:buergi.lukas@gmail.com">Lukas Bürgi</a> (buergi.lukas@gmail.com).
+        <br>
+        Diese Webseite ist <a href="https://www.gnu.org/philosophy/free-sw.de.html">Freie Software</a>. Der Quelltext inklusive der Datenbank und weiterer Werkzeuge ist <a href="https://github.com/lukas-buergi/km-stat">dort</a> verfügbar.
+      {% endblocktrans %}
     </div>
     {# for some reason the worldmap only works if this is down here, not if it's in the head. The table works fine in either case. #}
     <script type='text/javascript'>
