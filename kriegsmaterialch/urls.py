@@ -36,7 +36,7 @@ Including another URLconf
 from django.urls import include, path, re_path
 from django.conf.urls.static import static
 from django.conf import settings
-if DEBUG:
+if settings.DEBUG:
   from django.contrib import admin
 
 from . import views
@@ -47,5 +47,5 @@ urlpatterns = [
   re_path(r'^map(?:/(?:.*))?$', views.mainpageRedirect, name='mainpageRedirect'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
-if DEBUG:
-  urlpatterns += [ path('admin/', admin.site.urls) ]
+if settings.DEBUG:
+  pass#  urlpatterns += [ path('admin/', admin.site.urls) ]
