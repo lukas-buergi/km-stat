@@ -23,11 +23,15 @@
 # manual steps:
 # * beforehand commit to master what you want to deploy
 # * afterwards reload application in hosting control interface website
+#   (possibly not necessary anymore because I switched order of sftp and
+#   deploying from git)
+
+set -euxo pipefail # be careful
 
 basedir="$(dirname "$0")"/..
 git push "$1" master
-ssh "$1" deploy default.git
 ${basedir}/manage.py collectstatic --noinput
 sftp "$1" << EOF
 put -r "${basedir}/static" /lamp0/web/vhosts/default/
 EOF
+ssh "$1" deploy default.git

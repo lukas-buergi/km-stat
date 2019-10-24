@@ -28,6 +28,14 @@ CC BY-SA 4.0, as far as its copyright belongs to
   and we ask you to credit GSoA/GSsA for our work.
   Please add your name if you contribute.
 
+## Contributors
+
+* Members of GSoA Gruppe für eine Schweiz ohne eine Armee / GSsA Groupe pour une Suisse sans armée
+  * Kaju Bubanja (first version in PHP)
+  * Andreas Weibel (maintenance and other work on first version and database)
+  * Lukas Bürgi (current rewrite, database)
+  * Judith Schmid (valuable inputs on design)
+
 ## Overview of current status:
 
 * Django/Python backend
@@ -43,6 +51,7 @@ CC BY-SA 4.0, as far as its copyright belongs to
 * Go through the map and country list and fix the remaining non-working countries.
 * table navigation: next/prev don't work correctly when jump was used previously
 * Display table with one row as sentence instead?
+* display arrow from origin to receiver
 * world map data pop up always towards middle and upwards respective to mouse pointer / touch event
 * change year selection to drop down for better mobile support
 * display dates better, maybe switch to displaying years and quarters because that's the most fine-grained we have
@@ -73,6 +82,9 @@ put gandi-gsoa-staging-settingsLocal.py vhosts/default/kriegsmaterialch/settings
 
 There is also a script in ./utils
 
+* pip install --upgrade Django mysqlclient pytz sqlparse
+* pip freeze | grep -e Django -e mysqlclient -e pytz -e sqlparse > kriegsmaterialch/requirements.txt
+* Check that everything still works/commit
 * Commit
 * Push to staging: git push km-staging master
 * ssh 2167433@git.sd6.gpaas.net deploy default.git
@@ -85,10 +97,4 @@ put -r static
 * necessary to sftp config file to server?
 * reload application from control interface
 
-## Contributors
 
-* Members of GSoA Gruppe für eine Schweiz ohne eine Armee / GSsA Groupe pour une Suisse sans armée
-  * Kaju Bubanja (first version in PHP)
-  * Andreas Weibel (maintenance and other work on first version and database)
-  * Lukas Bürgi (current rewrite, database)
-  * Judith Schmid (valuable inputs on design)
