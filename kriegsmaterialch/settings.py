@@ -120,3 +120,4 @@ from .settingsLocal import *
 
 if DEBUG:
   INSTALLED_APPS += [ 'django.contrib.admin' ]
+  INTERNAL_IPS = [ '127.0.0.1' ]
