@@ -36,8 +36,7 @@ Including another URLconf
 from django.urls import include, path, re_path
 from django.conf.urls.static import static
 from django.conf import settings
-if settings.DEBUG:
-  from django.contrib import admin
+from django.contrib import admin
 
 from . import views
 
@@ -48,4 +47,4 @@ urlpatterns = [
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 if settings.DEBUG:
-  pass#  urlpatterns += [ path('admin/', admin.site.urls) ]
+  urlpatterns += [ path('admin/', admin.site.urls) ]
