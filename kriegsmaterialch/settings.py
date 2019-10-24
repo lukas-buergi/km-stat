@@ -45,13 +45,14 @@ DEBUG = False
 
 INSTALLED_APPS = [
 	'exportkontrollstatistiken.apps.ExportkontrollstatistikenConfig',
-    'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
 ]
+if DEBUG:
+    INSTALLED_APPS += [ 'django.contrib.admin' }
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
