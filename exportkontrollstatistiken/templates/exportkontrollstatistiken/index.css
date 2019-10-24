@@ -36,10 +36,14 @@ License along with km-stat.  If not, see
   padding: 0 1px 5px 0;
   /*margin: 0 0 1px 0;*/
 }
-.footer {
-  text-align: center;
+.footer_container {
   background-color: #FAFAFA;
+}
+.footer {
+  max-width: 50rem;
+  text-align: center;
   padding: 1rem 0;
+  margin: auto;
 }
 .header {
   text-align: center;

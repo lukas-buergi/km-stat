@@ -78,12 +78,22 @@ License along with km-stat.  If not, see
       {% include "exportkontrollstatistiken/worldmap.html" only %}
       {# {% include "exportkontrollstatistiken/filter.html" with name="middle" %} #}
     </div>
-    <div class="footer">
-      {% blocktrans %}
-        Kontakt: <a href="mailto:buergi.lukas@gmail.com">Lukas Bürgi</a> (buergi.lukas@gmail.com).
+    <div class="footer_container">
+      <div class="footer">
+        {% trans "Kontakt:" %} <a href="mailto:buergi.lukas@gmail.com">Lukas Bürgi</a> (buergi.lukas@gmail.com).
         <br>
-        Diese Webseite ist <a href="https://www.gnu.org/philosophy/free-sw.de.html">Freie Software</a>. Der Quelltext inklusive der Datenbank und weiterer Werkzeuge ist <a href="https://github.com/lukas-buergi/km-stat">dort</a> verfügbar.
-      {% endblocktrans %}
+        {% blocktrans %}
+          Diese Webseite ist <a href="https://www.gnu.org/philosophy/free-sw.de.html">Freie Software</a> nach der
+        {% endblocktrans %}
+        <a href="{% static 'exportkontrollstatistiken/AGPLv3.txt' %}">AGPLv3</a>.
+        {% blocktrans %}
+          Der Quelltext inklusive der Datenbank und weiterer Werkzeuge ist <a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/lukas-buergi/km-stat" rel="dct:source">dort</a> verfügbar. <br>
+        {% endblocktrans %}
+        {# <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons Lizenzvertrag" style="border-width:0" src="{% static 'exportkontrollstatistiken/cc-by-sa-80x15.png' %}"/></a><br /> #}
+        {% blocktrans %}
+          Die <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Dataset" property="dct:title" rel="dct:type">Datenbank Schweizer Exporte sicherheitspolitisch relevanter Güter</span> selbst ist von der <a xmlns:cc="http://creativecommons.org/ns#" href="https://www.gsoa.ch" property="cc:attributionName" rel="cc:attributionURL">GSoA</a> lizenziert unter einer <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Namensnennung - Weitergabe unter gleichen Bedingungen 4.0 International Lizenz</a>.
+        {% endblocktrans %}
+      </div>
     </div>
     {# for some reason the worldmap only works if this is down here, not if it's in the head. The table works fine in either case. #}
     <script type='text/javascript'>

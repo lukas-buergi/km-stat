@@ -10,16 +10,23 @@ about arms exports.
 * There is some documentation in docs/manual/documentation.lyx that is partly in German. New parts in English.
 * There is lots of documentation in the program files and eventually maybe someone will make it autogenerate html docs from that.
 
-## Licenses
+## Licensing
 
-* In principle it's licensed as AGPLv3, see file COPYING. If an individual
+* The application is licensed as AGPLv3, see file COPYING. If an individual
 source file has no copyright notice then you should check and ask. Files
-provided by Django are BSD and files copied from elsewhere might have
+provided by Django and d3 are BSD and files copied from elsewhere might have
 any other (hopefully compatible) license.
 * There are various files provided by governments and/or treaty
-organizations with license status unknown to me.
-* I haven't thought about database licenses. Maybe various people who
-worked on the database in the past have some database-copyright on it.
+organizations with license status unknown to me, but which should be
+fine because they can't realistically complain.
+* The data, specifically the database and documentation, is licensed
+CC BY-SA 4.0, as far as its copyright belongs to
+  * Kaju Bubanja
+  * Andreas Weibel
+  * Lukas Bürgi
+
+  and we ask you to credit GSoA/GSsA for our work.
+  Please add your name if you contribute.
 
 ## Overview of current status:
 
@@ -34,6 +41,7 @@ worked on the database in the past have some database-copyright on it.
 * Some problems with formatting when using the two non-default display styles
 * Sort needs to be enabled in front end
 * Go through the map and country list and fix the remaining non-working countries.
+* table navigation: next/prev don't work correctly when jump was used previously
 * Display table with one row as sentence instead?
 * world map data pop up always towards middle and upwards respective to mouse pointer / touch event
 * change year selection to drop down for better mobile support
@@ -79,7 +87,8 @@ put -r static
 
 ## Contributors
 
-* Kaju Bubanja (first version in PHP)
-* Andreas Weibel (maintenance work of first version and database)
-* Lukas Bürgi (current rewrite)
-* Judith Schmid (inputs on design)
+* Members of GSoA Gruppe für eine Schweiz ohne eine Armee / GSsA Groupe pour une Suisse sans armée
+  * Kaju Bubanja (first version in PHP)
+  * Andreas Weibel (maintenance and other work on first version and database)
+  * Lukas Bürgi (current rewrite, database)
+  * Judith Schmid (valuable inputs on design)
