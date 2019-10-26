@@ -44,62 +44,59 @@ function Table(params, format){
       // data set is discarded
       return;
     }
-    // set up page selection and data format only if we aren't on the first pseudo data set
-    if(!('pseudo' in data)){
-      this.numberOfPages = Math.ceil(data.total / this.params.perPage);
+  
+    this.numberOfPages = Math.ceil(data.total / this.params.perPage);
 
-      //drop down
-      let pageList = [];
-      for(var page=1; page<=this.numberOfPages; page++){
-        pageList.push(page);
-      }
-      d3.selectAll('#table_jumpToPage option').remove();
-      const pageDropDown=d3.select('#table_jumpToPage');
-      pageDropDown
-        .selectAll('option')
-        .data(pageList)
-        .enter()
-        .append('option')
-          .text(d => "Gehe zu Seite " + d)
-          .attr('value', d=>d)
-          .attr('selected', d => {
-            if(d==this.params.pageNumber){
-              return true;
-            }else{
-              return null;
-            }
-          });
-      pageDropDown.on('change', () => {
-        this.params.pageNumber = pageDropDown.property("value");
-        this.setRemoteData();
-      });
-
-      // deactivate some buttons
-      let onFirstPage = this.params.pageNumber == 1;
-      if(!onFirstPage){onFirstPage=null;}
-      let onLastPage = this.params.pageNumber == this.numberOfPages;
-      if(!onLastPage){onLastPage=null;}
-      // deactivate the two back buttons
-      d3.select('#table_firstPage').attr('disabled', onFirstPage);
-      d3.select('#table_previousPage').attr('disabled', onFirstPage);
-      // deactivate the two forward buttons
-      d3.select('#table_lastPage').attr('disabled', onLastPage);
-      d3.select('#table_nextPage').attr('disabled', onLastPage);
-
-      // treat the data
-      // format monetary amounts
-      data.ctypes.forEach(function (type, typeIndex) {
-        if(type == "money"){
-          console.log(type, typeIndex);
-          data.data.forEach(function (row, rowIndex){
-            data.data[rowIndex][typeIndex] = this.format(data.data[rowIndex][typeIndex]);
-          }, this);
-        }
-      }, this);
-      // TODO: Right-align monetary amounts. Remove manual right-align in css file.
-      // TODO: replace country codes with flag pictures
-      notLoading("table");
+    // drop down
+    let pageList = [];
+    for(var page=1; page<=this.numberOfPages; page++){
+      pageList.push(page);
     }
+    d3.selectAll('#table_jumpToPage option').remove();
+    const pageDropDown=d3.select('#table_jumpToPage');
+    pageDropDown
+      .selectAll('option')
+      .data(pageList)
+      .enter()
+      .append('option')
+        .text(d => "Gehe zu Seite " + d)
+        .attr('value', d=>d)
+        .attr('selected', d => {
+          if(d==this.params.pageNumber){
+            return true;
+          }else{
+            return null;
+          }
+        });
+    pageDropDown.on('change', () => {
+      this.params.pageNumber = Number(pageDropDown.property("value"));
+      //console.log("drop down activated, returned " + this.params.pageNumber);
+      this.setRemoteData();
+    });
+
+    // deactivate some buttons
+    let onFirstPage = this.params.pageNumber == 1;
+    if(!onFirstPage){onFirstPage=null;}
+    let onLastPage = this.params.pageNumber == this.numberOfPages;
+    if(!onLastPage){onLastPage=null;}
+    // deactivate the two back buttons
+    d3.select('#table_firstPage').attr('disabled', onFirstPage);
+    d3.select('#table_previousPage').attr('disabled', onFirstPage);
+    // deactivate the two forward buttons
+    d3.select('#table_lastPage').attr('disabled', onLastPage);
+    d3.select('#table_nextPage').attr('disabled', onLastPage);
+
+    // treat the data
+    // format monetary amounts
+    data.ctypes.forEach(function (type, typeIndex) {
+      if(type == "money"){
+        data.data.forEach(function (row, rowIndex){
+          data.data[rowIndex][typeIndex] = this.format(data.data[rowIndex][typeIndex]);
+        }, this);
+      }
+    }, this);
+    // TODO: replace country codes with flag pictures
+    notLoading("table");
 
     // Display data. The following snippet was copied from the d3 doc on .data()
     this.thead
@@ -120,6 +117,21 @@ function Table(params, format){
       .data(d => d)
       .join("td")
         .text(d => d);
+
+    // Right-align monetary amounts. Remove manual right-align in css file.
+    data.ctypes.forEach(function (type, typeIndex) {
+      if(type == "money"){
+        this.table
+          .selectAll("td:nth-child(" + (typeIndex + 1) + ")")
+          .style('text-align', 'right');
+          //.style('background-color', '#ff0000');
+      } else {
+        this.table
+          .selectAll("td:nth-child(" + (typeIndex + 1) + ")")
+          .style('text-align', 'left');
+          //.style('background-color', '#00ff00');
+      }
+    }, this);
   },
   this.firstPage = function(){
     this.params.pageNumber = 1;
@@ -130,6 +142,8 @@ function Table(params, format){
     this.setRemoteData();
   };
   this.nextPage = function(){
+    //console.log("next page activated, previous page was " + this.params.pageNumber);
+    //console.log("next page could be " + this.numberOfPages + " or " + (this.params.pageNumber+1) );
     this.params.pageNumber = Math.min(this.numberOfPages, this.params.pageNumber+1);
     this.setRemoteData();
   };

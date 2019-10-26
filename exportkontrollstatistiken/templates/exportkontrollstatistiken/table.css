@@ -67,7 +67,3 @@ License along with km-stat.  If not, see
 .table_content tbody tr:nth-child(even){
   background-color: #FAFAFA;
 }
-/* TODO BROKEN (not always 3)*/
-.table_content td:nth-child(3){
-  text-align: right;
-}
