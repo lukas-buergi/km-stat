@@ -18,7 +18,7 @@
 # <https://www.gnu.org/licenses/>.
 ########################################################################
 
-NICHT AUSFÜHREN - das ist kein fertiges Skript, nur Schnipsel für die interaktive Konsole
+DONT EXECUTE - NOT A SCRIPT, JUST SNIPPETS TO COPY AND PASTE
 
 from exportkontrollstatistiken.models import *
 import json

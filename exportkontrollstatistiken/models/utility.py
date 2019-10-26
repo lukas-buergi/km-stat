@@ -139,6 +139,10 @@ class Laender(models.Model):
   """ Der minimale Längengrad, der dieses Land schneidet. """
   laengengradMax = models.FloatField()
   """ Der maximale Längengrad, der dieses Land schneidet. """
+  laengengrad = models.FloatField()
+  """ Longitude of a characteristic point of the country. """
+  breitengrad = models.FloatField()
+  """ Latitude of a characteristic point of the country. """
 
 
   def __str__(self):

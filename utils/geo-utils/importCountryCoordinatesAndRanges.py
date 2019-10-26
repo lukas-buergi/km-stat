@@ -23,22 +23,17 @@ DONT EXECUTE - NOT A SCRIPT, JUST SNIPPETS TO COPY AND PASTE
 from exportkontrollstatistiken.models import *
 import csv
 
-f = open('utils/iso3166-2019-04-05.csv', 'r', newline='')
-iso = csv.reader(f)
+f = open('utils/geo-utils/variousCountryDataOnlyData.csv', 'r', encoding='utf-8-sig')
+reader = csv.DictReader(f, delimiter=';')
+data = dict()
+for row in reader:
+  data[row['ISO3166A2']] = row
 
-iso.__next__()
-
-regions = {
-    "AF":"Africa",
-    "NA":"North America",
-    "OC":"Oceania",
-    "AS":"Asia",
-    "EE":"Europe",
-    "SA":"South America",
-}
-
-for code, english in regions.items():
-    name = Uebersetzungen(de='', fr='', it='', en=english)
-    name.save()
-    region = Laendergruppen(code=code, name=name)
-    region.save()
+for country in Laender.objects.all():
+  country.laengengradMin = data[country.code]['minlongitude']
+  country.laengengradMax = data[country.code]['maxlongitude']
+  country.breitengradMin = data[country.code]['minlatitude']
+  country.breitengradMax = data[country.code]['maxlatitude']
+  country.laengengrad = data[country.code]['latitude']
+  country.breitengrad = data[country.code]['longitude']
+  print(country)
