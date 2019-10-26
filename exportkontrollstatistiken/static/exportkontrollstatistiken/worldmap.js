@@ -19,7 +19,9 @@ License along with km-stat.  If not, see
 <https://www.gnu.org/licenses/>.
  * */
 
-worldmap = {
+'use strict';
+
+var worldmap = {
   initialize : function (params, countriesSource, numberFormat){
     // TODO: Maybe make configurable which columns contain which data
     this.params = this.treatParams(params);
@@ -123,23 +125,24 @@ worldmap = {
           dataByID[d[0]] = {"color":d[2], "name":d[1]};
       });
 
+      let domain = [];
+      let colorRange = [];
+      
       if(data['data'].length == 0){
         console.log("Empty dataset");
-        domain = [];
-        colorRange = [];
       } else if(data['data'].length == 1){
         colorRange = ['#ff0000'];
         domain = [0];
       } else {
         colorRange = [d3.rgb(255,255,255)];
-        amountOfPartitions = Math.min(30,data['data'].length);
-        for(i=0; i<amountOfPartitions-1; i++){
-          n = 255*(amountOfPartitions-i)/amountOfPartitions
+        const amountOfPartitions = Math.min(30,data['data'].length);
+        for(let i=0; i<amountOfPartitions-1; i++){
+          const n = 255*(amountOfPartitions-i)/amountOfPartitions
           colorRange.push(d3.rgb(255, n, n));
         }
         colorRange.push(d3.rgb(255, 0, 0));
         
-        dataLog = [];
+        let dataLog = [];
         data['data'].forEach(d => {
           if(d[2]==0){
             dataLog.push(0);
@@ -149,7 +152,7 @@ worldmap = {
         });
 
         // TODO: fix bug, why is 0 twice at the beginning?
-        domainLog = jenks(dataLog, amountOfPartitions - 1);
+        const domainLog = jenks(dataLog, amountOfPartitions - 1);
         
         domain = []
         domainLog.forEach(d => {
@@ -159,7 +162,7 @@ worldmap = {
             domain.push(Math.exp(d));
           }
         });
-        console.log(domain);
+        //console.log(domain);
       }
       
       const color = d3.scaleQuantile() //scaleLog()
@@ -168,7 +171,7 @@ worldmap = {
       
       
       // color map and add mouseovers
-      dataCountriesMap = this.blankCountriesMap
+      let dataCountriesMap = this.blankCountriesMap
           .style('fill', d => this.countryColor(d, dataByID, color))
           .on('mouseover', (d, i, nodes) => this.mouseOverCountry(d, i, nodes, dataByID, this.numberFormat))
           .on('mouseout', (d, i, nodes) => this.mouseOutCountry(d, i, nodes, dataByID, color));
@@ -188,12 +191,23 @@ worldmap = {
     }
   },
   movePopup : function(){
-    // TODO: Don't leave the window
     const popupAboveMouse = 15;
+
+    const selectionX = d3.event.clientX;
+    const middleX = document.body.clientWidth / 2;
+    const popWidth = document.querySelector('div.worldmap_popup').offsetWidth;
+    let popX;
+    if(selectionX < middleX-popWidth/2){
+      popX = selectionX;
+    } else if(selectionX <= middleX+popWidth/2){
+      popX = selectionX - popWidth/2;
+    } else {
+      popX = selectionX - popWidth;
+    }
     d3.select('div.worldmap_popup')
       // two elaborate ways to calculate mouse position and popup position and that's the best I could find
       .style('top', (d3.mouse(document.querySelector('div.worldmap'))[1] - document.querySelector('div.worldmap_popup').offsetHeight - popupAboveMouse) + "px")
-      .style('left', (d3.event.clientX - document.querySelector('div.worldmap_popup').offsetWidth/2) + "px");
+      .style('left', popX + "px");
   },
   hidePopup : function(){
     d3.select('div.worldmap_popup').style('visibility', 'hidden');
