@@ -86,6 +86,17 @@ function Table(params, format){
     d3.select('#table_lastPage').attr('disabled', onLastPage);
     d3.select('#table_nextPage').attr('disabled', onLastPage);
 
+    // if we have lots of columns, table should be full width
+    // I mean, there could also be just a few wide columns, but I'm
+    // ignoring that.
+    if(data.ctypes.length < 5){
+      this.table.style('max-width', '50rem');
+      this.tableNav.style('max-width', '50rem');
+    } else {
+      this.table.style('max-width', '100%');
+      this.tableNav.style('max-width', '100%');
+    }
+    
     // treat the data
     // format monetary amounts
     data.ctypes.forEach(function (type, typeIndex) {
@@ -95,7 +106,9 @@ function Table(params, format){
         }, this);
       }
     }, this);
+    
     // TODO: replace country codes with flag pictures
+
     notLoading("table");
 
     // Display data. The following snippet was copied from the d3 doc on .data()
@@ -157,6 +170,7 @@ function Table(params, format){
   this.format = format;
   
   this.table = d3.select('table.table_content');
+  this.tableNav = d3.select('div.table_pageNavigation');
   this.thead = this.table.select("thead");
   this.tbody = this.table.select("tbody");
 
