@@ -130,6 +130,21 @@ function Worldmap(params, countriesSource, numberFormat, dataColumnType){
           .on('mouseover', (d, i, nodes) => this.mouseOverCountry(d, i, nodes, dataByID, this.numberFormat))
           .on('mouseout', (d, i, nodes) => this.mouseOutCountry(d, i, nodes, dataByID, color));
 
+      // add arrows to map
+      const arrows = {"type":"FeatureCollection","features": [{"type":"Feature","geometry":{"type":"LineString","coordinates":[[8,47],[-97, 38]]}}]};
+      this.map
+        .append('g')
+        .attr('class', 'arrows')
+        .selectAll('path')
+        .data(arrows.features)
+        .enter()
+          .append('path')
+          .attr('d', this.path)
+          .attr('marker-end', 'url(#head)')
+          .style('stroke-width', '2px')
+          .style('stroke', '#000000')
+          .style('fill', 'none');
+
       notLoading("worldmap");
       /* can change map data later: */
       //map.style('fill', d => 'black');
@@ -196,7 +211,6 @@ function Worldmap(params, countriesSource, numberFormat, dataColumnType){
         .style('fill', 'white');
   };
   // constructor //////////////////////////////////////////////////////
-  // TODO: Maybe make configurable which columns contain which data
   this.params = this.treatParams(params);
   
   this.countriesSource = countriesSource;
@@ -213,8 +227,8 @@ function Worldmap(params, countriesSource, numberFormat, dataColumnType){
   };
   const outline = {type: "Sphere"};
   const mapDecoration = {"type":"FeatureCollection","features": [outline, graticuleFeature]};
-  const projection = d3.geoRobinson().fitWidth('1000', mapDecoration); // TODO: Why 1000?
-  this.path = d3.geoPath().projection(projection);
+  this.projection = d3.geoRobinson().fitWidth('1000', mapDecoration); // TODO: Why 1000?
+  this.path = d3.geoPath().projection(this.projection);
   const bounds = this.path.bounds(mapDecoration);
 
   // draw empty svg
@@ -226,6 +240,9 @@ function Worldmap(params, countriesSource, numberFormat, dataColumnType){
       .classed("worldmap_svg", true)
       .append('g')
         .attr('class', 'map');
+
+  const svg = d3.select('svg.worldmap_svg');
+  svg.append('defs').html("<marker id='head' orient='auto' markerWidth='2' markerHeight='4' refX='0.1' refY='2'><path d='M0,0 V4 L2,2 Z'/></marker>");
 
   // draw grid onto map
   this.graticule = this.map
@@ -239,8 +256,6 @@ function Worldmap(params, countriesSource, numberFormat, dataColumnType){
       .style('stroke-width', '1px')
       .style('stroke', 'white')
       .style('fill', '#EEEEFF');
-      //.style('fill-opacity', '1')
-      //.attr('paint-order', 'stroke');
 
   // draw countries, then add data
   this.worldmap = d3.json(this.countriesSource)

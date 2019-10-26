@@ -30,10 +30,16 @@ for row in reader:
   data[row['ISO3166A2']] = row
 
 for country in Laender.objects.all():
-  country.laengengradMin = data[country.code]['minlongitude']
-  country.laengengradMax = data[country.code]['maxlongitude']
-  country.breitengradMin = data[country.code]['minlatitude']
-  country.breitengradMax = data[country.code]['maxlatitude']
-  country.laengengrad = data[country.code]['latitude']
-  country.breitengrad = data[country.code]['longitude']
-  print(country)
+  try:
+    dataRow = data[country.code]
+  except KeyError:
+    print(country.code)
+    continue
+  
+  country.laengengradMin = dataRow['minlongitude']
+  country.laengengradMax = dataRow['maxlongitude']
+  country.breitengradMin = dataRow['minlatitude']
+  country.breitengradMax = dataRow['maxlatitude']
+  country.laengengrad = dataRow['latitude']
+  country.breitengrad = dataRow['longitude']
+  country.save()

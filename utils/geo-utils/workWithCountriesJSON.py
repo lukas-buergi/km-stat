@@ -24,6 +24,24 @@ from exportkontrollstatistiken.models import *
 import json
 import csv
 
+# add characteristic coordinates to each country
+f = open('/home/t4b/persönlich/engagement/gsoa/webseite/django/kriegsmaterialch/exportkontrollstatistiken/static/exportkontrollstatistiken/world_countries.json', 'r')
+d = json.loads(f.read())
+f.close()
+
+for country in d["features"]:
+  try:
+    countryDBObject = Laender.objects.get(code=country['id'])
+  except Laender.DoesNotExist:
+    print(country['id'])
+    continue
+  country['latitude'] = countryDBObject.laengengrad
+  country['longitude'] = countryDBObject.breitengrad
+
+f = open('/home/t4b/tmp/world_countries.json', 'w')
+json.dump(d, f, separators=(',', ':'))
+f.close()
+
 # replace 3 letter codes with 2 letter codes
 f = open('/home/t4b/persönlich/engagement/gsoa/webseite/django/kriegsmaterialch/exportkontrollstatistiken/static/exportkontrollstatistiken/world_countries.json', 'r')
 d = json.loads(f.read())
