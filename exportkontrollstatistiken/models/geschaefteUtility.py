@@ -145,7 +145,7 @@ class Geschaeftslaendersummen(models.Model):
 
     order = sorted(sums, key=lambda key : sums.get(key)[1], reverse=reverse)
 
-    result = apiData(True, ["id", "Name", "Exporte"], ['country code', 'country name', 'money'])
+    result = apiData(True, ["", "Name", "Exporte"], ['country code', 'country name', 'money'])
     result.setTotal(len(order))
     for country in p.getPage(order):
         result.addRow([country, sums[country][0].name.de, sums[country][1]])
@@ -155,7 +155,7 @@ class Geschaeftslaendersummen(models.Model):
   def getJSONSummedPerYear(p):
     """Return transactions summed per year, sort according to p.sortBy (even if some combinations might not make much sense, they are available too for free). """
 
-    result = apiData(False, ["id", "Name", "Jahr", "Exporte"], ['country code', 'country name', 'untreated', 'money'])
+    result = apiData(False, ["", "Name", "Jahr", "Exporte"], ['country code', 'country name', 'untreated', 'money'])
 
     queryset = Geschaeftslaendersummen.objects
     queryset = queryset.filter(jahr__gte=p.year1)

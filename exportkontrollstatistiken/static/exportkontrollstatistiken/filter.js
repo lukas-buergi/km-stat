@@ -197,7 +197,7 @@ function Controller(p, countriesURL){
   // remember the names in the template needs to match
   this.widgets.filter = new Filter("filter", this.p);
   this.widgetNames.push("filter");
-  this.widgets.map = new Worldmap(new Params(this.p), countriesURL, this.format);
+  this.widgets.map = new Worldmap(new Params(this.p), countriesURL, this.format, "money");
   this.widgetNames.push("map");
   this.widgets.table = new Table(new Params(this.p), this.format);
   this.widgetNames.push("table");

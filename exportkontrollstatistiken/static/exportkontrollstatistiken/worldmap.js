@@ -21,7 +21,7 @@ License along with km-stat.  If not, see
 
 'use strict';
 
-function Worldmap(params, countriesSource, numberFormat){
+function Worldmap(params, countriesSource, numberFormat, dataColumnType){
   // methods //////////////////////////////////////////////////////////
   this.treatParams = function(params){
     // map is not paginated
@@ -61,13 +61,22 @@ function Worldmap(params, countriesSource, numberFormat){
     this.worldmap.then( () => {
       this.hidePopup(); // if this is not the first data set, a popup might be visible containing old data
 
+      let indicesOfTypes = {}
+      data['ctypes'].forEach((type, index) => {
+        indicesOfTypes[type] = index;
+      });
+      const dColumn = indicesOfTypes[this.dataColumnType];
+      const idColumn = indicesOfTypes['country code'];
+      const nameColumn = indicesOfTypes['country name'];
+      
+      
       data['data'].forEach(d => {
-        d[2] = Number(d[2]);
+        d[dColumn] = Number(d[dColumn]);
       })
 
       const dataByID = {};
       data['data'].forEach(d => {
-          dataByID[d[0]] = {"color":d[2], "name":d[1]};
+          dataByID[d[idColumn]] = {"color":d[dColumn], "name":d[nameColumn]};
       });
 
       let domain = [];
@@ -89,10 +98,10 @@ function Worldmap(params, countriesSource, numberFormat){
         
         let dataLog = [];
         data['data'].forEach(d => {
-          if(d[2]==0){
+          if(d[dColumn]==0){
             dataLog.push(0);
           } else {
-            dataLog.push(Math.log(d[2]));
+            dataLog.push(Math.log(d[dColumn]));
           }
         });
 
@@ -192,6 +201,7 @@ function Worldmap(params, countriesSource, numberFormat){
   
   this.countriesSource = countriesSource;
   this.numberFormat = numberFormat;
+  this.dataColumnType = dataColumnType;
 
   // number data we display so we can always display the latest in case it is switched in transit
   this.dataCounter = 0;
