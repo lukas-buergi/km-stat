@@ -96,10 +96,9 @@ License along with km-stat.  If not, see
       </div>
       {# xxx Franken Exporte von Kriegsmaterial, besonderen militärischen Gütern und Dual Use Gütern total in unserer Datenbank. #}
       {# Davon zur Anzeige ausgewählt: <Nichts|xxx Franken> #}
-      {% include "exportkontrollstatistiken/filter.html" with name="top" %}
+      {% include "exportkontrollstatistiken/filter.html" with name="filter" %}
       {% include "exportkontrollstatistiken/table.html" %}
       {% include "exportkontrollstatistiken/worldmap.html" only %}
-      {# {% include "exportkontrollstatistiken/filter.html" with name="middle" %} #}
     </div>
     <div class="footer_container">
       <div class="footer">

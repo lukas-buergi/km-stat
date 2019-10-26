@@ -21,34 +21,7 @@ License along with km-stat.  If not, see
 'use strict';
 
 
-function showExtended(){
-  {
-    const list = document.getElementsByClassName("extended");
-    for (let i = 0; i < list.length; i++) {
-      list[i].style.display = 'flex';
-    }
-  }
-  {
-    const list = document.getElementsByClassName("minimized");
-    for (let i = 0; i < list.length; i++) {
-      list[i].style.display = 'none';
-    }
-  }
-}
-function hideExtended(){
-  {
-    const list = document.getElementsByClassName("extended");
-    for (let i = 0; i < list.length; i++) {
-      list[i].style.display = 'none';
-    }
-  }
-  {
-    const list = document.getElementsByClassName("minimized");
-    for (let i = 0; i < list.length; i++) {
-      list[i].style.display = 'flex';
-    }
-  }
-}
+
 function Params(p){
   // Takes either json as returned by Python view or another js Params object
   this.paramNames = p.paramNames;
@@ -143,6 +116,34 @@ function Filter(name, p){
   this.setInputField = function(id, paramName, propertyName){
     d3.select(id).property(propertyName, this.p[paramName]);
   };
+  this.showExtended = function(){
+    {
+      const list = document.getElementsByClassName("extended");
+      for (let i = 0; i < list.length; i++) {
+        list[i].style.display = 'flex';
+      }
+    }
+    {
+      const list = document.getElementsByClassName("minimized");
+      for (let i = 0; i < list.length; i++) {
+        list[i].style.display = 'none';
+      }
+    }
+  };
+  this.hideExtended = function(){
+    {
+      const list = document.getElementsByClassName("extended");
+      for (let i = 0; i < list.length; i++) {
+        list[i].style.display = 'none';
+      }
+    }
+    {
+      const list = document.getElementsByClassName("minimized");
+      for (let i = 0; i < list.length; i++) {
+        list[i].style.display = 'flex';
+      }
+    }
+  };
   
   // constructor
   
@@ -178,8 +179,8 @@ function Controller(p, countriesURL){
     this.p = new Params(p);
     table.update(new Params(p));
     worldmap.update(new Params(p));
-    for(let i=0; i<this.widgets.length; i++){
-      this.widgets[i].update(this.p);
+    for(let i=0; i<this.widgetNames.length; i++){
+      this.widgets[this.widgetNames[i]].update(this.p);
     }
   };
   
@@ -191,12 +192,12 @@ function Controller(p, countriesURL){
     "currency": ['Fr. ', '']});
   this.format = this.locale.format('$,');
 
-  this.widgets = [];
+  this.widgets = {};
+  this.widgetNames = [];
 
-  this.filter1 = new Filter("top", this.p);
-  this.widgets.push(this.filter1);
-  this.filter2 = new Filter("middle", this.p);
-  this.widgets.push(this.filter2);
+  // remember the names in the template needs to match
+  this.widgets.filter = new Filter("filter", this.p);
+  this.widgetNames.push("filter");
   worldmap.initialize(new Params(this.p), countriesURL, this.format);
   table.initialize(new Params(this.p), this.format);
 }

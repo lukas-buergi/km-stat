@@ -34,7 +34,7 @@ License along with km-stat.  If not, see
     {% trans "(jeweils inklusive)." %}
   </div>
   <div class="filter minimized">
-    <a href="#" onclick="showExtended(); return false;">{% trans "Mehr Optionen" %}</a>.
+    <a href="#" onclick="controller.widgets.{{ name }}.showExtended(); return false;">{% trans "Mehr Optionen" %}</a>.
   </div>
   <div class="filter extended">
     <div class="filter_label"><div>{% trans "Art:" %}</div></div>
@@ -86,6 +86,6 @@ License along with km-stat.  If not, see
     </select>
   </div>
   <div class="filter extended">
-    &nbsp;<a href="#" onclick="hideExtended(); return false;">{% trans "Weniger Optionen" %}</a>.
+    &nbsp;<a href="#" onclick="controller.widgets.{{ name }}.hideExtended(); return false;">{% trans "Weniger Optionen" %}</a>.
   </div>
 </div>
