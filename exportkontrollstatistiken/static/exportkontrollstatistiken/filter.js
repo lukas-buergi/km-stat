@@ -18,43 +18,54 @@ License along with km-stat.  If not, see
 <https://www.gnu.org/licenses/>.
  * */
 
+'use strict';
+
+
 function showExtended(){
-  var list = document.getElementsByClassName("extended");
-  for (var i = 0; i < list.length; i++) {
-    list[i].style.display = 'flex';
+  {
+    const list = document.getElementsByClassName("extended");
+    for (let i = 0; i < list.length; i++) {
+      list[i].style.display = 'flex';
+    }
   }
-  var list = document.getElementsByClassName("minimized");
-  for (var i = 0; i < list.length; i++) {
-    list[i].style.display = 'none';
+  {
+    const list = document.getElementsByClassName("minimized");
+    for (let i = 0; i < list.length; i++) {
+      list[i].style.display = 'none';
+    }
   }
 }
 function hideExtended(){
-  var list = document.getElementsByClassName("extended");
-  for (var i = 0; i < list.length; i++) {
-    list[i].style.display = 'none';
+  {
+    const list = document.getElementsByClassName("extended");
+    for (let i = 0; i < list.length; i++) {
+      list[i].style.display = 'none';
+    }
   }
-  var list = document.getElementsByClassName("minimized");
-  for (var i = 0; i < list.length; i++) {
-    list[i].style.display = 'flex';
+  {
+    const list = document.getElementsByClassName("minimized");
+    for (let i = 0; i < list.length; i++) {
+      list[i].style.display = 'flex';
+    }
   }
 }
 function Params(p){
   // Takes either json as returned by Python view or another js Params object
   this.paramNames = p.paramNames;
-  for (var index = 0; index < p.paramNames.length; ++index){
-    name = p.paramNames[index];
-    attr = p[name];
+  for (let index = 0; index < p.paramNames.length; ++index){
+    const name = p.paramNames[index];
+    const attr = p[name];
     this[name] = attr;
   }
-  types=['k', 'b', 'd'];
-  for(var t = 0; t < types.length; t++){
+  const types=['k', 'b', 'd'];
+  for(let t = 0; t < types.length; t++){
     this[types[t]] = p[types[t]];
   }
 
   this.getURL = function(){
       this.assembleTypes();
-      url = '';
-      for (var index = 0; index < this.paramNames.length; ++index){
+      let url = '';
+      for (let index = 0; index < this.paramNames.length; ++index){
         url += '/' + this[this.paramNames[index]];
       }
       return(url);
@@ -63,32 +74,32 @@ function Params(p){
       return('/api/g' + this.getURL());
   };
   this.assembleTypes = function(){
-      types = ""
-      if(this.k == true) types+='k';
-      if(this.b == true) types+='b';
-      if(this.d == true) types+='d';
-      if( (!this.k) && (!this.b) && (!this.d) ){
-        types = 'none';
-      }
-      this.types=types;
+    let types = ""
+    if(this.k == true) types+='k';
+    if(this.b == true) types+='b';
+    if(this.d == true) types+='d';
+    if( (!this.k) && (!this.b) && (!this.d) ){
+      types = 'none';
+    }
+    this.types=types;
   };
   this.getCopy = function(){
       // shallow copy
       copy = {};
-      for(var i in this){
+      for(let i in this){
         copy[i] = this[i];
       }
       return(copy);
   };
   this.isEqualTo = function(p){
-      equal = true;
-      for (var index = 0; index < this.paramNames.length; ++index){
-        curEqual = this[this.paramNames[index]] == p[this.paramNames[index]];
+      let equal = true;
+      for (let index = 0; index < this.paramNames.length; ++index){
+        const curEqual = this[this.paramNames[index]] == p[this.paramNames[index]];
         equal = equal && curEqual;
       }
-      types=['k', 'b', 'd'];
-      for(var t=0; t<=2; t++){
-        curEqual = this[types[t]] == p[types[t]];
+      const types=['k', 'b', 'd'];
+      for(let t=0; t<=2; t++){
+        const curEqual = this[types[t]] == p[types[t]];
         equal = equal && curEqual;
       }
       return(equal);
@@ -107,10 +118,10 @@ function Filter(name, p){
   // method definitions
   this.update = function(p){
     this.p = new Params(p);
-    for(var i=0; i<this.InputFields.length; i++){
-      id = this.InputFields[i].id;
-      pa = this.InputFields[i].paramName;
-      pr = this.InputFields[i].propertyName;
+    for(let i=0; i<this.InputFields.length; i++){
+      const id = this.InputFields[i].id;
+      const pa = this.InputFields[i].paramName;
+      const pr = this.InputFields[i].propertyName;
       this.setInputField(id, pa, pr);
       if(pa == 'year1'){
         d3.select(id).property('max', this.p['year2']);
@@ -146,18 +157,18 @@ function Filter(name, p){
     new InputField('#' + this.name + '_filter_beginn',        'year1',      'value'),
     new InputField('#' + this.name + '_filter_ende',          'year2',      'value'),
   ];
-  types=['k', 'b', 'd'];
-  for(var t=0; t<=2; t++){
+  const types=['k', 'b', 'd'];
+  for(let t=0; t<=2; t++){
     this.InputFields.push(
       new InputField('#' + this.name + '_filter_' + types[t],  types[t],        'checked'),
     );
   }
 
   // add listeners
-  for(var i=0; i<this.InputFields.length; i++){
-    id = this.InputFields[i].id;
-    pa = this.InputFields[i].paramName;
-    pr = this.InputFields[i].propertyName;
+  for(let i=0; i<this.InputFields.length; i++){
+    const id = this.InputFields[i].id;
+    const pa = this.InputFields[i].paramName;
+    const pr = this.InputFields[i].propertyName;
     this.addInputListener(id, pa, pr);
   }
 }
@@ -167,7 +178,7 @@ function Controller(p, countriesURL){
     this.p = new Params(p);
     table.update(new Params(p));
     worldmap.update(new Params(p));
-    for(var i=0; i<this.widgets.length; i++){
+    for(let i=0; i<this.widgets.length; i++){
       this.widgets[i].update(this.p);
     }
   };
