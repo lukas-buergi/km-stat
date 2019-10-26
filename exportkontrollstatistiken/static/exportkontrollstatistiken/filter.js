@@ -21,6 +21,7 @@ License along with km-stat.  If not, see
 'use strict';
 
 function Params(p){
+  // constructor ///////////////////////////////////////////////////////
   // Takes either json as returned by Python view or another js Params object
   this.paramNames = p.paramNames;
   for (let index = 0; index < p.paramNames.length; ++index){
@@ -32,7 +33,7 @@ function Params(p){
   for(let t = 0; t < types.length; t++){
     this[types[t]] = p[types[t]];
   }
-
+  // methods ///////////////////////////////////////////////////////////
   this.getURL = function(){
       this.assembleTypes();
       let url = '';
@@ -176,10 +177,8 @@ function Controller(p, countriesURL){
   // methods ///////////////////////////////////////////////////////////
   this.updateWidgets = function(p){
     this.p = new Params(p);
-    //table.update(new Params(p));
-    worldmap.update(new Params(p));
     for(let i=0; i<this.widgetNames.length; i++){
-      this.widgets[this.widgetNames[i]].update(this.p);
+      this.widgets[this.widgetNames[i]].update(new Params(p));
     }
   };
 
@@ -198,8 +197,8 @@ function Controller(p, countriesURL){
   // remember the names in the template needs to match
   this.widgets.filter = new Filter("filter", this.p);
   this.widgetNames.push("filter");
-  worldmap.initialize(new Params(this.p), countriesURL, this.format);
+  this.widgets.map = new Worldmap(new Params(this.p), countriesURL, this.format);
+  this.widgetNames.push("map");
   this.widgets.table = new Table(new Params(this.p), this.format);
   this.widgetNames.push("table");
-  //table.initialize(new Params(this.p), this.format);
 }

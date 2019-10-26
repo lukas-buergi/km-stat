@@ -21,63 +21,9 @@ License along with km-stat.  If not, see
 
 'use strict';
 
-var worldmap = {
-  initialize : function (params, countriesSource, numberFormat){
-    // TODO: Maybe make configurable which columns contain which data
-    this.params = this.treatParams(params);
-    
-    this.countriesSource = countriesSource;
-    this.numberFormat = numberFormat;
-
-    // number data we display so we can always display the latest in case it is switched in transit
-    this.dataCounter = 0;
-    
-    const graticuleFeature = {
-        "type": "Feature",
-        "geometry": d3.geoGraticule10(),
-        "id" : "reticules",
-    };
-    const outline = {type: "Sphere"};
-    const mapDecoration = {"type":"FeatureCollection","features": [outline, graticuleFeature]};
-    const projection = d3.geoRobinson().fitWidth('1000', mapDecoration); // TODO: Why 1000?
-    this.path = d3.geoPath().projection(projection);
-    const bounds = this.path.bounds(mapDecoration);
-
-    // draw empty svg
-    this.map = d3.select('div.worldmap')
-      .style("padding-bottom", bounds[1][1] / bounds[1][0] * 100 + "%")
-      .append('svg')
-        .attr("preserveAspectRatio", "xMinYMin meet")
-        .attr("viewBox", "0 0 " + bounds[1][0] + " " + bounds[1][1])
-        .classed("worldmap_svg", true)
-        .append('g')
-          .attr('class', 'map');
-
-    // draw grid onto map
-    this.graticule = this.map
-      .append('g')
-      .attr('class', 'worldmap_reticules')
-      .selectAll('path')
-      .data(mapDecoration.features)
-      .enter()
-        .append('path')
-        .attr('d', this.path)
-        .style('stroke-width', '1px')
-        .style('stroke', 'white')
-        .style('fill', '#EEEEFF');
-        //.style('fill-opacity', '1')
-        //.attr('paint-order', 'stroke');
-
-    // draw countries, then add data
-    this.worldmap = d3.json(this.countriesSource)
-      .then(countries => {
-        this.countries = countries;
-        this.drawCountries();
-        d3.select('div.worldmap_loadingMessage').remove();
-      });
-    this.setRemoteData();
-  },
-  treatParams : function(params){
+function Worldmap(params, countriesSource, numberFormat){
+  // methods //////////////////////////////////////////////////////////
+  this.treatParams = function(params){
     // map is not paginated
     params.perPage = 300;
     params.pageNumber = 1;
@@ -86,15 +32,15 @@ var worldmap = {
     // ... and sorted by value
     params.sortBy = 'v';
     return(params);
-  },
-  update : function(params){
+  };
+  this.update = function(params){
     const treated = this.treatParams(params);
     if(!this.params.isEqualTo(treated)){
       this.params = treated;
       this.setRemoteData();
     }
-  },
-  setRemoteData : function(){
+  };
+  this.setRemoteData = function(){
     loading("worldmap");
     this.dataCounter++;
     d3.json(this.params.getAPIURL()).then(
@@ -103,9 +49,8 @@ var worldmap = {
       )
       (this.dataCounter)
     );
-    // TODO: Display some data change/loading indicator
-  },
-  setData : function(number, data) {
+  };
+  this.setData = function(number, data) {
     if(this.dataCounter>number){
       // some other data was requested in the mean time, so this
       // data set is discarded
@@ -180,8 +125,8 @@ var worldmap = {
       /* can change map data later: */
       //map.style('fill', d => 'black');
     });
-  },
-  mouseOverCountry : function(d, i, nodes, dataByID){
+  };
+  this.mouseOverCountry = function(d, i, nodes, dataByID){
     if(d.id in dataByID){
       d3.select('#worldmap_country').text(dataByID[d.id]['name']);
       d3.select('#worldmap_exports').text(this.numberFormat(dataByID[d.id]['color']));
@@ -189,8 +134,8 @@ var worldmap = {
       d3.select('div.worldmap_popup').style('visibility', 'visible');
       d3.select(nodes[i]).style('fill', '#AAAAAA');
     }
-  },
-  movePopup : function(){
+  };
+  this.movePopup = function(){
     const popupAboveMouse = 15;
 
     const selectionX = d3.event.clientX;
@@ -208,17 +153,17 @@ var worldmap = {
       // two elaborate ways to calculate mouse position and popup position and that's the best I could find
       .style('top', (d3.mouse(document.querySelector('div.worldmap'))[1] - document.querySelector('div.worldmap_popup').offsetHeight - popupAboveMouse) + "px")
       .style('left', popX + "px");
-  },
-  hidePopup : function(){
+  };
+  this.hidePopup = function(){
     d3.select('div.worldmap_popup').style('visibility', 'hidden');
-  },
-  mouseOutCountry : function(d, i, nodes, dataByID, color){
+  };
+  this.mouseOutCountry = function(d, i, nodes, dataByID, color){
     if(d.id in dataByID){
       this.hidePopup();
       d3.select(nodes[i]).style('fill', color(dataByID[d.id]['color']));
     }
-  },
-  countryColor : function(d, dataByID, color){
+  };
+  this.countryColor = function(d, dataByID, color){
     if (d.id in dataByID) {
       return color(dataByID[d.id]['color']);
     } else if(d.id == 'CH'){
@@ -226,8 +171,8 @@ var worldmap = {
     } else {
       return 'white';
     }
-  },
-  drawCountries : function(){
+  };
+  this.drawCountries = function(){
     // draw white map
     this.blankCountriesMap = this.map
       .append('g')
@@ -240,6 +185,59 @@ var worldmap = {
         .style('stroke-width', '1px')
         .style('stroke', '#EEEEFF')
         .style('fill', 'white');
-  },
-};
+  };
+  // constructor //////////////////////////////////////////////////////
+  // TODO: Maybe make configurable which columns contain which data
+  this.params = this.treatParams(params);
+  
+  this.countriesSource = countriesSource;
+  this.numberFormat = numberFormat;
 
+  // number data we display so we can always display the latest in case it is switched in transit
+  this.dataCounter = 0;
+  
+  const graticuleFeature = {
+      "type": "Feature",
+      "geometry": d3.geoGraticule10(),
+      "id" : "reticules",
+  };
+  const outline = {type: "Sphere"};
+  const mapDecoration = {"type":"FeatureCollection","features": [outline, graticuleFeature]};
+  const projection = d3.geoRobinson().fitWidth('1000', mapDecoration); // TODO: Why 1000?
+  this.path = d3.geoPath().projection(projection);
+  const bounds = this.path.bounds(mapDecoration);
+
+  // draw empty svg
+  this.map = d3.select('div.worldmap')
+    .style("padding-bottom", bounds[1][1] / bounds[1][0] * 100 + "%")
+    .append('svg')
+      .attr("preserveAspectRatio", "xMinYMin meet")
+      .attr("viewBox", "0 0 " + bounds[1][0] + " " + bounds[1][1])
+      .classed("worldmap_svg", true)
+      .append('g')
+        .attr('class', 'map');
+
+  // draw grid onto map
+  this.graticule = this.map
+    .append('g')
+    .attr('class', 'worldmap_reticules')
+    .selectAll('path')
+    .data(mapDecoration.features)
+    .enter()
+      .append('path')
+      .attr('d', this.path)
+      .style('stroke-width', '1px')
+      .style('stroke', 'white')
+      .style('fill', '#EEEEFF');
+      //.style('fill-opacity', '1')
+      //.attr('paint-order', 'stroke');
+
+  // draw countries, then add data
+  this.worldmap = d3.json(this.countriesSource)
+    .then(countries => {
+      this.countries = countries;
+      this.drawCountries();
+      d3.select('div.worldmap_loadingMessage').remove();
+    });
+  this.setRemoteData();
+}

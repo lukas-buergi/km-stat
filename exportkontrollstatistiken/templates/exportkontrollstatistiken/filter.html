@@ -33,9 +33,6 @@ License along with km-stat.  If not, see
   <div class="filter">
     {% trans "(jeweils inklusive)." %}
   </div>
-  <div class="filter minimized">
-    <a href="#" onclick="controller.widgets.{{ name }}.showExtended(); return false;">{% trans "Mehr Optionen" %}</a>.
-  </div>
   <div class="filter extended">
     <div class="filter_label"><div>{% trans "Art:" %}</div></div>
     <div class="gueterArten">
@@ -48,7 +45,7 @@ License along with km-stat.  If not, see
       {% endfor %}
     </div>
   </div>
-  <div class="filter extended">
+  <div class="filter minimized">
     <label class="filter_label" for="{{ name }}_filter_laender">{% trans "Empfänger: " %}</label>
     <select id="{{ name }}_filter_laender">
         <option value="all">{% trans "Alle Länder" %}</option>
@@ -87,5 +84,8 @@ License along with km-stat.  If not, see
   </div>
   <div class="filter extended">
     &nbsp;<a href="#" onclick="controller.widgets.{{ name }}.hideExtended(); return false;">{% trans "Weniger Optionen" %}</a>.
+  </div>
+  <div class="filter minimized">
+    <a href="#" onclick="controller.widgets.{{ name }}.showExtended(); return false;">{% trans "Mehr Optionen" %}</a>.
   </div>
 </div>
