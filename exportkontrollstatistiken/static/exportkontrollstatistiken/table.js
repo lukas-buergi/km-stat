@@ -18,6 +18,8 @@ License along with km-stat.  If not, see
 <https://www.gnu.org/licenses/>.
  * */
 
+'use strict';
+
 function Table(params, format){
   // methods ///////////////////////////////////////////////////////////
   this.update = function(params){
@@ -47,12 +49,12 @@ function Table(params, format){
       this.numberOfPages = Math.ceil(data.total / this.params.perPage);
 
       //drop down
-      pageList = [];
+      let pageList = [];
       for(var page=1; page<=this.numberOfPages; page++){
         pageList.push(page);
       }
       d3.selectAll('#table_jumpToPage option').remove();
-      pageDropDown=d3.select('#table_jumpToPage');
+      const pageDropDown=d3.select('#table_jumpToPage');
       pageDropDown
         .selectAll('option')
         .data(pageList)
@@ -73,9 +75,9 @@ function Table(params, format){
       });
 
       // deactivate some buttons
-      onFirstPage = this.params.pageNumber == 1;
+      let onFirstPage = this.params.pageNumber == 1;
       if(!onFirstPage){onFirstPage=null;}
-      onLastPage = this.params.pageNumber == this.numberOfPages;
+      let onLastPage = this.params.pageNumber == this.numberOfPages;
       if(!onLastPage){onLastPage=null;}
       // deactivate the two back buttons
       d3.select('#table_firstPage').attr('disabled', onFirstPage);

@@ -20,8 +20,6 @@ License along with km-stat.  If not, see
 
 'use strict';
 
-
-
 function Params(p){
   // Takes either json as returned by Python view or another js Params object
   this.paramNames = p.paramNames;
