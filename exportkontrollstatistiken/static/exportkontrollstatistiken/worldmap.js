@@ -88,7 +88,7 @@ var worldmap = {
     return(params);
   },
   update : function(params){
-    treated = this.treatParams(params);
+    const treated = this.treatParams(params);
     if(!this.params.isEqualTo(treated)){
       this.params = treated;
       this.setRemoteData();
