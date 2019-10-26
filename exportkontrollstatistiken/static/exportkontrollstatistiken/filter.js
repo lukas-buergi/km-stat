@@ -175,15 +175,17 @@ function Filter(name, p){
 }
 
 function Controller(p, countriesURL){
+  // methods ///////////////////////////////////////////////////////////
   this.updateWidgets = function(p){
     this.p = new Params(p);
-    table.update(new Params(p));
+    //table.update(new Params(p));
     worldmap.update(new Params(p));
     for(let i=0; i<this.widgetNames.length; i++){
       this.widgets[this.widgetNames[i]].update(this.p);
     }
   };
-  
+
+  // constructor ///////////////////////////////////////////////////////
   this.p = new Params(p);
   
   this.locale = d3.formatLocale({"decimal": ".",
@@ -199,5 +201,7 @@ function Controller(p, countriesURL){
   this.widgets.filter = new Filter("filter", this.p);
   this.widgetNames.push("filter");
   worldmap.initialize(new Params(this.p), countriesURL, this.format);
-  table.initialize(new Params(this.p), this.format);
+  this.widgets.table = new Table(new Params(this.p), this.format);
+  this.widgetNames.push("table");
+  //table.initialize(new Params(this.p), this.format);
 }

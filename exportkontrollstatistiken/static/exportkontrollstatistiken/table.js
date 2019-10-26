@@ -18,39 +18,15 @@ License along with km-stat.  If not, see
 <https://www.gnu.org/licenses/>.
  * */
 
-table = {
-  initialize : function(params, format){
-    this.dataCounter = 0;
-    this.params = params;
-    this.format = format;
-    
-    this.table = d3.select('table.table_content');
-    this.thead = this.table.select("thead");
-    this.tbody = this.table.select("tbody");
-    /*
-    // TODO: Make empty table more sensible/prettier
-    const loading = 'loading';
-    const row = [loading, loading, loading, loading];
-    rows = [];
-    for(var i=0; i<this.params.perPage; i++){
-      rows.push(row);
-    }
-    data = {
-      cnames : row,
-      data : rows,
-      pseudo : true,
-    }
-    this.setData(0, data);
-    */
-    this.setRemoteData();
-  },
-  update : function(params){
+function Table(params, format){
+  // methods ///////////////////////////////////////////////////////////
+  this.update = function(params){
     if(!this.params.isEqualTo(params)){
       this.params = params;
       this.setRemoteData();
     }
-  },
-  setRemoteData : function(){
+  };
+  this.setRemoteData = function(){
     this.dataCounter++;
     d3.json(this.params.getAPIURL()).then(
       (number =>
@@ -58,9 +34,9 @@ table = {
       )
       (this.dataCounter)
     );
-    loading("table"); // TODO: Display some data change/loading indicator.
-  },
-  setData : function(number, data) {
+    loading("table");
+  };
+  this.setData = function(number, data) {
     if(this.dataCounter>number){
       // some other data was requested in the mean time, so this
       // data set is discarded
@@ -143,20 +119,30 @@ table = {
       .join("td")
         .text(d => d);
   },
-  firstPage : function(){
+  this.firstPage = function(){
     this.params.pageNumber = 1;
     this.setRemoteData();
-  },
-  previousPage : function(){
+  };
+  this.previousPage = function(){
     this.params.pageNumber = Math.max(1, this.params.pageNumber-1);
     this.setRemoteData();
-  },
-  nextPage : function(){
+  };
+  this.nextPage = function(){
     this.params.pageNumber = Math.min(this.numberOfPages, this.params.pageNumber+1);
     this.setRemoteData();
-  },
-  lastPage : function(){
+  };
+  this.lastPage = function(){
     this.params.pageNumber = this.numberOfPages;
     this.setRemoteData();
-  },
+  };
+  // constructor ///////////////////////////////////////////////////////
+  this.dataCounter = 0;
+  this.params = params;
+  this.format = format;
+  
+  this.table = d3.select('table.table_content');
+  this.thead = this.table.select("thead");
+  this.tbody = this.table.select("tbody");
+
+  this.setRemoteData();
 }
