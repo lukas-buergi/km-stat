@@ -131,23 +131,36 @@ function Worldmap(params, countriesSource, numberFormat, dataColumnType){
           .on('mouseout', (d, i, nodes) => this.mouseOutCountry(d, i, nodes, dataByID, color));
 
       // add arrows to map
-      const arrows = {"type":"FeatureCollection","features": [{"type":"Feature","geometry":{"type":"LineString","coordinates":[[8,47],[-97, 38]]}}]};
-      this.map
-        .append('g')
-        .attr('class', 'arrows')
+      let features = []
+      const featureTemplate = {"type":"Feature","geometry":{"type":"LineString","coordinates":[[8,47], []]}}
+      data['data'].forEach(d => {
+        if(d[dColumn] > 0){
+          const id = d[idColumn];
+          let feature = JSON.parse(JSON.stringify(featureTemplate));
+          if(id in this.countries.coordinates){
+            feature['geometry']['coordinates'][1][0] = this.countries.coordinates[id]['lon'];
+            feature['geometry']['coordinates'][1][1] = this.countries.coordinates[id]['lat'];
+            features.push(feature);
+          } else {
+            console.log("TODO: Fix country " + id);
+          }
+        }
+      });
+      //const exampleFeatures = [{"type":"Feature","geometry":{"type":"LineString","coordinates":[[8,47],[-97, 38]]}}];
+      this.arrows.selectAll('path').remove();
+      this.arrows
         .selectAll('path')
-        .data(arrows.features)
+        .data(features)
         .enter()
           .append('path')
           .attr('d', this.path)
           .attr('marker-end', 'url(#head)')
           .style('stroke-width', '2px')
           .style('stroke', '#000000')
+          .style('opacity', 0.4)
           .style('fill', 'none');
 
       notLoading("worldmap");
-      /* can change map data later: */
-      //map.style('fill', d => 'black');
     });
   };
   this.mouseOverCountry = function(d, i, nodes, dataByID){
@@ -210,6 +223,11 @@ function Worldmap(params, countriesSource, numberFormat, dataColumnType){
         .style('stroke', '#EEEEFF')
         .style('fill', 'white');
   };
+  this.addArrowContainer = function(){
+    this.arrows=this.map
+      .append('g')
+      .attr('class', 'arrows');
+  };
   // constructor //////////////////////////////////////////////////////
   this.params = this.treatParams(params);
   
@@ -262,6 +280,7 @@ function Worldmap(params, countriesSource, numberFormat, dataColumnType){
     .then(countries => {
       this.countries = countries;
       this.drawCountries();
+      this.addArrowContainer();
       d3.select('div.worldmap_loadingMessage').remove();
     });
   this.setRemoteData();

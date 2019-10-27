@@ -46,13 +46,8 @@ CC BY-SA 4.0, as far as its copyright belongs to
 
 ## Desired changes:
 
-* Some problems with formatting when using the two non-default display styles
 * Sort needs to be enabled in front end
-* Go through the map and country list and fix the remaining non-working countries.
-* table navigation: next/prev don't work correctly when jump was used previously
 * Display table with one row as sentence instead?
-* display arrow from origin to receiver
-* world map data pop up always towards middle and upwards respective to mouse pointer / touch event
 * change year selection to drop down for better mobile support
 * display dates better, maybe switch to displaying years and quarters because that's the most fine-grained we have
 * make countries click-able at least in table so that it changes to filter to include only that country
@@ -67,34 +62,32 @@ CC BY-SA 4.0, as far as its copyright belongs to
 * pip install stuff in requirements.txt file
 * setup local settings (copy example)
 * setup database (backups are in folder database-backups)
-* activate virtualenv: . bin/activate
-* ./manage.py runserver
+* activate virtualenv: `. bin/activate`
+* `./manage.py runserver`
 
 ## Push to staging for first time:
 
 * Make sure your public key was added to the server
-* Add remote: git remote add km-staging git+ssh://2167433@git.sd6.gpaas.net/default.git
-* Create new config file and sftp to server:
-sftp 2167433@sftp.sd6.gpaas.net
-put gandi-gsoa-staging-settingsLocal.py vhosts/default/kriegsmaterialch/settingsLocal.py
+* Add remote: `git remote add km-staging git+ssh://2167433@git.sd6.gpaas.net/default.git`
+* Configure ssh:
+```
+Host km-staging
+    HostName git.sd6.gpaas.net
+    User 2167433
+```
+* Create new config file and sftp to server: ```sftp 2167433@sftp.sd6.gpaas.net
+put gandi-gsoa-staging-settingsLocal.py vhosts/default/kriegsmaterialch/settingsLocal.py```
+* Now the `utils/deploy.sh` script should work
 
 ## Push to staging:
 
 There is also a script in ./utils
 
-* pip install --upgrade Django mysqlclient pytz sqlparse
-* pip freeze | grep -e Django -e mysqlclient -e pytz -e sqlparse > kriegsmaterialch/requirements.txt
-* Check that everything still works/commit
+* `pip install --upgrade Django mysqlclient pytz sqlparse`
+* `pip freeze | grep -e Django -e mysqlclient -e pytz -e sqlparse > kriegsmaterialch/requirements.txt`
+* Check that everything still works, fix and/or commit
 * Commit
-* Push to staging: git push km-staging master
-* ssh 2167433@git.sd6.gpaas.net deploy default.git
-* ./manage.py collectstatic
-* sftp static folder to server:
-cd kriegsmaterialch
-sftp 2167433@sftp.sd6.gpaas.net
-cd /lamp0/web/vhosts/default/
-put -r static
 * necessary to sftp config file to server?
-* reload application from control interface
+* `utils/deploy.sh km-staging`
 
 

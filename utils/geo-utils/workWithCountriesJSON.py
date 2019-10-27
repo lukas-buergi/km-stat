@@ -29,14 +29,23 @@ f = open('/home/t4b/persönlich/engagement/gsoa/webseite/django/kriegsmaterialch
 d = json.loads(f.read())
 f.close()
 
-for country in d["features"]:
+d['coordinates'] = dict()
+
+for index, country in enumerate(d["features"]):
+  cid = country['id']
   try:
-    countryDBObject = Laender.objects.get(code=country['id'])
+    countryDBObject = Laender.objects.get(code=cid)
   except Laender.DoesNotExist:
-    print(country['id'])
+    print(cid)
     continue
-  country['latitude'] = countryDBObject.laengengrad
-  country['longitude'] = countryDBObject.breitengrad
+  try:
+    del country['latitude']
+    del country['longitude']
+  except KeyError:
+    pass
+  d['coordinates'][cid] = { 'lat' : countryDBObject.laengengrad,
+                            'lon' : countryDBObject.breitengrad,
+                          }
 
 f = open('/home/t4b/tmp/world_countries.json', 'w')
 json.dump(d, f, separators=(',', ':'))
