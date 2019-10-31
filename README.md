@@ -88,6 +88,7 @@ There is also a script in ./utils
 * Check that everything still works, fix and/or commit
 * Commit
 * necessary to sftp config file to server?
+* necessary to upload new database to server?
 * `utils/deploy.sh km-staging`
 
 

@@ -55,26 +55,30 @@ function Params(p){
     }
     this.types=types;
   };
-  this.getCopy = function(){
-      // shallow copy
-      copy = {};
-      for(let i in this){
-        copy[i] = this[i];
-      }
-      return(copy);
-  };
   this.isEqualTo = function(p){
-      let equal = true;
-      for (let index = 0; index < this.paramNames.length; ++index){
-        const curEqual = this[this.paramNames[index]] == p[this.paramNames[index]];
-        equal = equal && curEqual;
-      }
-      const types=['k', 'b', 'd'];
-      for(let t=0; t<=2; t++){
-        const curEqual = this[types[t]] == p[types[t]];
-        equal = equal && curEqual;
-      }
-      return(equal);
+    let equal = true;
+    for (let index = 0; index < this.paramNames.length; ++index){
+      const curEqual = this[this.paramNames[index]] == p[this.paramNames[index]];
+      equal = equal && curEqual;
+    }
+    const types=['k', 'b', 'd'];
+    for(let t=0; t<=2; t++){
+      const curEqual = this[types[t]] == p[types[t]];
+      equal = equal && curEqual;
+    }
+    return(equal);
+  };
+  this.getSerializableCopy = function(){
+    let copy = {};
+    copy.paramNames = this.paramNames;
+    for (let index = 0; index < this.paramNames.length; ++index){
+      copy[this.paramNames[index]] = this[this.paramNames[index]];
+    }
+    const types=['k', 'b', 'd'];
+    for(let t=0; t<=2; t++){
+      copy[types[t]] = this[types[t]];
+    }
+    return(copy);
   };
 }
 
@@ -116,20 +120,23 @@ function Filter(name, p){
     d3.select(id).property(propertyName, this.p[paramName]);
   };
   this.showExtended = function(){
-    {
-      const list = document.getElementsByClassName("extended");
-      for (let i = 0; i < list.length; i++) {
-        list[i].style.display = 'flex';
-      }
-    }
+    d3.select('div.filter_constrainer').style('max-width', '100%');
     {
       const list = document.getElementsByClassName("minimized");
       for (let i = 0; i < list.length; i++) {
         list[i].style.display = 'none';
       }
     }
+    {
+      const list = document.getElementsByClassName("extended");
+      for (let i = 0; i < list.length; i++) {
+        list[i].style.display = 'flex';
+      }
+    }
+
   };
   this.hideExtended = function(){
+    d3.select('div.filter_constrainer').style('max-width', '50rem');
     {
       const list = document.getElementsByClassName("extended");
       for (let i = 0; i < list.length; i++) {
@@ -175,13 +182,20 @@ function Filter(name, p){
 
 function Controller(p, countriesURL){
   // methods ///////////////////////////////////////////////////////////
-  this.updateWidgets = function(p){
+  this.updateWidgets = function(p, updateHistory=true){
     this.p = new Params(p);
+    if(updateHistory){
+      //console.log("Saving previous state: " + this.p.getURL());
+      history.pushState(this.p.getSerializableCopy(), "", this.p.getURL());
+    }
     for(let i=0; i<this.widgetNames.length; i++){
       this.widgets[this.widgetNames[i]].update(new Params(p));
     }
   };
-
+  this.handleBrowserHistoryMovement = (state) => {
+    //console.log("Loading state: " + (new Params(state.state)).getURL());
+    this.updateWidgets(state.state, false);
+  };
   // constructor ///////////////////////////////////////////////////////
   this.p = new Params(p);
   
@@ -201,4 +215,7 @@ function Controller(p, countriesURL){
   this.widgetNames.push("map");
   this.widgets.table = new Table(new Params(this.p), this.format);
   this.widgetNames.push("table");
+
+  history.replaceState(this.p.getSerializableCopy(), "", this.p.getURL());
+  window.onpopstate = this.handleBrowserHistoryMovement;
 }

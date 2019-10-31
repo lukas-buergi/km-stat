@@ -43,8 +43,8 @@ for index, country in enumerate(d["features"]):
     del country['longitude']
   except KeyError:
     pass
-  d['coordinates'][cid] = { 'lat' : countryDBObject.laengengrad,
-                            'lon' : countryDBObject.breitengrad,
+  d['coordinates'][cid] = { 'lon' : countryDBObject.laengengrad,
+                            'lat' : countryDBObject.breitengrad,
                           }
 
 f = open('/home/t4b/tmp/world_countries.json', 'w')

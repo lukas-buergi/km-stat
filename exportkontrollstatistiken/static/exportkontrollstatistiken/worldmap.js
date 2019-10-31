@@ -130,36 +130,38 @@ function Worldmap(params, countriesSource, numberFormat, dataColumnType){
           .on('mouseover', (d, i, nodes) => this.mouseOverCountry(d, i, nodes, dataByID, this.numberFormat))
           .on('mouseout', (d, i, nodes) => this.mouseOutCountry(d, i, nodes, dataByID, color));
 
-      // add arrows to map
-      let features = []
-      const featureTemplate = {"type":"Feature","geometry":{"type":"LineString","coordinates":[[8,47], []]}}
-      data['data'].forEach(d => {
-        if(d[dColumn] > 0){
-          const id = d[idColumn];
-          let feature = JSON.parse(JSON.stringify(featureTemplate));
-          if(id in this.countries.coordinates){
-            feature['geometry']['coordinates'][1][0] = this.countries.coordinates[id]['lon'];
-            feature['geometry']['coordinates'][1][1] = this.countries.coordinates[id]['lat'];
-            features.push(feature);
-          } else {
-            console.log("TODO: Fix country " + id);
+      // add arrows to map if only few countries are selected
+      if(data['data'].length < 10){
+        let features = []
+        const featureTemplate = {"type":"Feature","geometry":{"type":"LineString","coordinates":[[8,47], []]}}
+        data['data'].forEach(d => {
+          if(d[dColumn] > 0){
+            const id = d[idColumn];
+            let feature = JSON.parse(JSON.stringify(featureTemplate));
+            if(id in this.countries.coordinates){
+              // TODO: Lat/Lon are switched around I think in the data file.
+              feature['geometry']['coordinates'][1][0] = this.countries.coordinates[id]['lon'];
+              feature['geometry']['coordinates'][1][1] = this.countries.coordinates[id]['lat'];
+              features.push(feature);
+            } else {
+              console.log("TODO: Fix country " + id);
+            }
           }
-        }
-      });
-      //const exampleFeatures = [{"type":"Feature","geometry":{"type":"LineString","coordinates":[[8,47],[-97, 38]]}}];
-      this.arrows.selectAll('path').remove();
-      this.arrows
-        .selectAll('path')
-        .data(features)
-        .enter()
-          .append('path')
-          .attr('d', this.path)
-          .attr('marker-end', 'url(#head)')
-          .style('stroke-width', '2px')
-          .style('stroke', '#000000')
-          .style('opacity', 0.4)
-          .style('fill', 'none');
-
+        });
+        //const exampleFeatures = [{"type":"Feature","geometry":{"type":"LineString","coordinates":[[8,47],[-97, 38]]}}];
+        this.arrows.selectAll('path').remove();
+        this.arrows
+          .selectAll('path')
+          .data(features)
+          .enter()
+            .append('path')
+            .attr('d', this.path)
+            .attr('marker-end', 'url(#head)')
+            .style('stroke-width', '1px')
+            .style('stroke', '#000000')
+            .style('opacity', 1)
+            .style('fill', 'none');
+      }
       notLoading("worldmap");
     });
   };
@@ -204,7 +206,7 @@ function Worldmap(params, countriesSource, numberFormat, dataColumnType){
     if (d.id in dataByID) {
       return color(dataByID[d.id]['color']);
     } else if(d.id == 'CH'){
-      return 'red';
+      return 'black';
     } else {
       return 'white';
     }
@@ -259,8 +261,9 @@ function Worldmap(params, countriesSource, numberFormat, dataColumnType){
       .append('g')
         .attr('class', 'map');
 
+  // add def for arrowhead that is needed for drawing arrows
   const svg = d3.select('svg.worldmap_svg');
-  svg.append('defs').html("<marker id='head' orient='auto' markerWidth='2' markerHeight='4' refX='0.1' refY='2'><path d='M0,0 V4 L2,2 Z'/></marker>");
+  svg.append('defs').html("<marker id='head' orient='auto' markerWidth='4' markerHeight='8' refX='0.1' refY='4'><path d='M0,0 V8 L4,4 Z'/></marker>");
 
   // draw grid onto map
   this.graticule = this.map

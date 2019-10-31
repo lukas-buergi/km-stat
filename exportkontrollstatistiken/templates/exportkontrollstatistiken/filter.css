@@ -18,29 +18,32 @@ License along with km-stat.  If not, see
 <https://www.gnu.org/licenses/>.
 {% endcomment %}
 
-.filter-box {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content:center;
-  align-content:center;
-  
+
+.filter_container{
   background-color: #ffcddc;
-  /*#ffebf1;
-  border: solid;
-  border-width: 1px;
-  border-radius: 5px;
-  * */
   box-shadow: 1px 1px 1px 0px #ddc9ce;
   
   position: -webkit-sticky;
   position: sticky;
   top: 0;
-  z-index: 4;
 
-  /*margin: 1px 0;*/
   width: 100%;
   padding: 3px 0;
+  z-index: 4;
+}
+.filter_constrainer{
+  max-width: 50rem;
+
+  margin: auto;
+  
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content:center;
+  align-content:center;
+}
+.filter_grow{
+  flex-grow:1;
 }
 .filter.extended {
   display: none;
@@ -51,6 +54,8 @@ License along with km-stat.  If not, see
   flex-wrap: wrap;
   justify-content:center;
   align-content:center;
+
+  flex-grow:1;
 
   margin: 1px;
 }

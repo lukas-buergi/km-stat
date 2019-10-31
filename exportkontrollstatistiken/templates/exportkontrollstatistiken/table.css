@@ -43,7 +43,6 @@ License along with km-stat.  If not, see
 }
 .table_pageNavigation input {
   flex-grow:1;
-
 }
 .table_content {
   width: 100%;
@@ -57,9 +56,6 @@ License along with km-stat.  If not, see
 }
 .table_content td{
   padding: 10px;
-}
-.table_content tr{
-
 }
 .table_content tbody tr:nth-child(odd){
   background-color: #EEEEEE;
