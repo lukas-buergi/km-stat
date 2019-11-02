@@ -130,6 +130,8 @@ function Worldmap(params, countriesSource, numberFormat, dataColumnType){
           .on('mouseover', (d, i, nodes) => this.mouseOverCountry(d, i, nodes, dataByID, this.numberFormat))
           .on('mouseout', (d, i, nodes) => this.mouseOutCountry(d, i, nodes, dataByID, color));
 
+      // remove any arrows from previous times
+      this.arrows.selectAll('path').remove();
       // add arrows to map if only few countries are selected
       if(data['data'].length < 10){
         let features = []
@@ -149,7 +151,6 @@ function Worldmap(params, countriesSource, numberFormat, dataColumnType){
           }
         });
         //const exampleFeatures = [{"type":"Feature","geometry":{"type":"LineString","coordinates":[[8,47],[-97, 38]]}}];
-        this.arrows.selectAll('path').remove();
         this.arrows
           .selectAll('path')
           .data(features)
