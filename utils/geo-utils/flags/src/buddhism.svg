@@ -1,0 +1,15 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" 
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" 
+ width="900" height="600" id="Flag_of_Buddhism">
+ <rect width="900" height="600" fill="#ff9800" />
+ <rect width="150" height="600" x="0" fill="#0000ff" />
+ <rect width="150" height="600" x="150" fill="#ffff00" />
+ <rect width="150" height="600" x="300" fill="#ff0000" />
+ <rect width="150" height="600" x="450" fill="#ffffff" />
+ <rect width="150" height="120" x="750" fill="#0000ff" />
+ <rect width="150" height="120" x="750" y="120" fill="#ffff00" />
+ <rect width="150" height="120" x="750" y="240" fill="#ff0000" />
+ <rect width="150" height="120" x="750" y="360" fill="#ffffff" />
+</svg>

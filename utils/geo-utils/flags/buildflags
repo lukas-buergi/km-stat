@@ -1,0 +1,686 @@
+#!/bin/sh
+
+if test "$*" = "" ; then
+   echo -e "\
+Usage: pkgflags [-all] [-diff] [-reorder]\n\
+                [-echo raw,fullname,abbrev]\n\
+                [-abbrev <name>] [-expand <name>] [-pkg <number>]\n\
+                [-types <list>] [-heights <list>] <list_of_flags>\n\n\
+This script is intended to build the various flag formats from the source
+SVG flags (expanded in directory flags/src). You don't need it to run xrmap.
+"
+   exit
+fi
+
+LIST_HEIGHTS="150 480"
+TYPES="src svg eps png xpm"
+
+pkgflags()
+{
+if test "$NUM" = "" ; then
+  NUM=`head -n 1 ChangeLog.flags | cut -d" " -f 2`
+fi
+
+PKG=flags-$NUM
+
+HIDDEN=`/bin/ls hidden`
+if test "$HIDDEN" != "" 
+then
+  mv hidden/* .
+fi
+
+mkdir -p flags
+
+if test `echo $TYPES | grep -c "src"` = "1"
+then
+  echo "" ; echo "Packaging SRC flags ..."
+  mv src flags
+  cp -p buildflags README.flags ChangeLog.flags flags
+  tar cvfj $PKG-src.tar.bz2 flags
+  mv flags/src .
+  rm -f flags/buildflags flags/README.flags flags/ChangeLog.flags
+  mv src_seals flags
+  cp -p README.seals ChangeLog.seals flags
+  tar cvfj seals-$NUM-src.tar.bz2 flags
+  mv flags/src_seals .  
+  rm -f flags/README.seals flags/ChangeLog.seals
+  mv src_maps flags
+  tar cvfj maps-$NUM-src.tar.bz2 flags
+  mv flags/src_maps .  
+fi
+
+if test `echo $TYPES | grep -c "svg"` = "1" && [ -r svg ]
+then
+  echo "" ; echo "Packaging SVG flags ..."
+  mv svg flags
+  tar cvfj $PKG-svg.tar.bz2 flags
+  mv flags/svg .
+fi
+
+if test `echo $TYPES | grep -c "eps"` = "1" && [ -r eps ]
+then
+  echo "" ; echo "Packaging EPS flags ..."
+  mv eps flags
+  tar cvfj $PKG-eps.tar.bz2 flags
+  mv flags/eps .
+fi
+
+if test `echo $TYPES | grep -c "xpm"` = "1"
+then
+  for HEIGHT in $LIST_HEIGHTS
+  do
+    if [ -r xpm_$HEIGHT ]
+    then
+      echo "" ; echo "Packaging xpm_$HEIGHT flags ..."
+      mv xpm_$HEIGHT flags
+      tar cvfj $PKG-xpm_$HEIGHT.tar.bz2 flags
+      mv flags/xpm_$HEIGHT .
+    fi
+  done
+fi
+
+if test `echo $TYPES | grep -c "png"` = "1"
+then
+  for HEIGHT in $LIST_HEIGHTS
+  do
+    if [ -r png_$HEIGHT ]
+    then  
+      echo "" ; echo "Packaging PNG flags ..."
+      mv png_$HEIGHT flags
+      tar cvfj $PKG-png_$HEIGHT.tar.bz2 flags
+      mv flags/png_$HEIGHT .
+    fi
+  done
+fi
+
+rmdir flags
+
+if test "$HIDDEN" != "" 
+then
+  mv $HIDDEN hidden
+fi
+
+}
+
+
+NAMES="\
+afghanistan.svg af.svg\n\
+albania.svg al.svg\n\
+algeria.svg dz.svg\n\
+andorra.svg ad.svg\n\
+angola.svg ao.svg\n\
+antarctica.svg aq.svg\n\
+argentina.svg ar.svg\n\
+armenia.svg am.svg\n\
+australia.svg au.svg\n\
+austria.svg at.svg\n\
+azerbaijan.svg az.svg\n\
+bahrain.svg bh.svg\n\
+bangladesh.svg bd.svg\n\
+barbados.svg bb.svg\n\
+belarus.svg by.svg\n\
+belgium.svg be.svg\n\
+belize.svg bz.svg\n\
+benin.svg bj.svg\n\
+bhutan.svg bt.svg\n\
+bolivia.svg bo.svg\n\
+bosnia_and_herzegovina.svg ba.svg\n\
+botswana.svg bw.svg\n\
+brazil.svg br.svg\n\
+brunei_darussalam.svg bn.svg\n\
+bulgaria.svg bg.svg\n\
+burkina_faso.svg bf.svg\n\
+burundi.svg bi.svg\n\
+cambodia.svg kh.svg\n\
+cameroon.svg cm.svg\n\
+canada.svg ca.svg\n\
+capeverde.svg cv.svg\n\
+central_african_republic.svg cf.svg\n\
+chad.svg td.svg\n\
+chile.svg cl.svg\n\
+china.svg cn.svg\n\
+colombia.svg co.svg\n\
+comoros.svg km.svg\n\
+congo_brazzaville.svg cg.svg\n\
+congo_kinshasa.svg cd.svg\n\
+cook_islands.svg ck.svg\n\
+costa_rica.svg cr.svg\n\
+cote_divoire.svg ci.svg\n\
+croatia.svg hr.svg\n\
+cuba.svg cu.svg\n\
+cyprus.svg cy.svg\n\
+czech_republic.svg cz.svg\n\
+denmark.svg dk.svg\n\
+djibouti.svg dj.svg\n\
+dominican_republic.svg do.svg\n\
+dominica.svg dm.svg\n\
+ecuador.svg ec.svg\n\
+egypt.svg eg.svg\n\
+el_salvador.svg sv.svg\n\
+equatorial_guinea.svg gq.svg\n\
+eritrea.svg er.svg\n\
+estonia.svg ee.svg\n\
+ethiopia.svg et.svg\n\
+fiji.svg fj.svg\n\
+finland.svg fi.svg\n\
+france.svg fr.svg\n\
+gabon.svg ga.svg\n\
+gambia.svg gm.svg\n\
+georgia.svg ge.svg\n\
+germany.svg de.svg\n\
+ghana.svg gh.svg\n\
+greece.svg gr.svg\n\
+grenada.svg gd.svg\n\
+guatemala.svg gt.svg\n\
+guinea_bissau.svg gw.svg\n\
+guinea.svg gn.svg\n\
+guyana.svg gy.svg\n\
+haiti.svg ht.svg\n\
+honduras.svg hn.svg\n\
+hungary.svg hu.svg\n\
+iceland.svg is.svg\n\
+india.svg in.svg\n\
+indonesia.svg id.svg\n\
+iran.svg ir.svg\n\
+iraq.svg iq.svg\n\
+ireland.svg ie.svg\n\
+israel.svg il.svg\n\
+italy.svg it.svg\n\
+jamaica.svg jm.svg\n\
+japan.svg jp.svg\n\
+jordan.svg jo.svg\n\
+kazakhstan.svg kz.svg\n\
+kenya.svg ke.svg\n\
+kiribati.svg ki.svg\n\
+kuwait.svg kw.svg\n\
+kyrgyzstan.svg kg.svg\n\
+laos.svg la.svg\n\
+latvia.svg lv.svg\n\
+lebanon.svg lb.svg\n\
+lesotho.svg ls.svg\n\
+liberia.svg lr.svg\n\
+libyan_arab_jamahiriya.svg ly.svg\n\
+liechtenstein.svg li.svg\n\
+lithuania.svg lt.svg\n\
+luxembourg.svg lu.svg\n\
+macedonia.svg mk.svg\n\
+madagascar.svg mg.svg\n\
+malawi.svg mw.svg\n\
+malaysia.svg my.svg\n\
+maldives.svg mv.svg\n\
+mali.svg ml.svg\n\
+malta.svg mt.svg\n\
+mauritania.svg mr.svg\n\
+mauritius.svg mu.svg\n\
+mexico.svg mx.svg\n\
+micronesia.svg fm.svg\n\
+moldova.svg md.svg\n\
+monaco.svg mc.svg\n\
+mongolia.svg mn.svg\n\
+morocco.svg ma.svg\n\
+mozambique.svg mz.svg\n\
+myanmar.svg mm.svg\n\
+namibia.svg na.svg\n\
+nauru.svg nr.svg\n\
+nepal.svg np.svg\n\
+netherlands.svg nl.svg\n\
+newzealand.svg nz.svg\n\
+nicaragua.svg ni.svg\n\
+nigeria.svg ng.svg\n\
+niger.svg ne.svg\n\
+niue.svg nu.svg\n\
+northern_mariana.svg mp.svg\n\
+north_korea.svg kp.svg\n\
+norway.svg no.svg\n\
+oman.svg om.svg\n\
+pakistan.svg pk.svg\n\
+palau.svg pw.svg\n\
+palestine.svg ps.svg\n\
+panama.svg pa.svg\n\
+papua_new_guinea.svg pg.svg\n\
+paraguay.svg py.svg\n\
+peru.svg pe.svg\n\
+philippines.svg ph.svg\n\
+poland.svg pl.svg\n\
+portugal.svg pt.svg\n\
+puerto_rico.svg pr.svg\n\
+qatar.svg qa.svg\n\
+romania.svg ro.svg\n\
+russian_federation.svg ru.svg\n\
+rwanda.svg rw.svg\n\
+saint_kitts_and_nevis.svg kn.svg\n\
+saint_lucia.svg lc.svg\n\
+saint_vincent_and_the_grenadines.svg vc.svg\n\
+samoa.svg ws.svg\n\
+san_marino.svg sm.svg\n\
+sao_tome_and_principe.svg st.svg\n\
+saudi_arabia.svg sa.svg\n\
+senegal.svg sn.svg\n\
+serbia_and_montenegro.svg yu.svg\n\
+seychelles.svg sc.svg\n\
+sierra_leone.svg sl.svg\n\
+singapore.svg sg.svg\n\
+slovakia.svg sk.svg\n\
+slovenia.svg si.svg\n\
+solomonislands.svg sb.svg\n\
+somalia.svg so.svg\n\
+south_africa.svg za.svg\n\
+south_korea.svg kr.svg\n\
+spain.svg es.svg\n\
+sri_lanka.svg lk.svg\n\
+sudan.svg sd.svg\n\
+suisse.svg ch.svg\n\
+suriname.svg sr.svg\n\
+swaziland.svg sz.svg\n\
+sweden.svg se.svg\n\
+syrian_arab_republic.svg sy.svg\n\
+taiwan.svg tw.svg\n\
+tajikistan.svg tj.svg\n\
+tanzania.svg tz.svg\n\
+thailand.svg th.svg\n\
+timor_leste.svg tp.svg\n\
+togo.svg tg.svg\n\
+tonga.svg to.svg\n\
+trinidad_and_tobago.svg tt.svg\n\
+tunisia.svg tn.svg\n\
+turkey.svg tr.svg\n\
+turkmenistan.svg tm.svg\n\
+tuvalu.svg tv.svg\n\
+uganda.svg ug.svg\n\
+ukraine.svg ua.svg\n\
+united_arab_emirates.svg ae.svg\n\
+united_kingdom.svg gb.svg\n\
+united_states.svg us.svg\n\
+uruguay.svg uy.svg\n\
+uzbekistan.svg uz.svg\n\
+vanuatu.svg vu.svg\n\
+vatican.svg va.svg\n\
+venezuela.svg ve.svg\n\
+vietnam.svg vn.svg\n\
+western_sahara.svg eh.svg\n\
+yemen.svg ye.svg\n\
+zambia.svg zm.svg\n\
+zimbabwe.svg zw.svg\n\
+australia_capital_territory.svg au-act.svg\n\
+australia_christmas_island.svg au-cx.svg\n\
+australia_lord_howe_island.svg au-lhi.svg\n\
+australia_norfolk_island.svg au-nf.svg\n\
+australia_northern_territory.svg au-nt.svg\n\
+australia_new_south_wales.svg au-nsw.svg\n\
+australia_queensland.svg au-qld.svg\n\
+australia_south_australia.svg au-sa.svg\n\
+australia_tasmania.svg au-tas.svg\n\
+australia_victoria.svg au-vic.svg\n\
+australia_western_australia.svg au-wa.svg\n\
+canada_acadia.svg ca-ac.svg\n\
+canada_alberta.svg ca-ab.svg\n\
+canada_british_columbia.svg ca-bc.svg\n\
+canada_manitoba.svg ca-mb.svg\n\
+canada_new_brunswick.svg ca-nb.svg\n\
+canada_newfoundland.svg ca-nf.svg\n\
+canada_northwest_territories.svg ca-nt.svg\n\
+canada_nova_scotia.svg ca-ns.svg\n\
+canada_nunavut.svg ca-nu.svg\n\
+canada_ontario.svg ca-on.svg\n\
+canada_prince_edward_island.svg ca-pe.svg\n\
+canada_quebec.svg ca-qc.svg\n\
+canada_saskatchewan.svg ca-sk.svg\n\
+canada_yukon.svg ca-yu.svg\n\
+china_hong_kong.svg cn-hk.svg\n\
+china_macao.svg cn-mo.svg\n\
+denmark_faroe.svg dk-fo.svg\n\
+denmark_greenland.svg dk-gl.svg\n\
+europeanunion.svg eu.svg\n\
+guadeloupe.svg fr-gp.svg\n\
+martinique.svg fr-mq.svg\n\
+new_caledonia.svg fr-nc.svg\n\
+french_polynesia.svg fr-pf.svg\n\
+st_pierre_and_miquelon.svg fr-pm.svg\n\
+reunion.svg fr-re.svg\n\
+french_austral_territories.svg fr-ta.svg\n\
+wallis_and_futuna.svg fr-wf.svg\n\
+mayotte.svg fr-yt.svg\n\
+netherlands_antilles.svg nl-an.svg\n\
+aruba.svg nl-aw.svg\n\
+spain_baleares.svg es-ib.svg\n\
+spain_canary.svg es-ic.svg\n\
+portugal_azores.svg pt-az.svg\n\
+portugal_madeira.svg pt-md.svg\n\
+uk_england.svg gb-en.svg\n\
+uk_guernsey.svg gb-gg.svg\n\
+uk_gibraltar.svg gb-gi.svg\n\
+uk_isle_of_man.svg gb-im.svg\n\
+uk_jersey.svg gb-je.svg\n\
+uk_kernow.svg gb-kn.svg\n\
+uk_northern_ireland.svg gb-ni.svg\n\
+uk_orkney.svg gb-or.svg\n\
+uk_scotland.svg gb-sc.svg\n\
+uk_shetland.svg gb-se.svg\n\
+uk_wales.svg gb-wa.svg\n\
+anguilla.svg gb-ai.svg\n\
+bermuda.svg gb-bm.svg\n\
+falkland_islands.svg gb-fk.svg\n\
+south_georgia_and_south_sandwich_islands.svg gb-gs.svg\n\
+uk_british_indian_ocean_territory.svg gb-io.svg\n\
+cayman_islands.svg gb-ky.svg\n\
+montserrat.svg gb-ms.svg\n\
+pitcairn_islands.svg gb-pn.svg\n\
+saint_helena.svg gb-sh.svg\n\
+turks_and_caicos.svg gb-tc.svg\n\
+british_virgin_islands.svg gb-vg.svg\n\
+usa_alaska.svg us-ak.svg\n\
+usa_alabama.svg us-al.svg\n\
+usa_arkansas.svg us-ar.svg\n\
+usa_arizona.svg us-az.svg\n\
+usa_california.svg us-ca.svg\n\
+usa_colorado.svg us-co.svg\n\
+usa_connecticut.svg us-ct.svg\n\
+usa_district_of_columbia.svg us-dc.svg\n\
+usa_delaware.svg us-de.svg\n\
+usa_florida.svg us-fl.svg\n\
+usa_georgia.svg us-ga.svg\n\
+usa_hawaii.svg us-hi.svg\n\
+usa_iowa.svg us-ia.svg\n\
+usa_idaho.svg us-id.svg\n\
+usa_illinois.svg us-il.svg\n\
+usa_indiana.svg us-in.svg\n\
+usa_kansas.svg us-ks.svg\n\
+usa_kentucky.svg us-ky.svg\n\
+usa_louisiana.svg us-la.svg\n\
+usa_massachusetts.svg us-ma.svg\n\
+usa_maryland.svg us-md.svg\n\
+usa_maine.svg us-me.svg\n\
+usa_michigan.svg us-mi.svg\n\
+usa_minnesota.svg us-mn.svg\n\
+usa_missouri.svg us-mo.svg\n\
+usa_mississippi.svg us-ms.svg\n\
+usa_montana.svg us-mt.svg\n\
+usa_northcarolina.svg us-nc.svg\n\
+usa_northdakota.svg us-nd.svg\n\
+usa_nebraska.svg us-ne.svg\n\
+usa_newhampshire.svg us-nh.svg\n\
+usa_newjersey.svg us-nj.svg\n\
+usa_newmexico.svg us-nm.svg\n\
+usa_nevada.svg us-nv.svg\n\
+usa_newyork.svg us-ny.svg\n\
+usa_ohio.svg us-oh.svg\n\
+usa_oklahoma.svg us-ok.svg\n\
+usa_oregon.svg us-or.svg\n\
+usa_pennsylvania.svg us-pa.svg\n\
+usa_rhode_island.svg us-ri.svg\n\
+usa_southcarolina.svg us-sc.svg\n\
+usa_southdakota.svg us-sd.svg\n\
+usa_tennessee.svg us-tn.svg\n\
+usa_texas.svg us-tx.svg\n\
+usa_utah.svg us-ut.svg\n\
+usa_virginia.svg us-va.svg\n\
+usa_vermont.svg us-vt.svg\n\
+usa_washington.svg us-wa.svg\n\
+usa_wisconsin.svg us-wi.svg\n\
+usa_westvirginia.svg us-wv.svg\n\
+usa_wyoming.svg us-wy.svg\n\
+american_samoa.svg us-as.svg\n\
+antigua_and_barbuda.svg us-ag.svg\n\
+bahamas.svg us-bs.svg\n\
+guam.svg us-gu.svg\n\
+marshall_islands.svg us-mh.svg\n\
+usa_virgin_islands.svg us-vi.svg\n\
+wake_island.svg us-wk.svg"
+
+MUTE=0
+ORDER=0
+
+for i
+do case $1 in
+   -all)
+      LIST_FLAGS=`echo -e "$NAMES" | cut -d" " -f 1`
+      MUTE=1
+      shift
+      ;;
+   -abbrev)
+      FLAG=`basename $2 | cut -d"." -f 1`
+      ABBREV=`echo -e "$NAMES" | grep $FLAG | cut -d" " -f 2`
+      echo $ABBREV
+      exit
+      ;;
+   -clean)
+      rm -f *.bz2
+      rm -rf eps svg xpm_* png_*
+      exit
+      ;;
+   -diff)
+      cd src
+      RAW_LIST=`/bin/ls *.svg`
+      cd ..
+      rm -f unlinked
+      for i in $RAW_LIST
+      do
+         if test `echo -e "$NAMES" | grep -c $i` = "0" 
+	 then
+	    echo $i | cut -d"." -f 1 >> unlinked
+	 fi
+      done
+      RAW_LIST=`cat unlinked | sort`
+      rm -f unlinked
+      for i in $RAW_LIST
+      do
+	 echo $i.svg >> unlinked
+      done
+      echo "File 'unlinked' created"
+      exit
+      ;;
+   -echo)
+      if test "$2" = ""
+      then
+        LIST=`echo -e "$NAMES"`
+      fi
+      if test "$2" = "raw"
+      then
+        LIST=`echo -e "$NAMES" | tr "\n" "§" | sed -e "/.svg/s//.svg\", \"/g" | \
+	     sed -e "/\" /s//\"/g" | sed -e "/ \"§/s//\n\"/g"`
+      fi
+      if test "$2" = "fullname"
+      then
+        LIST=`echo -e "$NAMES" | cut -d" " -f 1`
+      fi
+      if test "$2" = "abbrev"
+      then
+        LIST=`echo -e "$NAMES" | cut -d" " -f 2`
+      fi
+      if test "$ORDER" = "0"
+      then
+        echo "$LIST"
+      else
+        REORDERED=`echo "$LIST" | cut -d"." -f 1 | sort`
+	for i in $REORDERED
+	do
+	  echo $i.svg
+	done
+      fi
+      exit
+      ;;
+   -expand)
+      FLAG=`basename $2 | cut -d"." -f 1`
+      EXPAND=`echo -e "$NAMES" | grep $FLAG | cut -d" " -f 1`
+      echo $EXPAND
+      exit
+      ;;
+    -pkg)
+      NUM=$2
+      pkgflags
+      exit
+      ;;
+    -reorder)
+      ORDER=1
+      shift
+      ;;
+    -types)
+      shift
+      TYPES="$*"
+      echo Setting TYPES=\"$TYPES\"
+      break
+      ;;
+    -heights)
+      shift
+      LIST_HEIGHTS="$*"
+      echo Setting LIST_HEIGHTS=\"$LIST_HEIGHTS\"
+      break
+      ;;
+    *)
+      LIST_FLAGS="$*"
+      break
+      ;;
+   esac
+done
+
+HIDDEN=`/bin/ls hidden`
+if test "$HIDDEN" != "" 
+then
+  mv hidden/* .
+fi
+
+for ENTRY in $LIST_FLAGS
+do
+
+if [ -r src ]
+then
+  cd src
+  FLAG_NAMES=`/bin/ls *.svg | grep $ENTRY`
+  cd ..
+fi
+
+for FLAG in $FLAG_NAMES
+do
+
+if test "$FLAG" = "" 
+then
+  if [ -r $ENTRY ]
+  then
+    FLAG=$ENTRY
+  fi
+  if [ -r $ENTRY.svg ]
+  then
+    FLAG=$ENTRY.svg
+  fi 
+fi
+
+if test "$FLAG" = ""
+then
+   if test "$MUTE" = "0"
+   then
+     echo "No flag named *$ENTRY* (in *.svg)"
+   fi
+   continue
+fi
+
+if test `echo $FLAG | grep -c usa_florida0.svg` = "1"
+then
+   if [ -r "src/usa_florida0.svg" ]
+   then
+      rm -f src/usa_florida.svg
+      REALFILE="src/usa_florida0.svg"
+      echo "Preparation : $REALFILE --> src/usa_florida.svg"
+      cat "$REALFILE" \
+| sed -e "/#3e1e02/s//#7d4802/g" \
+| sed -e "/#907960/s//#7d4802/g" \
+| sed -e "/#002b4f/s//#7d4802/g" \
+| sed -e "/#004696/s//#7d4802/g" > src/usa_florida.svg
+      FLAG=usa_florida.svg
+   fi
+fi
+
+FLAGPATH=""
+
+if [ -r $FLAG ]
+then
+   FLAGPATH=$FLAG
+fi
+
+if [ -r src/$FLAG ]
+then
+   FLAGPATH=src/$FLAG
+fi
+
+if test "$FLAGPATH" = ""
+then
+   if test "$MUTE" = "0"
+   then
+     echo "No flag named *$ENTRY* (in *.svg)"
+   fi
+   continue
+fi
+
+echo ""
+echo "*******************************************************"
+echo "******   Processing $FLAG ... "
+echo "*******************************************************"
+echo ""
+
+ABBREV=`echo -e "$NAMES" | grep $FLAG | head -n 1 | cut -d" " -f 2 | cut -d"." -f 1`
+
+if test "$ABBREV" = "" 
+then
+  echo "No abbreviated name in given list : aborting !!!"
+  continue
+fi
+  
+for t in $TYPES
+do
+
+  if test "$t" = "svg"
+  then
+    echo "*** abbreviating: $FLAG --> svg/$ABBREV.svg"
+    mkdir -p svg
+    cp -p $FLAGPATH svg/$ABBREV.svg
+    gzip -f -9 svg/$ABBREV.svg    
+  fi
+
+  if test "$t" = "eps" 
+  then
+    echo "*** converting:   $FLAG --> eps/$ABBREV.eps.gz"
+    mkdir -p eps
+    inkscape $FLAGPATH --export-bbox-page \
+             --export-text-to-path --export-eps=eps/$ABBREV.eps
+    gzip -f -9 eps/$ABBREV.eps
+  fi
+
+  for HEIGHT in $LIST_HEIGHTS
+  do
+    if test "$t" = "png" 
+    then
+      mkdir -p png_$HEIGHT
+      cd png_$HEIGHT
+      echo "*** converting:   $FLAG --> png_$HEIGHT/$ABBREV.png"
+      inkscape ../$FLAGPATH --export-height=$HEIGHT --export-png=$ABBREV.png
+      cd ..
+    fi
+    if test "$t" = "xpm"
+    then
+      mkdir -p xpm_$HEIGHT
+      cd xpm_$HEIGHT
+      echo "*** converting:   $FLAG --> xpm_$HEIGHT/$ABBREV.xpm.gz"
+      if [ -r ../png_$HEIGHT/$ABBREV.png ]
+      then
+        convert ../png_$HEIGHT/$ABBREV.png $ABBREV.xpm
+        gzip -f -9 $ABBREV.xpm
+      else
+        inkscape ../$FLAGPATH --export-height=$HEIGHT --export-png=$ABBREV.png
+	convert $ABBREV.png $ABBREV.xpm
+	rm -f $ABBREV.png
+	gzip -f -9 $ABBREV.xpm
+      fi
+      cd ..
+    fi
+  done
+
+done
+
+done
+
+done
+
+if test "$HIDDEN" != "" 
+then
+  mv $HIDDEN hidden
+fi
+

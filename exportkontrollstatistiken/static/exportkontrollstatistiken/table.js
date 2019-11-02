@@ -98,11 +98,17 @@ function Table(params, format){
     }
     
     // treat the data
-    // format monetary amounts
     data.ctypes.forEach(function (type, typeIndex) {
+      // format monetary amounts
       if(type == "money"){
         data.data.forEach(function (row, rowIndex){
           data.data[rowIndex][typeIndex] = this.format(data.data[rowIndex][typeIndex]);
+        }, this);
+      }
+      // replace country codes with flag pictures
+      if(type == "country code"){
+        data.data.forEach(function (row, rowIndex){
+          data.data[rowIndex][typeIndex] = '<object data="/static/exportkontrollstatistiken/flags/' + data.data[rowIndex][typeIndex] + '.png" type="image/png">' + data.data[rowIndex][typeIndex] + '</object>';
         }, this);
       }
     }, this);
@@ -129,10 +135,14 @@ function Table(params, format){
       .selectAll("td")
       .data(d => d)
       .join("td")
-        .text(d => d);
+        .html(d => {
+          console.log(d);
+          return(d);
+        });
 
-    // Right-align monetary amounts. Remove manual right-align in css file.
+    // format table based on column types
     data.ctypes.forEach(function (type, typeIndex) {
+      // Right-align monetary amounts.
       if(type == "money"){
         this.table
           .selectAll("td:nth-child(" + (typeIndex + 1) + ")")
@@ -143,6 +153,14 @@ function Table(params, format){
           .selectAll("td:nth-child(" + (typeIndex + 1) + ")")
           .style('text-align', 'left');
           //.style('background-color', '#00ff00');
+      }
+      // Make country code column small
+      if(type == "country code"){
+        this.table
+          .selectAll("td:nth-child(" + (typeIndex + 1) + ")")
+          .style('white-space', 'nowrap')
+          .style('width', '5px');
+          //.style('background-color', '#ff0000');
       }
     }, this);
   },

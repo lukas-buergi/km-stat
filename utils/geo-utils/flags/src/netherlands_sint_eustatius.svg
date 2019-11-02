@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://web.resource.org/cc/"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://inkscape.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.0"
+   width="468pt"
+   height="314pt"
+   viewBox="0 0 468 314"
+   preserveAspectRatio="xMidYMid meet"
+   id="svg2"
+   sodipodi:version="0.32"
+   inkscape:version="0.42.2"
+   sodipodi:docname="nl_sint_eustatius.svg"
+   sodipodi:docbase="/home/demailly/trucc">
+  <defs
+     id="defs11" />
+  <sodipodi:namedview
+     inkscape:cy="268.43970"
+     inkscape:cx="270.06883"
+     inkscape:zoom="1.2279853"
+     inkscape:window-height="978"
+     inkscape:window-width="1325"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     borderopacity="1.0"
+     bordercolor="#666666"
+     pagecolor="#ffffff"
+     id="base"
+     inkscape:window-x="90"
+     inkscape:window-y="81"
+     inkscape:current-layer="svg2"
+     showguides="true"
+     inkscape:guide-bbox="true" />
+  <metadata
+     id="metadata4">
+Created by potrace 1.7, written by Peter Selinger 2001-2005
+<rdf:RDF>
+  <cc:Work
+     rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type
+       rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+  </cc:Work>
+</rdf:RDF>
+</metadata>
+  <rect
+     style="fill:#ffffff;fill-opacity:1.0000000;fill-rule:nonzero;stroke:none;stroke-width:1.2500000;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4.0000000;stroke-dasharray:none;stroke-opacity:1.0000000"
+     id="rect2130"
+     width="459.74008"
+     height="303.57587"
+     x="5.0672755"
+     y="4.7388425" />
+  <g
+     id="g2122"
+     transform="translate(267.1836,103.1882)">
+    <path
+       id="path2096"
+       d="M 20.856880,39.273000 C 18.112444,40.428552 15.512452,40.717440 13.201348,39.850776 C 11.323576,39.128556 7.4235880,38.550780 4.5347080,38.550780 C -0.37638800,38.550780 -2.1097160,39.850776 -19.009664,57.472944 L -37.065164,76.395108 L -52.231784,75.528444 C -78.809480,74.084004 -81.553916,73.361784 -87.476120,66.284028 C -92.387216,60.650712 -93.253880,60.217380 -99.753860,60.217380 C -105.96495,60.217380 -107.12050,60.795156 -109.86494,64.695144 C -111.59827,67.006248 -113.90937,68.739576 -114.92048,68.306244 C -117.23158,67.439580 -119.97602,70.184016 -119.97602,73.361784 C -119.97602,75.095112 -115.06492,78.417324 -104.80940,83.906196 L -89.642780,91.995060 L -35.909612,93.295056 L 17.823556,94.595052 L 42.812368,81.450648 C 56.534548,74.084004 67.656736,67.872912 67.801180,67.439580 C 67.801180,66.572916 42.379036,46.495200 34.001284,40.861884 C 27.790192,36.673008 26.923528,36.528564 20.856880,39.273000 z "
+       style="fill:#008830;fill-opacity:1.0000000;stroke:none" />
+    <g
+       style="fill:#0048a0;fill-opacity:1.0000000"
+       id="g2116">
+      <path
+         style="fill:#0048a0;fill-opacity:1.0000000;stroke:none"
+         d="M 104.24793,61.236285 L -26.747184,132.59162 L -25.365200,199.60584 L 189.59480,200.44323 L 189.59480,61.201159 C 189.59480,61.201159 106.70348,60.080733 104.24793,61.236285 z "
+         id="path2100"
+         sodipodi:nodetypes="cccccc" />
+      <path
+         style="fill:#0048a0;fill-opacity:1.0000000;stroke:none"
+         d="M -256.47560,199.60584 L -39.955994,200.09773 L -40.531820,134.46160 C -40.531820,134.46160 -168.44674,61.669617 -169.60230,60.658509 L -257.08265,61.201159 L -256.47560,199.60584 z "
+         id="path2098"
+         sodipodi:nodetypes="cccccc" />
+      <path
+         style="fill:#0048a0;fill-opacity:1.0000000;stroke:none"
+         d="M -257.19782,47.217420 C -257.19782,47.217420 -174.45094,49.520727 -168.52874,46.054071 C -165.20653,44.176299 -40.972949,-26.015688 -39.961841,-26.737908 L -40.531820,-93.353921 L -257.19782,-93.353921 L -257.19782,47.217420 z "
+         id="path2092"
+         sodipodi:nodetypes="cccccc" />
+      <path
+         style="fill:#0048a0;fill-opacity:1.0000000;stroke:none"
+         d="M -25.365200,-27.604572 L 105.64551,47.217420 L 189.59480,47.562916 L 189.24931,-93.353921 L -25.972255,-93.584252 L -25.365200,-27.604572 z "
+         id="path2094"
+         sodipodi:nodetypes="cccccc" />
+    </g>
+  </g>
+  <path
+     style="fill:#ff0000;fill-opacity:1.0000000;stroke:none"
+     id="path8"
+     d="M 0.11516536,313.72748 L 467.99856,313.72748 L 467.99856,0.00096000000 L 0.0000000,0.00096000000 L 0.11516536,313.72748 z M 226.05486,75.689616 L 96.055260,150.07828 L 10.111080,150.22272 L 10.111080,10.112040 L 226.31642,9.9968746 L 226.05486,75.689616 z M 456.44304,150.22272 L 372.95441,150.22272 L 241.94370,75.545172 L 241.22148,10.112040 L 348.83226,10.112040 L 456.44304,10.112040 L 456.44304,150.22272 z M 356.77668,157.58936 C 356.77668,158.45603 240.64370,221.14472 235.29928,223.16694 C 233.99928,223.60027 110.35522,157.73381 111.65521,156.57826 C 115.12187,153.40049 231.83262,86.811804 234.14372,86.667360 C 234.57706,86.667360 356.77668,156.43381 356.77668,157.58936 z M 226.63264,237.61134 L 226.77708,303.33336 L 10.833300,302.61114 L 10.111080,164.66712 L 96.344148,164.66712 L 226.63264,237.61134 z M 456.44304,303.33336 L 241.94370,302.61114 L 241.94370,237.61134 L 371.94330,164.66712 L 456.44304,164.66712 L 456.44304,303.33336 z "
+     sodipodi:nodetypes="ccccccccccccccccccccccscccccccccccc" />
+  <path
+     sodipodi:type="star"
+     style="fill:#ffe800;fill-opacity:1.0000000;fill-rule:nonzero;stroke:none;stroke-width:1.2500000;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4.0000000;stroke-dasharray:none;stroke-opacity:1.0000000"
+     id="path2050"
+     sodipodi:sides="5"
+     sodipodi:cx="226.64542"
+     sodipodi:cy="105.78104"
+     sodipodi:r1="22.492357"
+     sodipodi:r2="8.0655642"
+     sodipodi:arg1="0.96007037"
+     sodipodi:arg2="1.5883889"
+     inkscape:flatsided="false"
+     inkscape:rounded="0.0000000"
+     inkscape:randomized="0.0000000"
+     d="M 239.54394,124.20749 L 226.50353,113.84535 L 213.10668,123.74235 L 218.93195,108.13810 L 205.37949,98.455279 L 222.02012,99.173469 L 227.04109,83.292160 L 231.50029,99.340267 L 248.15588,99.207903 L 234.27119,108.40799 L 239.54394,124.20749 z "
+     transform="translate(6.719109,15.61619)" />
+</svg>

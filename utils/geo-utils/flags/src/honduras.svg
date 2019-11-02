@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Sodipodi ("http://www.sodipodi.com/") -->
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://web.resource.org/cc/"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://inkscape.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   height="140mm"
+   id="svg378"
+   sodipodi:docbase="/home/demailly/gis_data/flags/new"
+   sodipodi:docname="honduras.svg"
+   sodipodi:version="0.32"
+   version="1"
+   width="271mm"
+   x="0"
+   y="0"
+   inkscape:version="0.43">
+  <sodipodi:namedview
+     gridoriginx="0mm"
+     gridoriginy="-8mm"
+     gridspacingx="1mm"
+     gridspacingy="1mm"
+     id="base"
+     showgrid="true"
+     inkscape:zoom="1.0662272"
+     inkscape:cx="480.1181"
+     inkscape:cy="248.03149"
+     inkscape:window-width="1234"
+     inkscape:window-height="1097"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:current-layer="svg378" />
+  <defs
+     id="defs380" />
+  <g
+     id="g1312"
+     transform="translate(-1,-2)">
+    <rect
+       y="136.96034"
+       x="0"
+       width="959.78339"
+       style="font-size:12px;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke-width:1pt"
+       id="rect649"
+       height="208.93243" />
+    <rect
+       y="-472.52435"
+       x="-619.34393"
+       width="618.06335"
+       transform="matrix(-1.546849,0,0,-1.546849,4.190893e-4,-233.7145)"
+       style="font-size:12px;fill:#087bce;fill-opacity:1;fill-rule:evenodd;stroke-width:1pt"
+       id="rect148"
+       height="107.95834" />
+    <rect
+       y="-257.75146"
+       x="-620.85632"
+       width="620.85706"
+       transform="matrix(-1.546849,0,0,-1.546849,4.190893e-4,-233.7145)"
+       style="font-size:12px;fill:#087bce;fill-opacity:1;fill-rule:evenodd;stroke-width:1pt"
+       id="rect585"
+       height="104.97778" />
+    <polygon
+       transform="matrix(0.333374,-1.622405e-3,-3.629845e-3,0.31606,291.5722,139.6546)"
+       style="font-size:12px;fill:#087bce;fill-opacity:1;fill-rule:evenodd;stroke-width:1pt"
+       points="591.041,433.161 533.774,391.476 476.501,433.151 498.449,365.806 441.115,324.214 511.946,324.278 533.785,256.897 555.613,324.281 626.445,324.23 569.104,365.812 591.041,433.161 "
+       id="polygon671" />
+    <polygon
+       transform="matrix(0.333374,-1.622405e-3,-3.629845e-3,0.31606,442.663,175.2028)"
+       style="font-size:12px;fill:#087bce;fill-opacity:1;fill-rule:evenodd;stroke-width:1pt"
+       points="591.041,433.161 533.774,391.476 476.501,433.151 498.449,365.806 441.115,324.214 511.946,324.278 533.785,256.897 555.613,324.281 626.445,324.23 569.104,365.812 591.041,433.161 "
+       id="polygon637" />
+    <polygon
+       transform="matrix(0.333374,-1.622405e-3,-3.629845e-3,0.31606,442.663,101.3721)"
+       style="font-size:12px;fill:#087bce;fill-opacity:1;fill-rule:evenodd;stroke-width:1pt"
+       points="591.041,433.161 533.774,391.476 476.501,433.151 498.449,365.806 441.115,324.214 511.946,324.278 533.785,256.897 555.613,324.281 626.445,324.23 569.104,365.812 591.041,433.161 "
+       id="polygon638" />
+    <polygon
+       transform="matrix(0.333374,-1.622405e-3,-3.629845e-3,0.31606,137.7696,175.2028)"
+       style="font-size:12px;fill:#087bce;fill-opacity:1;fill-rule:evenodd;stroke-width:1pt"
+       points="591.041,433.161 533.774,391.476 476.501,433.151 498.449,365.806 441.115,324.214 511.946,324.278 533.785,256.897 555.613,324.281 626.445,324.23 569.104,365.812 591.041,433.161 "
+       id="polygon639" />
+    <polygon
+       transform="matrix(0.333374,-1.622405e-3,-3.629845e-3,0.31606,137.7695,101.3721)"
+       style="font-size:12px;fill:#087bce;fill-opacity:1;fill-rule:evenodd;stroke-width:1pt"
+       points="591.041,433.161 533.774,391.476 476.501,433.151 498.449,365.806 441.115,324.214 511.946,324.278 533.785,256.897 555.613,324.281 626.445,324.23 569.104,365.812 591.041,433.161 "
+       id="polygon640" />
+  </g>
+  <metadata
+     id="metadata13">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:title>Honduras</dc:title>
+        <dc:description />
+        <dc:subject>
+          <rdf:Bag>
+            <rdf:li>latin_america</rdf:li>
+            <rdf:li>south_america</rdf:li>
+            <rdf:li>signs_and_symbols</rdf:li>
+            <rdf:li />
+            <rdf:li>united_nations_member</rdf:li>
+            <rdf:li>flags</rdf:li>
+            <rdf:li>sign</rdf:li>
+            <rdf:li>america</rdf:li>
+          </rdf:Bag>
+        </dc:subject>
+        <dc:publisher>
+          <cc:Agent
+             rdf:about="http://www.openclipart.org">
+            <dc:title>Cezary Biele and Christian Schaller</dc:title>
+          </cc:Agent>
+        </dc:publisher>
+        <dc:creator>
+          <cc:Agent
+             rdf:about="">
+            <dc:title>Cezary Biele and Christian Schaller</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <dc:rights>
+          <cc:Agent
+             rdf:about="">
+            <dc:title>Cezary Biele and Christian Schaller</dc:title>
+          </cc:Agent>
+        </dc:rights>
+        <dc:date />
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <cc:license
+           rdf:resource="http://web.resource.org/cc/PublicDomain">
+          <dc:date />
+        </cc:license>
+        <dc:language>en</dc:language>
+      </cc:Work>
+      <cc:License
+         rdf:about="http://web.resource.org/cc/PublicDomain">
+        <cc:permits
+           rdf:resource="http://web.resource.org/cc/Reproduction" />
+        <cc:permits
+           rdf:resource="http://web.resource.org/cc/Distribution" />
+        <cc:permits
+           rdf:resource="http://web.resource.org/cc/DerivativeWorks" />
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+</svg>

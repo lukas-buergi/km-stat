@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://web.resource.org/cc/"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://inkscape.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.0"
+   x="0.0"
+   y="0.0"
+   width="720"
+   height="480"
+   id="svg1"
+   sodipodi:version="0.32"
+   inkscape:version="0.42"
+   sodipodi:docname="georgia.svg"
+   sodipodi:docbase="flags/svg">
+  <metadata
+     id="metadata14">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     inkscape:cy="113.72736"
+     inkscape:cx="285.67456"
+     inkscape:zoom="1.2279853"
+     inkscape:window-height="825"
+     inkscape:window-width="1413"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     borderopacity="1.0"
+     bordercolor="#666666"
+     pagecolor="#ffffff"
+     id="base"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:current-layer="svg1" />
+  <defs
+     id="defs3" />
+  <g
+     id="g1501"
+     transform="matrix(1.600000,0.000000,0.000000,1.600000,0.180773,0.391953)">
+    <rect
+       width="375.00000"
+       height="250.00000"
+       x="125.00000"
+       y="427.36218"
+       transform="matrix(1.200000,0.000000,0.000000,1.200000,-150.0000,-512.8346)"
+       style="fill:#ffffff;fill-opacity:1.0000000;fill-rule:evenodd;stroke:none;stroke-width:1.0000000pt;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1.0000000"
+       id="rect908" />
+    <path
+       d="M 195.00000,0.0000000 L 195.00000,120.00000 L 0.0000000,120.00000 L 0.0000000,180.00000 L 195.00000,180.00000 L 195.00000,300.00000 L 255.00000,300.00000 L 255.00000,180.00000 L 450.00000,180.00000 L 450.00000,120.00000 L 255.00000,120.00000 L 255.00000,0.0000000 L 195.00000,0.0000000 z "
+       style="fill:#e8112d;fill-opacity:1.0000000;fill-rule:evenodd;stroke:none;stroke-width:1.0000000pt;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1.0000000"
+       id="rect1530" />
+    <g
+       transform="matrix(1.200000,0.000000,0.000000,1.200000,-426.2250,-272.8312)"
+       style="fill:#e8112d;fill-opacity:1.0000000"
+       id="g8391">
+      <path
+         d="M 427.81250,253.00000 C 429.31817,260.90283 430.18750,269.03608 430.18750,277.37500 C 430.18750,285.70481 429.31506,293.82418 427.81250,301.71875 C 430.64147,301.36370 433.51277,301.12500 436.43750,301.12500 C 439.36471,301.12500 442.23122,301.36311 445.06250,301.71875 C 443.55991,293.82410 442.68750,285.70490 442.68750,277.37500 C 442.68750,269.03512 443.55652,260.90354 445.06250,253.00000 C 442.23122,253.35564 439.36471,253.62500 436.43750,253.62500 C 433.51029,253.62500 430.64378,253.35564 427.81250,253.00000 z "
+         style="fill-rule:evenodd;stroke:none;stroke-width:1.0000000pt;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1.0000000"
+         id="rect5259" />
+      <path
+         d="M 460.79687,268.73437 C 452.89404,270.24004 444.76079,271.10937 436.42187,271.10937 C 428.09206,271.10937 419.97269,270.23692 412.07812,268.73437 C 412.43317,271.56333 412.67187,274.43463 412.67187,277.35937 C 412.67187,280.28658 412.43376,283.15309 412.07812,285.98437 C 419.97277,284.48178 428.09197,283.60937 436.42187,283.60937 C 444.76175,283.60937 452.89332,284.47838 460.79687,285.98437 C 460.44123,283.15309 460.17187,280.28658 460.17187,277.35937 C 460.17187,274.43216 460.44123,271.56564 460.79687,268.73437 z "
+         style="fill-rule:evenodd;stroke:none;stroke-width:1.0000000pt;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1.0000000"
+         id="path8390" />
+    </g>
+    <use
+       transform="translate(255.0013,0.000000)"
+       id="use1494"
+       x="0.0000000"
+       y="0.0000000"
+       width="450.00000"
+       height="300.00000"
+       xlink:href="#g8391" />
+    <use
+       transform="translate(9.995600e-2,179.9987)"
+       id="use1496"
+       x="0.0000000"
+       y="0.0000000"
+       width="450.00000"
+       height="300.00000"
+       xlink:href="#use1494" />
+    <use
+       transform="translate(-255.1000,0.000000)"
+       id="use1498"
+       x="0.0000000"
+       y="0.0000000"
+       width="450.00000"
+       height="300.00000"
+       xlink:href="#use1496" />
+  </g>
+</svg>

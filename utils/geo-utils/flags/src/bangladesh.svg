@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Sodipodi ("http://www.sodipodi.com/") -->
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://web.resource.org/cc/"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://inkscape.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   height="708.661"
+   id="svg378"
+   version="1"
+   width="1062.99"
+   x="0"
+   y="0"
+   sodipodi:version="0.32"
+   inkscape:version="0.42"
+   sodipodi:docname="bangladesh.svg"
+   sodipodi:docbase="/home/demailly/flags/src">
+  <sodipodi:namedview
+     inkscape:cy="417.84947"
+     inkscape:cx="305.25953"
+     inkscape:zoom="0.43415836"
+     inkscape:window-height="530"
+     inkscape:window-width="950"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     borderopacity="1.0"
+     bordercolor="#666666"
+     pagecolor="#ffffff"
+     id="base"
+     inkscape:window-x="521"
+     inkscape:window-y="24"
+     inkscape:current-layer="svg378" />
+  <defs
+     id="defs380" />
+  <rect
+     height="708.661"
+     id="rect149"
+     style="font-size:12;fill:#239e46;fill-rule:evenodd;stroke-width:1pt;fill-opacity:1.0000000"
+     width="1062.99"
+     x="0"
+     y="0" />
+  <ellipse
+     cx="470.772217"
+     cy="360.698975"
+     id="path307"
+     rx="231.974670"
+     ry="231.974670"
+     style="font-size:12;fill:#fc000f;fill-rule:evenodd;stroke-width:1pt;"
+     transform="matrix(0.997059,0,0,0.997059,-2.02682,-3.71508)" />
+  <metadata
+     id="metadata6">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:title>Bangladesh</dc:title>
+        <dc:description />
+        <dc:subject>
+          <rdf:Bag>
+            <rdf:li>flags</rdf:li>
+            <rdf:li>sign</rdf:li>
+            <rdf:li>signs_and_symbols</rdf:li>
+            <rdf:li />
+            <rdf:li>united_nations_member</rdf:li>
+            <rdf:li>asia</rdf:li>
+          </rdf:Bag>
+        </dc:subject>
+        <dc:publisher>
+          <cc:Agent
+             rdf:about="http://www.openclipart.org">
+            <dc:title>Cezary Biele</dc:title>
+          </cc:Agent>
+        </dc:publisher>
+        <dc:creator>
+          <cc:Agent
+             rdf:about="">
+            <dc:title>Cezary Biele</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <dc:rights>
+          <cc:Agent
+             rdf:about="">
+            <dc:title>Cezary Biele</dc:title>
+          </cc:Agent>
+        </dc:rights>
+        <dc:date />
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <cc:license
+           rdf:resource="http://web.resource.org/cc/PublicDomain">
+          <dc:date />
+        </cc:license>
+        <dc:language>en</dc:language>
+      </cc:Work>
+      <cc:License
+         rdf:about="http://web.resource.org/cc/PublicDomain">
+        <cc:permits
+           rdf:resource="http://web.resource.org/cc/Reproduction" />
+        <cc:permits
+           rdf:resource="http://web.resource.org/cc/Distribution" />
+        <cc:permits
+           rdf:resource="http://web.resource.org/cc/DerivativeWorks" />
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+</svg>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<!-- Creator: CorelDRAW -->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:odm="http://product.corel.com/CGS/11/cddns/" xml:space="preserve" width="600px" height="400px" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd"
+     viewBox="0 0 600 400">
+ <g id="Layer 1">
+  <rect fill="white" x="0" y="0" width="600" height="400"/>
+  <path fill="red" d="M0 0l0 200 300 -200 -300 0z"/>
+  <path fill="red" d="M600 0l0 200 -300 -200 300 0z"/>
+  <path fill="blue" d="M0 400l0 -200 300 200 -300 0z"/>
+  <path fill="blue" d="M600 400l0 -200 -300 200 300 0z"/>
+  <path fill="yellow" d="M300 80l27 83 87 0 -70 51 27 83 -71 -51 -71 51 27 -83 -70 -51 87 0 27 -83zm13 41m58 42m8 26m-22 67m-22 15m-70 0m-22 -15m-22 -67m8 -26m58 -42"/>
+ </g>
+</svg>

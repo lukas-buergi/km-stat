@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
+"http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<!-- Created with Sodipodi ("http://www.sodipodi.com/") -->
+<svg
+   version="1"
+   x="0"
+   y="0"
+   width="675"
+   height="486"
+   id="islenskifaninn"
+   sodipodi:version="0.32"
+   sodipodi:docname="iceland.svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:cc="http://web.resource.org/cc/"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   inkscape:version="0.39"
+   sodipodi:docbase="/home/cschalle/clipart/openclipart-0.10/signs_and_symbols/flags/europe">
+  <sodipodi:namedview
+     id="base"
+     inkscape:zoom="0.94135802"
+     inkscape:cx="270.00000"
+     inkscape:cy="194.40000"
+     inkscape:window-width="640"
+     inkscape:window-height="538"
+     inkscape:window-x="5"
+     inkscape:window-y="56" />
+  <defs
+     id="defs380" />
+  <rect
+     width="675"
+     height="486"
+     x="0"
+     y="0"
+     style="fill:#003897;fill-rule:evenodd;stroke-width:0pt;fill-opacity:1;"
+     id="blarfeldur" />
+  <path
+     d="M 0 189 L 189 189 L 189 0 L 297 0 L 297 189 L 675 189 L 675 297 L 297 297 L 297 486 L 189 486 L 189 297 L 0 297 L 0 189 z "
+     style="fill:#ffffff;fill-rule:evenodd;stroke-width:0pt;"
+     id="hviturkross"
+     sodipodi:fill-cmyk="(0 0 0 0)" />
+  <path
+     d="M 0 216 L 216 216 L 216 0 L 270 0 L 270 216 L 675 216 L 675 270 L 270 270 L 270 486 L 216 486 L 216 270 L 0 270 L 0 216 z "
+     style="fill:#d72828;fill-rule:evenodd;stroke-width:0pt;fill-opacity:1;"
+     id="raudurkross" />
+
+  <metadata>
+    <rdf:RDF 
+     xmlns="http://web.resource.org/cc/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+      <Work rdf:about="">
+        <dc:title>Iceland</dc:title>
+	<dc:description>HASH(0x852c614)</dc:description>
+        <dc:subject>
+          <rdf:Bag>
+            <rdf:li>europe</rdf:li>
+            <rdf:li>HASH(0x84f6bf4)</rdf:li>
+            <rdf:li>HASH(0x85827b8)</rdf:li>
+            <rdf:li>HASH(0x867357c)</rdf:li>
+            <rdf:li>flags</rdf:li>
+            <rdf:li>HASH(0x8501fa4)</rdf:li>
+            <rdf:li>signs_and_symbols</rdf:li>
+            <rdf:li></rdf:li>
+          </rdf:Bag>
+        </dc:subject>
+        <dc:publisher>
+           <Agent rdf:about="http://www.openclipart.org">
+             <dc:title>Aki G. Karlsson </dc:title>
+           </Agent>
+         </dc:publisher>
+         <dc:creator>
+           <Agent rdf:about="">
+             <dc:title>Aki G. Karlsson </dc:title>
+           </Agent>
+        </dc:creator>
+         <dc:rights>
+           <Agent rdf:about="">
+             <dc:title>Aki G. Karlsson </dc:title>
+           </Agent>
+        </dc:rights>
+        <dc:date></dc:date>
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <license rdf:resource="http://web.resource.org/cc/PublicDomain">
+	  <dc:date></dc:date>
+	</license>
+        <dc:language>en</dc:language>
+      </Work>
+
+      <License rdf:about="http://web.resource.org/cc/PublicDomain">
+         <permits rdf:resource="http://web.resource.org/cc/Reproduction" />
+         <permits rdf:resource="http://web.resource.org/cc/Distribution" />
+         <permits rdf:resource="http://web.resource.org/cc/DerivativeWorks" />
+      </License>
+
+
+    </rdf:RDF>
+  </metadata>
+</svg>

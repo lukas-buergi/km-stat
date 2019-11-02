@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Sodipodi ("http://www.sodipodi.com/") -->
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://web.resource.org/cc/"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://inkscape.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   height="328.80000pt"
+   id="svg704"
+   inkscape:version="0.42"
+   sodipodi:docbase="/usr/share/rmap/flags/flags_svg-1.0"
+   sodipodi:docname="palau.svg"
+   sodipodi:version="0.32"
+   width="578.40000pt">
+  <defs
+     id="defs706" />
+  <sodipodi:namedview
+     gridspacingx="10mm"
+     gridspacingy="10mm"
+     id="base"
+     inkscape:cx="53.616623"
+     inkscape:cy="301.72302"
+     inkscape:window-height="1016"
+     inkscape:window-width="1465"
+     inkscape:window-x="0"
+     inkscape:window-y="28"
+     inkscape:zoom="2.2644628"
+     showgrid="true"
+     snaptogrid="false"
+     inkscape:current-layer="svg704" />
+  <g
+     id="g910"
+     transform="matrix(2.400000,0.000000,0.000000,2.400000,0.441606,-9.615624)">
+    <rect
+       height="496.06299"
+       id="rect721"
+       style="font-size:12.000000px;fill:#4aadd6;fill-rule:evenodd;stroke-width:1.0000000pt"
+       transform="matrix(0.404762,0.000000,0.000000,0.344350,0.000000,4.180889)"
+       width="744.09448"
+       x="0.0000000"
+       y="0.0000000" />
+    <path
+       d="M 372.72247 248.93179 A 125.59128 125.59128 0 1 1  121.53992,248.93179 A 125.59128 125.59128 0 1 1  372.72247 248.93179 z"
+       id="path719"
+       sodipodi:cx="247.13120"
+       sodipodi:cy="248.93179"
+       sodipodi:rx="125.59128"
+       sodipodi:ry="125.59128"
+       sodipodi:type="arc"
+       style="font-size:12.000000px;fill:#ffde00;fill-rule:evenodd;stroke-width:1.0000000pt"
+       transform="matrix(0.422448,0.000000,0.000000,0.404534,28.40659,-13.91720)" />
+  </g>
+  <metadata
+     id="metadata8">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:title>Palau</dc:title>
+        <dc:description />
+        <dc:subject>
+          <rdf:Bag>
+            <rdf:li>oceania</rdf:li>
+            <rdf:li>flags</rdf:li>
+            <rdf:li>micronesia</rdf:li>
+            <rdf:li>sign</rdf:li>
+            <rdf:li>signs_and_symbols</rdf:li>
+            <rdf:li />
+            <rdf:li>united_nations_member</rdf:li>
+          </rdf:Bag>
+        </dc:subject>
+        <dc:publisher>
+          <cc:Agent
+             rdf:about="http://www.openclipart.org">
+            <dc:title>Tobias Jakobs</dc:title>
+          </cc:Agent>
+        </dc:publisher>
+        <dc:creator>
+          <cc:Agent
+             rdf:about="">
+            <dc:title>Tobias Jakobs</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <dc:rights>
+          <cc:Agent
+             rdf:about="">
+            <dc:title>Tobias Jakobs</dc:title>
+          </cc:Agent>
+        </dc:rights>
+        <dc:date />
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <cc:license
+           rdf:resource="http://web.resource.org/cc/PublicDomain">
+          <dc:date />
+        </cc:license>
+        <dc:language>en</dc:language>
+      </cc:Work>
+      <cc:License
+         rdf:about="http://web.resource.org/cc/PublicDomain">
+        <cc:permits
+           rdf:resource="http://web.resource.org/cc/Reproduction" />
+        <cc:permits
+           rdf:resource="http://web.resource.org/cc/Distribution" />
+        <cc:permits
+           rdf:resource="http://web.resource.org/cc/DerivativeWorks" />
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+</svg>

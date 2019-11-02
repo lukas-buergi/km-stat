@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Sodipodi ("http://www.sodipodi.com/") -->
+<!-- /Creative Commons Public Domain -->
+<!--
+
+-->
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://web.resource.org/cc/"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://inkscape.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   height="360.00000pt"
+   id="svg555"
+   inkscape:version="0.42"
+   sodipodi:docbase="/pkg/devel/gis/xrmap/data/flags-2.2-src"
+   sodipodi:docname="uk_orkney.svg"
+   sodipodi:version="0.32"
+   version="1.0"
+   width="540.00000pt"
+   x="0"
+   y="0">
+  <sodipodi:namedview
+     bordercolor="#666666"
+     borderopacity="1.0"
+     id="base"
+     inkscape:cx="283.75031"
+     inkscape:cy="207.98030"
+     inkscape:grid-bbox="false"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:window-height="742"
+     inkscape:window-width="1375"
+     inkscape:window-x="348"
+     inkscape:window-y="35"
+     inkscape:zoom="1.0000000"
+     pagecolor="#ffffff"
+     showgrid="false"
+     inkscape:current-layer="svg555" />
+  <defs
+     id="defs557" />
+  <g
+     id="g1317"
+     transform="matrix(1.800000,0.000000,0.000000,1.800000,-1.509200,-1.562300)">
+    <rect
+       y="1.3009877"
+       x="1.5018921"
+       width="373.52100"
+       style="font-size:12.000000px;fill:#ffff00;fill-opacity:1.0000000;fill-rule:evenodd;stroke-width:1.0000000pt"
+       id="rect575"
+       height="248.80382" />
+    <rect
+       y="103.08845"
+       x="1.2500000"
+       width="373.77289"
+       style="font-size:12.000000px;fill:#ff0000;fill-opacity:1.0000000;fill-rule:evenodd;stroke-width:1.0000000pt"
+       id="rect567"
+       height="44.399601" />
+    <rect
+       y="1.3009877"
+       x="108.10527"
+       width="47.189953"
+       style="font-size:12.000000px;fill:#ff0000;fill-opacity:1.0000000;fill-rule:evenodd;stroke-width:1.0000000pt"
+       id="rect569"
+       height="248.67970" />
+  </g>
+  <metadata
+     id="metadata9">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:title>United Kingdom - Orkney Islands</dc:title>
+        <dc:description>HASH(0x85fcd64)</dc:description>
+        <dc:subject>
+          <rdf:Bag>
+            <rdf:li>united_kingdom</rdf:li>
+            <rdf:li>hash(0x87063fc)</rdf:li>
+            <rdf:li>flags</rdf:li>
+            <rdf:li>hash(0x865cb50)</rdf:li>
+            <rdf:li>signs_and_symbols</rdf:li>
+            <rdf:li />
+            <rdf:li>hash(0x8708368)</rdf:li>
+            <rdf:li>europe</rdf:li>
+            <rdf:li>hash(0x84c3e10)</rdf:li>
+            <rdf:li>hash(0x853415c)</rdf:li>
+          </rdf:Bag>
+        </dc:subject>
+        <dc:publisher>
+          <cc:Agent
+             rdf:about="http://www.openclipart.org">
+            <dc:title>Christian Schaller</dc:title>
+          </cc:Agent>
+        </dc:publisher>
+        <dc:creator>
+          <cc:Agent
+             rdf:about="">
+            <dc:title>Christian Schaller</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <dc:rights>
+          <cc:Agent
+             rdf:about="">
+            <dc:title>Christian Schaller</dc:title>
+          </cc:Agent>
+        </dc:rights>
+        <dc:date />
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <cc:license
+           rdf:resource="http://web.resource.org/cc/PublicDomain">
+          <dc:date />
+        </cc:license>
+        <dc:language>en</dc:language>
+      </cc:Work>
+      <cc:License
+         rdf:about="http://web.resource.org/cc/PublicDomain">
+        <cc:permits
+           rdf:resource="http://web.resource.org/cc/Reproduction" />
+        <cc:permits
+           rdf:resource="http://web.resource.org/cc/Distribution" />
+        <cc:permits
+           rdf:resource="http://web.resource.org/cc/DerivativeWorks" />
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+</svg>

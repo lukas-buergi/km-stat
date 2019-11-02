@@ -1,0 +1,219 @@
+Version 2.9  (January 24, 2006)
+
+* Corrected
+belarus.svg  
+bolivia.svg       
+ecuador.svg
+honduras.svg
+peru.svg
+
+* Moved to alternatives
+peru2.svg
+
+Version 2.8  (January 17, 2006)
+
+* Added
+bosnia_and_herzegovina_livno.svg
+chile_magallanes.svg
+italy_florence.svg
+finland_gott_fran.svg
+georgia_ajaria.svg
+germany_aachen.svg
+moldova_gagauzia.svg
+netherlands_friese.svg
+netherlands_zeeuwse.svg
+russia_agin_buryat.svg
+spain_castilla_y_leon.svg
+spain_navarre.svg
+ukraine_crimea.svg
+usa_rebel_flag.svg
+ussr_estonia.svg
+ussr_georgia.svg
+
+* Renamed
+citt_di_torino_01.svg --> italy_torino.svg
+war_flag_of_venice.svg --> italy_venice_war_flag.svg  
+alternatives/usa_florida_original.svg --> usa_florida0.svg
+uk_north_ireland.svg --> uk_northern_ireland.svg
+
+* Corrected
+albania.svg
+belize.svg
+bhutan.svg
+buddhism.svg
+canada_british_columbia.svg
+colombia.svg
+costa_rica.svg
+ecuador.svg
+egypt.svg
+el_salvador.svg
+guatemala.svg
+haiti.svg
+mexico.svg
+olympic.svg
+peru.svg
+serbia.svg
+slovenia.svg
+uk_gibraltar.svg
+uk_northern_ireland.svg
+uruguay.svg
+usa_florida.svg
+usa_kansas.svg
+usa_louisiana.svg
+venezuela.svg
+
+* Older versions moved to ./alternatives)
+afghanistan1.svg
+albania1.svg
+american_samoa1.svg
+antarctica1.svg
+belize1.svg
+bhutan0.svg
+bhutan1.svg
+bhutan2.svg
+cambodia1.svg
+colombia1.svg
+ecuador1.svg
+ecuador2.svg
+egypt1.svg
+egypt2.svg
+guatemala1.svg
+lebanon2.svg
+liechtenstein1.svg
+mexico1.svg
+mexico2.svg
+paraguay1.svg
+peru1.svg
+philippines1.svg
+tajikistan1.svg
+turkmenistan3.svg
+usa_florida0.svg
+usa_kansas2.svg
+usa_louisiana1.svg
+usa_louisiana2.svg
+usa_minnesota1.svg
+vatican1.svg
+venezuela1.svg
+
+Version 2.7  (December 3, 2005)
+
+* Added Netherlands dependencies
+netherlands_bonaire.svg
+netherlands_curacao.svg
+netherlands_saba.svg
+netherlands_sint_eustatius.svg
+netherlands_sint_maarten.svg
+
+* Added
+war_flag_of_venice.svg
+
+* Replaced (and moved older versions to ./alternatives)
+afghanistan.svg
+bhutan.svg
+falkland_islands.svg
+usa_california.svg
+
+* Corrected
+north_korea.svg
+philippines.svg
+
+Version 2.6  (November 16, 2005)
+
+* Replaced (and moved older version to ./alternatives)
+andorra.svg
+guam.svg
+lebanon.svg
+lesotho.svg
+olympic.svg
+turkmenistan.svg
+usa_connecticut.svg
+usa_florida.svg
+usa_missouri.svg
+usa_virginia.svg
+usa_wisconsin.svg
+
+* Corrected
+albania.svg
+bangladesh.svg
+georgia.svg
+iraq.svg
+morocco.svg
+pakistan.svg
+
+
+Versions 2.1 - 2.5  
+
+* Added
+padania.svg
+italian_peace_flag.svg
+olympic.svg
+somaliland.svg
+
+french_austral_territories.svg
+guadeloupe.svg
+martinique.svg
+mayotte.svg
+new_caledonia.svg
+reunion.svg
+
+canada_novascotia.svg
+
+spain_asturias.svg
+spain_baleares.svg
+baleares_seal.svg
+
+portugal_azores.svg
+portugal_madeira.svg
+
+uk_orkney.svg
+uk_shetland.svg
+
+usa_delaware.svg
+usa_georgia.svg
+usa_idaho.svg
+usa_iowa.svg
+usa_kansas.svg
+usa_kentucky.svg
+usa_louisiana.svg
+usa_maine.svg
+usa_massachusetts.svg
+usa_michigan.svg
+usa_minnesota.svg
+usa_montana.svg
+usa_nebraska.svg
+usa_new_england.svg
+usa_newhampshire.svg
+usa_newjersey.svg
+usa_newyork.svg
+usa_northdakota.svg
+usa_oklahoma.svg
+usa_oregon.svg
+usa_pennsylvania.svg
+usa_southdakota.svg
+usa_utah.svg
+usa_vermont.svg
+usa_westvirginia.svg
+
+wake_island.svg
+
+* Corrected
+anguilla.svg
+argentina.svg
+armenia.svg
+aruba.svg
+cayman_islands.svg
+china.svg
+iceland.svg
+italy.svg
+palau.svg
+saint_helena.svg
+sudan.svg
+united_states.svg
+usa_mississippi.svg
+usa_virgin_islands.svg
+usa_washington.svg
+venezuela.svg
+
+Version 2.0  July 2005 : 
+
+* initial import of SVG flags from openclipart collection

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://web.resource.org/cc/"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://inkscape.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   height="140mm"
+   viewBox="0 0 1 3"
+   width="280mm"
+   id="svg2"
+   sodipodi:version="0.32"
+   inkscape:version="0.42"
+   sodipodi:docname="am.svg"
+   sodipodi:docbase="/usr/share/rmap/flags/svg">
+  <defs
+     id="defs13" />
+  <sodipodi:namedview
+     inkscape:window-height="530"
+     inkscape:window-width="950"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     borderopacity="1.0"
+     bordercolor="#666666"
+     pagecolor="#ffffff"
+     id="base"
+     inkscape:zoom="0.69346032"
+     inkscape:cx="496.06299"
+     inkscape:cy="248.03149"
+     inkscape:window-x="35"
+     inkscape:window-y="375"
+     inkscape:current-layer="svg2" />
+  <g
+     id="g1311"
+     transform="matrix(6.000000,0.000000,0.000000,1.000000,-2.500000,8.478461e-17)">
+    <path
+       id="path4"
+       d="M 0.0000000,0.0000000 L 1.0000000,0.0000000 L 1.0000000,1.0000000 L 0.0000000,1.0000000 L 0.0000000,0.0000000 z "
+       style="fill:#ff0000" />
+    <path
+       id="path6"
+       d="M 0.0000000,1.0000000 L 1.0000000,1.0000000 L 1.0000000,2.0000000 L 0.0000000,2.0000000 L 0.0000000,1.0000000 z "
+       style="fill:#0000ff" />
+    <path
+       id="path8"
+       d="M 0.0000000,2.0000000 L 1.0000000,2.0000000 L 1.0000000,3.0000000 L 0.0000000,3.0000000 L 0.0000000,2.0000000 z "
+       style="fill:#ffa500" />
+  </g>
+  <metadata
+     id="metadata10">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:title> armenia</dc:title>
+        <dc:description />
+        <dc:subject>
+          <rdf:Bag>
+            <rdf:li>flags</rdf:li>
+            <rdf:li>sign</rdf:li>
+            <rdf:li>signs_and_symbols</rdf:li>
+            <rdf:li />
+            <rdf:li>united_nations_member</rdf:li>
+            <rdf:li>europe</rdf:li>
+          </rdf:Bag>
+        </dc:subject>
+        <dc:publisher>
+          <cc:Agent
+             rdf:about="http://www.openclipart.org">
+            <dc:title>AnI AnI</dc:title>
+          </cc:Agent>
+        </dc:publisher>
+        <dc:creator>
+          <cc:Agent
+             rdf:about="">
+            <dc:title>AnI AnI</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <dc:rights>
+          <cc:Agent
+             rdf:about="">
+            <dc:title>AnI AnI</dc:title>
+          </cc:Agent>
+        </dc:rights>
+        <dc:date />
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <cc:license
+           rdf:resource="http://web.resource.org/cc/PublicDomain">
+          <dc:date />
+        </cc:license>
+        <dc:language>en</dc:language>
+      </cc:Work>
+      <cc:License
+         rdf:about="http://web.resource.org/cc/PublicDomain">
+        <cc:permits
+           rdf:resource="http://web.resource.org/cc/Reproduction" />
+        <cc:permits
+           rdf:resource="http://web.resource.org/cc/Distribution" />
+        <cc:permits
+           rdf:resource="http://web.resource.org/cc/DerivativeWorks" />
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+</svg>

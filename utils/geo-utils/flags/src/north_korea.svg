@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://web.resource.org/cc/"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://inkscape.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.0"
+   x="0.00000000"
+   y="0.00000000"
+   width="960.00000"
+   height="480.00000"
+   id="svg1324"
+   sodipodi:version="0.32"
+   inkscape:version="0.43"
+   sodipodi:docname="north_korea.svg"
+   sodipodi:docbase="/home/demailly">
+  <metadata
+     id="metadata12">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     inkscape:cy="144.72361"
+     inkscape:cx="305.25953"
+     inkscape:zoom="1.2279853"
+     inkscape:window-height="970"
+     inkscape:window-width="1221"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     borderopacity="1.0"
+     bordercolor="#666666"
+     pagecolor="#ffffff"
+     id="base"
+     inkscape:window-x="215"
+     inkscape:window-y="-23"
+     inkscape:current-layer="svg1324" />
+  <defs
+     id="defs1326" />
+  <g
+     id="g4435"
+     transform="matrix(1.6,0,0,1.6,0.47229,1.317939)">
+    <rect
+       width="600"
+       height="300"
+       x="0"
+       y="0"
+       style="fill:#0400a7;fill-opacity:1;fill-rule:evenodd"
+       id="rect2812" />
+    <rect
+       width="600"
+       height="196"
+       x="0"
+       y="52"
+       style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd"
+       id="rect4977" />
+    <rect
+       width="600"
+       height="166"
+       x="0"
+       y="66.999985"
+       style="fill:#d80000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-opacity:1"
+       id="rect3687" />
+    <g
+       id="g4415">
+      <path
+         d="M 252.99994,149.50004 C 252.99994,187.33156 222.33146,218.00006 184.49997,218.00006 C 146.66848,218.00006 116,187.33156 116,149.50004 C 116,111.66852 146.66848,81.000007 184.49997,81.000007 C 222.33146,81.000007 252.99994,111.66852 252.99994,149.50004 z "
+         style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd"
+         id="path1338" />
+      <path
+         d="M 217.65661,200.4033 L 184.55696,176.55514 L 151.52696,200.50003 L 163.93761,161.59257 L 130.99997,137.52028 L 171.76981,137.32242 L 184.44322,98.50003 L 197.22972,137.28515 L 237.99997,137.36385 L 205.13262,161.53232 L 217.65661,200.4033 z "
+         style="fill:#d80000;fill-opacity:1;fill-rule:evenodd"
+         id="path2781" />
+    </g>
+  </g>
+</svg>

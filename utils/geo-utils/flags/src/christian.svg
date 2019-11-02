@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg height="140mm" version="1.1" viewBox="0 0 210 140" width="210mm" xmlns="http://www.w3.org/2000/svg">
+  <desc>The Christian flag, produced by Jeff Smith</desc>
+  <rect fill="white" height="140" stroke="gold" width="210" x="0" y="0"/>
+  <rect fill="navy" height="70" width="70" x="0" y="0"/>
+  <polygon fill="crimson" points="17,23 29,23 29,11 41,11 41,23 53,23             53,35 41,35 41,59 29,59 29,35 17,35"/>
+  <metadata>
+    <rdf:RDF xmlns="http://web.resource.org/cc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+      <Work rdf:about="">
+        <dc:title>Clipart by Jeff Smith - Christian</dc:title>
+        <dc:description></dc:description>
+        <dc:subject>
+          <rdf:Bag>
+            <rdf:li>flags</rdf:li>
+            <rdf:li>sign</rdf:li>
+            <rdf:li>signs_and_symbols</rdf:li>
+            <rdf:li></rdf:li>
+            <rdf:li>christianity</rdf:li>
+            <rdf:li>miscellany</rdf:li>
+            <rdf:li>organizations</rdf:li>
+          </rdf:Bag>
+        </dc:subject>
+        <dc:publisher>
+          <Agent rdf:about="http://www.openclipart.org">
+            <dc:title>Jeff Smith</dc:title>
+          </Agent>
+        </dc:publisher>
+        <dc:creator>
+          <Agent rdf:about="">
+            <dc:title>Jeff Smith</dc:title>
+          </Agent>
+        </dc:creator>
+        <dc:rights>
+          <Agent rdf:about="">
+            <dc:title>Jeff Smith</dc:title>
+          </Agent>
+        </dc:rights>
+        <dc:date></dc:date>
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+        <license rdf:resource="http://web.resource.org/cc/PublicDomain">
+          <dc:date></dc:date>
+        </license>
+        <dc:language>en</dc:language>
+      </Work>
+      <License rdf:about="http://web.resource.org/cc/PublicDomain">
+        <permits rdf:resource="http://web.resource.org/cc/Reproduction"/>
+        <permits rdf:resource="http://web.resource.org/cc/Distribution"/>
+        <permits rdf:resource="http://web.resource.org/cc/DerivativeWorks"/>
+      </License>
+    </rdf:RDF>
+  </metadata>
+</svg>

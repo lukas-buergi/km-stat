@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://web.resource.org/cc/"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://inkscape.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="608"
+   height="407"
+   id="svg2"
+   sodipodi:version="0.32"
+   inkscape:version="0.42"
+   sodipodi:docname="portugal_madeira.svg"
+   sodipodi:docbase="/usr/share/rmap/flags/flags_svg-1.0">
+  <metadata
+     id="metadata27">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     inkscape:cy="134.65560"
+     inkscape:cx="259.51192"
+     inkscape:zoom="1.9222853"
+     inkscape:window-height="990"
+     inkscape:window-width="1775"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     borderopacity="1.0"
+     bordercolor="#666666"
+     pagecolor="#ffffff"
+     id="base"
+     inkscape:window-x="58"
+     inkscape:window-y="-33"
+     inkscape:current-layer="svg2" />
+  <defs
+     id="defs4">
+    <marker
+       id="ArrowEnd"
+       viewBox="0 0 10 10"
+       refX="0"
+       refY="5"
+       markerUnits="strokeWidth"
+       markerWidth="4"
+       markerHeight="3"
+       orient="auto">
+      <path
+         d="M 0 0 L 10 5 L 0 10 z"
+         id="path7" />
+    </marker>
+    <marker
+       id="ArrowStart"
+       viewBox="0 0 10 10"
+       refX="10"
+       refY="5"
+       markerUnits="strokeWidth"
+       markerWidth="4"
+       markerHeight="3"
+       orient="auto">
+      <path
+         d="M 10 0 L 0 5 L 10 10 z"
+         id="path10" />
+    </marker>
+  </defs>
+  <g
+     id="g1312"
+     transform="matrix(2.800000,0.000000,0.000000,2.800000,-2.978427,-3.205229)">
+    <path
+       style="fill:#0018cf;stroke:none;stroke-width:0.25000000"
+       d="M 1.3102100,145.31000 L 1.3102100,1.3102100 L 73.309100,1.3102100 L 73.309100,145.31000 L 1.3102100,145.31000 z "
+       id="path14" />
+    <path
+       style="fill:#0018cf;stroke:none;stroke-width:0.25000000"
+       d="M 145.30800,145.31000 L 145.30800,1.3102100 L 217.31000,1.3102100 L 217.31000,145.31000 L 145.30800,145.31000 z "
+       id="path16" />
+    <g
+       style="stroke:none"
+       id="g18">
+      <path
+         id="path20"
+         d="M 73.309100,145.31000 L 73.309100,1.3102100 L 145.30800,1.3102100 L 145.30800,145.31000 L 73.309100,145.31000 z "
+         style="fill:#ffff00;stroke:none;stroke-width:0.25000000" />
+      <path
+         id="path22"
+         d="M 99.958600,82.661800 L 82.560200,82.661800 L 76.310200,93.029000 L 76.310200,53.591500 L 82.560200,63.958600 L 99.958600,63.958600 L 99.958600,46.560200 L 89.591400,40.310200 L 129.02900,40.310200 L 118.66200,46.560200 L 118.66200,63.958600 L 136.06000,63.958600 L 142.31000,53.591500 L 142.31000,93.029000 L 136.06000,82.661800 L 118.66200,82.661800 L 118.66200,100.06000 L 129.02900,106.31000 L 89.591400,106.31000 L 99.958600,100.06000 L 99.958600,82.661800 z "
+         style="fill:#ff0016;stroke:none;stroke-width:0.062500000" />
+      <path
+         id="path24"
+         d="M 106.18500,76.435200 L 82.560200,76.435200 L 82.560200,70.185200 L 106.18500,70.185200 L 106.18500,46.560200 L 112.43500,46.560200 L 112.43500,70.185200 L 136.06000,70.185200 L 136.06000,76.435200 L 112.43500,76.435200 L 112.43500,100.06000 L 106.18500,100.06000 L 106.18500,76.435200 z "
+         style="fill:#ffffff;stroke:none" />
+    </g>
+  </g>
+</svg>

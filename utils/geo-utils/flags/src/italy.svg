@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Sodipodi ("http://www.sodipodi.com/") -->
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://web.resource.org/cc/"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://inkscape.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   sodipodi:docbase="/usr/share/rmap/flags-2.2-src"
+   sodipodi:docname="italy.svg"
+   inkscape:version="0.41"
+   sodipodi:version="0.32"
+   y="0"
+   x="0"
+   width="1062.99"
+   version="1"
+   id="svg378"
+   height="708.661">
+  <sodipodi:namedview
+     inkscape:current-layer="svg378"
+     inkscape:window-y="358"
+     inkscape:window-x="290"
+     inkscape:cy="354.33051"
+     inkscape:cx="531.49499"
+     inkscape:zoom="0.51082252"
+     inkscape:window-height="537"
+     inkscape:window-width="640"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     borderopacity="1.0"
+     bordercolor="#666666"
+     pagecolor="#ffffff"
+     id="base" />
+  <defs
+     id="defs380" />
+  <rect
+     y="0"
+     x="0"
+     width="1062.99"
+     style="font-size:12;fill:#ffffff;fill-rule:evenodd;stroke-width:1pt;"
+     id="rect171"
+     height="708.661" />
+  <rect
+     y="0"
+     x="0"
+     width="354.331"
+     style="fill-opacity:1.0000000;stroke-width:1pt;fill-rule:evenodd;fill:#009600;font-size:12"
+     id="rect403"
+     height="708.661" />
+  <rect
+     y="0"
+     x="708.661"
+     width="354.331"
+     style="font-size:12;fill:#fc0000;fill-rule:evenodd;stroke-width:1pt;"
+     id="rect135"
+     height="708.661" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF
+       id="RDF9">
+      <cc:Work
+         id="Work11"
+         rdf:about="">
+        <dc:title
+           id="title13"> italy</dc:title>
+        <dc:description
+           id="description15" />
+        <dc:subject
+           id="subject17">
+          <rdf:Bag
+             id="Bag19">
+            <rdf:li
+               id="li21">flags</rdf:li>
+            <rdf:li
+               id="li23">sign</rdf:li>
+            <rdf:li
+               id="li25">signs_and_symbols</rdf:li>
+            <rdf:li
+               id="li27" />
+            <rdf:li
+               id="li29">united_nations_member</rdf:li>
+            <rdf:li
+               id="li31">europe</rdf:li>
+          </rdf:Bag>
+        </dc:subject>
+        <dc:publisher
+           id="publisher33">
+          <cc:Agent
+             id="Agent35"
+             rdf:about="http://www.openclipart.org">
+            <dc:title
+               id="title37"> Lauris Kaplinski</dc:title>
+          </cc:Agent>
+        </dc:publisher>
+        <dc:creator
+           id="creator39">
+          <cc:Agent
+             id="Agent41"
+             rdf:about="">
+            <dc:title
+               id="title43"> Lauris Kaplinski</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <dc:rights
+           id="rights45">
+          <cc:Agent
+             id="Agent47"
+             rdf:about="">
+            <dc:title
+               id="title49"> Lauris Kaplinski</dc:title>
+          </cc:Agent>
+        </dc:rights>
+        <dc:date
+           id="date51" />
+        <dc:format
+           id="format53">image/svg+xml</dc:format>
+        <dc:type
+           id="type55"
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <cc:license
+           id="license57"
+           rdf:resource="http://web.resource.org/cc/PublicDomain">
+          <dc:date
+             id="date59" />
+        </cc:license>
+        <dc:language
+           id="language61">en</dc:language>
+      </cc:Work>
+      <cc:License
+         id="License63"
+         rdf:about="http://web.resource.org/cc/PublicDomain">
+        <cc:permits
+           id="permits65"
+           rdf:resource="http://web.resource.org/cc/Reproduction" />
+        <cc:permits
+           id="permits67"
+           rdf:resource="http://web.resource.org/cc/Distribution" />
+        <cc:permits
+           id="permits69"
+           rdf:resource="http://web.resource.org/cc/DerivativeWorks" />
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+</svg>
