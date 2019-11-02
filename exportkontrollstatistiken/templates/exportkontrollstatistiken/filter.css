@@ -72,3 +72,6 @@ License along with km-stat.  If not, see
   align-content:center;
   padding:0.5em
 }
+.filter_year_dropdown {
+  text-align-last: center;
+}

@@ -135,10 +135,7 @@ function Table(params, format){
       .selectAll("td")
       .data(d => d)
       .join("td")
-        .html(d => {
-          console.log(d);
-          return(d);
-        });
+        .html(d => d);
 
     // format table based on column types
     data.ctypes.forEach(function (type, typeIndex) {

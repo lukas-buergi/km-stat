@@ -22,13 +22,17 @@ License along with km-stat.  If not, see
 {% load i18n %}
 <div class="filter_container">
   <div class="filter_constrainer">
-    <div class="filter">
+    <div class="filter filter_grow">
       <label class="filter_label" for="{{ name }}_filter_beginn">{% trans "Exporte von" %}</label>
-      <input id="{{ name }}_filter_beginn" class="filter_grow" type="number" placeholder="Jahr" value="{{ p.year1 }}" step="1" min="{{ firstYear }}" max="{{ p.year2 }}">
+      <select id="{{ name }}_filter_beginn" class="filter_grow filter_year_dropdown">
+        <option>{% trans "Jahr 1" %}</option>
+      </select>
     </div>
-    <div class="filter">
+    <div class="filter filter_grow">
       <label class="filter_label" for="{{ name }}_filter_ende">{% trans "bis" %}</label>
-      <input id="{{ name }}_filter_ende" class="filter_grow" type="number" placeholder="Jahr" value="{{ p.year2 }}" step="1" min="{{ p.year1 }}" max="{{ lastYear }}">
+      <select id="{{ name }}_filter_ende" class="filter_grow filter_year_dropdown" >
+        <option>{% trans "Jahr 2" %}</option>
+      </select>
     </div>
     <div class="filter">
       {% trans "(jeweils inklusive)." %}

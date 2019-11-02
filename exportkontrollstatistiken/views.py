@@ -142,7 +142,9 @@ class apiParam():
         jsParamObject[t] = True
       else:
         jsParamObject[t] = False
-    jsParamObject['paramNames'] = self.parameterNames
+    jsParamObject['paramNames'] = self.parameterNames + ['minYear', 'maxYear']
+    jsParamObject['minYear'] = Geschaefte.getFirstYear()
+    jsParamObject['maxYear'] = Geschaefte.getLastYear()
     jsCodeString = json.dumps(jsParamObject, separators=(',', ':'))
     return(jsCodeString)
 

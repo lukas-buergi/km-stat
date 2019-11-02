@@ -37,8 +37,9 @@ function Params(p){
   this.getURL = function(){
       this.assembleTypes();
       let url = '';
-      for (let index = 0; index < this.paramNames.length; ++index){
-        url += '/' + this[this.paramNames[index]];
+      const urlParamNames = [ 'granularity', 'countries', 'types', 'year1', 'year2', 'sortBy', 'perPage', 'pageNumber' ];
+      for (let index = 0; index < urlParamNames.length; ++index){
+        url += '/' + this[urlParamNames[index]];
       }
       return(url);
   };
@@ -83,6 +84,7 @@ function Params(p){
 }
 
 function InputField(id, paramName, propertyName){
+  // constructor ///////////////////////////////////////////////////////
   return({
     id : id,
     paramName : paramName,
@@ -91,7 +93,7 @@ function InputField(id, paramName, propertyName){
 }
 
 function Filter(name, p){
-  // method definitions
+  // method definitions ////////////////////////////////////////////////
   this.update = function(p){
     this.p = new Params(p);
     for(let i=0; i<this.InputFields.length; i++){
@@ -100,9 +102,11 @@ function Filter(name, p){
       const pr = this.InputFields[i].propertyName;
       this.setInputField(id, pa, pr);
       if(pa == 'year1'){
-        d3.select(id).property('max', this.p['year2']);
+        // TODO: Build drop down for year 1
+        this.buildYearDropDown(id, pa);
       } else if(pa == 'year2'){
-        d3.select(id).property('min', this.p['year1']);
+        // TODO: Build drop down for year 2
+        this.buildYearDropDown(id, pa);
       }
     }
     
@@ -150,8 +154,38 @@ function Filter(name, p){
       }
     }
   };
-  
-  // constructor
+  this.buildYearDropDown = function (id, pa){
+    let years = []
+    let year;
+    let minYear = this.p.minYear;
+    let maxYear = this.p.maxYear;
+    if( pa == 'year1' ){
+      maxYear = this.p.year2;
+      year = this.p.year1;
+    } else {
+      minYear = this.p.year1;
+      year = this.p.year2;
+    }
+    for(let j=minYear; j<=maxYear; j++){
+      years.push(j);
+    }
+    const selector = d3.select(id);
+    selector.selectAll("option").remove();
+    selector.selectAll("option")
+      .data(years)
+      .enter()
+        .append("option")
+        .text(d => d)
+        .attr("value", (d, i) => d)
+        .attr("selected", d => {
+          if(d == year){
+            return(true);
+          } else {
+            return(undefined);
+          }
+        });
+  };
+  // constructor ///////////////////////////////////////////////////////
   
   this.name = name;
   this.p = new Params(p);
@@ -171,12 +205,16 @@ function Filter(name, p){
     );
   }
 
-  // add listeners
   for(let i=0; i<this.InputFields.length; i++){
     const id = this.InputFields[i].id;
     const pa = this.InputFields[i].paramName;
     const pr = this.InputFields[i].propertyName;
+    // add listeners
     this.addInputListener(id, pa, pr);
+    // Set up year drop down
+    if(pa == 'year1' || pa == 'year2'){
+      this.buildYearDropDown(id, pa);
+    }
   }
 }
 
