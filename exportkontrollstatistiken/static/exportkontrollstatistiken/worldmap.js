@@ -264,7 +264,7 @@ function Worldmap(params, countriesSource, numberFormat, dataColumnType){
 
   // add def for arrowhead that is needed for drawing arrows
   const svg = d3.select('svg.worldmap_svg');
-  svg.append('defs').html("<marker id='head' orient='auto' markerWidth='4' markerHeight='8' refX='0.1' refY='4'><path d='M0,0 V8 L4,4 Z'/></marker>");
+  svg.append('defs').html("<marker id='head' orient='auto' markerWidth='4' markerHeight='8' refX='4' refY='4'><path d='M0,0 V8 L4,4 Z'/></marker>");
 
   // draw grid onto map
   this.graticule = this.map
