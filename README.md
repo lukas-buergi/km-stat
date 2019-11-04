@@ -35,6 +35,8 @@ CC BY-SA 4.0, as far as its copyright belongs to
   * Andreas Weibel (maintenance and other work on first version and database)
   * Lukas Bürgi (current rewrite, database)
   * Judith Schmid (valuable inputs on design)
+  * Lewin Lempert (testing and feedback)
+* and others
 
 ## Overview of current status:
 
@@ -48,7 +50,6 @@ CC BY-SA 4.0, as far as its copyright belongs to
 
 * Sort needs to be enabled in front end
 * Display table with one row as sentence instead?
-* change year selection to drop down for better mobile support
 * display dates better, maybe switch to displaying years and quarters because that's the most fine-grained we have
 * make countries click-able at least in table so that it changes to filter to include only that country
 * make dates click-able to choose that date onyl?

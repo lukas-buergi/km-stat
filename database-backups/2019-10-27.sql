@@ -27,7 +27,7 @@ use `kriegsmaterialch`;
 -- Table structure for table `auth_group`
 --
 
-CREATE TABLE `auth_group` (
+DROP TABLE IF EXISTS `auth_group`; DROP TABLE IF EXISTS `auth_group`; CREATE TABLE `auth_group` (
   `id` int(11) NOT NULL,
   `name` varchar(150) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -38,7 +38,7 @@ CREATE TABLE `auth_group` (
 -- Table structure for table `auth_group_permissions`
 --
 
-CREATE TABLE `auth_group_permissions` (
+DROP TABLE IF EXISTS `auth_group_permissions`; CREATE TABLE `auth_group_permissions` (
   `id` int(11) NOT NULL,
   `group_id` int(11) NOT NULL,
   `permission_id` int(11) NOT NULL
@@ -50,7 +50,7 @@ CREATE TABLE `auth_group_permissions` (
 -- Table structure for table `auth_permission`
 --
 
-CREATE TABLE `auth_permission` (
+DROP TABLE IF EXISTS `auth_permission`; CREATE TABLE `auth_permission` (
   `id` int(11) NOT NULL,
   `name` varchar(255) NOT NULL,
   `content_type_id` int(11) NOT NULL,
@@ -173,7 +173,7 @@ INSERT INTO `auth_permission` (`id`, `name`, `content_type_id`, `codename`) VALU
 -- Table structure for table `auth_user`
 --
 
-CREATE TABLE `auth_user` (
+DROP TABLE IF EXISTS `auth_user`; CREATE TABLE `auth_user` (
   `id` int(11) NOT NULL,
   `password` varchar(128) NOT NULL,
   `last_login` datetime(6) DEFAULT NULL,
@@ -200,7 +200,7 @@ INSERT INTO `auth_user` (`id`, `password`, `last_login`, `is_superuser`, `userna
 -- Table structure for table `auth_user_groups`
 --
 
-CREATE TABLE `auth_user_groups` (
+DROP TABLE IF EXISTS `auth_user_groups`; CREATE TABLE `auth_user_groups` (
   `id` int(11) NOT NULL,
   `user_id` int(11) NOT NULL,
   `group_id` int(11) NOT NULL
@@ -212,7 +212,7 @@ CREATE TABLE `auth_user_groups` (
 -- Table structure for table `auth_user_user_permissions`
 --
 
-CREATE TABLE `auth_user_user_permissions` (
+DROP TABLE IF EXISTS `auth_user_user_permissions`; CREATE TABLE `auth_user_user_permissions` (
   `id` int(11) NOT NULL,
   `user_id` int(11) NOT NULL,
   `permission_id` int(11) NOT NULL
@@ -224,7 +224,7 @@ CREATE TABLE `auth_user_user_permissions` (
 -- Table structure for table `django_admin_log`
 --
 
-CREATE TABLE `django_admin_log` (
+DROP TABLE IF EXISTS `django_admin_log`; CREATE TABLE `django_admin_log` (
   `id` int(11) NOT NULL,
   `action_time` datetime(6) NOT NULL,
   `object_id` longtext DEFAULT NULL,
@@ -382,7 +382,7 @@ INSERT INTO `django_admin_log` (`id`, `action_time`, `object_id`, `object_repr`,
 -- Table structure for table `django_content_type`
 --
 
-CREATE TABLE `django_content_type` (
+DROP TABLE IF EXISTS `django_content_type`; CREATE TABLE `django_content_type` (
   `id` int(11) NOT NULL,
   `app_label` varchar(100) NOT NULL,
   `model` varchar(100) NOT NULL
@@ -424,7 +424,7 @@ INSERT INTO `django_content_type` (`id`, `app_label`, `model`) VALUES
 -- Table structure for table `django_migrations`
 --
 
-CREATE TABLE `django_migrations` (
+DROP TABLE IF EXISTS `django_migrations`; CREATE TABLE `django_migrations` (
   `id` int(11) NOT NULL,
   `app` varchar(255) NOT NULL,
   `name` varchar(255) NOT NULL,
@@ -480,7 +480,7 @@ INSERT INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES
 -- Table structure for table `django_session`
 --
 
-CREATE TABLE `django_session` (
+DROP TABLE IF EXISTS `django_session`; CREATE TABLE `django_session` (
   `session_key` varchar(40) NOT NULL,
   `session_data` longtext NOT NULL,
   `expire_date` datetime(6) NOT NULL
@@ -504,7 +504,7 @@ INSERT INTO `django_session` (`session_key`, `session_data`, `expire_date`) VALU
 -- Table structure for table `exportkontrollstatistiken_bewilligungstypen`
 --
 
-CREATE TABLE `exportkontrollstatistiken_bewilligungstypen` (
+DROP TABLE IF EXISTS `exportkontrollstatistiken_bewilligungstypen`; CREATE TABLE `exportkontrollstatistiken_bewilligungstypen` (
   `id` int(11) NOT NULL,
   `name_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -522,7 +522,7 @@ INSERT INTO `exportkontrollstatistiken_bewilligungstypen` (`id`, `name_id`) VALU
 -- Table structure for table `exportkontrollstatistiken_exportkontrollnummern`
 --
 
-CREATE TABLE `exportkontrollstatistiken_exportkontrollnummern` (
+DROP TABLE IF EXISTS `exportkontrollstatistiken_exportkontrollnummern`; CREATE TABLE `exportkontrollstatistiken_exportkontrollnummern` (
   `id` int(11) NOT NULL,
   `nummer` varchar(15) NOT NULL,
   `beschreibung_id` int(11) DEFAULT NULL,
@@ -859,7 +859,7 @@ INSERT INTO `exportkontrollstatistiken_exportkontrollnummern` (`id`, `nummer`, `
 -- Table structure for table `exportkontrollstatistiken_geschaefte`
 --
 
-CREATE TABLE `exportkontrollstatistiken_geschaefte` (
+DROP TABLE IF EXISTS `exportkontrollstatistiken_geschaefte`; CREATE TABLE `exportkontrollstatistiken_geschaefte` (
   `id` int(11) NOT NULL,
   `nummer` int(10) UNSIGNED DEFAULT NULL,
   `umfang` double NOT NULL,
@@ -6855,7 +6855,7 @@ INSERT INTO `exportkontrollstatistiken_geschaefte` (`id`, `nummer`, `umfang`, `b
 -- Table structure for table `exportkontrollstatistiken_geschaeftecsvimport`
 --
 
-CREATE TABLE `exportkontrollstatistiken_geschaeftecsvimport` (
+DROP TABLE IF EXISTS `exportkontrollstatistiken_geschaeftecsvimport`; CREATE TABLE `exportkontrollstatistiken_geschaeftecsvimport` (
   `id` int(11) NOT NULL,
   `nummer` varchar(20) NOT NULL,
   `endempfaengerstaat` varchar(100) NOT NULL,
@@ -17112,7 +17112,7 @@ INSERT INTO `exportkontrollstatistiken_geschaeftecsvimport` (`id`, `nummer`, `en
 -- Table structure for table `exportkontrollstatistiken_geschaefteimport`
 --
 
-CREATE TABLE `exportkontrollstatistiken_geschaefteimport` (
+DROP TABLE IF EXISTS `exportkontrollstatistiken_geschaefteimport`; CREATE TABLE `exportkontrollstatistiken_geschaefteimport` (
   `id` int(11) NOT NULL,
   `code` varchar(2) NOT NULL,
   `art` varchar(40) NOT NULL,
@@ -21498,7 +21498,7 @@ INSERT INTO `exportkontrollstatistiken_geschaefteimport` (`id`, `code`, `art`, `
 -- Table structure for table `exportkontrollstatistiken_geschaeftslaendersummen`
 --
 
-CREATE TABLE `exportkontrollstatistiken_geschaeftslaendersummen` (
+DROP TABLE IF EXISTS `exportkontrollstatistiken_geschaeftslaendersummen`; CREATE TABLE `exportkontrollstatistiken_geschaeftslaendersummen` (
   `id` int(11) NOT NULL,
   `umfang` int(10) UNSIGNED NOT NULL,
   `jahr` int(10) UNSIGNED NOT NULL,
@@ -28678,7 +28678,7 @@ INSERT INTO `exportkontrollstatistiken_geschaeftslaendersummen` (`id`, `umfang`,
 -- Table structure for table `exportkontrollstatistiken_geschaeftsrichtungen`
 --
 
-CREATE TABLE `exportkontrollstatistiken_geschaeftsrichtungen` (
+DROP TABLE IF EXISTS `exportkontrollstatistiken_geschaeftsrichtungen`; CREATE TABLE `exportkontrollstatistiken_geschaeftsrichtungen` (
   `id` int(11) NOT NULL,
   `name_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -28696,7 +28696,7 @@ INSERT INTO `exportkontrollstatistiken_geschaeftsrichtungen` (`id`, `name_id`) V
 -- Table structure for table `exportkontrollstatistiken_geschaeftssummen`
 --
 
-CREATE TABLE `exportkontrollstatistiken_geschaeftssummen` (
+DROP TABLE IF EXISTS `exportkontrollstatistiken_geschaeftssummen`; CREATE TABLE `exportkontrollstatistiken_geschaeftssummen` (
   `id` int(11) NOT NULL,
   `umfang` int(10) UNSIGNED NOT NULL,
   `jahr` int(10) UNSIGNED NOT NULL,
@@ -28709,7 +28709,7 @@ CREATE TABLE `exportkontrollstatistiken_geschaeftssummen` (
 -- Table structure for table `exportkontrollstatistiken_gueterarten`
 --
 
-CREATE TABLE `exportkontrollstatistiken_gueterarten` (
+DROP TABLE IF EXISTS `exportkontrollstatistiken_gueterarten`; CREATE TABLE `exportkontrollstatistiken_gueterarten` (
   `id` int(11) NOT NULL,
   `name_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -28729,7 +28729,7 @@ INSERT INTO `exportkontrollstatistiken_gueterarten` (`id`, `name_id`) VALUES
 -- Table structure for table `exportkontrollstatistiken_kontrollregimes`
 --
 
-CREATE TABLE `exportkontrollstatistiken_kontrollregimes` (
+DROP TABLE IF EXISTS `exportkontrollstatistiken_kontrollregimes`; CREATE TABLE `exportkontrollstatistiken_kontrollregimes` (
   `id` int(11) NOT NULL,
   `name_id` int(11) NOT NULL,
   `aufgehobenwerden` date DEFAULT NULL,
@@ -28755,7 +28755,7 @@ INSERT INTO `exportkontrollstatistiken_kontrollregimes` (`id`, `name_id`, `aufge
 -- Table structure for table `exportkontrollstatistiken_laender`
 --
 
-CREATE TABLE `exportkontrollstatistiken_laender` (
+DROP TABLE IF EXISTS `exportkontrollstatistiken_laender`; CREATE TABLE `exportkontrollstatistiken_laender` (
   `id` int(11) NOT NULL,
   `code` varchar(2) NOT NULL,
   `name_id` int(11) NOT NULL,
@@ -28938,7 +28938,7 @@ INSERT INTO `exportkontrollstatistiken_laender` (`id`, `code`, `name_id`, `breit
 -- Table structure for table `exportkontrollstatistiken_laendergruppen`
 --
 
-CREATE TABLE `exportkontrollstatistiken_laendergruppen` (
+DROP TABLE IF EXISTS `exportkontrollstatistiken_laendergruppen`; CREATE TABLE `exportkontrollstatistiken_laendergruppen` (
   `id` int(11) NOT NULL,
   `code` varchar(2) NOT NULL,
   `name_id` int(11) NOT NULL
@@ -28963,7 +28963,7 @@ INSERT INTO `exportkontrollstatistiken_laendergruppen` (`id`, `code`, `name_id`)
 -- Table structure for table `exportkontrollstatistiken_laender_gruppen`
 --
 
-CREATE TABLE `exportkontrollstatistiken_laender_gruppen` (
+DROP TABLE IF EXISTS `exportkontrollstatistiken_laender_gruppen`; CREATE TABLE `exportkontrollstatistiken_laender_gruppen` (
   `id` int(11) NOT NULL,
   `laender_id` int(11) NOT NULL,
   `laendergruppen_id` int(11) NOT NULL
@@ -29048,7 +29048,7 @@ INSERT INTO `exportkontrollstatistiken_laender_gruppen` (`id`, `laender_id`, `la
 -- Table structure for table `exportkontrollstatistiken_problemarten`
 --
 
-CREATE TABLE `exportkontrollstatistiken_problemarten` (
+DROP TABLE IF EXISTS `exportkontrollstatistiken_problemarten`; CREATE TABLE `exportkontrollstatistiken_problemarten` (
   `id` int(11) NOT NULL,
   `ausschlusskriterium` tinyint(1) NOT NULL,
   `faktor` double NOT NULL,
@@ -29062,7 +29062,7 @@ CREATE TABLE `exportkontrollstatistiken_problemarten` (
 -- Table structure for table `exportkontrollstatistiken_problemartengesetz`
 --
 
-CREATE TABLE `exportkontrollstatistiken_problemartengesetz` (
+DROP TABLE IF EXISTS `exportkontrollstatistiken_problemartengesetz`; CREATE TABLE `exportkontrollstatistiken_problemartengesetz` (
   `id` int(11) NOT NULL,
   `gesetz` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -29073,7 +29073,7 @@ CREATE TABLE `exportkontrollstatistiken_problemartengesetz` (
 -- Table structure for table `exportkontrollstatistiken_probleme`
 --
 
-CREATE TABLE `exportkontrollstatistiken_probleme` (
+DROP TABLE IF EXISTS `exportkontrollstatistiken_probleme`; CREATE TABLE `exportkontrollstatistiken_probleme` (
   `id` int(11) NOT NULL,
   `beginn` date NOT NULL,
   `ende` date NOT NULL,
@@ -29089,7 +29089,7 @@ CREATE TABLE `exportkontrollstatistiken_probleme` (
 -- Table structure for table `exportkontrollstatistiken_probleme_quellen`
 --
 
-CREATE TABLE `exportkontrollstatistiken_probleme_quellen` (
+DROP TABLE IF EXISTS `exportkontrollstatistiken_probleme_quellen`; CREATE TABLE `exportkontrollstatistiken_probleme_quellen` (
   `id` int(11) NOT NULL,
   `probleme_id` int(11) NOT NULL,
   `quellenprobleme_id` int(11) NOT NULL
@@ -29101,7 +29101,7 @@ CREATE TABLE `exportkontrollstatistiken_probleme_quellen` (
 -- Table structure for table `exportkontrollstatistiken_quellengeschaefte`
 --
 
-CREATE TABLE `exportkontrollstatistiken_quellengeschaefte` (
+DROP TABLE IF EXISTS `exportkontrollstatistiken_quellengeschaefte`; CREATE TABLE `exportkontrollstatistiken_quellengeschaefte` (
   `id` int(11) NOT NULL,
   `download` varchar(100) NOT NULL,
   `link` varchar(3000) NOT NULL,
@@ -29125,7 +29125,7 @@ INSERT INTO `exportkontrollstatistiken_quellengeschaefte` (`id`, `download`, `li
 -- Table structure for table `exportkontrollstatistiken_quellenprobleme`
 --
 
-CREATE TABLE `exportkontrollstatistiken_quellenprobleme` (
+DROP TABLE IF EXISTS `exportkontrollstatistiken_quellenprobleme`; CREATE TABLE `exportkontrollstatistiken_quellenprobleme` (
   `id` int(11) NOT NULL,
   `link` varchar(200) NOT NULL,
   `linkText` varchar(200) NOT NULL,
@@ -29138,7 +29138,7 @@ CREATE TABLE `exportkontrollstatistiken_quellenprobleme` (
 -- Table structure for table `exportkontrollstatistiken_uebersetzungen`
 --
 
-CREATE TABLE `exportkontrollstatistiken_uebersetzungen` (
+DROP TABLE IF EXISTS `exportkontrollstatistiken_uebersetzungen`; CREATE TABLE `exportkontrollstatistiken_uebersetzungen` (
   `id` int(11) NOT NULL,
   `de` longtext NOT NULL,
   `fr` longtext NOT NULL,

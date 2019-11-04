@@ -35,6 +35,8 @@ License along with km-stat.  If not, see
   <head>
     <title>{% trans "Schweizer Waffenexporte - GSoA" %}</title>
     {% include "exportkontrollstatistiken/favicon/favicon.html" only %}
+    <meta property="og:title" content="Schweizer Waffenexporte" />
+    <meta property="og:image" content="{% static 'exportkontrollstatistiken/worldmap-example.svg.png' %}" />
     {# should I include them using templates? might speed things up... or not. Quite possibly if using template caching. #}
     {# Possibly those scripts should actually not go in the head? Could speed up initial display? #}
     <script src="{% static 'exportkontrollstatistiken/d3.v5.min.js' %}" charset="utf-8"></script>
