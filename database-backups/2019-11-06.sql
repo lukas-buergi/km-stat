@@ -20,6 +20,9 @@ SET time_zone = "+00:00";
 -- Database: `kriegsmaterialch`
 --
 
+SET FOREIGN_KEY_CHECKS = 0;
+DROP TABLE `auth_group`, `auth_group_permissions`, `auth_permission`, `auth_user`, `auth_user_groups`, `auth_user_user_permissions`, `django_admin_log`, `django_content_type`, `django_migrations`, `django_session`, `exportkontrollstatistiken_bewilligungstypen`, `exportkontrollstatistiken_exportkontrollnummern`, `exportkontrollstatistiken_geschaefte`, `exportkontrollstatistiken_geschaeftecsvimport`, `exportkontrollstatistiken_geschaefteimport`, `exportkontrollstatistiken_geschaeftslaendersummen`, `exportkontrollstatistiken_geschaeftsrichtungen`, `exportkontrollstatistiken_geschaeftssummen`, `exportkontrollstatistiken_gueterarten`, `exportkontrollstatistiken_kontrollregimes`, `exportkontrollstatistiken_laender`, `exportkontrollstatistiken_laendergruppen`, `exportkontrollstatistiken_laender_gruppen`, `exportkontrollstatistiken_problemarten`, `exportkontrollstatistiken_problemartengesetz`, `exportkontrollstatistiken_probleme`, `exportkontrollstatistiken_probleme_quellen`, `exportkontrollstatistiken_quellengeschaefte`, `exportkontrollstatistiken_quellenprobleme`, `exportkontrollstatistiken_uebersetzungen`;
+SET FOREIGN_KEY_CHECKS = 1;
 -- --------------------------------------------------------
 
 --
