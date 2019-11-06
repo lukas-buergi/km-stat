@@ -27,16 +27,25 @@ from .geschaefte import GueterArten
 from .geschaefte import Geschaefte
 
 class Geschaeftslaendersummen(models.Model):
-  """Hilfsmodell, das Teilsummen pro Land, Jahr und Güterart enthält. TODO: Neues Feld für nur die Summe von dem Jahr."""
+  """Utility model which contains partial sums per country, year and export type.
+  TODO: Neues Feld für nur die Summe von dem Jahr.
+  TODO: Did I do this?"""
+  
   endempfaengerstaat = models.ForeignKey(Laender, on_delete=models.PROTECT)
-  """ Wie bei einzelnen Geschäften. """
-  gueterArt = models.ForeignKey(GueterArten, on_delete=models.PROTECT)
-  """ Wie bei einzelnen Geschäften. """
-  umfang = models.PositiveIntegerField()
-  """Summe aller Exporte bis zu dem Jahr inklusive."""
-  umfangJahr = models.PositiveIntegerField()
-  """ Summe aller Exporte in dem Jahr. """
+  """ As for individual Geschaefte. """
+  
   jahr = models.PositiveIntegerField()
+  """ The year of the given partial sum. """
+
+  gueterArt = models.ForeignKey(GueterArten, on_delete=models.PROTECT)
+  """ As for individual Geschaefte. """
+  
+  umfang = models.PositiveIntegerField()
+  """ Partial sum of exports up to and including that year."""
+
+  umfangJahr = models.PositiveIntegerField()
+  """ Sum of exports only in the year of this entry. """
+  
 
   @staticmethod
   def recalculate():
@@ -73,7 +82,7 @@ class Geschaeftslaendersummen(models.Model):
             endempfaengerstaat=g.endempfaengerstaat,
             gueterArt=g.exportkontrollnummer.kontrollregime.gueterArt,
             umfang=curSum.umfang+g.umfang,
-            umfangJahr=curSum.umfang,
+            umfangJahr=g.umfang,
             jahr=g.beginn.year)
           curSum.save()
       else:
@@ -178,6 +187,7 @@ class Geschaeftslaendersummen(models.Model):
     result.setTotal(queryset.count())
     
     for ysum in p.getPage(queryset):
+      print(ysum.endempfaengerstaat.code + " : " + str(ysum.endempfaengerstaat.id))
       result.addRow([ysum.endempfaengerstaat.code, ysum.endempfaengerstaat.name.de, ysum.jahr, ysum.umfangJahr])
     return(result.getJSON())
 
