@@ -58,13 +58,13 @@ CC BY-SA 4.0, as far as its copyright belongs to
 
 ## Local installation:
 
-* Clone
-* Create virtualenv
-* pip install stuff in requirements.txt file
+* Create virtualenv: virtualenv -p python3 km-stat-workdir
+* Go into virtualenv: `cd km-stat-workdir; . bin/activate`
+* Clone: git clone git@github.com:lukas-buergi/km-stat.git
+* pip install stuff in requirements.txt file: `pip install -r km-stat/requirements.txt`
 * setup local settings (copy example)
 * setup database (backups are in folder database-backups)
-* activate virtualenv: `. bin/activate`
-* `./manage.py runserver`
+* `./km-stat/manage.py runserver`
 
 ## Push to staging for first time:
 

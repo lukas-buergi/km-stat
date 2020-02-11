@@ -23,6 +23,11 @@ from django.contrib import admin
 
 from .models import Uebersetzungen, Kontrollregimes, Exportkontrollnummern, Bewilligungstypen, Geschaeftsrichtungen, Laender, Laendergruppen, QuellenGeschaefte, QuellenProbleme, GueterArten, Geschaefte, ProblemArtenGesetz, ProblemArten, Probleme
 
+class GeschaefteAdmin(admin.ModelAdmin):
+  list_filter = ('beginn', 'ende', 'exportkontrollnummer__kontrollregime__gueterArt')
+  list_display = ('__str__', 'beginn', 'ende', 'exportkontrollnummer', 'endempfaengerstaat', 'umfang')
+  #list_editable = ('umfang',) # example, should be used for marking entries as verified
+
 admin.site.register(Uebersetzungen)
 admin.site.register(Kontrollregimes)
 admin.site.register(Exportkontrollnummern)
@@ -33,7 +38,7 @@ admin.site.register(Laendergruppen)
 admin.site.register(QuellenGeschaefte)
 admin.site.register(QuellenProbleme)
 admin.site.register(GueterArten)
-admin.site.register(Geschaefte)
+admin.site.register(Geschaefte, GeschaefteAdmin)
 admin.site.register(ProblemArtenGesetz)
 admin.site.register(ProblemArten)
 admin.site.register(Probleme)
