@@ -115,6 +115,8 @@ class Laendergruppen(models.Model):
   """ Name of the group. """
   code = models.CharField(max_length=2)
   """ Two character made up id. It's ok if they collide with country codes."""
+  seco_km_order = models.PositiveIntegerField()
+  """ The Seco doesn't order continents alphabetically, so we order by this field to mirror Seco's ordering. """
 
   def __str__(self):
     return(self.code)
@@ -148,6 +150,43 @@ class Laender(models.Model):
   def __str__(self):
     return(self.code)
   
+  @staticmethod
+  def fuzzyGet(name, language):
+    if(language=='de'):
+      corrections = [
+        [['Mazedonien (ehemalige jugoslawische Republik)', 'Nordmazedonien, Republik'], 'Republik Nordmazedonien'],
+        [['Korea, Republik (Südkorea)', 'Korea (Süd)'], 'Republik Korea'],
+        [['China', 'China, Volksrepublik'], 'Volksrepublik China'],
+        [['China, Taiwan'], 'Republik China (Taiwan)'],
+        [['Bosnien-Herzegowina', 'Bosnien und Herzeg.'], 'Bosnien und Herzegowina'],
+        [['Rwanda'], 'Republik Ruanda'],
+        [['Elfenbeinküste'], 'Republik Côte d’Ivoire'],
+        [['Ekuador'], 'Republik Ecuador'],
+        [['Moldova'], 'Republik Moldova'],
+        [['Fidschi'], 'Republik Fidschi'],
+        [['Vatikan'], 'Staat Vatikanstadt'],
+        [['Albanien'], 'Republik Albanien'],
+        [['Kongo, Republik'], 'Republik Kongo'],
+        [['Somalia'], 'Bundesrepublik Somalia'],
+        [['Georgien, Republik'], 'Georgien'],
+        [['Trinidad und Tobago'], 'Republik Trinidad und Tobago'],
+        [['Djibouti'], 'Republik Dschibuti'],
+        [['Myanmar (Union)'], 'Republik der Union Myanmar'],
+        [['Macau', 'Macao'], 'Sonderverwaltungszone Macau der Volksrepublik China'],
+        [['Arabische Emirate'], 'Vereinigte Arabische Emirate'],
+        [['U.S.A'], 'Vereinigte Staaten von Amerika'],
+        [['Dominikanische Rep'], 'Dominikanische Republik'],
+        [['Tschechische Rep.'], 'Tschechische Republik'],
+        [['Slowakei'], 'Slowakische Republik'],
+        [['Katar', 'Qatar'], 'Staat Katar'],
+        [['Bangladesh', 'Bangladesch'], 'Volksrepublik Bangladesch'],
+      ]
+      for c in corrections:
+        if(name in c[0]):
+          name=c[1]
+          break
+    
+    return(Laender.objects.get(**{"name__" + language : name}))
   class Meta:
     verbose_name = 'Land'
     verbose_name_plural = 'Länder'

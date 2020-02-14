@@ -58,7 +58,7 @@ class QuellenGeschaefte(models.Model):
   """ Offizielle Quelle für jedes Geschäft. Eine Quelle ist normalerweise Quelle für viele Geschäfte."""
 
   name = models.ForeignKey(Uebersetzungen, on_delete=models.PROTECT)
-  """ Der Name der Quelle, wie der Text des Downloadlinks auf der Secowebseite. Falls die eigentliche Quelle nur Deutsch ist, dann bei den anderen Sprachen zusätzlich Warnung, dass die Quelle Deutsch ist, "(allemand)". """
+  """ Der Name/Kurzbeschreibung der Quelle, wie der Text des Downloadlinks auf der Secowebseite. Falls die eigentliche Quelle nur Deutsch ist, dann bei den anderen Sprachen zusätzlich Warnung, dass die Quelle Deutsch ist, "(allemand)". """
 
   download = models.FileField(upload_to='quellenGeschaefte/')
   """ Die Datei, die die Quelle darstellt. Eigene Kopie für den Fall, dass das Seco die Adressen ändert oder so. TODO: Sollte wohl validiert werden, dass die Dateien harmlos sind, obwohl der Upload ja nur von vertrauenswürdigen Menschen kommen sollte. """
@@ -150,12 +150,16 @@ class Geschaefte(models.Model):
   nummer = models.PositiveIntegerField(blank=True, null=True)
   """ Offizielle Geschäftsnummer, wo vorhanden. Bei Statistiken wo diese Nummer nicht vorhanden ist steht ein Eintrag für mehrere Geschäfte """
   endempfaengerstaat = models.ForeignKey(Laender, on_delete=models.PROTECT)
-  """ Ist bei allen verwendeten Statistiken Endempfängerstaat, nicht Bestimmungsland, oder? - TODO: Genau herausfinden und hier verbessern."""  
+  """
+  Ist bei allen verwendeten Statistiken Endempfängerstaat, nicht Bestimmungsland, oder? - TODO: Genau herausfinden und hier verbessern.
+  Zum Teil nach Länderverzeichnis der Eidgenössischen Zollverwaltung, bei scheinbaren Inkonsistenzen da mal nachschauen."""  
   bewilligungstyp = models.ForeignKey(Bewilligungstypen, on_delete=models.PROTECT)
   """ Einzelbewilligung. Alles andere ist nicht implementiert."""
   richtung = models.ForeignKey(Geschaeftsrichtungen, on_delete=models.PROTECT)
-  """ Ausfuhr. Alles andere ist nicht implementiert. """
-  exportkontrollnummer = models.ForeignKey(Exportkontrollnummern, on_delete=models.PROTECT) # TODO: make manytomany
+  """
+  Ausfuhr. Alles andere ist nicht implementiert.
+  Vielleicht könnte man dieses Feld oder ein neues verwenden um zwischen Bewilligungen (DU/BmG) und Ausfuhren (KM) zu unterscheiden."""
+  exportkontrollnummer = models.ForeignKey(Exportkontrollnummern, on_delete=models.PROTECT) # TODO: make manytomany, but check this doesn't mess up other logic
   """ Was wurde exportiert? Vielleicht sollten da mehrere Nummern erlaubt sein, weil ein Gut vielleicht unter mehrere Kontrollregime fallen kann. """
   umfang = models.FloatField()
   """ Umfang des Geschäfts in Schweizer Franken. """
@@ -163,8 +167,11 @@ class Geschaefte(models.Model):
   """ Der Beginn des Geschäfts. Normalerweise der 1. Januar des Jahres, weil nichts genaueres bekannt ist. """
   ende = models.DateField()
   """ Das Ende des Geschäftes. Geschäfte können über mehrere Jahren gehen stand irgendwo auf der Secowebseite (macht ja Sinn). Ich schätze das sieht man bei neueren Statistiken an der Nummer und bei älteren wurde das Geschäft wahrscheinlich nur in einem Jahr einbezogen nehme ich an (keine Ahnung). """
-  quelle = models.ForeignKey(QuellenGeschaefte, on_delete=models.PROTECT, blank=True, null=True)
-  """ Die offizielle Quelle für den Eintrag. Ich glaube es gibt die immer nur auf Deutsch, sonst müsste man das noch anpassen um auch die anderen anzubieten. """
+  quelle = models.ForeignKey(QuellenGeschaefte, on_delete=models.PROTECT, blank=True, null=True) # TODO: allow multiple
+  """
+  Die offizielle Quelle für den Eintrag. Ich glaube es gibt die immer nur auf Deutsch, sonst müsste man das noch anpassen um auch die anderen anzubieten.
+  Man muss es sowieso anpassen, weil man manchmal mehrere Quellen hat, zum Beispiel offizielle Exzel und PDF, oder die Zahlen entstanden aus Subtraktion von Zwischenständen.
+  """
 
   @staticmethod
   def getFirstYear():

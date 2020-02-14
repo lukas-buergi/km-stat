@@ -20,11 +20,17 @@
 
 from django.db import models
 from django.conf import settings
+import django.core.files
 
 from .utility import *
 from .geschaefte import Laender
 from .geschaefte import GueterArten
 from .geschaefte import Geschaefte
+from .geschaefte import QuellenGeschaefte
+
+import csv
+from datetime import date
+import os
 
 class Geschaeftslaendersummen(models.Model):
   """Utility model which contains partial sums per country, year and export type.
@@ -224,3 +230,173 @@ class GeschaefteCSVImport(models.Model):
   importiert = models.BooleanField()
   beginn = models.DateField()
   ende = models.DateField()
+
+class GeschaefteKriegsmaterialNachKategorieEndempfaengerstaat(models.Model):
+  """
+  Mirrors the structure of the official documents "Ausfuhr von Kriegsmaterial nach Kategorie pro Endempfängerstaat" exactly,
+  but do already regularize the data and add structure from text fields.
+  Import from csv files works as follows:
+    * csv files generated either from official xlsx, or using the "tabula" utility from pdf files, or manually from pdf files without text information.
+    * csv files could be validated to an extent, and official complaints/requests filed if data is self-contradictory or (hopefully more likely) mistake in copying from original fixed.
+    * The csv files are then imported as follows:
+      * First row: Headers
+      * Second row: totals ignored
+      * Rows that are identical to the header except for the first field are ignored
+      * Rows that have no country are ignored (they are totals of previous countries)
+      * First column: Contains continent or nothing. If nothing, choose last continent that was encountered.
+      * Second column: Country name in German, use to determine country
+      * Third column: Country name in French, ignore
+      * Middle columns: Sums of exports in a category, exact category depends on header row
+      * Last column: Always ignored, contains totals of row
+
+  Display in the admin backend is then customized to also mirror the official document to allow efficient visual checks of imported data.
+  The data can then be imported into the regular Geschaefte table completely automatically. """
+
+  sources = models.ManyToManyField(QuellenGeschaefte)
+
+  fromDate = models.DateField()
+  toDate = models.DateField()
+  
+  continent = models.ForeignKey(Laendergruppen, on_delete=models.PROTECT)
+  """
+  This is duplicate information because the continent is known from the country, but we mirror the offical document.
+  If the country field isn't in the Laendergruppe continent, then throw some error.
+  """
+  country = models.ForeignKey(Laender, on_delete=models.PROTECT)
+
+  KM1 = models.PositiveIntegerField(null=True, blank=True)
+  KM2 = models.PositiveIntegerField(null=True, blank=True)
+  KM3 = models.PositiveIntegerField(null=True, blank=True)
+  KM4 = models.PositiveIntegerField(null=True, blank=True)
+  KM5 = models.PositiveIntegerField(null=True, blank=True)
+  KM6 = models.PositiveIntegerField(null=True, blank=True)
+  KM7 = models.PositiveIntegerField(null=True, blank=True)
+  KM8 = models.PositiveIntegerField(null=True, blank=True)
+  KM9 = models.PositiveIntegerField(null=True, blank=True)
+  KM10 = models.PositiveIntegerField(null=True, blank=True)
+  KM11 = models.PositiveIntegerField(null=True, blank=True)
+  KM12 = models.PositiveIntegerField(null=True, blank=True)
+  KM13 = models.PositiveIntegerField(null=True, blank=True)
+  KM14 = models.PositiveIntegerField(null=True, blank=True)
+  KM15 = models.PositiveIntegerField(null=True, blank=True)
+  KM16 = models.PositiveIntegerField(null=True, blank=True)
+  KM17 = models.PositiveIntegerField(null=True, blank=True)
+  KM18 = models.PositiveIntegerField(null=True, blank=True)
+  KM19 = models.PositiveIntegerField(null=True, blank=True)
+  KM20 = models.PositiveIntegerField(null=True, blank=True)
+  KM21 = models.PositiveIntegerField(null=True, blank=True)
+  KM22 = models.PositiveIntegerField(null=True, blank=True)
+
+  class Meta:
+    verbose_name = 'Geschäft: Kriegsmaterial, tatsächliche Ausfuhren, Format ähnlich Seco'
+    verbose_name_plural = 'Geschäfte: Kriegsmaterial, tatsächliche Ausfuhren, Format ähnlich Seco'
+    
+  @staticmethod
+  def importCSV(path, pathOriginal, urlOriginal, fromYear, fromMonth, fromDay, toYear, toMonth, toDay):
+    """
+    Imports a .csv files given by string path, containing data fromDate toDate which are date()-objects.
+    """
+    try:
+      with open(path, newline='') as f:
+        fromDate=date(fromYear, fromMonth, fromDay)
+        toDate=date(toYear, toMonth, toDay)
+        # add this file as a source database entry, one for csv and one for original format, both using url
+        # csv
+        F=django.core.files.File(f)
+        F.name = "KM-" + fromDate.isoformat() + "-" + toDate.isoformat() + ".csv"
+        nameCSV = Uebersetzungen(de='Kriegsmaterial, tatsächliche Ausfuhren, ' + fromDate.isoformat() + " bis " + toDate.isoformat() + ", in inoffiziellem .csv Format.")
+        nameCSV.save()
+        sourceCSV=QuellenGeschaefte(
+          name=nameCSV,
+          download=F,
+          link=urlOriginal
+        )
+        sourceCSV.save()
+        # original
+        with open(pathOriginal, "rb") as fo:
+          FO=django.core.files.File(fo)
+          FO.name = "KM-" + fromDate.isoformat() + "-" + toDate.isoformat() + os.path.splitext(pathOriginal)[1]
+          nameOfficial = Uebersetzungen(de='Kriegsmaterial, tatsächliche Ausfuhren, ' + fromDate.isoformat() + " bis " + toDate.isoformat() + ", in diesem Format vom Staatssekretariat für Wirtschaft Seco bekommen.")
+          nameOfficial.save()
+          sourceOfficial=QuellenGeschaefte(
+            name=nameOfficial,
+            download=FO,
+            link=urlOriginal
+          )
+          sourceOfficial.save()
+        
+        # parse the file into database entries
+        f.seek(0)
+        reader = csv.reader(f)
+        rows = iter(reader)
+        header = next(rows)
+        categoryNames = header[3:-1]
+        second = next(rows)
+        lastContinentDE = None
+        for row in rows:
+          if(row[1:] == header[1:]):
+            # repetition of header
+            continue
+          if(row[1] == ""):
+            # German country name is missing, French should be missing too
+            assert(row[2] == "")
+            # country is empty, skip subtotals line
+            continue
+          if(row[0] == ""):
+            continentDE = lastContinentDE
+          else:
+            continentDE = row[0].split()[0]
+            lastContinentDE = continentDE
+          try:
+            continent = Laendergruppen.objects.get(name__de=continentDE)
+          except:
+            print("Not found: " + str(continentDE))
+            raise
+          countryDE = row[1]
+          country = Laender.fuzzyGet(countryDE, 'de')
+          
+          databaseRow = GeschaefteKriegsmaterialNachKategorieEndempfaengerstaat(
+            fromDate=fromDate,
+            toDate=toDate,
+            continent=continent,
+            country=country
+          )
+          rowCategories = row[3:-1]
+          for value, name in zip(rowCategories, categoryNames):
+            if(value == ""):
+              value=0
+            setattr(databaseRow, name, value)
+          databaseRow.save()
+          databaseRow.sources.add(sourceCSV, sourceOfficial)
+    except:
+      # some of those are going to fail, but deletion order should match creation order so that later deletes aren't necessary
+      try:
+        GeschaefteKriegsmaterialNachKategorieEndempfaengerstaat.objects.filter(fromDate=fromDate, toDate=toDate).delete()
+      except:
+        pass
+      try:
+        sourceCSV.delete()
+      except:
+        pass
+      try:
+        nameCSV.delete()
+      except:
+        pass
+      try:
+        nameOfficial.delete()
+      except:
+        pass
+      try:
+        sourceOfficial.delete()
+      except:
+        pass
+      
+
+        
+  def validate(self):
+    """
+    Do various validation steps:
+      * Check country is in continent
+      
+    """
+    pass

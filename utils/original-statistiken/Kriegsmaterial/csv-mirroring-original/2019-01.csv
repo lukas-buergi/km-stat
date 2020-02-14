@@ -1,0 +1,71 @@
+"Kontinent
+Continent",Land,Pays,KM1,KM2,KM3,KM4,KM5,KM6,KM7,KM8,KM10,KM13,KM16,Total
+Total,,,6424962,7017783,36261274,510584,7123664,53121006,163592,3280727,9015811,276896,95354,123291653
+"Europa
+Europe",Belgien,Belgique,116468,,74182,,,22092,408,,266584,276896,,756630
+,Bosnien-Herzegowina,Bosnie-Herzégovine,9065,,,,,,,,,,,9065
+,Bulgarien,Bulgarie,,,25,,,,,,,,,25
+,Dänemark,Danemark,,101581,3620669,,,23164857,150,30,,,,26887287
+,Deutschland,Allemagne,1782406,3538356,14353148,103159,2691808,5082863,373,638613,79286,,2881,28272893
+,Estland,Estonie,8329,,32720,,,,,,,,,41049
+,Land,Pays,KM1,KM2,KM3,KM4,KM5,KM6,KM7,KM8,KM10,KM13,KM16,Total
+,Finnland,Finlande,28379,,13765,,,188727,,,470672,,,701543
+,Frankreich,France,260470,3703,3474920,280651,160763,,,329,1159288,,92473,5432597
+,Griechenland,Grèce,15587,,,,375,,,,,,,15962
+,Grossbritannien,Grande-Bretagne,32872,276986,26049,48870,51040,,,1495439,290415,,,2221671
+,Irland,Irlande,8004,,,,,,,,,,,8004
+,Island,Islande,489,,,,,,,,,,,489
+,Italien,Italie,386198,666653,77078,,2610594,,,298216,5750,,,4044489
+,Kroatien,Croatie,,,20552,,,,,,,,,20552
+,Litauen,Lituanie,261171,45824,,,,,,,,,,306995
+,Luxemburg,Luxembourg,4193,,,,,,,,,,,4193
+,Malta,Malte,11603,,,,,,,,,,,11603
+,Niederlande,Pays-Bas,15795,82170,1680765,,,86886,,30,,,,1865646
+,Norwegen,Norvège,79064,,1771166,61686,,1277327,,277052,,,,3466295
+,Österreich,Autriche,35397,,1937346,,,1224,,,,,,1973967
+,Polen,Pologne,1308,,,,,49308,,57715,,,,108331
+,Portugal,Portugal,,,75,,,,,,,,,75
+,Rumänien,Roumanie,11255,115000,,,,17851447,,,,,,17977702
+,Schweden,Suède,84087,10000,2437493,,14920,319506,,9160,771850,,,3647016
+,Serbien,Serbie,,,,,,,,904,,,,904
+,Slowakische Republik,"Slovaquie, République",5392,,213499,,,4432449,,,,,,4651340
+,Slowenien,Slovénie,2295,,,,,,,,,,,2295
+,Spanien,Espagne,1368,2010534,384068,,150,562517,,59885,63398,,,3081920
+,Tschechische Republik,"Tchèque, République",506894,11125,74572,,10662,,,35000,,,,638253
+,Türkei,Turquie,2400,,,,,,,,,,,2400
+,Ungarn,Hongrie,2890,,329845,,,,,12988,,,,345723
+,,,3673379,6861932,30521937,494366,5540312,53039203,931,2885361,3107243,276896,95354,106496914
+,Land,Pays,KM1,KM2,KM3,KM4,KM5,KM6,KM7,KM8,KM10,KM13,KM16,Total
+"Afrika
+Afrique",Kenia,Kenya,,,,,,,,,109311,,,109311
+,Südafrika,Afrique du Sud,7520,,,,,,,,,,,7520
+,,,7520,,,,,,,,109311,,,116831
+"Amerika
+Amérique",Bermuda,Bermudes,931,,,,,,,,,,,931
+,Brasilien,Brésil,,,,,31390,,,,,,,31390
+,Chile,Chili,2800,,,,,3520,,,,,,6320
+,Kanada,Canada,117020,,,,,77983,,,46960,,,241963
+,Mexiko,Mexique,,,,,,,,,60658,,,60658
+,Vereinigte Staaten von Amerika,Etats-Unis d'Amérique,1981049,22770,706962,,,,,395366,3836549,,,6942696
+,,,2101800,22770,706962,,31390,81503,,395366,3944167,,,7283958
+"Asien
+Asie",Bahrain,Bahrain,,,,,,,,,71228,,,71228
+,"Georgien, Republik","Géorgie, République",3960,,,,,,,,,,,3960
+,Indonesien,Indonésie,,,,16218,,,,,,,,16218
+,Israel,Israël,,,,,,300,,,,,,300
+,Japan,Japon,279480,,,,,,,,,,,279480
+,"Korea, Republik (Südkorea)","Corée, République (Corée du Sud)",,,21359,,,,,,,,,21359
+,Kuwait,Koweït,12150,,,,,,,,,,,12150
+,Malaysia,Malaisie,,,,,1180808,,,,1783862,,,2964670
+,Oman,Oman,4200,133081,1042153,,27828,,,,,,,1207262
+,Pakistan,Pakistan,,,,,332068,,,,,,,332068
+,Qatar,Qatar,886,,,,,,,,,,,886
+,Singapur,Singapour,,,3966323,,,,162661,,,,,4128984
+,Thailand,Thaïlande,,,,,11258,,,,,,,11258
+,Vereinigte Arabische Emirate,Emirats Arabes Unis,310411,,,,,,,,,,,310411
+,,,611087,133081,5029835,16218,1551962,300,162661,,1855090,,,9360234
+,Land,Pays,KM1,KM2,KM3,KM4,KM5,KM6,KM7,KM8,KM10,KM13,KM16,Total
+"Australien
+Australie",Australien,Australie,,,2540,,,,,,,,,2540
+,Neuseeland,Nouvelle-Zélande,31176,,,,,,,,,,,31176
+,,,31176,,2540,,,,,,,,,33716

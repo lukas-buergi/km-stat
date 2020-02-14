@@ -112,6 +112,7 @@ TIME_ZONE = 'Europe/Zurich'
 USE_I18N = True
 
 USE_L10N = True
+USE_THOUSAND_SEPARATOR = True
 
 USE_TZ = True
 
@@ -119,5 +120,11 @@ from .settingsLocal import *
 # should contain ALLOWED_HOSTS, STATIC_ROOT, STATIC_URL, MEDIA_ROOT, MEDIA_URL, DEBUG, DATABASES, SECRET_KEY
 
 if DEBUG:
-  INSTALLED_APPS += [ 'django.contrib.admin' ]
+  INSTALLED_APPS += [
+    'django.contrib.admindocs',
+    'django.contrib.admin',
+  ]
+  MIDDLEWARE += [
+    'django.contrib.admindocs.middleware.XViewMiddleware'
+  ]
   INTERNAL_IPS = [ '127.0.0.1' ]
