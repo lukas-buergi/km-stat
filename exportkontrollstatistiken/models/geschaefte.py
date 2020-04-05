@@ -167,7 +167,7 @@ class Geschaefte(models.Model):
   """ Der Beginn des Geschäfts. Normalerweise der 1. Januar des Jahres, weil nichts genaueres bekannt ist. """
   ende = models.DateField()
   """ Das Ende des Geschäftes. Geschäfte können über mehrere Jahren gehen stand irgendwo auf der Secowebseite (macht ja Sinn). Ich schätze das sieht man bei neueren Statistiken an der Nummer und bei älteren wurde das Geschäft wahrscheinlich nur in einem Jahr einbezogen nehme ich an (keine Ahnung). """
-  quelle = models.ForeignKey(QuellenGeschaefte, on_delete=models.PROTECT, blank=True, null=True) # TODO: allow multiple
+  sources = models.ManyToManyField(QuellenGeschaefte)
   """
   Die offizielle Quelle für den Eintrag. Ich glaube es gibt die immer nur auf Deutsch, sonst müsste man das noch anpassen um auch die anderen anzubieten.
   Man muss es sowieso anpassen, weil man manchmal mehrere Quellen hat, zum Beispiel offizielle Exzel und PDF, oder die Zahlen entstanden aus Subtraktion von Zwischenständen.

@@ -28,8 +28,11 @@ from .geschaefte import GueterArten
 from .geschaefte import Geschaefte
 from .geschaefte import QuellenGeschaefte
 
+import types
+import itertools
 import csv
 from datetime import date
+import calendar
 import os
 
 class Geschaeftslaendersummen(models.Model):
@@ -233,6 +236,7 @@ class GeschaefteCSVImport(models.Model):
 
 class GeschaefteKriegsmaterialNachKategorieEndempfaengerstaat(models.Model):
   """
+  Contains sums of arms exports. The entries for a period are assumed to contain the total for that period, except that multiple periods with the same starting point and different end points are assumed to be partial sums of each other.
   Mirrors the structure of the official documents "Ausfuhr von Kriegsmaterial nach Kategorie pro Endempfängerstaat" exactly,
   but do already regularize the data and add structure from text fields.
   Import from csv files works as follows:
@@ -252,7 +256,15 @@ class GeschaefteKriegsmaterialNachKategorieEndempfaengerstaat(models.Model):
   Display in the admin backend is then customized to also mirror the official document to allow efficient visual checks of imported data.
   The data can then be imported into the regular Geschaefte table completely automatically. """
 
+  checked = models.ManyToManyField(ManualCheck)
+  """
+  After importing a quarter's transactions, should visually compare display in admin interface with official source (as linked in sources field) and record this here.
+  """
+  
   sources = models.ManyToManyField(QuellenGeschaefte)
+  """
+  Should give the official source, and the intermediary csv file (to make fixing errors easier).
+  """
 
   fromDate = models.DateField()
   toDate = models.DateField()
@@ -262,8 +274,11 @@ class GeschaefteKriegsmaterialNachKategorieEndempfaengerstaat(models.Model):
   This is duplicate information because the continent is known from the country, but we mirror the offical document.
   If the country field isn't in the Laendergruppe continent, then throw some error.
   """
+  
   country = models.ForeignKey(Laender, on_delete=models.PROTECT)
 
+
+  kms = [ "KM1", "KM2", "KM3", "KM4", "KM5", "KM6", "KM7", "KM8", "KM9", "KM10", "KM11", "KM12", "KM13", "KM14", "KM15", "KM16", "KM17", "KM18", "KM19", "KM20", "KM21", "KM22" ]
   KM1 = models.PositiveIntegerField(null=True, blank=True)
   KM2 = models.PositiveIntegerField(null=True, blank=True)
   KM3 = models.PositiveIntegerField(null=True, blank=True)
@@ -390,13 +405,75 @@ class GeschaefteKriegsmaterialNachKategorieEndempfaengerstaat(models.Model):
         sourceOfficial.delete()
       except:
         pass
-      
 
-        
+  def __sub__(self, other):
+    assert(self.fromDate == other.fromDate)
+    assert(self.country == other.country)
+    assert(self.continent == other.continent)
+    new = GeschaefteKriegsmaterialNachKategorieEndempfaengerstaat(
+      fromDate=other.toDate+1,
+      toDate=self.toDate,
+      country=self.country,
+      continent=self.continent)
+      
+    for km in GeschaefteKriegsmaterialNachKategorieEndempfaengerstaat.kms:
+      if(self.getattr(km) == None and other.getattr(km) == None):
+        continue
+      if(self.getattr(km) == None):
+        self.setattr(km, 0)
+      if(other.getattr(km) == None):
+        other.setattr(km, 0)
+      
+  
+  @staticmethod
+  def toGeschaefte():
+    """
+    Put checked transactons into the main transaction table, discarding the existing entries for this time period.
+    Unchecked entries are ignored.
+    Algorithm:
+      * For each country:
+      * For each transaction, sorted by start date (arbitrary), end date (descending)
+      * First: Do nothing
+      * If the start date doesn't change: Add transaction for difference between end dates
+      * Else: Add previous row as is
+      *   
+    """
+    for country in Laender.objects.all():
+      transactions = iter(GeschaefteKriegsmaterialNachKategorieEndempfaengerstaat.objects.filter(country=country).order_by('fromDate', '-toDate'))
+      lastRow = next(transactions)
+      for row in transactions:
+        if(row.fromDate == lastRow.fromDate):
+          # add lastRow minus row
+          for km in row.kms:
+            if(lastRow.getattr(km) == None):
+              assert(row.getattr(km) == None)
+              diff=0
+            else:
+              diff=lastRow.getattr(km)
+              if(row.getattr(km) != None):
+                diff -= row.getattr(km)
+            g=Geschaefte(
+              endempfaengerstaat=country,
+              bewilligungstyp=Bewilligungstypen.get(name__de="Einzelbewilligung"),
+              richtung=Geschaeftsrichtungen.get(name_de="Bewilligungstypen"),
+              exportkontrollnummer=Exportkontrollnummern.get(nummer=km),
+              umfang=diff,
+              beginn=row.toDate+datetime.timedelta(days=1),
+              ende=lastRow.toDate
+            )
+            g.save()
+            g.sources.add(row.sources, lastRow.sources)
+        else:
+          # add lastRow as is, don't do anything with current row
+          pass
+        lastRow = row
+      # add lastRow as is
+  
   def validate(self):
     """
     Do various validation steps:
       * Check country is in continent
       
     """
-    pass
+    for g in GeschaefteKriegsmaterialNachKategorieEndempfaengerstaat.objects.all():
+      assert(g.continent in g.country.Laendergruppen)

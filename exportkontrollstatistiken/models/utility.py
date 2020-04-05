@@ -190,3 +190,16 @@ class Laender(models.Model):
   class Meta:
     verbose_name = 'Land'
     verbose_name_plural = 'Länder'
+
+class ManualCheck(models.Model):
+  """
+  When the content of a database entry is manually checked, add an instance of ManualCheck to it to record this fact.
+  Mainly to be used to distinguish transactions which are matched to an official source from transactions which might have been through an unknown number of (semi) automated transformations since some unknown person copied them form some unknown source.
+  """
+  name = models.CharField(max_length=50)
+  email = models.EmailField()
+  time = models.DateTimeField(auto_now_add=True)
+  
+  class Meta:
+    verbose_name = 'Manual check of entered data'
+    verbose_name_plural = 'Manual checks of entered data'

@@ -24,7 +24,7 @@ import calendar
 from django.db.models.functions import Concat
 from django.contrib import admin
 
-from .models import Uebersetzungen, Kontrollregimes, Exportkontrollnummern, Bewilligungstypen, Geschaeftsrichtungen, Laender, Laendergruppen, QuellenGeschaefte, QuellenProbleme, GueterArten, Geschaefte, ProblemArtenGesetz, ProblemArten, Probleme, GeschaefteKriegsmaterialNachKategorieEndempfaengerstaat
+from .models import Uebersetzungen, Kontrollregimes, Exportkontrollnummern, Bewilligungstypen, Geschaeftsrichtungen, Laender, Laendergruppen, QuellenGeschaefte, QuellenProbleme, GueterArten, Geschaefte, ProblemArtenGesetz, ProblemArten, Probleme, GeschaefteKriegsmaterialNachKategorieEndempfaengerstaat, ManualCheck
 
 class GeschaefteAdmin(admin.ModelAdmin):
   list_filter = ('beginn', 'ende', 'exportkontrollnummer__kontrollregime__gueterArt')
@@ -68,6 +68,40 @@ class GeschaefteKriegsmaterialNachKategorieEndempfaengerstaatAdmin(admin.ModelAd
           return(queryset.filter(fromDate=fromDate, toDate=toDate))
         else:
           return(queryset)
+  class CheckedFilter(admin.SimpleListFilter):
+    # Human-readable title which will be displayed in the
+    # right admin sidebar just above the filter options.
+    title = 'whether row was manually checked'
+
+    # Parameter for the filter that will be used in the URL query.
+    parameter_name = 'checked'
+
+    def lookups(self, request, model_admin):
+        """
+        Returns a list of tuples. The first element in each
+        tuple is the coded value for the option that will
+        appear in the URL query. The second element is the
+        human-readable name for the option that will appear
+        in the right sidebar.
+        """
+        return (
+            ('checked', 'Checked at least once'),
+            ('unchecked', 'Never checked'),
+        )
+
+    def queryset(self, request, queryset):
+        """
+        Returns the filtered queryset based on the value
+        provided in the query string and retrievable via
+        `self.value()`.
+        """
+        if(self.value()):
+          if(self.value() == 'checked'):
+            return(queryset.exclude(checked=None))
+          else:
+            return(queryset.filter(checked=None))
+        else:
+          return(queryset)
   def nameDE(self, obj):
     return(obj.country.name.de)
   nameDE.short_description = "Land"
@@ -80,14 +114,17 @@ class GeschaefteKriegsmaterialNachKategorieEndempfaengerstaatAdmin(admin.ModelAd
     """
     Mark the entries as manually/visually checked against the original source. Should this be boolean, or date, or name+date?
     """
-    pass#queryset.update(status='p')
-  markChecked.short_description = "Mark selected rows as checked."
+    check=ManualCheck(name=request.user.last_name + " " + request.user.first_name, email=request.user.email)
+    check.save()
+    for row in queryset:
+      row.checked.add(check)
+  markChecked.short_description = "Mark selected rows as manually checked."
   
   ordering = ('continent__seco_km_order', 'country__name__de')
   
   list_display = ('continentDE', 'nameDE', 'KM1', 'KM2', 'KM3', 'KM4', 'KM5', 'KM6', 'KM7', 'KM8', 'KM9', 'KM10', 'KM11', 'KM12', 'KM13', 'KM16', 'KM17', 'KM19', 'KM20', 'KM21', 'fromDate', 'toDate')
   
-  list_filter = (QuarterListFilter,)
+  list_filter = (QuarterListFilter, CheckedFilter)
 
   actions = [ 'markChecked' ]
 

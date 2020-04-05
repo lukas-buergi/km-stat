@@ -1,5 +1,5 @@
 #######################################################################
-# Copyright Lukas Bürgi 2019
+# Copyright Lukas Bürgi 2019, 2020
 #
 # This file is part of km-stat.
 #
