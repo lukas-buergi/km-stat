@@ -21,12 +21,9 @@
 ########################################################################
 # work on WA-ML list in txt format exported from openoffice to structure
 # it so that in the end it can go into the database
-import re
+import re, pdb
 from pprint import pprint
 from anytree import NodeMixin
-import pdb
-
-DEBUG=True
 
 class MatchingError(RuntimeError):
   pass
@@ -37,8 +34,11 @@ class Possibility(NodeMixin):
     self.parent=parent
     self.prev = previousLines
     self.next = nextLines
-    if(DEBUG):
-      print(self.getContext(5,5))
+    # sanitize lines
+    for index, line in enumerate(self.prev):
+      self.prev[index] = line.strip()
+    for index, line in enumerate(self.next):
+      self.next[index] = line.strip()
   
   def __str__(self):
     if(self.next != []):
@@ -134,10 +134,15 @@ class structuredList():
     self.updateFirstLeaves()
     leaf = self.firstLeaves.pop()
     if(len(leaf.next)>0):
-      previousLineArg = [leaf.prev[-1]] if len(leaf.prev) > 0 else []
-      possibilities = self.enumeration(*previousLineArg).possibilities(leaf.next[0])
+      if(len(leaf.prev) > 0):
+        enum = self.enumeration(leaf.prev[-1])
+      else:
+        enum = self.enumeration()
+      
+      possibilities = enum.getReferencePossibilities(leaf.next[0])
+
       for p in possibilities:
-        Possibility(leaf, leaf.prev.append(p), leaf.next[1:])
+        Possibility(leaf, leaf.prev+[p], leaf.next[1:])
       
       # delete leaf and go up the tree and delete all of its parents that would be leaves after the deletion of this child
       if(len(possibilities)==0):
@@ -165,198 +170,345 @@ class structuredList():
         self.possibilityRoot = self.possibilityRoot.children[0]
       return(True)
 
+  def parse(self):
+    while(self.parseStep()):
+      pass
+    
+  def get(self):
+    return(str(self.possibilityRoot))
+
 class enumerationBase():
   """
   
   """
-  mandatoryChild = False # if True, only matches if some child also matches NOT IMPLEMENTED
+  mandatoryChild = False # if True, only matches if some child also matches TODO NOT IMPLEMENTED
   childClasses = [] # classes of enumeration that could be children of this enumeration
   
-  prefix = '^\s*' # no capturing groups allowed
-  enumerationSymbol = '(?P<enumeration>(?P<symbol>[0-9]*)\.)\s*' # symbol capures enumeration symbol alone, enumeration captures the whole
-  suffix = '(?P<content>.*)$' # content captures the actual content of the line
-  
-  referencePrefix = '^\s*'
+  # canonical versions for output
+  symbolPrefix = ''
+  symbolSuffix = '.'
+
+  referencePrefix = ''
   referenceSeparator = ''
-  referenceSuffixPattern = ':\s*(?P<content>.*)$' # content captures the actual content of the line
-  
   referenceSuffix = ': '
-  
-  
-  firstEnumerationSymbol = 1
-  lastEnumerationSymbol = 100
-  
-  def __str__(self):
-    """
-    The string representation of an enumeration structure is the line it represents, i.e. the line its oldest ancestor was initialized with.
-    """
-    if(self.parent):
-      return(str(self.parent))
-    else:
-      return(self.line)
-  
-  def enumerationSymbolToInt(self, a):
-    """ Enumeration symbols are int by default so this is the identity function. """
-    assert(a>=self.firstEnumerationSymbol and a<=self.lastEnumerationSymbol)
-    return(int(a))
 
-  def intToEnumerationSymbol(self, a):
-    """ Enumeration symbols are int by default so this is the identity function. """
-    assert(a>=self.firstEnumerationSymbol and a<=self.lastEnumerationSymbol)
-    return(int(a))
-    
-  def incrementedEnumerationSymbol(self, a):
-    """ Returns incremented enumeration symbol a."""
-    numeric = self.enumerationSymbolToInt(a)+1
-    assert(numeric <= self.enumerationSymbolToInt(self.lastEnumerationSymbol))
-    return(self.intToEnumerationSymbol(numeric))
-    
-  def decrementedEnumerationSymbol(self, a):
-    """ Returns decremented enumeration symbol a."""
-    numeric = self.enumerationSymbolToInt(a)-1
-    assert(numeric >= self.enumerationSymbolToInt(self.firstEnumerationSymbol))
-    return(self.intToEnumerationSymbol(numeric))
-    
-  def follows(self, a, b):
-    """ Returns true if b directly follows a in the enumeration. """
-    return(self.incrementedEnumerationSymbol(a) == b)
+  # regex versions for matching
+  symbolPrefixRegex = r''
+  symbolRegex = r'[0-9]*'
+  symbolSuffixRegex = r'\.'
   
-  def matchSingle(self, line):
-    """
-    Return False if no match, matched enumeration symbol otherwise.
-    """
-    regex = self.prefix + self.enumerationSymbol + self.suffix
-    match = re.search(regex, line)
-    pdb.set_trace()
-    return(match)
+  standardLinePrefixRegex = r'^\s*'
+  standardLineSuffixRegex = r'\s*:?\s*(?P<content>.*)$' # content captures the actual content of the line
   
-  def matchReferenceStart(self, line):
-    """
-    Return False if no match, matched enumeration symbol and rest of line otherwise.
-    """
-    regex = self.referencePrefix + self.enumerationSymbol + self.referenceAfterEnumerationSymbol
-    match = re.search(regex, line)
-    pdb.set_trace()
-    return(match)
-    
-  def matchReferenceRecursive(self, line):
-    """
-    Return False if no match, matched enumeration symbol and rest of line otherwise.
-    """
-    regex = self.referenceSeparator + self.enumerationSymbol + self.referenceAfterEnumerationSymbol
-    match = re.search(regex, line)
-    pdb.set_trace()
-    return(match)
-
-  def referenceWithoutSuffix(self):
-    """
-    Return the reference of this enumeration structure.
-    """
-    
-    if(parent==None):
-      return(self.referencePrefix + self.currentEnumeration)
-    else:
-      return(self.parent.referenceWithoutSuffix() + self.referenceSeparator + self.currentEnumeration)
+  referenceLinePrefixRegex = r'^\s*'
+  referenceSeparatorRegex = r'\s*'
+  referenceLineSuffixRegex = r'\s*:\s*(?P<content>.*)$' # content captures the actual content of the line  
   
-  def referenceParseStep(self, restOfLine):
-    possibilities = []
-    for child in self.childClasses:
-      try:
-        possibilities.append(child(restOfLine, self))
-      except(MatchingError):
-        pass
-    if(len(possibilities) > 1):
-      raise(MatchingError("Initialization with invalid (ambiguous) reference failed."))
-    if(possibilities==[]):
-      return(None)
-    else:
-      return(possibilities[0])
+  # range of symbols
+  first = 1
+  last = 100
   
   def __init__(self, line=None, parent=None):
     """
     Initializes the structure given a line which is parsed as a reference or single enumeration symbol.
     """
     # doesn't depend on arguments to init ##############################
+    self.current = self.first - 1
+    self.content = None
     
-    self.referenceAfterEnumerationSymbol = "(?:" + self.referenceSeparator + "|" + self.referenceSuffixPattern + ")"
+    self.referenceAfterEnumerationRegex = "(?:" + self.referenceSeparatorRegex + "|" + self.referenceLineSuffixRegex + ")"
     
-    self.parentEnumerator = None
-    self.childEnumerator = None
-    
-    self.currentEnumerationSymbol = None
-    self.currentEnumeration = None
+    self.child = None
     
     # actual instance-specific stuff ###################################
     self.parent = parent
     self.line = line
-    
-    if(self.line):
-      if(not self.parent):
-        if(match := self.matchSingle(line)):
-          self.currentEnumerationSymbol = match['symbol']
-          self.currentEnumeration = match['enumeration']
-        elif(match := self.matchReferenceStart(line)):
-          self.currentEnumerationSymbol = match['symbol']
-          self.currentEnumeration = match['enumeration']
-          child=self.referenceParseStep(line[match.end('enumeration'):])
-          if(child):
-            self.child=child
-          else:
-            raise(MatchingError("Initialization with invalid reference failed (reference parses up to but excluding \"" + line[match.end('enumeration'):] + "\")."))
-      elif(match := self.matchReferenceRecursive(line)):
-        self.currentEnumerationSymbol = match['symbol']
-        self.currentEnumeration = match['enumeration']
-        self.child = self.referenceParseStep(line[match.end('enumeration'):])
-      else:
-        raise(MatchingError("Couldn't parse line \"" + line + "\" at all."))
+    if(not line is None):
+      self.setFromLine()
+
+  def getStandardLineRegex(self):
+    return( self.standardLinePrefixRegex
+          + r'(?P<enumeration>'
+          + self.symbolPrefixRegex
+          + r'(?P<symbol>'
+          + self.symbolRegex
+          + r')'
+          + self.symbolSuffixRegex
+          + r')'
+          + self.standardLineSuffixRegex
+    )
   
-  def possibilities(self, line, checkChildren=True):
+  def getStandardLineMatch(self, line):
+    """
+    Return None or a dict-like object with entries enumeration, symbol and content.
+    """
+    match = re.search(self.getStandardLineRegex(), line)
+    return(match)
+
+  def increment(self, line):
+    match = self.getStandardLineMatch(line)
+    if(match):
+      number = self.enumerationSymbolToInt(match['symbol'])
+      if(number == self.current + 1):
+        self.current += 1
+        self.content = match['content']
+        self.line = line
+      else:
+        raise(MatchingError("Could match line (" + number + "th, " + line + "), but isn't successor to this one (" + self.current + "th)."))
+    else:
+      raise(MatchingError("Couldn't match line: " + line))
+
+  def getReferenceStartRegex(self):
+    return( self.referenceLinePrefixRegex
+          + r'(?P<enumeration>'
+          + self.symbolPrefixRegex
+          + r'(?P<symbol>'
+          + self.symbolRegex
+          + r')'
+          + self.symbolSuffixRegex
+          + r')(?P<restOfLine>'
+          + self.referenceAfterEnumerationRegex
+          + r')'
+    )
+
+  def getReferenceStartMatch(self, line):
+    """
+    Return None or a dict-like object with entries enumeration, symbol, content, restOfLine.
+    """
+    match = re.search(self.getReferenceStartRegex(), line)
+    return(match)
+  
+  def getReferenceRecursiveRegex(self):
+    return( self.referenceSeparatorRegex
+          + r'(?P<enumeration>'
+          + self.symbolPrefixRegex
+          + r'(?P<symbol>'
+          + self.symbolRegex
+          + r')'
+          + self.symbolSuffixRegex
+          + r')(?P<restOfLine>'
+          + self.referenceAfterEnumerationRegex
+          + r')'
+    )
+  
+  def getReferenceRecursiveMatch(self, line):
+    """
+    Return None or a dict-like object with entries enumeration, symbol, content, restOfLine.
+    """
+    match = re.search(self.getReferenceRecursiveRegex(), line)
+    return(match)
+
+  def __str__(self):
+    """
+    The string representation of an enumeration structure is the line it represents in canonical (nicely formatted) form.
+    """
+    return(self.getReference() + self.getContent())
+
+
+  def getContent(self):
+    if(self.line is None):
+      raise(RuntimeError("Not initialized, can't get content."))
+    return(self.content)
+  
+  def enumerationSymbolToInt(self, a):
+    """ Enumeration symbols are int by default so this is the identity function. """
+    return(int(a))
+
+  def intToEnumerationSymbol(self, a):
+    """ Enumeration symbols are int by default so this is the identity function. """
+    return(str(a))
+    
+  def incrementedEnumerationSymbol(self, a):
+    """ Returns incremented enumeration symbol a."""
+    numeric = self.enumerationSymbolToInt(a)+1
+    return(self.intToEnumerationSymbol(numeric))
+    
+  def decrementedEnumerationSymbol(self, a):
+    """ Returns decremented enumeration symbol a."""
+    numeric = self.enumerationSymbolToInt(a)-1
+    return(self.intToEnumerationSymbol(numeric))
+    
+  def follows(self, a, b):
+    """ Returns true if b directly follows a in the enumeration. """
+    return(self.incrementedEnumerationSymbol(a) == b)
+  
+  def getCurrentEnumerationSymbol(self):
+    return(self.intToEnumerationSymbol(self.current))
+  
+  def getCurrentEnumeration(self):
+    return(self.getCurrentEnumerationSymbol() + self.symbolSuffix)
+  
+  def getReferenceNoSuffix(self):
+    """
+    Return the reference of this enumeration structure.
+    """
+    if(self.parent==None):
+      return(self.referencePrefix + self.getCurrentEnumeration())
+    else:
+      return(self.parent.getReferenceNoSuffix() + self.referenceSeparator + self.getCurrentEnumeration())
+
+  def getReference(self):
+    """
+    Return the full reference of this enumeration structure.
+    """
+    return(self.getReferenceNoSuffix() + self.referenceSuffix)
+  
+  def getEnumerationFromReference(self, restOfLine):
+    possibilities = []
+    for child in self.childClasses:
+      try:
+        c = child(restOfLine, self)
+      except(MatchingError):
+        pass
+      else:
+        possibilities.append(c)
+    if(len(possibilities) > 1):
+      raise(MatchingError("Parsing invalid (ambiguous) reference failed."))
+    if(possibilities==[]):
+      raise(MatchingError("Parsing invalid (no way to parse correctly) reference failed."))
+    else:
+      return(possibilities[0])
+  
+  def setFromReference(self):
+    if(self.parent):
+      # continue matching partially matched line
+      match = self.getReferenceRecursiveMatch(self.line)
+    else:
+      # match beginning of line
+      match = self.getReferenceStartMatch(self.line)
+    
+    if(match):
+      self.current = self.enumerationSymbolToInt(match['symbol'])
+      self.content = match['content']
+      
+      # either we are done or we need to continue parsing
+      try:
+        self.child = self.getEnumerationFromReference(match['restOfLine'])
+      except(MatchingError):
+        pass
+    else:
+      if(self.parent):
+        raise(MatchingError("Couldn't match reference (at second or later step)"))
+      else:
+        raise(MatchingError("Couldn't match reference (at beginning)."))
+  
+  def setFromLine(self):
+    """
+    Try to match a line without context.
+    """
+    if( self.line is None):
+      raise(RuntimeError("No line given to match, self.line is None."))
+    
+    if( self.parent ):
+      raise(RuntimeError("Doesn't make sense to match without context given a parent. Does it?"))
+    
+    # try to parse as reference
+    try:
+      self.setFromReference()
+    except(MatchingError):
+      # fall back to parsing as ordinary line (with empty/zero context)
+      self.increment(self.line)
+
+  def getReferencePossibilities(self, line, checkChildren=True):
     """
     Take a line which follows the one this object was initialized with, match this line against possible successors and return all possibilities of the line including  a full reference.
     """
-    successors = []
-    if(checkChildren):
+    possibilities = []
+    
+    # children are possibilities
+    if(checkChildren and not self.line is None):
       # check all children
       for child in self.childClasses:
         # see if the line matches the first enumeration symbol of the child class
-        child = child()
-        match = child.matchSingle(line)
-        if(match and match['symbol'] == child.firstEnumerationSymbol):
-          successor = self.referenceWithoutSuffix + self.referenceSeparator + match['symbol'] + self.referenceSuffix + match['content']
-          successors.append(successor)
+        # TODO: This also allows reference matches. Problem?
+        try:
+          child = child(line, self)
+        except(MatchingError):
+          continue
+        possibility = str(child)
+        possibilities.append(possibility)
+    
     # one possibility on this level
-    if(self.line):
-      # see if the line matches the next enumeration symbol of this class
-      match = self.matchSingle(line)
-      if(match and match['symbol'] == self.incrementedEnumerationSymbol(self.currentEnumerationSymbol)):
-          successor = self.referenceWithoutSuffix + self.referenceSeparator + match['symbol'] + self.referenceSuffix + match['content']
-          successors.append(successor)
+
+    try:
+      self.increment(line)
+    except(MatchingError):
+      pass
+    else:
+      possibility = self.getReference() + self.getContent()
+      possibilities.append(possibility)
     # call self.parent.possibilities
-    if(self.parent):
-      successors += self.parent.possibilities(line, False)
-    return(successors)
+    if(not self.parent is None):
+      possibilities += self.parent.getReferencePossibilities(line, False)
+    return(possibilities)
     
 class enumerationEmpty(enumerationBase):
-  """ Empty lines that are ignored (or any other ignored lines). For other ignored lines, match them using prefix exclusively."""
+  """
+  Empty lines that are ignored (or any other ignored lines). For other ignored lines, match them using prefix exclusively.
+  TODO: Actually ignore them, currently produces blank lines.
+  """
   prefix = '^\s*'
   enumerationSymbol = '(?P<enumeration>)(?P<symbol>)'
   suffix = '(?P<content>)$'
+  
+  # canonical versions for output
+  symbolPrefix = ''
+  symbolSuffix = ''
+
+  referencePrefix = ''
+  referenceSeparator = ''
+  referenceSuffix = ''
+
+  # regex versions for matching
+  symbolPrefixRegex = r''
+  symbolRegex = r''
+  symbolSuffixRegex = r''
+  
+  standardLinePrefixRegex = r'^\s*'
+  standardLineSuffixRegex = r'(?P<content>)$' # content captures the actual content of the line
+  
+  referenceLinePrefixRegex = r'^\s*'
+  referenceSeparatorRegex = r''
+  referenceLineSuffixRegex = r'(?P<content>)$' # content captures the actual content of the line  
 
 class enumerationArabic(enumerationBase):
   pass
 
 class enumerationChar(enumerationBase):
-  enumerationSymbol = '(?P<enumeration>(?P<symbol>([a-z]))\.)\s*'
-  firstEnumerationSymbol = 'a'
-  lastEnumerationSymbol = 'z'
+  # canonical versions for output
+  symbolPrefix = ''
+  symbolSuffix = '.'
+
+  referencePrefix = ''
+  referenceSeparator = ''
+  referenceSuffix = ': '
+
+  # regex versions for matching
+  symbolPrefixRegex = r''
+  symbolRegex = r'[a-z]*'
+  symbolSuffixRegex = r'\.'
+  
+  standardLinePrefixRegex = r'^\s*'
+  standardLineSuffixRegex = r'\s*:?\s*(?P<content>.*)$' # content captures the actual content of the line
+  
+  referenceLinePrefixRegex = r'^\s*'
+  referenceSeparatorRegex = r'\s*'
+  referenceLineSuffixRegex = r'\s*:\s*(?P<content>.*)$' # content captures the actual content of the line  
+  
+  # range of symbols
+  first = 1
+  last = 26
   
   def enumerationSymbolToInt(self, a):
-    return(ord(a))
+    return(ord(a)-96)
 
   def intToEnumerationSymbol(self, a):
-    return(chr(a))
+    return(chr(a+96))
 
 class enumerationNote(enumerationBase):
+  """
+  Not properly implemented.
+  """
   prefix = '^\s*'
   enumerationSymbol = '(?P<enumeration>)(?P<symbol>Note)'
   suffix = '\s*(?P<content>.*[^:])$'
@@ -368,6 +520,9 @@ class enumerationNote(enumerationBase):
     return("Note")
 
 class enumerationNoteTechnical(enumerationNote):
+  """
+  Not properly implemented.
+  """
   enumerationSymbol = '(?P<enumeration>)(?P<symbol>Technical Note)'
 
   def intToEnumerationSymbol(self, a):
@@ -379,21 +534,27 @@ class enumerationCatchAll(enumerationBase):
   This will ask much more questions than a custom tailored class.
   """
 
-enumerationCatchAll.childClasses = [enumerationArabic, enumerationChar]
-enumerationArabic.childClasses = [enumerationArabic, enumerationChar]
-enumerationChar.childClasses = [enumerationArabic, enumerationChar]
+class enumerationCatchAllArabic(enumerationArabic):
+  pass
 
-textFilePath = 'structureListsTestGeneric.flat-in.txt'
-with open(textFilePath, 'r', encoding='utf-8-sig') as f:
-  test = f.readlines()
+class enumerationCatchAllChar(enumerationChar):
+  pass
 
-sl = structuredList(test, enumerationCatchAll)
-try:
-  while(sl.parseStep()):
-    pass
-except MatchingError as e:
-  print(e)
+enumerationCatchAll.childClasses = [enumerationCatchAllArabic, enumerationCatchAllChar]
+enumerationCatchAllArabic.childClasses = [enumerationCatchAllArabic, enumerationCatchAllChar]
+enumerationCatchAllChar.childClasses = [enumerationCatchAllArabic, enumerationCatchAllChar]
 
-outPath = '/tmp/out.txt'
-with open(outPath, 'w') as f:
-  f.writelines(sl.possibilityRoot.prev)
+if __name__ == '__main__':
+  textFilePath = 'structureListsTestGeneric.flat-in.txt'
+  with open(textFilePath, 'r', encoding='utf-8-sig') as f:
+    test = f.readlines()
+
+  sl = structuredList(test, enumerationCatchAll)
+  try:
+    sl.parse()
+  except MatchingError as e:
+    print(e)
+
+  outPath = '/tmp/out.txt'
+  with open(outPath, 'w') as f:
+    f.writelines(sl.possibilityRoot.prev)
