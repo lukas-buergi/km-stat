@@ -1,0 +1,829 @@
+ML1.	Smooth-bore weapons with a calibre of less than 20 mm, other arms and automatic weapons with a calibre of 12.7 mm (calibre 0.50 inches) or less and accessories, as follows, and specially designed components therefor:
+ML1.Note	ML1. does not apply to:
+ML1.Note.a.	Firearms specially designed for dummy ammunition and which are incapable of discharging a projectile;
+ML1.Note.b.	Firearms specially designed to launch tethered projectiles having no high explosive charge or communications link, to a range of less than or equal to 500 m.;
+ML1.Note.c.	Weapons using non-centre fire cased ammunition and which are not of the fully automatic firing type;
+ML1.Note.d.	"Deactivated firearms".
+ML1.a.	Rifles and combination guns, handguns, machine, sub-machine and volley guns;
+ML1.a.Note	ML1.a. does not apply to the following:
+ML1.a.Note.a.	Rifles and combination guns, manufactured earlier than 1938;
+ML1.a.Note.b.	Reproductions of rifles and combination guns, the originals of which were manufactured earlier than 1890;
+ML1.a.Note.c.	Handguns, volley guns and machine guns, manufactured earlier than 1890, and their reproductions;
+ML1.a.Note.d.	Rifles or handguns, specially designed to discharge an inert projectile by compressed air or CO2.
+ML1.b.	Smooth-bore weapons as follows:
+ML1.b.1.	Smooth-bore weapons specially designed for military use;
+ML1.b.2.	Other smooth-bore weapons as follows:
+ML1.b.2.a.	Fully automatic type weapons;
+ML1.b.2.b.	Semi-automatic or pump-action type weapons;
+ML1.b.2.Note	ML1.b.2. does not apply to weapons specially designed to discharge an inert projectile by compressed air or CO2.
+ML1.b.Note	ML1.b. does not apply to the following:
+ML1.b.Note.a.	Smooth-bore weapons manufactured earlier than 1938;
+ML1.b.Note.b.	Reproductions of smooth-bore weapons, the originals of which were manufactured earlier than 1890.
+ML1.b.Note.c.	Smooth-bore weapons used for hunting or sporting purposes. These weapons must not be specially designed for military use or of the fully automatic firing type;
+ML1.b.Note.d.	Smooth-bore weapons specially designed for any of the following:
+ML1.b.Note.d.1.	Slaughtering of domestic animals;
+ML1.b.Note.d.2.	Tranquilizing of animals;
+ML1.b.Note.d.3.	Seismic testing;
+ML1.b.Note.d.4.	Firing of industrial projectiles; or
+ML1.b.Note.d.5.	Disrupting Improvised Explosive Devices (IEDs).
+ML1.b.Note.d.5.N.B.	For disruptors, see ML4. and 1.A.6. on the Dual-Use List.
+ML1.c.	Weapons using caseless ammunition;
+ML1.d.	Accessories designed for arms specified by ML1.a., ML1.b. or ML1.c., as follows:
+ML1.d.1.	Detachable cartridge magazines;
+ML1.d.2.	Sound suppressors or moderators;
+ML1.d.3.	Special gun-mountings;
+ML1.d.4.	Flash suppressors;
+ML1.d.5.	Optical weapon-sights with electronic image processing;
+ML1.d.6.	Optical weapon-sights specially designed for military use.
+ML2.	Smooth-bore weapons with a calibre of 20 mm or more, other weapons or armament with a calibre greater than 12.7 mm (calibre 0.50 inches), projectors and accessories, as follows, and specially designed components therefor:
+ML2.a.	Guns, howitzers, cannon, mortars, anti-tank weapons, projectile launchers, military flame throwers, rifles, recoilless rifles, smooth-bore weapons and signature reduction devices therefor;
+ML2.a.Note 1	ML2.a. includes injectors, metering devices, storage tanks and other specially designed components for use with liquid propelling charges for any of the equipment specified by ML2.a.
+ML2.a.Note 2	ML2.a. does not apply to weapons as follows:
+ML2.a.Note 2.a.	Rifles, smooth-bore weapons and combination guns, manufactured earlier than 1938;
+ML2.a.Note 2.b.	Reproductions of rifles, smooth-bore weapons and combination guns, the originals of which were manufactured earlier than 1890;
+ML2.a.Note 2.c.	Guns, howitzers, cannons, mortars, manufactured earlier than 1890;
+ML2.a.Note 2.d.	Smooth-bore weapons used for hunting or sporting purposes.  These weapons must not be specially designed for military use or of the fully automatic firing type;
+ML2.a.Note 2.e.	Smooth-bore weapons specially designed for any of the following:
+ML2.a.Note 2.e.1.	Slaughtering of domestic animals;
+ML2.a.Note 2.e.2.	Tranquilizing of animals;
+ML2.a.Note 2.e.3.	Seismic testing;
+ML2.a.Note 2.e.4.	Firing of industrial projectiles; or
+ML2.a.Note 2.e.5.	Disrupting Improvised Explosive Devices (IEDs);
+ML2.a.Note 2.e.5.N.B.	For disruptors, see ML4. and 1.A.6. on the Dual-Use List.
+ML2.a.Note 2.f.	Hand-held projectile  launchers specially designed to launch tethered projectiles having no high explosive charge or communications link, to a range of less than or equal to 500 m.
+ML2.b.	Smoke, gas and pyrotechnic projectors or generators, specially designed or modified for military use;
+ML2.Note	ML2.b. does not apply to signal pistols.
+ML2.c.	Weapons sights and weapon sight mounts, having all of the following:
+ML2.c.1.	Specially designed for military use; and
+ML2.c.2.	Specially designed for weapons specified in ML2.a.;
+ML2.d.	Mountings and detachable cartridge magazines, specially designed for the weapons specified in ML2.a.
+ML3.	Ammunition and fuze setting devices, as follows, and specially designed components therefor:
+ML3.a. Ammunition for weapons specified by ML1., ML2. or ML12.;
+ML3.b. Fuze setting devices specially designed for ammunition specified by ML3.a.
+ML3.Note 1.	Specially designed components specified by ML3. include:
+ML3.Note 1.a.	Metal or plastic fabrications such as primer anvils, bullet cups, cartridge links, rotating bands and munitions metal parts;
+ML3.Note 1.b.	Safing and arming devices, fuzes, sensors and initiation devices ;
+ML3.Note 1.c.	Power supplies with high one-time operational output;
+ML3.Note 1.d.	Combustible cases for charges;
+ML3.Note 1.e.	Submunitions including bomblets, minelets and terminally guided projectiles.
+ML3.a.Note 2.	ML3.a. does not apply to any of the following:
+ML3.a.Note 2.a.	Ammunition crimped without a projectile (blank star);
+ML3.a.Note 2.b.	Dummy ammunition with a pierced powder chamber;
+ML3.a.Note 2.c.	Other blank and dummy ammunition, not incorporating components designed for live ammunition; or
+ML3.a.Note 2.d.	Components specially designed for blank or dummy ammunition, specified in this Note 2.a., b. or c.
+ML3.a.Note 3.	ML3.a. does not apply to cartridges specially designed for any of the following purposes:
+ML3.a.Note 3.a.	Signalling;
+ML3.a.Note 3.b.	Bird scaring; or
+ML3.a.Note 3.c.	Lighting of gas flares at oil wells.
+ML4.	Bombs, torpedoes, rockets, missiles, other explosive devices and charges and related equipment and accessories, as follows, and specially designed components therefor:
+ML4.N.B.1.	For guidance and navigation equipment, see ML11.
+ML4.N.B.2.	For Aircraft Missile Protection Systems (AMPS), see ML4.c.
+ML4.a.	Bombs, torpedoes, grenades, smoke canisters, rockets, mines, missiles, depth charges, demolition-charges, demolition-devices, demolition-kits, "pyrotechnic" devices, cartridges and simulators (i.e., equipment simulating the characteristics of any of these items), specially designed for military use;
+ML4.a.Note.	ML4.a. includes:
+ML4.a.Note.a.	Smoke grenades, fire bombs, incendiary bombs and explosive devices;
+ML4.a.Note.b.	Missile or rocket nozzles and re-entry vehicle nosetips.
+ML4.b.	Equipment having all of the following:
+ML4.b.1.	Specially designed for military use; and
+ML4.b.2.	Specially designed for 'activities' relating to any of the following:
+ML4.b.2.a.	Items specified by ML4.a.; or
+ML4.b.2.b.	Improvised Explosive Devices (IEDs).
+ML4.b.2.Technical Note.	For the purpose of ML4.b.2. 'activities' applies to handling, launching, laying, controlling, discharging, detonating, activating, powering with one-time operational output, decoying, jamming, sweeping, detecting, disrupting or disposing.
+ML4.b.Note 1.	ML4.b. includes:
+ML4.b.Note 1.a.	Mobile gas liquefying equipment capable of producing 1,000 kg or more per day of gas in liquid form;
+ML4.b.Note 1.b.	Buoyant electric conducting cable suitable for sweeping magnetic mines.
+ML4.b.Note 2.	ML4.b. does not apply to hand-held devices limited by design solely to the detection of metal objects and incapable of distinguishing between mines and other metal objects.
+ML4.c.	Aircraft Missile Protection Systems (AMPS).
+ML4.c.Note.	ML4.c. does not apply to AMPS having all of the following:
+ML4.c.Note.a.	Any of the following missile warning sensors:
+ML4.c.Note.a.1.	Passive sensors having peak response between 100-400 nm; or
+ML4.c.Note.a.2.	Active pulsed Doppler missile warning sensors;
+ML4.c.Note.b.	Countermeasures dispensing systems;
+ML4.c.Note.c.	Flares, which exhibit both a visible signature and an infrared signature, for decoying surface-to-air missiles; and
+ML4.c.Note.d.	Installed on "civil aircraft" and having all of the following:
+ML4.c.Note.d.1.	The AMPS is only operable in a specific "civil aircraft" in which the specific AMPS is installed and for which any of the following has been issued:
+ML4.c.Note.d.1.a.	A civil Type Certificate issued by civil aviation authorities of one or more Wassenaar Arrangement Participating States; or
+ML4.c.Note.d.1.b.	An equivalent document recognised by the International Civil Aviation Organisation (ICAO);
+ML4.c.Note.d.2.	The AMPS employs protection to prevent unauthorised access to "software"; and
+ML4.c.Note.d.3.	The AMPS incorporates an active mechanism that forces the system not to function when it is removed from the "civil aircraft" in which it was installed.
+ML5.	Fire control, surveillance and warning equipment, and related systems, test and alignment and countermeasure equipment, as follows, specially designed for military use, and specially designed components and accessories therefor:
+ML5.a.	Weapon sights, bombing computers, gun laying equipment and weapon control systems;
+ML5.b.	Other fire control, surveillance and warning equipment, and related systems, as follows:
+ML5.b.1.	Target acquisition, designation, range-finding, surveillance or tracking systems;
+ML5.b.2.	Detection, recognition or identification equipment;
+ML5.b.3.	Data fusion or sensor integration equipment;
+ML5.c.	Countermeasure equipment for items specified by ML5.a. or ML5.b.;
+ML5.c.Note.	For the purposes of ML5.c., countermeasure equipment includes detection equipment.
+ML5.d.	Field test or alignment equipment, specially designed for items specified by ML5.a., ML5.b. or ML5.c.
+ML6.	Ground vehicles and components, as follows:
+ML6.N.B.	For guidance and navigation equipment, see ML11.
+ML6.a.	Ground vehicles and components therefor, specially designed or modified for military use;
+ML6.a.Note 1.	ML6.a. includes:
+ML6.a.Note 1.a.	Tanks and other military armed vehicles and military vehicles fitted with mountings for arms or equipment for mine laying or the launching of munitions specified by ML4;
+ML6.a.Note 1.b.	Armoured vehicles;
+ML6.a.Note 1.c.	Amphibious and deep water fording vehicles;
+ML6.a.Note 1.d.	Recovery vehicles and vehicles for towing or transporting ammunition or weapon systems and associated load handling equipment;
+ML6.a.Note 1.e.	Trailers.
+ML6.a.Note 2.	Modification of a ground vehicle for military use specified by ML6.a. entails a structural, electrical or mechanical change involving one or more components that are specially designed for military use.  Such components include:
+ML6.a.Note 2.a.	Pneumatic tyre casings of a kind specially designed to be bullet-proof;
+ML6.a.Note 2.b.	Armoured protection of vital parts (e.g., fuel tanks or vehicle cabs);
+ML6.a.Note 2.c.	Special reinforcements or mountings for weapons;
+ML6.a.Note 2.d.	Black-out lighting.
+ML6.b.	Other ground vehicles and components, as follows:
+ML6.b.1.	Vehicles having all of the following:
+ML6.b.1.a.	Manufactured or fitted with materials or components to provide ballistic protection equal to or better than level III (NIJ 0108.01, September 1985, or comparable national standard);
+ML6.b.1.b.	A transmission to provide drive to both front and rear wheels simultaneously, including those vehicles having additional wheels for load bearing purposes whether driven or not;
+ML6.b.1.c.	Gross Vehicle Weight Rating (GVWR) greater than 4,500 kg; and
+ML6.b.1.d.	Designed or modified for off-road use;
+ML6.b.2.	Components having all of the following:
+ML6.b.2.a.	Specially designed for vehicles specified in ML6.b.1.; and
+ML6.b.2.b.	Providing ballistic protection equal to or better than level III (NIJ 0108.01, September 1985, or comparable national standard).
+ML6.b.2.b.N.B.	See also ML13.a.
+ML6.Note 1.	ML6. does not apply to civil vehicles designed or modified for transporting money or valuables.
+ML6.Note 2.	ML6. does not apply to vehicles that meet all of the following;
+ML6.Note 2.a.	Were manufactured before 1946;
+ML6.Note 2.b.	Do not have items specified by the Munitions List and manufactured after 1945, except for reproductions of original components or accessories for the vehicle; and
+ML6.Note 2.c.	Do not incorporate weapons specified in ML1., ML2. or ML4. unless they are inoperable and incapable of discharging a projectile.
+ML7.	Chemical agents, "biological agents", "riot control agents", radioactive materials, related equipment, components and materials, as follows:
+ML7.a.	"Biological agents" or radioactive materials selected or modified to increase their effectiveness in producing casualties in humans or animals, degrading equipment or damaging crops or the environment;
+ML7.b.	Chemical warfare (CW) agents, including:
+ML7.b.1.	CW nerve agents:
+ML7.b.1.a.	O-Alkyl (equal to or less than C10, including cycloalkyl) alkyl (Methyl, Ethyl, n-Propyl or Isopropyl) - phosphonofluoridates, such as:
+ML7.b.1.a.-  Sarin (GB):O-Isopropyl methylphosphonofluoridate (CAS 107-44-8); and
+ML7.b.1.a.-  Soman (GD):O-Pinacolyl methylphosphonofluoridate (CAS 96-64-0);
+ML7.b.1.b.	O-Alkyl (equal to or less than C10, including cycloalkyl)
+ML7.b.1.b.	N,N-dialkyl (Methyl, Ethyl, n-Propyl or Isopropyl) phosphoramidocyanidates, such as: Tabun (GA):O-Ethyl
+ML7.b.1.b.	N,N-dimethylphosphoramidocyanidate (CAS 77-81-6);
+ML7.b.1.c.	O-Alkyl (H or equal to or less than C10, including cycloalkyl)
+ML7.b.1.c.	S-2-dialkyl (Methyl, Ethyl, n-Propyl or Isopropyl)-aminoethyl alkyl (Methyl, Ethyl, n-Propyl or Isopropyl) phosphonothiolates and corresponding alkylated and protonated salts, such as:
+ML7.b.1.c.	VX: O-Ethyl S-2-diisopropylaminoethyl methyl phosphonothiolate (CAS 50782-69-9);
+ML7.b.2.	CW vesicant agents:
+ML7.b.2.a.	Sulphur mustards, such as:
+ML7.b.2.a.1.	2-Chloroethylchloromethylsulphide (CAS 2625-76-5);
+ML7.b.2.a.2.	Bis(2-chloroethyl) sulphide (CAS 505-60-2);
+ML7.b.2.a.3.	Bis(2-chloroethylthio) methane (CAS 63869-13-6);
+ML7.b.2.a.4.	1,2-bis (2-chloroethylthio) ethane (CAS 3563-36-8);
+ML7.b.2.a.5.	1,3-bis (2-chloroethylthio) -n-propane (CAS 63905-10-2);
+ML7.b.2.a.6.	1,4-bis (2-chloroethylthio) -n-butane (CAS 142868-93-7) ;
+ML7.b.2.a.7.	1,5-bis (2-chloroethylthio) -n-pentane (CAS 142868-94-8);
+ML7.b.2.a.8.	Bis (2-chloroethylthiomethyl) ether (CAS 63918-90-1);
+ML7.b.2.a.9.	Bis (2-chloroethylthioethyl) ether (CAS 63918-89-8);
+ML7.b.2.b.	Lewisites, such as:
+ML7.b.2.b.1.	2-chlorovinyldichloroarsine (CAS 541-25-3);
+ML7.b.2.b.2.	Tris (2-chlorovinyl) arsine (CAS 40334-70-1);
+ML7.b.2.b.3.	Bis (2-chlorovinyl) chloroarsine (CAS 40334-69-8);
+ML7.b.2.c.	Nitrogen mustards, such as:
+ML7.b.2.c.1.	HN1: bis (2-chloroethyl) ethylamine (CAS 538-07-8);
+ML7.b.2.c.2.	HN2: bis (2-chloroethyl) methylamine (CAS 51-75-2);
+ML7.b.2.c.3.	HN3: tris (2-chloroethyl) amine (CAS 555-77-1);
+ML7.b.3.	CW incapacitating agents, such as:
+ML7.b.3.a.	3-Quinuclidinyl benzilate (BZ) (CAS 6581-06-2);
+ML7.b.4.	CW defoliants, such as:
+ML7.b.4.a.	Butyl 2-chloro-4-fluorophenoxyacetate (LNF);
+ML7.b.4.b.	2,4,5-trichlorophenoxyacetic acid (CAS 93-76-5) mixed with 
+ML7.b.4.b.	2,4-dichlorophenoxyacetic acid (CAS 94-75-7) 
+ML7.b.4.b.	(Agent Orange (CAS 39277-47-9));
+ML7.c.	CW binary precursors and key precursors, as follows:
+ML7.c.1.	Alkyl (Methyl, Ethyl, n-Propyl or Isopropyl) Phosphonyl Difluorides, such as: DF: Methyl Phosphonyldifluoride (CAS 676-99-3);
+ML7.c.2.	O-Alkyl (H or equal to or less than C10, including cycloalkyl) O-2-dialkyl (Methyl, Ethyl, n-Propyl or Isopropyl)-aminoethyl alkyl (Methyl, Ethyl, n-Propyl or Isopropyl) phosphonites and corresponding alkylated and protonated salts, such as:
+ML7.c.2.	 QL: O-Ethyl O-2-di-isopropylaminoethyl methylphosphonite
+ML7.c.2.	 (CAS 57856-11-8);
+ML7.c.3.	Chlorosarin: O-Isopropyl methylphosphonochloridate (CAS 1445-76-7);
+ML7.c.4.	Chlorosoman: O-Pinacolyl methylphosphonochloridate (CAS 7040-57-5);
+ML7.d.	"Riot control agents", active constituent chemicals and combinations thereof, including:
+ML7.d.1.	-Bromobenzeneacetonitrile, (Bromobenzyl cyanide) (CA) (CAS 5798-79-8);
+ML7.d.2.	[(2-chlorophenyl) methylene] propanedinitrile,
+ML7.d.2.	 (o-Chlorobenzylidenemalononitrile) (CS) (CAS 2698-41-1);
+ML7.d.3.	2-Chloro-1-phenylethanone, Phenylacyl chloride
+ML7.d.3. (-chloroacetophenone) (CN) (CAS 532-27-4);
+ML7.d.4.	Dibenz-(b,f)-1,4-oxazephine, (CR) (CAS 257-07-8);
+ML7.d.5.	10-Chloro-5,10-dihydrophenarsazine, (Phenarsazine chloride), (Adamsite), (DM) (CAS 578-94-9);
+ML7.d.6.	N-Nonanoylmorpholine, (MPA) (CAS 5299-64-9);
+ML7.d.Note 1.	ML7.d. does not apply to "riot control agents" individually packaged for personal self-defence purposes.
+ML7.d.Note 2.	ML7.d. does not apply to active constituent chemicals, and combinations thereof, identified and packaged for food production or medical purposes.
+ML7.e.	Equipment, specially designed or modified for military use, designed or modified for the dissemination of any of the following, and specially designed components therefor:
+ML7.e.1.	Materials or agents specified by ML7.a., ML7.b. or ML7.d.; or
+ML7.e.2.	CW agents made up of precursors specified by ML7.c.;
+ML7.f.	Protective and decontamination equipment, specially designed or modified for military use, components and chemical mixtures, as follows:
+ML7.f.1.	Equipment designed or modified for defence against materials specified by ML7.a., ML7.b. or ML7.d., and specially designed components therefor;
+ML7.f.2.	Equipment designed or modified for decontamination of objects contaminated with materials specified by ML7.a. or ML7.b., and specially designed components therefor;
+ML7.f.3.	Chemical mixtures specially developed or formulated for the decontamination of objects contaminated with materials specified by ML7.a. or ML7.b.;
+ML7.f.1.Note.	ML7.f.1. includes:
+ML7.f.1.Note.a.	Air conditioning units specially designed or modified for nuclear, biological or chemical filtration;
+ML7.f.1.Note.b.	Protective clothing.
+ML7.f.1.Note.b.N.B.	For civil gas masks, protective and decontamination equipment, see also 1.A.4. on the Dual-Use List.
+ML7.g.	Equipment, specially designed or modified for military use designed or modified for the detection or identification of materials specified by ML7.a., ML7.b. or ML7.d., and specially designed components therefor;
+ML7.g.Note.	ML7.g. does not apply to personal radiation monitoring dosimeters.
+N.B.	See also 1.A.4. on the Dual-Use List.
+ML7.h.	"Biopolymers" specially designed or processed for the detection or identification of CW agents specified by ML7.b., and the cultures of specific cells used to produce them;
+ML7.i.	"Biocatalysts" for the decontamination or degradation of CW agents, and biological systems therefor, as follows:
+ML7.i.1.	"Biocatalysts" specially designed for the decontamination or degradation of CW agents specified by ML7.b., and resulting from directed laboratory selection or genetic manipulation of biological systems;
+ML7.i.2.	Biological systems containing the genetic information specific to the production of "biocatalysts" specified by ML7.i.1., as follows:
+ML7.i.2.a.	"Expression vectors";
+ML7.i.2.b.	Viruses;
+ML7.i.2.c.	Cultures of cells.
+ML7.Note 1.	ML7.b. and ML7.d. do not apply to the following:
+ML7.Note 1.a.	Cyanogen chloride (CAS 506-77-4);
+ML7.Note 1.b.	Hydrocyanic acid (CAS 74-90-8);
+ML7.Note 1.c.	Chlorine (CAS 7782-50-5);
+ML7.Note 1.d.	Carbonyl chloride (phosgene) (CAS 75-44-5);
+ML7.Note 1.e.	Diphosgene (trichloromethyl-chloroformate) (CAS 503-38-8);
+ML7.Note 1.f.	Not used since 2004
+ML7.Note 1.g.	Xylyl bromide, ortho: (CAS 89-92-9), meta: (CAS 620-13-3), para: (CAS 104-81-4);
+ML7.Note 1.h.	Benzyl bromide (CAS 100-39-0);
+ML7.Note 1.i.	Benzyl iodide (CAS 620-05-3);
+ML7.Note 1.j.	Bromo acetone (CAS 598-31-2);
+ML7.Note 1.k.	Cyanogen bromide (CAS 506-68-3);
+ML7.Note 1.l.	Bromo methylethylketone (CAS 816-40-0);
+ML7.Note 1.m.	Chloro acetone (CAS 78-95-5);
+ML7.Note 1.n.	Ethyl iodoacetate (CAS 623-48-3);
+ML7.Note 1.o.	Iodo acetone (CAS 3019-04-3);
+ML7.Note 1.p.	Chloropicrin (CAS 76-06-2).
+ML7.Note 2	The cultures of cells and biological systems specified by ML7.h. and ML7.i.2. are exclusive and these sub-items do not apply to cells or biological systems for civil purposes, such as agricultural, pharmaceutical, medical, veterinary, environmental, waste management, or in the food industry.
+ML8.	"Energetic materials" and related substances, as follows:
+ML8.N.B.1.	See also 1.C.11. on the Dual-Use List.
+ML8.N.B.2.	For charges and devices, see ML4 and 1.A.8. on the Dual-Use List.
+ML8.Technical Notes.
+ML8.Technical Notes.1.	For the purposes of ML8., excluding ML8.c.11. or ML8.c.12., 'mixture' refers to a composition of two or more substances with at least one substance being listed in the ML8 sub-items.
+ML8.Technical Notes.2.	Any substance listed in the ML8 sub-items is subject to this list, even when utilised in an application other than that indicated.  (e.g., TAGN is predominantly used as an explosive but can also be used either as a fuel or an oxidizer.)
+ML8.Technical Notes.3.	For the purposes of ML8., particle size is the mean particle diameter on a weight or volume basis.  International or equivalent national standards will be used in sampling and determining particle size.
+ML8.a.	"Explosives" as follows, and 'mixtures' thereof:
+ML8.a.1.	ADNBF (aminodinitrobenzofuroxan or 7-amino-4,6-dinitrobenzofurazane-1-oxide) (CAS 97096-78-1);
+ML8.a.2.	BNCP (cis-bis (5-nitrotetrazolato) tetra amine-cobalt (III) perchlorate)
+ML8.a.2.	 (CAS 117412-28-9);
+ML8.a.3.	CL-14 (diamino dinitrobenzofuroxan or 5,7-diamino-4,6-dinitrobenzofurazane-1-oxide ) (CAS 117907-74-1);
+ML8.a.4.	CL-20 (HNIW or Hexanitrohexaazaisowurtzitane) (CAS 135285-90-4); chlathrates of CL-20 (see also ML8.g.3. and g.4. for its "precursors");
+ML8.a.5.	CP (2-(5-cyanotetrazolato) penta amine-cobalt (III) perchlorate)
+ML8.a.5.	 (CAS 70247-32-4);
+ML8.a.6.	DADE (1,1-diamino-2,2-dinitroethylene, FOX-7) (CAS 145250-81-3);
+ML8.a.7.	DATB (diaminotrinitrobenzene) (CAS 1630-08-6);
+ML8.a.8.	DDFP (1,4-dinitrodifurazanopiperazine);
+ML8.a.9.	DDPO (2,6-diamino-3,5-dinitropyrazine-1-oxide, PZO) (CAS 194486-77-6);
+ML8.a.10.	DIPAM (3,3-diamino-2,2,4,4,6,6-hexanitrobiphenyl or dipicramide)
+ML8.a.10.	 (CAS 17215-44-0);
+ML8.a.11.	DNGU (DINGU or dinitroglycoluril) (CAS 55510-04-8);
+ML8.a.12.	Furazans as follows:
+ML8.a.12.a.	DAAOF (DAAF, DAAFox, or diaminoazoxyfurazan);
+ML8.a.12.b.	DAAzF (diaminoazofurazan) (CAS 78644-90-3);
+ML8.a.13.	HMX and derivatives (see also ML8.g.5. for its "precursors"), as follows:
+ML8.a.13.a.	HMX (Cyclotetramethylenetetranitramine, octahydro-1,3,5,7-tetranitro-1,3,5,7-tetrazine, 1,3,5,7-tetranitro-1,3,5,7-tetraza-cyclooctane, octogen or octogene) (CAS 2691-41-0);
+ML8.a.13.b.	difluoroaminated analogs of HMX;
+ML8.a.13.c.	K-55 (2,4,6,8-tetranitro-2,4,6,8-tetraazabicyclo [3,3,0]-octanone-3, tetranitrosemiglycouril or keto-bicyclic HMX) (CAS 130256-72-3);
+ML8.a.14.	HNAD (hexanitroadamantane) (CAS 143850-71-9);
+ML8.a.15.	HNS (hexanitrostilbene) (CAS 20062-22-0);
+ML8.a.16.	Imidazoles as follows:
+ML8.a.16.a.	BNNII (Octahydro-2,5-bis(nitroimino)imidazo [4,5-d]imidazole);
+ML8.a.16.b.	DNI (2,4-dinitroimidazole) (CAS 5213-49-0);
+ML8.a.16.c.	FDIA (1-fluoro-2,4-dinitroimidazole);
+ML8.a.16.d.	NTDNIA (N-(2-nitrotriazolo)-2,4-dinitroimidazole);
+ML8.a.16.e.	PTIA (1-picryl-2,4,5-trinitroimidazole);
+ML8.a.17.	NTNMH (1-(2-nitrotriazolo)-2-dinitromethylene hydrazine);
+ML8.a.18.	NTO (ONTA or 3-nitro-1,2,4-triazol-5-one) (CAS 932-64-9);
+ML8.a.19.	Polynitrocubanes with more than four nitro groups;
+ML8.a.20.	PYX (2,6-Bis(picrylamino)-3,5-dinitropyridine) (CAS 38082-89-2);
+ML8.a.21.	RDX and derivatives, as follows:
+ML8.a.21.a.	RDX (cyclotrimethylenetrinitramine, cyclonite, T4, hexahydro-1,3,5-trinitro-1,3,5-triazine, 1,3,5-trinitro-1,3,5-triaza-cyclohexane, hexogen or hexogene) (CAS 121-82-4);
+ML8.a.21.b.	Keto-RDX (K-6 or 2,4,6-trinitro-2,4,6-triazacyclohexanone)
+ML8.a.21.b.	(CAS 115029-35-1);
+ML8.a.22.	TAGN (triaminoguanidinenitrate) (CAS 4000-16-2);
+ML8.a.23.	TATB (triaminotrinitrobenzene) (CAS 3058-38-6) (see also ML8.g.7 for its "precursors");
+ML8.a.24.	TEDDZ (3,3,7,7-tetrabis(difluoroamine) octahydro-1,5-dinitro-1,5-diazocine);
+ML8.a.25.	Tetrazoles as follows:
+ML8.a.25.a.	NTAT (nitrotriazol aminotetrazole);
+ML8.a.25.b.	NTNT (1-N-(2-nitrotriazolo)-4-nitrotetrazole);
+ML8.a.26.	Tetryl (trinitrophenylmethylnitramine) (CAS 479-45-8);
+ML8.a.27.	TNAD (1,4,5,8-tetranitro-1,4,5,8-tetraazadecalin) (CAS 135877-16-6)
+ML8.a.27.	(see also ML8.g.6. for its "precursors");
+ML8.a.28.	TNAZ (1,3,3-trinitroazetidine) (CAS 97645-24-4)
+ML8.a.28.	(see also ML8.g.2. for its "precursors");
+ML8.a.29.	TNGU (SORGUYL or tetranitroglycoluril) (CAS 55510-03-7);
+ML8.a.30.	TNP (1,4,5,8-tetranitro-pyridazino[4,5-d]pyridazine) (CAS 229176-04-9);
+ML8.a.31.	Triazines as follows:
+ML8.a.31.a.	DNAM (2-oxy-4,6-dinitroamino-s-triazine) (CAS 19899-80-0);
+ML8.a.31.b.	NNHT (2-nitroimino-5-nitro-hexahydro-1,3,5-triazine)
+ML8.a.31.b.	(CAS 130400-13-4);
+ML8.a.32.	Triazoles as follows:
+ML8.a.32.a.	5-azido-2-nitrotriazole;
+ML8.a.32.b.	ADHTDN (4-amino-3,5-dihydrazino-1,2,4-triazole dinitramide)
+ML8.a.32.b.	(CAS 1614-08-0);
+ML8.a.32.c.	ADNT (1-amino-3,5-dinitro-1,2,4-triazole);
+ML8.a.32.d.	BDNTA ((bis-dinitrotriazole)amine);
+ML8.a.32.e.	DBT (3,3-dinitro-5,5-bi-1,2,4-triazole) (CAS 30003-46-4);
+ML8.a.32.f.	DNBT (dinitrobistriazole) (CAS 70890-46-9);
+ML8.a.32.g.	Not used since 2010
+ML8.a.32.h.	NTDNT (1-N-(2-nitrotriazolo) 3,5-dinitrotriazole);
+ML8.a.32.i.	PDNT (1-picryl-3,5-dinitrotriazole);
+ML8.a.32.j.	TACOT (tetranitrobenzotriazolobenzotriazole) (CAS 25243-36-1);
+ML8.a.33.	"Explosives" not listed elsewhere in ML8.a. and having any of the following:
+ML8.a.33.a.	Detonation velocity exceeding 8,700 m/s, at maximum density, or
+ML8.a.33.b.	Detonation pressure exceeding 34 GPa (340 kbar);
+ML8.a.34.	Not used since 2013
+ML8.a.35.	DNAN (2,4-dinitroanisole) (CAS 119-27-7);
+ML8.a.36.	TEX (4,10-Dinitro-2,6,8,12-tetraoxa-4,10-diazaisowurtzitane);
+ML8.a.37.	GUDN (Guanylurea dinitramide) FOX-12 (CAS 217464-38-5);
+ML8.a.38.	Tetrazines as follows:
+ML8.a.38.a.	BTAT (Bis(2,2,2-trinitroethyl)-3,6-diaminotetrazine);
+ML8.a.38.b.	LAX-112 (3,6-diamino-1,2,4,5-tetrazine-1,4-dioxide);
+ML8.a.39.	Energetic ionic materials melting between 343 K (70°C) and 373 K (100°C) and with detonation velocity exceeding 6,800 m/s or detonation pressure exceeding 18 GPa (180 kbar);
+ML8.a.40.	BTNEN (Bis(2,2,2-trinitroethyl)-nitramine) (CAS 19836-28-3);
+ML8.a.41.	FTDO (5,6-(3',4'-furazano)- 1,2,3,4-tetrazine-1,3-dioxide);
+ML8.a.42.	EDNA (Ethylenedinitramine) (CAS 505-71-5);
+ML8.a.43.	TKX-50 (Dihydroxylammonium 5,5'-bistetrazole-1,1'-diolate);
+ML8.a.Note.	ML8.a. includes 'explosive co-crystals'.
+ML8.a.Note.Technical Note.
+ML8.a.Note.Technical Note.	An 'explosive co-crystal' is a solid material consisting of an ordered three dimensional arrangement of two or more explosive molecules, where at least one is specified in ML8.a.
+ML8.b.	"Propellants" as follows:
+ML8.b.1.	Any solid "propellant" with a theoretical specific impulse (under standard conditions) of more than:
+ML8.b.1.a.	240 seconds for non-metallized, non-halogenized "propellant";
+ML8.b.1.b.	250 seconds for non-metallized, halogenized "propellant"; or
+ML8.b.1.c.	260 seconds for metallized "propellant";
+ML8.b.2.	Not used since 2013
+ML8.b.3.	"Propellants" having a force constant of more than 1,200 kJ/kg;
+ML8.b.4.	"Propellants" that can sustain a steady-state linear burning rate of more than 38 mm/s under standard conditions (as measured in the form of an inhibited single strand) of 6.89 MPa (68.9 bar) pressure and 294K (21oC);
+ML8.b.5.	Elastomer Modified Cast Double Base (EMCDB) "propellants" with extensibility at maximum stress of more than 5% at 233K (-40oC);
+ML8.b.6.	Any "propellant" containing substances specified by ML8.a.;
+ML8.b.7.	"Propellants", not specified elsewhere in the Munitions List, specially designed for military use;
+ML8.c.	"Pyrotechnics", fuels and related substances, as follows, and 'mixtures' thereof:
+ML8.c.1.	"Aircraft" fuels specially formulated for military purposes;
+ML8.c.1.Note 1.	ML8.c.1. does not apply to the following "aircraft" fuels: JP-4, 
+ML8.c.1.Note 1.	JP-5, and JP-8.
+ML8.c.1.Note 2.	"Aircraft" fuels specified by ML8.c.1. are finished products, not their constituents.
+ML8.c.2.	Alane (aluminium hydride) (CAS 7784-21-6);
+ML8.c.3.	Boranes, as follows, and their derivatives:
+ML8.c.3.a.	Carboranes;
+ML8.c.3.b.	Borane homologues, as follows:
+ML8.c.3.b.1.	Decaborane (14) (CAS 17702-41-9);
+ML8.c.3.b.2.	Pentaborane (9) (CAS 19624-22-7);
+ML8.c.3.b.3.	Pentaborane (11) (CAS 18433-84-6);
+ML8.c.3.b.4.	Hydrazine and derivatives, as follows (see also ML8.d.8. and d.9. for oxidising hydrazine derivatives):
+ML8.c.3.b.4.a.	Hydrazine (CAS 302-01-2) in concentrations of 70% or more;
+ML8.c.3.b.4.b.	Monomethyl hydrazine (CAS 60-34-4);
+ML8.c.3.b.4.c.	Symmetrical dimethyl hydrazine (CAS 540-73-8);
+ML8.c.3.b.4.d.	Unsymmetrical dimethyl hydrazine (CAS 57-14-7);
+ML8.c.4.a.Note.	ML8.c.4.a. does not apply to hydrazine 'mixtures' specially formulated for corrosion control.
+ML8.c.5.	Metal fuels, fuel 'mixtures' or "pyrotechnic" 'mixtures', in particle form whether spherical, atomized, spheroidal, flaked or ground, manufactured from material consisting of 99 % or more of any of the following:
+ML8.c.5.a.	Metals as follows and 'mixtures' thereof:
+ML8.c.5.a.1.	Beryllium (CAS 7440-41-7) in particle sizes of less than 60 µm;
+ML8.c.5.a.2.	Iron powder (CAS 7439-89-6) with particle size of 3 µm or less produced by reduction of iron oxide with hydrogen;
+ML8.c.5.b.	'Mixtures' containing any of the following:
+ML8.c.5.b.1.	Zirconium (CAS 7440-67-7), magnesium (CAS 7439-95-4) or alloys of these in particle sizes of less than 60 µm; or
+ML8.c.5.b.2.	Boron (CAS 7440-42-8) or boron carbide (CAS 12069-32-8) fuels of 85% purity or higher and particle sizes of less than 60 µm;
+ML8.c.5.Note 1.	ML8.c.5 applies to "explosives" and fuels, whether or not the metals or alloys are encapsulated in aluminium, magnesium, zirconium, or beryllium.
+ML8.c.5.b.Note 2.	ML8.c.5.b. only applies to metal fuels in particle form when they are mixed with other substances to form a 'mixture' formulated for military purposes such as liquid "propellant" slurries, solid "propellants", or "pyrotechnic" 'mixtures'.
+ML8.c.5.b.2.Note 3.	ML8.c.5.b.2. does not apply to boron and boron carbide enriched with boron-10 (20% or more of total boron-10 content).
+ML8.c.6.	Military materials, containing thickeners for hydrocarbon fuels, specially formulated for use in flame throwers or incendiary munitions, such as metal stearates (e.g., octal (CAS 637-12-7)) or palmitates;
+ML8.c.7.	Perchlorates, chlorates and chromates, composited with powdered metal or other high energy fuel components;
+ML8.c.8.	Spherical or spheroidal aluminium powder (CAS 7429-90-5) with a particle size of 60 µm or less and manufactured from material with an aluminium content of 99% or more;
+ML8.c.9.	Titanium subhydride (TiHn) of stoichiometry equivalent to n= 0.65-1.68;
+ML8.c.10.	Liquid high energy density fuels not specified in ML8.c.1., as follows:
+ML8.c.10.a.	Mixed fuels, that incorporate both solid and liquid fuels (e.g., boron slurry), having a mass-based energy density of 40 MJ/kg or greater;
+ML8.c.10.b.	Other high energy density fuels and fuel additives (e.g., cubane, ionic solutions, JP-7, JP-10), having a volume-based energy density of 37.5 GJ per cubic meter or greater, measured at 293 K (20⁰C) and one atmosphere (101.325 kPa) pressure;
+ML8.c.10.b.Note.	ML8.c.10.b. does not apply to fossil refined fuels or biofuels, or fuels for engines certified for use in civil aviation.
+ML8.c.11.	"Pyrotechnic" and pyrophoric materials as follows:
+ML8.c.11.a.	"Pyrotechnic" or pyrophoric materials specifically formulated to enhance or control the production of radiated energy in any part of the IR spectrum;
+ML8.c.11.b.	Mixtures of magnesium, polytetrafluoroethylene (PTFE) and a vinylidene difluoride-hexafluoropropylene copolymer (e.g., MTV);
+ML8.c.12.	Fuel mixtures, "pyrotechnic" mixtures or "energetic materials", not specified elsewhere in ML8, having all of the following:
+ML8.c.12.a.	Containing greater than 0.5% of particles of any of the following:
+ML8.c.12.a.1.	Aluminium;
+ML8.c.12.a.2.	Beryllium;
+ML8.c.12.a.3.	Boron;
+ML8.c.12.a.4.	Zirconium;
+ML8.c.12.a.5.	Magnesium; or
+ML8.c.12.a.6.	Titanium;
+ML8.c.12.b.	Particles specified by ML8.c.12.a. with a size less than 200 nm in any direction; and
+ML8.c.12.c.	Particles specified by ML8.c.12.a. with a metal content of 60% or greater;
+ML8.c.12.Note.	ML8.c.12. includes thermites.
+ML8.d.	Oxidizers as follows, and 'mixtures' thereof:
+ML8.d.1.	ADN (ammonium dinitramide or SR 12) (CAS 140456-78-6);
+ML8.d.2.	AP (ammonium perchlorate) (CAS 7790-98-9);
+ML8.d.3.	Compounds composed of fluorine and any of the following:
+ML8.d.3.a.	Other halogens;
+ML8.d.3.b.	Oxygen; or
+ML8.d.3.c.	Nitrogen;
+ML8.d.3.Note 1.	ML8.d.3. does not apply to chlorine trifluoride (CAS 7790-91-2).
+ML8.d.3.Note 2.	ML8.d.3. does not apply to nitrogen trifluoride (CAS 7783-54-2) in its gaseous state.
+ML8.d.4.	DNAD (1,3-dinitro-1,3-diazetidine) (CAS 78246-06-7);
+ML8.d.5.	HAN (hydroxylammonium nitrate) (CAS 13465-08-2);
+ML8.d.6.	HAP (hydroxylammonium perchlorate) (CAS 15588-62-2);
+ML8.d.7.	HNF (hydrazinium nitroformate) (CAS 20773-28-8);
+ML8.d.8.	Hydrazine nitrate (CAS 37836-27-4);
+ML8.d.9.	Hydrazine perchlorate (CAS 27978-54-7);
+ML8.d.10.	Liquid oxidisers comprised of or containing inhibited red fuming nitric acid (IRFNA) (CAS 8007-58-7);
+ML8.d.10.Note.	ML8.d.10. does not apply to non-inhibited fuming nitric acid.
+ML8.e.	Binders, plasticizers, monomers and polymers, as follows:
+ML8.e.1.	AMMO (azidomethylmethyloxetane and its polymers) (CAS 90683-29-7)
+ML8.e.1.	(see also ML8.g.1. for its "precursors");
+ML8.e.2.	BAMO (3,3-bis(azidomethyl)oxetane and its polymers)
+ML8.e.2.	(CAS 17607-20-4) (see also ML8.g.1. for its "precursors");
+ML8.e.3.	BDNPA (bis (2,2-dinitropropyl)acetal) (CAS 5108-69-0);
+ML8.e.4.	BDNPF (bis (2,2-dinitropropyl)formal) (CAS 5917-61-3);
+ML8.e.5.	BTTN (butanetrioltrinitrate) (CAS 6659-60-5)
+ML8.e.5.	(see also ML8.g.8. for its "precursors");
+ML8.e.6.	Energetic monomers, plasticizers or polymers, specially formulated for military use and containing any of the following:
+ML8.e.6.a.	Nitro groups;
+ML8.e.6.b.	Azido groups;
+ML8.e.6.c.	Nitrate groups;
+ML8.e.6.d.	Nitraza groups; or
+ML8.e.6.e.	Difluoroamino groups;
+ML8.e.7.	FAMAO (3-difluoroaminomethyl-3-azidomethyl oxetane) and its polymers;
+ML8.e.8.	FEFO (bis-(2-fluoro-2,2-dinitroethyl) formal) (CAS 17003-79-1);
+ML8.e.9.	FPF-1 (poly-2,2,3,3,4,4-hexafluoropentane-1,5-diol formal) (CAS 376-90-9);
+ML8.e.10.	FPF-3 (poly-2,4,4,5,5,6,6-heptafluoro-2-tri-fluoromethyl-3-oxaheptane-1,7-diol formal);
+ML8.e.11.	GAP (glycidylazide polymer) (CAS 143178-24-9) and its derivatives;
+ML8.e.12.	HTPB (hydroxyl terminated polybutadiene) with a hydroxyl functionality equal to or greater than 2.2 and less than or equal to 2.4, a hydroxyl value of less than 0.77 meq/g, and a viscosity at 30°C of less than 47 poise
+ML8.e.12.	(CAS 69102-90-5);
+ML8.e.13.	Alcohol functionalised poly(epichlorohydrin) with a molecular weight less than 10,000, as follows:
+ML8.e.13.a.	Poly(epichlorohydrindiol);
+ML8.e.13.b.	Polsy(epichlorohydrintriol).
+ML8.e.14.	NENAs (nitratoethylnitramine compounds) (CAS 17096-47-8, 85068-73-1, 82486-83-7, 82486-82-6 and 85954-06-9);
+ML8.e.15.	PGN (poly-GLYN, polyglycidylnitrate or poly(nitratomethyl oxirane)) (CAS 27814-48-8);
+ML8.e.16.	Poly-NIMMO (poly (nitratomethylmethyloxetane), poly-NMMO or poly(3-Nitratomethyl-3-methyloxetane)) (CAS 84051-81-0);
+ML8.e.17.	Polynitroorthocarbonates;
+ML8.e.18.	TVOPA (1,2,3-tris[1,2-bis(difluoroamino)ethoxy] propane or tris vinoxy propane adduct) (CAS 53159-39-0);
+ML8.e.19.	4,5 diazidomethyl-2-methyl-1,2,3-triazole (iso- DAMTR);
+ML8.e.20.	PNO (Poly(3-nitrato oxetane));
+ML8.e.21.	TMETN (Trimethylolethane trinitrate) (CAS 3032-55-1);
+ML8.f.	"Additives" as follows:
+ML8.f.1.	Basic copper salicylate (CAS 62320-94-9);
+ML8.f.2.	BHEGA (bis-(2-hydroxyethyl) glycolamide) (CAS 17409-41-5);
+ML8.f.3.	BNO (butadienenitrileoxide);
+ML8.f.4.	Ferrocene derivatives as follows:
+ML8.f.4.a.	Butacene (CAS 125856-62-4);
+ML8.f.4.b.	Catocene (2,2-bis-ethylferrocenyl propane) (CAS 37206-42-1);
+ML8.f.4.c.	Ferrocene carboxylic acids and ferrocene carboxylic acid esters;
+ML8.f.4.d.	n-butyl-ferrocene (CAS 31904-29-7);
+ML8.f.4.e.	Other adducted polymer ferrocene derivatives not specified elsewhere in ML8.f.4.;
+ML8.f.4.f.	Ethyl ferrocene (CAS 1273-89-8);
+ML8.f.4.g.	Propyl ferrocene;
+ML8.f.4.h.	Pentyl ferrocene (CAS 1274-00-6);
+ML8.f.4.i.	Dicyclopentyl ferrocene;
+ML8.f.4.j.	Dicyclohexyl ferrocene;
+ML8.f.4.k.	Diethyl ferrocene (CAS 1273-97-8);
+ML8.f.4.l.	Dipropyl ferrocene;
+ML8.f.4.m.	Dibutyl ferrocene (CAS 1274-08-4);
+ML8.f.4.n.	Dihexyl ferrocene (CAS 93894-59-8);
+ML8.f.4.o.	Acetyl ferrocene (CAS 1271-55-2)/1,1’-diacetyl ferrocene
+ML8.f.4.o.	(CAS 1273-94-5);
+ML8.f.5.	Lead beta-resorcylate (CAS 20936-32-7) or copper beta-resorcylate
+ML8.f.5.	(CAS 70983-44-7);
+ML8.f.6.	Lead citrate (CAS 14450-60-3);
+ML8.f.7.	Lead-copper chelates of beta-resorcylate or salicylates (CAS 68411-07-4);
+ML8.f.8.	Lead maleate (CAS 19136-34-6);
+ML8.f.9.	Lead salicylate (CAS 15748-73-9);
+ML8.f.10.	Lead stannate (CAS 12036-31-6);
+ML8.f.11.	MAPO (tris-1-(2-methyl)aziridinyl phosphine oxide)
+ML8.f.11.	(CAS 57-39-6); BOBBA 8 (bis(2-methyl aziridinyl) 2-(2-hydroxypropanoxy) propylamino phosphine oxide); and other MAPO derivatives;
+ML8.f.12.	Methyl BAPO (bis(2-methyl aziridinyl) methylamino phosphine oxide) (CAS 85068-72-0);
+ML8.f.13.	N-methyl-p-nitroaniline (CAS 100-15-2);
+ML8.f.14.	3-Nitraza-1,5-pentane diisocyanate (CAS 7406-61-9);
+ML8.f.15.	Organo-metallic coupling agents as follows:
+ML8.f.15.a.	Neopentyl[diallyl]oxy, tri[dioctyl]phosphato-titanate (CAS 103850-22-2); also known as titanium IV, 2,2[bis 2-propenolato-methyl, butanolato, tris (dioctyl) phosphato] (CAS 110438-25-0); or LICA 12
+ML8.f.15.a.	(CAS 103850-22-2);
+ML8.f.15.b.	Titanium IV, [(2-propenolato-1) methyl, n-propanolatomethyl] butanolato-1, tris[dioctyl] pyrophosphate or KR3538;
+ML8.f.15.c. Titanium IV, [(2-propenolato-1)methyl, n-propanolatomethyl] butanolato-1, tris(dioctyl)phosphate;
+ML8.f.16.	Polycyanodifluoroaminoethyleneoxide;
+ML8.f.17.	Bonding agents as follows:
+ML8.f.17.a.	1,1R,1S-trimesoyl-tris(2-ethylaziridine) (HX-868, BITA)
+ML8.f.17.a.	(CAS 7722-73-8);
+ML8.f.17.b.	Polyfunctional aziridine amides with isophthalic, trimesic, isocyanuric or trimethyladipic backbone also having a 2-methyl or 2-ethyl aziridine group;
+ML8.f.17.b.Note.	Item ML.8.f.17.b. includes:
+ML8.f.17.b.Note.a.	1,1H-Isophthaloyl-bis(2-methylaziridine)(HX-752)
+ML8.f.17.b.Note.a.	(CAS 7652-64-4);
+ML8.f.17.b.Note.b.	2,4,6-tris(2-ethyl-1-aziridinyl)-1,3,5-triazine (HX-874) (CAS 18924-91-9);
+ML8.f.17.b.Note.c.	1,1'-trimethyladipoyl-bis(2-ethylaziridine) (HX-877)
+ML8.f.17.b.Note.c.	(CAS 71463-62-2).
+ML8.f.18.	Propyleneimine (2-methylaziridine) (CAS 75-55-8);
+ML8.f.19.	Superfine iron oxide (Fe2O3) (CAS 1317-60-8) with a specific surface area more than 250 m2/g and an average particle size of 3.0 nm or less;
+ML8.f.20.	TEPAN (tetraethylenepentaamineacrylonitrile) (CAS 68412-45-3); cyanoethylated polyamines and their salts;
+ML8.f.21.	TEPANOL (tetraethylenepentaamineacrylonitrileglycidol) (CAS 68412-46-4); cyanoethylated polyamines adducted with glycidol and their salts;
+ML8.f.22.	TPB (triphenyl bismuth) (CAS 603-33-8);
+ML8.f.23.	TEPB (Tris (ethoxyphenyl) bismuth) (CAS 90591-48-3);
+ML8.g.	"Precursors" as follows:
+ML8.g.N.B.	In ML8.g. the references are to specified "Energetic Materials" manufactured from these substances.
+ML8.g.1.	BCMO (3,3-bis(chloromethyl)oxetane) (CAS 78-71-7)
+ML8.g.1.	(see also ML8.e.1. and e.2.);
+ML8.g.2.	Dinitroazetidine-t-butyl salt (CAS 125735-38-8) (see also ML8.a.28.);
+ML8.g.3.	Hexaazaisowurtzitane derivates including HBIW (hexabenzylhexaazaisowurtzitane) (CAS 124782-15-6) (see also ML8.a.4.) and TAIW (tetraacetyldibenzylhexaazaisowurtzitane) (CAS 182763-60-6) (see also ML8.a.4.);
+ML8.g.4.	Not used since 2013
+ML8.g.5.	TAT (1,3,5,7 tetraacetyl-1,3,5,7,-tetraaza cyclo-octane) (CAS 41378-98-7) (see also ML8.a.13.);
+ML8.g.6.	1,4,5,8-tetraazadecalin (CAS 5409-42-7) (see also ML8.a.27.);
+ML8.g.7.	1,3,5-trichlorobenzene (CAS 108-70-3) (see also ML8.a.23.);
+ML8.g.8.	1,2,4-trihydroxybutane (1,2,4-butanetriol) (CAS 3068-00-6)
+ML8.g.8.	(see also ML8.e.5.);
+ML8.g.9.	DADN (1,5-diacetyl-3,7-dinitro-1, 3, 5, 7-tetraaza-cyclooctane)
+ML8.g.9.	(see also ML8.a.13).
+ML8.h.	'Reactive material' powders and shapes, as follows:
+ML8.h.1.	Powders of any of the following materials, with a particle size less than 250 µm in any direction and not specified elsewhere by ML8:
+ML8.h.1.a.	Aluminium;
+ML8.h.1.b.	Niobium;
+ML8.h.1.c.	Boron;
+ML8.h.1.d.	Zirconium;
+ML8.h.1.e.	Magnesium;
+ML8.h.1.f.	Titanium;
+ML8.h.1.g.	Tantalum;
+ML8.h.1.h.	Tungsten;
+ML8.h.1.i.	Molybdenum; or
+ML8.h.1.j.	Hafnium;
+ML8.h.2.	Shapes, not specified by ML3, ML4, ML12 or ML16, fabricated from powders specified by ML8.h.1.
+ML8.h.Technical Notes.
+ML8.h.Technical Notes.1.	'Reactive materials' are designed to produce an exothermic reaction only at high shear rates and for use as liners or casings in warheads.
+ML8.h.Technical Notes.2.	'Reactive material' powders are produced by, for example, a high energy ball milling process.
+ML8.h.Technical Notes.3.	'Reactive material' shapes are produced by, for example, selective laser sintering.
+ML8.Note 1.	ML8. does not apply to the following substances unless they are compounded or mixed with the "energetic material" specified by ML8.a. or powdered metals specified by ML8.c.:
+ML8.Note 1.a.	Ammonium picrate (CAS 131-74-8);
+ML8.Note 1.b.	Black powder;
+ML8.Note 1.c.	Hexanitrodiphenylamine (CAS 131-73-7);
+ML8.Note 1.d.	Difluoroamine (CAS 10405-27-3);
+ML8.Note 1.e.	Nitrostarch (CAS 9056-38-6);
+ML8.Note 1.f.	Potassium nitrate (CAS 7757-79-1);
+ML8.Note 1.g.	Tetranitronaphthalene;
+ML8.Note 1.h.	Trinitroanisol;
+ML8.Note 1.i.	Trinitronaphthalene;
+ML8.Note 1.j.	Trinitroxylene;
+-- Note 1 cont.
+ML8.Note 1.k.	N-pyrrolidinone; 1-methyl-2-pyrrolidinone (CAS 872-50-4);
+ML8.Note 1.l.	Dioctylmaleate (CAS 142-16-5);
+ML8.Note 1.m.	Ethylhexylacrylate (CAS 103-11-7);
+ML8.Note 1.n.	Triethylaluminium (TEA) (CAS 97-93-8), trimethylaluminium (TMA) (CAS 75-24-1), and other pyrophoric metal alkyls and aryls of lithium, sodium, magnesium, zinc or boron;
+ML8.Note 1.o.	Nitrocellulose (CAS 9004-70-0);
+ML8.Note 1.p.	Nitroglycerin (or glyceroltrinitrate, trinitroglycerine) (NG)
+ML8.Note 1.(CAS 55-63-0);
+ML8.Note 1.q.	2,4,6-trinitrotoluene (TNT) (CAS 118-96-7);
+ML8.Note 1.r.	Ethylenediaminedinitrate (EDDN) (CAS 20829-66-7);
+ML8.Note 1.s.	Pentaerythritoltetranitrate (PETN) (CAS 78-11-5);
+ML8.Note 1.t.	Lead azide (CAS 13424-46-9), normal lead styphnate (CAS 15245-44-0) and basic lead styphnate (CAS 12403-82-6), and primary explosives or priming compositions containing azides or azide complexes;
+ML8.Note 1.u.	Triethyleneglycoldinitrate (TEGDN) (CAS 111-22-8);
+ML8.Note 1.v.	2,4,6-trinitroresorcinol (styphnic acid) (CAS 82-71-3);
+ML8.Note 1.w.	Diethyldiphenylurea; (CAS 85-98-3); dimethyldiphenylurea;
+ML8.Note 1.w.	(CAS 611-92-7), methylethyldiphenylurea; [Centralites]
+ML8.Note 1.x.	N,N-diphenylurea (unsymmetrical diphenylurea) (CAS 603-54-3);
+ML8.Note 1.y.	Methyl-N,N-diphenylurea (methyl unsymmetrical diphenylurea)
+ML8.Note 1.y.	(CAS 13114-72-2);
+ML8.Note 1.z.	Ethyl-N,N-diphenylurea (ethyl unsymmetrical diphenylurea)
+ML8.Note 1.z.	(CAS 64544-71-4);
+ML8.Note 1.aa.	2-Nitrodiphenylamine (2-NDPA) (CAS 119-75-5);
+ML8.Note 1.bb.	4-Nitrodiphenylamine (4-NDPA) (CAS 836-30-6);
+ML8.Note 1.cc.	2,2-dinitropropanol (CAS 918-52-5);
+ML8.Note 1.dd.	Nitroguanidine (CAS 556-88-7) (see 1.C.11.d. on the Dual-Use List).
+ML8.Note 2.	ML8. does not apply to ammonium perchlorate (ML8.d.2.), NTO (ML8.a.18.) or catocene (ML8.f.4.b.), and meeting all of the following:
+ML8.Note 2.a.	Specially shaped and formulated for civil-use gas generation devices;
+ML8.Note 2.b.	Compounded or mixed, with non-active thermoset binders or plasticizers, and having a mass of less than 250 g;
+ML8.Note 2.c.	Having a maximum of 80% ammonium perchlorate (ML8.d.2.) in mass of active material;
+ML8.Note 2.d.	Having less than or equal to 4 g of NTO (ML8.a.18.); and
+ML8.Note 2.e.	Having less than or equal to 1 g of catocene (ML8.f.4.b.).
+ML9.	Vessels of war (surface or underwater), special naval equipment, accessories, components and other surface vessels, as follows:
+ML9.N.B.	For guidance and navigation equipment, see ML11.
+ML9.a.	Vessels and components, as follows:
+ML9.a.1.	Vessels (surface or underwater) specially designed or modified for military use, regardless of current state of repair or operating condition, and whether or not they contain weapon delivery systems or armour, and hulls or parts of hulls for such vessels, and components therefor specially designed for military use;
+ML9.a.1.Note.	ML9.a.1. includes vehicles specially designed or modified for the delivery of divers.
+ML9.a.2.	Surface vessels, not specified in ML9.a.1., having any of the following, fixed or integrated into the vessel:
+ML9.a.2.a.	Automatic weapons specified in ML1., or weapons specified in ML2., ML4., ML12. or ML19., or 'mountings' or hard points for weapons having a calibre of 12.7 mm or greater;
+ML9.a.2.a.Technical Note.
+ML9.a.2.a.Technical Note.	'Mountings' refers to weapon mounts or structural strengthening for the purpose of installing weapons.
+ML9.a.2.b.	Fire control systems specified in ML5.;
+ML9.a.2.c.	Having all of the following:
+ML9.a.2.c.1.	'Chemical, Biological, Radiological and Nuclear (CBRN) protection'; and
+ML9.a.2.c.2.	'Pre-wet or wash down system' designed for decontamination purposes; or
+ML9.a.2.c.Technical Notes.
+ML9.a.2.c.1.Technical Notes.	'CBRN protection' is a self-contained interior space containing features such as over-pressurization, isolation of ventilation systems, limited ventilation openings with CBRN filters and limited personnel access points incorporating air-locks.
+ML9.a.2.c.2.Technical Notes.	'Pre-wet or wash down system' is a seawater spray system capable of simultaneously wetting the exterior superstructure and decks of a vessel.
+ML9.a.2.d.	Active weapon countermeasure systems specified in ML4.b., ML5.c. or ML11.a. and having any of the following:
+ML9.a.2.d.1.	'CBRN protection';
+ML9.a.2.d.2.	Hull and superstructure, specially designed to reduce the radar cross section;
+ML9.a.2.d.3.	Thermal signature reduction devices, (e.g., an exhaust gas cooling system), excluding those specially designed to increase overall power plant efficiency or to reduce the environmental impact; or
+ML9.a.2.d.4.	A degaussing system designed to reduce the magnetic signature of the whole vessel;
+ML9.b.	Engines and propulsion systems, as follows, specially designed for military use and components therefor specially designed for military use:
+ML9.b.1.	Diesel engines specially designed for submarines;
+ML9.b.2.	Electric motors specially designed for submarines and having all of the following:
+ML9.b.2.a.	Power output of more than 0.75 MW (1,000 hp);
+ML9.b.2.b.	Quick reversing;
+ML9.b.2.c.	Liquid cooled; and
+ML9.b.2.d.	Totally enclosed;
+ML9.b.3.	Diesel engines having all of the following:
+ML9.b.3.a.	Power output of 37.3 kW (50 hp) or more; and
+ML9.b.3.b.	'Non-magnetic' content in excess of 75% of total mass;
+ML9.b.3.b.Technical Note.
+ML9.b.3.b.Technical Note.	For the purposes of ML9.b.3., 'non-magnetic' means the relative permeability is less than 2.
+ML9.b.4.	'Air Independent Propulsion' (AIP) systems specially designed for submarines;
+ML9.b.4.Technical Note.
+ML9.b.4.Technical Note.	'Air Independent Propulsion' (AIP) allows a submerged submarine to operate its propulsion system, without access to atmospheric oxygen, for a longer time than the batteries would have otherwise allowed. For the purposes of ML9.b.4., AIP does not include nuclear power.
+ML9.c.	Underwater detection devices, specially designed for military use, controls therefor and components therefor specially designed for military use;
+ML9.d.	Anti-submarine nets and anti-torpedo nets, specially designed for military use;
+ML9.e.	Not used since 2003;
+ML9.f.	Hull penetrators and connectors, specially designed for military use, that enable interaction with equipment external to a vessel, and components therefor specially designed for military use;
+ML9.f.Note.	ML9.f. includes connectors for vessels which are of the single-conductor, multi-conductor, coaxial or waveguide type, and hull penetrators for vessels, both of which are capable of remaining impervious to leakage from without and of retaining required characteristics at marine depths exceeding 100 m; and fibre-optic connectors and optical hull penetrators, specially designed for "laser" beam transmission, regardless of depth. ML9.f. does not apply to ordinary propulsive shaft and hydrodynamic control-rod hull penetrators.
+ML9.g.	Silent bearings having any of the following, components therefor and equipment containing those bearings, specially designed for military use:
+ML9.g.1.	Gas or magnetic suspension;
+ML9.g.2.	Active signature controls; or
+ML9.g.3.	Vibration suppression controls;
+ML9.h.	Naval nuclear equipment and related equipment and components, as follows:
+ML9.h.1.	Nuclear power generating equipment or propulsion equipment, specially designed for vessels specified in ML9.a. and components therefor specially designed or 'modified' for military use.
+ML9.h.1.Technical Note.
+ML9.h.1.Technical Note.	For the purpose of ML9.h.1., 'modified' means any structural, electrical, mechanical, or other change that provides a non-military item with military capabilities equivalent to an item which is specially designed for military use.
+ML9.h.1.Note.	ML9.h.1. includes "nuclear reactors".
+ML10.	"Aircraft", "lighter-than-air vehicles", "Unmanned Aerial Vehicles" ("UAVs"), aero-engines and "aircraft" equipment, related equipment, and components, as follows, specially designed or modified for military use:
+ML10.N.B.	For guidance and navigation equipment, see ML11.
+ML10.a.	Manned "aircraft" and "lighter-than-air vehicles", and specially designed components therefor;
+ML10.b.	Not used since 2011
+ML10.c.	Unmanned "aircraft" and "lighter-than-air vehicles", and related equipment, as follows, and specially designed components therefor:
+ML10.c.1.	"UAVs", Remotely Piloted Air Vehicles (RPVs), autonomous programmable vehicles and unmanned "lighter-than-air vehicles";
+ML10.c.2.	Launchers, recovery equipment and ground support equipment;
+ML10.c.3.	Equipment designed for command or control;
+ML10.d.	Propulsion aero-engines and specially designed components therefor;
+ML10.e.	Airborne refuelling equipment specially designed or modified for any of the following, and specially designed components therefor:
+ML10.e.1.	"Aircraft" specified by ML10.a.; or
+ML10.e.2.	Unmanned "aircraft" specified by ML10.c.;
+ML10.f.	'Ground equipment' specially designed for "aircraft" specified by ML10.a. or aero-engines specified by ML10.d.;
+ML10.f.Technical Note.
+ML10.f.Technical Note.'Ground equipment' includes pressure refuelling equipment and equipment designed to facilitate operations in confined areas.
+ML10.g.	Aircrew life support equipment, aircrew safety equipment and other devices for emergency escape, not specified in ML10.a., designed for "aircraft" specified by ML10.a.;
+ML10.g.Note.	ML10.g. does not control aircrew helmets that do not incorporate, or have mountings or fittings for, equipment specified in the Munitions List.
+ML10.g.N.B.	For helmets see also ML13.c.
+ML10.h.	Parachutes, paragliders and related equipment, as follows, and specially designed components therefor:
+ML10.h.1.	Parachutes not specified elsewhere in the Munitions List;
+ML10.h.2.	Paragliders;
+ML10.h.3.	Equipment specially designed for high altitude parachutists (e.g., suits, special helmets, breathing systems, navigation equipment);
+ML10.i.	Controlled opening equipment or automatic piloting systems, designed for parachuted loads.
+ML10.a.Note 1.	ML10.a. does not apply to "aircraft" and "lighter-than-air vehicles" or variants of those "aircraft", specially designed for military use and which are all of the following:
+ML10.a.Note 1.a.	Not a combat "aircraft";
+ML10.a.Note 1.b.	Not configured for military use and not fitted with equipment or attachments specially designed or modified for military use; and
+ML10.a.Note 1.c.	Certified for civil use by civil aviation authorities of one or more Wassenaar Arrangement Participating States.
+ML10.d.Note 2.	ML10.d. does not apply to:
+ML10.d.Note 2.a.	Aero-engines designed or modified for military use which have been certified by civil aviation authorities of one or more Wassenaar Arrangement Participating States for use in "civil aircraft", or specially designed components therefor;
+ML10.d.Note 2.b.	Reciprocating engines or specially designed components therefor, except those specially designed for "UAVs".
+ML10.Note 3.	For the purposes of ML10.a. and ML10.d., specially designed components and related equipment for non-military "aircraft" or aero-engines modified for military use applies only to those military components and to military related equipment required for the modification to military use.
+ML10.a.Note 4.	For the purposes of ML10.a., military use includes: combat, military reconnaissance, assault, military training, logistics support, and transporting and airdropping troops or military equipment.
+ML10.a.Note 5.	ML10.a. does not apply to "aircraft" or "lighter-than-air vehicles" that meet all of the following:
+ML10.a.Note 5.a.	Were first manufactured before 1946;
+ML10.a.Note 5.b.	Do not incorporate items specified by the Munitions List, unless the items are required to meet safety or airworthiness standards of civil aviation authorities of one or more Wassenaar Arrangement Participating States; and
+ML10.a.Note 5.c.	Do not incorporate weapons specified by the Munitions List, unless inoperable and incapable of being returned to operation.
+ML10.d.Note 6.	ML10.d. does not apply to propulsion aero-engines that were first manufactured before 1946.
+ML11.	Electronic equipment, "spacecraft" and components, not specified elsewhere on the Munitions List, as follows:
+ML11.a.	Electronic equipment specially designed for military use and specially designed components therefor;
+ML11.a.Note.	ML11.a. includes:
+ML11.a.Note.a.	Electronic countermeasure and electronic counter-countermeasure equipment (i.e., equipment designed to introduce extraneous or erroneous signals into radar or radio communication receivers or otherwise hinder the reception, operation or effectiveness of adversary electronic receivers including their countermeasure equipment), including jamming and counter-jamming equipment;
+ML11.a.Note.b.	Frequency agile tubes;
+ML11.a.Note.c.	Electronic systems or equipment, designed either for surveillance and monitoring of the electro-magnetic spectrum for military intelligence or security purposes or for counteracting such surveillance and monitoring;
+ML11.a.Note.d.	Underwater countermeasures, including acoustic and magnetic jamming and decoy, equipment designed to introduce extraneous or erroneous signals into sonar receivers;
+ML11.a.Note.e.	Data processing security equipment, data security equipment and transmission and signalling line security equipment, using ciphering processes;
+ML11.a.Note.f.	Identification, authentification and keyloader equipment and key management, manufacturing and distribution equipment;
+ML11.a.Note.g.	Guidance and navigation equipment;
+ML11.a.Note.h.	Digital troposcatter-radio communications transmission equipment;
+ML11.a.Note.i.	Digital demodulators specially designed for signals intelligence;
+ML11.a.Note.j.	"Automated Command and Control Systems".
+ML11.a.N.B.	For "software" associated with military "Software" Defined Radio (SDR), see ML21.
+ML11.b.	"Satellite navigation system" jamming equipment and specially designed components therefor;
+ML11.c.	"Spacecraft" specially designed or modified for military use, and "spacecraft" components specially designed for military use.
+ML12.	High velocity kinetic energy weapon systems and related equipment, as follows, and specially designed components therefor:
+ML12.a.	Kinetic energy weapon systems specially designed for destruction or effecting mission-abort of a target;
+ML12.b.	Specially designed test and evaluation facilities and test models, including diagnostic instrumentation and targets, for dynamic testing of kinetic energy projectiles and systems.
+ML12.N.B.	For weapon systems using sub-calibre ammunition or employing solely chemical propulsion, and ammunition therefor, see ML1. to ML4.
+ML12.Note 1.	ML12. includes the following when specially designed for kinetic energy weapon systems:
+ML12.Note 1.a.	Launch propulsion systems capable of accelerating masses larger than 0.1 g to velocities in excess of 1.6 km/s, in single or rapid fire modes;
+ML12.Note 1.b.	Prime power generation, electric armour, energy storage (e.g., high energy storage capacitors), thermal management, conditioning, switching or fuel-handling equipment; and electrical interfaces between power supply, gun and other turret electric drive functions;
+ML12.Note 1.b.N.B.	See also 3.A.1.e.2. on the Dual-Use List for high energy storage capacitors.
+ML12.Note 1.c.	Target acquisition, tracking, fire control or damage assessment systems;
+ML12.Note 1.d.	Homing seeker, guidance or divert propulsion (lateral acceleration) systems for projectiles.
+ML12.Note 2.	ML12. applies to weapon systems using any of the following methods of propulsion:
+ML12.Note 2.a.	Electromagnetic;
+ML12.Note 2.b.	Electrothermal;
+ML12.Note 2.c.	Plasma;
+ML12.Note 2.d.	Light gas; or
+ML12.Note 2.e.	Chemical (when used in combination with any of the above).
+ML13.	Armoured or protective equipment, constructions and components, as follows:
+ML13.a.	Metallic or non-metallic armoured plate, having any of the following:
+ML13.a.1.	Manufactured to comply with a military standard or specification; or
+ML13.a.2.	Suitable for military use;
+ML13.a.N.B.	For body armour plates, see ML13.d.2.
+ML13.b.	Constructions of metallic or non-metallic materials, or combinations thereof, specially designed to provide ballistic protection for military systems, and specially designed components therefor;
+ML13.c.	Helmets manufactured according to military standards or specifications, or comparable national standards, and specially designed helmet shells, liners, or comfort pads, therefor;
+ML13.c.N.B.	For other military helmet components or accessories, see the relevant ML entry.
+ML13.d.	Body armour or protective garments, and components therefor, as follows:
+ML13.d.1.	Soft body armour or protective garments, manufactured to military standards or specifications, or to their equivalents, and specially designed components therefor;
+ML13.d.1.Note.	For the purposes of ML13.d.1., military standards or specifications include, at a minimum, specifications for fragmentation protection.
+ML13.d.2.	Hard body armour plates providing ballistic protection equal to or greater than level III (NIJ 0101.06, July 2008) or national equivalents.
+ML13.b.Note 1.	ML13.b. includes materials specially designed to form explosive reactive armour or to construct military shelters.
+ML13.c.Note 2.	ML13.c. does not apply to conventional steel helmets, neither modified or designed to accept, nor equipped with any type of accessory device.
+ML13.Note 3.	ML13.c. and d. do not apply to helmets, body armour or protective garments, when accompanying their user for the user's own personal protection.
+ML13.c.Note 4	The only helmets specially designed for bomb disposal personnel that are specified by ML13.c. are those specially designed for military use.
+ML13.d.N.B. 1 	See also entry 1.A.5. on the Dual-Use List.
+ML13.d.N.B. 2	For "fibrous or filamentary materials" used in the manufacture of body armour and helmets, see entry 1.C.10. on the Dual-Use List.
+ML14.	'Specialised equipment for military training' or for simulating military scenarios, simulators specially designed for training in the use of any firearm or weapon specified by ML1. or ML2., and specially designed components and accessories therefor.
+ML14.Technical Note.
+ML14.Technical Note.	The term 'specialised equipment for military training' includes military types of attack trainers, operational flight trainers, radar target trainers, radar target generators, gunnery training devices, anti-submarine warfare trainers, flight simulators (including human-rated centrifuges for pilot/astronaut training), radar trainers, instrument flight trainers, navigation trainers, missile launch trainers, target equipment, drone "aircraft", armament trainers, pilotless "aircraft" trainers, mobile training units and training equipment for ground military operations.
+ML14.Note 1. 	ML14. includes image generating and interactive environment systems for simulators, when specially designed or modified for military use.
+ML14.Note 2.	ML14. does not apply to equipment specially designed for training in the use of hunting or sporting weapons.
+ML15.	Imaging or countermeasure equipment, as follows, specially designed for military use, and specially designed components and accessories therefor:
+ML15.a.	Recorders and image processing equipment;
+ML15.b.	Cameras, photographic equipment and film processing equipment;
+ML15.c.	Image intensifier equipment;
+ML15.d.	Infrared or thermal imaging equipment;
+ML15.e.	Imaging radar sensor equipment;
+ML15.f.	Countermeasure or counter-countermeasure equipment, for the equipment specified by ML15.a. to ML15.e.
+ML15.f.Note.	ML15.f. includes equipment designed to degrade the operation or effectiveness of military imaging systems or to minimise such degrading effects.
+ML15.c.Note.	ML15. does not apply to "first generation image intensifier tubes" or equipment specially designed to incorporate "first generation image intensifier tubes".
+ML15.c.N.B.	For the classification of weapons sights incorporating "first generation image intensifier tubes" see ML1., ML2. and ML5.a.
+ML15.N.B.	See also 6.A.2.a.2. and 6.A.2.b. on the Dual-Use List.
+ML16.	Forgings, castings and other unfinished products, specially designed for items specified by ML1.to ML4., ML6., ML9., ML10., ML12. or ML19.
+ML16.Note.	ML16. applies to unfinished products when they are identifiable by material composition, geometry or function.
+ML17.	Miscellaneous equipment, materials and "libraries", as follows, and specially designed components therefor:
+ML17.a.	Diving and underwater swimming apparatus, specially designed or modified for military use, as follows:
+ML17.a.1.	Self-contained diving rebreathers, closed or semi-closed circuit;
+ML17.a.2.	Underwater swimming apparatus specially designed for use with the diving apparatus specified in ML17.a.1;
+ML17.a.N.B.	See also 8.A.2.q. on the Dual-Use List.
+ML17.b.	Construction equipment specially designed for military use;
+ML17.c.	Fittings, coatings and treatments, for signature suppression, specially designed for military use;
+ML17.d.	Field engineer equipment specially designed for use in a combat zone;
+ML17.e.	"Robots", "robot" controllers and "robot" "end-effectors", having any of the following characteristics:
+ML17.e.1.	Specially designed for military use;
+ML17.e.2.	Incorporating means of protecting hydraulic lines against externally induced punctures caused by ballistic fragments (e.g., incorporating self-sealing lines) and designed to use hydraulic fluids with flash points higher than 839 K (566°C); or
+ML17.e.3.	Specially designed or rated for operating in an electro-magnetic pulse (EMP) environment;
+ML17.e.3.Technical Note.
+ML17.e.3.Technical Note.Electro-magnetic pulse does not refer to unintentional interference caused by electromagnetic radiation from nearby equipment (e.g., machinery, appliances or electronics) or lightning.
+ML17.f.	"Libraries" specially designed or modified for military use with systems, equipment or components, specified by the Munitions List;
+ML17.g.	Nuclear power generating equipment or propulsion equipment, not specified elsewhere, specially designed for military use and components therefor specially designed or 'modified' for military use;
+ML17.g.Note.	ML17.g. includes "nuclear reactors".
+ML17.h.	Equipment and material, coated or treated for signature suppression, specially designed for military use, not specified elsewhere in the Munitions List;
+ML17.i.	Simulators specially designed for military "nuclear reactors";
+ML17.j.	Mobile repair shops specially designed or 'modified' to service military equipment;
+ML17.k.	Field generators specially designed or 'modified' for military use;
+ML17.l.	ISO intermodal containers or demountable vehicle bodies (i.e., swap bodies), specially designed or 'modified' for military use;
+ML17.m.	Ferries, not specified elsewhere in the Munitions List, bridges and pontoons, specially designed for military use;
+ML17.n.	Test models specially designed for the "development" of items specified by ML4., ML6., ML9. or ML10.;
+ML17.o.	"Laser" protection equipment (e.g., eye or sensor protection) specially designed for military use;
+ML17.p.	"Fuel cells", not specified elsewhere in the Munitions List, specially designed or 'modified' for military use.
+ML17.Technical Note.
+ML17.Technical Note.1.	Not used since 2014
+ML17.Technical Note.2.	For the purpose of ML17, 'modified' means any structural, electrical, mechanical, or other change that provides a non-military item with military capabilities equivalent to an item which is specially designed for military use.
+ML18.	'Production' equipment and components, as follows:
+ML18.a.	Specially designed or modified 'production' equipment for the 'production' of products specified by the Munitions List, and specially designed components therefor;
+ML18.b.	Specially designed environmental test facilities and specially designed equipment therefor, for the certification, qualification or testing of products specified by the Munitions List.
+ML18.Technical Note.
+ML18.Technical Note.	For the purposes of ML18., the term 'production' includes design, examination, manufacture, testing and checking.
+ML18.Note.	ML18.a. and ML18.b. include the following equipment:
+ML18.Note.a.	Continuous nitrators;
+ML18.Note.b.	Centrifugal testing apparatus or equipment, having any of the following:
+ML18.Note.b.1.	Driven by a motor or motors having a total rated horsepower of more than 298 kW (400 hp);
+ML18.Note.b.2.	Capable of carrying a payload of 113 kg or more; or
+ML18.Note.b.3.	Capable of exerting a centrifugal acceleration of 8 g or more on a payload of 91 kg or more;
+ML18.Note.c.	Dehydration presses;
+ML18.Note.d.	Screw extruders specially designed or modified for military "explosive" extrusion;
+ML18.Note.e.	Cutting machines for the sizing of extruded "propellants";
+ML18.Note.f.	Sweetie barrels (tumblers) 1.85 m or more in diameter and having over 227 kg product capacity;
+ML18.Note.g.	Continuous mixers for solid "propellants";
+ML18.Note.h.	Fluid energy mills for grinding or milling the ingredients of military "explosives";
+ML18.Note.i.	Equipment to achieve both sphericity and uniform particle size in metal powder listed in ML8.c.8.;
+ML18.Note.j.	Convection current converters for the conversion of materials listed in ML8.c.3.
+ML19.	Directed Energy Weapon (DEW) systems, related or countermeasure equipment and test models, as follows, and specially designed components therefor:
+ML19.a.	"Laser" systems specially designed for destruction or effecting mission-abort of a target;
+ML19.b.	Particle beam systems capable of destruction or effecting mission-abort of a target;
+ML19.c.	High power Radio-Frequency (RF) systems capable of destruction or effecting mission-abort of a target;
+ML19.d.	Equipment specially designed for the detection or identification of, or defence against, systems specified by ML19.a. to ML19.c.;
+ML19.e.	Physical test models for the systems, equipment and components, specified by ML19.
+ML19.f.	"Laser" systems specially designed to cause permanent blindness to unenhanced vision, i.e., to the naked eye or to the eye with corrective eyesight devices.
+ML19.Note 1.	DEW systems specified by ML19. include systems whose capability is derived from the controlled application of:
+ML19.Note 1.a.	"Lasers" of sufficient power to effect destruction similar to the manner of conventional ammunition;
+ML19.Note 1.b.	Particle accelerators which project a charged or neutral particle beam with destructive power;
+ML19.Note 1.c.	High pulsed power or high average power radio frequency beam transmitters, which produce fields sufficiently intense to disable electronic circuitry at a distant target.
+ML19.Note 2.	ML19. includes the following when specially designed for DEW systems:
+ML19.Note 2.a.	Prime power generation, energy storage, switching, power conditioning or fuel-handling equipment;
+ML19.Note 2.b.	Target acquisition or tracking systems;
+ML19.Note 2.c.	Systems capable of assessing target damage, destruction or mission-abort;
+ML19.Note 2.d.	Beam-handling, propagation or pointing equipment;
+ML19.Note 2.e.	Equipment with rapid beam slew capability for rapid multiple target operations;
+ML19.Note 2.f.	Adaptive optics and phase conjugators;
+ML19.Note 2.g.	Current injectors for negative hydrogen ion beams;
+ML19.Note 2.h.	"Space-qualified" accelerator components;
+ML19.Note 2.i.	Negative ion beam funnelling equipment;
+ML19.Note 2.j.	Equipment for controlling and slewing a high energy ion beam;
+ML19.Note 2.k.	"Space-qualified" foils for neutralising negative hydrogen isotope beams.
+ML20.	Cryogenic and "superconductive" equipment, as follows, and specially designed components and accessories therefor:
+ML20.a.	Equipment specially designed or configured to be installed in a vehicle for military ground, marine, airborne or space applications, capable of operating while in motion and of producing or maintaining temperatures below 103 K (‑ 170°C);
+ML20.a.Note.	ML20.a. includes mobile systems incorporating or employing accessories or components manufactured from non-metallic or non-electrical conductive materials, such as plastics or epoxy-impregnated materials.
+ML20.b.	"Superconductive" electrical equipment (rotating machinery or transformers) specially designed or configured to be installed in a vehicle for military ground, marine, airborne or space applications and capable of operating while in motion.
+ML20.b.Note.	ML20.b. does not apply to direct-current hybrid homopolar generators that have single-pole normal metal armatures which rotate in a magnetic field produced by superconducting windings, provided those windings are the only superconducting components in the generator.
+ML21.	"Software" as follows:
+ML21.a.	"Software" specially designed or modified for any of the following:
+ML21.a.1.	"Development", "production", operation or maintenance of equipment specified by the Munitions List;
+ML21.a.2.	"Development" or "production" of materials specified by the Munitions List; or
+ML21.a.3.	"Development", "production", operation or maintenance of "software" specified by the Munitions List.
+ML21.b.	Specific "software", other than that specified by ML21.a., as follows:
+ML21.b.1.	"Software" specially designed for military use and specially designed for modelling, simulating or evaluating military weapon systems;
+ML21.b.2.	"Software" specially designed for military use and specially designed for modelling or simulating military operational scenarios;
+ML21.b.3.	"Software" for determining the effects of conventional, nuclear, chemical or biological weapons;
+ML21.b.4.	"Software" specially designed for military use and specially designed for Command, Communications, Control and Intelligence (C3I) or Command, Communications, Control, Computer and Intelligence (C4I) applications;
+ML21.c.	"Software", not specified by ML21.a. or ML21.b., specially designed or modified to enable equipment not specified by the Munitions List to perform the military functions of equipment specified by the Munitions List.
+ML22.	"Technology" as follows:
+ML22.a.	"Technology", other than specified in ML22.b, which is "required" for the "development", "production", operation, installation, maintenance (checking), repair, overhaul or refurbishing of items specified by the Munitions List;
+ML22.b.	"Technology" as follows:
+ML22.b.1.	"Technology" "required" for the design of, the assembly of components into, and the operation, maintenance and repair of, complete production installations for items specified by the Munitions List, even if the components of such production installations are not specified;
+ML22.b.2.	"Technology" "required" for the "development" and "production" of small arms, even if used to produce reproductions of antique small arms;
+ML22.b.3.	Not used since 2013
+ML22.b.3.N.B.	See ML22.a. for "technology" previously specified by ML22.b.3.
+ML22.b.4.	Not used since 2013
+ML22.b.4.N.B.	See ML22.a. for "technology" previously specified by ML22.b.4.
+ML22.b.5.	"Technology" "required" exclusively for the incorporation of "biocatalysts", specified by ML7.i.1., into military carrier substances or military material.
+ML22.Note 1.	"Technology" "required" for the "development", "production", operation, installation, maintenance (checking), repair, overhaul or refurbishing of items specified by the Munitions List remains under control even when applicable to any item not specified by the Munitions List.
+ML22.Note 2.	ML22 does not apply to:
+ML22.Note 2.a.	"Technology" that is the minimum necessary for the installation, operation, maintenance (checking) or repair, of those items which are not controlled or whose export has been authorised;
+ML22.Note 2.b.	"Technology" that is "in the public domain", "basic scientific research" or the minimum necessary information for patent applications;
+ML22.Note 2.c.	"Technology" for magnetic induction for continuous propulsion of civil transport devices.

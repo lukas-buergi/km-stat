@@ -21,7 +21,7 @@
 ########################################################################
 # work on WA-ML list in txt format exported from openoffice to structure
 # it so that in the end it can go into the database
-import re, pdb
+import re
 from pprint import pprint
 from anytree import NodeMixin
 
@@ -216,7 +216,7 @@ class enumerationBase():
     self.current = self.first - 1
     self.content = None
     
-    self.referenceAfterEnumerationRegex = "(?:" + self.referenceSeparatorRegex + "|" + self.referenceLineSuffixRegex + ")"
+    self.referenceAfterEnumerationRegex = "(?:" + self.referenceLineSuffixRegex + "|" + self.referenceSeparatorRegex + ")"
     
     self.child = None
     
@@ -295,6 +295,7 @@ class enumerationBase():
     """
     Return None or a dict-like object with entries enumeration, symbol, content, restOfLine.
     """
+    #import pdb; pdb.set_trace()
     match = re.search(self.getReferenceRecursiveRegex(), line)
     return(match)
 
@@ -302,7 +303,12 @@ class enumerationBase():
     """
     The string representation of an enumeration structure is the line it represents in canonical (nicely formatted) form.
     """
-    return(self.getReference() + self.getContent())
+    try:
+      out = str(self.getReference() + self.getContent())
+    except(TypeError) as e:
+      raise(RuntimeError("Not initialized, error."))
+    else:
+      return(out)
 
 
   def getContent(self):
@@ -376,7 +382,6 @@ class enumerationBase():
     else:
       # match beginning of line
       match = self.getReferenceStartMatch(self.line)
-    
     if(match):
       self.current = self.enumerationSymbolToInt(match['symbol'])
       self.content = match['content']
@@ -399,9 +404,6 @@ class enumerationBase():
     if( self.line is None):
       raise(RuntimeError("No line given to match, self.line is None."))
     
-    if( self.parent ):
-      raise(RuntimeError("Doesn't make sense to match without context given a parent. Does it?"))
-    
     # try to parse as reference
     try:
       self.setFromReference()
@@ -422,10 +424,10 @@ class enumerationBase():
         # see if the line matches the first enumeration symbol of the child class
         # TODO: This also allows reference matches. Problem?
         try:
-          child = child(line, self)
+          c = child(line, self)
         except(MatchingError):
           continue
-        possibility = str(child)
+        possibility = str(c)
         possibilities.append(possibility)
     
     # one possibility on this level
@@ -435,7 +437,7 @@ class enumerationBase():
     except(MatchingError):
       pass
     else:
-      possibility = self.getReference() + self.getContent()
+      possibility = str(self)
       possibilities.append(possibility)
     # call self.parent.possibilities
     if(not self.parent is None):

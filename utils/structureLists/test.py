@@ -52,6 +52,52 @@ class TestEnumerationBasic(unittest.TestCase):
     sl = structureLists2.structuredList(testIn, structureLists2.enumerationArabic)
     sl.parse()
     self.assertEqual(sl.get(), '1.: Lalala\n')
+    
+  def testMultiLineChar(self):
+    testIn = ['	a. Lalala\n',
+              'b. Blabla\r\n',
+              ' c. Tralala \n	',
+              ]
+    testOut = ['a.: Lalala',
+              'b.: Blabla',
+              'c.: Tralala',
+              ]
+    sl = structureLists2.structuredList(testIn, structureLists2.enumerationChar)
+    sl.parse()
+    self.assertEqual(sl.get().splitlines(), testOut)
+
+  def testMultiLineArabic(self):
+    testIn = ['1.		Lalala\r\n',
+              ' 2.: Blabla\n  ',
+              '	3. Tralala	 ',
+              ]
+    testOut = ['1.: Lalala',
+              '2.: Blabla',
+              '3.: Tralala',
+              ]
+    sl = structureLists2.structuredList(testIn, structureLists2.enumerationArabic)
+    sl.parse()
+    self.assertEqual(sl.get().splitlines(), testOut)
+
+class TestEnumerationCatchAll(unittest.TestCase):
+  def testArabicNested(self):
+    testIn = ['1.		Lalala\r\n',
+              ' 2. Blabla\n  ',
+              '	1. Tralala	 ',
+              '2. Lolo',
+              '3. Lala',
+              '3. Li',
+              ]
+    testOut = [ '1.: Lalala',
+                '2.: Blabla',
+                '2.1.: Tralala',
+                '2.2.: Lolo',
+                '2.3.: Lala',
+                '3.: Li',
+              ]
+    sl = structureLists2.structuredList(testIn, structureLists2.enumerationCatchAll)
+    sl.parse()
+    self.assertEqual(sl.get().splitlines(), testOut)
 
 if __name__ == '__main__':
   unittest.main()
