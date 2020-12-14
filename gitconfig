@@ -1,0 +1,7 @@
+# needs manual inclusion
+# git config --local include.path ../gitconfig
+
+[remote "km-staging"]
+	url = git+ssh://2167433@git.sd6.gpaas.net/default.git
+	fetch = +refs/heads/*:refs/remotes/km-staging/*
+
