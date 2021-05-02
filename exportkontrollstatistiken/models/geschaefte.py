@@ -187,7 +187,7 @@ class Geschaefte(models.Model):
     cnames = ['Datum', 'Art', 'EKN', 'Umfang']
     ctypes = ['untreated', 'untreated', 'untreated', 'money']
     if(True): # not p.countriesSingle
-      cnames = ['Ländercode', 'Land'] + cnames
+      cnames = ['', 'Land'] + cnames
       ctypes = ['country code', 'country name'] + ctypes
     result = apiData(False, cnames, ctypes)
 

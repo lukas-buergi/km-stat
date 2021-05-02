@@ -58,7 +58,11 @@ CC BY-SA 4.0, as far as its copyright belongs to
 
 ## Local installation:
 
-* Create virtualenv: virtualenv -p python3 km-stat-workdir
+* `apt-get install virtualenv default-mysql-server default-libmysqlclient-dev build-essential`
+* `echo "CREATE USER kriegsmaterialch IDENTIFIED BY 'Ze5uukaephooth3aivah'; CREATE DATABASE kriegsmaterialch; GR
+ANT ALL ON kriegsmaterialch.* to kriegsmaterialch" | mysql`
+* `mysql -u kriegsmaterialch -pZe5uukaephooth3aivah < `backup.sql`
+* Create virtualenv: `virtualenv -p python3 km-stat-workdir`
 * Go into virtualenv: `cd km-stat-workdir; . bin/activate`
 * Clone: git clone git@github.com:lukas-buergi/km-stat.git
 * pip install stuff in requirements.txt file: `pip install -r km-stat/requirements.txt`
