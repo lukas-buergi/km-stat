@@ -37,7 +37,6 @@
 1.A.4.a.Technical Notes.	For the purposes of 1.A.4.a.:
 1.A.4.a.Technical Notes.1.	Full face masks are also known as gas masks.
 1.A.4.a.Technical Notes.2.	Filter canisters include filter cartridges.
-
 1.A.4.a.1.	"Biological agents";
 1.A.4.a.2.	'Radioactive materials';
 1.A.4.a.3.	Chemical warfare (CW) agents; or
@@ -82,8 +81,8 @@
 1.A.5.	Body armour and components therefor, as follows:
 1.A.5.a.	Soft body armour not manufactured to military standards or specifications, or to their equivalents, and specially designed components therefor;
 1.A.5.b.	Hard body armour plates providing ballistic protection equal to or less than level IIIA (NIJ 0101.06, July 2008) or national equivalents.
-N.B.1.	For "fibrous or filamentary materials" used in the manufacture of body armour, see entry 1.C.10.
-N.B.2.	For body armour manufactured to military standards or specifications, see entry ML13.d.
+1.A.5.N.B.1.	For "fibrous or filamentary materials" used in the manufacture of body armour, see entry 1.C.10.
+1.A.5.N.B.2.	For body armour manufactured to military standards or specifications, see entry ML13.d.
 1.A.5.Note 1.	1.A.5. does not apply to body armour when accompanying its user for the user's own personal protection.
 1.A.5.Note 2.	1.A.5. does not apply to body armour designed to provide frontal protection only from both fragment and blast from non-military explosive devices.
 1.A.5.Note 3.	1.A.5. does not apply to body armour designed to provide protection only from knife, spike, needle or blunt trauma.
@@ -166,18 +165,18 @@ N.B.2.	For body armour manufactured to military standards or specifications, see
 1.C.1.a.Note 1.c.1.	Made from any of the following:
 1.C.1.a.Note 1.c.1.a.	Plastic foam materials (flexible or non-flexible) with carbon-loading, or organic materials, including binders, providing more than 5% echo compared with metal over a bandwidth exceeding ±15% of the centre frequency of the incident energy, and not capable of withstanding temperatures exceeding 450 K (177° C); or
 1.C.1.a.Note 1.c.1.b.	Ceramic materials providing more than 20% echo compared with metal over a bandwidth exceeding ±15% of the centre frequency of the incident energy, and not capable of withstanding temperatures exceeding 800 K (527°C);
-Technical Note.
-Technical Note.	Absorption test samples for 1.C.1.a. Note 1.c.1. should be a square at least 5 wavelengths of the centre frequency on a side and positioned in the far field of the radiating element.
-2.	Tensile strength less than 7 x 106 N/m2; and
-3.	Compressive strength less than 14 x 106 N/m2;
-d.	Planar absorbers made of sintered ferrite, having all of the following:
-d.1.	A specific gravity exceeding 4.4; and
-d.2.	A maximum operating temperature of 548 K (275°C);
-Note 1 cont.
-e.	Planar absorbers having no magnetic loss and fabricated from 'open-cell foam' plastic material with a density of 0.15 grams/cm3 or less.
-Technical Note.
-Technical Note.	'Open-cell foams' are flexible and porous materials, having an inner structure open to the atmosphere.  'Open-cell foams' are also known as reticulated foams.
-Note 2.	Nothing in Note 1 releases magnetic materials to provide absorption when contained in paint.
+1.C.1.a.Note 1.c.1.Technical Note.
+1.C.1.a.Note 1.c.1.Technical Note.	Absorption test samples for 1.C.1.a. Note 1.c.1. should be a square at least 5 wavelengths of the centre frequency on a side and positioned in the far field of the radiating element.
+1.C.1.a.Note 1.c.2.	Tensile strength less than 7 x 106 N/m2; and
+1.C.1.a.Note 1.c.3.	Compressive strength less than 14 x 106 N/m2;
+1.C.1.a.Note 1.d.	Planar absorbers made of sintered ferrite, having all of the following:
+1.C.1.a.Note 1.d.1.	A specific gravity exceeding 4.4; and
+1.C.1.a.Note 1.d.2.	A maximum operating temperature of 548 K (275°C);
+1.C.1.a.Note 1.	Note 1 cont.
+1.C.1.a.Note 1.e.	Planar absorbers having no magnetic loss and fabricated from 'open-cell foam' plastic material with a density of 0.15 grams/cm3 or less.
+1.C.1.a.Note 1.e.Technical Note.
+1.C.1.a.Note 1.e.Technical Note.	'Open-cell foams' are flexible and porous materials, having an inner structure open to the atmosphere.  'Open-cell foams' are also known as reticulated foams.
+1.C.1.a.Note 2.	Nothing in Note 1 releases magnetic materials to provide absorption when contained in paint.
 1.C.1.b.	Materials not transparent to visible light and specially designed for absorbing near-infrared radiation having a wavelength exceeding 810 nm but less than 2000 nm (frequencies exceeding 150 THz but less than 370 THz);
 1.C.1.b.Note.	1.C.1.b. does not apply to materials, specially designed or formulated for any of the following applications:
 1.C.1.b.Note.a.	"Laser" marking of polymers; or
@@ -188,15 +187,15 @@ Note 2.	Nothing in Note 1 releases magnetic materials to provide absorption when
 1.C.1.c.3.	Polythiophene;
 1.C.1.c.4.	Poly phenylene-vinylene; or
 1.C.1.c.5.	Poly thienylene-vinylene.
-Technical Note
-'Bulk electrical conductivity' and 'sheet (surface) resistivity' should be determined using ASTM D-257 or national equivalents.
-Note	1.C.1.c. does not apply to materials in a liquid form.
+1.C.1.c.Technical Note.
+1.C.1.c.Technical Note.	'Bulk electrical conductivity' and 'sheet (surface) resistivity' should be determined using ASTM D-257 or national equivalents.
+1.C.1.c.Note.	1.C.1.c. does not apply to materials in a liquid form.
 1.C.2.	Metal alloys, metal alloy powder and alloyed materials, as follows:
 1.C.2.Note.	1.C.2. does not apply to metal alloys, metal alloy powder and alloyed materials, specially formulated for coating purposes.
-Technical Notes.
-Technical Notes.1.	The metal alloys in 1.C.2. are those containing a higher percentage by weight of the stated metal than of any other element.
-Technical Notes.2.	'Stress-rupture life' should be measured in accordance with ASTM standard E-139 or national equivalents.
-Technical Notes.3.	'Low cycle fatigue life' should be measured in accordance with ASTM Standard E-606 'Recommended Practice for Constant-Amplitude Low-Cycle Fatigue Testing' or national equivalents. Testing should be axial with an average stress ratio equal to 1 and a stress-concentration factor (Kt) equal to 1. The average stress is defined as maximum stress minus minimum stress divided by maximum stress.
+1.C.2.Technical Notes.
+1.C.2.Technical Notes.1.	The metal alloys in 1.C.2. are those containing a higher percentage by weight of the stated metal than of any other element.
+1.C.2.Technical Notes.2.	'Stress-rupture life' should be measured in accordance with ASTM standard E-139 or national equivalents.
+1.C.2.Technical Notes.3.	'Low cycle fatigue life' should be measured in accordance with ASTM Standard E-606 'Recommended Practice for Constant-Amplitude Low-Cycle Fatigue Testing' or national equivalents. Testing should be axial with an average stress ratio equal to 1 and a stress-concentration factor (Kt) equal to 1. The average stress is defined as maximum stress minus minimum stress divided by maximum stress.
 1.C.2.a.	Aluminides, as follows:
 1.C.2.a.1.	Nickel aluminides containing a minimum of 15% by weight aluminium, a maximum of 38% by weight aluminium and at least one additional alloying element;
 1.C.2.a.2.	Titanium aluminides containing 10% by weight or more aluminium and at least one additional alloying element;
@@ -218,8 +217,8 @@ Technical Notes.3.	'Low cycle fatigue life' should be measured in accordance wit
 1.C.2.b.5.b.	A corrosion rate of less than 1 mm/year in 3% sodium chloride aqueous solution measured in accordance with ASTM standard G-31 or national equivalents;
 1.C.2.c.	Metal alloy powder or particulate material, having all of the following:
 1.C.2.c.1.	Made from any of the following composition systems:
-Technical Note.
-Technical Note.	X in the following equals one or more alloying elements.
+1.C.2.c.1.Technical Note.
+1.C.2.c.1.Technical Note.	X in the following equals one or more alloying elements.
 1.C.2.c.1.a.	Nickel alloys (Ni-Al-X, Ni-X-Al) qualified for turbine engine parts or components, i.e. with less than 3 non-metallic particles (introduced during the manufacturing process) larger than 100 µm in 109 alloy particles;
 1.C.2.c.1.b.	Niobium alloys (Nb-Al-X or Nb-X-Al, Nb-Si-X or Nb-X-Si, Nb-Ti-X or Nb-X-Ti);
 1.C.2.c.1.c.	Titanium alloys (Ti-Al-X or Ti-X-Al);
@@ -256,8 +255,8 @@ Technical Notes.9.	'Plasma atomisation' is a process to reduce a molten stream o
 Technical Notes.10.	'Solidify rapidly' is a process involving the solidification of molten material at cooling rates exceeding 1000 K/sec.
 1.C.3.	Magnetic metals, of all types and of whatever form, having any of the following:
 1.C.3.a.	Initial relative permeability of 120,000 or more and a thickness of 0.05 mm or less;
-Technical Note.
-Technical Note.	Measurement of initial relative permeability must be performed on fully annealed materials.
+1.C.3.a.Technical Note.
+1.C.3.a.Technical Note.	Measurement of initial relative permeability must be performed on fully annealed materials.
 1.C.3.b.	Magnetostrictive alloys having any of the following:
 1.C.3.b.1.	A saturation magnetostriction of more than 5 x 10-4; or
 1.C.3.b.2.	A magnetomechanical coupling factor (k) of more than 0.8; or
@@ -267,8 +266,8 @@ Technical Note.	Measurement of initial relative permeability must be performed o
 1.C.3.c.3.	Any of the following:
 1.C.3.c.3.a.	A strip thickness of 0.02 mm or less; or
 1.C.3.c.3.b.	An electrical resistivity of 2 x 10-4 ohm cm or more.
-Technical Note.
-Technical Note.	'Nanocrystalline' materials in 1.C.3.c. are those materials having a crystal grain size of 50 nm or less, as determined by X-ray diffraction.
+1.C.3.c.Technical Note.
+1.C.3.c.Technical Note.	'Nanocrystalline' materials in 1.C.3.c. are those materials having a crystal grain size of 50 nm or less, as determined by X-ray diffraction.
 1.C.4.	Uranium titanium alloys or tungsten alloys with a "matrix" based on iron, nickel or copper, having all of the following:
 1.C.4.a.	A density exceeding 17.5 g/cm3;
 1.C.4.b.	An elastic limit exceeding 880 MPa;
@@ -283,8 +282,8 @@ Technical Note.	'Nanocrystalline' materials in 1.C.3.c. are those materials havi
 1.C.5.b.2.	Remaining in the "superconductive" state at a temperature of 4.2 K 
 1.C.5.b.2.	(-268.96°C) when exposed to a magnetic field oriented in any direction perpendicular to the longitudinal axis of conductor and corresponding to a magnetic induction of 12 T with critical current density exceeding 1,750 A/mm2 on overall cross-section of the conductor.
 1.C.5.c.	"Superconductive" "composite" conductors consisting of one or more "superconductive" 'filaments', which remain "superconductive" above 115 K (-158.16oC).
-Technical Note.
-Technical Note.	For the purpose of 1.C.5., 'filaments' may be in wire, cylinder, film, tape or ribbon form.
+1.C.5.Technical Note.
+1.C.5.Technical Note.	For the purpose of 1.C.5., 'filaments' may be in wire, cylinder, film, tape or ribbon form.
 1.C.6.	Fluids and lubricating materials, as follows:
 1.C.6.a.	Not used since 2015
 1.C.6.b.	Lubricating materials containing, as their principal ingredients, any of the following:
@@ -326,45 +325,43 @@ Technical Note.	For the purpose of 1.C.5., 'filaments' may be in wire, cylinder,
 1.C.7.c.2.	Ceramic-"matrix" "composite" materials with a "matrix" formed of carbides or nitrides of silicon, zirconium or boron;
 N.B.	For items previously specified by 1.C.7.c. see 1.C.7.c.1.b.
 1.C.7.d.	Not used since 2016
-N.B.	For items previously specified by 1.C.7.d. see 1.C.7.c.2.
+1.C.7.d.N.B.	For items previously specified by 1.C.7.d. see 1.C.7.c.2.
 1.C.7.e.	'Precursor materials' specially designed for the "production" of materials specified by 1.C.7.c., as follows:
 1.C.7.e.1.	Polydiorganosilanes;
 1.C.7.e.2.	Polysilazanes;
 1.C.7.e.3.	Polycarbosilazanes;
-Technical Note.
-Technical Note.	For the purposes of 1.C.7., 'precursor materials' are special purpose polymeric or metallo-organic materials used for the "production" of silicon carbide, silicon nitride, or ceramics with silicon, carbon and nitrogen. 
+1.C.7.Technical Note.
+1.C.7.Technical Note.	For the purposes of 1.C.7., 'precursor materials' are special purpose polymeric or metallo-organic materials used for the "production" of silicon carbide, silicon nitride, or ceramics with silicon, carbon and nitrogen. 
 1.C.7.f.	Not used since 2016
-N.B.	For items previously specified by 1.C.7.f. see 1.C.7.c.1.a.
+1.C.7.f.N.B.	For items previously specified by 1.C.7.f. see 1.C.7.c.1.a.
 1.C.8.	Non-fluorinated polymeric substances as follows:
 1.C.8.a.	Imides as follows:
 1.C.8.a.1.	Bismaleimides; 
 1.C.8.a.2.	Aromatic polyamide-imides (PAI) having a 'glass transition temperature (Tg)' exceeding 563 K (290°C);
 1.C.8.a.3.	Aromatic polyimides having a 'glass transition temperature (Tg)' exceeding 505 K (232°C);
 1.C.8.a.4.	Aromatic polyetherimides having a 'glass transition temperature (Tg)' exceeding 563 K (290° C);
-Note	1.C.8.a. applies to the substances in liquid or solid "fusible" form, including resin, powder, pellet, film, sheet, tape, or ribbon.
-N.B.	For non-"fusible" aromatic polyimides in film, sheet, tape, or ribbon form, see 1.A.3.
+1.C.8.a.Note.	1.C.8.a. applies to the substances in liquid or solid "fusible" form, including resin, powder, pellet, film, sheet, tape, or ribbon.
+1.C.8.a.N.B.	For non-"fusible" aromatic polyimides in film, sheet, tape, or ribbon form, see 1.A.3.
 1.C.8.b.	Not used since 2014
 1.C.8.c.	Not used since 2006
 1.C.8.d.	Polyarylene ketones;
 1.C.8.e.	Polyarylene sulphides, where the arylene group is biphenylene, triphenylene or combinations thereof;
 1.C.8.f.	Polybiphenylenethersulphone having a 'glass transition temperature (Tg)' exceeding 563 K (290° C).
-Technical Notes.
-Technical Notes.1.	The 'glass transition temperature (Tg)' for 1.C.8.a.2. thermoplastic materials, 1.C.8.a.4. materials and 1.C.8.f. materials is determined using the method described in ISO 11357-2 (1999) or national equivalents.
-Technical Notes.2.	The 'glass transition temperature (Tg)' for 1.C.8.a.2. thermosetting materials and 1.C.8.a.3. materials is determined using the 3-point bend method described in ASTM D 7028-07 or equivalent national standard.  The test is to be performed using a dry test specimen which has attained a minimum of 90% degree of cure as specified by ASTM E 2160-04 or equivalent national standard, and was cured using the combination of standard- and post-cure processes that yield the highest Tg.
+1.C.8.Technical Notes.
+1.C.8.Technical Notes.1.	The 'glass transition temperature (Tg)' for 1.C.8.a.2. thermoplastic materials, 1.C.8.a.4. materials and 1.C.8.f. materials is determined using the method described in ISO 11357-2 (1999) or national equivalents.
+1.C.8.Technical Notes.2.	The 'glass transition temperature (Tg)' for 1.C.8.a.2. thermosetting materials and 1.C.8.a.3. materials is determined using the 3-point bend method described in ASTM D 7028-07 or equivalent national standard.  The test is to be performed using a dry test specimen which has attained a minimum of 90% degree of cure as specified by ASTM E 2160-04 or equivalent national standard, and was cured using the combination of standard- and post-cure processes that yield the highest Tg.
 1.C.9.	Unprocessed fluorinated compounds as follows:
 1.C.9.a.	Not used since 2015
 1.C.9.b.	Fluorinated polyimides containing 10% by weight or more of combined fluorine;
 1.C.9.c.	Fluorinated phosphazene elastomers containing 30% by weight or more of combined fluorine.
 1.C.10.	"Fibrous or filamentary materials" as follows:
-
-Technical Notes.
-Technical Notes.1.	For the purpose of calculating "specific tensile strength", "specific modulus" or specific weight of "fibrous or filamentary materials" in 1.C.10.a., 1.C.10.b., 1.C.10.c. or 1.C.10.e.1.b., the tensile strength and modulus should be determined by using Method A described in ISO 10618 (2004) or national equivalents.
-Technical Notes.2.	Assessing the "specific tensile strength", "specific modulus" or specific weight of non-unidirectional "fibrous or filamentary materials" (e.g., fabrics, random mats or braids) in 1.C.10. is to be based on the mechanical properties of the constituent unidirectional monofilaments (e.g., monofilaments, yarns, rovings or tows) prior to processing into the non-unidirectional "fibrous or filamentary materials".
-
+1.C.10.Technical Notes.
+1.C.10.Technical Notes.1.	For the purpose of calculating "specific tensile strength", "specific modulus" or specific weight of "fibrous or filamentary materials" in 1.C.10.a., 1.C.10.b., 1.C.10.c. or 1.C.10.e.1.b., the tensile strength and modulus should be determined by using Method A described in ISO 10618 (2004) or national equivalents.
+1.C.10.Technical Notes.2.	Assessing the "specific tensile strength", "specific modulus" or specific weight of non-unidirectional "fibrous or filamentary materials" (e.g., fabrics, random mats or braids) in 1.C.10. is to be based on the mechanical properties of the constituent unidirectional monofilaments (e.g., monofilaments, yarns, rovings or tows) prior to processing into the non-unidirectional "fibrous or filamentary materials".
 1.C.10.a.	Organic "fibrous or filamentary materials", having all of the following:
 1.C.10.a.1.	"Specific modulus" exceeding 12.7 x 106 m; and
 1.C.10.a.2.	"Specific tensile strength" exceeding 23.5  x 104 m;
-Note	1.C.10.a. does not apply to polyethylene.
+1.C.10.a.Note.	1.C.10.a. does not apply to polyethylene.
 1.C.10.b.	Carbon "fibrous or filamentary materials", having all of the following:
 1.C.10.b.1.	"Specific modulus" exceeding 14.65 x 106 m; and
 1.C.10.b.2.	"Specific tensile strength" exceeding 26.82 x 104 m;
@@ -387,8 +384,8 @@ Note	1.C.10.a. does not apply to polyethylene.
 1.C.10.d.1.a.	Polyetherimides specified by 1.C.8.a.; or
 1.C.10.d.1.b.	Materials specified by 1.C.8.d. to 1.C.8.f.; or
 1.C.10.d.2.	Composed of materials specified by 1.C.10.d.1.a. or 1.C.10.d.1.b. and 'commingled' with other fibres specified by 1.C.10.a., 1.C.10.b. or 1.C.10.c.;
-Technical Note.
-Technical Note.	'Commingled' is filament to filament blending of thermoplastic fibres and reinforcement fibres in order to produce a fibre reinforcement "matrix" mix in total fibre form.
+1.C.10.d.2.Technical Note.
+1.C.10.d.2.Technical Note.	'Commingled' is filament to filament blending of thermoplastic fibres and reinforcement fibres in order to produce a fibre reinforcement "matrix" mix in total fibre form.
 1.C.10.e.	Fully or partially resin-impregnated or pitch-impregnated "fibrous or filamentary materials" (prepregs), metal or carbon-coated "fibrous or filamentary materials" (preforms) or 'carbon fibre preforms', having all of the following:
 1.C.10.e.1.	Having any of the following:
 1.C.10.e.1.a.	Inorganic "fibrous or filamentary materials" specified by 1.C.10.c.; or
@@ -463,90 +460,89 @@ N.B.	See ML8.c.5.b. for metal powders mixed with other substances to form a mixt
 1.E.2.f.	"Technology" for the repair of "composite" structures, laminates or materials specified by 1.A.2. or 1.C.7.c.;
 1.E.2.f.Note.	1.E.2.f. does not apply to "technology" for the repair of "civil aircraft" structures using carbon "fibrous or filamentary materials" and epoxy resins, contained in "aircraft" manufacturers' manuals.
 1.E.2.g.	"Libraries" specially designed or modified to enable equipment to perform the functions of equipment specified by 1.A.4.c. or 1.A.4.d.
-ANNEX
-List - "explosives"
-1.	ADNBF (aminodinitrobenzofuroxan or 7-amino-4,6-dinitrobenzofurazane-1-oxide) (CAS 97096-78-1);
-2.	BNCP (cis-bis (5-nitrotetrazolato) tetra amine-cobalt (III) perchlorate)
-2.	(CAS 117412-28-9);
-3.	CL-14 (diamino dinitrobenzofuroxan or 5,7-diamino-4,6-dinitrobenzofurazane-1-oxide ) (CAS 117907-74-1);
-4.	CL-20 (HNIW or Hexanitrohexaazaisowurtzitane) (CAS 135285-90-4);
-4.	chlathrates of CL-20;
-5.	CP (2-(5-cyanotetrazolato) penta amine-cobalt (III) perchlorate) (CAS 70247-32-4);
-6.	DADE (1,1-diamino-2,2-dinitroethylene, FOX-7) (CAS 145250-81-3);
-7.	DATB (diaminotrinitrobenzene) (CAS 1630-08-6);
-8.	DDFP (1,4-dinitrodifurazanopiperazine);
-9.	DDPO (2,6-diamino-3,5-dinitropyrazine-1-oxide, PZO) (CAS 194486-77-6);
-10.	DIPAM (3,3-diamino-2,2,4,4,6,6-hexanitrobiphenyl or dipicramide)
-10.	(CAS 17215-44-0);
-11.	DNGU (DINGU or dinitroglycoluril) (CAS 55510-04-8);
-12.	Furazans as follows:
-12.a.	DAAOF (diaminoazoxyfurazan);
-12.b.	DAAzF (diaminoazofurazan) (CAS 78644-90-3);
-13.	HMX and derivatives, as follows:
-13.a.	HMX (Cyclotetramethylenetetranitramine, octahydro-1,3,5,7-tetranitro-1,3,5,7-tetrazine, 1,3,5,7-tetranitro-1,3,5,7-tetraza-cyclooctane, octogen or octogene) (CAS 2691-41-0);
-13.b.	difluoroaminated analogs of HMX;
-13.c.	K-55 (2,4,6,8-tetranitro-2,4,6,8-tetraazabicyclo [3,3,0]-octanone-3, tetranitrosemiglycouril or keto-bicyclic HMX) (CAS 130256-72-3);
-14.	HNAD (hexanitroadamantane) (CAS 143850-71-9);
-15.	HNS (hexanitrostilbene) (CAS 20062-22-0);
-16.	Imidazoles as follows:
-16.a.	BNNII (Octahydro-2,5-bis(nitroimino)imidazo [4,5-d]imidazole);
-16.b.	DNI (2,4-dinitroimidazole) (CAS 5213-49-0); 
-16.c.	FDIA (1-fluoro-2,4-dinitroimidazole); 
-16.d.	NTDNIA (N-(2-nitrotriazolo)-2,4-dinitroimidazole);
-16.e.	PTIA (1-picryl-2,4,5-trinitroimidazole);
-17.	NTNMH (1-(2-nitrotriazolo)-2-dinitromethylene hydrazine);
-18.	NTO (ONTA or 3-nitro-1,2,4-triazol-5-one) (CAS 932-64-9);
-19.	Polynitrocubanes with more than four nitro groups;
-20.	PYX (2,6-Bis(picrylamino)-3,5-dinitropyridine) (CAS 38082-89-2);
-21.	RDX and derivatives, as follows:
-21.a.	RDX (cyclotrimethylenetrinitramine, cyclonite, T4, hexahydro-1,3,5-trinitro-1,3,5-triazine, 1,3,5-trinitro-1,3,5-triaza-cyclohexane, hexogen or hexogene) (CAS 121-82-4); 
-21.b.	Keto-RDX (K-6 or 2,4,6-trinitro-2,4,6-triazacyclohexanone)
-21.b.	(CAS 115029-35-1); 
-22.	TAGN (triaminoguanidinenitrate) (CAS 4000-16-2);
-23.	TATB (triaminotrinitrobenzene) (CAS 3058-38-6);
-24.	TEDDZ (3,3,7,7-tetrabis(difluoroamine) octahydro-1,5-dinitro-1,5-diazocine);
-List - "explosives" cont.
-25.	Tetrazoles as follows:
-25.a.	NTAT (nitrotriazol aminotetrazole);
-25.b.	NTNT (1-N-(2-nitrotriazolo)-4-nitrotetrazole);
-26.	Tetryl (trinitrophenylmethylnitramine) (CAS 479-45-8);
-27.	TNAD (1,4,5,8-tetranitro-1,4,5,8-tetraazadecalin) (CAS 135877-16-6);
-28.	TNAZ (1,3,3-trinitroazetidine) (CAS 97645-24-4);
-29.	TNGU (SORGUYL or tetranitroglycoluril) (CAS 55510-03-7);
-30.	TNP (1,4,5,8-tetranitro-pyridazino[4,5-d]pyridazine) (CAS 229176-04-9);
-31.	Triazines as follows:
-31.a.	DNAM (2-oxy-4,6-dinitroamino-s-triazine) (CAS 19899-80-0);
-31.b.	NNHT (2-nitroimino-5-nitro-hexahydro-1,3,5-triazine) (CAS 130400-13-4);
-32.	Triazoles as follows:
-32.a.	5-azido-2-nitrotriazole;
-32.b.	ADHTDN (4-amino-3,5-dihydrazino-1,2,4-triazole dinitramide)
-32.b.	(CAS 1614-08-0);
-32.c.	ADNT (1-amino-3,5-dinitro-1,2,4-triazole);
-32.d.	BDNTA ((bis-dinitrotriazole)amine);
-32.e.	DBT (3,3-dinitro-5,5-bi-1,2,4-triazole) (CAS 30003-46-4);
-32.f.	DNBT (dinitrobistriazole) (CAS 70890-46-9);
-32.g.	Not used since 2011
-32.h.	NTDNT (1-N-(2-nitrotriazolo) 3,5-dinitrotriazole);
-32.i.	PDNT (1-picryl-3,5-dinitrotriazole);
-32.j.	TACOT (tetranitrobenzotriazolobenzotriazole) (CAS 25243-36-1);
-33.	"Explosives" not listed elsewhere in this list having a detonation velocity exceeding 8,700 m/s, at maximum density, or a detonation pressure exceeding 34 GPa (340 kbar);
-34.	Not used since 2013
-35.	Nitrocellulose (containing more than 12.5% nitrogen) (CAS 9004-70-0);
-36.	Nitroglycol (CAS 628-96-6);
-37.	Pentaerythritol tetranitrate (PETN) (CAS 78-11-5);
-38.	Picryl chloride (CAS 88-88-0);
-39.	2,4,6-Trinitrotoluene (TNT) (CAS 118-96-7);
-40.	Nitroglycerine (NG) (CAS 55-63-0);
-41.	Triacetone Triperoxide (TATP) (CAS 17088-37-8);
-42.	Guanidine nitrate (CAS 506-93-4);
-43.	Nitroguanidine (NQ) (CAS 556-88-7);
-44.	DNAN (2,4-dinitroanisole) (CAS 119-27-7);
-45.	TEX (4,10-Dinitro-2,6,8,12-tetraoxa-4,10-diazaisowurtzitane);
-46.	GUDN (Guanylurea dinitramide) FOX-12 (CAS 217464-38-5);
-47.	Tetrazines as follows:
-47.a.	BTAT (Bis(2,2,2-trinitroethyl)-3,6-diaminotetrazine);
-47.b.	LAX-112 (3,6-diamino-1,2,4,5-tetrazine-1,4-dioxide);
-48.	Energetic ionic materials melting between 343 K (70°C) and 373 K (100°C) and with detonation velocity exceeding 6,800 m/s or detonation pressure exceeding 18 GPa (180 kbar);
-49.	BTNEN (Bis(2,2,2-trinitroethyl)-nitramine) (CAS 19836-28-3);
-50.	FTDO (5,6-(3',4'-furazano)- 1,2,3,4-tetrazine-1,3-dioxide).
-
+1.ANNEX.
+1.ANNEX.Explosives.	List - "explosives"
+1.ANNEX.Explosives.1.	ADNBF (aminodinitrobenzofuroxan or 7-amino-4,6-dinitrobenzofurazane-1-oxide) (CAS 97096-78-1);
+1.ANNEX.Explosives.2.	BNCP (cis-bis (5-nitrotetrazolato) tetra amine-cobalt (III) perchlorate)
+1.ANNEX.Explosives.2.	(CAS 117412-28-9);
+1.ANNEX.Explosives.3.	CL-14 (diamino dinitrobenzofuroxan or 5,7-diamino-4,6-dinitrobenzofurazane-1-oxide ) (CAS 117907-74-1);
+1.ANNEX.Explosives.4.	CL-20 (HNIW or Hexanitrohexaazaisowurtzitane) (CAS 135285-90-4);
+1.ANNEX.Explosives.4.	chlathrates of CL-20;
+1.ANNEX.Explosives.5.	CP (2-(5-cyanotetrazolato) penta amine-cobalt (III) perchlorate) (CAS 70247-32-4);
+1.ANNEX.Explosives.6.	DADE (1,1-diamino-2,2-dinitroethylene, FOX-7) (CAS 145250-81-3);
+1.ANNEX.Explosives.7.	DATB (diaminotrinitrobenzene) (CAS 1630-08-6);
+1.ANNEX.Explosives.8.	DDFP (1,4-dinitrodifurazanopiperazine);
+1.ANNEX.Explosives.9.	DDPO (2,6-diamino-3,5-dinitropyrazine-1-oxide, PZO) (CAS 194486-77-6);
+1.ANNEX.Explosives.10.	DIPAM (3,3-diamino-2,2,4,4,6,6-hexanitrobiphenyl or dipicramide)
+1.ANNEX.Explosives.10.	(CAS 17215-44-0);
+1.ANNEX.Explosives.11.	DNGU (DINGU or dinitroglycoluril) (CAS 55510-04-8);
+1.ANNEX.Explosives.12.	Furazans as follows:
+1.ANNEX.Explosives.12.a.	DAAOF (diaminoazoxyfurazan);
+1.ANNEX.Explosives.12.b.	DAAzF (diaminoazofurazan) (CAS 78644-90-3);
+1.ANNEX.Explosives.13.	HMX and derivatives, as follows:
+1.ANNEX.Explosives.13.a.	HMX (Cyclotetramethylenetetranitramine, octahydro-1,3,5,7-tetranitro-1,3,5,7-tetrazine, 1,3,5,7-tetranitro-1,3,5,7-tetraza-cyclooctane, octogen or octogene) (CAS 2691-41-0);
+1.ANNEX.Explosives.13.b.	difluoroaminated analogs of HMX;
+1.ANNEX.Explosives.13.c.	K-55 (2,4,6,8-tetranitro-2,4,6,8-tetraazabicyclo [3,3,0]-octanone-3, tetranitrosemiglycouril or keto-bicyclic HMX) (CAS 130256-72-3);
+1.ANNEX.Explosives.14.	HNAD (hexanitroadamantane) (CAS 143850-71-9);
+1.ANNEX.Explosives.15.	HNS (hexanitrostilbene) (CAS 20062-22-0);
+1.ANNEX.Explosives.16.	Imidazoles as follows:
+1.ANNEX.Explosives.16.a.	BNNII (Octahydro-2,5-bis(nitroimino)imidazo [4,5-d]imidazole);
+1.ANNEX.Explosives.16.b.	DNI (2,4-dinitroimidazole) (CAS 5213-49-0); 
+1.ANNEX.Explosives.16.c.	FDIA (1-fluoro-2,4-dinitroimidazole); 
+1.ANNEX.Explosives.16.d.	NTDNIA (N-(2-nitrotriazolo)-2,4-dinitroimidazole);
+1.ANNEX.Explosives.16.e.	PTIA (1-picryl-2,4,5-trinitroimidazole);
+1.ANNEX.Explosives.17.	NTNMH (1-(2-nitrotriazolo)-2-dinitromethylene hydrazine);
+1.ANNEX.Explosives.18.	NTO (ONTA or 3-nitro-1,2,4-triazol-5-one) (CAS 932-64-9);
+1.ANNEX.Explosives.19.	Polynitrocubanes with more than four nitro groups;
+1.ANNEX.Explosives.20.	PYX (2,6-Bis(picrylamino)-3,5-dinitropyridine) (CAS 38082-89-2);
+1.ANNEX.Explosives.21.	RDX and derivatives, as follows:
+1.ANNEX.Explosives.21.a.	RDX (cyclotrimethylenetrinitramine, cyclonite, T4, hexahydro-1,3,5-trinitro-1,3,5-triazine, 1,3,5-trinitro-1,3,5-triaza-cyclohexane, hexogen or hexogene) (CAS 121-82-4); 
+1.ANNEX.Explosives.21.b.	Keto-RDX (K-6 or 2,4,6-trinitro-2,4,6-triazacyclohexanone)
+1.ANNEX.Explosives.21.b.	(CAS 115029-35-1); 
+1.ANNEX.Explosives.22.	TAGN (triaminoguanidinenitrate) (CAS 4000-16-2);
+1.ANNEX.Explosives.23.	TATB (triaminotrinitrobenzene) (CAS 3058-38-6);
+1.ANNEX.Explosives.24.	TEDDZ (3,3,7,7-tetrabis(difluoroamine) octahydro-1,5-dinitro-1,5-diazocine);
+1.ANNEX.Explosives.	List - "explosives" cont.
+1.ANNEX.Explosives.25.	Tetrazoles as follows:
+1.ANNEX.Explosives.25.a.	NTAT (nitrotriazol aminotetrazole);
+1.ANNEX.Explosives.25.b.	NTNT (1-N-(2-nitrotriazolo)-4-nitrotetrazole);
+1.ANNEX.Explosives.26.	Tetryl (trinitrophenylmethylnitramine) (CAS 479-45-8);
+1.ANNEX.Explosives.27.	TNAD (1,4,5,8-tetranitro-1,4,5,8-tetraazadecalin) (CAS 135877-16-6);
+1.ANNEX.Explosives.28.	TNAZ (1,3,3-trinitroazetidine) (CAS 97645-24-4);
+1.ANNEX.Explosives.29.	TNGU (SORGUYL or tetranitroglycoluril) (CAS 55510-03-7);
+1.ANNEX.Explosives.30.	TNP (1,4,5,8-tetranitro-pyridazino[4,5-d]pyridazine) (CAS 229176-04-9);
+1.ANNEX.Explosives.31.	Triazines as follows:
+1.ANNEX.Explosives.31.a.	DNAM (2-oxy-4,6-dinitroamino-s-triazine) (CAS 19899-80-0);
+1.ANNEX.Explosives.31.b.	NNHT (2-nitroimino-5-nitro-hexahydro-1,3,5-triazine) (CAS 130400-13-4);
+1.ANNEX.Explosives.32.	Triazoles as follows:
+1.ANNEX.Explosives.32.a.	5-azido-2-nitrotriazole;
+1.ANNEX.Explosives.32.b.	ADHTDN (4-amino-3,5-dihydrazino-1,2,4-triazole dinitramide)
+1.ANNEX.Explosives.32.b.	(CAS 1614-08-0);
+1.ANNEX.Explosives.32.c.	ADNT (1-amino-3,5-dinitro-1,2,4-triazole);
+1.ANNEX.Explosives.32.d.	BDNTA ((bis-dinitrotriazole)amine);
+1.ANNEX.Explosives.32.e.	DBT (3,3-dinitro-5,5-bi-1,2,4-triazole) (CAS 30003-46-4);
+1.ANNEX.Explosives.32.f.	DNBT (dinitrobistriazole) (CAS 70890-46-9);
+1.ANNEX.Explosives.32.g.	Not used since 2011
+1.ANNEX.Explosives.32.h.	NTDNT (1-N-(2-nitrotriazolo) 3,5-dinitrotriazole);
+1.ANNEX.Explosives.32.i.	PDNT (1-picryl-3,5-dinitrotriazole);
+1.ANNEX.Explosives.32.j.	TACOT (tetranitrobenzotriazolobenzotriazole) (CAS 25243-36-1);
+1.ANNEX.Explosives.33.	"Explosives" not listed elsewhere in this list having a detonation velocity exceeding 8,700 m/s, at maximum density, or a detonation pressure exceeding 34 GPa (340 kbar);
+1.ANNEX.Explosives.34.	Not used since 2013
+1.ANNEX.Explosives.35.	Nitrocellulose (containing more than 12.5% nitrogen) (CAS 9004-70-0);
+1.ANNEX.Explosives.36.	Nitroglycol (CAS 628-96-6);
+1.ANNEX.Explosives.37.	Pentaerythritol tetranitrate (PETN) (CAS 78-11-5);
+1.ANNEX.Explosives.38.	Picryl chloride (CAS 88-88-0);
+1.ANNEX.Explosives.39.	2,4,6-Trinitrotoluene (TNT) (CAS 118-96-7);
+1.ANNEX.Explosives.40.	Nitroglycerine (NG) (CAS 55-63-0);
+1.ANNEX.Explosives.41.	Triacetone Triperoxide (TATP) (CAS 17088-37-8);
+1.ANNEX.Explosives.42.	Guanidine nitrate (CAS 506-93-4);
+1.ANNEX.Explosives.43.	Nitroguanidine (NQ) (CAS 556-88-7);
+1.ANNEX.Explosives.44.	DNAN (2,4-dinitroanisole) (CAS 119-27-7);
+1.ANNEX.Explosives.45.	TEX (4,10-Dinitro-2,6,8,12-tetraoxa-4,10-diazaisowurtzitane);
+1.ANNEX.Explosives.46.	GUDN (Guanylurea dinitramide) FOX-12 (CAS 217464-38-5);
+1.ANNEX.Explosives.47.	Tetrazines as follows:
+1.ANNEX.Explosives.47.a.	BTAT (Bis(2,2,2-trinitroethyl)-3,6-diaminotetrazine);
+1.ANNEX.Explosives.47.b.	LAX-112 (3,6-diamino-1,2,4,5-tetrazine-1,4-dioxide);
+1.ANNEX.Explosives.48.	Energetic ionic materials melting between 343 K (70°C) and 373 K (100°C) and with detonation velocity exceeding 6,800 m/s or detonation pressure exceeding 18 GPa (180 kbar);
+1.ANNEX.Explosives.49.	BTNEN (Bis(2,2,2-trinitroethyl)-nitramine) (CAS 19836-28-3);
+1.ANNEX.Explosives.50.	FTDO (5,6-(3',4'-furazano)- 1,2,3,4-tetrazine-1,3-dioxide).
