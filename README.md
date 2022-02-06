@@ -70,6 +70,15 @@ ANT ALL ON kriegsmaterialch.* to kriegsmaterialch" | mysql`
 * setup database (backups are in folder database-backups)
 * `./km-stat/manage.py runserver`
 
+## Run locally with Docker
+
+Run on your local machine with docker
+```
+docker-compose up
+```
+
+and wait until startup completes, then the site should be available on [localhost:8000](http://localhost:8000)
+
 ## Push to staging for first time:
 
 * Make sure your public key was added to the server
