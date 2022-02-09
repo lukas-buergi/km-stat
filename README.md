@@ -44,7 +44,7 @@ CC BY-SA 4.0, as far as its copyright belongs to
 * frontend using mostly bare js (some d3.js ...) on top of Django templates for html/css
 * various scripts/workflows for gathering and cleaning up data in utils
 * fairly complete data set for Kriegsmaterial/bes.mil.Güter from Switzerland since 2006, Dual Use is outdated
-* soon a cleaned up version of the wassenaar munitions lists, tools being developed in folder utils
+* there was an attempt to parse the Wassenaar lists as provided, but Lukas made a mess of it and decided it was more relaxing to do it by hand (for the first time, subsequent changes should be fairly easy to merge semi-automatically).
 
 ## Desired changes:
 
@@ -52,7 +52,7 @@ CC BY-SA 4.0, as far as its copyright belongs to
 * Display table with one row as sentence instead?
 * display dates better, maybe switch to displaying years and quarters because that's the most fine-grained we have
 * make countries click-able at least in table so that it changes to filter to include only that country
-* make dates click-able to choose that date onyl?
+* make dates click-able to choose that date only?
 * Multi language: English first because I can easily do the translation, get help for French and Italian
 * make database model English (don't know what I thought when making some parts German in the beginning)
 
