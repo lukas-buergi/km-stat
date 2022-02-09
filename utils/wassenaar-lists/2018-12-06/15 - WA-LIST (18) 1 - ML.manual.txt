@@ -87,6 +87,7 @@ ML4.b.1.	Specially designed for military use; and
 ML4.b.2.	Specially designed for 'activities' relating to any of the following:
 ML4.b.2.a.	Items specified by ML4.a.; or
 ML4.b.2.b.	Improvised Explosive Devices (IEDs).
+
 ML4.b.2.Technical Note.	For the purpose of ML4.b.2. 'activities' applies to handling, launching, laying, controlling, discharging, detonating, activating, powering with one-time operational output, decoying, jamming, sweeping, detecting, disrupting or disposing.
 ML4.b.Note 1.	ML4.b. includes:
 ML4.b.Note 1.a.	Mobile gas liquefying equipment capable of producing 1,000 kg or more per day of gas in liquid form;

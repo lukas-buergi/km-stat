@@ -2,6 +2,5 @@ treatment of doc files:
 * open in libre office
 * remove header and footer
 * save as txt file
-* remove blank lines: sed '/^\s*$/d' file.txt
-* remove leading whitespace: sed 's/^\s*//g' file.txt
-* manually add correct full numbering
+* remove blank lines and leading whitespace: cat file.txt | sed '/^\s*$/d' | sed 's/^\s*//g' > file.processed.txt
+* manually add correct full numbering to file.manual.txt

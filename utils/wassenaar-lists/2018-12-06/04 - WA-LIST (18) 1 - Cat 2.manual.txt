@@ -1,0 +1,624 @@
+﻿2.A.	SYSTEMS, EQUIPMENT AND COMPONENTS
+2.A.N.B.	For quiet running bearings, see ML9 on the Munitions List.*
+2.A.1.	Anti-friction bearings and bearing systems, as follows, and components therefor:
+2.A.1.Note.	2.A.1. does not apply to balls with tolerances specified by the manufacturer in accordance with ISO 3290:2001 as grade G5 (or national equivalents) or worse.
+2.A.1.a.	Ball bearings and solid roller bearings, having all tolerances specified by the manufacturer in accordance with ISO 492 Tolerance Class 4 or Class 2 (or national equivalents), or better, and having both 'rings' and 'rolling elements', made from monel or beryllium;
+2.A.1.a.Note	2.A.1.a. does not apply to tapered roller bearings.
+Technical Notes
+1.	'Ring' - annular part of a radial rolling bearing incorporating one or more raceways (ISO 5593:1997).
+2.	'Rolling element'- ball or roller which rolls between raceways (ISO 5593:1997).
+2.A.1.b.	Not used since 2010
+2.A.1.c.	Active magnetic bearing systems using any of the following:
+2.A.1.c.1.	Materials with flux densities of 2.0 T or greater and yield strengths greater than 414 MPa;
+2.A.1.c.2.	All-electromagnetic 3D homopolar bias designs for actuators; or
+2.A.1.c.3.	High temperature (450 K (177°C) and above) position sensors.
+2.B.	TEST, INSPECTION AND PRODUCTION EQUIPMENT
+
+2.B.Technical Notes.1.	Secondary parallel contouring axes, (e.g., the w-axis on horizontal boring mills or a secondary rotary axis the centre line of which is parallel to the primary rotary axis) are not counted in the total number of contouring axes.  Rotary axes need not rotate over 360°.  A rotary axis can be driven by a linear device (e.g., a screw or a rack-and-pinion). 
+2.B.Technical Notes.2.	For the purposes of 2.B., the number of axes which can be co-ordinated simultaneously for "contouring control" is the number of axes along or around which, during processing of the workpiece, simultaneous and interrelated motions are performed between the workpiece and a tool. This does not include any additional axes along or around which other relative motions within the machine are performed, such as:
+2.B.Technical Notes.2.a.	Wheel-dressing systems in grinding machines;
+2.B.Technical Notes.2.b.	Parallel rotary axes designed for mounting of separate workpieces;
+2.B.Technical Notes.2.c.	Co-linear rotary axes designed for manipulating the same workpiece by holding it in a chuck from different ends.
+
+2.B.Technical Notes.3.	Axis nomenclature shall be in accordance with International Standard ISO 841:2001, Industrial automation systems and integration - Numerical control of machines - Coordinate system and motion nomenclature. 
+2.B.Technical Notes.4.	For the purposes of this Category a "tilting spindle" is counted as a rotary axis.
+2.B.Technical Notes.5.	'Stated "unidirectional positioning repeatability"' may be used for each machine tool model as an alternative to individual machine tests, and is determined as follows:
+2.B.Technical Notes.5.a.	Select five machines of a model to be evaluated;
+2.B.Technical Notes.5.b.	Measure the linear axis repeatability (R↑,R↓) according to ISO 230-2:2014 and evaluate "unidirectional positioning repeatability" for each axis of each of the five machines;
+2.B.Technical Notes.5.c.	Determine the arithmetic mean value of the "unidirectional positioning repeatability"-values for each axis of all five machines together.  These arithmetic mean values of "unidirectional positioning repeatability" () become the stated value of each axis for the model (x, y, …)
+2.B.Technical Notes.5.d.	Since the Category 2 list refers to each linear axis there will be as many 'stated "unidirectional positioning repeatability"'-values as there are linear axes;
+2.B.Technical Notes.5.e.	If any axis of a machine model not specified by 2.B.1.a. to 2.B.1.c. has a 'stated "unidirectional positioning repeatability"' equal to or less than the specified "unidirectional positioning repeatability" of each machine tool model plus 0.7 µm, the builder should be required to reaffirm the accuracy level once every eighteen months.
+2.B.Technical Notes.6.	For the purposes of 2.B., measurement uncertainty for the "unidirectional positioning repeatability" of machine tools, as defined in the International Standard ISO 230-2:2014 or national equivalents, shall not be considered.
+2.B.Technical Notes.7.	For the purpose of 2.B., the measurement of axes shall be made according to test procedures in 5.3.2. of ISO 230-2:2014.  Tests for axes longer than 2 meters shall be made over 2 m segments.  Axes longer than 4 m require multiple tests (e.g., two tests for axes longer than 4 m and up to 8 m, three tests for axes longer than 8 m and up to 12 m), each over 2 m segments and distributed in equal intervals over the axis length.  Test segments are equally spaced along the full axis length, with any excess length equally divided at the beginning, in between, and at the end of the test segments.  The smallest "unidirectional positioning repeatability"-value of all test segments is to be reported.
+2.B.1.	Machine tools and any combination thereof, for removing (or cutting) metals, ceramics or "composites", which, according to the manufacturer's technical specification, can be equipped with electronic devices for "numerical control", as follows:
+2.B.1.Note 1.	2.B.1. does not apply to special purpose machine tools limited to the manufacture of gears.  For such machines, see 2.B.3.
+2.B.1.Note 2.	2.B.1. does not apply to special purpose machine tools limited to the manufacture of any of the following:
+2.B.1.Note 2.a.	Crank shafts or cam shafts;
+2.B.1.Note 2.b.	Tools or cutters;
+2.B.1.Note 2.c.	Extruder worms;
+2.B.1.Note 2.d.	Engraved or facetted jewellery parts; or
+2.B.1.Note 2.e.	Dental prostheses.
+2.B.1.Note 3.	A machine tool having at least two of the three turning, milling or grinding capabilities (e.g., a turning machine with milling capability), must be evaluated against each applicable entry 2.B.1.a., b. or c.
+N.B.	For optical finishing machines, see 2.B.2.
+2.B.1.a.	Machine tools for turning having two or more axes which can be coordinated simultaneously for "contouring control" having any of the following:
+2.B.1.a.1.	"Unidirectional positioning repeatability" equal to or less (better) than 0.9 µm along one or more linear axis with a travel length less than 1.0 m; or
+2.B.1.a.2.	"Unidirectional positioning repeatability" equal to or less (better) than 1.1 µm along one or more linear axis with a travel length equal to or greater than 1.0 m;
+2.B.1.a.Note 1.	2.B.1.a. does not apply to turning machines specially designed for producing contact lenses, having all of the following:
+2.B.1.a.Note 1.a.	Machine controller limited to using ophthalmic based "software" for part programming data input; and
+2.B.1.a.Note 1.b.	No vacuum chucking.
+2.B.1.a.Note 2.	2.B.1.a. does not apply to bar machines (Swissturn), limited to machining only bar feed thru, if maximum bar diameter is equal to or less than 42 mm and there is no capability of mounting chucks. Machines may have drilling or milling capabilities for machining parts with diameters less than 42 mm. 
+2.B.1.b.	Machine tools for milling having any of the following:
+1.	Three linear axes plus one rotary axis which can be coordinated simultaneously for "contouring control" having any of the following:
+a.	"Unidirectional positioning repeatability" equal to or less (better) than 0.9 µm along one or more linear axis with a travel length less than 1.0 m; or
+b.	"Unidirectional positioning repeatability" equal to or less (better) than 1.1 µm along one or more linear axis with a travel length equal to or greater than 1.0 m;
+2.	Five or more axes which can be coordinated simultaneously for "contouring control" having any of the following:
+a.	"Unidirectional positioning repeatability" equal to or less (better) than 0.9 µm along one or more linear axis with a travel length less than 1.0 m;
+b.	"Unidirectional positioning repeatability" equal to or less (better) than 1.4 µm along one or more linear axis with a travel length equal to or greater than 1 m and less than 4 m; or
+c.	"Unidirectional positioning repeatability" equal to or less (better) than 6.0 µm along one or more linear axis with a travel length equal to or greater than 4 m;
+d.	Not used since 2016
+2.	B.	1.	b.	3.	A "unidirectional positioning repeatability" for jig boring machines, equal to or less (better) than 1.1 µm along one or more linear axis; or
+4.	Fly cutting machines having all of the following:
+a.	Spindle "run-out" and "camming" less (better) than 0.0004 mm TIR; and
+b.	Angular deviation of slide movement (yaw, pitch and roll) less (better) than 2 seconds of arc, TIR, over 300 mm of travel;
+2.	B.	1.	c.	Machine tools for grinding having any of the following:
+1.	Having all of the following:
+a.	"Unidirectional positioning repeatability" equal to or less (better) than 1.1 µm along one or more linear axis; and
+b.	Three or four axes which can be coordinated simultaneously for "contouring control"; or
+2.	Five or more axes which can be coordinated simultaneously for "contouring control" having any of the following:
+a.	"Unidirectional positioning repeatability" equal to or less (better) than 1.1 µm along one or more linear axis with a travel length less than 1 m; 
+b.	"Unidirectional positioning repeatability" equal to or less (better) than 1.4 µm along one or more linear axis with a travel length equal to or greater than 1 m and less than 4 m; or
+c.	"Unidirectional positioning repeatability" equal to or less (better) than 6.0 µm along one or more linear axis with a travel length equal to or greater than 4 m. 
+Note	2.B.1.c. does not apply to grinding machines as follows:
+a.	Cylindrical external, internal, and external-internal grinding machines, having all of the following:
+1.	Limited to cylindrical grinding; and
+2.	Limited to a maximum workpiece capacity of 150 mm outside diameter or length.
+b.	Machines designed specifically as jig grinders that do not have a z-axis or a w-axis, with a "unidirectional positioning repeatability" less (better) than 1.1 µm.
+c.	Surface grinders.
+2.	B.	1.	d.	Electrical discharge machines (EDM) of the non-wire type which have two or more rotary axes which can be coordinated simultaneously for "contouring control";
+2.	B.	1.	e.	Machine tools for removing metals, ceramics or "composites", having all of the following:
+1.	Removing material by means of any of the following:
+a.	Water or other liquid jets, including those employing abrasive additives;
+b.	Electron beam; or
+c.	"Laser" beam; and
+2.	At least two rotary axes having all of the following:
+a.	Can be coordinated simultaneously for "contouring control"; and 
+b.	A positioning "accuracy" of less (better) than 0.003°;
+2.	B.	1.	f.	Deep-hole-drilling machines and turning machines modified for deep-hole-drilling, having a maximum depth-of-bore capability exceeding 5 m.
+2.	B.	2.	Numerically controlled optical finishing machine tools equipped for selective material removal to produce non-spherical optical surfaces having all of the following characteristics:
+a.	Finishing the form to less (better) than 1.0 µm;
+b.	Finishing to a roughness less (better) than 100 nm rms;
+c.	Four or more axes which can be coordinated simultaneously for "contouring control"; and
+d.	Using any of the following processes:
+1.	'Magnetorheological finishing (MRF)';
+2.	'Electrorheological finishing (ERF)';
+3.	'Energetic particle beam finishing';
+4.	'Inflatable membrane tool finishing'; or
+5.	'Fluid jet finishing'.
+Technical Notes
+For the purposes of 2.B.2.:
+1.	'MRF' is a material removal process using an abrasive magnetic fluid whose viscosity is controlled by a magnetic field.
+2.	'ERF' is a removal process using an abrasive fluid whose viscosity is controlled by an electric field.
+3.	'Energetic particle beam finishing' uses Reactive Atom Plasmas (RAP) or ion-beams to selectively remove material.
+4.	'Inflatable membrane tool finishing' is a process that uses a pressurized membrane that deforms to contact the workpiece over a small area.
+5.	'Fluid jet finishing' makes use of a fluid stream for material removal.
+2.	B.	3.	"Numerically controlled" machine tools, specially designed for the shaving, finishing, grinding or honing of hardened (Rc = 40 or more) spur, helical and double-helical gears having all of the following:
+a.	A pitch diameter exceeding 1,250 mm;
+b.	A face width of 15% of pitch diameter or larger; and 
+c.	A finished quality of AGMA 14 or better (equivalent to ISO 1328 class 3).
+2.	B.	4.	Hot "isostatic presses" having all of the following, and specially designed components and accessories therefor:
+a.	A controlled thermal environment within the closed cavity and a chamber cavity with an inside diameter of 406 mm or more; and
+b.	Having any of the following:
+1.	A maximum working pressure exceeding 207 MPa;
+2.	A controlled thermal environment exceeding 1,773 K (1,500°C); or
+3.	A facility for hydrocarbon impregnation and removal of resultant gaseous degradation products.
+Technical Note
+The inside chamber dimension is that of the chamber in which both the working temperature and the working pressure are achieved and does not include fixtures.  That dimension will be the smaller of either the inside diameter of the pressure chamber or the inside diameter of the insulated furnace chamber, depending on which of the two chambers is located inside the other.
+N.B.	For specially designed dies, moulds and tooling see 1.B.3., 9.B.9. and ML18. of the Munitions List.*
+2.	B.	5.	Equipment specially designed for the deposition, processing and in-process control of inorganic overlays, coatings and surface modifications, as follows, for substrates specified in column 2, by processes shown in column 1 in the Table following 2.E.3.f., and specially designed automated handling, positioning, manipulation and control components therefor:
+a.	Chemical vapour deposition (CVD) production equipment having all of the following:
+1.	A process modified for one of the following:
+a.	Pulsating CVD;
+b.	Controlled nucleation thermal deposition (CNTD); or
+c.	Plasma enhanced or plasma assisted CVD; and
+2.	Having any of the following:
+a.	Incorporating high vacuum (equal to or less than 0.01 Pa) rotating seals; or
+b.	Incorporating in situ coating thickness control;
+2.	B.	5.	b.	Ion implantation production equipment having beam currents of 5 mA or more;
+c.	Electron beam physical vapour deposition (EB-PVD) production equipment incorporating power systems rated for over 80 kW and having any of the following:
+1.	A liquid pool level "laser" control system which regulates precisely the ingots feed rate; or
+2.	A computer controlled rate monitor operating on the principle of photo-luminescence of the ionised atoms in the evaporant stream to control the deposition rate of a coating containing two or more elements;
+d.	Plasma spraying production equipment having any of the following:
+1.	Operating at reduced pressure controlled atmosphere (equal to or less than 10 kPa measured above and within 300 mm of the gun nozzle exit) in a vacuum chamber capable of evacuation down to 0.01 Pa prior to the spraying process; or
+2.	Incorporating in situ coating thickness control;
+e.	Sputter deposition production equipment capable of current densities of 0.1 mA/mm2 or higher at a deposition rate of 15 µm/h or more;
+f.	Cathodic arc deposition production equipment incorporating a grid of electromagnets for steering control of the arc spot on the cathode;
+g.	Ion plating production equipment capable of in situ measurement of any of the following:
+1.	Coating thickness on the substrate and rate control; or
+2.	Optical characteristics.
+Note	2.B.5.a., 2.B.5.b., 2.B.5.e., 2.B.5.f. and 2.B.5.g. do not apply to chemical vapour deposition, cathodic arc, sputter deposition, ion plating or ion implantation equipment, specially designed for cutting or machining tools.
+2.	B.	6.	Dimensional inspection or measuring systems, equipment, position feedback units and "electronic assemblies", as follows:
+a.	Computer controlled or "numerical controlled" Coordinate Measuring Machines (CMM), having a three dimensional (volumetric) maximum permissible error of length measurement (E0,MPE) at any point within the operating range of the machine (i.e., within the length of axes) equal to or less (better) than 1.7 + L/1,000 µm (L is the measured length in mm), according to ISO 10360-2 (2009);
+Technical Note
+The E0,MPE of the most accurate configuration of the CMM specified by the manufacturer (e.g., best of the following: probe, stylus length, motion parameters, environment) and with "all compensations available" shall be compared to the 1.7 + L/1,000 µm threshold.
+2.	B.	6.	b.	Linear displacement measuring instruments or systems, linear position feedback units, and "electronic assemblies", as follows:
+Note	Interferometer and optical-encoder measuring systems containing a "laser" are only specified in 2.B.6.b.3.
+1.	'Non-contact type measuring systems' with a 'resolution' equal to or less (better) than 0.2 µm within 0 to 0.2 mm of the 'measuring range';
+Technical Notes
+1.	For the purposes of 2.B.6.b.1., 'non-contact type measuring systems' are designed to measure the distance between the probe and measured object along a single vector, where the probe or measured object is in motion.
+2.	For the purposes of 2.B.6.b.1., 'measuring range' means the distance between the minimum and maximum working distance.
+2.	Linear position feedback units specially designed for machine tools and having an overall "accuracy" less (better) than (800 + (600 x L/1,000)) nm (L equals effective length in mm);
+3.	Measuring systems having all of the following:
+a.	Containing a "laser"; 
+b.	A 'resolution' over their full scale of 0.200 nm or less (better); and
+c.	Capable of achieving a "measurement uncertainty" equal to or less (better) than (1.6 + L/2,000) nm (L is the measured length in mm) at any point within a measuring range, when compensated for the refractive index of air and measured over a period of 30 seconds at a temperature of 20±0.01oC; or
+Technical Note
+For the purposes of 2.B.6.b., 'resolution' is the least increment of a measuring device; on digital instruments, the least significant bit.
+2.	B.	6.	b.	4.	"Electronic assemblies" specially designed to provide feedback capability in systems specified by 2.B.6.b.3.;
+2.	B.	6.	c.	Rotary position feedback units specially designed for machine tools or angular displacement measuring instruments, having an angular position "accuracy" equal to or less (better) than 0.9 second of arc;
+Note	2.B.6.c. does not apply to optical instruments, such as autocollimators, using collimated light (e.g., laser light) to detect angular displacement of a mirror.
+2.	B.	6.	d.	Equipment for measuring surface roughness (including surface defects), by measuring optical scatter with a sensitivity of 0.5 nm or less (better).
+Note	2.B.6. includes machine tools, other than those specified by 2.B.1., that can be used as measuring machines if they meet or exceed the criteria specified for the measuring machine function.
+2.	B.	7.	"Robots" having any of the following characteristics and specially designed controllers and "end-effectors" therefor:
+a.	Not used since 2017
+b.	Specially designed to comply with national safety standards applicable to potentially explosive munitions environments;
+Note	2.B.7.b. does not apply to "robots" specially designed for paint-spraying booths.
+c.	Specially designed or rated as radiation-hardened to withstand greater than 5 x 103 Gy (Si) without operational degradation; or
+d.	Specially designed to operate at altitudes exceeding 30,000 m.
+2.	B.	8.	'Compound rotary tables' and "tilting spindles", specially designed for machine tools, as follows: 
+a.	Not used since 2017
+b.	Not used since 2017
+c.	'Compound rotary tables' having all of the following: 
+1.	Designed for machine tools for turning, milling or grinding; and
+2.	Two rotary axes designed to be coordinated simultaneously for "contouring control";
+Technical Note
+A 'compound rotary table' is a table allowing the workpiece to rotate and tilt about two non-parallel axes.
+d.	"Tilting spindles" having all of the following: 
+1.	Designed for machine tools for turning, milling or grinding; and
+2.	Designed to be coordinated simultaneously for "contouring control".
+2.	B.	9.	Spin-forming machines and flow-forming machines, which, according to the manufacturer's technical specification, can be equipped with "numerical control" units or a computer control and having all of the following:
+a.	Three or more axes which can be coordinated simultaneously for "contouring control"; and
+b.	A roller force more than 60 kN.
+Technical Note
+For the purpose of 2.B.9., machines combining the function of spin-forming and flow-forming are regarded as flow-forming machines.
+2.	C.	MATERIALS -  None
+2.	D.	SOFTWARE
+1.	"Software", other than that specified by 2.D.2., as follows:
+a.	"Software" specially designed or modified for the "development" or "production" of equipment specified by 2.A. or 2.B.;
+b.	"Software" specially designed or modified for the "use" of equipment specified by 2.A.1.c., 2.B.1., or 2.B.3. to 2.B.9.
+Note	2.D.1. does not apply to part programming "software" that generates "numerical control" codes for machining various parts.
+2.	D.	2.	"Software" for electronic devices, even when residing in an electronic device or system, enabling such devices or systems to function as a "numerical control" unit, capable of co-ordinating simultaneously more than 4 axes for "contouring control".
+Note1	2.D.2. does not apply to "software" specially designed or modified for the operation of items not specified by Category 2.
+Note 2	2.D.2. does not apply to "software" for items specified by 2.B.2.  See 2.D.1. and 2.D.3. for "software" for items specified by 2.B.2.
+Note 3	2.D.2. does not apply to "software" that is exported with, and the minimum necessary for the operation of, items not specified by Category 2.
+2.	D.	3.	"Software", designed or modified for the operation of equipment specified by 2.B.2., that converts optical design, workpiece measurements and material removal functions into "numerical control" commands to achieve the desired workpiece form.
+2.	E.	TECHNOLOGY
+2.	E.	1.	"Technology" according to the General Technology Note for the "development" of equipment or "software" specified by 2.A., 2.B. or 2.D.
+Note	2.E.1. includes "technology" for the integration of probe systems into coordinate measurement machines specified by 2.B.6.a.
+2.	E.	2.	"Technology" according to the General Technology Note for the "production" of equipment specified by 2.A. or 2.B.
+2.	E.	3.	Other "technology", as follows:
+a.	Not used since 2017
+b.	"Technology" for metal-working manufacturing processes, as follows:
+1.	"Technology" for the design of tools, dies or fixtures specially designed for any of the following processes:
+a.	"Superplastic forming";
+b.	"Diffusion bonding"; or
+c.	'Direct-acting hydraulic pressing';
+2.	E.	3.	b.	2.	Technical data consisting of process methods or parameters as listed below used to control:
+a.	"Superplastic forming" of aluminium alloys, titanium alloys or "superalloys":
+1.	Surface preparation;
+2.	Strain rate;
+3.	Temperature;
+4.	Pressure;
+b.	"Diffusion bonding" of "superalloys" or titanium alloys:
+1.	Surface preparation;
+2.	Temperature;
+3.	Pressure;
+c.	'Direct-acting hydraulic pressing' of aluminium alloys or titanium alloys:
+1.	Pressure;
+2.	Cycle time;
+d.	'Hot isostatic densification' of titanium alloys, aluminium alloys or "superalloys":
+1.	Temperature;
+2.	Pressure;
+3.	Cycle time;
+Technical Notes
+1.	'Direct-acting hydraulic pressing' is a deformation process which uses a fluid-filled flexible bladder in direct contact with the workpiece.
+2.	'Hot isostatic densification' is a process of pressurising a casting at temperatures exceeding 375 K (102°C) in a closed cavity through various media (gas, liquid, solid particles, etc.) to create equal force in all directions to reduce or eliminate internal voids in the casting.
+2.	E.	3.	c.	"Technology" for the "development" or "production" of hydraulic stretch-forming machines and dies therefor, for the manufacture of airframe structures;
+d.	Not used since 2017
+e.	"Technology" for the "development" of integration "software" for incorporation of expert systems for advanced decision support of shop floor operations into "numerical control" units;
+2.	E.	3.	f.	"Technology" for the application of inorganic overlay coatings or inorganic surface modification coatings (specified in column 3 of the following table) to non-electronic substrates (specified in column 2 of the following table), by processes specified in column 1 of the following table and defined in the Technical Note.
+N.B.	This Table should be read to specify the "technology" for a particular 'Coating Process' only when the Resultant Coating in column 3 is in a paragraph directly across from the relevant 'Substrate' under column 2.  For example, Chemical Vapour Deposition (CVD) 'coating process' technical data are included for the application of 'silicides' to 'Carbon-carbon, Ceramic and Metal "matrix" "composites" substrates, but are not included for the application of 'silicides' to 'Cemented tungsten carbide (16), Silicon carbide (18)' substrates.  In the second case, the resultant coating is not listed in the paragraph under column 3 directly across from the paragraph under column 2 listing 'Cemented tungsten carbide (16), Silicon carbide (18)'.
+TABLE - DEPOSITION TECHNIQUES
+1.	Coating Process (1)*	2.	Substrate	3.	Resultant Coating
+A.	Chemical Vapour		"Superalloys" 		Aluminides for internal
+Deposition  (CVD)				passages
+Ceramics (19) and Low-		Silicides
+expansion glasses (14)		Carbides
+Dielectric layers (15)
+Diamond
+Diamond-like carbon (17)
+Carbon-carbon,		Silicides
+Ceramic and		Carbides
+Metal "matrix"		Refractory metals
+"composites"		Mixtures thereof (4)
+Dielectric layers (15)
+Aluminides
+Alloyed aluminides (2)
+Boron nitride
+Cemented tungsten		Carbides
+carbide (16),		Tungsten
+Silicon carbide (18)		Mixtures thereof (4)
+Dielectric layers (15)
+Molybdenum and		Dielectric layers (15)
+Molybdenum alloys
+Beryllium and		Dielectric layers (15)
+Beryllium alloys		Diamond
+Diamond-like carbon (17)
+Sensor window		Dielectric layers (15)
+materials (9)		Diamond
+Diamond-like carbon (17)
+___________________________________________________________________________
+TABLE - DEPOSITION TECHNIQUES
+1.	Coating Process (1)	2.	Substrate	3.	Resultant Coating
+B.	Thermal-Evaporation
+Physical Vapour
+Deposition (TE-PVD)
+B.1.	Physical Vapour		"Superalloys"		Alloyed silicides
+Deposition (PVD):				Alloyed aluminides (2)
+Electron-Beam				MCrAlX (5)
+(EB-PVD)				Modified zirconia (12)
+Silicides
+Aluminides
+Mixtures thereof (4)
+Ceramics (19) and Low-		Dielectric layers (15)
+expansion glasses (14)
+Corrosion resistant		MCrAlX (5)
+steel (7)		Modified zirconia (12)
+Mixtures thereof (4)
+Carbon-carbon,		Silicides
+Ceramic and		Carbides
+Metal "matrix"		Refractory metals
+"composites"		Mixtures thereof (4)
+Dielectric layers (15)
+Boron nitride
+Cemented tungsten		Carbides
+carbide (16),		Tungsten
+Silicon carbide (18)		Mixtures thereof (4)
+Dielectric layers (15)
+Molybdenum and		Dielectric layers (15)
+Molybdenum alloys
+Beryllium and		Dielectric layers (15)
+Beryllium alloys		Borides
+Beryllium
+Sensor window		Dielectric layers (15)
+materials (9)
+Titanium alloys (13)		Borides
+Nitrides
+___________________________________________________________________________
+TABLE - DEPOSITION TECHNIQUES
+1.	Coating Process (1)	2.	Substrate	3.	Resultant Coating
+B.2.	Ion assisted resistive		Ceramics (19) and Low-		Dielectric layers (15)
+heating Physical Vapour		expansion glasses (14)		Diamond-like carbon (17)
+Deposition (PVD) 
+(Ion Plating)
+Carbon-carbon,		Dielectric layers (15)
+Ceramic and Metal		
+"matrix" "composites"		
+Cemented tungsten		Dielectric layers (15)
+carbide (16),	
+Silicon carbide	
+Molybdenum and	
+Molybdenum alloys		Dielectric layers (15)
+Beryllium and	
+Beryllium alloys		Dielectric layers (15)
+Sensor window		Dielectric layers (15)
+materials (9)		Diamond-like carbon (17)
+___________________________________________________________________________
+B.3.	Physical Vapour		Ceramics (19) and Low-		Silicides
+Deposition (PVD):		expansion glasses (14)		Dielectric layers (15)
+"Laser" Vaporization				Diamond-like carbon (17)
+Carbon-carbon,		Dielectric layers (15)
+Ceramic and Metal
+"matrix" "composites"
+Cemented tungsten		Dielectric layers (15)
+carbide (16),
+Silicon carbide
+Molybdenum and		Dielectric layers (15)
+Molybdenum alloys
+Beryllium and		Dielectric layers (15)
+Beryllium alloys
+Sensor window		Dielectric layers (15)
+materials (9)		Diamond-like carbon (17)
+___________________________________________________________________________
+TABLE - DEPOSITION TECHNIQUES
+1.	Coating Process (1)	2.	Substrate	3.	Resultant Coating
+B.4.	Physical Vapour		"Superalloys"		Alloyed silicides
+Deposition (PVD):				Alloyed aluminides (2)
+Cathodic Arc Discharge				MCrAlX (5)
+Polymers (11) and		Borides
+Organic "matrix"		Carbides
+"composites"		Nitrides
+Diamond-like carbon (17)
+___________________________________________________________________________
+C.	Pack cementation		Carbon-carbon,		Silicides
+(see A above for		Ceramic and		Carbides
+out-of-pack		Metal "matrix"		Mixtures thereof (4)
+cementation) (10)		"composites"
+Titanium alloys (13)		Silicides
+Aluminides
+Alloyed aluminides (2)
+Refractory metals		Silicides
+and alloys (8)		Oxides
+___________________________________________________________________________
+D.	Plasma spraying		"Superalloys"		MCrAlX (5)
+Modified zirconia (12)
+Mixtures thereof (4)
+Abradable Nickel-Graphite
+Abradable materials 
+containing Ni-Cr-Al
+Abradable Al-Si-Polyester
+Alloyed aluminides (2)
+Aluminium alloys (6)		MCrAlX (5)
+Modified zirconia (12)
+Silicides
+Mixtures thereof (4)
+Refractory metals		Aluminides
+and alloys (8)		Silicides
+Carbides
+TABLE - DEPOSITION TECHNIQUES
+1.	Coating Process (1)	2.	Substrate	3.	Resultant Coating
+D.	(continued)		Corrosion resistant		MCrAlX (5)
+steel (7)		Modified zirconia (12)
+Mixtures thereof (4)
+Titanium alloys (13)		Carbides
+Aluminides
+Silicides
+Alloyed aluminides (2)
+Abradable Nickel-Graphite
+Abradable materials 
+containing Ni-Cr-Al
+Abradable Al-Si-Polyester
+___________________________________________________________________________
+E.	Slurry Deposition 		Refractory metals		Fused silicides
+and alloys (8)		Fused aluminides
+except for resistance
+heating elements
+Carbon-carbon,		Silicides
+Ceramic and		Carbides
+Metal "matrix"		Mixtures thereof (4)
+"composites"
+___________________________________________________________________________
+F.	Sputter Deposition 		"Superalloys"		Alloyed silicides
+Alloyed aluminides (2)
+Noble metal modified
+aluminides (3)
+MCrAlX (5)
+Modified zirconia (12)
+Platinum
+Mixtures thereof (4)
+Ceramics and Low-		Silicides
+expansion glasses (14)		Platinum
+Mixtures thereof (4)
+Dielectic layers (15)
+Diamond-like carbon (17)
+TABLE - DEPOSITION TECHNIQUES
+1.	Coating Process (1)	2.	Substrate	3.	Resultant Coating
+F.	(continued)		Titanium alloys (13)		Borides
+Nitrides
+Oxides
+Silicides
+Aluminides
+Alloyed aluminides (2)
+Carbides
+Carbon-carbon,		Silicides
+Ceramic and Metal		Carbides
+"matrix" "composites"		Refractory metals
+Mixtures thereof (4)
+Dielectric layers (15)
+Boron nitride
+Cemented tungsten		Carbides
+carbide (16),		Tungsten
+Silicon carbide (18)		Mixtures thereof (4)
+Dielectric layers (15)
+Boron nitride
+Molybdenum and
+Molybdenum alloys		Dielectric layers (15)
+Beryllium and		Borides
+Beryllium alloys		Dielectric layers (15)
+Beryllium
+Sensor window		Dielectric layers (15)
+materials (9)		Diamond-like carbon (17)
+Refractory metals		Aluminides
+and alloys (8)		Silicides
+Oxides
+Carbides
+___________________________________________________________________________
+TABLE - DEPOSITION TECHNIQUES
+1.	Coating Process (1)	2.	Substrate	3.	Resultant Coating
+G.	Ion Implantation 		High temperature		Additions of 
+bearing steels		Chromium
+Tantalum or
+Niobium (Columbium)
+Titanium alloys (13)		Borides
+Nitrides
+Beryllium and		Borides
+Beryllium alloys
+Cemented tungsten		Carbides
+carbide (16)		Nitrides
+___________________________________________________________________________
+TABLE - DEPOSITION TECHNIQUES - NOTES
+1.	The term 'coating process' includes coating repair and refurbishing as well as original coating.
+2.	The term 'alloyed aluminide coating' includes single or multiple-step coatings in which an element or elements are deposited prior to or during application of the aluminide coating, even if these elements are deposited by another coating process. It does not, however, include the multiple use of single-step pack cementation processes to achieve alloyed aluminides.
+3.	The term 'noble metal modified aluminide' coating includes multiple-step coatings in which the noble metal or noble metals are laid down by some other coating process prior to application of the aluminide coating.
+4.	The term 'mixtures thereof' includes infiltrated material, graded compositions, co-deposits and multilayer deposits and are obtained by one or more of the coating processes specified in the Table.
+5.	'MCrAlX' refers to a coating alloy where M equals cobalt, iron, nickel or combinations thereof and X equals hafnium, yttrium, silicon, tantalum in any amount or other intentional additions over 0.01% by weight in various proportions and combinations, except:
+a.	CoCrAlY coatings which contain less than 22% by weight of chromium, less than 7% by weight of aluminium and less than 2 weight percent of yttrium;
+b.	CoCrAlY coatings which contain 22 to 24% by weight of chromium, 10 to 12% by weight of aluminium and 0.5 to 0.7% by weight of yttrium; or
+c.	NiCrAlY coatings which contain 21 to 23% by weight of chromium, 10 to 12% by weight of aluminium and 0.9 to1.1% by weight of yttrium.
+6.	The term 'aluminium alloys' refers to alloys having an ultimate tensile strength of 190 MPa or more measured at 293 K (20°C).
+7.	The term 'corrosion resistant steel' refers to AISI (American Iron and Steel Institute) 300 series or equivalent national standard steels.
+8.	'Refractory metals and alloys' include the following metals and their alloys: niobium (columbium), molybdenum, tungsten and tantalum.
+9.	'Sensor window materials', as follows: alumina, silicon, germanium, zinc sulphide, zinc selenide, gallium arsenide, diamond, gallium phosphide, sapphire and the following metal halides: sensor window materials of more than 40 mm diameter for zirconium fluoride and hafnium fluoride.
+TABLE - DEPOSITION TECHNIQUES – NOTES
+10.	Category 2 does not include "technology" for single-step pack cementation of solid airfoils.
+11.	'Polymers', as follows: polyimide, polyester, polysulphide, polycarbonates and polyurethanes.
+12.	'Modified zirconia' refers to additions of other metal oxides (e.g., calcia, magnesia, yttria, hafnia, rare earth oxides) to zirconia in order to stabilise certain crystallographic phases and phase compositions.  Thermal barrier coatings made of zirconia, modified with calcia or magnesia by mixing or fusion, are not included.
+13.	'Titanium alloys' refers only to aerospace alloys having an ultimate tensile strength of 900 MPa or more measured at 293 K (20°C).
+14.	'Low-expansion glasses' refers to glasses which have a coefficient of thermal expansion of 1 x 10-7 K-1 or less measured at 293 K (20°C).
+15.	'Dielectric layers' are coatings constructed of multi-layers of insulator materials in which the interference properties of a design composed of materials of various refractive indices are used to reflect, transmit or absorb various wavelength bands. Dielectric layers refers to more than four dielectric layers or dielectric/metal "composite" layers.
+16.	'Cemented tungsten carbide' does not include cutting and forming tool materials consisting of tungsten carbide/(cobalt, nickel), titanium carbide/(cobalt, nickel), chromium carbide/nickel-chromium and chromium carbide/nickel.
+17.	"Technology" for depositing diamond-like carbon on any of the following is not included: 
+magnetic disk drives and heads, equipment for the manufacture of disposables, valves for faucets, acoustic diaphragms for speakers, engine parts for automobiles, cutting tools, punching-pressing dies, office automation equipment, microphones, medical devices or moulds, for casting or moulding of plastics, manufactured from alloys containing less than 5% beryllium.
+18.	'Silicon carbide' does not include cutting and forming tool materials.
+19.	Ceramic substrates, as used in this entry, does not include ceramic materials containing 5% by weight, or greater, clay or cement content, either as separate constituents or in combination.
+TABLE - DEPOSITION TECHNIQUES - TECHNICAL NOTE
+Processes specified in Column 1 of the Table are defined as follows:
+a.	Chemical Vapour Deposition (CVD) is an overlay coating or surface modification coating process wherein a metal, alloy, "composite", dielectric or ceramic is deposited upon a heated substrate.  Gaseous reactants are decomposed or combined in the vicinity of a substrate resulting in the deposition of the desired elemental, alloy or compound material on the substrate.  Energy for this decomposition or chemical reaction process may be provided by the heat of the substrate, a glow discharge plasma, or "laser" irradiation.
+N.B.1	CVD includes the following processes: directed gas flow out-of-pack deposition, pulsating CVD, controlled nucleation thermal deposition (CNTD), plasma enhanced or plasma assisted CVD processes.
+N.B.2	Pack denotes a substrate immersed in a powder mixture.
+N.B.3	The gaseous reactants used in the out-of-pack process are produced using the same basic reactions and parameters as the pack cementation process, except that the substrate to be coated is not in contact with the powder mixture.
+b.	Thermal Evaporation-Physical Vapour Deposition (TE-PVD) is an overlay coating process conducted in a vacuum with a pressure less than 0.1 Pa wherein a source of thermal energy is used to vaporize the coating material.  This process results in the condensation, or deposition, of the evaporated species onto appropriately positioned substrates.
+The addition of gases to the vacuum chamber during the coating process to synthesize compound coatings is an ordinary modification of the process.
+The use of ion or electron beams, or plasma, to activate or assist the coating's deposition is also a common modification in this technique.  The use of monitors to provide in-process measurement of optical characteristics and thickness of coatings can be a feature of these processes.
+Specific TE-PVD processes are as follows:
+1.	Electron Beam PVD uses an electron beam to heat and evaporate the material which forms the coating;
+2.	Ion Assisted Resistive Heating PVD employs electrically resistive heating sources in combination with impinging ion beam(s) to produce a controlled and uniform flux of evaporated coating species;
+3.	"Laser" Vaporization uses either pulsed or continuous wave "laser" beams to vaporize the material which forms the coating;
+TABLE - DEPOSITION TECHNIQUES - TECHNICAL NOTE
+Processes specified in Column 1 of the Table - continued:
+b.	4.	Cathodic Arc Deposition employs a consumable cathode of the material which forms the coating and has an arc discharge established on the surface by a momentary contact of a ground trigger.  Controlled motion of arcing erodes the cathode surface creating a highly ionized plasma.  The anode can be either a cone attached to the periphery of the cathode, through an insulator, or the chamber.  Substrate biasing is used for non line-of-sight deposition;
+N.B.	This definition does not include random cathodic arc deposition with non-biased substrates.
+5.	Ion Plating is a special modification of a general TE-PVD process in which a plasma or an ion source is used to ionize the species to be deposited, and a negative bias is applied to the substrate in order to facilitate the extraction of the species from the plasma.  The introduction of reactive species, evaporation of solids within the process chamber, and the use of monitors to provide in-process measurement of optical characteristics and thicknesses of coatings are ordinary modifications of the process. 
+c.	Pack Cementation is a surface modification coating or overlay coating process wherein a substrate is immersed in a powder mixture (a pack), that consists of:
+1.	The metallic powders that are to be deposited (usually aluminium, chromium, silicon or combinations thereof);
+2.	An activator (normally a halide salt); and
+3.	An inert powder, most frequently alumina.
+The substrate and powder mixture is contained within a retort which is heated to between 1,030 K (757°C) and 1,375 K (1,102°C) for sufficient time to deposit the coating.
+d.	Plasma Spraying is an overlay coating process wherein a gun (spray torch) which produces and controls a plasma accepts powder or wire coating materials, melts them and propels them towards a substrate, whereon an integrally bonded coating is formed.  Plasma spraying constitutes either low pressure plasma spraying or high velocity plasma spraying.
+N.B.1	Low pressure means less than ambient atmospheric pressure.
+N.B.2	High velocity refers to nozzle-exit gas velocity exceeding 750 m/s calculated at 293 K (20°C) at 0.1 MPa.
+TABLE - DEPOSITION TECHNIQUES - TECHNICAL NOTE
+Processes specified in Column 1 of the Table - continued:
+e.	Slurry Deposition is a surface modification coating or overlay coating process wherein a metallic or ceramic powder with an organic binder is suspended in a liquid and is applied to a substrate by either spraying, dipping or painting, subsequent air or oven drying, and heat treatment to obtain the desired coating.
+f.	Sputter Deposition is an overlay coating process based on a momentum transfer phenomenon, wherein positive ions are accelerated by an electric field towards the surface of a target (coating material).  The kinetic energy of the impacting ions is sufficient to cause target surface atoms to be released and deposited on an appropriately positioned substrate.
+N.B.1	The Table refers only to triode, magnetron or reactive sputter deposition which is used to increase adhesion of the coating and rate of deposition and to radio frequency (RF) augmented sputter deposition used to permit vaporisation of non-metallic coating materials.
+N.B.2	Low-energy ion beams (less than 5 keV) can be used to activate the deposition.
+g.	Ion Implantation is a surface modification coating process in which the element to be alloyed is ionized, accelerated through a potential gradient and implanted into the surface region of the substrate.  This includes processes in which ion implantation is performed simultaneously with electron beam physical vapour deposition or sputter deposition.
+TABLE - DEPOSITION TECHNIQUES - STATEMENT OF UNDERSTANDING
+It is understood that the following technical information, accompanying the table of deposition techniques, is for use as appropriate.
+1.	Technical information for pretreatments of the substrates listed in the Table, as follows:
+a.	Chemical stripping and cleaning bath cycle parameters, as follows:
+1.	Bath composition
+a.	For the removal of old or defective coatings, corrosion product or foreign deposits;
+b.	For preparation of virgin substrates;
+2.	Time in bath;
+3.	Temperature of bath;
+4.	Number and sequences of wash cycles;
+b.	Visual and macroscopic criteria for acceptance of the cleaned part;
+c.	Heat treatment cycle parameters, as follows:
+1.	Atmosphere parameters, as follows:
+a.	Composition of the atmosphere;
+b.	Pressure of the atmosphere;
+2.	Temperature for heat treatment;
+3.	Time of heat treatment;
+d.	Substrate surface preparation parameters, as follows:
+1.	Grit blasting parameters, as follows:
+a.	Grit composition;
+b.	Grit size and shape;
+c.	Grit velocity;
+2.	Time and sequence of cleaning cycle after grit blast;
+3.	Surface finish parameters;
+4.	Application of binders to promote adhesion;
+e.	Masking technique parameters, as follows:
+1.	Material of mask;
+2.	Location of mask;
+2.	Technical information for in situ quality assurance techniques for evaluation of the coating processes listed in the Table, as follows:
+a.	Atmosphere parameters, as follows:
+1.	Composition of the atmosphere;
+2.	Pressure of the atmosphere;
+b.	Time parameters;
+c.	Temperature parameters;
+d.	Thickness parameters;
+e.	Index of refraction parameters;
+f.	Control of composition;
+3.	Technical information for post deposition treatments of the coated substrates listed in the Table, as follows:
+a.	Shot peening parameters, as follows:
+1.	Shot composition;
+2.	Shot size;
+3.	Shot velocity;
+TABLE - DEPOSITION TECHNIQUES - STATEMENT OF UNDERSTANDING
+3.	b.	Post shot peening cleaning parameters;
+c.	Heat treatment cycle parameters, as follows:
+1.	Atmosphere parameters, as follows:
+a.	Composition of the atmosphere;
+b.	Pressure of the atmosphere;
+2.	Time-temperature cycles;
+d.	Post heat treatment visual and macroscopic criteria for acceptance of the coated substrates;
+4.	Technical information for quality assurance techniques for the evaluation of the coated substrates listed in the Table, as follows:
+a.	Statistical sampling criteria;
+b.	Microscopic criteria for:
+1.	Magnification;
+2.	Coating thickness uniformity;
+3.	Coating integrity;
+4.	Coating composition;
+5.	Coating and substrates bonding;
+6.	Microstructural uniformity;
+c.	Criteria for optical properties assessment (measured as a function of wavelength):
+1.	Reflectance;
+2.	Transmission;
+3.	Absorption;
+4.	Scatter;
+5.	Technical information and parameters related to specific coating and surface modification processes listed in the Table, as follows:
+a.	For Chemical Vapour Deposition (CVD):
+1.	Coating source composition and formulation;
+2.	Carrier gas composition;
+3.	Substrate temperature;
+4.	Time-temperature-pressure cycles;
+5.	Gas control and part manipulation;
+b.	For Thermal Evaporation - Physical Vapour Deposition (PVD):
+1.	Ingot or coating material source composition;
+2.	Substrate temperature;
+3.	Reactive gas composition;
+4.	Ingot feed rate or material vaporisation rate; 
+5.	Time-temperature-pressure cycles;
+6.	Beam and part manipulation;
+7.	"Laser" parameters, as follows: 
+a.	Wave length; 
+b.	Power density; 
+c.	Pulse length; 
+d.	Repetition ratio; 
+e.	Source; 
+TABLE - DEPOSITION TECHNIQUES - STATEMENT OF UNDERSTANDING
+5.	c.	For Pack Cementation:
+1.	Pack composition and formulation;
+2.	Carrier gas composition;
+3.	Time-temperature-pressure cycles;
+d.	For Plasma Spraying:
+1.	Powder composition, preparation and size distributions;
+2.	Feed gas composition and parameters;
+3.	Substrate temperature;
+4.	Gun power parameters;
+5.	Spray distance;
+6.	Spray angle;
+7.	Cover gas composition, pressure and flow rates;
+8.	Gun control and part manipulation;
+e.	For Sputter Deposition:
+1.	Target composition and fabrication;
+2.	Geometrical positioning of part and target;
+3.	Reactive gas composition;
+4.	Electrical bias;
+5.	Time-temperature-pressure cycles;
+6.	Triode power;
+7.	Part manipulation;
+f.	For Ion Implantation:
+1.	Beam control and part manipulation;
+2.	Ion source design details;
+3.	Control techniques for ion beam and deposition rate parameters;
+4.	Time-temperature-pressure cycles;
+g.	For Ion Plating: 
+1.	Beam control and part manipulation; 
+2.	Ion source design details; 
+3.	Control techniques for ion beam and deposition rate parameters;
+4.	Time-temperature-pressure cycles;
+5.	Coating material feed rate and vaporisation rate;
+6.	Substrate temperature;
+7.	Substrate bias parameters.
