@@ -1,0 +1,28 @@
+version: "3.9"
+   
+services:
+  db:
+    image: mariadb
+    volumes:
+      - ./data/db:/var/lib/mysql
+      - ./database-backups/2021-05-03.sql:/docker-entrypoint-initdb.d/init.sql
+    environment:
+      - MYSQL_ROOT_PASSWORD=Ze5uukaephooth3aivah
+      - MYSQL_DATABASE=kriegsmaterialch
+      - MYSQL_USER=kriegsmaterialch
+      - MYSQL_PASSWORD=Ze5uukaephooth3aivah
+  web:
+    build: .
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - .:/code
+    ports:
+      - "8000:8000"
+    environment:
+      - DB_HOST=db
+      - DB_DATABASE=kriegsmaterialch
+      - DB_USER=kriegsmaterialch
+      - DB_PASSWORD=Ze5uukaephooth3aivah
+      - DJANGO_SETTINGS_MODULE=kriegsmaterialch.settingsDocker
+    depends_on:
+      - db

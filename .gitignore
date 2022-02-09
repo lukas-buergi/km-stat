@@ -1,2 +1,5 @@
 *.pyc
 /static
+/data
+
+.DS_Store
