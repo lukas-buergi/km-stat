@@ -1,0 +1,466 @@
+1.	A.	SYSTEMS, EQUIPMENT AND COMPONENTS
+
+1.	A.	1.	Components made from fluorinated compounds, as follows:
+
+			a.	Seals, gaskets, sealants or fuel bladders specially designed for "aircraft" or aerospace use made from more than 50 % by weight of any of the materials controlled by 1.C.9.b. or 1.C.9.c.;
+
+			b.	Piezoelectric polymers and copolymers made from vinylidene fluoride materials controlled by 1.C.9.a.:
+				1.	In sheet or film form; and
+				2.	With a thickness exceeding 200 µm;
+
+			c.	Seals, gaskets, valve seats, bladders or diaphragms made from fluoroelastomers containing at least one vinylether monomer, specially designed for "aircraft", aerospace or missile use.
+
+1.	A.	2.	"Composite" structures or laminates, having any of the following:
+			a.	An organic "matrix" and made from materials controlled by 1.C.10.c., 1.C.10.d. or 1.C.10.e.; or
+Note	1.A.2.a does not control finished or semi-finished items specially designed for purely civilian applications as follows:
+	1.	Sporting goods;
+	2.	Automotive industry; 
+	3.	Machine tool industry;
+	4.	Medical applications.
+
+			b.	A metal or carbon "matrix" and made from:
+				1.	Carbon "fibrous or filamentary materials" with:
+					a.	A specific modulus exceeding 10.15 x 106 m; and
+					b.	A specific tensile strength exceeding 17.7 x 104 m; or
+				2.	Materials controlled by 1.C.10.c.
+
+Note	1.A.2.b. does not control finished or semi-finished items specially designed for purely civilian applications as follows:
+	1.	Sporting goods;
+	2.	Automotive industry; 
+	3.	Machine tool industry;
+	4.	Medical applications.
+
+1.	A.	2.	b.	Technical Notes
+				1.	Specific modulus: Young's modulus in pascals, equivalent to N/m2 divided by specific weight in N/m3, measured at a temperature of (296 ± 2) K ((23 ± 2)°C) and a relative humidity of (50 ± 5)%.
+				2.	Specific tensile strength: ultimate tensile strength in pascals, equivalent to N/m2 divided by specific weight in N/m3, measured at a temperature of (296 ± 2) K((23 ± 2)°C) and a relative humidity of (50 ± 5)%.
+
+Note	1.A.2. does not control composite structures or laminates made from epoxy resin impregnated carbon "fibrous or filamentary materials" for the repair of aircraft structures or laminates, provided the size does not exceed 1 m².
+
+1.	A.	3.	Manufactures of non-fluorinated polymeric substances controlled by 1.C.8.a.3. in film, sheet, tape or ribbon form:
+			a.	With a thickness exceeding 0.254 mm; or
+			b.	Coated or laminated with carbon, graphite, metals or magnetic substances.
+
+Note	1.A.3. does not control manufactures when coated or laminated with copper and designed for the production of electronic printed circuit boards.
+
+1.	A.	4.	Protective and detection equipment and components not specially designed for military use, as follows:
+
+			a.	Gas masks, filter canisters and decontamination equipment therefor designed or modified for defence against biological agents or radioactive materials "adapted for use in war" or chemical warfare (CW) agents and specially designed components therefor;
+
+			b.	Protective suits, gloves and shoes specially designed or modified for defence against biological agents or radioactive materials "adapted for use in war" or chemical warfare (CW) agents;
+
+			c.	Nuclear, biological and chemical (NBC) detection systems specially designed or modified for detection or identification of biological agents or radioactive materials "adapted for use in war" or chemical warfare (CW) agents and specially designed components therefor.
+
+Note	1.A.4. does not control :
+a.	Personal radiation monitoring dosimeters;
+b.	Equipment limited by design or function to protect against hazards specific to civil industries, such as mining, quarrying, agriculture, pharmaceuticals, medical, veterinary, environmental, waste management, or to the food industry.
+
+1.	A.	5.	Body armour, and specially designed components therefor, not manufactured to military standards or specifications, nor to their equivalents in performance.
+
+Note 1	1.A.5. does not control individual suits of body armour and accessories therefor, when accompanying their users for his/her own personal protection.
+
+Note 2	1.A.5. does not control body armour designed to provide frontal protection only from both fragment and blast from  non-military explosive devices.
+
+
+1.	B.	TEST, INSPECTION AND PRODUCTION EQUIPMENT
+
+1.	B.	1.	Equipment for the production of fibres, prepregs, preforms or "composites" controlled by 1.A.2. or 1.C.10., as follows, and specially designed components and accessories therefor:
+
+			a.	Filament winding machines of which the motions for positioning, wrapping and winding fibres are coordinated and programmed in three or more axes, specially designed for the manufacture of "composite" structures or laminates from "fibrous or filamentary materials";
+
+			b.	Tape-laying or tow-placement machines of which the motions for positioning and laying tape, tows or sheets are coordinated and programmed in two or more axes, specially designed for the manufacture of "composite" airframe or missile structures;
+
+			c.	Multidirectional, multidimensional weaving machines or interlacing machines, including adapters and modification kits, for weaving, interlacing or braiding fibres to manufacture "composite" structures;
+Note	1.B.1.c. does not control textile machinery not modified for the above end-uses.
+
+			d.	Equipment specially designed or adapted for the production of reinforcement fibres, as follows:
+				1.	Equipment for converting polymeric fibres (such as polyacrylonitrile, rayon, pitch or polycarbosilane) into carbon fibres or silicon carbide fibres, including special equipment to strain the fibre during heating;
+				2.	Equipment for the chemical vapour deposition of elements or compounds on heated filamentary substrates to manufacture silicon carbide fibres;
+				3.	Equipment for the wet-spinning of refractory ceramics (such as aluminium oxide);
+				4.	Equipment for converting aluminium containing precursor fibres into alumina fibres by heat treatment;
+
+			e.	Equipment for producing prepregs controlled by 1.C.10.e. by the hot melt method;
+
+			f.	Non-destructive inspection equipment capable of inspecting defects three dimensionally, using ultrasonic or X-ray tomography and specially designed for "composite" materials.
+1.	B.	2.	Systems and components therefor, specially designed to avoid contamination and specially designed for producing metal alloys, metal alloy powder or alloyed materials controlled by 1.C.2.a.2., 1.C.2.b. or 1.C.2.c.
+
+1.	B.	3.	Tools, dies, moulds or fixtures, for "superplastic forming" or "diffusion bonding" titanium or aluminium or their alloys, specially designed for the manufacture of:
+			a.	Airframe or aerospace structures;
+			b.	"Aircraft" or aerospace engines; or
+			c.	Specially designed components for those structures or engines.
+
+
+1.	C.	MATERIALS
+
+		Technical Note 
+
+	Metals and alloys
+	Unless provision to the contrary is made, the words 'metals' and 'alloys' cover crude and semi-fabricated forms, as follows:
+
+	Crude forms
+		Anodes, balls, bars (including notched bars and wire bars), billets, blocks, blooms, brickets, cakes, cathodes, crystals, cubes, dice, grains, granules, ingots, lumps, pellets, pigs, powder, rondelles, shot, slabs, slugs, sponge, sticks;
+
+		Semi-fabricated forms (whether or not coated, plated, drilled or punched):
+	a.	Wrought or worked materials fabricated by rolling, drawing, extruding, forging, impact extruding, pressing, graining, atomising, and grinding, i.e.: angles, channels, circles, discs, dust, flakes, foils and leaf, forging, plate, powder, pressings and stampings, ribbons, rings, rods (including bare welding rods, wire rods, and rolled wire), sections, shapes, sheets, strip, pipe and tubes (including tube rounds, squares, and hollows), drawn or extruded wire;
+	b.	Cast material produced by casting in sand, die, metal, plaster or other types of moulds, including high pressure castings, sintered forms, and forms made by powder metallurgy.
+
+		The object of the control should not be defeated by the export of non-listed forms alleged to be finished products but representing in reality crude forms or semi-fabricated forms.
+
+1.	C.	1.	Materials specially designed for use as absorbers of electromagnetic waves, or intrinsically conductive polymers, as follows:
+			a.	Materials for absorbing frequencies exceeding 2 x 108 Hz but less than 3 x 1012 Hz;
+
+Note	1.C.1.a. does not control:
+a.	Hair type absorbers, constructed of natural or synthetic fibres, with non-magnetic loading to provide absorption;
+
+b.	Absorbers having no magnetic loss and whose incident surface is non-planar in shape, including pyramids, cones, wedges and convoluted surfaces;
+
+c.	Planar absorbers, having all of the following characteristics:
+1.	Made from any of the following:
+						a.	Plastic foam materials (flexible or non-flexible) with carbon-loading, or organic materials, including binders, providing more than 5% echo compared with metal over a bandwidth exceeding ±15% of the centre frequency of the incident energy, and not capable of withstanding temperatures exceeding 450 K (177° C); or
+
+						b.	Ceramic materials providing more than 20% echo compared with metal over a bandwidth exceeding ±15% of the centre frequency of the incident energy, and not capable of withstanding temperatures exceeding 800 K (527°C);
+
+							Technical Note
+							Absorption test samples for 1.C.1.a. Note 1.c.1. should be a square at least 5 wavelengths of the centre frequency on a side and positioned in the far field of the radiating element.
+
+2.	Tensile strength less than 7 x 106 N/m2; and
+3.	Compressive strength less than 14 x 106 N/m2;
+
+d.	Planar absorbers made of sintered ferrite, having:
+							1.	A specific gravity exceeding 4.4; and
+							2.	A maximum operating temperature of 548 K (275°C).
+
+N.B.	Nothing in this Note releases magnetic materials to provide absorption when contained in paint.
+
+1.	C.	1.	b.	Materials for absorbing frequencies exceeding 1.5 x 1014 Hz but less than 3.7 x 1014 Hz and not transparent to visible light;
+
+1.	C.	1.	c.	Intrinsically conductive polymeric materials with a bulk electrical conductivity exceeding 10,000 S/m (Siemens per metre) or a sheet (surface) resistivity of less than 100 ohms/square, based on any of the following polymers:
+				1.	Polyaniline;
+				2.	Polypyrrole;
+				3.	Polythiophene;
+				4.	Poly phenylene-vinylene; or
+				5.	Poly thienylene-vinylene.
+Technical Note
+				Bulk electrical conductivity and sheet (surface) resistivity should be determined using ASTM D-257 or national equivalents.
+
+1.	C.	2.	Metal alloys, metal alloy powder and alloyed materials, as follows:
+Note	1.C.2. does not control metal alloys, metal alloy powder and alloyed materials for coating substrates.
+
+			a.	Metal alloys, as follows:
+				1.	Nickel or titanium-based alloys in the form of aluminides, as follows, in crude or semi-fabricated forms:
+					a.	Nickel aluminides containing a minimum of 15 weight percent aluminium, a maximum of 38 weight percent aluminium and at least one additional alloying element ;
+					b.	Titanium aluminides containing 10 weight percent or more aluminium and at least one additional alloying element ;
+
+				2.	Metal alloys, as follows, made from metal alloy powder or particulate material controlled by 1.C.2.b.:
+					a.	Nickel alloys with:
+						1.	A stress-rupture life of 10,000 hours or longer at 923 K (650°C) at a stress of 676 MPa; or
+						2.	A low cycle fatigue life of 10,000 cycles or more at 823 K (550° C) at a maximum stress of 1,095 MPa;
+					b.	Niobium alloys with:
+						1.	A stress-rupture life of 10,000 hours or longer at 1,073 K (800°C) at a stress of 400 MPa; or
+						2.	A low cycle fatigue life of 10,000 cycles or more at 973 K (700°C) at a maximum stress of 700 MPa;
+					c.	Titanium alloys with:
+						1.	A stress-rupture life of 10,000 hours or longer at 723 K (450°C) at a stress of 200 MPa; or
+						2.	A low cycle fatigue life of 10,000 cycles or more at 723 K (450°C) at a maximum stress of 400 MPa;
+					d.	Aluminium alloys with a tensile strength of:
+						1.	240 MPa or more at 473 K (200°C); or
+						2.	415 MPa or more at 298 K (25°C);
+					e.	Magnesium alloys with a tensile strength of 345 MPa or more and a corrosion rate of less than 1 mm/year in 3% sodium chloride aqueous solution measured in accordance with ASTM standard G-31 or national equivalents;
+
+1.	C.	2.	a.	Technical Notes
+				1.	The metal alloys in 1.C.2.a. are those containing a higher percentage by weight of the stated metal than of any other element.
+				2.	Stress-rupture life should be measured in accordance with ASTM standard E-139 or national equivalents.
+				3.	Low cycle fatigue life should be measured in accordance with ASTM Standard E-606 'Recommended Practice for Constant-Amplitude Low-Cycle Fatigue Testing' or national equivalents. Testing should be axial with an average stress ratio equal to 1 and a stress-concentration factor (Kt) equal to 1. The average stress is defined as maximum stress minus minimum stress divided by maximum stress.
+
+
+1.	C.	2.	b.	Metal alloy powder or particulate material for materials controlled by 1.C.2.a., as follows:
+				1.	Made from any of the following composition systems:
+Technical Note
+					X in the following equals one or more alloying elements.
+
+					a.	Nickel alloys (Ni-Al-X, Ni-X-Al) qualified for turbine engine parts or components, i.e. with less than 3 non-metallic particles (introduced during the manufacturing process) larger than 100 µm in 109 alloy particles;
+					b.	Niobium alloys (Nb-Al-X or Nb-X-Al, Nb-Si-X or Nb-X-Si, Nb-Ti-X or Nb-X-Ti);
+					c.	Titanium alloys (Ti-Al-X or Ti-X-Al);
+					d.	Aluminium alloys (Al-Mg-X or 
+						Al-X-Mg, Al-Zn-X or Al-X-Zn, 
+						Al-Fe-X or Al-X-Fe); or
+					e.	Magnesium alloys (Mg-Al-X or Mg-X-Al); and
+
+				2.	Made in a controlled environment by any of the following processes:
+					a.	"Vacuum atomisation";
+					b.	"Gas atomisation";
+					c.	"Rotary atomisation";
+					d.	"Splat quenching";
+					e.	"Melt spinning" and "comminution";
+					f.	"Melt extraction" and "comminution"; or
+					g.	"Mechanical alloying";
+
+1.	C.	2.	c.	Alloyed materials, in the form of uncomminuted flakes, ribbons or thin rods produced in a controlled environment by "splat quenching", "melt spinning" or "melt extraction", used in the manufacture of metal alloy powder or particulate material controlled by 1.C.2.b.
+
+1.	C.	3.	Magnetic metals, of all types and of whatever form, having any of the following characteristics:
+
+			a.	Initial relative permeability of 120,000 or more and a thickness of 0.05 mm or less;
+Technical Note
+				Measurement of initial permeability must be performed on fully annealed materials.
+
+			b.	Magnetostrictive alloys, having any of the following characteristics:
+				1.	A saturation magnetostriction of more than 5 x 10-4; or
+				2.	A magnetomechanical coupling factor (k) of more than 0.8; or
+
+			c.	Amorphous or nanocrystalline alloy strips, having all of the following characteristics:
+				1.	A composition having a minimum of 75 weight percent of iron, cobalt or nickel; 
+				2.	A saturation magnetic induction (Bs) of 1.6 T or more; and
+				3.	Any of the following:
+					a.	A strip thickness of 0.02 mm or less; or
+					b.	An electrical resistivity of 2 x 10-4 ohm cm or more.
+
+Technical Note
+'Nanocrystalline' materials in 1.C.3.c. are those materials having a crystal grain size of 50 nm or less, as determined by X-ray diffraction.
+
+1.	C.	4.	Uranium titanium alloys or tungsten alloys with a "matrix" based on iron, nickel or copper, having all of the following:
+			a.	A density exceeding 17.5 g/cm3;
+			b.	An elastic limit exceeding 880 MPa;
+			c.	An ultimate tensile strength exceeding 1,270 MPa; and
+			d.	An elongation exceeding 8%.
+
+1.	C.	5.	"Superconductive" "composite" conductors in lengths exceeding 100 m or with a mass exceeding 100 g, as follows:
+			a.	Multifilamentary "superconductive" "composite" conductors containing one or more niobium-titanium filaments:
+				1.	Embedded in a "matrix" other than a copper or copper-based mixed "matrix"; or
+				2.	Having a cross-section area less than 0.28 x 10-4 mm2 (6 µm in diameter for circular filaments);
+
+1.	C.	5.	b.	"Superconductive" "composite" conductors consisting of one or more "superconductive" filaments other than niobium-titanium, having all of the following:
+				1.	A "critical temperature" at zero magnetic induction exceeding 9.85 K (-263.31°C) but less than 24 K (-249.16°C);
+				2.	A cross-section area less than 0.28 x 10-4 mm2; and
+				3.	Remaining in the "superconductive" state at a temperature of 4.2 K (-268.96°C) when exposed to a magnetic field corresponding to a magnetic induction of 12 T.
+
+1.	C.	6.	Fluids and lubricating materials, as follows:
+			a.	Hydraulic fluids containing, as their principal ingredients, any of the following compounds or materials:
+				1.	Synthetic silahydrocarbon oils, having all of the following:
+Note	For the purpose of 1.C.6.a.1., silahydrocarbon oils contain exclusively silicon, hydrogen and carbon.
+
+					a.	A flash point exceeding 477 K (204°C);
+					b.	A pour point at 239 K (-34°C) or less;
+					c.	A viscosity index of 75 or more; and
+					d.	A thermal stability at 616 K (343°C); or
+
+				2.	Chlorofluorocarbons, having all of the following:
+Note	For the purpose of 1.C.6.a.2., chlorofluorocarbons contain exclusively carbon, fluorine and chlorine.
+
+					a.	No flash point;
+					b.	An autogenous ignition temperature exceeding 977 K (704°C);
+					c.	A pour point at 219 K (-54°C) or less;
+					d.	A viscosity index of 80 or more; and 
+					e.	A boiling point at 473 K (200°C) or higher;
+
+			b.	Lubricating materials containing, as their principal ingredients, any of the following compounds or materials:
+				1.	Phenylene or alkylphenylene ethers or thio-ethers, or their mixtures, containing more than two ether or thio-ether functions or mixtures thereof; or
+				2.	Fluorinated silicone fluids with a kinematic viscosity of less than 5,000 mm2/s (5,000 centistokes) measured at 298 K (25°C);
+
+			c.	Damping or flotation fluids with a purity exceeding 99.8%, containing less than 25 particles of 200 µm or larger in size per 100 ml and made from at least 85% of any of the following compounds or materials:
+				1.	Dibromotetrafluoroethane;
+				2.	Polychlorotrifluoroethylene (oily and waxy modifications only); or
+				3.	Polybromotrifluoroethylene;
+
+1.	C.	6.	d.	Fluorocarbon electronic cooling fluids, having all of the following characteristics:
+				1.	Containing 85% by weight or more of any of the following, or mixtures thereof:
+					a.	Monomeric forms of perfluoropolyalkylether-triazines or perfluoroaliphatic-ethers;
+					b.	Perfluoroalkylamines;
+					c.	Perfluorocycloalkanes; or 
+					d.	Perfluoroalkanes;
+
+				2.	Density at 298 K (25°C) of 1.5 g/ml or more;
+				3.	In a liquid state at 273 K (0°C); and
+				4.	Containing 60% or more by weight of fluorine.
+
+			Technical Note
+
+			For the purpose of 1.C.6.:
+
+			a.	Flash point is determined using the Cleveland Open Cup Method described in ASTM D-92 or national equivalents;
+			b.	Pour point is determined using the method described in ASTM D-97 or national equivalents;
+			c.	Viscosity index is determined using the method described in ASTM D-2270 or national equivalents;
+			d.	Thermal stability is determined by the following test procedure or national equivalents:
+				Twenty ml of the fluid under test is placed in a 46 ml type 317 stainless steel chamber containing one each of 12.5 mm (nominal) diameter balls of M-10 tool steel, 52100 steel and naval bronze (60% Cu, 39% Zn, 0.75% Sn);
+				The chamber is purged with nitrogen, sealed at atmospheric pressure and the temperature raised to and maintained at 644 ± 6 K
+(371 ± 6°C) for six hours;
+				The specimen will be considered thermally stable if, on completion of the above procedure, all of the following conditions are met:
+				1.	The loss in weight of each ball is less than 10 mg/mm2 of ball surface;
+				2.	The change in original viscosity as determined at 311 K (38°C) is less than 25%; and
+				3.	The total acid or base number is less than 0.40;
+			e.	Autogenous ignition temperature is determined using the method described in ASTM E-659 or national equivalents.
+
+1.	C.	7.	Ceramic base materials, non-"composite" ceramic materials, ceramic-"matrix" "composite" materials and precursor materials, as follows:
+
+			a.	Base materials of single or complex borides of titanium having total metallic impurities, excluding intentional additions, of less than 5,000 ppm, an average particle size equal to or less than 5 µm and no more than 10% of the particles larger than 10 µm;
+
+			b.	Non-"composite" ceramic materials in crude or semi-fabricated form, composed of borides of titanium with a density of 98% or more of the theoretical density;
+Note	1.C.7.b. does not control abrasives.
+
+			c.	Ceramic-ceramic "composite" materials with a glass or oxide-"matrix" and reinforced with fibres made from any of the following systems:
+				1.	Si-N;
+				2.	Si-C;
+				3.	Si-Al-O-N; or
+				4.	Si-O-N;
+				having a specific tensile strength exceeding 12.7 x 103m;
+
+			d.	Ceramic-ceramic "composite" materials, with or without a continuous metallic phase, incorporating particles, whiskers or fibres, where carbides or nitrides of silicon, zirconium or boron form the "matrix";
+
+			e.	Precursor materials (i.e., special purpose polymeric or metallo-organic materials) for producing any phase or phases of the materials controlled by 1.C.7.c., as follows:
+				1.	Polydiorganosilanes (for producing silicon carbide);
+				2.	Polysilazanes (for producing silicon nitride);
+				3.	Polycarbosilazanes (for producing ceramics with silicon, carbon and nitrogen components);
+
+			f.	Ceramic-ceramic "composite" materials with an oxide or glass "matrix" reinforced with continuous fibres from any of the following systems:
+				1.	Al2O3; or
+				2.	Si-C-N.
+Note	1.C.7.f. does not control "composites" containing fibres from these systems with a fibre tensile strength of less than 700 MPa at 1,273 K (1,000° C) or fibre tensile creep resistance of more than 1% creep strain at 100 MPa load and 1,273 K (1,000° C) for 100 hours. 
+
+1.	C.	8.	Non-fluorinated polymeric substances, as follows:
+			a.	1.	Bismaleimides;
+				2.	Aromatic polyamide-imides;
+				3.	Aromatic polyimides;
+				4.	Aromatic polyetherimides having a glass transition temperature (Tg) exceeding 513 K (240° C) determined using the dry method described in ASTM D 3418;
+Note	1.C.8.a. does not control non-fusible compression moulding powders or moulded forms.
+
+			b.	Thermoplastic liquid crystal copolymers having a heat distortion temperature exceeding 523 K (250°C) measured according to ASTM D-648, method A, or national equivalents, with a load of 1.82 N/mm2 and composed of:
+				1.	Any of the following:
+					a.	Phenylene, biphenylene or naphthalene; or
+					b.	Methyl, tertiary-butyl or phenyl substituted phenylene, biphenylene or naphthalene; and
+				2.	Any of the following acids:
+					a.	Terephthalic acid;
+					b.	6-hydroxy-2 naphthoic acid; or
+					c.	4-hydroxybenzoic acid;
+
+			c.	Polyarylene ether ketones, as follows:
+				1.	Polyether ether ketone (PEEK);
+				2.	Polyether ketone ketone (PEKK);
+				3.	Polyether ketone (PEK);
+				4.	Polyether ketone ether ketone ketone (PEKEKK);
+
+			d.	Polyarylene ketones;
+
+			e.	Polyarylene sulphides, where the arylene group is biphenylene, triphenylene or combinations thereof;
+
+			f.	Polybiphenylenethersulphone.
+
+	Technical Note
+	The glass transition temperature (Tg) for  1.C.8. materials is  determined using the method described in ASTM D 3418 using the dry method.
+
+1.	C.	9.	Unprocessed fluorinated compounds, as follows:
+			a.	Copolymers of vinylidene fluoride having 75% or more beta crystalline structure without stretching;
+			b.	Fluorinated polyimides containing 10% by weight or more of combined fluorine;
+			c.	Fluorinated phosphazene elastomers containing 30% by weight or more of combined fluorine.
+
+1.	C.	10.	"Fibrous or filamentary materials" which may be used in organic "matrix", metallic "matrix" or carbon "matrix" "composite" structures or laminates, as follows:
+			a.	Organic "fibrous or filamentary materials", having all of the following:
+				1.	A specific modulus exceeding 12.7 x 106 m; and
+				2.	A specific tensile strength exceeding 23.5  x 104 m;
+Note	1.C.10.a. does not control polyethylene.
+
+			b.	Carbon "fibrous or filamentary materials", having all of the following:
+				1.	A specific modulus exceeding 12.7 x 106 m; and
+				2.	A specific tensile strength exceeding 23.5 x 104 m;
+
+				Technical Note
+				Properties for materials described in 1.C.10.b. should be determined using SACMA recommended methods SRM 12 to 17, or national equivalent tow tests, such as Japanese Industrial Standard JIS-R-7601, Paragraph 6.6.2., and based on lot average.
+Note	1.C.10.b. does not control fabric made from "fibrous or filamentary materials" for the repair of aircraft structures or laminates, in which the size of individual sheets does not exceed 50 cm x 90 cm.
+
+			c.	Inorganic "fibrous or filamentary materials", having all of the following:
+				1.	A specific modulus exceeding 2.54 x 106 m; and
+				2.	A melting, softening, decomposition or sublimation point exceeding 1,922 K (1,649°C) in an inert environment;
+Note	1.C.10.c. does not control:
+1.	Discontinuous, multiphase, polycrystalline alumina fibres in chopped fibre or random mat form, containing 3 weight percent or more silica, with a specific modulus of less than 10 x 106 m;
+2.	Molybdenum and molybdenum alloy fibres;
+3.	Boron fibres;
+4.	Discontinuous ceramic fibres with a melting, softening, decomposition or sublimation point lower than 2,043 K (1,770°C) in an inert environment.
+
+			d.	"Fibrous or filamentary materials":
+				1.	Composed of any of the following: 
+					a.	Polyetherimides controlled by 1.C.8.a; or
+					b.	Materials controlled by 1.C.8.b. to 1.C.8.f.; or
+				2.	Composed of materials controlled by 1.C.10.d.1.a. or 1.C.10.d.1.b. and "commingled" with other fibres controlled by 1.C.10.a., 1.C.10.b. or 1.C.10.c.;
+
+1.	C.	10.	e.	Resin-impregnated or pitch-impregnated fibres (prepregs), metal or carbon-coated fibres (preforms) or "carbon fibre preforms", as follows:
+				1.	Made from "fibrous or filamentary materials" controlled by 1.C.10.a., 1.C.10.b. or 1.C.10.c.;
+				2.	Made from organic or carbon "fibrous or filamentary materials":
+					a.	With a specific tensile strength exceeding 17.7 x 104 m;
+					b.	With a specific modulus exceeding 10.15 x 106 m;
+					c.	Not controlled by 1.C.10.a. or 1.C.10.b.; and
+					d.	When impregnated with materials controlled by 1.C.8. or 1.C.9.b., having a glass transition temperature (Tg) exceeding 383 K (110°C) or with phenolic or epoxy resins, having a glass transition temperature (Tg) equal to or exceeding 418 K (145°C).
+
+Notes	1.C.10.e. does not control:
+1.	Epoxy resin "matrix" impregnated carbon "fibrous or filamentary materials" (prepregs) for the repair of aircraft structures or laminates, in which the size of individual sheets of prepreg does not exceed 50 cm x 90 cm;
+2.	Prepregs when impregnated  with phenolic or epoxy resins having a glass transition temperature (Tg) less than 433 K (160°C) and a cure temperature  lower than the glass transition temperature.
+
+	Technical Note
+	The glass transition temperature (Tg) for 1.C.10.e. materials is  determined using the method described in ASTM D 3418 using the dry method.  The glass transition temperature for phenolic and epoxy resins is determined using the method described in ASTM D 4065 at a frequency of 1Hz and a heating rate of 2 K (°C) per minute using the dry method.
+
+			Technical Notes
+			1.	Specific modulus: Young's modulus in pascals, equivalent to N/m2 divided by specific weight in N/m3, measured at a temperature of (296 ± 2) K ((23 ± 2)°C) and a relative humidity of (50 ± 5)%.
+			2.	Specific tensile strength: ultimate tensile strength in pascals, equivalent to N/m2 divided by specific weight in N/m3, measured at a temperature of (296 ± 2) K ((23 ± 2)°C) and a relative humidity of (50 ± 5)%.
+
+1.	C.	11.	Metals and compounds, as follows:
+			a.	Metals in particle sizes of less than 60 µm whether spherical, atomised, spheroidal, flaked or ground, manufactured from material consisting of 99% or more of zirconium, magnesium and alloys of these;
+N.B.	The metals or alloys listed in 1.C.11.a. are controlled whether or not the metals or alloys are encapsulated in aluminium, magnesium, zirconium or beryllium.
+
+1.	C.	11.	b.	Boron or boron carbide of 85% purity or higher and a particle size of 60 µm or less;
+N.B.	The metals or alloys listed in 1.C.11.b. are controlled whether or not the metals or alloys are encapsulated in aluminium, magnesium, zirconium or beryllium.
+
+			c.	Guanidine nitrate.
+
+1.	C.	12.	Materials for nuclear heat sources, as follows:
+			a.	Plutonium in any form with a plutonium isotopic assay of 
+				plutonium-238 of more than 50% by weight;
+Note	1.C.12.a. does not control:
+1.	Shipments with a plutonium content of 1 g or less;
+2.	Shipments of 3 "effective grams" or less when contained in a sensing component in instruments.
+
+			b.	"Previously separated" neptunium-237 in any form.
+Note	1.C.12.b. does not control shipments with a neptunium-237 content of 1 g or less.
+
+
+
+1.	D.	SOFTWARE
+
+1.	D.	1.	"Software" specially designed or modified for the "development", "production" or "use" of equipment controlled by 1.B.
+1.	D.	2.	"Software" for the "development" of organic "matrix", metal "matrix" or carbon "matrix" laminates or "composites".
+
+
+
+1.	E.	TECHNOLOGY
+
+1.	E.	1.	"Technology" according to the General Technology Note for the "development" or "production" of equipment or materials controlled by 1.A.1.b., 1.A.1.c., 1.A.2. to 1.A.5., 1.B. or 1.C.
+
+1.	E.	2.	Other "technology", as follows:
+			a.	"Technology" for the "development" or "production" of polybenzothiazoles or polybenzoxazoles;
+
+			b.	"Technology" for the "development" or "production" of fluoroelastomer compounds containing at least one vinylether monomer;
+
+1.	E.	2.	c.	"Technology" for the design or "production" of the following base materials or non-"composite" ceramic materials:
+				1.	Base materials having all of the following characteristics:
+					a.	Any of the following compositions:
+						1.	Single or complex oxides of zirconium and complex oxides of silicon or aluminium;
+						2.	Single nitrides of boron (cubic crystalline forms);
+						3.	Single or complex carbides of silicon or boron; or
+						4.	Single or complex nitrides of silicon;
+					b.	Total metallic impurities, excluding intentional additions, of less than:
+						1.	1,000 ppm for single oxides or carbides; or
+						2.	5,000 ppm for complex compounds or single nitrides; 
+						and
+					c.	Having any of the following:
+						1.	Average particle size equal to or less than 5 µm and no more than 10% of the particles larger than 10 µm; or
+							Note	For zirconia, these limits are 1 µm and 5 µm respectively;
+
+						2.	Having all of the following:
+							a.	Platelets with a length to thickness ratio exceeding 5;
+							b.	Whiskers with a length to diameter ratio exceeding 10 for diameters less than 2 µm; and
+							c.	Continuous or chopped fibres less than 10 µm in diameter;
+
+				2.	Non-"composite" ceramic materials composed of the materials described in 1.E.2.c.1.;
+Note	1.E.2.c.2. does not control technology for the design or production of abrasives.
+
+1.	E.	2.	d.	"Technology" for the "production" of aromatic polyamide fibres;
+
+			e.	"Technology" for the installation, maintenance or repair of materials controlled by 1.C.1.;
+
+			f.	"Technology" for the repair of "composite" structures, laminates or materials controlled by 1.A.2., 1.C.7.c. or 1.C.7.d.
+Note	1.E.2.f. does not control "technology" for the repair of "civil aircraft" structures using carbon "fibrous or filamentary materials" and epoxy resins, contained in aircraft manufacturers' manuals.
+
