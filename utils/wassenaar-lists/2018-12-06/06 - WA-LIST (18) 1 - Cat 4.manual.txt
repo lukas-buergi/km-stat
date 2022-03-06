@@ -1,0 +1,159 @@
+﻿
+4.	COMPUTERS
+4.Note 1.	Computers, related equipment and "software" performing telecommunications or "local area network" functions must also be evaluated against the performance characteristics of Category 5 – Part 1 (Telecommunications).
+4.Note 2.	Control units which directly interconnect the buses or channels of central processing units, 'main storage' or disk controllers are not regarded as telecommunications equipment described in Category 5 – Part 1 (Telecommunications).
+4.Note 2.N.B.	For the status of "software" specially designed for packet switching, see Category 5.D.1. (Telecommunications).
+
+4.Note 2.Technical Note.	'Main storage' is the primary storage for data or instructions for rapid access by a central processing unit. It consists of the internal storage of a "digital computer" and any hierarchical extension thereto, such as cache storage or non-sequentially accessed extended storage.
+Note 3.	Not used since 2015
+
+
+4.A.	SYSTEMS, EQUIPMENT AND COMPONENTS
+4.A.1.	Electronic computers and related equipment, having any of the following and "electronic assemblies" and specially designed components therefor:
+4.A.1.a.	Specially designed to have any of the following:
+4.A.1.a.1.	Rated for operation at an ambient temperature below 228 K (-45°C) or above 358 K (85°C); or
+4.A.1.a.1.Note.	4.A.1.a.1. does not apply to computers specially designed for civil automobile, railway train or “civil aircraft” applications. 
+4.A.1.a.2.	Radiation hardened to exceed any of the following specifications:
+4.A.1.a.2.a.	Total Dose                 5 x 103 Gy (Si);
+4.A.1.a.2.b.	Dose Rate Upset        5 x 106 Gy (Si)/s; or
+4.A.1.a.2.c.	Single Event Upset    1 x 10-8 Error/bit/day.
+4.A.1.a.2.Note.	4.A.1.a.2. does not apply to computers specially designed for "civil aircraft" applications.
+4.A.1.b.	Not used since 2009
+
+4.A.2.	 Not used since 2003
+
+4.A.3.	"Digital computers", "electronic assemblies", and related equipment therefor, as follows and specially designed components therefor:
+4.A.3.Note 1.	4.A.3. includes the following:
+4.A.3.Note 1.	- 'Vector processors';
+4.A.3.Note 1.	- Array processors;
+4.A.3.Note 1.	- Digital signal processors;
+4.A.3.Note 1.	- Logic processors;
+4.A.3.Note 1.	- Equipment designed for "image enhancement".
+
+4.A.3.Note 2.	The status of the "digital computers" and related equipment described in 4.A.3. is determined by the status of other equipment or systems provided:
+4.A.3.Note 2.a.	The "digital computers" or related equipment are essential for the operation of the other equipment or systems;
+4.A.3.Note 2.b.	The "digital computers" or related equipment are not a "principal element" of the other equipment or systems; and
+4.A.3.Note 2.b.N.B.1	The status of "signal processing" or "image enhancement" equipment specially designed for other equipment with functions limited to those required for the other equipment is determined by the status of the other equipment even if it exceeds the "principal element" criterion.
+4.A.3.Note 2.b.N.B.2	For the status of "digital computers" or related equipment for telecommunications equipment, see Category 5 – Part 1 (Telecommunications).
+4.A.3.Note 2.c.	The "technology" for the "digital computers" and related equipment is determined by 4.E.
+
+4.A.3.a.	Not used since 2011
+
+4.A.3.b.	"Digital computers" having an 'Adjusted Peak Performance' ('APP') exceeding 29 Weighted TeraFLOPS (WT);
+4.A.3.c.	"Electronic assemblies" specially designed or modified for enhancing performance by aggregation of processors so that the 'APP' of the aggregation exceeds the limit specified by 4.A.3.b.;
+4.A.3.c.Note 1.	4.A.3.c. applies only to "electronic assemblies" and programmable interconnections not exceeding the limit specified by 4.A.3.b. when shipped as unintegrated "electronic assemblies".
+4.A.3.c.Note 2.	4.A.3.c. does not apply to "electronic assemblies" specially designed for a product or family of products whose maximum configuration does not exceed the limit specified by 4.A.3.b. 
+
+4.A.3.d.	Not used since 2001
+4.A.3.e.	Not used since 2015
+4.A.3.e.N.B.	For "electronic assemblies", modules or equipment, performing analogue-to-digital conversions, see 3.A.2.h.
+
+4.A.3.f.	Not used since 1998
+4.A.3.g.	Equipment specially designed for aggregating the performance of "digital computers" by providing external interconnections which allow communications at unidirectional data rates exceeding 2.0 Gbyte/s per link.
+4.A.3.g.Note.	4.A.3.g. does not apply to internal interconnection equipment (e.g., backplanes, buses), passive interconnection equipment, "network access controllers" or "communications channel controllers".
+
+4.A.4.	Computers as follows and specially designed related equipment, "electronic assemblies" and components therefor:
+4.A.4.a.	'Systolic array computers';
+4.A.4.b.	'Neural computers';
+4.A.4.c.	'Optical computers'.
+
+4.A.4.Technical Notes.
+4.A.4.Technical Notes.1.	'Systolic array computers' are computers where the flow and modification of the data is dynamically controllable at the logic gate level by the user.
+4.A.4.Technical Notes.2.	'Neural computers' are computational devices designed or modified to mimic the behaviour of a neuron or a collection of neurons, i.e., computational devices which are distinguished by their hardware capability to modulate the weights and numbers of the interconnections of a multiplicity of computational components based on previous data.
+4.A.4.Technical Notes.3.	'Optical computers' are computers designed or modified to use light to represent data and whose computational logic elements are based on directly coupled optical devices.
+4.A.5.	Systems, equipment, and components therefor, specially designed or modified for the generation, command and control, or delivery of "intrusion software".
+
+
+4.B.	TEST, INSPECTION AND PRODUCTION EQUIPMENT - None
+
+
+4.C.	MATERIALS – None
+
+
+4.D.	SOFTWARE
+
+4.D.Note.	The status of "software" for equipment described in other Categories is dealt with in the appropriate Category.
+
+4.D.1.	"Software" as follows:
+4.D.1.a.	"Software" specially designed or modified for the "development" or "production" of equipment or "software" specified by 4.A. or 4.D.
+4.D.1.b.	"Software", other than that specified by 4.D.1.a., specially designed or modified for the "development" or "production" of equipment as follows:
+4.D.1.b.1.	"Digital computers" having an 'Adjusted Peak Performance' ('APP') exceeding 15 Weighted TeraFLOPS (WT); 
+4.D.1.b.2.	"Electronic assemblies" specially designed or modified for enhancing performance by aggregation of processors so that the 'APP' of the aggregation exceeds the limit in 4.D.1.b.1.
+
+4.D.2.	Not used since 2014
+
+4.D.3.	Not used since 2009
+
+4.D.4.	"Software" specially designed or modified for the generation, command and control, or delivery of "intrusion software".
+4.D.4.Note.	4.D.4 does not apply to "software" specially designed and limited to provide "software" updates or upgrades meeting all the following: 
+4.D.4.Note.a.	The update or upgrade operates only with the authorisation of the owner or administrator of the system receiving it; and
+4.D.4.Note.b.	After the update or upgrade, the “software” updated or upgraded is not any of the following:
+4.D.4.Note.b.1.	"Software" specified by 4.D.4.; or
+4.D.4.Note.b.2.	"Intrusion software".
+
+4.E.	TECHNOLOGY
+
+4.E.1.	"Technology" as follows:
+4.E.1.a.	"Technology" according to the General Technology Note, for the "development", "production" or "use" of equipment or "software" specified by 4.A. or 4.D.
+4.E.1.b.	"Technology" according to the General Technology Note, other than that specified by 4.E.1.a., for the "development" or "production" of equipment as follows:
+4.E.1.b.1.	"Digital computers" having an 'Adjusted Peak Performance' ('APP') exceeding 15 Weighted TeraFLOPS (WT); 
+4.E.1.b.2.	"Electronic assemblies" specially designed or modified for enhancing performance by aggregation of processors so that the 'APP' of the aggregation exceeds the limit in 4.E.1.b.1.
+4.E.1.c.	"Technology" for the "development" of "intrusion software".
+4.E.1.Note 1.	4.E.1.a. and 4.E.1.c. do not apply to 'vulnerability disclosure' or 'cyber incident response'.
+4.E.1.Note 2.	Note 1 does not diminish national authorities' rights to ascertain compliance with 4.E.1.a. and 4.E.1.c.
+
+4.E.1.Technical Notes.1.	'Vulnerability disclosure' means the process of identifying, reporting, or communicating a vulnerability to, or analysing a vulnerability with, individuals or organizations responsible for conducting or coordinating remediation for the purpose of resolving the vulnerability.
+4.E.1.Technical Notes.2.	'Cyber incident response' means the process of exchanging necessary information on a cyber security incident with individuals or organizations responsible for conducting or coordinating remediation to address the cyber security incident.
+
+
+4.Technical Note.	TECHNICAL NOTE ON 'ADJUSTED PEAK PERFORMANCE' ('APP')
+
+
+4.Technical Note.	'APP' is an adjusted peak rate at which "digital computers" perform 64-bit or larger floating point additions and multiplications.
+
+4.Technical Note.	Abbreviations used in this Technical Note
+
+4.Technical Note.	n	number of processors in the "digital computer"
+4.Technical Note.	i	processor number (i,...n)
+4.Technical Note.	ti	processor cycle time (ti = 1/Fi)
+4.Technical Note.	Fi	processor frequency 
+4.Technical Note.	Ri	peak floating point calculating rate
+4.Technical Note.	Wi	architecture adjustment factor
+
+4.Technical Note.	'APP' is expressed in Weighted TeraFLOPS (WT), in units of 1012 adjusted floating point operations per second.
+
+4.Technical Note.	Outline of 'APP' calculation method
+
+4.Technical Note.1.	For each processor i, determine the peak number of 64-bit or larger floating point operations, FPOi, performed per cycle for each processor in the "digital computer".
+
+4.Technical Note.1.Note.	In determining FPO, include only 64-bit or larger floating point additions or multiplications.  All floating point operations must be expressed in operations per processor cycle; operations requiring multiple cycles may be expressed in fractional results per cycle.  For processors not capable of performing calculations on floating point operands of 64-bit or more, the effective calculating rate R is zero.
+
+4.Technical Note.2.	Calculate the floating point rate R for each processor   Ri = FPOi/ti
+
+4.Technical Note.3.	Calculate 'APP' as 'APP' = W1 x R1 + W2 x R2 + … + Wn x Rn.
+
+
+4.Technical Note.4.	For 'vector processors', Wi = 0.9.  For non-'vector processors', Wi = 0.3.
+
+
+4.Technical Note.Note 1.	For processors that perform compound operations in a cycle, such as addition and multiplication, each operation is counted.
+
+4.Technical Note.Note 2.	For a pipelined processor the effective calculating rate R is the faster of the pipelined rate, once the pipeline is full, or the non-pipelined rate.
+
+4.Technical Note.Note 3.	The calculating rate R of each contributing processor is to be calculated at its maximum value theoretically possible before the 'APP' of the combination is derived.  Simultaneous operations are assumed to exist when the computer manufacturer claims concurrent, parallel, or simultaneous operation or execution in a manual or brochure for the computer.
+
+
+
+
+
+4.Technical Note.Note 4.	Do not include processors that are limited to input/output and peripheral functions (e.g., disk drive, communication and video display) when calculating 'APP'.
+
+4.Technical Note.Note 5.	'APP' values are not to be calculated for processor combinations (inter)connected by "Local Area Networks", Wide Area Networks, I/O shared connections/devices, I/O controllers and any communication interconnection implemented by "software".
+
+4.Technical Note.Note 6.	'APP' values must be calculated for processor combinations containing processors specially designed to enhance performance by aggregation, operating simultaneously and sharing memory;
+
+4.Technical Note.Note 6.Technical Notes.1.	Aggregate all processors and accelerators operating simultaneously and located on the same die.
+4.Technical Note.Note 6.Technical Notes.2.	Processor combinations share memory when any processor is capable of accessing any memory location in the system through the hardware transmission of cache lines or memory words, without the involvement of any software mechanism, which may be achieved using "electronic assemblies" specified in 4.A.3.c.
+
+4.Technical Note.Note 7.	A 'vector processor' is defined as a processor with built-in instructions that perform multiple calculations on floating-point vectors (one-dimensional arrays of 64-bit or larger numbers) simultaneously, having at least 2 vector functional units and at least 8 vector registers of at least 64 elements each.
+
