@@ -1,0 +1,240 @@
+﻿
+7.A. SYSTEMS, EQUIPMENT AND COMPONENTS
+7.A.N.B.	For automatic pilots for underwater vehicles, see Category 8.
+	For radar, see Category 6.
+
+7.A.1.	Accelerometers as follows and specially designed components therefor:
+7.A.1.N.B.	For angular or rotational accelerometers, see 7.A.1.b.
+7.A.1.a.	Linear accelerometers having any of the following:
+7.A.1.a.1.	Specified to function at linear acceleration levels less than or equal to 15 g and having any of the following:
+7.A.1.a.1.a.	A "bias" "stability" of less (better) than 130 micro g with respect to a fixed calibration value over a period of one year; or
+7.A.1.a.1.b.	A "scale factor" "stability" of less (better) than 130 ppm with respect to a fixed calibration value over a period of one year; 
+7.A.1.a.2.	Specified to function at linear acceleration levels exceeding 15 g but less than or equal to 100 g and having all of the following:
+7.A.1.a.2.a.	A "bias" "repeatability" of less (better) than 1,250 micro g over a period of one year; and
+7.A.1.a.2.b.	A "scale factor" "repeatability" of less (better) than 1,250 ppm over a period of one year; or
+7.A.1.a.3.	Designed for use in inertial navigation or guidance systems and specified to function at linear acceleration levels exceeding 100 g;
+7.A.1.a.Note.	7.A.1.a.1. and 7.A.1.a.2. do not apply to accelerometers limited to measurement of only vibration or shock.
+
+7.A.1.b.	Angular or rotational accelerometers, specified to function at linear acceleration levels exceeding 100 g.
+
+7.A.2.	Gyros or angular rate sensors, having any of the following and specially designed components therefor:
+7.A.2.N.B.	For angular or rotational accelerometers, see 7.A.1.b.
+
+7.A.2.a.	Specified to function at linear acceleration levels less than or equal to 100 g and having any of the following:
+7.A.2.a.1.	An angular rate range of less than 500 degrees per second and having any of the following:
+7.A.2.a.1.a.	A "bias" "stability" of less (better) than 0.5 degree per hour, when measured in a 1 g environment over a period of one month, and with respect to a fixed calibration value; or
+7.A.2.a.1.b.	An "angle random walk" of less (better) than or equal to 0.0035 degree per square root hour; or
+7.A.2.a.1.b.Note.	7.A.2.a.1.b. does not apply to "spinning mass gyros".
+
+7.A.2.a.2.	An angular rate range greater than or equal to 500 degrees per second and having any of the following: 
+7.A.2.a.2.a.	A "bias" "stability" of less (better) than 4 degrees per hour, when measured in a 1 g environment over a period of three minutes, and with respect to a fixed calibration value; or
+
+7.A.2.a.2.b.	An "angle random walk" of less (better) than or equal to 0.1 degree per square root hour; or
+7.A.2.a.2.b.Note.	7.A.2.a.2.b. does not apply to "spinning mass gyros".
+
+7.A.2.b.	Specified to function at linear acceleration levels exceeding 100 g.
+
+7.A.3.	'Inertial measurement equipment or systems', having any of the following:
+7.A.3.Note 1.	'Inertial measurement equipment or systems' incorporate accelerometers or gyroscopes to measure changes in velocity and orientation in order to determine or maintain heading or position without requiring an external reference once aligned.  'Inertial measurement equipment or systems' include:
+7.A.3.Note 1.	- Attitude and Heading Reference Systems (AHRSs);
+7.A.3.Note 1.	- Gyrocompasses;
+7.A.3.Note 1.	- Inertial Measurement Units (IMUs);
+7.A.3.Note 1.	- Inertial Navigation Systems (INSs);
+7.A.3.Note 1.	- Inertial Reference Systems (IRSs);
+7.A.3.Note 1.	- Inertial Reference Units (IRUs).
+7.A.3.Note 2	7.A.3. does not apply to 'inertial measurement equipment or systems' which are certified for use on "civil aircraft" by civil aviation authorities of one or more Wassenaar Arrangement Participating States.
+
+7.A.3.Technical Note.	'Positional aiding references' independently provide position, and include:
+7.A.3.Technical Note.a.	"Satellite navigation system";
+7.A.3.Technical Note.b.	"Data-Based Referenced Navigation" ("DBRN").
+
+7.A.3.a.	Designed for "aircraft", land vehicles or vessels, providing position without the use of 'positional aiding references', and having any of the following "accuracies" subsequent to normal alignment:
+7.A.3.a.1.	0.8 nautical miles per hour (nm/hr) "Circular Error Probable" ("CEP") rate or less (better);
+7.A.3.a.2.	0.5% distanced travelled "CEP" or less (better); or
+7.A.3.a.3.	Total drift of 1 nautical mile "CEP" or less (better) in a 24 hr period;
+
+7.A.3.a.Technical Note.	The performance parameters in 7.A.3.a.1., 7.A.3.a.2. and 7.A.3.a.3. typically apply to 'inertial measurement equipment or systems' designed for "aircraft", vehicles and  vessels, respectively. These parameters result from the utilisation of specialised non-positional aiding references (e.g., altimeter, odometer, velocity log).  As a consequence, the specified performance values cannot be readily converted between these parameters. Equipment designed for multiple platforms are evaluated against each applicable entry 7.A.3.a.1., 7.A.3.a.2., or 7.A.3.a.3.
+
+7.A.3.b.	Designed for "aircraft", land vehicles or vessels, with an embedded 'positional aiding reference' and providing position after loss of all 'positional aiding references' for a period of up to 4 minutes, having an "accuracy" of less (better) than 10 meters "CEP";
+
+7.A.3.b.Technical Note.	7.A.3.b. refers to systems in which 'inertial measurement equipment or systems' and other independent 'positional aiding references' are built into a single unit (i.e., embedded) in order to achieve improved performance.
+
+7.A.3.c.	Designed for "aircraft", land vehicles or vessels, providing heading or True North determination and having any of the following:
+7.A.3.c.1.	A maximum operating angular rate less (lower) than 500 deg/s and a heading "accuracy" without the use of 'positional aiding references' equal to or less (better) than 0.07 deg sec(Lat) (equivalent to 6 arc minutes rms at 45 degrees latitude); or
+7.A.3.c.2.	A maximum operating angular rate equal to or greater (higher) than 500 deg/s and a heading "accuracy" without the use of 'positional aiding references' equal to or less (better) than 0.2 deg sec(Lat) (equivalent to 17 arc minutes rms at 45 degrees latitude);
+
+7.A.3.d.	Providing acceleration measurements or angular rate measurements, in more than one dimension, and having any of the following:
+7.A.3.d.1.	Performance specified by 7.A.1. or 7.A.2. along any axis, without the use of any aiding references; or
+7.A.3.d.2.	Being "space-qualified" and providing angular rate measurements having an "angle random walk" along any axis of less (better) than or equal to 0.1 degree per square root hour.
+7.A.3.d.2.Note.	7.A.3.d.2. does not apply to 'inertial measurement equipment or systems' that contain "spinning mass gyros" as the only type of gyro.
+
+7.A.4.	'Star trackers' and components therefor, as follows:
+7.A.4.a.	'Star trackers' with a specified azimuth "accuracy" of equal to or less (better) than 20 seconds of arc throughout the specified lifetime of the equipment;
+7.A.4.b.	Components specially designed for equipment specified in 7.A.4.a. as follows:
+7.A.4.b.1.	Optical heads or baffles;
+7.A.4.b.2.	Data processing units.
+
+7.A.4.Technical Note.	'Star trackers' are also referred to as stellar attitude sensors or gyro-astro compasses.
+
+7.A.5.	"Satellite navigation system" receiving equipment having any of the following and specially designed components therefor:
+7.A.5.N.B.	For equipment specially designed for military use, see ML11.
+
+7.A.5.a.	Employing a decryption algorithm specially designed or modified for government use to access the ranging code for position and time; or
+7.A.5.b.	Employing 'adaptive antenna systems'.
+7.A.5.b.Note.	7.A.5.b. does not apply to "satellite navigation system" receiving equipment that only uses components designed to filter, switch, or combine signals from multiple omni-directional antennae that do not implement adaptive antenna techniques.
+
+7.A.5.b.Technical Note.	For the purposes of 7.A.5.b 'adaptive antenna systems' dynamically generate one or more spatial nulls in an antenna array pattern by signal processing in the time domain or frequency domain.
+
+7.A.6.	Airborne altimeters operating at frequencies other than 4.2 to 4.4 GHz inclusive and having any of the following:
+7.A.6.a.	'Power management'; or
+7.A.6.b.	Using phase shift key modulation.
+
+7.A.6.Technical Note.	'Power management' is changing the transmitted power of the altimeter signal so that received power at the "aircraft" altitude is always at the minimum necessary to determine the altitude.
+
+7.A.7.	Not used since 2004
+
+7.A.8.	Underwater sonar navigation systems using doppler velocity or correlation velocity logs integrated with a heading source and having a positioning "accuracy" of equal to or less (better) than 3% of distance travelled "Circular Error Probable" ("CEP") and specially designed components therefor. 
+7.A.8.Note.	7.A.8. does not apply to systems specially designed for installation on surface vessels or systems requiring acoustic beacons or buoys to provide positioning data.
+7.A.8.N.B.	See Category 6.A.1.a. for acoustic systems, and 6.A.1.b. for correlation-velocity and Doppler-velocity sonar log equipment.
+7.A.8.N.B.	See Category 8.A.2. for other marine systems.
+
+
+7.B.	TEST, INSPECTION AND PRODUCTION EQUIPMENT
+
+7.B.1.	Test, calibration or alignment equipment, specially designed for equipment specified by 7.A.
+7.B.1.Note.	7.B.1. does not apply to test, calibration or alignment equipment for 'Maintenance Level I’ or 'Maintenance Level II'.
+
+7.B.1.Technical Notes.1.	‘Maintenance Level I’
+7.B.1.Technical Notes.1.	The failure of an inertial navigation unit is detected on the "aircraft" by indications from the Control and Display Unit (CDU) or by the status message from the corresponding sub-system. By following the manufacturer's manual, the cause of the failure may be localised at the level of the malfunctioning Line Replaceable Unit (LRU).  The operator then removes the LRU and replaces it with a spare.
+
+
+7.B.1.Technical Notes.2.	‘Maintenance Level II’
+7.B.1.Technical Notes.2.	The defective LRU is sent to the maintenance workshop (the manufacturer's or that of the operator responsible for level II maintenance). At the maintenance workshop, the malfunctioning LRU is tested by various appropriate means to verify and localise the defective Shop Replaceable Assembly (SRA) module responsible for the failure. This SRA is removed and replaced by an operative spare. The defective SRA (or possibly the complete LRU) is then shipped to the manufacturer.  ‘Maintenance Level II’ does not include the disassembly or repair of specified accelerometers or gyro sensors.
+
+7.B.2.	Equipment specially designed to characterize mirrors for ring "laser" gyros, as follows:
+7.B.2.a.	Scatterometers having a measurement "accuracy" of 10 ppm or less (better);
+7.B.2.b.	Profilometers having a measurement "accuracy" of 0.5 nm (5 angstrom) or less (better).
+
+7.B.3.	Equipment specially designed for the "production" of equipment specified by 7.A.
+7.B.3.Note.	7.B.3. includes: 
+7.B.3.Note.	- Gyro tuning test stations;
+7.B.3.Note.	- Gyro dynamic balance stations;
+7.B.3.Note.	- Gyro run-in/motor test stations;
+7.B.3.Note.	- Gyro evacuation and fill stations;
+7.B.3.Note.	- Centrifuge fixtures for gyro bearings;
+7.B.3.Note.	- Accelerometer axis align stations;
+7.B.3.Note.	- Fibre optic gyro coil winding machines.
+
+
+7.C. MATERIALS - None
+
+
+7.D. SOFTWARE
+
+7.D.1.	"Software" specially designed or modified for the "development" or "production" of equipment specified by 7.A. or 7.B.
+
+7.D.2.	"Source code" for the operation or maintenance of any inertial navigation equipment, including inertial equipment not specified by 7.A.3. or 7.A.4., or Attitude and Heading Reference Systems ('AHRS').
+7.D.2.Note.	7.D.2. does not apply to "source code" for the operation or maintenance of gimballed 'AHRS’.
+
+7.D.2.Technical Note.	‘AHRS’ generally differ from Inertial Navigation Systems (INS) in that an ‘AHRS’ provides attitude and heading information and normally does not provide the acceleration, velocity and position information associated with an INS.
+
+7.D.3.	Other "software" as follows:
+7.D.3.a.	"Software" specially designed or modified to improve the operational performance or reduce the navigational error of systems to the levels specified by 7.A.3., 7.A.4. or 7.A.8.;
+
+7.D.3.b.	"Source code" for hybrid integrated systems which improves the operational performance or reduces the navigational error of systems to the level specified by 7.A.3. or 7.A.8. by continuously combining heading data with any of the following:
+7.D.3.b.1.	Doppler radar or sonar velocity data;
+7.D.3.b.2.	"Satellite navigation system" reference data; or
+7.D.3.b.3.	Data from "Data-Based Referenced Navigation" ("DBRN") systems;
+7.D.3.c.	Not used since 2013
+
+7.D.3.d.	Not used since 2012
+7.D.3.d.N.B.	For flight control "source code", see 7.D.4.
+
+7.D.3.e.	Computer-Aided-Design (CAD) "software" specially designed for the "development" of "active flight control systems", helicopter multi-axis fly-by-wire or fly-by-light controllers or helicopter "circulation controlled anti-torque or circulation-controlled direction control systems", whose "technology" is specified by 7.E.4.b.1., 7.E.4.b.3. to 7.E.4.b.5., 7.E.4.b.7., 7.E.4.b.8., 7.E.4.c.1. or 7.E.4.c.2.
+
+7.D.4.	"Source code" incorporating "development" "technology" specified by 7.E.4.a.2., 7.E.4.a.3., 7.E.4.a.5., 7.E.4.a.6. or 7.E.4.b., for any of the following:
+7.D.4.a.	Digital flight management systems for "total control of flight";
+7.D.4.b.	Integrated propulsion and flight control systems;
+7.D.4.c.	"Fly-by-wire systems" or "fly-by-light systems";
+7.D.4.d.	Fault-tolerant or self-reconfiguring "active flight control systems";
+7.D.4.e.	Not used since 2012
+7.D.4.f.	Air data systems based on surface static data; or
+7.D.4.g.	Three dimensional displays.
+7.D.4.Note.	7.D.4. does not apply to "source code" associated with common computer elements and utilities (e.g., input signal acquisition, output signal transmission, computer program and data loading, built-in test, task scheduling mechanisms) not providing a specific flight control system function.
+
+7.D.5.	"Software" specially designed to decrypt "satellite navigation system" ranging code designed for government use.
+
+
+7.E.	TECHNOLOGY
+
+7.E.1.	"Technology" according to the General Technology Note for the "development" of equipment or "software", specified by 7.A., 7.B., 7.D.1., 7.D.2., 7.D.3. or 7.D.5.
+7.E.1.Note.	7.E.1. includes key management "technology" exclusively for equipment specified in 7.A.5.a.
+7.E.2.	"Technology" according to the General Technology Note for the "production" of equipment specified by 7.A. or 7.B.
+
+7.E.3.	"Technology" according to the General Technology Note for the repair, refurbishing or overhaul of equipment specified by 7.A.1. to 7.A.4.
+7.E.3.Note.	7.E.3. does not apply to "technology" for maintenance, directly associated with calibration, removal or replacement of damaged or unserviceable LRUs and SRAs of a "civil aircraft" as described in 'Maintenance Level I' or 'Maintenance Level II'.
+7.E.3.Note.N.B.	See Technical Notes to 7.B.1.
+
+7.E.4.	Other "technology" as follows:
+7.E.4.a.	"Technology" for the "development" or "production" of any of the following:
+7.E.4.a.1.	Not used since 2011
+7.E.4.a.2.	Air data systems based on surface static data only, i.e., which dispense with conventional air data probes;
+7.E.4.a.3.	Three dimensional displays for "aircraft";
+7.E.4.a.4.	Not used since 2010
+7.E.4.a.5.	Electric actuators (i.e., electromechanical, electrohydrostatic and integrated actuator package) specially designed for 'primary flight control';
+7.E.4.a.5.Technical Note.
+7.E.4.a.5.Technical Note.	'Primary flight control' is "aircraft" stability or manoeuvring control using force/moment generators, i.e. aerodynamic control surfaces or propulsive thrust vectoring.
+
+7.E.4.a.6.	'Flight control optical sensor array' specially designed for implementing "active flight control systems"; or
+
+7.E.4.a.6.Technical Note.	A 'flight control optical sensor array' is a network of distributed optical sensors, using "laser" beams, to provide real-time flight control data for on-board processing.
+
+7.E.4.a.7.	"DBRN" systems designed to navigate underwater, using sonar or gravity databases, that provide a positioning "accuracy" equal to or less (better) than 0.4 nautical miles;
+
+7.E.4.b.	"Development" "technology", as follows, for "active flight control systems" (including "fly-by-wire systems" or "fly-by-light systems"):
+7.E.4.b.1.	Photonic-based "technology" for sensing "aircraft" or flight control component state, transferring flight control data, or commanding actuator movement, "required" for "fly-by-light systems" "active flight control systems";
+7.E.4.b.2.	Not used since 2012
+7.E.4.b.3.	Real-time algorithms to analyze component sensor information to predict and preemptively mitigate impending degradation and failures of components within an "active flight control system";
+7.E.4.b.3.Note. 	7.E.4.b.3. does not include algorithms for the purpose of off-line maintenance.
+
+7.E.4.b.4.	Real-time algorithms to identify component failures and reconfigure force and moment controls to mitigate "active flight control system" degradations and failures;
+7.E.4.b.4.Note.	7.E.4.b.4. does not include algorithms for the elimination of fault effects through comparison of redundant data sources, or off-line pre-planned responses to anticipated failures.
+7.E.4.b.5.	Integration of digital flight control, navigation and propulsion control data, into a digital flight management system for "total control of flight";
+7.E.4.b.5.Note.	7.E.4.b.5. does not apply to:
+7.E.4.b.5.Note.1.	"Technology" for integration of digital flight control, navigation and propulsion control data, into a digital flight management system for 'flight path optimisation'; 
+7.E.4.b.5.Note.2.	"Technology" for "aircraft" flight instrument systems integrated solely for VOR, DME, ILS or MLS navigation or approaches.
+
+7.E.4.b.5.Note.Technical Note.	'Flight path optimisation' is a procedure that minimises deviations from a four-dimensional (space and time) desired trajectory based on maximising performance or effectiveness for mission tasks.
+
+7.E.4.b.6.	Not used since 2013
+
+7.E.4.b.7.	"Technology" "required" for deriving the functional requirements for "fly-by-wire systems" having all of the following:
+7.E.4.b.7.a.	'Inner-loop' airframe stability controls requiring loop closure rates of 40 Hz or greater; and
+
+7.E.4.b.7.a.Technical Note.	'Inner-loop' refers to functions of "active flight control systems" that automate airframe stability controls.
+7.E.4.b.7.b.	Having any of the following: 
+7.E.4.b.7.b.1.	Corrects an aerodynamically unstable airframe, measured at any point in the design flight envelope, that would lose recoverable control if not corrected within 0.5 seconds;
+7.E.4.b.7.b.2.	Couples controls in two or more axes while compensating for 'abnormal changes in aircraft state';
+
+7.E.4.b.7.b.2.Technical Note.	'Abnormal changes in aircraft state' include in-flight structural damage, loss of engine thrust, disabled control surface, or destabilizing shifts in cargo load.
+
+7.E.4.b.7.b.3.	Performs the functions specified in 7.E.4.b.5.; or
+7.E.4.b.7.b.3.Note.	7.E.4.b.7.b.3. does not apply to autopilots.
+7.E.4.b.7.b.4.	Enables "aircraft" to have stable controlled flight, other than during take-off or landing, at greater than 18 degrees angle of attack, 15 degrees side slip, 15 degrees/second pitch or yaw rate, or 90 degrees/second roll rate;
+
+7.E.4.b.8.	"Technology" "required" for deriving the functional requirements for "fly-by-wire systems" to achieve all of the following:
+7.E.4.b.8.a.	No loss of control of the "aircraft" in the event of a consecutive sequence of any two individual faults within the "fly-by-wire system"; and
+7.E.4.b.8.b.	Probability of loss of control of the "aircraft" being less (better) than 1x10-9 failures per flight hour;
+
+7.E.4.b.Note.	7.E.4.b. does not apply to "technology" associated with common computer elements and utilities (e.g., input signal acquisition, output signal transmission, computer program and data loading, built-in test, task scheduling mechanisms) not providing a specific flight control system function.
+
+7.E.4.c.	"Technology" for the "development" of helicopter systems, as follows:
+7.E.4.c.1.	Multi-axis fly-by-wire or fly-by-light controllers, which combine the functions of at least two of the following into one controlling element:
+7.E.4.c.1.a.	Collective controls;
+7.E.4.c.1.b.	Cyclic controls;
+7.E.4.c.1.c.	Yaw controls;
+7.E.4.c.2.	"Circulation-controlled anti-torque or circulation-controlled direction control systems";
+7.E.4.c.3.	Rotor blades incorporating 'variable geometry airfoils', for use in systems using individual blade control.
+
+7.E.4.c.3.Technical Note.	'Variable geometry airfoils' use trailing edge flaps or tabs, or leading edge slats or pivoted nose droop, the position of which can be controlled in flight.
+
