@@ -204,7 +204,7 @@ class Geschaefte(models.Model):
       row=[str(g.beginn), g.exportkontrollnummer.kontrollregime.gueterArt.name.de, g.exportkontrollnummer.nummer, g.umfang]
       if(g.exportkontrollnummer.beschreibung != None and g.exportkontrollnummer.beschreibung.de!=""):
         row[2]=g.exportkontrollnummer.beschreibung.de
-      if(not p.countriesSingle):
+      if(True): # not p.countriesSingle
         row = [g.endempfaengerstaat.code, g.endempfaengerstaat.name.de] + row
       result.addRow(row)
 
