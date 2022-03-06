@@ -1,0 +1,681 @@
+﻿
+3.A.	SYSTEMS, EQUIPMENT AND COMPONENTS
+
+3.A.Note 1.	The status of equipment and components described in 3.A., other than those described in 3.A.1.a.3. to 3.A.1.a.10., or 3.A.1.a.12. to 3.A.1.a.14., which are specially designed for or which have the same functional characteristics as other equipment is determined by the status of the other equipment.
+3.A.Note 2.	The status of integrated circuits described in 3.A.1.a.3. to 3.A.1.a.9., or 3.A.1.a.12. to 3.A.1.a.14., which are unalterably programmed or designed for a specific function for another equipment is determined by the status of the other equipment.
+3.A.Note 2.N.B.	When the manufacturer or applicant cannot determine the status of the other equipment, the status of the integrated circuits is determined in 3.A.1.a.3. to 3.A.1.a.9., and 3.A.1.a.12. to 3.A.1.a.14.
+3.A.Note 3.	The status of wafers (finished or unfinished), in which the function has been determined, is to be evaluated against the parameters of 3.A.1.a., 3.A.1.b., 3.a.1.d., 3.A.1.e.4., 3.A.1.g., 3.A.1.h., or 3.A.1.i.
+
+3.A.1.	Electronic items as follows:
+3.A.1.a.	General purpose integrated circuits, as follows:
+3.A.1.a.Note.	Integrated circuits include the following types:
+3.A.1.a.Note.	- "Monolithic integrated circuits";
+3.A.1.a.Note.	- "Hybrid integrated circuits";
+3.A.1.a.Note.	- "Multichip integrated circuits";
+3.A.1.a.Note.	- "Film type integrated circuits", including silicon-on-sapphire integrated circuits; 
+3.A.1.a.Note.	- "Optical integrated circuits";
+3.A.1.a.Note.	- "Three dimensional integrated circuits";
+3.A.1.a.Note.	- "Monolithic Microwave Integrated Circuits" ("MMICs").
+
+3.A.1.a.1.	Integrated circuits designed or rated as radiation hardened to withstand any of the following:
+3.A.1.a.1.a.	A total dose of 5 x 10³ Gy (Si) or higher;
+3.A.1.a.1.b.	A dose rate upset of 5 x $10^6$ Gy (Si)/s or higher; or
+3.A.1.a.1.c.	A fluence (integrated flux) of neutrons (1 MeV equivalent) of 5 x $10^{13}$ n/cm2 or higher on silicon, or its equivalent for other materials;
+3.A.1.a.1.c.Note.	3.A.1.a.1.c. does not apply to Metal Insulator Semiconductors (MIS).
+3.A.1.a.2.	"Microprocessor microcircuits", "microcomputer microcircuits", microcontroller microcircuits, storage integrated circuits manufactured from a compound semiconductor, analogue-to-digital converters, integrated circuits that contain analogue-to-digital converters and store or process the digitized data, digital-to-analogue converters, electro-optical or "optical integrated circuits" designed for "signal processing", field programmable logic devices, custom integrated circuits for which either the function is unknown or the status of the equipment in which the integrated circuit will be used is unknown, Fast Fourier Transform (FFT) processors, Static Random-Access Memories (SRAMs) or 'non- volatile memories', having any of the following:
+
+3.A.1.a.2.Technical Note.	'Non-volatile memories' are memories with data retention over a period of time after a power shutdown.
+
+3.A.1.a.2.a.	Rated for operation at an ambient temperature above 398 K (+125°C);
+3.A.1.a.2.b.	Rated for operation at an ambient temperature below 218 K (-55°C); or 
+3.A.1.a.2.c.	Rated for operation over the entire ambient temperature range from 218 K (-55°C) to 398 K (+125°C);
+3.A.1.a.2.Note.	3.A.1.a.2. does not apply to integrated circuits designed for civil automobile or railway train applications.
+
+3.A.1.a.3.	"Microprocessor microcircuits", "microcomputer microcircuits" and microcontroller microcircuits, manufactured from a compound semiconductor and operating at a clock frequency exceeding 40 MHz;
+3.A.1.a.3.Note.	3.A.1.a.3. includes digital signal processors, digital array processors and digital coprocessors.
+
+3.A.1.a.4.	Not used since 2010
+
+3.A.1.a.5.	Analogue-to-Digital Converter (ADC) and Digital-to-Analogue Converter (DAC) integrated circuits, as follows:
+3.A.1.a.5.a.	ADCs having any of the following:
+3.A.1.a.5.a.1.	A resolution of 8 bit or more, but less than 10 bit, with a "sample rate" greater than 1.3 Giga Samples Per Second (GSPS); 
+3.A.1.a.5.a.2.	A resolution of 10 bit or more, but less than 12 bit, with a "sample rate" greater than 600 Mega Samples Per Second (MSPS); 
+3.A.1.a.5.a.3.	A resolution of 12 bit or more, but less than 14 bit, with a "sample rate" greater than 400 MSPS;
+3.A.1.a.5.a.4.	A resolution of 14 bit or more, but less than 16 bit, with a "sample rate" greater than 250 MSPS; or
+3.A.1.a.5.a.5.	A resolution of 16 bit or more with a "sample rate" greater than 65 MSPS; 
+3.A.1.a.5.a.N.B.	For integrated circuits that contain analogue-to-digital converters and store or process the digitized data, see 3.A.1.a.14.
+
+3.A.1.a.5.a.Technical Notes.1.	A resolution of n bit corresponds to a quantisation of 2n levels.
+3.A.1.a.5.a.Technical Notes.2.	The resolution of the ADC is the number of bits of the digital output that represents the measured analogue input.  Effective Number of Bits (ENOB) is not used to determine the resolution of the ADC.
+3.A.1.a.5.a.Technical Notes.3.	For "multiple channel ADCs", the "sample rate" is not aggregated and the "sample rate" is the maximum rate of any single channel.
+3.A.1.a.5.a.Technical Notes.4.	For "interleaved ADCs" or for "multiple channel ADCs" that are specified to have an interleaved mode of operation, the "sample rates" are aggregated and the "sample rate" is the maximum combined total rate of all of the interleaved channels.
+
+3.A.1.a.5.b.	Digital-to-Analogue Converters (DAC) having any of the following:
+3.A.1.a.5.b.1.	A resolution of 10 bit or more but less than 12 bit, with an 'adjusted update rate' exceeding 3,500 MSPS; or
+3.A.1.a.5.b.2.	A resolution of 12 bit or more and having any of the following:
+3.A.1.a.5.b.2.a.	An 'adjusted update rate' exceeding 1,250 MSPS but not exceeding 3,500 MSPS, and having any of the following:
+3.A.1.a.5.b.2.a.1.	A settling time less than 9 ns to arrive at or within 0.024% of full scale from a full scale step; or
+3.A.1.a.5.b.2.a.2.	A 'Spurious Free Dynamic Range' (SFDR) greater than 68 dBc (carrier) when synthesising a full scale analogue signal of 100 MHz or the highest full scale analogue signal frequency specified below 100 MHz; or
+3.A.1.a.5.b.2.b.	An 'adjusted update rate' exceeding 3,500 MSPS;
+
+3.A.1.a.5.b.Technical Notes.1.	'Spurious Free Dynamic Range' (SFDR) is defined as the ratio of the RMS value of the carrier frequency (maximum signal component) at the input of the DAC to the RMS value of the next largest noise or harmonic distortion component at its output.
+3.A.1.a.5.b.Technical Notes.2.	SFDR is determined directly from the specification table or from the characterisation plots of SFDR versus frequency.
+3.A.1.a.5.b.Technical Notes.3.	A signal is defined to be full scale when its amplitude is greater than -3 dBfs (full scale).
+3.A.1.a.5.b.Technical Notes.4.	'Adjusted update rate' for DACs:
+3.A.1.a.5.b.Technical Notes.4.a.	For conventional (non-interpolating) DACs, the 'adjusted update rate' is the rate at which the digital signal is converted to an analogue signal and the output analogue values are changed by the DAC.  For DACs where the interpolation mode may be bypassed (interpolation factor of one), the DAC should be considered as a conventional (non-interpolating) DAC.
+3.A.1.a.5.b.Technical Notes.4.b.	For interpolating DACs (oversampling DACs), the 'adjusted update rate' is defined as the DAC update rate divided by the smallest interpolating factor. For interpolating DACs, the 'adjusted update rate' may be referred to by different terms including:
+3.A.1.a.5.b.Technical Notes.4.b.	• input data rate
+3.A.1.a.5.b.Technical Notes.4.b.	• input word rate
+3.A.1.a.5.b.Technical Notes.4.b.	• input sample rate
+3.A.1.a.5.b.Technical Notes.4.b.	• maximum total input bus rate
+3.A.1.a.5.b.Technical Notes.4.b.	• maximum DAC clock rate for DAC clock input.
+
+3.A.1.a.6.	Electro-optical and "optical integrated circuits", designed for "signal processing" and having all of the following:
+3.A.1.a.6.a.	One or more than one internal "laser" diode;
+3.A.1.a.6.b.	One or more than one internal light detecting element; and
+3.A.1.a.6.c.	Optical waveguides;
+
+3.A.1.a.7.	Field programmable logic devices having any of the following:
+3.A.1.a.7.a.	A maximum number of single-ended digital input/outputs of greater than 700; or
+3.A.1.a.7.b.	An 'aggregate one-way peak serial transceiver data rate' of 500 Gb/s or greater;
+3.A.1.a.7.Note.	3.A.1.a.7. includes:
+3.A.1.a.7.Note.	- Complex Programmable Logic Devices (CPLDs)
+3.A.1.a.7.Note.	- Field Programmable Gate Arrays (FPGAs)
+3.A.1.a.7.Note.	- Field Programmable Logic Arrays (FPLAs)
+3.A.1.a.7.Note.	- Field Programmable Interconnects (FPICs)
+3.A.1.a.7.N.B.	For integrated circuits having field programmable logic devices that are combined with an analogue-to-digital converter, see 3.A.1.a.14.
+
+
+3.A.1.a.7.Technical Notes.1.	Maximum number of digital input/outputs in 3.A.1.a.7.a. is also referred to as maximum user input/outputs or maximum available input/ outputs, whether the integrated circuit is packaged or bare die.
+3.A.1.a.7.Technical Notes.2.	'Aggregate one-way peak serial transceiver data rate' is the product of the peak serial one-way transceiver data rate times the number of transceivers on the FPGA.
+
+3.A.1.a.8.	Not used since 1999
+
+3.A.1.a.9.	Neural network integrated circuits;
+
+3.A.1.a.10.	Custom integrated circuits for which the function is unknown, or the status of the equipment in which the integrated circuits will be used is unknown to the manufacturer, having any of the following:
+3.A.1.a.10.a.	More than 1,500 terminals;
+3.A.1.a.10.b.	A typical "basic gate propagation delay time" of less than 0.02 ns; or 
+3.A.1.a.10.c.	An operating frequency exceeding 3 GHz;
+
+3.A.1.a.11.	Digital integrated circuits, other than those described in 3.A.1.a.3. to 3.A.1.a.10. and 3.A.1.a.12., based upon any compound semiconductor and having any of the following:
+3.A.1.a.11.a.	An equivalent gate count of more than 3,000 (2 input gates); or
+3.A.1.a.11.b.	A toggle frequency exceeding 1.2 GHz;
+
+3.A.1.a.12.	Fast Fourier Transform (FFT) processors having a rated execution time for an N-point complex FFT of less than (N log$_2$ N)/20,480 ms, where N is the number of points;
+
+3.A.1.a.12.Technical Note.	When N is equal to 1,024 points, the formula in 3.A.1.a.12. gives an execution time of 500 μs.
+
+3.A.1.a.13.	Direct Digital Synthesiser (DDS) integrated circuits having any of the following:
+3.A.1.a.13.a.	A Digital-to-Analogue Converter (DAC) clock frequency of 3.5 GHz or more and a DAC resolution of 10 bit or more, but less than 12 bit; or
+3.A.1.a.13.b.	A DAC clock frequency of 1.25 GHz or more and a DAC resolution of 12 bit or more;
+
+3.A.1.a.13.Technical Note.	The DAC clock frequency may be specified as the master clock frequency or the input clock frequency.
+
+3.A.1.a.14.	Integrated circuits that perform or are programmable to perform all of the following:
+3.A.1.a.14.a.	Analogue-to-digital conversions meeting any of the following:
+3.A.1.a.14.a.1.	A resolution of 8 bit or more, but less than 10 bit, with a "sample rate" greater than 1.3 Giga Samples Per Second (GSPS);
+3.A.1.a.14.a.2.	A resolution of 10 bit or more, but less than 12 bit, with a "sample rate" greater than 1.0 GSPS; 
+3.A.1.a.14.a.3.	A resolution of 12 bit or more, but less than 14 bit, with a "sample rate" greater than 1.0 GSPS;
+3.A.1.a.14.a.4.	A resolution of 14 bit or more, but less than 16 bit, with a "sample rate" greater than 400 Mega Samples Per Second (MSPS); or
+3.A.1.a.14.a.5.	A resolution of 16 bit or more with a "sample rate" greater than 180 MSPS; and
+3.A.1.a.14.b.	Any of the following:
+3.A.1.a.14.b.1.	Storage of digitized data; or 
+3.A.1.a.14.b.2.	Processing of digitized data.
+3.A.1.a.14.N.B.1.	For analogue-to-digital converter integrated circuits see 3.A.1.a.5.a.
+3.A.1.a.14.N.B.2.	For field programmable logic devices see 3.A.1.a.7.
+
+3.A.1.a.14.Technical Notes.1.	A resolution of n bit corresponds to a quantisation of 2$^n$ levels.
+3.A.1.a.14.Technical Notes.2.	The resolution of the ADC is the number of bits of the digital output of the ADC that represents the measured analogue input.  Effective Number of Bits (ENOB) is not used to determine the resolution of the ADC.
+3.A.1.a.14.Technical Notes.3.	For integrated circuits with non-interleaving "multiple channel ADCs", the "sample rate" is not aggregated and the "sample rate" is the maximum rate of any single channel.
+3.A.1.a.14.Technical Notes.4.	For integrated circuits with "interleaved ADCs" or with "multiple channel ADCs" that are specified to have an interleaved mode of operation, the "sample rates" are aggregated and the "sample rate" is the maximum combined total rate of all of the interleaved channels.
+3.A.1.b.	Microwave or millimetre wave items, as follows:
+
+3.A.1.b.Technical Note.	For purposes of 3.A.1.b., the parameter peak saturated power output may also be referred to on product data sheets as output power, saturated power output, maximum power output, peak power output, or peak envelope power output.
+3.A.1.b.1.	"Vacuum electronic devices" and cathodes, as follows:
+3.A.1.b.1.Note 1.	3.A.1.b.1. does not apply to "vacuum electronic devices" designed or rated for operation in any frequency bands and having all of the following:
+3.A.1.b.1.Note 1.a.	Does not exceed 31.8 GHz; and
+3.A.1.b.1.Note 1.b.	Is "allocated by the ITU" for radio-communications services, but not for radio-determination.
+3.A.1.b.1.Note 2.	3.A.1.b.1. does not apply to non-"space-qualified" "vacuum electronic devices" having all of the following:
+3.A.1.b.1.Note 2.a.	An average output power equal to or less than 50 W; and
+3.A.1.b.1.Note 2.b.	Designed or rated for operation in any frequency band and having all of the following:
+3.A.1.b.1.Note 2.b.1.	Exceeds 31.8 GHz but does not exceed 43.5 GHz; and
+3.A.1.b.1.Note 2.b.2.	Is "allocated by the ITU" for radio-communications services, but not for radio-determination.
+3.A.1.b.1.a.	Travelling-wave "vacuum electronic devices", pulsed or continuous wave, as follows:
+3.A.1.b.1.a.1.	Devices operating at frequencies exceeding 31.8 GHz;
+3.A.1.b.1.a.2.	Devices having a cathode heater with a turn on time to rated RF power of less than 3 seconds;
+3.A.1.b.1.a.3.	Coupled cavity devices, or derivatives thereof, with a "fractional bandwidth" of more than 7% or a peak power exceeding 2.5 kW;
+3.A.1.b.1.a.4.	Devices based on helix, folded waveguide, or serpentine waveguide circuits, or derivatives thereof, having any of the following:
+3.A.1.b.1.a.4.a.	An "instantaneous bandwidth" of more than one octave, and average power (expressed in kW) times frequency (expressed in GHz) of more than 0.5;
+3.A.1.b.1.a.4.b.	An "instantaneous bandwidth" of one octave or less, and average power (expressed in kW) times frequency (expressed in GHz) of more than 1;
+3.A.1.b.1.a.4.c.	Being "space-qualified"; or
+3.A.1.b.1.a.4.d.	Having a gridded electron gun;
+3.A.1.b.1.a.5.	Devices with a "fractional bandwidth" greater than or equal to 10%, with any of the following:
+3.A.1.b.1.a.5.a.	An annular electron beam;
+3.A.1.b.1.a.5.b.	A non-axisymmetric electron beam; or
+3.A.1.b.1.a.5.c.	Multiple electron beams;
+
+3.A.1.b.1.b.	Crossed-field amplifier "vacuum electronic devices" with a gain of more than 17 dB;
+3.A.1.b.1.c.	Thermionic cathodes designed for "vacuum electronic devices" producing an emission current density at rated operating conditions exceeding 5 A/cm² or a pulsed (non-continuous) current density at rated operating conditions exceeding 10 A/cm2;
+3.A.1.b.1.d.	"Vacuum electronic devices" with the capability to operate in a 'dual mode'.
+
+3.A.1.b.1.d.Technical Note.	'Dual mode' means the "vacuum electronic device" beam current can be intentionally changed between continuous-wave and pulsed mode operation by use of a grid and produces a peak pulse output power greater than the continuous-wave output power.
+
+3.A.1.b.2.	"Monolithic Microwave Integrated Circuit" ("MMIC") amplifiers that are any of the following:
+3.A.1.b.2.N.B.	For "MMIC" amplifiers that have an integrated phase shifter see 3.A.1.b.12.
+3.A.1.b.2.a.	Rated for operation at frequencies exceeding 2.7 GHz up to and including 6.8 GHz with a "fractional bandwidth" greater than 15%, and having any of the following:
+3.A.1.b.2.a.1.	A peak saturated power output greater than 75 W (48.75 dBm) at any frequency exceeding 2.7 GHz up to and including 2.9 GHz;
+3.A.1.b.2.a.2.	A peak saturated power output greater than 55 W (47.4 dBm) at any frequency exceeding 2.9 GHz up to and including 3.2 GHz; 
+3.A.1.b.2.a.3.	A peak saturated power output greater than 40 W (46 dBm) at any frequency exceeding 3.2 GHz up to and including 3.7 GHz; or
+3.A.1.b.2.a.4.	A peak saturated power output greater than 20 W (43 dBm) at any frequency exceeding 3.7 GHz up to and including 6.8 GHz; 
+3.A.1.b.2.b.	Rated for operation at frequencies exceeding 6.8 GHz up to and including 16 GHz with a "fractional bandwidth" greater than 10%, and having any of the following:
+3.A.1.b.2.b.1.	A peak saturated power output greater than 10 W (40 dBm) at any frequency exceeding 6.8 GHz up to and including 8.5 GHz; or
+3.A.1.b.2.b.2.	A peak saturated power output greater than 5 W (37 dBm) at any frequency exceeding 8.5 GHz up to and including 16 GHz; 
+3.A.1.b.2.c.	Rated for operation with a peak saturated power output greater than 3 W (34.77 dBm) at any frequency exceeding 16 GHz up to and including 31.8 GHz, and with a "fractional bandwidth" of greater than 10%;
+3.A.1.b.2.d.	Rated for operation with a peak saturated power output greater than 0.1n W (-70 dBm) at any frequency exceeding 31.8 GHz up to and including 37 GHz; 
+
+3.A.1.b.2.e.	Rated for operation with a peak saturated power output greater than 1 W (30 dBm) at any frequency exceeding 37 GHz up to and including 43.5 GHz, and with a "fractional bandwidth" of greater than 10%;
+3.A.1.b.2.f.	Rated for operation with a peak saturated power output greater than 31.62 mW (15 dBm) at any frequency exceeding 43.5 GHz up to and including 75 GHz, and with a "fractional bandwidth" of greater than 10%;
+3.A.1.b.2.g.	Rated for operation with a peak saturated power output greater than 10 mW (10 dBm) at any frequency exceeding 75 GHz up to and including 90 GHz, and with a "fractional bandwidth" of greater than 5%; or
+3.A.1.b.2.h.	Rated for operation with a peak saturated power output greater than 0.1 nW (-70 dBm) at any frequency exceeding 90 GHz; 
+
+3.A.1.b.2.Note 1.	Not used since 2010
+3.A.1.b.2.Note 2.	The status of the "MMIC" whose rated operating frequency includes frequencies listed in more than one frequency range, as defined by 3.A.1.b.2.a. through 3.A.1.b.2.h., is determined by the lowest peak saturated power output threshold.
+3.A.1.b.2.Note 3.	Notes 1 and 2 in 3.A. mean that 3.A.1.b.2. does not apply to "MMICs" if they are specially designed for other applications, e.g., telecommunications, radar, automobiles.
+
+3.A.1.b.3.	Discrete microwave transistors that are any of the following:
+3.A.1.b.3.a.	Rated for operation at frequencies exceeding 2.7 GHz up to and including 6.8 GHz and having any of the following:
+3.A.1.b.3.a.1.	A peak saturated power output greater than 400 W (56 dBm) at any frequency exceeding 2.7 GHz up to and including 2.9 GHz;
+3.A.1.b.3.a.2.	A peak saturated power output greater than 205 W (53.12 dBm) at any frequency exceeding 2.9 GHz up to and including 3.2 GHz;
+3.A.1.b.3.a.3.	A peak saturated power output greater than 115 W (50.61 dBm) at any frequency exceeding 3.2 GHz up to and including 3.7 GHz; or
+3.A.1.b.3.a.4.	A peak saturated power output greater than 60 W (47.78 dBm) at any frequency exceeding 3.7 GHz up to and including 6.8 GHz;
+3.A.1.b.3.b.	Rated for operation at frequencies exceeding 6.8 GHz up to and including 31.8 GHz and having any of the following:
+3.A.1.b.3.b.1.	A peak saturated power output greater than 50 W (47 dBm) at any frequency exceeding 6.8 GHz up to and including 8.5 GHz;
+3.A.1.b.3.b.2.	A peak saturated power output greater than 15 W (41.76 dBm) at any frequency exceeding 8.5 GHz up to and including 12 GHz;
+3.A.1.b.3.b.3.	A peak saturated power output greater than 40 W (46 dBm) at any frequency exceeding 12 GHz up to and including 16 GHz; or
+3.A.1.b.3.b.4.	A peak saturated power output greater than 7 W (38.45 dBm) at any frequency exceeding 16 GHz up to and including 31.8 GHz;
+
+3.A.1.b.3.c.	Rated for operation with a peak saturated power output greater than 0.5 W (27 dBm) at any frequency exceeding 31.8 GHz up to and including 37 GHz;
+3.A.1.b.3.d.	Rated for operation with a peak saturated power output greater than 1 W (30 dBm) at any frequency exceeding 37 GHz up to and including 43.5 GHz;
+3.A.1.b.3.e.	Rated for operation with a peak saturated power output greater than 0.1 nW (-70 dBm) at any frequency exceeding 43.5 GHz; or
+3.A.1.b.3.f.	Other than those specified by 3.A.1.b.3.a. to 3.A.1.b.3.e. and rated for operation with a peak saturated power output greater than 5 W (37.0 dBm) at all frequencies exceeding 8.5 GHz up to and including 31.8 GHz;
+3.A.1.b.3.Note 1.	The status of a transistor in 3.A.1.b.3.a. through 3.A.1.b.3.e. whose rated operating frequency includes frequencies listed in more than one frequency range, as defined by 3.A.1.b.3.a. through 3.A.1.b.3.e., is determined by the lowest peak saturated power output threshold.
+3.A.1.b.3.Note 2.	3.A.1.b.3. includes bare dice, dice mounted on carriers, or dice mounted in packages. Some discrete transistors may also be referred to as power amplifiers, but the status of these discrete transistors is determined by 3.A.1.b.3.
+
+3.A.1.b.4.	Microwave solid state amplifiers and microwave assemblies/modules containing microwave solid state amplifiers, that are any of the following: 
+3.A.1.b.4.a.	Rated for operation at frequencies exceeding 2.7 GHz up to and including 6.8 GHz with a "fractional bandwidth" greater than 15%, and having any of the following:
+3.A.1.b.4.a.1.	A peak saturated power output greater than 500 W (57 dBm) at any frequency exceeding 2.7 GHz up to and including 2.9 GHz;
+3.A.1.b.4.a.2.	A peak saturated power output greater than 270 W (54.3 dBm) at any frequency exceeding 2.9 GHz up to and including 3.2 GHz;
+3.A.1.b.4.a.3.	A peak saturated power output greater than 200 W (53 dBm) at any frequency exceeding 3.2 GHz up to and including 3.7 GHz; or
+3.A.1.b.4.a.4.	A peak saturated power output greater than 90 W (49.54 dBm) at any frequency exceeding 3.7 GHz up to and including 6.8 GHz;
+3.A.1.b.4.b.	Rated for operation at frequencies greater than 6.8 GHz up to and including 31.8 GHz with a "fractional bandwidth" greater than 10%, and having any of the following:
+3.A.1.b.4.b.1.	A peak saturated power output greater than 70 W (48.54 dBm) at any frequency exceeding 6.8 GHz up to and including 8.5 GHz;
+3.A.1.b.4.b.2.	A peak saturated power output greater than 50 W (47 dBm) at any frequency exceeding 8.5 GHz up to and including 12 GHz;
+3.A.1.b.4.b.3.	A peak saturated power output greater than 30 W (44.77 dBm) at any frequency exceeding 12 GHz up to and including 16 GHz; or
+
+3.A.1.b.4.b.4.	A peak saturated power output greater than 20 W (43 dBm) at any frequency exceeding 16 GHz up to and including 31.8 GHz; 
+
+3.A.1.b.4.c.	Rated for operation with a peak saturated power output greater than 0.5 W (27 dBm) at any frequency exceeding 31.8 GHz up to and including 37 GHz;
+3.A.1.b.4.d.	Rated for operation with a peak saturated power output greater than 2 W (33 dBm) at any frequency exceeding 37 GHz up to and including 43.5 GHz, and with a "fractional bandwidth" of greater than 10%;
+3.A.1.b.4.e.	Rated for operation at frequencies exceeding 43.5 GHz and having any of the following:
+3.A.1.b.4.e.1.	A peak saturated power output greater than 0.2 W (23 dBm) at any frequency exceeding 43.5 GHz up to and including 75 GHz, and with a "fractional bandwidth" of greater than 10%;
+3.A.1.b.4.e.2.	A peak saturated power output greater than 20 mW (13 dBm) at any frequency exceeding 75 GHz up to and including 90 GHz, and with a "fractional bandwidth" of greater than 5%; or
+3.A.1.b.4.e.3.	A peak saturated power output greater than 0.1 nW (-70 dBm) at any frequency exceeding 90 GHz; or
+
+3.A.1.b.4.f.	Not used since 2016
+3.A.1.b.4.f.N.B.1.	For "MMIC" amplifiers see 3.A.1.b.2.
+3.A.1.b.4.f.N.B.2.	For 'transmit/receive modules' and 'transmit modules' see 3.A.1.b.12.
+3.A.1.b.4.f.N.B.3.	For converters and harmonic mixers, designed to extend the operating or frequency range of signal analysers, signal generators, network analysers or microwave test receivers, see 3.A.1.b.7.
+3.A.1.b.4.f.Note 1.	Not used since 2010
+3.A.1.b.4.f.Note 2.	The status of an item whose rated operating frequency includes frequencies listed in more than one frequency range, as defined by 3.A.1.b.4.a. through 3.A.1.b.4.e., is determined by the lowest peak saturated power output threshold.
+
+3.A.1.b.5.	Electronically or magnetically tunable band-pass or band-stop filters, having more than 5 tunable resonators capable of tuning across a 1.5:1 frequency band (fmax/fmin) in less than 10 µs and having any of the following:
+3.A.1.b.5.a.	A band-pass bandwidth of more than 0.5% of centre frequency; or
+3.A.1.b.5.b.	A band-stop bandwidth of less than 0.5% of centre frequency;
+
+3.A.1.b.6.	Not used since 2003
+
+3.A.1.b.7.	Converters and harmonic mixers, that are any of the following:
+3.A.1.b.7.a.	Designed to extend the frequency range of "signal analysers" beyond 90 GHz; 
+
+3.A.1.b.7.b.	Designed to extend the operating range of signal generators as follows:
+3.A.1.b.7.b.1.	Beyond 90 GHz;
+3.A.1.b.7.b.2.	To an output power greater than 100 mW (20 dBm) anywhere within the frequency range exceeding 43.5 GHz but not exceeding 90 GHz; 
+3.A.1.b.7.c.	Designed to extend the operating range of network analysers as follows: 
+3.A.1.b.7.c.1.	Beyond 110 GHz;
+3.A.1.b.7.c.2.	To an output power greater than 31.62 mW (15 dBm) anywhere within the frequency range exceeding 43.5 GHz but not exceeding 90 GHz;
+3.A.1.b.7.c.3.	To an output power greater than 1 mW (0 dBm) anywhere within the frequency range exceeding 90 GHz but not exceeding 110 GHz; or
+
+3.A.1.b.7.d.	Designed to extend the frequency range of microwave test receivers beyond 110 GHz.
+
+3.A.1.b.8.	Microwave power amplifiers containing "vacuum electronic devices" specified by 3.A.1.b.1. and having all of the following:
+3.A.1.b.8.a.	Operating frequencies above 3 GHz;
+3.A.1.b.8.b.	An average output power to mass ratio exceeding 80 W/kg; and
+3.A.1.b.8.c.	A volume of less than 400 cm3;
+3.A.1.b.8.Note.	3.A.1.b.8. does not apply to equipment designed or rated for operation in any frequency band which is "allocated by the ITU" for radio-communications services, but not for radio-determination.
+
+3.A.1.b.9.	Microwave Power Modules (MPMs) consisting of, at least, a travelling-wave "vacuum electronic device", a "Monolithic Microwave Integrated Circuit" ("MMIC") and an integrated electronic power conditioner and having all of the following:
+3.A.1.b.9.a.	A 'turn-on time' from off to fully operational in less than 10 seconds;
+3.A.1.b.9.b.	A volume less than the maximum rated power in Watts multiplied by 10 cm3/W; and
+3.A.1.b.9.c.	An "instantaneous bandwidth" greater than 1 octave  (fmax. > 2fmin,) and having any of the following:
+3.A.1.b.9.c.1.	For frequencies equal to or less than 18 GHz, an RF output power greater than 100 W; or
+3.A.1.b.9.c.2.	A frequency greater than 18 GHz;
+
+3.A.1.b.9.Technical Notes.1.	To calculate the volume in 3.A.1.b.9.b., the following example is provided: for a maximum rated power of 20 W, the volume would be: 20 W x 10 cm3/W = 200 cm3.
+3.A.1.b.9.Technical Notes.2.	The 'turn-on time' in 3.A.1.b.9.a. refers to the time from fully-off to fully operational, i.e., it includes the warm-up time of the MPM.
+
+3.A.1.b.10.	Oscillators or oscillator assemblies, specified to operate with a single sideband (SSB) phase noise, in dBc/Hz, less (better) than -(126 + 20log10F - 20log10f) anywhere within the range of 10 Hz ≤ F ≤ 10 kHz;
+
+3.A.1.b.10.Technical Note.	In 3.A.1.b.10., F is the offset from the operating frequency in Hz and f is the operating frequency in MHz.
+
+3.A.1.b.11.	'Frequency synthesiser' "electronic assemblies" having a "frequency switching time" as specified by any of the following:
+3.A.1.b.11.a.	Less than 143 ps; 
+3.A.1.b.11.b.	Less than 100 µs for any frequency change exceeding 2.2 GHz within the synthesised frequency range exceeding 4.8 GHz but not exceeding 31.8 GHz; 
+3.A.1.b.11.c.	Not used since 2016
+3.A.1.b.11.d.	Less than 500 µs for any frequency change exceeding 550 MHz within the synthesised frequency range exceeding 31.8 GHz but not exceeding 37 GHz;
+3.A.1.b.11.e.	Less than 100 µs for any frequency change exceeding 2.2 GHz within the synthesised frequency range exceeding 37 GHz but not exceeding 90 GHz; or
+3.A.1.b.11.f.	Not used since 2016
+3.A.1.b.11.g.	Less than 1 ms within the synthesised frequency range exceeding 90 GHz;
+
+3.A.1.b.11.Technical Note.	A 'frequency synthesiser' is any kind of frequency source, regardless of the actual technique used, providing a multiplicity of simultaneous or alternative output frequencies, from one or more outputs, controlled by, derived from or disciplined by a lesser number of standard (or master) frequencies.
+3.A.1.b.11.N.B.	For general purpose "signal analysers", signal generators, network analysers and microwave test receivers, see 3.A.2.c., 3.A.2.d., 3.A.2.e. and 3.A.2.f., respectively.
+
+3.A.1.b.12.	'Transmit/receive modules', 'transmit/receive MMICs', 'transmit modules', and 'transmit MMICs', rated for operation at frequencies above 2.7 GHz and having all of the following:
+3.A.1.b.12.a.	A peak saturated power output (in watts), Psat, greater than 505.62 divided by the maximum operating frequency (in GHz) squared [Psat>505.62 W*GHz2/fGHz2] for any channel;
+3.A.1.b.12.b.	A "fractional bandwidth" of 5% or greater for any channel;
+3.A.1.b.12.c.	Any planar side with length d (in cm) equal to or less than 15 divided by the lowest operating frequency in GHz [d ≤ 15cm*GHz*N/fGHz] where N is the number of transmit or transmit/receive channels; and
+3.A.1.b.12.d.	An electronically variable phase shifter per channel. 
+
+3.A.1.b.12.Technical Notes.
+3.A.1.b.12.Technical Notes.1.	A 'transmit/receive module': is a multifunction "electronic assembly" that provides bi-directional amplitude and phase control for transmission and reception of signals.
+3.A.1.b.12.Technical Notes.2.	A 'transmit module': is an "electronic assembly" that provides amplitude and phase control for transmission of signals. 
+3.A.1.b.12.Technical Notes.3.	A 'transmit/receive MMIC': is a multifunction "MMIC" that provides bi-directional amplitude and phase control for transmission and reception of signals. 
+3.A.1.b.12.Technical Notes.4.	A 'transmit MMIC': is a "MMIC" that provides amplitude and phase control for transmission of signals.
+3.A.1.b.12.Technical Notes.5.	2.7 GHz should be used as the lowest operating frequency (fGHz) in the formula in 3.A.1.b.12.c. for transmit/receive or transmit modules that have a rated operation range extending downward to 2.7 GHz and below [d≤15cm*GHz*N/2.7 GHz].
+3.A.1.b.12.Technical Notes.6.	3.A.1.b.12. applies to 'transmit/receive modules' or 'transmit modules' with or without a heat sink.  The value of d in 3.A.1.b.12.c. does not include any portion of the 'transmit/receive module' or 'transmit module' that functions as a heat sink.
+3.A.1.b.12.Technical Notes.7.	'Transmit/receive modules', or 'transmit modules', or 'transmit/receive MMICs' or 'transmit MMICs' may or may not have N integrated radiating antenna elements where N is the number of transmit or transmit/receive channels.
+
+3.A.1.c.	Acoustic wave devices as follows and specially designed components therefor:
+3.A.1.c.1.	Surface acoustic wave and surface skimming (shallow bulk) acoustic wave devices, having any of the following:
+3.A.1.c.1.a.	A carrier frequency exceeding 6 GHz;
+3.A.1.c.1.b.	A carrier frequency exceeding 1 GHz, but not exceeding 6 GHz and having any of the following:
+3.A.1.c.1.b.1.	A 'frequency side-lobe rejection' exceeding 65 dB;
+3.A.1.c.1.b.2.	A product of the maximum delay time and the bandwidth (time in µs and bandwidth in MHz) of more than 100;
+3.A.1.c.1.b.3.	A bandwidth greater than 250 MHz; or
+3.A.1.c.1.b.4.	A dispersive delay of more than 10 µs; or
+3.A.1.c.1.c.	A carrier frequency of 1 GHz or less and having any of the following:
+3.A.1.c.1.c.1.	A product of the maximum delay time and the bandwidth (time in µs and bandwidth in MHz) of more than 100;
+3.A.1.c.1.c.2.	A dispersive delay of more than 10 µs; or
+3.A.1.c.1.c.3.	A 'frequency side-lobe rejection' exceeding 65 dB and a bandwidth greater than 100 MHz;
+
+3.A.1.c.1.Technical Note.	'Frequency side-lobe rejection' is the maximum rejection value specified in data sheet.
+
+3.A.1.c.2.	Bulk (volume) acoustic wave devices which permit the direct processing of signals at frequencies exceeding 6 GHz; 
+
+3.A.1.c.3.	Acoustic-optic "signal processing" devices employing interaction between acoustic waves (bulk wave or surface wave) and light waves which permit the direct processing of signals or images, including spectral analysis, correlation or convolution;
+3.A.1.c.Note.	3.A.1.c. does not apply to acoustic wave devices that are limited to a single band pass, low pass, high pass or notch filtering, or resonating function.
+
+3.A.1.d.	Electronic devices and circuits containing components, manufactured from "superconductive" materials, specially designed for operation at temperatures below the "critical temperature" of at least one of the "superconductive" constituents and having any of the following:
+3.A.1.d.1.	Current switching for digital circuits using "superconductive" gates with a product of delay time per gate (in seconds) and power dissipation per gate (in watts) of less than 10-14 J; or
+3.A.1.d.2.	Frequency selection at all frequencies using resonant circuits with Q‑values exceeding 10,000;
+
+3.A.1.e.	High energy devices as follows:
+3.A.1.e.1.	'Cells' as follows:
+3.A.1.e.1.a.	'Primary cells' having any of the following at 20oC:
+3.A.1.e.1.a.1.	'Energy density' exceeding 550 Wh/kg and a 'continuous power density' exceeding 50 W/kg; or
+3.A.1.e.1.a.2.	'Energy density' exceeding 50 Wh/kg and a 'continuous power density' exceeding 350 W/kg;
+3.A.1.e.1.b.	'Secondary cells' having an 'energy density' exceeding 350 Wh/kg at 20°C;
+
+3.A.1.e.1.Technical Notes.1.	For the purpose of 3.A.1.e.1., 'energy density' (Wh/kg) is calculated from the nominal voltage multiplied by the nominal capacity in ampere-hours (Ah) divided by the mass in kilograms. If the nominal capacity is not stated, energy density is calculated from the nominal voltage squared then multiplied by the discharge duration in hours divided by the discharge load in Ohms and the mass in kilograms.
+3.A.1.e.1.Technical Notes.2.	For the purpose of 3.A.1.e.1., a 'cell' is defined as an electrochemical device, which has positive and negative electrodes, an electrolyte, and is a source of electrical energy.  It is the basic building block of a battery.
+3.A.1.e.1.Technical Notes.3.	For the purpose of 3.A.1.e.1.a., a 'primary cell' is a 'cell' that is not designed to be charged by any other source.
+3.A.1.e.1.Technical Notes.4.	For the purpose of 3.A.1.e.1.b., a 'secondary cell' is a 'cell' that is designed to be charged by an external electrical source.
+3.A.1.e.1.Technical Notes.5.	For the purpose of 3.A.1.e.1.a., 'continuous power density' (W/kg) is calculated from the nominal voltage multiplied by the specified maximum continuous discharge current in ampere (A) divided by the mass in kilograms.  'Continuous power density' is also referred to as specific power.
+3.A.1.e.1.Note.	3.A.1.e. does not apply to batteries, including single-cell batteries.
+
+3.A.1.e.2.	High energy storage capacitors as follows:
+3.A.1.e.2.a.	Capacitors with a repetition rate of less than 10 Hz (single shot capacitors) and having all of the following:
+3.A.1.e.2.a.1.	A voltage rating equal to or more than 5 kV;
+3.A.1.e.2.a.2.	An energy density equal to or more than 250 J/kg; and
+3.A.1.e.2.a.3.	A total energy equal to or more than 25 kJ;
+3.A.1.e.2.b.	Capacitors with a repetition rate of 10 Hz or more (repetition rated capacitors) and having all of the following:
+3.A.1.e.2.b.1.	A voltage rating equal to or more than 5 kV;
+3.A.1.e.2.b.2.	An energy density equal to or more than 50 J/kg;
+3.A.1.e.2.b.3.	A total energy equal to or more than 100 J; and
+3.A.1.e.2.b.4.	A charge/discharge cycle life equal to or more than 10,000;
+3.A.1.e.2.N.B.	See also the Munitions List.
+
+3.A.1.e.3.	"Superconductive" electromagnets and solenoids, specially designed to be fully charged or discharged in less than one second and having all of the following:
+3.A.1.e.3.Note.	3.A.1.e.3. does not apply to "superconductive" electromagnets or solenoids specially designed for Magnetic Resonance Imaging (MRI) medical equipment.
+3.A.1.e.3.a.	Energy delivered during the discharge exceeding 10 kJ in the first second;
+3.A.1.e.3.b.	Inner diameter of the current carrying windings of more than 250 mm; and 
+3.A.1.e.3.c.	Rated for a magnetic induction of more than 8 T or "overall current density" in the winding of more than 300 A/mm2;
+
+3.A.1.e.4.	Solar cells, cell-interconnect-coverglass (CIC) assemblies, solar panels, and solar arrays, which are "space-qualified", having a minimum average efficiency exceeding 20% at an operating temperature of 301 K (28°C) under simulated 'AM0' illumination with an irradiance of 1,367 Watts per square meter (W/m2);
+
+3.A.1.e.4.Technical Note.	'AM0', or 'Air Mass Zero', refers to the spectral irradiance of sun light in the earth's outer atmosphere when the distance between the earth and sun is one astronomical unit (AU).
+
+3.A.1.f.	Rotary input type absolute position encoders having an "accuracy" equal to or less (better) than 1.0 second of arc and specially designed encoder rings, discs or scales therefor;
+
+3.A.1.g.	Solid-state pulsed power switching thyristor devices and 'thyristor modules', using either electrically, optically, or electron radiation controlled switch methods and having any of the following:
+3.A.1.g.1.	A maximum turn-on current rate of rise (di/dt) greater than 30,000 A/s and off-state voltage greater than 1,100 V; or
+3.A.1.g.2.	A maximum turn-on current rate of rise (di/dt) greater than 2,000 A/s and having all of the following:
+3.A.1.g.2.a.	An off-state peak voltage equal to or greater than 3,000 V; and 
+3.A.1.g.2.b.	A peak (surge) current equal to or greater than 3,000 A;
+3.A.1.g.Note 1.	3.A.1.g. includes:
+3.A.1.g.Note 1. - Silicon Controlled Rectifiers (SCRs)
+3.A.1.g.Note 1. - Electrical Triggering Thyristors (ETTs)
+3.A.1.g.Note 1. - Light Triggering Thyristors (LTTs)
+3.A.1.g.Note 1. - Integrated Gate Commutated Thyristors (IGCTs)
+3.A.1.g.Note 1. - Gate Turn-off Thyristors (GTOs)
+3.A.1.g.Note 1. - MOS Controlled Thyristors (MCTs)
+3.A.1.g.Note 1. - Solidtrons
+3.A.1.g.Note 2.	3.A.1.g. does not apply to thyristor devices and 'thyristor modules'  incorporated into equipment designed for civil railway or "civil aircraft" applications.
+
+3.A.1.g.Technical Note.	For the purposes of 3.A.1.g., a 'thyristor module' contains one or more thyristor devices.
+
+3.A.1.h.	Solid-state power semiconductor switches, diodes, or 'modules', having all of the following:
+3.A.1.h.1.	Rated for a maximum operating junction temperature greater than 488 K (215oC);
+3.A.1.h.2.	Repetitive peak off-state voltage (blocking voltage) exceeding 300 V; and
+3.A.1.h.3.	Continuous current greater than 1 A;
+3.A.1.h.Note 1.	Repetitive peak off-state voltage in 3.A.1.h. includes drain to source voltage, collector to emitter voltage, repetitive peak reverse voltage and peak repetitive off-state blocking voltage.
+3.A.1.h.Note 2.	3.A.1.h. includes:
+3.A.1.h.Note 2.	- Junction Field Effect Transistors (JFETs)
+3.A.1.h.Note 2.	- Vertical Junction Field Effect Transistors (VJFETs)
+3.A.1.h.Note 2.	- Metal Oxide Semiconductor Field Effect Transistors (MOSFETs)
+3.A.1.h.Note 2.	- Double Diffused Metal Oxide Semiconductor Field Effect Transistor (DMOSFET)
+3.A.1.h.Note 2.	- Insulated Gate Bipolar Transistor (IGBT)
+3.A.1.h.Note 2.	- High Electron Mobility Transistors (HEMTs)
+3.A.1.h.Note 2.	- Bipolar Junction Transistors (BJTs)
+3.A.1.h.Note 2.	- Thyristors and Silicon Controlled Rectifiers (SCRs)
+3.A.1.h.Note 2.	- Gate Turn-Off Thyristors (GTOs)
+3.A.1.h.Note 2.	- Emitter Turn-Off Thyristors (ETOs)
+3.A.1.h.Note 2.	- PiN Diodes
+3.A.1.h.Note 2.	- Schottky Diodes
+3.A.1.h.Note 3.	3.A.1.h. does not apply to switches, diodes, or 'modules', incorporated into equipment designed for civil automobile, civil railway, or "civil aircraft" applications. 
+
+3.A.1.h.Technical Note.	For the purposes of 3.A.1.h., 'modules' contain one or more solid-state power semiconductor switches or diodes.
+
+3.A.1.i.	Intensity, amplitude, or phase electro-optic modulators, designed for analogue signals and having any of the following:
+3.A.1.i.1.	A maximum operating frequency of more than 10 GHz but less than 20 GHz, an optical insertion loss equal to or less than 3 dB and having any of the following: 
+3.A.1.i.1.a.	A 'half-wave voltage' ('Vπ') less than 2.7 V when measured at a frequency of 1 GHz or below; or 
+3.A.1.i.1.b.	A 'Vπ' of less than 4 V when measured at a frequency of more than 1 GHz; or 
+3.A.1.i.2.	A maximum operating frequency equal to or greater than 20 GHz, an optical insertion loss equal to or less than 3 dB and having any of the following:
+3.A.1.i.2.a.	A 'Vπ' less than 3.3 V when measured at a frequency of 1 GHz or below; or 
+3.A.1.i.2.b.	A 'Vπ' less than 5 V when measured at a frequency of more than 1 GHz.
+3.A.1.i.Note.	3.A.1.i. includes electro-optic modulators having optical input and output connectors (e.g., fibre-optic pigtails).
+
+3.A.1.i.Technical Note.	For the purposes of 3.A.1.i., a 'half-wave voltage' ('Vπ') is the applied voltage necessary to make a phase change of 180 degrees in the wavelength of light propagating through the optical modulator.
+
+3.A.2.	General purpose "electronic assemblies", modules and equipment, as follows:
+3.A.2.a.	Recording equipment and oscilloscopes, as follows:
+3.A.2.a.1.	Not used since 2013
+3.A.2.a.2.	Not used since 2013
+3.A.2.a.3.	Not used since 2013
+3.A.2.a.4.	Not used since 2013
+3.A.2.a.5.	Not used since 2015
+3.A.2.a.5.N.B.	For waveform digitizers and transient recorders, see 3.A.2.h.
+
+3.A.2.a.6.	Digital data recorders having all of the following:
+3.A.2.a.6.a.	A sustained 'continuous throughput' of more than 6.4 Gbit/s to disk or solid-state drive memory; and
+3.A.2.a.6.b.	"Signal processing" of the radio frequency signal data while it is being recorded;
+
+3.A.2.a.6.Technical Notes.1.	For recorders with a parallel bus architecture, the 'continuous throughput' rate is the highest word rate multiplied by the number of bits in a word.
+3.A.2.a.6.Technical Notes.2.	'Continuous throughput' is the fastest data rate the instrument can record to disk or solid-state drive memory without the loss of any information while sustaining the input digital data rate or digitizer conversion rate.
+
+3.A.2.a.7.	Real-time oscilloscopes having a vertical root-mean-square (rms) noise voltage of less than 2% of full-scale at the vertical scale setting that provides the lowest noise value for any input 3dB bandwidth of 60 GHz or greater per channel;
+3.A.2.a.7.Note.	3.A.2.a.7. does not apply to equivalent-time sampling oscilloscopes.
+
+3.A.2.b.	Not used since 2009
+
+3.A.2.c.	"Signal analysers" as follows:
+3.A.2.c.1.	"Signal analysers" having a 3 dB resolution bandwidth (RBW) exceeding 40 MHz anywhere within the frequency range exceeding 31.8 GHz but not exceeding 37 GHz;
+3.A.2.c.2.	"Signal analysers" having Displayed Average Noise Level (DANL) less (better) than –150 dBm/Hz anywhere within the frequency range exceeding 43.5 GHz but not exceeding 90 GHz;
+3.A.2.c.3.	"Signal analysers" having a frequency exceeding 90 GHz;
+3.A.2.c.4.	"Signal analysers" having all of the following:
+3.A.2.c.4.a.	'Real-time bandwidth' exceeding 170 MHz; and
+3.A.2.c.4.b.	Having any of the following:
+3.A.2.c.4.b.1.	100% probability of discovery, with less than a 3 dB reduction from full amplitude due to gaps or windowing effects, of signals having a duration of 15 µs or less; or
+3.A.2.c.4.b.2.	A 'frequency mask trigger' function with 100% probability of trigger (capture) for signals having a duration of 15 µs or less;
+
+3.A.2.c.4.b.Technical Notes.1.	'Real-time bandwidth' is the widest frequency range for which the analyser can continuously transform time-domain data entirely into frequency-domain results, using a Fourier or other discrete time transform that processes every incoming time point, without a reduction of measured amplitude of more than 3 dB below the actual signal amplitude caused by gaps or windowing effects, while outputting or displaying the transformed data.
+3.A.2.c.4.b.Technical Notes.2.	Probability of discovery in 3.A.2.c.4.b.1. is also referred to as probability of intercept or probability of capture.
+3.A.2.c.4.b.Technical Notes.3.	For the purposes of 3.A.2.c.4.b.1., the duration for 100% probability of discovery is equivalent to the minimum signal duration necessary for the specified level measurement uncertainty.
+3.A.2.c.4.b.Technical Notes.4.	A 'frequency mask trigger' is a mechanism where the trigger function is able to select a frequency range to be triggered on as a subset of the acquisition bandwidth while ignoring other signals that may also be present within the same acquisition bandwidth.  A 'frequency mask trigger' may contain more than one independent set of limits.
+3.A.2.c.4.Note.	3.A.2.c.4. does not apply to those "signal analysers" using only constant percentage bandwidth filters (also known as octave or fractional octave filters).
+
+3.A.2.c.5.	Not used since 2016
+
+3.A.2.d.	Signal generators having any of the following:
+3.A.2.d.1.	Specified to generate pulse-modulated signals having all of the following, anywhere within the frequency range exceeding 31.8 GHz but not exceeding 37 GHz:
+3.A.2.d.1.a.	'Pulse duration' of less than 25 ns; and
+3.A.2.d.1.b.	On/off ratio equal to or exceeding 65 dB; 
+3.A.2.d.2.	An output power exceeding 100 mW (20 dBm) anywhere within the frequency range exceeding 43.5 GHz but not exceeding 90 GHz;
+3.A.2.d.3.	A "frequency switching time" as specified by any of the following:
+3.A.2.d.3.a.	Not used since 2012
+3.A.2.d.3.b.	Less than 100 µs for any frequency change exceeding 2.2 GHz within the frequency range exceeding 4.8 GHz but not exceeding 31.8 GHz; 
+3.A.2.d.3.c.	Not used since 2014
+3.A.2.d.3.d.	Less than 500 µs for any frequency change exceeding 550 MHz within the frequency range exceeding 31.8 GHz but not exceeding 37 GHz; or
+3.A.2.d.3.e.	Less than 100 µs for any frequency change exceeding 2.2 GHz within the frequency range exceeding 37 GHz but not exceeding 90 GHz;
+3.A.2.d.3.f.	Not used since 2014
+
+3.A.2.d.4.	Single sideband (SSB) phase noise, in dBc/Hz, specified as being any of the following:
+3.A.2.d.4.a.	Less (better) than -(126+20 log10F-20 log10f) anywhere within the range of 10 Hz ≤ F ≤10 kHz anywhere within the frequency range exceeding 3.2 GHz but not exceeding 90 GHz; or
+3.A.2.d.4.b.	Less (better) than -(206 - 20log10f) anywhere within the range of 10 kHz < F ≤ 100 kHz anywhere within the frequency range exceeding 3.2 GHz but not exceeding 90 GHz;
+
+3.A.2.d.4.Technical Note.	In 3.A.2.d.4., F is the offset from the operating frequency in Hz and f is the operating frequency in MHz.
+
+3.A.2.d.5.	An 'RF modulation bandwidth' of digital baseband signals as specified by any of the following:
+3.A.2.d.5.a.	Exceeding 2.2 GHz within the frequency range exceeding 4.8 GHz but not exceeding 31.8 GHz; 
+3.A.2.d.5.b.	Exceeding 550 MHz within the frequency range exceeding 31.8 GHz but not exceeding 37 GHz; or
+3.A.2.d.5.c.	Exceeding 2.2 GHz within the frequency range exceeding 37 GHz but not exceeding 90 GHz; or
+
+3.A.2.d.5.Technical Note.	'RF modulation bandwidth' is the Radio Frequency (RF) bandwidth occupied by a digitally encoded baseband signal modulated onto an RF signal.  It is also referred to as information bandwidth or vector modulation bandwidth.  I/Q digital modulation is the technical method for producing a vector-modulated RF output signal, and that output signal is typically specified as having an 'RF modulation bandwidth'.
+
+3.A.2.d.6.	A maximum frequency exceeding 90 GHz; 
+
+3.A.2.d.Note 1.	For the purpose of 3.A.2.d., signal generators include arbitrary waveform and function generators.
+3.A.2.d.Note 2.	3.A.2.d. does not apply to equipment in which the output frequency is either produced by the addition or subtraction of two or more crystal oscillator frequencies, or by an addition or subtraction followed by a multiplication of the result.
+
+3.A.2.d.Technical Notes.1.	The maximum frequency of an arbitrary waveform or function generator is calculated by dividing the sample rate, in samples/second, by a factor of 2.5.
+3.A.2.d.Technical Notes.2.	For the purposes of 3.A.2.d.1.a., 'pulse duration' is defined as the time interval from the point on the leading edge that is 50% of the pulse amplitude to  the point on the trailing edge that is 50 % of the pulse amplitude.
+
+3.A.2.e.	Network analysers having any of the following:
+3.A.2.e.1.	An output power exceeding 31.62 mW (15 dBm) anywhere within the operating frequency range exceeding 43.5 GHz but not exceeding 90 GHz;
+3.A.2.e.2.	An output power exceeding 1 mW (0 dBm) anywhere within the operating frequency range exceeding 90 GHz but not exceeding 110 GHz;
+3.A.2.e.3.	'Nonlinear vector measurement functionality' at frequencies exceeding 50 GHz but not exceeding 110 GHz; or
+
+3.A.2.e.3.Technical Note.	'Nonlinear vector measurement functionality' is an instrument’s ability to analyse the test results of devices driven into the large-signal domain or the non-linear distortion range.
+3.A.2.e.4.	A maximum operating frequency exceeding 110 GHz;
+
+3.A.2.f.	Microwave test receivers having all of the following:
+3.A.2.f.1.	A maximum operating frequency exceeding 110 GHz; and
+3.A.2.f.2.	Being capable of measuring amplitude and phase simultaneously;
+
+3.A.2.g.	Atomic frequency standards being any of the following:
+3.A.2.g.1.	"Space-qualified";
+3.A.2.g.2.	Non-rubidium and having a long-term stability less (better) than 1 x 10$^{-11}$/month; or
+3.A.2.g.3.	Non-"space-qualified" and having all of the following:
+3.A.2.g.3.a.	Being a rubidium standard;
+3.A.2.g.3.b.	Long-term stability less (better) than 1 x 10-11/month; and
+3.A.2.g.3.c.	Total power consumption of less than 1 Watt;
+
+3.A.2.h.	"Electronic assemblies", modules or equipment, specified to perform all of the following:
+3.A.2.h.1.	Analogue-to-digital conversions meeting any of the following:
+
+3.A.2.h.1.a.	A resolution of 8 bit or more, but less than 10 bit, with a "sample rate" greater than 1.3 Giga Samples Per Second (GSPS);
+3.A.2.h.1.b.	A resolution of 10 bit or more, but less than 12 bit, with a "sample rate" greater than 1.0 GSPS;
+3.A.2.h.1.c.	A resolution of 12 bit or more, but less than 14 bit, with a "sample rate" greater than 1.0 GSPS;
+3.A.2.h.1.d.	A resolution of 14 bit or more but less than 16 bit, with a "sample rate" greater than 400 Mega Samples Per Second (MSPS); or
+3.A.2.h.1.e.	A resolution of 16 bit or more with a "sample rate" greater than 180 MSPS; and
+3.A.2.h.2.	Any of the following: 
+3.A.2.h.2.a.	Output of digitized data;
+3.A.2.h.2.b.	Storage of digitized data; or
+3.A.2.h.2.c.	Processing of digitized data;
+3.A.2.h.N.B.	Digital data recorders, oscilloscopes, "signal analysers", signal generators, network analysers and microwave test receivers, are specified by 3.A.2.a.6., 3.A.2.a.7., 3.A.2.c., 3.A.2.d., 3.A.2.e. and 3.A.2.f., respectively.
+
+3.A.2.h.Technical Notes.1.	A resolution of n bit corresponds to a quantisation of $2^n$ levels.
+3.A.2.h.Technical Notes.2.	The resolution of the ADC is the number of bits of the digital output of the ADC that represents the measured analogue input.  Effective Number of Bits (ENOB) is not used to determine the resolution of the ADC.
+3.A.2.h.Technical Notes.3.	For non-interleaved multiple-channel "electronic assemblies", modules, or equipment, the "sample rate" is not aggregated and the "sample rate" is the maximum rate of any single channel.
+3.A.2.h.Technical Notes.4.	For interleaved channels on multiple-channel "electronic assemblies", modules, or equipment, the "sample rates" are aggregated and the "sample rate" is the maximum combined total rate of all the interleaved channels.
+3.A.2.h.Note.	3.A.2.h. includes ADC cards, waveform digitizers, data acquisition cards, signal acquisition boards and transient recorders.
+
+3.A.3.	Spray cooling thermal management systems employing closed loop fluid handling and reconditioning equipment in a sealed enclosure where a dielectric fluid is sprayed onto electronic components using specially designed spray nozzles that are designed to maintain electronic components within their operating temperature range, and specially designed components therefor.
+
+
+3.B.	TEST, INSPECTION AND PRODUCTION EQUIPMENT
+
+3.B.1.	Equipment for the manufacturing of semiconductor devices or materials, as follows and specially designed components and accessories therefor:
+3.B.1.a.	Equipment designed for epitaxial growth as follows:
+
+3.B.1.a.1.	Equipment designed or modified to produce a layer of any material other than silicon with a thickness uniform to less than ± 2.5% across a distance of 75 mm or more;
+3.B.1.a.1.Note.	3.B.1.a.1. includes atomic layer epitaxy (ALE) equipment.
+3.B.1.a.2.	Metal Organic Chemical Vapour Deposition (MOCVD) reactors designed for compound semiconductor epitaxial growth of material having two or more of the following elements: aluminium, gallium, indium, arsenic, phosphorus, antimony, or nitrogen;
+3.B.1.a.3.	Molecular beam epitaxial growth equipment using gas or solid sources;
+
+3.B.1.b.	Equipment designed for ion implantation and having any of the following:
+3.B.1.b.1.	Not used since 2012
+3.B.1.b.2.	Being designed and optimized to operate at a beam energy of 20 keV or more and a beam current of 10 mA or more for hydrogen, deuterium or helium implant;
+3.B.1.b.3.	Direct write capability;
+3.B.1.b.4.	A beam energy of 65 keV or more and a beam current of 45 mA or more for high energy oxygen implant into a heated semiconductor material "substrate"; or
+3.B.1.b.5.	Being designed and optimized to operate at a beam energy of 20 keV or more and a beam current of 10 mA or more for silicon implant into a semiconductor material "substrate" heated to 600°C or greater;
+
+3.B.1.c.	Not used since 2015
+3.B.1.d.	Not used since 2011
+3.B.1.e.	Automatic loading multi-chamber central wafer handling systems having all of the following: 
+3.B.1.e.1.	Interfaces for wafer input and output, to which more than two functionally different 'semiconductor process tools' specified by 3.B.1.a.1., 3.B.1.a.2., 3.B.1.a.3. or 3.B.1.b. are designed to be connected; and
+3.B.1.e.2.	Designed to form an integrated system in a vacuum environment for 'sequential multiple wafer processing';
+3.B.1.e.Note.	3.B.1.e. does not apply to automatic robotic wafer handling systems specially designed for parallel wafer processing.
+
+3.B.1.e.Technical Notes.1.	For the purpose of 3.B.1.e., 'semiconductor process tools' refers to modular tools that provide physical processes for semiconductor production that are functionally different, such as deposition, implant or thermal processing.
+3.B.1.e.Technical Notes.2.	For the purpose of 3.B.1.e., 'sequential multiple wafer processing' means the capability to process each wafer in different 'semiconductor process tools', such as by transferring each wafer from one tool to a second tool and on to a third tool with the automatic loading multi-chamber central wafer handling systems.
+
+3.B.1.f.	Lithography equipment as follows:
+3.B.1.f.1.	Align and expose step and repeat (direct step on wafer) or step and scan (scanner) equipment for wafer processing using photo-optical or X-ray methods and having any of the following:
+3.B.1.f.1.a.	A light source wavelength shorter than 193 nm; or
+3.B.1.f.1.b.	Capable of producing a pattern with a 'Minimum Resolvable Feature size' (MRF) of 45 nm or less; 
+
+3.B.1.f.1.b.Technical Note.	The 'Minimum Resolvable Feature size' (MRF) is calculated by the following formula: $\text{MRF}=\frac{\text{(an exposure light source wavelength in nm) x (K factor)}}{\text{numerical aperture}}$ where the K factor = 0.35 
+3.B.1.f.2.	Imprint lithography equipment capable of producing features of 45 nm or less;
+3.B.1.f.2.Note.	3.B.1.f.2. includes:
+3.B.1.f.2.Note.	- Micro contact printing tools
+3.B.1.f.2.Note.	- Hot embossing tools
+3.B.1.f.2.Note.	- Nano-imprint lithography tools
+3.B.1.f.2.Note.	- Step and flash imprint lithography (S-FIL) tools
+
+3.B.1.f.3.	Equipment specially designed for mask making having all of the following: 
+3.B.1.f.3.a.	A deflected focused electron beam, ion beam or "laser" beam; and
+3.B.1.f.3.b.	Having any of the following:
+3.B.1.f.3.b.1.	A full-width half-maximum (FWHM) spot size smaller than 65 nm and an image placement less than 17 nm (mean + 3 sigma); or
+3.B.1.f.3.b.2.	Not used since 2015
+3.B.1.f.3.b.3.	A second-layer overlay error of less than 23 nm (mean + 3 sigma) on the mask;
+3.B.1.f.4.	Equipment designed for device processing using direct writing methods, having all of the following:
+3.B.1.f.4.a.	A deflected focused electron beam; and
+3.B.1.f.4.b.	Having any of the following:
+3.B.1.f.4.b.1.	A minimum beam size equal to or smaller than 15 nm; or
+3.B.1.f.4.b.2.	An overlay error less than 27 nm (mean + 3 sigma);
+
+3.B.1.g.	Masks and reticles, designed for integrated circuits specified by 3.A.1.;
+
+3.B.1.h.	Multi-layer masks with a phase shift layer not specified by 3.B.1.g. and designed to be used by lithography equipment having a light source wavelength less than 245 nm;
+3.B.1.h.Note.	3.B.1.h. does not apply to multi-layer masks with a phase shift layer designed for the fabrication of memory devices not specified by 3.A.1.
+
+3.B.1.i.	Imprint lithography templates designed for integrated circuits specified by 3.A.1.;
+
+3.B.1.j.	Mask "substrate blanks" with multilayer reflector structure consisting of molybdenum and silicon, and having all of the following:
+3.B.1.j.1.	Specially designed for 'Extreme Ultraviolet' ('EUV') lithography; and
+3.B.1.j.2.	Compliant with SEMI Standard P37.
+
+3.B.1.j.Technical Note.	'Extreme Ultraviolet' ('EUV') refers to electromagnetic spectrum wavelengths greater than 5 nm and less than 124 nm.
+
+3.B.2.	Test equipment specially designed for testing finished or unfinished semiconductor devices as follows and specially designed components and accessories therefor:
+3.B.2.a.	For testing S-parameters of items specified by 3.A.1.b.3.;
+3.B.2.b.	Not used since 2004
+3.B.2.c.	For testing items specified by 3.A.1.b.2.
+
+
+3.C.	MATERIALS
+
+3.C.1.	Hetero-epitaxial materials consisting of a "substrate" having stacked epitaxially grown multiple layers of any of the following:
+3.C.1.a.	Silicon (Si);
+3.C.1.b.	Germanium (Ge);
+3.C.1.c.	Silicon Carbide (SiC); or
+3.C.1.d.	"III/V compounds" of gallium or indium.
+3.C.1.d.Note.	3.C.1.d. does not apply to a "substrate" having  one or more  P-type epitaxial layers of GaN, InGaN, AlGaN, InAlN, InAlGaN, GaP, GaAs, AlGaAs, InP, InGaP, AlInP or InGaAlP, independent of the sequence of the elements, except if the P-type epitaxial layer is between N-type layers.
+
+3.C.2.	Resist materials as follows and "substrates" coated with the following resists:
+3.C.2.a.	Resists designed for semiconductor lithography as follows:
+3.C.2.a.1.	Positive resists adjusted (optimised) for use at wavelengths less than 193 nm but equal to or greater than 15 nm;
+3.C.2.a.2.	Resists adjusted (optimised) for use at wavelengths less than 15 nm but greater than 1 nm;
+3.C.2.b.	All resists designed for use with electron beams or ion beams, with a sensitivity of 0.01 µcoulomb/mm2 or better;
+3.C.2.c.	Not used since 2012
+3.C.2.d.	All resists optimised for surface imaging technologies;
+3.C.2.e.	All resists designed or optimised for use with imprint lithography equipment specified by 3.B.1.f.2. that use either a thermal or photo-curable process.
+
+3.C.3.	Organo-inorganic compounds as follows:
+3.C.3.a.	Organo-metallic compounds of aluminium, gallium or indium, having a purity (metal basis) better than 99.999%;
+3.C.3.b.	Organo-arsenic, organo-antimony and organo-phosphorus compounds, having a purity (inorganic element basis) better than 99.999%.
+3.C.3.Note.	3.C.3. only applies to compounds whose metallic, partly metallic or non-metallic element is directly linked to carbon in the organic part of the molecule.
+
+3.C.4.	Hydrides of phosphorus, arsenic or antimony, having a purity better than 99.999%, even diluted in inert gases or hydrogen.
+3.C.4.Note.	3.C.4. does not apply to hydrides containing 20% molar or more of inert gases or hydrogen.
+
+3.C.5.	High resistivity materials as follows:
+3.C.5.a.	Silicon carbide (SiC), gallium nitride (GaN), aluminium nitride (AlN) or aluminium gallium nitride (AlGaN) semiconductor "substrates", or ingots, boules, or other preforms of those materials, having resistivities greater than 10,000 ohm-cm at 20°C;
+3.C.5.b.	Polycrystalline "substrates" or polycrystalline ceramic "substrates", having resistivities greater than 10,000 ohm-cm at 20°C and having at least one non-epitaxial single-crystal layer of silicon (Si), silicon carbide (SiC), gallium nitride (GaN), aluminium nitride (AlN), or aluminium gallium nitride (AlGaN) on the surface of the "substrate".
+
+3.C.6.	Materials, not specified by 3.C.1., consisting of a "substrate" specified by 3.C.5. with at least one epitaxial layer of silicon carbide, gallium nitride, aluminium nitride or aluminium gallium nitride.
+
+
+3.D.	SOFTWARE
+
+3.D.1.	"Software" specially designed for the "development" or "production" of equipment specified by 3.A.1.b. to 3.A.2.h. or 3.B.
+
+3.D.2.	"Software" specially designed for the "use" of equipment specified by 3.B.1.a. to f. or 3.B.2.
+
+3.D.3.	'Physics-based' simulation "software" specially designed for the "development" of lithographic, etching or deposition processes for translating masking patterns into specific topographical patterns in conductors, dielectrics or semiconductor materials.
+
+3.D.3.Technical Note.	'Physics-based' in 3.D.3. means using computations to determine a sequence of physical cause and effect events based on physical properties (e.g., temperature, pressure, diffusion constants and semiconductor materials properties). 
+3.D.3.Note.	Libraries, design attributes or associated data for the design of semiconductor devices or integrated circuits are considered as "technology".
+
+3.D.4.	"Software" specially designed for the "development" of equipment specified by 3.A.3.
+
+3.D.5.	"Software" specially designed to restore normal operation of a microcomputer, "microprocessor microcircuit" or "microcomputer microcircuit" within 1 ms after an Electromagnetic Pulse (EMP) or Electrostatic Discharge (ESD) disruption, without loss of continuation of operation.
+
+
+3.E.	TECHNOLOGY
+
+3.E.1.	"Technology" according to the General Technology Note for the "development" or "production" of equipment or materials specified by 3.A, 3.B or 3.C;
+3.E.1.Note 1.	3.E.1. does not apply to "technology" for equipment or components specified by 3.A.3.
+
+3.E.1.Note 2.	3.E.1. does not apply to "technology" for integrated circuits specified by 3.A.1.a.3. to 3.A.1.a.12., having all of the following: 
+3.E.1.Note 2.a.	Using "technology" at or above 0.130 µm; and
+3.E.1.Note 2.b.	Incorporating multi-layer structures with three or fewer metal layers.
+3.E.1.Note 3.	3.E.1. does not apply to 'Process Design Kits' ('PDKs') unless they include libraries implementing functions or technologies for items specified by 3.A.1.
+
+3.E.1.Note 3.Technical Note.	A 'Process Design Kit' ('PDK') is a software tool provided by a semiconductor manufacturer to ensure that the required design practices and rules are taken into account in order to successfully produce a specific integrated circuit design in a specific semiconductor process, in accordance with technological and manufacturing constraints (each semiconductor manufacturing process has its particular 'PDK').
+
+3.E.2.	"Technology" according to the General Technology Note other than that specified by 3.E.1. for the "development" or "production" of a "microprocessor microcircuit", "microcomputer microcircuit" or microcontroller microcircuit core, having an arithmetic logic unit with an access width of 32 bits or more and any of the following features or characteristics:
+3.E.2.a.	A 'vector processor unit' designed to perform more than two calculations on floating-point vectors (one-dimensional arrays of 32-bit or larger numbers) simultaneously;
+
+3.E.2.a.Technical Note.	A 'vector processor unit' is a processor element with built-in instructions that perform multiple calculations on floating-point vectors (one-dimensional arrays of 32-bit or larger numbers) simultaneously, having at least one vector arithmetic logic unit and vector registers of at least 32 elements each.
+3.E.2.b.	Designed to perform more than four 64-bit or larger floating-point operation results per cycle; or
+3.E.2.c.	Designed to perform more than eight 16-bit fixed-point multiply-accumulate results per cycle (e.g., digital manipulation of analogue information that has been previously converted into digital form, also known as digital "signal processing").
+
+3.E.2.Note 1.	3.E.2. does not apply to "technology" for multimedia extensions.
+3.E.2.Note 2.	3.E.2. does not apply to "technology" for micro-processor cores, having all of the following: 
+3.E.2.Note 2.a.	Using "technology" at or above 0.130 µm; and
+3.E.2.Note 2.b.	Incorporating multi-layer structures with five or fewer metal layers.
+3.E.2.Note 3.	3.E.2. includes "technology" for the "development" or "production" of digital signal processors and digital array processors.
+
+3.E.3.	Other "technology" for the "development" or "production" of the following:
+3.E.3.a.	Vacuum microelectronic devices;
+3.E.3.b.	Hetero-structure semiconductor electronic devices such as high electron mobility transistors (HEMT), hetero-bipolar transistors (HBT), quantum well and super lattice devices;
+3.E.3.b.Note.	3.E.3.b. does not apply to "technology" for high electron mobility transistors (HEMT) operating at frequencies lower than 31.8 GHz and hetero-junction bipolar transistors (HBT) operating at frequencies lower than 31.8 GHz.
+
+3.E.3.c.	"Superconductive" electronic devices;
+3.E.3.d.	Substrates of films of diamond for electronic components;
+3.E.3.e.	Substrates of silicon-on-insulator (SOI) for integrated circuits in which the insulator is silicon dioxide;
+3.E.3.f.	Substrates of silicon carbide for electronic components;
+3.E.3.g.	'Vacuum electronic devices' operating at frequencies of 31.8 GHz or higher.
+

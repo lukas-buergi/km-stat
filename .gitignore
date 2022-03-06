@@ -2,4 +2,5 @@
 /static
 /data
 
+.~lock.*.doc#
 .DS_Store
