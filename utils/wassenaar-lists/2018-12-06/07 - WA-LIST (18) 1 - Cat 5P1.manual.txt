@@ -1,0 +1,227 @@
+﻿
+5.A.1.	Part 1 - TELECOMMUNICATIONS
+
+5.A.1.Note 1.	The status of components, test and "production" equipment and "software" therefor which are specially designed for telecommunications equipment or systems is determined in Category 5 – Part 1.
+5.A.1.Note 1.N.B.	For "lasers" specially designed for telecommunications equipment or systems, see 6.A.5.
+
+5.A.1.Note 2.	"Digital computers", related equipment or "software", when essential for the operation and support of telecommunications equipment described in this Category, are regarded as specially designed components, provided they are the standard models customarily supplied by the manufacturer. This includes operation, administration, maintenance, engineering or billing computer systems.
+
+
+5.A.1.	Part 1. SYSTEMS, EQUIPMENT AND COMPONENTS
+
+5.A.1.	Telecommunications systems, equipment, components and accessories, as follows: 
+5.A.1.a.	Any type of telecommunications equipment having any of the following characteristics, functions or features:
+5.A.1.a.1.	Specially designed to withstand transitory electronic effects or electromagnetic pulse effects, both arising from a nuclear explosion;
+5.A.1.a.2.	Specially hardened to withstand gamma, neutron or ion radiation;
+5.A.1.a.3.	Specially designed to operate below 218 K (-55° C); or
+5.A.1.a.4.	Specially designed to operate above 397 K (124° C);
+5.A.1.a.Note 1.	5.A.1.a.3. and 5.A.1.a.4. apply only to electronic equipment.
+5.A.1.a.Note 2.	5.A.1.a.2, 5.A.1.a.3. and 5.A.1.a.4. do not apply to equipment designed or modified for use on board satellites.
+
+5.A.1.b.	Telecommunication systems and equipment, and specially designed components and accessories therefor, having any of the following characteristics, functions or features:
+5.A.1.b.1.	Being underwater untethered communications systems having any of the following:
+5.A.1.b.1.a.	An acoustic carrier frequency outside the range from 20 kHz to 60 kHz;
+5.A.1.b.1.b.	Using an electromagnetic carrier frequency below 30 kHz;
+5.A.1.b.1.c.	Using electronic beam steering techniques; or
+5.A.1.b.1.d.	Using "lasers" or light-emitting diodes (LEDs), with an output wavelength  greater than 400 nm and less than 700 nm, in a "local area network";
+5.A.1.b.2.	Being radio equipment operating in the 1.5 MHz to 87.5 MHz band and having all of the following:
+5.A.1.b.2.a.	Automatically predicting and selecting frequencies and "total digital transfer rates" per channel to optimise the transmission; and
+
+5.A.1.b.2.b.	Incorporating a linear power amplifier configuration having a capability to support multiple signals simultaneously at an output power of 1 kW or more in the frequency range of 1.5 MHz or more but less than 30 MHz, or 250 W or more in the frequency range of 30 MHz or more but not exceeding 87.5 MHz, over an "instantaneous bandwidth" of one octave or more and with an output harmonic and distortion content of better than -80 dB;
+
+5.A.1.b.3.	Being radio equipment employing "spread spectrum" techniques, including "frequency hopping" techniques, not specified by 5.A.1.b.4. and having any of the following:
+5.A.1.b.3.a.	User programmable spreading codes; or
+5.A.1.b.3.b.	A total transmitted bandwidth which is 100 or more times the bandwidth of any one information channel and in excess of 50 kHz;
+5.A.1.b.3.b.Note.	5.A.1.b.3.b. does not apply to radio equipment specially designed for use with any of the following:
+5.A.1.b.3.b.Note.a.	Civil cellular radio-communications systems; or
+5.A.1.b.3.b.Note.b.	Fixed or mobile satellite earth stations for commercial civil telecommunications.
+
+5.A.1.b.3.Note.	5.A.1.b.3. does not apply to equipment designed to operate at an output power of 1 W or less.
+
+5.A.1.b.4.	Being radio equipment employing ultra-wideband modulation techniques having user programmable channelizing codes, scrambling codes or network identification codes and having any of the following:
+5.A.1.b.4.a.	A bandwidth exceeding 500 MHz; or
+5.A.1.b.4.b.	A "fractional bandwidth" of 20% or more;
+
+5.A.1.b.5.	Being digitally controlled radio receivers having all of the following:
+5.A.1.b.5.a.	More than 1,000 channels;
+5.A.1.b.5.b.	A 'channel switching time' of less than 1 ms;
+5.A.1.b.5.c.	Automatic searching or scanning of a part of the electromagnetic spectrum; and 
+5.A.1.b.5.d.	Identification of the received signals or the type of transmitter; or
+5.A.1.b.5.Note.	5.A.1.b.5. does not apply to radio equipment specially designed for use with civil cellular radio-communications systems.
+
+5.A.1.b.5.Technical Note.	'Channel switching time': the time (i.e., delay) to change from one receiving frequency to another, to arrive at or within ±0.05% of the final specified receiving frequency. Items having a specified frequency range of less than ±0.05% around their centre frequency are defined to be incapable of channel frequency switching.
+
+
+5.A.1.b.6.	Employing functions of digital "signal processing" to provide 'voice coding' output at rates of less than 700 bit/s.
+
+5.A.1.b.6.Technical Notes.1.	For variable rate 'voice coding', 5.A.1.b.6. applies to the 'voice coding' output of continuous speech.
+5.A.1.b.6.Technical Notes.2.	For the purpose of 5.A.1.b.6., 'voice coding' is defined as the technique to take samples of human voice and then convert these samples into a digital signal, taking into account specific characteristics of human speech.
+
+5.A.1.c.	Optical fibres of more than 500 m in length and specified by the manufacturer as being capable of withstanding a 'proof test' tensile stress of 2 x 10$^9$ N/m2 or more;
+5.A.1.c.N.B.	For underwater umbilical cables, see 8.A.2.a.3.
+
+5.A.1.c.Technical Note.	'Proof Test': on-line or off-line production screen testing that dynamically applies a prescribed tensile stress over a 0.5 to 3 m length of fibre at a running rate of 2 to 5 m/s while passing between capstans approximately 150 mm in diameter.  The ambient temperature is a nominal 293 K (20 °C) and relative humidity 40%.  Equivalent national standards may be used for executing the proof test.
+
+5.A.1.d.	'Electronically steerable phased array antennae' as follows:
+5.A.1.d.1.	Rated for operation above 31.8 GHz, but not exceeding 57 GHz, and having an Effective Radiated Power (ERP) equal to or greater than +20 dBm (22.15 dBm Effective Isotropic Radiated Power (EIRP)); 
+5.A.1.d.2.	Rated for operation above 57 GHz, but not exceeding 66 GHz, and having an ERP equal to or greater than +24 dBm (26.15 dBm EIRP);
+5.A.1.d.3.	Rated for operation above 66 GHz, but not exceeding 90 GHz, and having an ERP equal to or greater than +20 dBm (22.15 dBm EIRP);
+5.A.1.d.4.	Rated for operation above 90 GHz;
+5.A.1.d.Note 1.	5.A.1.d. does not apply to 'electronically steerable phased array antennae' for landing systems with instruments meeting ICAO standards covering Microwave Landing Systems (MLS).
+5.A.1.d.Note 2.	5.A.1.d. does not apply to antennae specially designed for any of the following:
+5.A.1.d.Note 2.a.	Civil cellular or WLAN radio-communications systems; 
+5.A.1.d.Note 2.b.	IEEE 802.15 or wireless HDMI; or
+5.A.1.d.Note 2.c.	Fixed or mobile satellite earth stations for commercial civil telecommunications.
+
+5.A.1.d.Technical Note.	For the purposes of 5.A.1.d. 'electronically steerable phased array antenna' is an antenna which forms a beam by means of phase coupling, (i.e., the beam direction is controlled by the complex excitation coefficients of the radiating elements) and the direction of that beam can be varied (both in transmission and reception) in azimuth or in elevation, or both, by application of an electrical signal.
+
+5.A.1.e.	Radio direction finding equipment operating at frequencies above 30 MHz and having all of the following, and specially designed components therefor:
+5.A.1.e.1.	"Instantaneous bandwidth" of 10 MHz or more; and
+5.A.1.e.2.	Capable of finding a Line Of Bearing (LOB) to non-cooperating radio transmitters with a signal duration of less than 1 ms;
+
+5.A.1.f.	Mobile telecommunications interception or jamming equipment, and monitoring equipment therefor, as follows, and specially designed components therefor:
+5.A.1.f.1.	Interception equipment designed for the extraction of voice or data, transmitted over the air interface;
+5.A.1.f.2.	Interception equipment not specified in 5.A.1.f.1., designed for the extraction of client device or subscriber identifiers (e.g., IMSI, TIMSI or IMEI), signalling, or other metadata transmitted over the air interface;
+5.A.1.f.3.	Jamming equipment specially designed or modified to intentionally and selectively interfere with, deny, inhibit, degrade or seduce mobile telecommunication services and performing any of the following:
+5.A.1.f.3.a.	Simulate the functions of Radio Access Network (RAN) equipment;
+5.A.1.f.3.b.	Detect and exploit specific characteristics of the mobile telecommunications protocol employed (e.g., GSM); or
+5.A.1.f.3.c.	Exploit specific characteristics of the mobile telecommunications protocol employed (e.g., GSM);
+
+5.A.1.f.4.	RF monitoring equipment designed or modified to identify the operation of items specified in 5.A.1.f.1., 5.A.1.f.2. or 5.A.1.f.3.;
+5.A.1.f.Note.	5.A.1.f.1. and 5.A.1.f.2. do not apply to any of the following:
+5.A.1.f.Note.a.	Equipment specially designed for the interception of analogue Private Mobile Radio (PMR), IEEE 802.11 WLAN;
+5.A.1.f.Note.b.	Equipment designed for mobile telecommunications network operators; or
+5.A.1.f.Note.c.	Equipment designed for the "development" or "production" of mobile telecommunications equipment or systems.
+
+5.A.1.f.Note.N.B.1.	See also the Munitions List.
+5.A.1.f.Note.N.B.2.	For radio receivers see 5.A.1.b.5.
+
+5.A.1.g.	Passive Coherent Location (PCL) systems or equipment, specially designed for detecting and tracking moving objects by measuring reflections of ambient radio frequency emissions, supplied by non-radar transmitters;
+
+5.A.1.g.Technical Note.	Non-radar transmitters may include commercial radio, television or cellular telecommunications base stations.
+5.A.1.g.Note.	5.A.1.g. does not apply to any of the following:
+5.A.1.g.Note.a.	Radio-astronomical equipment; or
+5.A.1.g.Note.b.	Systems or equipment, that require any radio transmission from the target.
+
+5.A.1.h.	Counter Improvised Explosive Device (IED) equipment and related equipment, as follows:
+5.A.1.h.1.	Radio Frequency (RF) transmitting equipment, not specified by 5.A.1.f., designed or modified for prematurely activating or preventing the initiation of Improvised Explosive Devices;
+5.A.1.h.2.	Equipment using techniques designed to enable radio communications in the same frequency channels on which co-located equipment specified by 5.A.1.h.1. is transmitting.
+5.A.1.h.N.B.	See also the Munitions List.
+
+5.A.1.i.	Not used since 2012
+5.A.1.i.N.B.	See 5.A.1.f. for items previously specified by 5.A.1.i.
+
+5.A.1.j.	IP network communications surveillance systems or equipment, and specially designed components therefor, having all of the following:
+5.A.1.j.1.	Performing all of the following on a carrier class IP network (e.g., national grade IP backbone): 
+5.A.1.j.1.a.	Analysis at the application layer (e.g., Layer 7 of Open Systems Interconnection (OSI) model (ISO/IEC 7498-1)); 
+5.A.1.j.1.b.	Extraction of selected metadata and application content (e.g., voice, video, messages, attachments); and 
+5.A.1.j.1.c.	Indexing of extracted data; and
+5.A.1.j.2.	Being specially designed to carry out all of the following: 
+5.A.1.j.2.a.	Execution of searches on the basis of 'hard selectors'; and
+5.A.1.j.2.b.	Mapping of the relational network of an individual or of a group of people. 
+5.A.1.j.Note.	5.A.1.j. does not apply to systems or equipment, specially designed for any of the following:
+5.A.1.j.Note.a. Marketing purpose; 
+5.A.1.j.Note.b. Network Quality of Service (QoS);or
+5.A.1.j.Note.c. Quality of Experience (QoE).
+
+5.A.1.j.Technical Note.	'Hard selectors': data or set of data, related to an individual (e.g., family name, given name, e-mail, street address, phone number or group affiliations).
+
+
+5.B.1.	Part 1. TEST, INSPECTION AND PRODUCTION EQUIPMENT
+
+5.B.1.	Telecommunication test, inspection and production equipment, components and accessories, as follows:
+5.B.1.a.	Equipment and specially designed components or accessories therefor, specially designed for the "development" or "production" of equipment, functions or features, specified by 5.A.1.;
+5.B.1.a.Note.	5.B.1.a. does not apply to optical fibre characterization equipment.
+5.B.1.b.	Equipment and specially designed components or accessories therefor, specially designed for the "development" of any of the following telecommunication transmission or switching equipment:
+
+5.B.1.b.1.	Not used since 2009
+5.B.1.b.2.	Equipment employing a "laser" and having any of the following:
+5.B.1.b.2.a.	A transmission wavelength exceeding 1,750 nm; or
+5.B.1.b.2.b.	Not used since 2015
+5.B.1.b.2.c.	Not used since 2016
+5.B.1.b.2.d.	Employing analogue techniques and having a bandwidth exceeding 2.5 GHz; or
+5.B.1.b.2.d.Note.	5.B.1.b.2.d. does not apply to equipment specially designed for the "development" of commercial TV systems.
+5.B.1.b.3.	Not used since 2009
+5.B.1.b.4.	Radio equipment employing Quadrature-Amplitude-Modulation (QAM) techniques above level 1,024.
+5.B.1.b.5.	Not used since 2011
+
+
+5.C.1.	Part 1. MATERIALS - None
+
+
+5.D.1.	Part 1. SOFTWARE
+
+5.D.1.	"Software" as follows:
+5.D.1.a.	"Software" specially designed or modified for the "development", "production" or "use" of equipment, functions or features, specified by 5.A.1.;
+5.D.1.b.	Not used since 2014
+5.D.1.c.	Specific "software" specially designed or modified to provide characteristics, functions or features of equipment, specified by 5.A.1. or 5.B.1.;
+5.D.1.d.	"Software" specially designed or modified for the "development" of any of the following telecommunication transmission or switching equipment:
+5.D.1.d.1.	Not used since 2009
+5.D.1.d.2.	Equipment employing a "laser" and having any of the following:
+5.D.1.d.2.a.	A transmission wavelength exceeding 1,750 nm; or
+5.D.1.d.2.b.	Employing analogue techniques and having a bandwidth exceeding 2.5 GHz; or
+5.D.1.d.2.b.Note.	5.D.1.d.2.b. does not apply to "software" specially designed or modified for the "development" of commercial TV systems.
+5.D.1.d.3.	Not used since 2009
+5.D.1.d.4.	Radio equipment employing Quadrature-Amplitude-Modulation (QAM) techniques above level 1,024.
+
+
+5.E.1.	Part 1. TECHNOLOGY
+5.E.1.	"Technology" as follows:
+5.E.1.a.	"Technology" according to the General Technology Note for the "development", "production" or "use" (excluding operation) of equipment, functions or features specified by 5.A.1. or "software" specified by 5.D.1.a.;
+5.E.1.b.	Specific "technology" as follows:
+5.E.1.b.1.	"Technology" "required" for the "development" or "production" of telecommunications equipment specially designed to be used on board satellites;
+
+5.E.1.b.2.	"Technology" for the "development" or "use" of "laser" communication techniques with the capability of automatically acquiring and tracking signals and maintaining communications through exoatmosphere or sub-surface (water) media;
+5.E.1.b.3.	"Technology" for the "development" of digital cellular radio base station receiving equipment whose reception capabilities that allow multi-band, multi-channel, multi-mode, multi-coding algorithm or multi-protocol operation can be modified by changes in "software"; 
+5.E.1.b.4.	"Technology" for the "development" of "spread spectrum" techniques, including "frequency hopping" techniques;
+5.E.1.b.4.Note.	5.E.1.b.4. does not apply to "technology" for the "development" of any of the following:
+5.E.1.b.4.Note.a.	Civil cellular radio-communications systems; or
+5.E.1.b.4.Note.b.	Fixed or mobile satellite earth stations for commercial civil telecommunications.
+
+5.E.1.c.	"Technology" according to the General Technology Note for the "development" or "production" of any of the following:
+5.E.1.c.1.	Not used since 2016
+5.E.1.c.2.	Equipment employing a "laser" and having any of the following:
+5.E.1.c.2.a.	A transmission wavelength exceeding 1,750 nm;
+5.E.1.c.2.b.	Not used since 2015
+5.E.1.c.2.c.	Not used since 2016
+5.E.1.c.2.d.	Employing wavelength division multiplexing techniques of optical carriers at less than 100 GHz spacing; or
+5.E.1.c.2.e.	Employing analogue techniques and having a bandwidth exceeding 2.5 GHz;
+5.E.1.c.2.e.Note.	5.E.1.c.2.e. does not apply to "technology" for commercial TV systems.
+5.E.1.c.2.N.B.	For "technology" for the "development" or "production" of non-telecommunications equipment employing a "laser", see 6.E.
+
+5.E.1.c.3.	Equipment employing "optical switching" and having a switching time less than 1 ms;
+5.E.1.c.4.	Radio equipment having any of the following:
+5.E.1.c.4.a.	Quadrature-Amplitude-Modulation (QAM) techniques above level 1,024;
+5.E.1.c.4.b.	Operating at input or output frequencies exceeding 31.8 GHz; or
+5.E.1.c.4.b.Note.	5.E.1.c.4.b. does not apply to "technology" for equipment designed or modified for operation in any frequency band which is "allocated by the ITU" for radio-communications services, but not for radio-determination.
+
+5.E.1.c.4.c.	Operating in the 1.5 MHz to 87.5 MHz band and incorporating adaptive techniques providing more than 15 dB suppression of an interfering signal; or
+
+5.E.1.c.5.	Not used since 2011
+
+5.E.1.c.6.	Mobile equipment having all of the following:
+5.E.1.c.6.a.	Operating at an optical wavelength greater than or equal to 200 nm and less than or equal to 400 nm; and
+5.E.1.c.6.b.	Operating as a "local area network";
+
+5.E.1.d.	"Technology" according to the General Technology Note for the "development" or "production" of "Monolithic Microwave Integrated Circuit" ("MMIC") amplifiers specially designed for telecommunications and that are any of the following:
+
+5.E.1.d.Technical Note.	For purposes of 5.E.1.d., the parameter peak saturated power output may also be referred to on product data sheets as output power, saturated power output, maximum power output, peak power output, or peak envelope power output.
+5.E.1.d.1.	Rated for operation at frequencies exceeding 2.7 GHz up to and including 6.8 GHz with a "fractional bandwidth" greater than 15%, and having any of the following:
+5.E.1.d.1.a.	A peak saturated power output greater than 75 W (48.75 dBm) at any frequency exceeding 2.7 GHz up to and including 2.9 GHz;
+5.E.1.d.1.b.	A peak saturated power output greater than 55 W (47.4 dBm) at any frequency exceeding 2.9 GHz up to and including 3.2 GHz; 
+5.E.1.d.1.c.	A peak saturated power output greater than 40 W (46 dBm) at any frequency exceeding 3.2 GHz up to and including 3.7 GHz; or
+5.E.1.d.1.d.	A peak saturated power output greater than 20 W (43 dBm) at any frequency exceeding 3.7 GHz up to and including 6.8 GHz; 
+5.E.1.d.2.	Rated for operation at frequencies exceeding 6.8 GHz up to and including 16 GHz with a "fractional bandwidth" greater than 10%, and having any of the following:
+5.E.1.d.2.a.	A peak saturated power output greater than 10 W (40 dBm) at any frequency exceeding 6.8 GHz up to and including 8.5 GHz; or
+5.E.1.d.2.b.	A peak saturated power output greater than 5 W (37 dBm) at any frequency exceeding 8.5 GHz up to and including 16 GHz; 
+5.E.1.d.3.	Rated for operation with a peak saturated power output greater than 3 W (34.77 dBm) at any frequency exceeding 16 GHz up to and including 31.8 GHz, and with a "fractional bandwidth" of greater than 10%;
+5.E.1.d.4.	Rated for operation with a peak saturated power output greater than 0.1 nW (-70 dBm) at any frequency exceeding 31.8 GHz up to and including 37 GHz; 
+5.E.1.d.5.	Rated for operation with a peak saturated power output greater than 1 W (30 dBm) at any frequency exceeding 37 GHz up to and including 43.5 GHz, and with a "fractional bandwidth" of greater than 10%;
+5.E.1.d.6.	Rated for operation with a peak saturated power output greater than 31.62 mW (15 dBm) at any frequency exceeding 43.5 GHz up to and including 75 GHz, and with a "fractional bandwidth" of greater than 10%;
+5.E.1.d.7.	Rated for operation with a peak saturated power output greater than 10 mW (10 dBm) at any frequency exceeding 75 GHz up to and including 90 GHz, and with a "fractional bandwidth" of greater than 5%; or
+5.E.1.d.8.	Rated for operation with a peak saturated power output greater than 0.1 nW (-70 dBm) at any frequency exceeding 90 GHz; 
+
+5.E.1.e.	"Technology" according to the General Technology Note for the "development" or "production" of electronic devices and circuits, specially designed for telecommunications and containing components manufactured from "superconductive" materials, specially designed for operation at temperatures below the "critical temperature" of at least one of the "superconductive" constituents and having any of the following:
+5.E.1.e.1.	Current switching for digital circuits using "superconductive" gates with a product of delay time per gate (in seconds) and power dissipation per gate (in watts) of less than 10-14 J; or
+5.E.1.e.2.	Frequency selection at all frequencies using resonant circuits with Q-values exceeding 10,000.
+
