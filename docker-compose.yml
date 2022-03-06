@@ -23,6 +23,5 @@ services:
       - DB_DATABASE=kriegsmaterialch
       - DB_USER=kriegsmaterialch
       - DB_PASSWORD=Ze5uukaephooth3aivah
-      - DJANGO_SETTINGS_MODULE=kriegsmaterialch.settingsDocker
     depends_on:
       - db

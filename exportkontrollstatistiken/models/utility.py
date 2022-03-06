@@ -111,10 +111,13 @@ class Uebersetzungen(models.Model):
 
 class Laendergruppen(models.Model):
   """ Groups of countries for easy selection, say "Africa", "European Union" or "Middle East". """
+  
   name = models.ForeignKey(Uebersetzungen, on_delete=models.PROTECT)
   """ Name of the group. """
+  
   code = models.CharField(max_length=2)
   """ Two character made up id. It's ok if they collide with country codes."""
+  
   seco_km_order = models.PositiveIntegerField()
   """ The Seco doesn't order continents alphabetically, so we order by this field to mirror Seco's ordering. """
 
@@ -127,22 +130,31 @@ class Laendergruppen(models.Model):
 
 class Laender(models.Model):
   """ Liste der Länder, in die exportiert wird. """
+  
   code = models.CharField(max_length=2)
-  """ Ländercode, 2 Grossbuchstaben. ISO 3166-1 alpha-2 (hoffentlich)"""
+  """ The ISO 3166-1 alpha-2 code for the country. The current data might or might not be standards-compliant."""
+  
   name = models.ForeignKey(Uebersetzungen, on_delete=models.PROTECT)
   """ Voller Name des Landes. """
+  
   gruppen = models.ManyToManyField(Laendergruppen)
   """ Groups that this country is a member of. """
+  
   breitengradMin = models.FloatField()
   """ Der minimale Breitengrad, der dieses Land schneidet. """
+  
   breitengradMax = models.FloatField()
   """ Der maximale Breitengrad, der dieses Land schneidet. """
+  
   laengengradMin = models.FloatField()
   """ Der minimale Längengrad, der dieses Land schneidet. """
+  
   laengengradMax = models.FloatField()
   """ Der maximale Längengrad, der dieses Land schneidet. """
+  
   laengengrad = models.FloatField()
   """ Longitude of a characteristic point of the country. """
+  
   breitengrad = models.FloatField()
   """ Latitude of a characteristic point of the country. """
 
