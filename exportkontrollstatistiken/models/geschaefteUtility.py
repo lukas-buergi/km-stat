@@ -240,9 +240,10 @@ class GeschaefteKriegsmaterialNachKategorieEndempfaengerstaat(models.Model):
   Mirrors the structure of the official documents "Ausfuhr von Kriegsmaterial nach Kategorie pro Endempfängerstaat" exactly,
   but do already regularize the data and add structure from text fields.
   Import from csv files works as follows:
-    * csv files generated either from official xlsx, or using the "tabula" utility from pdf files, or manually from pdf files without text information.
-    * csv files could be validated to an extent, and official complaints/requests filed if data is self-contradictory or (hopefully more likely) mistake in copying from original fixed.
-    * The csv files are then imported as follows:
+
+  * csv files generated either from official xlsx, or using the "tabula" utility from pdf files, or manually from pdf files without text information.
+  * csv files could be validated to an extent, and official complaints/requests filed if data is self-contradictory or (hopefully more likely) mistake in copying from original fixed.
+  * The csv files are then imported as follows:
       * First row: Headers
       * Second row: totals ignored
       * Rows that are identical to the header except for the first field are ignored
