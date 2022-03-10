@@ -1,5 +1,5 @@
 #######################################################################
-# Copyright Lukas Bürgi 2019
+# Copyright Lukas Bürgi 2022
 #
 # This file is part of km-stat.
 #
@@ -18,27 +18,31 @@
 # <https://www.gnu.org/licenses/>.
 ########################################################################
 
-DONT EXECUTE - NOT A SCRIPT, JUST SNIPPETS TO COPY AND PASTE
+"""
+settingsLocal.py file for use with docker. Replace this with one of the examples also in this directoy when not running docker.
+"""
 
-from exportkontrollstatistiken.models import *
-import csv
+import os
 
-f = open('utils/iso3166-2019-04-05.csv', 'r', newline='')
-iso = csv.reader(f)
+# SECURITY WARNING: keep the secret key used in production secret!
+# just generate an arbitrary string of similar strength to replace this!
+SECRET_KEY = 'l#9ts+=wbie*^bu#1e-zyzero$*@5-!edo@qw_hpa_0t3f7c+o'
 
-iso.__next__()
+# SECURITY WARNING: don't run with debug turned on in production!
+DEBUG = True
 
-regions = {
-    "AF":"Africa",
-    "NA":"North America",
-    "OC":"Oceania",
-    "AS":"Asia",
-    "EE":"Europe",
-    "SA":"South America",
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'HOST' : os.environ.get('DB_HOST'),
+        'NAME': os.environ.get('DB_DATABASE'),
+        'USER' : os.environ.get('DB_USER'),
+        'PASSWORD' : os.environ.get('DB_PASSWORD'),
+    }
 }
 
-for code, english in regions.items():
-    name = Uebersetzungen(de='', fr='', it='', en=english)
-    name.save()
-    region = Laendergruppen(code=code, name=name)
-    region.save()
+STATIC_URL = '/static/'
+STATIC_ROOT = '/code/static/'
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = 'media/'
