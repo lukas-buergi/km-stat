@@ -103,7 +103,10 @@ class Uebersetzungen(models.Model):
 
   def __str__(self):
     """ Sollte je nach Spracheinstellung die richtige Sprache zurückgeben und dann auf andere Sprachen zurückfallen wenn es diese nicht gibt. TODO. """
-    return(self.de)
+    if(self.de!=""):
+      return(self.de)
+    else:
+      return(self.en)
 
   class Meta:
     verbose_name = 'Übersetzung'

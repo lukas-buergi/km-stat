@@ -62,10 +62,10 @@ class Kontrollregimes(models.Model):
   aufgehobenwerden = models.DateField(blank=True, null=True)
   
   def __str__(self):
-    if(self.name != ""):
-      return(str(self.name))
+    if(self.name.de != ""):
+      return(str(self.name.de))
     else: # Ich glaube nicht dass das eine gute Lösung ist, andererseits sollte der Fall eh nicht eintreten. TODO
-      return("Kontrollregimes " + self.pk)
+      return("Kontrollregimes " + str(self.pk))
   
   class Meta:
     verbose_name = 'Kontrollregime'
@@ -75,7 +75,7 @@ class Exportkontrollnummern(models.Model):
   """ Enthält die Anhänge mit den Beschreibungen der Nummern. Die Beschreibung wird erst bei Gelegenheit eingelesen, aber zumindest die Nummern selbst braucht es bevor ein Geschäft mit dieser Nummer eingetragen wird. """
   kontrollregime = models.ForeignKey(Kontrollregimes, on_delete=models.PROTECT)
   """ Zu welchem Kontrollregime die Nummer gehört. Vor allem relevant falls es doppelte Nummern gibt oder der Inhalt der Listen geändert wird (dann würde man ein neues Kontrollregime erstellen und da eintragen). """
-  nummer = models.CharField(max_length=15)
+  nummer = models.CharField(max_length=30)
   """ Die Nummer. """
   beschreibung = models.ForeignKey(Uebersetzungen, on_delete=models.PROTECT, blank=True, null=True)
   """ Die Beschreibung aus der Liste. Ich bin nicht sicher ob die übersetzt werden, falls nicht bleiben die anderen Spalten der fehlenden Sprachen halt leer. Ist zumindest vorerst optional."""

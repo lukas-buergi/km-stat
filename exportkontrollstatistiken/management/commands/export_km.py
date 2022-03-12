@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 #######################################################################
-# Copyright Lukas Bürgi 2019
+# Copyright Lukas Bürgi 2022
 #
 # This file is part of km-stat.
 #
@@ -24,6 +24,9 @@ import csv
 from django.core.management.base import BaseCommand
 
 class Command(BaseCommand):
+    help="""
+    Warning: Overwrites important files without prompting. Make sure you commited any important changes before running this.
+    Exports the Kriegsmaterial exports in the database as csv in a format similar to the one published by the SECO in order to be able to compare the data (and later reimport the data from the verified csv files)."""
     def handle(self, **options):
         for year in range(2006,2019):
             blankLine = ["","","","","","","","","","","","","","","","","","","","","","","",""]

@@ -58,8 +58,8 @@ ML2.c.1.	Specially designed for military use; and
 ML2.c.2.	Specially designed for weapons specified in ML2.a.;
 ML2.d.	Mountings and detachable cartridge magazines, specially designed for the weapons specified in ML2.a.
 ML3.	Ammunition and fuze setting devices, as follows, and specially designed components therefor:
-ML3.a. Ammunition for weapons specified by ML1., ML2. or ML12.;
-ML3.b. Fuze setting devices specially designed for ammunition specified by ML3.a.
+ML3.a.	Ammunition for weapons specified by ML1., ML2. or ML12.;
+ML3.b.	Fuze setting devices specially designed for ammunition specified by ML3.a.
 ML3.Note 1.	Specially designed components specified by ML3. include:
 ML3.Note 1.a.	Metal or plastic fabrications such as primer anvils, bullet cups, cartridge links, rotating bands and munitions metal parts;
 ML3.Note 1.b.	Safing and arming devices, fuzes, sensors and initiation devices ;
@@ -149,8 +149,8 @@ ML7.a.	"Biological agents" or radioactive materials selected or modified to incr
 ML7.b.	Chemical warfare (CW) agents, including:
 ML7.b.1.	CW nerve agents:
 ML7.b.1.a.	O-Alkyl (equal to or less than C10, including cycloalkyl) alkyl (Methyl, Ethyl, n-Propyl or Isopropyl) - phosphonofluoridates, such as:
-ML7.b.1.a.-  Sarin (GB):O-Isopropyl methylphosphonofluoridate (CAS 107-44-8); and
-ML7.b.1.a.-  Soman (GD):O-Pinacolyl methylphosphonofluoridate (CAS 96-64-0);
+ML7.b.1.a.	-Sarin (GB):O-Isopropyl methylphosphonofluoridate (CAS 107-44-8); and
+ML7.b.1.a.	-Soman (GD):O-Pinacolyl methylphosphonofluoridate (CAS 96-64-0);
 ML7.b.1.b.	O-Alkyl (equal to or less than C10, including cycloalkyl)
 ML7.b.1.b.	N,N-dialkyl (Methyl, Ethyl, n-Propyl or Isopropyl) phosphoramidocyanidates, such as: Tabun (GA):O-Ethyl
 ML7.b.1.b.	N,N-dimethylphosphoramidocyanidate (CAS 77-81-6);
@@ -194,8 +194,7 @@ ML7.d.	"Riot control agents", active constituent chemicals and combinations ther
 ML7.d.1.	-Bromobenzeneacetonitrile, (Bromobenzyl cyanide) (CA) (CAS 5798-79-8);
 ML7.d.2.	[(2-chlorophenyl) methylene] propanedinitrile,
 ML7.d.2.	 (o-Chlorobenzylidenemalononitrile) (CS) (CAS 2698-41-1);
-ML7.d.3.	2-Chloro-1-phenylethanone, Phenylacyl chloride
-ML7.d.3. (-chloroacetophenone) (CN) (CAS 532-27-4);
+ML7.d.3.	2-Chloro-1-phenylethanone, Phenylacyl chloride (-chloroacetophenone) (CN) (CAS 532-27-4);
 ML7.d.4.	Dibenz-(b,f)-1,4-oxazephine, (CR) (CAS 257-07-8);
 ML7.d.5.	10-Chloro-5,10-dihydrophenarsazine, (Phenarsazine chloride), (Adamsite), (DM) (CAS 578-94-9);
 ML7.d.6.	N-Nonanoylmorpholine, (MPA) (CAS 5299-64-9);
@@ -243,7 +242,7 @@ ML7.Note 2	The cultures of cells and biological systems specified by ML7.h. and 
 ML8.	"Energetic materials" and related substances, as follows:
 ML8.N.B.1.	See also 1.C.11. on the Dual-Use List.
 ML8.N.B.2.	For charges and devices, see ML4 and 1.A.8. on the Dual-Use List.
-ML8.Technical Notes.
+
 ML8.Technical Notes.1.	For the purposes of ML8., excluding ML8.c.11. or ML8.c.12., 'mixture' refers to a composition of two or more substances with at least one substance being listed in the ML8 sub-items.
 ML8.Technical Notes.2.	Any substance listed in the ML8 sub-items is subject to this list, even when utilised in an application other than that indicated.  (e.g., TAGN is predominantly used as an explosive but can also be used either as a fuel or an oxidizer.)
 ML8.Technical Notes.3.	For the purposes of ML8., particle size is the mean particle diameter on a weight or volume basis.  International or equivalent national standards will be used in sampling and determining particle size.
@@ -330,7 +329,7 @@ ML8.a.41.	FTDO (5,6-(3',4'-furazano)- 1,2,3,4-tetrazine-1,3-dioxide);
 ML8.a.42.	EDNA (Ethylenedinitramine) (CAS 505-71-5);
 ML8.a.43.	TKX-50 (Dihydroxylammonium 5,5'-bistetrazole-1,1'-diolate);
 ML8.a.Note.	ML8.a. includes 'explosive co-crystals'.
-ML8.a.Note.Technical Note.
+
 ML8.a.Note.Technical Note.	An 'explosive co-crystal' is a solid material consisting of an ordered three dimensional arrangement of two or more explosive molecules, where at least one is specified in ML8.a.
 ML8.b.	"Propellants" as follows:
 ML8.b.1.	Any solid "propellant" with a theoretical specific impulse (under standard conditions) of more than:
@@ -480,7 +479,7 @@ ML8.f.15.	Organo-metallic coupling agents as follows:
 ML8.f.15.a.	Neopentyl[diallyl]oxy, tri[dioctyl]phosphato-titanate (CAS 103850-22-2); also known as titanium IV, 2,2[bis 2-propenolato-methyl, butanolato, tris (dioctyl) phosphato] (CAS 110438-25-0); or LICA 12
 ML8.f.15.a.	(CAS 103850-22-2);
 ML8.f.15.b.	Titanium IV, [(2-propenolato-1) methyl, n-propanolatomethyl] butanolato-1, tris[dioctyl] pyrophosphate or KR3538;
-ML8.f.15.c. Titanium IV, [(2-propenolato-1)methyl, n-propanolatomethyl] butanolato-1, tris(dioctyl)phosphate;
+ML8.f.15.c.	Titanium IV, [(2-propenolato-1)methyl, n-propanolatomethyl] butanolato-1, tris(dioctyl)phosphate;
 ML8.f.16.	Polycyanodifluoroaminoethyleneoxide;
 ML8.f.17.	Bonding agents as follows:
 ML8.f.17.a.	1,1R,1S-trimesoyl-tris(2-ethylaziridine) (HX-868, BITA)
@@ -525,7 +524,7 @@ ML8.h.1.h.	Tungsten;
 ML8.h.1.i.	Molybdenum; or
 ML8.h.1.j.	Hafnium;
 ML8.h.2.	Shapes, not specified by ML3, ML4, ML12 or ML16, fabricated from powders specified by ML8.h.1.
-ML8.h.Technical Notes.
+
 ML8.h.Technical Notes.1.	'Reactive materials' are designed to produce an exothermic reaction only at high shear rates and for use as liners or casings in warheads.
 ML8.h.Technical Notes.2.	'Reactive material' powders are produced by, for example, a high energy ball milling process.
 ML8.h.Technical Notes.3.	'Reactive material' shapes are produced by, for example, selective laser sintering.
@@ -540,14 +539,13 @@ ML8.Note 1.g.	Tetranitronaphthalene;
 ML8.Note 1.h.	Trinitroanisol;
 ML8.Note 1.i.	Trinitronaphthalene;
 ML8.Note 1.j.	Trinitroxylene;
--- Note 1 cont.
+
 ML8.Note 1.k.	N-pyrrolidinone; 1-methyl-2-pyrrolidinone (CAS 872-50-4);
 ML8.Note 1.l.	Dioctylmaleate (CAS 142-16-5);
 ML8.Note 1.m.	Ethylhexylacrylate (CAS 103-11-7);
 ML8.Note 1.n.	Triethylaluminium (TEA) (CAS 97-93-8), trimethylaluminium (TMA) (CAS 75-24-1), and other pyrophoric metal alkyls and aryls of lithium, sodium, magnesium, zinc or boron;
 ML8.Note 1.o.	Nitrocellulose (CAS 9004-70-0);
-ML8.Note 1.p.	Nitroglycerin (or glyceroltrinitrate, trinitroglycerine) (NG)
-ML8.Note 1.(CAS 55-63-0);
+ML8.Note 1.p.	Nitroglycerin (or glyceroltrinitrate, trinitroglycerine) (NG) (CAS 55-63-0);
 ML8.Note 1.q.	2,4,6-trinitrotoluene (TNT) (CAS 118-96-7);
 ML8.Note 1.r.	Ethylenediaminedinitrate (EDDN) (CAS 20829-66-7);
 ML8.Note 1.s.	Pentaerythritoltetranitrate (PETN) (CAS 78-11-5);
@@ -578,15 +576,15 @@ ML9.a.1.	Vessels (surface or underwater) specially designed or modified for mili
 ML9.a.1.Note.	ML9.a.1. includes vehicles specially designed or modified for the delivery of divers.
 ML9.a.2.	Surface vessels, not specified in ML9.a.1., having any of the following, fixed or integrated into the vessel:
 ML9.a.2.a.	Automatic weapons specified in ML1., or weapons specified in ML2., ML4., ML12. or ML19., or 'mountings' or hard points for weapons having a calibre of 12.7 mm or greater;
-ML9.a.2.a.Technical Note.
+
 ML9.a.2.a.Technical Note.	'Mountings' refers to weapon mounts or structural strengthening for the purpose of installing weapons.
 ML9.a.2.b.	Fire control systems specified in ML5.;
 ML9.a.2.c.	Having all of the following:
 ML9.a.2.c.1.	'Chemical, Biological, Radiological and Nuclear (CBRN) protection'; and
 ML9.a.2.c.2.	'Pre-wet or wash down system' designed for decontamination purposes; or
-ML9.a.2.c.Technical Notes.
-ML9.a.2.c.1.Technical Notes.	'CBRN protection' is a self-contained interior space containing features such as over-pressurization, isolation of ventilation systems, limited ventilation openings with CBRN filters and limited personnel access points incorporating air-locks.
-ML9.a.2.c.2.Technical Notes.	'Pre-wet or wash down system' is a seawater spray system capable of simultaneously wetting the exterior superstructure and decks of a vessel.
+
+ML9.a.2.c.Technical Notes.1.	'CBRN protection' is a self-contained interior space containing features such as over-pressurization, isolation of ventilation systems, limited ventilation openings with CBRN filters and limited personnel access points incorporating air-locks.
+ML9.a.2.c.Technical Notes.2.	'Pre-wet or wash down system' is a seawater spray system capable of simultaneously wetting the exterior superstructure and decks of a vessel.
 ML9.a.2.d.	Active weapon countermeasure systems specified in ML4.b., ML5.c. or ML11.a. and having any of the following:
 ML9.a.2.d.1.	'CBRN protection';
 ML9.a.2.d.2.	Hull and superstructure, specially designed to reduce the radar cross section;
@@ -602,10 +600,10 @@ ML9.b.2.d.	Totally enclosed;
 ML9.b.3.	Diesel engines having all of the following:
 ML9.b.3.a.	Power output of 37.3 kW (50 hp) or more; and
 ML9.b.3.b.	'Non-magnetic' content in excess of 75% of total mass;
-ML9.b.3.b.Technical Note.
+
 ML9.b.3.b.Technical Note.	For the purposes of ML9.b.3., 'non-magnetic' means the relative permeability is less than 2.
 ML9.b.4.	'Air Independent Propulsion' (AIP) systems specially designed for submarines;
-ML9.b.4.Technical Note.
+
 ML9.b.4.Technical Note.	'Air Independent Propulsion' (AIP) allows a submerged submarine to operate its propulsion system, without access to atmospheric oxygen, for a longer time than the batteries would have otherwise allowed. For the purposes of ML9.b.4., AIP does not include nuclear power.
 ML9.c.	Underwater detection devices, specially designed for military use, controls therefor and components therefor specially designed for military use;
 ML9.d.	Anti-submarine nets and anti-torpedo nets, specially designed for military use;
@@ -618,7 +616,7 @@ ML9.g.2.	Active signature controls; or
 ML9.g.3.	Vibration suppression controls;
 ML9.h.	Naval nuclear equipment and related equipment and components, as follows:
 ML9.h.1.	Nuclear power generating equipment or propulsion equipment, specially designed for vessels specified in ML9.a. and components therefor specially designed or 'modified' for military use.
-ML9.h.1.Technical Note.
+
 ML9.h.1.Technical Note.	For the purpose of ML9.h.1., 'modified' means any structural, electrical, mechanical, or other change that provides a non-military item with military capabilities equivalent to an item which is specially designed for military use.
 ML9.h.1.Note.	ML9.h.1. includes "nuclear reactors".
 ML10.	"Aircraft", "lighter-than-air vehicles", "Unmanned Aerial Vehicles" ("UAVs"), aero-engines and "aircraft" equipment, related equipment, and components, as follows, specially designed or modified for military use:
@@ -634,8 +632,8 @@ ML10.e.	Airborne refuelling equipment specially designed or modified for any of 
 ML10.e.1.	"Aircraft" specified by ML10.a.; or
 ML10.e.2.	Unmanned "aircraft" specified by ML10.c.;
 ML10.f.	'Ground equipment' specially designed for "aircraft" specified by ML10.a. or aero-engines specified by ML10.d.;
-ML10.f.Technical Note.
-ML10.f.Technical Note.'Ground equipment' includes pressure refuelling equipment and equipment designed to facilitate operations in confined areas.
+
+ML10.f.Technical Note.	'Ground equipment' includes pressure refuelling equipment and equipment designed to facilitate operations in confined areas.
 ML10.g.	Aircrew life support equipment, aircrew safety equipment and other devices for emergency escape, not specified in ML10.a., designed for "aircraft" specified by ML10.a.;
 ML10.g.Note.	ML10.g. does not control aircrew helmets that do not incorporate, or have mountings or fittings for, equipment specified in the Munitions List.
 ML10.g.N.B.	For helmets see also ML13.c.
@@ -709,7 +707,7 @@ ML13.c.Note 4	The only helmets specially designed for bomb disposal personnel th
 ML13.d.N.B. 1 	See also entry 1.A.5. on the Dual-Use List.
 ML13.d.N.B. 2	For "fibrous or filamentary materials" used in the manufacture of body armour and helmets, see entry 1.C.10. on the Dual-Use List.
 ML14.	'Specialised equipment for military training' or for simulating military scenarios, simulators specially designed for training in the use of any firearm or weapon specified by ML1. or ML2., and specially designed components and accessories therefor.
-ML14.Technical Note.
+
 ML14.Technical Note.	The term 'specialised equipment for military training' includes military types of attack trainers, operational flight trainers, radar target trainers, radar target generators, gunnery training devices, anti-submarine warfare trainers, flight simulators (including human-rated centrifuges for pilot/astronaut training), radar trainers, instrument flight trainers, navigation trainers, missile launch trainers, target equipment, drone "aircraft", armament trainers, pilotless "aircraft" trainers, mobile training units and training equipment for ground military operations.
 ML14.Note 1. 	ML14. includes image generating and interactive environment systems for simulators, when specially designed or modified for military use.
 ML14.Note 2.	ML14. does not apply to equipment specially designed for training in the use of hunting or sporting weapons.
@@ -738,8 +736,8 @@ ML17.e.	"Robots", "robot" controllers and "robot" "end-effectors", having any of
 ML17.e.1.	Specially designed for military use;
 ML17.e.2.	Incorporating means of protecting hydraulic lines against externally induced punctures caused by ballistic fragments (e.g., incorporating self-sealing lines) and designed to use hydraulic fluids with flash points higher than 839 K (566°C); or
 ML17.e.3.	Specially designed or rated for operating in an electro-magnetic pulse (EMP) environment;
-ML17.e.3.Technical Note.
-ML17.e.3.Technical Note.Electro-magnetic pulse does not refer to unintentional interference caused by electromagnetic radiation from nearby equipment (e.g., machinery, appliances or electronics) or lightning.
+
+ML17.e.3.Technical Note.	Electro-magnetic pulse does not refer to unintentional interference caused by electromagnetic radiation from nearby equipment (e.g., machinery, appliances or electronics) or lightning.
 ML17.f.	"Libraries" specially designed or modified for military use with systems, equipment or components, specified by the Munitions List;
 ML17.g.	Nuclear power generating equipment or propulsion equipment, not specified elsewhere, specially designed for military use and components therefor specially designed or 'modified' for military use;
 ML17.g.Note.	ML17.g. includes "nuclear reactors".
@@ -752,13 +750,13 @@ ML17.m.	Ferries, not specified elsewhere in the Munitions List, bridges and pont
 ML17.n.	Test models specially designed for the "development" of items specified by ML4., ML6., ML9. or ML10.;
 ML17.o.	"Laser" protection equipment (e.g., eye or sensor protection) specially designed for military use;
 ML17.p.	"Fuel cells", not specified elsewhere in the Munitions List, specially designed or 'modified' for military use.
-ML17.Technical Note.
+
 ML17.Technical Note.1.	Not used since 2014
 ML17.Technical Note.2.	For the purpose of ML17, 'modified' means any structural, electrical, mechanical, or other change that provides a non-military item with military capabilities equivalent to an item which is specially designed for military use.
 ML18.	'Production' equipment and components, as follows:
 ML18.a.	Specially designed or modified 'production' equipment for the 'production' of products specified by the Munitions List, and specially designed components therefor;
 ML18.b.	Specially designed environmental test facilities and specially designed equipment therefor, for the certification, qualification or testing of products specified by the Munitions List.
-ML18.Technical Note.
+
 ML18.Technical Note.	For the purposes of ML18., the term 'production' includes design, examination, manufacture, testing and checking.
 ML18.Note.	ML18.a. and ML18.b. include the following equipment:
 ML18.Note.a.	Continuous nitrators;
