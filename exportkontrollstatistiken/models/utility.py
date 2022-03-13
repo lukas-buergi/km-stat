@@ -169,11 +169,12 @@ class Laender(models.Model):
   def fuzzyGet(name, language):
     if(language=='de'):
       corrections = [
-        [['Mazedonien (ehemalige jugoslawische Republik)', 'Nordmazedonien, Republik'], 'Republik Nordmazedonien'],
+        [['Mazedonien (ehemalige jugoslawische Republik)', 'Nordmazedonien, Republik', 'Nordmazedonien', 'Mazedonien, die ehemalige jugoslawische Republik'], 'Republik Nordmazedonien'],
         [['Korea, Republik (Südkorea)', 'Korea (Süd)', 'Korea, Republik'], 'Republik Korea'],
+        [['Korea, Demokratische Volksrepublik'], 'Demokratische Volksrepublik Korea'],
         [['China', 'China, Volksrepublik'], 'Volksrepublik China'],
         [['China, Taiwan', 'Taiwan, Provinz von China'], 'Republik China (Taiwan)'],
-        [['Bosnien-Herzegowina', 'Bosnien und Herzeg.'], 'Bosnien und Herzegowina'],
+        [['Bosnien-Herzegowina', 'Bosnien und Herzeg.', 'Bosnien', 'Bosnien-Herzeg.'], 'Bosnien und Herzegowina'], ## AAAaaah, Bosnien is not the same as B und H, but...
         [['Rwanda'], 'Republik Ruanda'],
         [['Elfenbeinküste'], 'Republik Côte d’Ivoire'],
         [['Ekuador'], 'Republik Ecuador'],
@@ -188,20 +189,33 @@ class Laender(models.Model):
         [['Djibouti'], 'Republik Dschibuti'],
         [['Myanmar (Union)'], 'Republik der Union Myanmar'],
         [['Macau', 'Macao'], 'Sonderverwaltungszone Macau der Volksrepublik China'],
-        [['Arabische Emirate'], 'Vereinigte Arabische Emirate'],
-        [['U.S.A', 'Vereinigte Staaten'], 'Vereinigte Staaten von Amerika'],
-        [['Dominikanische Rep'], 'Dominikanische Republik'],
-        [['Tschechische Rep.'], 'Tschechische Republik'],
-        [['Slowakei', 'Slowakei, Slowakische Republik'], 'Slowakische Republik'],
+        [['Arabische Emirate', 'Arab. Emirate', 'VAE'], 'Vereinigte Arabische Emirate'],
+        [['USA', 'U.S.A', 'Vereinigte Staaten'], 'Vereinigte Staaten von Amerika'],
+        [['Dominikanische Rep', 'Dom. Rep.'], 'Dominikanische Republik'],
+        [['Tschechische Rep.', 'Tschechien'], 'Tschechische Republik'],
+        [['Slowakei', 'Slowakei, Slowakische Republik', 'Slowakai', 'Slowakische Rep.'], 'Slowakische Republik'],
         [['Katar', 'Qatar'], 'Staat Katar'],
         [['Bangladesh', 'Bangladesch'], 'Volksrepublik Bangladesch'],
-        [['Frankreich (inkl. Monaco)', 'Frankreich (mit Monaco)'], 'Frankreich'],
-        [['Großbritannien (Vereinigtes Königreich)'], 'Grossbritannien'],
+        [['Frankreich (inkl. Monaco)', 'Frankreich (mit Monaco)', 'Neukaledonien', 'Frankreich mit Monaco'], 'Frankreich'], # Neukaledonien hier zu Frankreich ist nehmen ist... na ja.
+        [['Großbritannien (Vereinigtes Königreich)', 'Gr. Britannien'], 'Grossbritannien'],
         [['Brunei Darussalam'], 'Brunei'],
         [['Ecuador'], 'Republik Ecuador'],
-        [['Tansania, Vereinigte Republik'], 'Vereinigte Republik Tansania'],
-        [['Serbia'], 'Serbien']
+        [['Tansania, Vereinigte Republik', 'Tansania'], 'Vereinigte Republik Tansania'],
+        [['Serbia'], 'Serbien'],
+        [['Saudi Arabien'], 'Saudi-Arabien'],
+        [['Bhutan', 'Buthan'], 'Königreich Bhutan'],
+        [['Finnnland'], 'Finnland'],
+        [['Burkina Fasso'], 'Burkina Faso'],
+        [['Bahrein', 'Bahrain'], 'Königreich Bahrain'],
+        [['Aegypten'], 'Ägypten'],
+        [['Kirgistan'], 'Kirgisische Republik'],
+        [['Kap Verde'], 'Republik Cabo Verde'],
+        [['Russland'], 'Russische Föderation'],
+        [['Neukaledonien'], '']
       ]
+
+      name = name.strip()
+
       for c in corrections:
         if(name in c[0]):
           name=c[1]
