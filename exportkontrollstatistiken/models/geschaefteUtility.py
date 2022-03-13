@@ -35,9 +35,7 @@ import calendar
 import os
 
 class Geschaeftslaendersummen(models.Model):
-  """Utility model which contains partial sums per country, year and export type.
-  TODO: Neues Feld für nur die Summe von dem Jahr.
-  TODO: Did I do this?"""
+  """Utility model which contains partial sums per country, year and export type."""
   
   endempfaengerstaat = models.ForeignKey(Laender, on_delete=models.PROTECT)
   """ As for individual Geschaefte. """

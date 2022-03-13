@@ -27,19 +27,30 @@ from django.core.management.base import BaseCommand
 class Command(BaseCommand):
     help="""
     Warning: Overwrites important database entries without prompting. Make sure to backup any important changes before running this.
+
+    TODO: Makes a mess because it doesn't thoroughly delete entries not used anymore and creates duplicate entries.
+
     Imports the Wassenaar munitions list(s) into the database. It saves them into the export control regime "Wassenaar Arrangement" - while this can be directly used for exports, long term we should verify how and when Switzerland accepts changes to the upstream lists and make a Swiss version of the upstream lists.
-    Right now it only imports the 2018 list and gives it validity over the whole period."""
+    Right now it only imports the 2018 list and gives it validity over the whole period.
+    
+    Also KM."""
     def handle(self, **options):
-        for mlv in [["2018-12-06 18 1/15 - WA-LIST (18) 1 - ML.manual.txt", "18 1", datetime.date(1900, 1, 1), datetime.date(2200, 12, 31)]]:
+        # once the km and bmg exports can be re-imported from the files, delete all of them from the db and uncomment the following lines to get rid of bad old data:
+        #Exportkontrollnummern.objects.all().delete()
+        #Kontrollregimes.objects.all().delete()
+        for mlv in [
+            ["/code/export-control-code-lists/wassenaar-lists/2018-12-06 18 1/15 - WA-LIST (18) 1 - ML.manual.txt", "Wassenaar Arrangement 18 1", "Special Military Goods",  datetime.date(1900, 1, 1), datetime.date(2200, 12, 31), "en"],
+            ["/code/export-control-code-lists/km-swiss/2022-01-01.manual.txt", "SR 514.511 Anhang 1 (KMV) 2022-01-01", "Kriegsmaterial",  datetime.date(2022, 1, 1), datetime.date(2200, 12, 31), "de"]
+        ]:
             # find/create the right export control regime 
-            kontrollregimeName = "Wassenaar Arrangement " + mlv[1]
+            kontrollregimeName = mlv[1]
             try:
-                kontrollregime=Kontrollregimes.objects.get(name__en=kontrollregimeName)
+                kontrollregime=Kontrollregimes.objects.get(**{"name__" + mlv[5] : kontrollregimeName})
             except geschaefte.Kontrollregimes.DoesNotExist:
                 print("Added Kontrollregime " + kontrollregimeName)
-                name=Uebersetzungen(en=kontrollregimeName)
+                name=Uebersetzungen(**{mlv[5] : kontrollregimeName})
                 name.save()
-                kontrollregime=Kontrollregimes(name=name, gueterArt=GueterArten.objects.get(name__en="Dual-Use Goods"), inkrafttreten=mlv[2], aufgehobenwerden=mlv[3])
+                kontrollregime=Kontrollregimes(name=name, gueterArt=GueterArten.objects.get(**{"name__" + mlv[5] : mlv[2]}), inkrafttreten=mlv[3], aufgehobenwerden=mlv[4])
                 kontrollregime.save()
             
             # delete all existing entries in this export contol regime because we are reimporting them
@@ -49,10 +60,14 @@ class Command(BaseCommand):
             # step 1 put them into list
             codesSet=set()
             descList=[]
-            with open("/code/utils/wassenaar-lists/" + mlv[0], newline='') as f:
+            with open(mlv[0], newline='') as f:
                 reader = csv.reader(f, delimiter='\t')
                 for row in reader:
-                    assert(len(row) in [0,2])
+                    try:
+                        assert(len(row) in [0,2])
+                    except AssertionError:
+                        print(row)
+                        raise
                     if(len(row) == 2):
                         descList.append(row)
                         codesSet.add(row[0])
@@ -67,6 +82,9 @@ class Command(BaseCommand):
             
             # step 3 put dict into db
             for code, desc in codesDict.items():
-                descO = Uebersetzungen(en=desc)
+                descO = Uebersetzungen(**{mlv[5] : desc})
                 descO.save()
-                Exportkontrollnummern(kontrollregime=kontrollregime, nummer=code, beschreibung=descO).save()
+                ekn=Exportkontrollnummern(kontrollregime=kontrollregime, nummer=code, beschreibung=descO)
+                ekn.save()
+            print(str(len(codesDict)) + " export control codes added to " + mlv[1])
+            

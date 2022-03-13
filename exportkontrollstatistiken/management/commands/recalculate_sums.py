@@ -1,6 +1,5 @@
-#!/usr/bin/env python3
 #######################################################################
-# Copyright Lukas Bürgi 2019
+# Copyright Lukas Bürgi 2022
 #
 # This file is part of km-stat.
 #
@@ -20,4 +19,9 @@
 ########################################################################
 
 from exportkontrollstatistiken.models import Geschaeftslaendersummen
-Geschaeftslaendersummen.recalculate()
+from django.core.management.base import BaseCommand
+
+class Command(BaseCommand):
+    help="""Recalculate partial sums used to speed up calculating arbitrary sums of export values."""
+    def handle(self, **options):
+        Geschaeftslaendersummen.recalculate()

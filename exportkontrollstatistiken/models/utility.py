@@ -170,9 +170,9 @@ class Laender(models.Model):
     if(language=='de'):
       corrections = [
         [['Mazedonien (ehemalige jugoslawische Republik)', 'Nordmazedonien, Republik'], 'Republik Nordmazedonien'],
-        [['Korea, Republik (Südkorea)', 'Korea (Süd)'], 'Republik Korea'],
+        [['Korea, Republik (Südkorea)', 'Korea (Süd)', 'Korea, Republik'], 'Republik Korea'],
         [['China', 'China, Volksrepublik'], 'Volksrepublik China'],
-        [['China, Taiwan'], 'Republik China (Taiwan)'],
+        [['China, Taiwan', 'Taiwan, Provinz von China'], 'Republik China (Taiwan)'],
         [['Bosnien-Herzegowina', 'Bosnien und Herzeg.'], 'Bosnien und Herzegowina'],
         [['Rwanda'], 'Republik Ruanda'],
         [['Elfenbeinküste'], 'Republik Côte d’Ivoire'],
@@ -189,19 +189,26 @@ class Laender(models.Model):
         [['Myanmar (Union)'], 'Republik der Union Myanmar'],
         [['Macau', 'Macao'], 'Sonderverwaltungszone Macau der Volksrepublik China'],
         [['Arabische Emirate'], 'Vereinigte Arabische Emirate'],
-        [['U.S.A'], 'Vereinigte Staaten von Amerika'],
+        [['U.S.A', 'Vereinigte Staaten'], 'Vereinigte Staaten von Amerika'],
         [['Dominikanische Rep'], 'Dominikanische Republik'],
         [['Tschechische Rep.'], 'Tschechische Republik'],
-        [['Slowakei'], 'Slowakische Republik'],
+        [['Slowakei', 'Slowakei, Slowakische Republik'], 'Slowakische Republik'],
         [['Katar', 'Qatar'], 'Staat Katar'],
         [['Bangladesh', 'Bangladesch'], 'Volksrepublik Bangladesch'],
+        [['Frankreich (inkl. Monaco)', 'Frankreich (mit Monaco)'], 'Frankreich'],
+        [['Großbritannien (Vereinigtes Königreich)'], 'Grossbritannien'],
+        [['Brunei Darussalam'], 'Brunei'],
+        [['Ecuador'], 'Republik Ecuador'],
+        [['Tansania, Vereinigte Republik'], 'Vereinigte Republik Tansania'],
+        [['Serbia'], 'Serbien']
       ]
       for c in corrections:
         if(name in c[0]):
           name=c[1]
           break
-    
+  
     return(Laender.objects.get(**{"name__" + language : name}))
+      
   class Meta:
     verbose_name = 'Land'
     verbose_name_plural = 'Länder'

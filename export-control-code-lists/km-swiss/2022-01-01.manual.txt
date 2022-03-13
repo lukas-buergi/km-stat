@@ -1,0 +1,397 @@
+
+
+
+KM 1.	Hand- und Faustfeuerwaffen jeglichen Kalibers und Zubehör sowie besonders konstruierte Bestandteile hierfür, jedoch ohne:
+
+KM 1.a.	eindeutig erkennbare Jagd- und Sportwaffen (z. B. nach ISSF-Norm), die in derselben Ausführung nicht auch Kampfwaffen sind;
+
+KM 1.b.	Einzellader und Vorderlader;
+
+KM 1.c.	Faustfeuerwaffen und Repetiergewehre für Randfeuermunition;
+
+KM 1.d.	alte Waffen, für die keine verwendbare Munition mehr herge­stellt wird oder im öffentlichen Handel erhältlich ist.
+
+KM1.d.Anmerkung.	KM 1.d. erfasst auch folgende Waffen:
+
+KM1.d.Anmerkung.1.	Musketen, Gewehre und Karabiner, die vor 1890 hergestellt wur­den, und ihre Nachbildungen;
+
+KM1.d.Anmerkung.2.	Revolver, Pistolen und Maschinenwaffen, die vor 1890 hergestellt wurden, und ihre Nachbildungen.
+
+KM1.	KM1.a. bis KM 1.d. erfassen auch für Exerziermunition besonders konstruierte Waffen, die keine von Nummer KM 3 erfasste Munition verschiessen können.
+
+
+
+KM2.	Bewaffnung oder Waffen jeglichen Kalibers (jedoch ohne Hand und Faustfeuerwaffen der KM 1), Werfer und Zubehör wie folgt sowie besonders konstruierte Bestandteile hierfür:
+
+KM2.a.	Geschütze, Haubitzen, Kanonen, Mörser, Panzerabwehrwaffen, Einrichtungen zum Abfeuern von Geschossen und Raketen, militä­rische Flammenwerfer und rückstossfreie Waffen;
+
+KM2.a.Anmerkung.	KM 2.a. schliesst Injektoren, Messgeräte, Speichertanks und besonders konstruierte Bestandteile für den Einsatz von flüssigen Treibladungen für einen der von KM 2.a. erfassten Ausrüstungsgegenstände ein.
+
+KM2.b.	militärische Nebel- und Gaswerfer, militärische pyrotechnische Werfer oder Generatoren.
+
+KM2.b.Anmerkung.	KM 2.b. erfasst nicht Signalpistolen.
+
+
+
+KM3.	Munition für die von den Positionen KM 1, KM 2 oder KM 12 er­fassten Waffen sowie besonders konstruierte Bestandteile hierfür
+
+
+
+KM3.Anmerkungen.1.	Besonders konstruierte Bestandteile schliessen ein:
+
+KM3.Anmerkungen.1.a.	Metall- oder Kunststoffbestandteile, z.B. Ambosse in Zündhüt­chen, Geschossmäntel, Patronengurtglieder, Führungsringe und andere Mu­nitionsbestandteile aus Metall;
+
+KM3.Anmerkungen.1.b.	Sicherungseinrichtungen, Zünder, Sensoren und Anzündvorrich­tun­gen;
+
+KM3.Anmerkungen.1.c.	Stromquellen für die einmalige Abgabe einer hohen Leistung;
+
+KM3.Anmerkungen.1.d.	abbrennbare Hülsen für Treibladungen;
+
+KM3.Anmerkungen.1.e.	Submunition einschliesslich Bomblets, Minelets und endphasen­gelenkter Geschosse.
+
+KM3.Anmerkungen.2.	KM 3 erfasst nicht Munition ohne Geschoss (Manöver-, Signalmuni­tion) und Exerziermunition mit gelochter Pulverkammer.
+
+
+
+KM4.	Bomben, Torpedos, Raketen, Flugkörper sowie zugehörige Aus­rüstung und Zubehör wie folgt, besonders konstruiert für Kampf- oder Gefechtszwecke, und besonders konstruierte Bestandteile hier­für: Bomben, Torpedos, Granaten, Rauch- und Nebelbüchsen, Raketen, Minen, Flugkörper, Wasserbomben, Sprengkörper-Ladungen, Vor­richtun­gen und Zubehör, militärische Pyrotechnika, Leuchtpatronen und Dar­stellungsmunition (d.h. Ausrüstung, welche die Eigenschaften einer der von KM 4 erfassten Waren simuliert).
+
+
+KM4.Anmerkung.	KM 4 schliesst ein:
+
+KM4.Anmerkung.1.	Rauch- und Nebelgranaten, Feuerbomben, Brandbomben und Spreng­körper;
+
+KM4.Anmerkung.2.	Antriebsdüsen für Flugkörper und Bugspitzen für Wiedereintrittskörper.
+
+
+
+KM5.	Feuerleiteinrichtungen, besonders konstruiert für Kampf- und Gefechtszwecke, wie folgt, sowie besonders konstruierte Bestandteile und besonders konstruiertes Zubehör hierfür
+
+
+
+KM5.a.	Waffenzielgeräte, Bombenzielrechner, Rohrwaffenrichtgeräte und Waffensteuersysteme;
+
+KM5.b.	Zielerfassungs-, Zielzuordnungs-, Zielentfernungsmess- oder Zielverfol­gungs­systeme; Ortungs- oder Datenverknüpfungsvorrichtungen (data fusion) und Ausrüstung zur Sensorintegration (sensor integration equipment).
+
+
+
+KM6.	Panzer- und andere Landfahrzeuge und Bestandteile hierfür, besonders konstruiert oder geändert für Kampf- und Gefechtszwecke
+
+
+
+KM6.Technische Anmerkung.	«Landfahrzeuge» im Sinne der KM 6 schliessen auch entsprechend ausgerüstete Anhänger ein.
+
+
+KM6.Anmerkungen.1.	KM 6 schliesst ein:
+
+KM6.Anmerkungen.1.a.	Panzerfahrzeuge mit oder ohne Bewaffnung, die spezifisch für Kampf- und Gefechtszwecke konzipiert oder abgeändert sind (umfasst auch Entpannungs- und Bergungspanzer)
+
+KM6.Anmerkungen.1.b.	andere Fahrzeuge aller Art, die spezifisch für den Einsatz von Waf­fen konzipiert oder abgeändert worden sind (wie z.B. Kampf- und Ge­fechtsfahrzeuge, bewaffnet oder unbewaffnet, ausgestattet mit Lafetten oder Ausrüstung zum Minenlegen oder zum Starten der von KM 4 er­fassten Waffen);
+
+KM6.Anmerkungen.1.c.	Raupenfahrzeuge, die spezifisch für Kampf- und Gefechtszwecke kon­zipiert oder abgeändert sind.
+
+KM6.Anmerkungen.2.	Die Konzipierung oder Änderung eines der erwähnten Landfahrzeuge spe­zifisch für Kampf- und Gefechtszwecke kann eine bauliche, elektri­sche oder mechanische Änderung bedeuten, die ein oder mehrere ent­sprechend konstruierte Bestandteile betrifft. Solche Bestandteile schlie­ssen ein:
+
+KM6.Anmerkungen.2.a.	Luftreifendecken in beschussfester oder bei abgelassener Luft fahr­tauglicher Spezialbauart;
+
+KM6.Anmerkungen.2.b.	Reifendruck-Regelvorrichtungen, die aus dem Inneren des fahren­den Fahrzeugs bedient werden können;
+
+KM6.Anmerkungen.2.c.	Panzerschutz von wichtigen Teilen (z.B. Kraftstofftanks oder Fahr­zeugkabinen);
+
+KM6.Anmerkungen.2.d.	besondere Verstärkungen für die Aufnahme von Waffen.
+
+KM6.Anmerkungen.3.	KM 6 erfasst keine zivilen Sonderschutzlimousinen und Werttransporter mit Schutzpanzerung.
+
+
+
+KM7.	Tränengase und andere Reizstoffe zur Bekämpfung von Unruhen:
+KM7.1.	CA: Brombenzylcyanid (CAS-Nr. 5798-79-8);
+KM7.2.	CS: o-Chlorbenzylidenmalodinitril (CAS-Nr. 2698-41-1);
+KM7.3.	CN: -Chloracetophenon (CAS-Nr. 532-27-4);
+KM7.4.	CR: Dibenz(b,f)-1,4-oxazepin (CAS-Nr. 257-07-8).
+
+
+KM7.Anmerkungen.1.	Nicht erfasst sind:
+
+KM7.Anmerkungen.1.a.	Bromessigsäureethylester;
+
+KM7.Anmerkungen.1.b.	Xylylbromide;
+
+KM7.Anmerkungen.1.c.	Benzylbromid;
+
+KM7.Anmerkungen.1.d.	Benzyljodid;
+
+KM7.Anmerkungen.1.e.	Bromaceton;
+
+KM7.Anmerkungen.1.f.	Bromcyan;
+
+KM7.Anmerkungen.1.g.	Brommethylethylketon;
+
+KM7.Anmerkungen.1.h.	Chloraceton;
+
+KM7.Anmerkungen.1.i.	Jodessigsäureethylester;
+
+KM7.Anmerkungen.1.j.	Jodaceton.
+
+KM7.Anmerkungen.2.	Nicht erfasst sind einzeln abgepackte Tränengase oder andere Reizstoffe für persönliche Selbstverteidigungszwecke.
+
+
+
+KM8.	Militärische Explosivstoffe und Brennstoffe, einschliesslich Treibstoffe:
+
+KM8.a.	Explosivstoffe und Treibstoffe, welche die folgenden Leistungsparameter erfüllen:
+
+KM8.a.1.	Explosivstoffe mit einer Detonationsgeschwindigkeit grösser als 8700 m/s oder einem Detonationsdruck grösser als 34 GPa (340 kbar);
+
+KM8.a.2.	organische Explosivstoffe, die einen Detonationsdruck grösser/gleich 25 GPa (250 kbar) ergeben und bei Tempe­raturen grösser/gleich 250°C (523 K) für die Dauer von 5 min oder länger stabil bleiben;
+
+KM8.a.3.	Feststofftreibmittel der UN-Klasse 1.1 mit einem theoretisch erreichbaren spezifischen Impuls (bei Standard­bedingungen) von mehr als 250  s bei metallfreien oder mehr als 270 s bei aluminiumhaltigen Mischungen;
+
+KM8.a.4.	Feststofftreibmittel der UN-Klasse 1.3 mit einem theoretisch erreichbaren spezifischen Impuls von mehr als 230 s bei halogenfreien, 250 s bei metallfreien und 266 s bei metallhaltigen Mischungen;
+
+KM8.a.5.	Schiesspulver mit einer Kraftkonstante grösser als 1200 kJ/kg;
+
+KM8.a.6.	Explosivstoffe, Treibstoffe oder pyrotechnische Stoffe, die eine stabile gleichförmige Abbrandgeschwindigkeit von mehr als 38 mm/s bei 6,89 MPa (68,9 bar) und 21°C (294 K) aufweisen; oder
+
+KM8.a.7.	elastomermodifizierte gegossene zweibasige Treibmittel (EMCDB), die bei -40 °C (233 K) eine Dehnungsfähigkeit von mehr als 5 % bei grösster Beanspruchung aufweisen;
+
+KM8.b.	militärische Pyrotechnika;
+
+KM8.c.	andere Stoffe wie folgt:
+
+KM8.c.1.	Luftfahrzeug-Treibstoffe, besonders konstruiert für militärische Zwecke;
+
+KM8.c.2.	militärische Materialien, die für die Verwendung in Flammenwerfern oder Brandbomben besonders entwickelte Verdicker für Kohlenwasserstoff-Brennstoffe enthalten, wie Metallstearate oder Palmitate (Oktal) (CAS-Nr. 637-12-7) und M1, M2, M3-Verdicker;
+
+KM8.c.3.	flüssige Oxidationsmittel, die aus inhibierter rauchender Salpetersäure (IRFNA) oder Sauerstoffdifluorid bestehen oder diese Stoffe enthalten.
+
+KM8.Anmerkung.	Luftfahrzeug-Treibstoffe, die von KM 8.c.1. erfasst werden, sind Fertigprodukte und nicht deren Einzelkomponenten
+
+
+
+KM9.	Kriegsschiffe und Zubehör wie folgt sowie Bestandteile hierfür, besonders konstruiert für Kampf- und Gefechtszwecke:
+
+
+KM9.a.	Kampfschiffe oder Schiffe, besonders konstruiert oder beson­ders geändert für Angriffs- oder Verteidigungshandlungen (über oder unter Wasser), auch wenn für nicht-militärische Zwecke umgebaut, und ungeachtet ihres derzeitigen Reparaturzustands oder ihrer Be­triebsfähigkeit oder ob sie Waffeneinsatzsysteme oder Panzerun­gen enthalten, sowie Schiffskörper oder Teile von Schiffskörpern für solche Schiffe;
+
+KM9.b.	Motoren wie folgt:
+
+KM9.b.1.	Dieselmotoren, besonders konstruiert für U-Boote, mit allen folgenden Eigenschaften:
+
+KM9.b.1.a.	Leistung grösser/gleich 1,12 MW (1500 PS); und
+
+KM9.b.1.b.	Drehzahl grösser/gleich 700 U/min;
+
+KM9.b.2	Elektromotoren, besonders konstruiert für U-Boote, mit allen folgenden Eigenschaften:
+
+KM9.b.2.a.	Leistung grösser als 0,75 MW (1000 PS);
+
+KM9.b.2.b.	schnell umsteuerbar;
+
+KM9.b.2.c.	flüssigkeitsgekühlt; und 
+
+KM9.b.2.d.	vollständig gekapselt;
+
+KM9.b.3.	nicht-magnetische Dieselmotoren mit einer Leistung grösser/gleich 37,3 kW (50 PS) und mit einem nicht-magnetischem Anteil von mehr als 75 % des Gesamtgewichts.
+
+
+
+KM10.	Luftfahrzeuge, unbemannte Luftfahrzeuge, Triebwerke, Luftfahr­zeug-Ausrüstung, Zusatzausrüstung und Bestandteile, besonders konstruiert oder geändert für Kampf- oder Gefechts­zwecke, wie folgt:
+
+
+KM10.a.	Kampfflugzeuge und -hubschrauber und besonders konstruierte Bestandteile hierfür;
+
+KM10.b.	andere Luftfahrzeuge, besonders konstruiert oder geändert für mi­litärischen Angriff;
+
+KM10.c.	Triebwerke für Luftfahrzeuge der Buchstaben a und b hievor und besonders konstruierte Bestandteile hierfür;
+
+KM10.d.	unbemannte Luftfahrzeuge einschliesslich ferngelenkter Flugkörper (remotely piloted air vehicles – RPVs –) und autonome, programmierbare Fahrzeuge, besonders konstruiert oder besonders geändert für Kampf- oder Gefechtszwecke, sowie deren Startgeräte, unterstützende Bodengeräte und zugehörige Ausrüstung für die Steuerung.
+
+
+KM10.Anmerkungen.1.	KM 10.b. erfasst nicht Luftfahrzeuge oder Varianten dieser Luftfahr­zeuge, besonders konstruiert für militärische Zwecke, die:
+
+KM10.Anmerkungen.1.a.	nicht für eine militärische Verwendung konfiguriert sind und die nicht mit technischen Ausrüstungen oder Zusatzeinrichtungen ver­sehen sind, die für Kampf- oder Gefechtszwecke besonders kon­struiert oder geändert sind; und
+
+KM10.Anmerkungen.1.b.	von einer Zivilluftfahrtbehörde eines Teilnehmerstaates für die zivile Verwendung zugelassen sind.
+
+KM10.Anmerkungen.2.	KM 10.c. erfasst nicht:
+
+KM10.Anmerkungen.2.a.	Triebwerke, konstruiert oder geändert für Kampf- oder Gefechts­zwecke, die von einer Zivilluftfahrtbehörde eines Teilnehmerstaates für die Verwendung in zivilen Luftfahrzeugen zugelassen sind, sowie deren besonders konstruierte Bestandteile;
+
+KM10.Anmerkungen.2.b.	Kolbentriebwerke oder deren besonders konstruierte Bestandteile.
+
+KM10.Anmerkungen.3.	Die Erfassung in KM 10.b. und KM 10.c. von besonders konstruierten Bestandteilen und zugehöriger Ausrüstung für nicht-militärische Luftfahrzeuge oder Triebwerke, die für Kampf- und Gefechtszwecke geändert sind, erstreckt sich nur auf solche militärischen Bestandteile und zugehörige militärische Ausrüstung, die für die Änderung für Kampf- oder Gefechtszwecke nötig sind.
+
+KM10.Anmerkungen.4.	KM 10.d umfasst keine Aufklärungsdrohnen.
+
+
+
+KM11.	Elektronische Ausrüstung, soweit nicht anderweitig von dieser Liste erfasst, besonders konstruiert für Kampf- und Gefechtszwecke, und besonders konstruierte Bestandteile hierfür
+
+KM11.Anmerkung.	KM 11 schliesst folgende Ausrüstung ein:
+
+KM11.Anmerkung.a.	Ausrüstung für elektronische Gegenmassnahmen (ECM) und elektronische Schutzmassnahmen (ECCM), einschliesslich elektronischer Ausrüstung zum Stören und Gegenstören, d.h. Geräte, konstruiert, um in Radar- oder Funkgeräten Störsignale oder verfälschende Signale zu erzeugen oder auf andere Weise den Empfang, den Betrieb oder die Wirksamkeit gegnerischer Empfänger einschliesslich der Geräte für Gegenmassnahmen zu stören;
+
+KM11.Anmerkung.b.	Ausrüstung für Unterwassergegenmassnahmen einschliesslich akustischer und magnetischer Störung und Täuschung, die in Sonarempfängern Störsi­gnale oder verfälschende Signale erzeugen.
+
+
+
+KM12.	Waffensysteme mit hoher kinetischer Energie (high velocity kinetic energy weapon systems) wie folgt sowie besonders konstruierte Bestandteile hierfür:
+
+KM12.	Waffensysteme mit hoher kinetischer Energie (kinetic energy weapon systems), besonders konstruiert für die Vernichtung oder Abwehr (Unterbrechung des Einsatzes) eines gegnerischen Objekts.
+
+
+
+KM12.Anmerkungen.1.	KM 12 schliesst folgende Ausrüstung ein, sofern sie besonders konstruiert ist für Waffensysteme mit hoher kinetischer Energie:
+
+KM12.Anmerkungen.1.a.	Startantriebssysteme, die Massen grösser als 0,1 g auf Geschwin­dig­keiten über 1,6 km/s in den Betriebsarten Einzelfeuer oder Schnell­feuer beschleunigen können;
+
+KM12.Anmerkungen.1.b.	Ausrüstung für die Erzeugung von Primärenergie, Elektroschutz (electric armour), Energiespeicherung, Kontrolle des Wärmehaus­halts und Klimatisierung, Schaltvorrichtungen und Ausrüstung für die Handhabung von Treibstoffen, elektrische Schnittstellen zwi­schen Stromversorgung, Geschütz und anderen elektrischen Richt­funktionen des Turms;
+
+
+KM12.Anmerkungen.1.c.	Zielerfassungs-, Zielverfolgungs-, Feuerleitsysteme und Systeme zur Wirkungsermittlung;
+
+KM12.Anmerkungen.1.d.	Zielsuch-, Zielansteuerungssysteme und Systeme zur Umlenkung des Vortriebs (seitliche Beschleunigung) für Geschosse.
+
+KM12.Anmerkungen.2.	KM 12 erfasst Systeme, die eine der folgenden Antriebsarten verwen­den:
+
+KM12.Anmerkungen.2.a.	elektromagnetisch;
+
+KM12.Anmerkungen.2.b.	elektrothermisch;
+
+KM12.Anmerkungen.2.c.	Plasmaantrieb;
+
+KM12.Anmerkungen.2.d.	Leichtgasantrieb; oder
+
+KM12.Anmerkungen.2.e.	chemisch (sofern in Kombination mit den zu a bis d aufgeführten An­triebsarten verwendet).
+
+KM12.Anmerkungen.3.	KM 12 erfasst nicht die Technologie für die magnetische Induktion zum Dauerantrieb ziviler Transporteinrichtungen.
+
+KM12.Anmerkungen.4.	Waffen, die Unterkalibermunition verwenden oder allein mit chemischem Antrieb arbeiten, und Munition hierfür: siehe KM 1, KM 2, KM 3 und KM 4.
+
+
+
+KM13.	Spezialpanzer- oder Schutzausrüstung und Konstruktionen sowie Bestandteile wie folgt:
+
+KM13.a.	Panzerplatten wie folgt:
+
+KM13.a.1.	hergestellt, um einen militärischen Standard oder eine militä­rische Spezifikation zu erfüllen; oder
+
+KM13.a.2.	geeignet für Kampf- oder Gefechtszwecke;
+
+KM13.b.	Konstruktionen aus metallischen und nicht-metallischen Werkstoffen oder Kombinationen hieraus, besonders konstruiert, um militärische Systeme beschussfest zu machen.
+
+KM13.Anmerkung.	KM 13.b. schliesst Werkstoffe ein, besonders konstruiert zur Bildung einer explosionsreaktiven Panzerung oder zum Bau militärischer Unterstände (shelters).
+
+
+
+
+
+
+
+
+
+
+
+
+KM16.	Schmiedestücke, Gussstücke und andere unfertige Erzeugnisse, deren Verwendung in einer erfassten Ware anhand von Materialzusammensetzung, Geometrie oder Funktion bestimmt werden kann und die für eine der von den Positionen KM 1, KM 2, KM 3, KM 4, KM 6, KM 9, KM 10, KM 12 oder KM 19 erfassten Waren besonders konstruiert sind
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+KM17.	Verschiedene Ausrüstungsgegenstände, Materialien und Bibliotheken wie folgt sowie besonders konstruierte Bestandteile hierfür:
+
+
+KM17.a.	Roboter, Robotersteuerungen und Roboter-Endeffektoren, beson­ders konstruiert für Kampf- oder Gefechtszwecke;
+
+KM17.b.	Bibliotheken (parametrische technische Datenbanken), besonders entwickelt für Kampf- oder Gefechtszwecke in Verbindung mit Ausrüstung, die von dieser Liste erfasst wird;
+
+KM17.c.	Nukleare Energieerzeugungs- oder Antriebsausrüstung, einschliesslich Kernreaktoren, besonders konstruiert für Kampf- oder Gefechtszwecke, sowie besonders für Kampf- oder Gefechtszwecke konstruierte oder geänderte Bestandteile.
+
+KM17.Technische Anmerkung.	«Bibliothek» (parametrische technische Datenbank) im Sinne von KM 17 ist eine Sammlung technischer Informationen militärischer Natur, deren Ausnutzung die Leistungsfähigkeit militärischer Ausrüstung oder Systeme erhöhen kann.
+
+
+
+
+
+
+
+KM19.	Strahlenwaffen-Systeme wie folgt und besonders konstruierte Bestandteile hierfür:
+
+
+KM19.a.	Laser-Systeme, besonders konstruiert für die Vernichtung oder Abwehr (Unterbrechung des Einsatzes) eines gegnerischen Objekts;
+
+KM19.b.	Teilchenstrahl-Systeme, geeignet für die Vernichtung oder Abwehr (Unterbrechung des Einsatzes) eines gegnerischen Objekts;
+
+KM19.c.	energiereiche Hochfrequenzsysteme, geeignet für die Vernichtung oder Abwehr (Unterbrechung des Einsatzes) eines gegnerischen Objekts.
+
+
+KM19.Anmerkungen.1.	Von KM 19 erfasste Strahlenwaffen schliessen Systeme ein, deren Lei­s­tungsfähigkeit bestimmt wird durch den kontrollierten Einsatz von: 
+
+KM19.Anmerkungen.1.a.	Lasern mit einer Dauerstrich- oder Impulsenergie, die eine mit herkömmlicher Munition vergleichbare Vernichtungswirkung errei­chen;
+
+KM19.Anmerkungen.1.b.	Teilchenbeschleunigern, die einen geladenen oder ungeladenen Strahl mit Vernichtungswirkung aussenden;
+
+KM19.Anmerkungen.1.c.	Hochfrequenzsendern mit hoher Impulsenergie oder hoher Durchschnittsenergie, die ein ausreichend starkes Feld erzeugen, um elektronische Schaltungen in einem entfernt liegenden Ziel ausser Betrieb zu setzen.
+
+KM19.Anmerkungen.2.	KM 19 schliesst folgende Ausrüstung ein, sofern sie besonders kon­struiert ist für Strahlenwaffensysteme:
+
+KM19.Anmerkungen.2.a.	Geräte für die Erzeugung von Primärenergie, Energiespeicher, Schalt­vorrichtungen, Geräte für die Energiekonditionierung und Geräte für die Handhabung von Treibstoffen;
+
+KM19.Anmerkungen.2.b.	Zielerfassungs- und Zielverfolgungssysteme;
+
+KM19.Anmerkungen.2.c.	Systeme für die Auswertung der Schadenswirkung, Zerstörung oder Einsatzunterbrechung;
+
+KM19.Anmerkungen.2.d.	Geräte für die Strahllenkung, -ausbreitung und -ausrichtung;
+
+KM19.Anmerkungen.2.e.	Geräte für die rasche Strahlschwenkung zur schnellen Bekämpfung von Mehrfachzielen;
+
+KM19.Anmerkungen.2.f.	anpassungsfähige Optiken oder Phasenkonjugatoren (phase conjugators);
+
+KM19.Anmerkungen.2.g.	Strominjektoren für negative Wasserstoffionenstrahlen; 
+
+KM19.Anmerkungen.2.h.	weltraumgeeignete Beschleuniger-Bestandteile (accelerator components);
+
+KM19.Anmerkungen.2.i.	negative Ionenstrahl-Ausweitungs-Ausrüstung (negative ion beam funnelling equipment);
+
+KM19.Anmerkungen.2.j.	Ausrüstung zur Steuerung und Schwenkung eines energiereichen Ionenstrahls;
+
+KM19.Anmerkungen.2.k.	weltraumgeeignete Folien zur Neutralisierung von negativen Wasserstoffisotopenstrahlen.
+
+
+
+KM20.	Kryogenische (Tieftemperatur-) und supraleitende Ausrüstung wie folgt sowie besonders konstruierte Bestandteile und besonders konstruiertes Zubehör hierfür:
+
+
+KM20.a.	Ausrüstung, besonders konstruiert oder ausgelegt für den Ein­bau in ein Land-, See-, Luft- oder Raumfahrzeug für Kampf- oder Gefechtszwecke nach dieser Liste, und fähig, während der Fahrt eine Temperatur kleiner als –170 °C (103 K) zu erzeugen oder aufrechtzuerhalten; 
+
+KM20.a.Anmerkung.	KM 20.a. schliesst mobile Systeme ein, die Zubehör und Bestandteile enthalten oder verwenden, die aus nicht-metallischen oder nicht elektrisch leitenden Werkstoffen, z.B. aus Kunststoffen oder epoxidharzimprägnierten Werkstoffen, hergestellt sind. 
+
+KM20.b.	supraleitende elektrische Ausrüstung (rotierende Maschinen und Transformatoren), besonders konstruiert oder besonders ausgelegt für den Einbau in ein Land-, See-, Luft- oder Raumfahrzeug für Kampf- oder Gefechtszwecke nach dieser Liste, und betriebsfähig während der Fahrt.
+
+KM20.b.Anmerkung.	KM 20.b. erfasst nicht hybride, homopolare Gleichstromgeneratoren mit einem einpoligen, normal ausgelegten Metallanker, der in einem Magnetfeld rotiert, das mit Hilfe supraleitender Wicklungen erzeugt wird, vorausgesetzt, dass diese Wicklungen die einzige supraleitende Baugruppe im Generator sind.
+
+KM21.	Software wie folgt: Software, besonders entwickelt oder geändert für die Verwendung von Gütern, die von dieser Liste erfasst werden.
+
+

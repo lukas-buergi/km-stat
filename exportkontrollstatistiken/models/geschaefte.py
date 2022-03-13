@@ -107,7 +107,8 @@ class Geschaefte(models.Model):
   """ Was wurde exportiert? Vielleicht sollten da mehrere Nummern erlaubt sein, weil ein Gut vielleicht unter mehrere Kontrollregime fallen kann. """
 
   umfang = models.FloatField()
-  """ Umfang des Geschäfts in Schweizer Franken. """
+  """ Umfang des Geschäfts in Schweizer Franken.
+  TODO: Why is this a float? It should be an int in centimes, I think."""
 
   beginn = models.DateField()
   """ Der Beginn des Geschäfts. Normalerweise der 1. Januar des Jahres, weil nichts genaueres bekannt ist. """
