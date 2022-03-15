@@ -211,7 +211,12 @@ class Laender(models.Model):
         [['Kirgistan'], 'Kirgisische Republik'],
         [['Kap Verde'], 'Republik Cabo Verde'],
         [['Russland'], 'Russische Föderation'],
-        [['Neukaledonien'], '']
+        [['Neukaledonien'], ''],
+        [['Iran', 'Iran, Islamische Republik'], 'Islamische Republik Iran'],
+        [['Kroatien', 'Kroatien (Hrvatska)'], 'Republik Kroatien'],
+        [['Syrien', 'Syrien, Arabische Republik'], 'Syrische Arabische Republik'],
+        [['Hong Kong'], 'Hongkong'],
+        [['Grönland'], 'Dänemark'], # na jaaaa...
       ]
 
       name = name.strip()

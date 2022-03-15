@@ -139,6 +139,7 @@ class Command(BaseCommand):
 
                     if(line[2] == "Besondere militärische Güter"):
                         code = line[5]
+                        code = code.splitlines()[0] # sometimes there are multiple codes. need to complain about that
                         code = code.lower()
                         code = code.replace("ml", "ML")
                         code = code.replace("0", "")
@@ -158,7 +159,7 @@ class Command(BaseCommand):
                         try:
                             ekn=Exportkontrollnummern.objects.get(nummer=code, kontrollregime__name__en=kontrollregimeName)
                         except geschaefte.Exportkontrollnummern.DoesNotExist:
-                            print("Error: " + code + " could not be found.")
+                            print("Export control code \"" + code + "\" could not be found (original: \"" + line[5] + "\" in file " + path + " for country " + line[1] + ").")
                             continue
                         
                         try:
