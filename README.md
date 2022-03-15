@@ -7,7 +7,7 @@ about arms exports.
 ## Documentation
 
 * This file here.
-* There is some not terribly well structured documentation in [various-thoughts.md](various-thoughts.md various-thoughts.md)
+* There is some not terribly well structured documentation in [various-thoughts.md](various-thoughts.md)
 * There is lots of documentation in the program files and in the admin interface of Django you can also view that
 
 ## Licensing
