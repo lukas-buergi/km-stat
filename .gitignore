@@ -5,3 +5,6 @@
 .~lock.*.doc#
 .DS_Store
 *:Zone.Identifier
+/kriegsmaterialch/settingsLocalStaging.py
+/kriegsmaterialch/settingsLocalProduction.py
+/venv

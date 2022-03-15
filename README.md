@@ -66,32 +66,23 @@ Run on your local machine with docker
 docker-compose up
 ```
 
-and wait until startup completes, then the site should be available on [localhost:8000](http://localhost:8000)
+and wait until startup completes, then the site should be available on [localhost:8000](http://localhost:8000). If it doesn't work (the first time, that's likely), restart the containers.
 
 ## Push to staging for first time:
 
 * Make sure your public key was added to the server
-* Add remote: `git remote add km-staging git+ssh://2167433@git.sd6.gpaas.net/default.git`
+* Add remote: `git remote add km-staging git+ssh://6860452@git.sd3.gpaas.net/default.git`
 * Configure ssh:
 ```
 Host km-staging
-    HostName git.sd6.gpaas.net
-    User 2167433
+    HostName git.sd3.gpaas.net
+    User 6860452
 ```
-* Create new config file and sftp to server: ```sftp 2167433@sftp.sd6.gpaas.net
-put gandi-gsoa-staging-settingsLocal.py vhosts/default/kriegsmaterialch/settingsLocal.py```
+* Create new config file in ```echo put settingsLocal-km-staging.py```
 * Now the `utils/deploy.sh` script should work
 
 ## Push to staging:
 
-There is also a script in ./utils
-
-* `pip install --upgrade Django mysqlclient pytz sqlparse`
-* `pip freeze | grep -e Django -e mysqlclient -e pytz -e sqlparse > kriegsmaterialch/requirements.txt`
-* Check that everything still works, fix and/or commit
-* Commit
-* necessary to sftp config file to server?
-* necessary to upload new database to server?
+* Commit changes
+* If necessary upload new database to server
 * `utils/deploy.sh km-staging`
-
-

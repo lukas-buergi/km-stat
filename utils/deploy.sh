@@ -28,10 +28,15 @@
 
 set -euxo pipefail # be careful
 
+# will not actually deploy the new versions, but as a kind reminder to update the packages it will break your dev containers if the project doesn't work with the new versions (and the changes will get into the next commit if they aren't reversed)
+docker exec km-stat-web-1 pip install --upgrade Django mysqlclient pytz sqlparse
+docker exec km-stat-web-1 sh -c "pip freeze | grep -e Django -e mysqlclient -e pytz -e sqlparse > /code/requirements.txt"
+
 basedir="$(dirname "$0")"/..
 git push "$1" master
-${basedir}/manage.py collectstatic --noinput
+docker exec km-stat-web-1 /code/manage.py collectstatic --noinput
 sftp "$1" << EOF
 put -r "${basedir}/static" /lamp0/web/vhosts/default/
+put "${basedir}/kriegsmaterialch/settingsLocal-${1}.py" vhosts/default/kriegsmaterialch/settingsLocal.py
 EOF
 ssh "$1" deploy default.git
