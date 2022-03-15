@@ -7,8 +7,8 @@ about arms exports.
 ## Documentation
 
 * This file here.
-* There is some documentation in docs/manual/documentation.lyx that is partly in German. New parts in English.
-* There is lots of documentation in the program files and eventually maybe someone will make it autogenerate html docs from that.
+* There is some not terribly well structured documentation in [various-thoughts.md](various-thoughts.md various-thoughts.md)
+* There is lots of documentation in the program files and in the admin interface of Django you can also view that
 
 ## Licensing
 
@@ -42,9 +42,8 @@ CC BY-SA 4.0, as far as its copyright belongs to
 
 * Django/Python backend
 * frontend using mostly bare js (some d3.js ...) on top of Django templates for html/css
-* various scripts/workflows for gathering and cleaning up data in utils
-* fairly complete data set for Kriegsmaterial/bes.mil.Güter from Switzerland since 2006, Dual Use is outdated
-* there was an attempt to parse the Wassenaar lists as provided, but Lukas made a mess of it and decided it was more relaxing to do it by hand (for the first time, subsequent changes should be fairly easy to merge semi-automatically).
+* fairly complete data set for Kriegsmaterial/bes.mil.Güter from Switzerland since around 2000, dual-use goods need work
+* most of the Wassenaar Agreement (version 2018) in machine readable form and also a few other export control code lists
 
 ## Local installation:
 
