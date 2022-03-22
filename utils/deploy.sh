@@ -1,6 +1,6 @@
 #!/bin/bash
 #######################################################################
-# Copyright Lukas Bürgi 2019
+# Copyright Lukas Bürgi 2022
 #
 # This file is part of km-stat.
 #

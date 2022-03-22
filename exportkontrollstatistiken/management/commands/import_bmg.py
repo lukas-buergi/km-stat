@@ -33,8 +33,11 @@ class Command(BaseCommand):
     Imports data about special military goods exports."""
     def handle(self, **options):
         files = [
-            ['2014-01-01-2014-12-31-bmg.csv', 'elic'],
-            ['2014-01-01-2014-12-31-du.csv', 'elic'],
+            ['1997-01-01-2011-12-31.csv', 'trackerV1'],
+#            ['2012-01-01-2014-09-30-bmg.csv', 'trackerV2'],
+            ['2012-01-01-2014-09-30-du.csv', 'trackerV2'],
+            ['2014-01-01-2014-12-31-bmg.csv', 'elic2014'],
+#            ['2014-01-01-2014-12-31-du.csv', 'elic2014'],
             ['2015-01-01-2015-12-31.csv', 'elic2015'],
             ['2016-01-01-2016-03-31.csv', 'elic'],
             ['2016-04-01-2016-06-30.csv', 'elic'],
@@ -60,14 +63,11 @@ class Command(BaseCommand):
             ['2021-04-01-2021-06-30.csv', 'elic'],
             ['2021-07-01-2021-09-30.csv', 'elic'],
             ['2021-10-01-2021-12-31.csv', 'elic'],
-            ['1997-01-01-2011-12-31.csv', 'trackerV1'],
-#            ['2012-01-01-2014-09-30-bmg.csv', 'trackerV2'],
-            ['2012-01-01-2014-09-30-du.csv', 'trackerV2'],
         ]
         kontrollregimeName = "Wassenaar Arrangement 18 1"
         Geschaefte.objects.filter(exportkontrollnummer__kontrollregime__name__en=kontrollregimeName).delete()
         for f in files:
-            if(f[1] in ["elic", "elic2015"]):
+            if(f[1] in ["elic", "elic2014", "elic2015"]):
                 path="/code/export-control-statistics-original-data/sorted-for-automated-handling/du+bmg-elic/" + f[0]
             else:
                 path="/code/export-control-statistics-original-data/sorted-for-automated-handling/du+bmg-tracker/" + f[0]
@@ -84,8 +84,12 @@ class Command(BaseCommand):
                         # line has new elic format, for which this method was written, so requires no transformations
                         # Geschäftsnummer, Bestimmungsland, Güterart, Geschäftstyp, Richtung, Exportkontrollnummer [EKN], Wert [CHF]
                         pass
-                    elif(f[1] == "elic2015"):
-                        # Geschäftsnummer, Ausstellungsdatum, Bestimmungsland, Güterart, Geschäftsart, Exportkontrollnummer [EKN], Wert [CHF]
+                    elif(f[1] in ["elic2014", "elic2015"]):
+                        # 2015: Geschäftsnummer, Ausstellungsdatum, Bestimmungsland, Güterart, Geschäftsart, Exportkontrollnummer [EKN], Wert [CHF]
+                        # 2014: Geschäftsnummer, Ausstellungsdatum, Bestimmungsland, Güterart, Exportkontrollnummer [EKN], Wert [CHF]
+                        if(f[1] == "elic2014"):
+                            line = line[:4] + [""] + line[4:]
+
                         if(line[1] == "Ausstellungsdatum"):
                             continue
 
