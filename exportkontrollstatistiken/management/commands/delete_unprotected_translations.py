@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 #######################################################################
 # Copyright Lukas Bürgi 2022
 #
@@ -18,23 +17,16 @@
 # License along with km-stat.  If not, see
 # <https://www.gnu.org/licenses/>.
 ########################################################################
-from django.core.management.base import BaseCommand
-from django.core.management import call_command
 
-from exportkontrollstatistiken.models.geschaefte import Exportkontrollnummern, Geschaefte, Kontrollregimes, Uebersetzungen
+from exportkontrollstatistiken.models import Uebersetzungen
+from django.core.management.base import BaseCommand
+import django
 
 class Command(BaseCommand):
-    help="""
-    Warning: Deletes and creates lots of db entries without prompting.
-    Fills db from .csv files."""
+    help="""Delete all translations which are unused."""
     def handle(self, **options):
-        Geschaefte.objects.all().delete()
-        Exportkontrollnummern.objects.all().delete()
-        Kontrollregimes.objects.all().delete()
-        call_command('delete_unprotected_translations')
-        call_command('import_ekn_ml_km')
-        call_command('import_bmg')
-        call_command('import_km')
-        call_command('recalculate_sums')
-
-        
+        for u in Uebersetzungen.objects.all():
+            try:
+                u.delete()
+            except django.db.models.deletion.ProtectedError:
+                pass
