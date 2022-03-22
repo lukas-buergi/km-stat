@@ -19,7 +19,7 @@
 ########################################################################
 
 """
-settingsLocal.py file for use with docker. Replace this with one of the examples also in this directoy when not running docker.
+settingsLocal.py file for use with docker. Replace this with one of the examples also in this directory when not running docker.
 """
 
 import os

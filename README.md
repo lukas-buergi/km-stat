@@ -78,7 +78,7 @@ Host km-staging
     HostName git.sd3.gpaas.net
     User 6860452
 ```
-* Create new config file in ```echo put settingsLocal-km-staging.py```
+* Create new config file in ```kriegsmaterialch/settingsLocal-km-staging.py```
 * Now the `utils/deploy.sh` script should work
 
 ## Push to staging:
