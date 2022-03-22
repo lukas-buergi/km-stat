@@ -24,7 +24,7 @@ import calendar
 from django.db.models.functions import Concat
 from django.contrib import admin
 
-from .models import Uebersetzungen, Kontrollregimes, Exportkontrollnummern, Laender, Laendergruppen, QuellenProbleme, GueterArten, Geschaefte, ProblemArtenGesetz, ProblemArten, Probleme, ManualCheck
+from .models import Uebersetzungen, Kontrollregimes, Exportkontrollnummern, Laender, Laendergruppen, QuellenProbleme, GueterArten, Geschaefte, ProblemArtenGesetz, ProblemArten, Probleme
 
 class GeschaefteAdmin(admin.ModelAdmin):
   list_filter = ('beginn', 'ende', 'exportkontrollnummer__kontrollregime__gueterArt')

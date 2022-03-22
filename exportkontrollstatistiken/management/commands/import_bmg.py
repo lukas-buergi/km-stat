@@ -35,7 +35,7 @@ class Command(BaseCommand):
         files = [
             ['2014-01-01-2014-12-31-bmg.csv', 'elic'],
             ['2014-01-01-2014-12-31-du.csv', 'elic'],
-            ['2015-01-01-2015-12-31.csv', 'elic'],
+            ['2015-01-01-2015-12-31.csv', 'elic2015'],
             ['2016-01-01-2016-03-31.csv', 'elic'],
             ['2016-04-01-2016-06-30.csv', 'elic'],
             ['2016-07-01-2016-09-30.csv', 'elic'],
@@ -67,7 +67,7 @@ class Command(BaseCommand):
         kontrollregimeName = "Wassenaar Arrangement 18 1"
         Geschaefte.objects.filter(exportkontrollnummer__kontrollregime__name__en=kontrollregimeName).delete()
         for f in files:
-            if(f[1] == "elic"):
+            if(f[1] in ["elic", "elic2015"]):
                 path="/code/export-control-statistics-original-data/sorted-for-automated-handling/du+bmg-elic/" + f[0]
             else:
                 path="/code/export-control-statistics-original-data/sorted-for-automated-handling/du+bmg-tracker/" + f[0]
@@ -84,6 +84,15 @@ class Command(BaseCommand):
                         # line has new elic format, for which this method was written, so requires no transformations
                         # Geschäftsnummer, Bestimmungsland, Güterart, Geschäftstyp, Richtung, Exportkontrollnummer [EKN], Wert [CHF]
                         pass
+                    elif(f[1] == "elic2015"):
+                        # Geschäftsnummer, Ausstellungsdatum, Bestimmungsland, Güterart, Geschäftsart, Exportkontrollnummer [EKN], Wert [CHF]
+                        if(line[1] == "Ausstellungsdatum"):
+                            continue
+
+                        d = line[1].split(".")
+                        b=datetime.date(int(d[2]), int(d[1]), int(d[0]))
+                        e=b
+                        line = line[:1] + line[2:-2] + [""] + line[-2:]
                     elif(f[1] == "trackerV1"):
                         # line has old "tracker" format and needs to be transformed into new format
                         #Geschäftstyp, Bewilligungsnummer, Richtung, Bewilligungsdatum, Bestimmungsland, Catch-All, AG (GKV), MTCR (GKV), NSGI (GKV), NSGII (GKV), WA (GKV), ML (GKV), Anhang 5.1, Anhang 5.2, Anhang 5.3, ChKV, Wert
@@ -96,7 +105,10 @@ class Command(BaseCommand):
 
                             d=line[3].split("/")
                             if(len(d) != 3):
-                                print("Line (trackerV1) has no date: " + str(line))
+                                if(line[0] == "Geschäftstyp"):
+                                    pass
+                                else:
+                                   print("Line (trackerV1) has no date: " + str(line))
                                 continue
 
                             if(int(d[2]) < 95):
@@ -121,7 +133,10 @@ class Command(BaseCommand):
 
                             d=line[1].split("-")
                             if(len(d) != 3):
-                                print("Line (trackerV2) has no date: " + str(line))
+                                if(line[0] == "Geschäftsnummer"):
+                                    pass
+                                else:
+                                    print("Line (trackerV2) has no date: " + str(line))
                                 continue
                             if(int(d[2]) < 95):
                                 d[2] = int(d[2]) + 2000
@@ -137,14 +152,36 @@ class Command(BaseCommand):
                         # it's some kind of goods which doesn't interest us now
                         line=["","",""]
 
-                    if(line[2] == "Besondere militärische Güter"):
+                    if("Besondere militärische Güter" in line[2].splitlines()):
                         code = line[5]
-                        code = code.splitlines()[0] # sometimes there are multiple codes. need to complain about that
+
+                        # sometimes there are multiple codes. need to complain about that
+                        # fix some of them:
+                        code = code.replace("ML10.b,h", "ML10.")
+                        code = code.replace("ML01.a, 1d", "ML1.")
+                        code = code.replace("ML10.b, g, h + 14", "ML10.")
+                        # warn about the rest
+                        if(len(code.splitlines()) > 1 or len(code.split(",")) > 1):
+                            for c in code.splitlines():
+                                if(re.match("^[Mm][Ll]", c)):
+                                    code = c
+                                    break
+                            code = code.splitlines()[0]
+                            code = code.split(",")[0]
+                            #print("Multiple codes in export control code field in line: " + str(line) + ", just using first code that could be ML.")
+                        
+                        # normalize capitalization the same way as in the DB
                         code = code.lower()
                         code = code.replace("ml", "ML")
-                        code = code.replace("0", "")
+
+                        # remove leading zeros from numbers
+                        code = re.sub(r"([^0-9])0*([1-9])", r"\1\2", code)
+
+                        # make sure the code ends with a dot
                         if(code[-1] != "."):
                             code += "."
+
+                        # add missing dots between parts
                         code = re.sub(r"(\.|ML)([0-9]+)([a-z]+)\.", r"\1\2.\3.", code)
                         code = re.sub(r"(\.|ML)([a-z]+)([0-9]+)\.", r"\1\2.\3.", code)
                         code = re.sub(r"(\.|ML)([0-9]+)([a-z]+)([0-9]+)\.", r"\1\2.\3.\4.", code)
@@ -152,9 +189,14 @@ class Command(BaseCommand):
 
                         # specific possible typos in the official lists:
                         code = code.replace("ML8.5.b.1.", "ML8.c.5.b.1.")
+
+                        # codes I checked and couldn't track down
                         if(code in ["ML1.c.2.", "ML1.g.", "ML1.f."]):
                             continue
-                            # no idea what those codes are supposed to mean, skip
+
+                        # codes I still need to check but want to skip for now to get a cleaner output and search for other problems
+                        if(code in [" .", "ML8.a2a2.", "ML8.e.25.", "ML11.e.", "ML11.g.", "ML18.c.",  "ML18.d.", "ML21.b.1.d.", "ML28.a.", "ML28.c.",  "70."]):
+                            continue
 
                         try:
                             ekn=Exportkontrollnummern.objects.get(nummer=code, kontrollregime__name__en=kontrollregimeName)
@@ -165,7 +207,10 @@ class Command(BaseCommand):
                         try:
                             land = Laender.fuzzyGet(line[1], "de")
                         except Laender.DoesNotExist:
-                            print("Country does not exist: " + str(line))
+                            if(line[1] in ["Jugoslawien"]):
+                                pass
+                            else:
+                                print("Country not found in database: " + str(line))
                             continue
 
                         line[0] = line[0].replace("A/", "")

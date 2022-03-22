@@ -1,15 +1,15 @@
 
 
 
-KM 1.	Hand- und Faustfeuerwaffen jeglichen Kalibers und Zubehör sowie besonders konstruierte Bestandteile hierfür, jedoch ohne:
+KM1.	Hand- und Faustfeuerwaffen jeglichen Kalibers und Zubehör sowie besonders konstruierte Bestandteile hierfür, jedoch ohne:
 
-KM 1.a.	eindeutig erkennbare Jagd- und Sportwaffen (z. B. nach ISSF-Norm), die in derselben Ausführung nicht auch Kampfwaffen sind;
+KM1.a.	eindeutig erkennbare Jagd- und Sportwaffen (z. B. nach ISSF-Norm), die in derselben Ausführung nicht auch Kampfwaffen sind;
 
-KM 1.b.	Einzellader und Vorderlader;
+KM1.b.	Einzellader und Vorderlader;
 
-KM 1.c.	Faustfeuerwaffen und Repetiergewehre für Randfeuermunition;
+KM1.c.	Faustfeuerwaffen und Repetiergewehre für Randfeuermunition;
 
-KM 1.d.	alte Waffen, für die keine verwendbare Munition mehr herge­stellt wird oder im öffentlichen Handel erhältlich ist.
+KM1.d.	alte Waffen, für die keine verwendbare Munition mehr herge­stellt wird oder im öffentlichen Handel erhältlich ist.
 
 KM1.d.Anmerkung.	KM 1.d. erfasst auch folgende Waffen:
 

@@ -155,11 +155,11 @@ class Laender(models.Model):
   laengengradMax = models.FloatField()
   """ Der maximale Längengrad, der dieses Land schneidet. """
   
-  laengengrad = models.FloatField()
-  """ Longitude of a characteristic point of the country. """
-  
-  breitengrad = models.FloatField()
+  latitude = models.FloatField()
   """ Latitude of a characteristic point of the country. """
+  
+  longitude = models.FloatField()
+  """ Longitude of a characteristic point of the country. """
 
 
   def __str__(self):
@@ -178,11 +178,11 @@ class Laender(models.Model):
         [['Rwanda'], 'Republik Ruanda'],
         [['Elfenbeinküste'], 'Republik Côte d’Ivoire'],
         [['Ekuador'], 'Republik Ecuador'],
-        [['Moldova'], 'Republik Moldova'],
+        [['Moldova', 'Moldau, Republik', 'Moldau'], 'Republik Moldova'],
         [['Fidschi'], 'Republik Fidschi'],
-        [['Vatikan'], 'Staat Vatikanstadt'],
+        [['Vatikan', 'Vatikanstadt'], 'Staat Vatikanstadt'],
         [['Albanien'], 'Republik Albanien'],
-        [['Kongo, Republik'], 'Republik Kongo'],
+        [['Kongo, Republik', 'Zaïre'], 'Republik Kongo'],
         [['Somalia'], 'Bundesrepublik Somalia'],
         [['Georgien, Republik'], 'Georgien'],
         [['Trinidad und Tobago'], 'Republik Trinidad und Tobago'],
@@ -196,7 +196,7 @@ class Laender(models.Model):
         [['Slowakei', 'Slowakei, Slowakische Republik', 'Slowakai', 'Slowakische Rep.'], 'Slowakische Republik'],
         [['Katar', 'Qatar'], 'Staat Katar'],
         [['Bangladesh', 'Bangladesch'], 'Volksrepublik Bangladesch'],
-        [['Frankreich (inkl. Monaco)', 'Frankreich (mit Monaco)', 'Neukaledonien', 'Frankreich mit Monaco'], 'Frankreich'], # Neukaledonien hier zu Frankreich ist nehmen ist... na ja.
+        [['Neukaledonien', 'Frankreich (inkl. Monaco)', 'Frankreich (mit Monaco)', 'Neukaledonien', 'Frankreich mit Monaco'], 'Frankreich'], # Neukaledonien hier zu Frankreich ist nehmen ist... na ja.
         [['Großbritannien (Vereinigtes Königreich)', 'Gr. Britannien'], 'Grossbritannien'],
         [['Brunei Darussalam'], 'Brunei'],
         [['Ecuador'], 'Republik Ecuador'],
@@ -211,12 +211,17 @@ class Laender(models.Model):
         [['Kirgistan'], 'Kirgisische Republik'],
         [['Kap Verde'], 'Republik Cabo Verde'],
         [['Russland'], 'Russische Föderation'],
-        [['Neukaledonien'], ''],
         [['Iran', 'Iran, Islamische Republik'], 'Islamische Republik Iran'],
         [['Kroatien', 'Kroatien (Hrvatska)'], 'Republik Kroatien'],
         [['Syrien', 'Syrien, Arabische Republik'], 'Syrische Arabische Republik'],
         [['Hong Kong'], 'Hongkong'],
+        [['Mauritius'], 'Republik Mauritius'],
+        [['Eritrea'], 'Staat Eritrea'],
+        [['Burundi'], 'Republik Burundi'],
+        [['Norfolk-Inseln', 'Norfolkinsel'], 'Australien'],
+        [['Mosambik'], 'Republik Mosambik'],
         [['Grönland'], 'Dänemark'], # na jaaaa...
+        [['Libysch-Arabische Dschamahirija', 'Libyen'], 'Staat Libyen'] # same borders, but where did the weapons go in the transition?
       ]
 
       name = name.strip()
@@ -231,16 +236,3 @@ class Laender(models.Model):
   class Meta:
     verbose_name = 'Land'
     verbose_name_plural = 'Länder'
-
-class ManualCheck(models.Model):
-  """
-  When the content of a database entry is manually checked, add an instance of ManualCheck to it to record this fact.
-  Mainly to be used to distinguish transactions which are matched to an official source from transactions which might have been through an unknown number of (semi) automated transformations since some unknown person copied them form some unknown source.
-  """
-  name = models.CharField(max_length=50)
-  email = models.EmailField()
-  time = models.DateTimeField(auto_now_add=True)
-  
-  class Meta:
-    verbose_name = 'Manual check of entered data'
-    verbose_name_plural = 'Manual checks of entered data'
