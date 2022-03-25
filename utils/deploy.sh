@@ -38,7 +38,6 @@ basedir="$(dirname "$0")"/..
 git push "$1" master
 docker exec $container /code/manage.py collectstatic --noinput
 sftp "$1" << EOF
-put -r "${basedir}/static" /lamp0/web/vhosts/default/
 put "${basedir}/kriegsmaterialch/settingsLocal-${1}.py" vhosts/default/kriegsmaterialch/settingsLocal.py
 EOF
 ssh "$1" deploy default.git

@@ -1,7 +1,5 @@
 *.pyc
-/static
 /data
-
 .~lock.*.doc#
 .DS_Store
 *:Zone.Identifier

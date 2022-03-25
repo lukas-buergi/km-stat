@@ -92,6 +92,7 @@ class Exportkontrollnummern(models.Model):
 
 class Geschaefte(models.Model):
   """ Ein Eintrag steht für ein oder mehrere Geschäfte, je nach Datenlage. Die Daten gibt es von
+  
   * https://www.seco.admin.ch/seco/de/home/Aussenwirtschaftspolitik_Wirtschaftliche_Zusammenarbeit/Wirtschaftsbeziehungen/exportkontrollen-und-sanktionen/industrieprodukte--dual-use--und-besondere-militaerische-gueter/statistik/2015.html
   * https://www.seco.admin.ch/seco/de/home/Aussenwirtschaftspolitik_Wirtschaftliche_Zusammenarbeit/Wirtschaftsbeziehungen/exportkontrollen-und-sanktionen/ruestungskontrolle-und-ruestungskontrollpolitik--bwrp-/zahlen-und-statistiken0.html """
   
@@ -127,6 +128,7 @@ class Geschaefte(models.Model):
 
   @staticmethod
   def getJSON(p):
+    """Returns the data on individual transactions. For now it returns just the first line of the description of the export control code."""
     cnames = ['Datum', 'Art', 'EKN', 'Umfang']
     ctypes = ['untreated', 'untreated', 'untreated', 'money']
     if(True): # not p.countriesSingle
@@ -146,7 +148,9 @@ class Geschaefte(models.Model):
     for g in p.getPage(queryset):
       row=[str(g.beginn), g.exportkontrollnummer.kontrollregime.gueterArt.name.de, g.exportkontrollnummer.nummer, g.umfang]
       if(g.exportkontrollnummer.beschreibung != None and g.exportkontrollnummer.beschreibung.de!=""):
-        row[2]=g.exportkontrollnummer.beschreibung.de
+        row[2]=g.exportkontrollnummer.beschreibung.de.splitlines()[0]
+      elif(g.exportkontrollnummer.beschreibung != None and g.exportkontrollnummer.beschreibung.en!=""):
+        row[2]=g.exportkontrollnummer.beschreibung.en.splitlines()[0]
       if(True): # not p.countriesSingle
         row = [g.endempfaengerstaat.code, g.endempfaengerstaat.name.de] + row
       result.addRow(row)
