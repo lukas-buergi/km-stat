@@ -221,6 +221,7 @@ class Laender(models.Model):
         [['Norfolk-Inseln', 'Norfolkinsel'], 'Australien'],
         [['Mosambik'], 'Republik Mosambik'],
         [['Grönland'], 'Dänemark'], # na jaaaa...
+        [['Zimbabwe'], 'Republik Simbabwe']
         [['Libysch-Arabische Dschamahirija', 'Libyen'], 'Staat Libyen'] # same borders, but where did the weapons go in the transition?
       ]
 

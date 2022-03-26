@@ -123,10 +123,12 @@ class Command(BaseCommand):
 
                             if(line[11] != ""):
                                 tname = "Besondere militärische Güter"
+                                code = line[11]
                             else:
                                 tname = "Dual Use Güter"
+                                code = line[10]
 
-                            line = [line[1], line[4], tname, "", "", line[11], line[16]]
+                            line = [line[1], line[4], tname, "", "", code, line[16]]
 
                     elif(f[1] == "trackerV2"):
                         # line has old "tracker" format and needs to be transformed into new format
@@ -155,10 +157,12 @@ class Command(BaseCommand):
 
                             if(line[8] != ""):
                                 tname = "Besondere militärische Güter"
+                                code = line[8]
                             else:
                                 tname = "Dual Use Güter"
+                                code = line[7]
 
-                            line = [line[0], line[2], tname, "", "", "ML" + line[8], line[13]]
+                            line = [line[0], line[2], tname, "", "", "ML" + code, line[13]]
 
                     else:
                         # it's some kind of goods which doesn't interest us now
@@ -209,10 +213,20 @@ class Command(BaseCommand):
                         if(code in [" .", "ML8.a2a2.", "ML8.e.25.", "ML11.e.", "ML11.g.", "ML18.c.",  "ML18.d.", "ML21.b.1.d.", "ML28.a.", "ML28.c.",  "70."]):
                             continue
 
-                        kontrollRegime=Kontrollregimes.objects.get(name__en="Wassenaar Arrangement 18 1", gueterArt=gueterArt.objects.get(name__de="Besondere militärische Güter"))
+                        kontrollRegime=Kontrollregimes.objects.get(name__en="Wassenaar Arrangement 18 1", gueterArt=GueterArten.objects.get(name__de="Besondere militärische Güter"))
                     elif("Dual Use Güter" in line[2].splitlines()):
                         codeNumber = line[2].splitlines().index("Dual Use Güter")
-                        code = code.splitlines()[codeNumber]
+                        try:
+                            code = code.splitlines()[codeNumber]
+                        except IndexError:
+                            print("Number of types doesn't match number of codes in line: " + str(line))
+                            continue
+
+                        # get rid of VL and SL prefixes - they are very interesting, but for later
+                        code = re.sub(r"^(SL|VL)", r"", code)
+
+                        # don't know what the parentheses mean, but get rid of them
+                        code = re.sub(r"^\((.*)\)$", r"\1", code)
 
                         # normalize capitalization the same way as in the DB
                         code = code[0] + code[1].upper() + code[2:].lower()
@@ -225,18 +239,21 @@ class Command(BaseCommand):
                             code += "."
 
                         # add missing dots between parts
-                        code = re.sub(r"([0-9]+)([a-z]+)", r"\1.\2", code)
-                        code = re.sub(r"([a-z]+)([0-9]+)", r"\1.\2", code)
+                        code = re.sub(r"([0-9]+)([a-zA-Z]+)", r"\1.\2", code)
+                        code = re.sub(r"([a-zA-Z]+)([0-9]+)", r"\1.\2", code)
 
-                        kontrollRegime=Kontrollregimes.objects.get(name__en="Wassenaar Arrangement 18 1", gueterArt=gueterArt.objects.get(name__de="Dual Use Güter"))
+                        kontrollRegime=Kontrollregimes.objects.get(name__en="Wassenaar Arrangement 18 1", gueterArt=GueterArten.objects.get(name__de="Dual Use Güter"))
                     
                     if("Besondere militärische Güter" in line[2].splitlines() or "Dual Use Güter" in line[2].splitlines()):
                         try:
                             ekn=Exportkontrollnummern.objects.get(nummer=code, kontrollregime=kontrollRegime)
                         except geschaefte.Exportkontrollnummern.DoesNotExist:
-                            print("Export control code \"" + code + "\" could not be found (original: \"" + line[5] + "\" in file " + path + " for country " + line[1] + ").")
+                            print("Export control code \"" + code + "\" (" + str(kontrollRegime.gueterArt) + ") could not be found (original: \"" + line[5] + "\" in file " + path + " for country " + line[1] + ").")
                             continue
-                        
+                        except geschaefte.Exportkontrollnummern.MultipleObjectsReturned:
+                            print("Export control code \"" + code + "\" (" + str(kontrollRegime.gueterArt) + ") was found multiple times (original: \"" + line[5] + "\" in file " + path + " for country " + line[1] + ").")
+                            continue   
+
                         try:
                             land = Laender.fuzzyGet(line[1], "de")
                         except Laender.DoesNotExist:

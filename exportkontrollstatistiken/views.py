@@ -171,8 +171,10 @@ def gapi(request, granularity, countries, types, year1, year2, sortBy, perPage, 
   try:
     p=apiParam(granularity, countries, types, year1, year2, sortBy, perPage, pageNumber)
   except ValueError:
-    raise # TODO: This line is not for production.
-    return(HttpResponse("Invalid parameter."))
+    if(settings.DEBUG):
+      raise
+    else:
+      return(HttpResponse("Invalid parameter."))
 
   # prepare response
   response = HttpResponse(content_type='application/json')
@@ -212,6 +214,7 @@ def mainpage(request, granularity, countries, types, year1, year2, sortBy, perPa
   params.typesChoices = { # hides du from interface. TODO: finish import
     "k" : ["Kriegsmaterial", "Kriegsmaterial"],
     "b" : ["Besondere militärische Güter", "Besonderen militärischen Gütern"],
+    "d" : ["Dual Use Güter", "Dual Use Gütern"],
   } 
   context = {
     'p' : params,
@@ -223,7 +226,7 @@ def mainpage(request, granularity, countries, types, year1, year2, sortBy, perPa
   return HttpResponse(template.render(context, request))
 
 def index(request):
-  return(mainpage(request, "s", "all", "kb", Geschaefte.getFirstYear(), Geschaefte.getLastYear(), "v", 10, 1))
+  return(mainpage(request, "s", "all", "kbd", Geschaefte.getFirstYear(), Geschaefte.getLastYear(), "v", 10, 1))
 
 def webmanifest(request):
   return(render(request, 'exportkontrollstatistiken/favicon/site.webmanifest', {}))
