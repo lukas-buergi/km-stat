@@ -1,4 +1,4 @@
-﻿
+
 4.	COMPUTERS
 4.Note 1.	Computers, related equipment and "software" performing telecommunications or "local area network" functions must also be evaluated against the performance characteristics of Category 5 – Part 1 (Telecommunications).
 4.Note 2.	Control units which directly interconnect the buses or channels of central processing units, 'main storage' or disk controllers are not regarded as telecommunications equipment described in Category 5 – Part 1 (Telecommunications).
@@ -57,7 +57,7 @@ Note 3.	Not used since 2015
 4.A.4.b.	'Neural computers';
 4.A.4.c.	'Optical computers'.
 
-4.A.4.Technical Notes.
+
 4.A.4.Technical Notes.1.	'Systolic array computers' are computers where the flow and modification of the data is dynamically controllable at the logic gate level by the user.
 4.A.4.Technical Notes.2.	'Neural computers' are computational devices designed or modified to mimic the behaviour of a neuron or a collection of neurons, i.e., computational devices which are distinguished by their hardware capability to modulate the weights and numbers of the interconnections of a multiplicity of computational components based on previous data.
 4.A.4.Technical Notes.3.	'Optical computers' are computers designed or modified to use light to represent data and whose computational logic elements are based on directly coupled optical devices.
@@ -113,12 +113,12 @@ Note 3.	Not used since 2015
 
 4.Technical Note.	Abbreviations used in this Technical Note
 
-4.Technical Note.	n	number of processors in the "digital computer"
-4.Technical Note.	i	processor number (i,...n)
-4.Technical Note.	ti	processor cycle time (ti = 1/Fi)
-4.Technical Note.	Fi	processor frequency 
-4.Technical Note.	Ri	peak floating point calculating rate
-4.Technical Note.	Wi	architecture adjustment factor
+4.Technical Note.	n: number of processors in the "digital computer"
+4.Technical Note.	i: processor number (i,...n)
+4.Technical Note.	ti: processor cycle time (ti = 1/Fi)
+4.Technical Note.	Fi: processor frequency 
+4.Technical Note.	Ri: peak floating point calculating rate
+4.Technical Note.	Wi: architecture adjustment factor
 
 4.Technical Note.	'APP' is expressed in Weighted TeraFLOPS (WT), in units of 1012 adjusted floating point operations per second.
 

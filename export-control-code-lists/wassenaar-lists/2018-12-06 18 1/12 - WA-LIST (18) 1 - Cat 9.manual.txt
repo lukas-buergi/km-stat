@@ -1,4 +1,4 @@
-﻿
+
 9.A.	SYSTEMS, EQUIPMENT AND COMPONENTS
 
 9.A.N.B.	For propulsion systems designed or rated against neutron or transient ionizing radiation, see the Munitions List.* 
@@ -94,9 +94,9 @@
 9.A.10.a.	Components and structures, each exceeding 10 kg and specially designed for launch vehicles manufactured using any of the following:
 9.A.10.a.1.	"Composite" materials consisting of "fibrous or filamentary materials" specified by 1.C.10.e. and resins specified by 1.C.8. or 1.C.9.b.; 
 9.A.10.a.2.	Metal "matrix" "composites" reinforced by any of the following: 
-					a.	Materials specified by 1.C.7.; 
-					b.	"Fibrous or filamentary materials" specified by 1.C.10.; or 
-					c.	Aluminides specified by 1.C.2.a.; or
+9.A.10.a.2.a.	Materials specified by 1.C.7.; 
+9.A.10.a.2.b.	"Fibrous or filamentary materials" specified by 1.C.10.; or 
+9.A.10.a.2.c.	Aluminides specified by 1.C.2.a.; or
 9.A.10.a.3.	Ceramic "matrix" "composite" materials specified by 1.C.7.; 
 9.A.10.a.Note.	The weight cut-off is not relevant for nose cones.
 

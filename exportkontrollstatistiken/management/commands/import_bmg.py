@@ -64,8 +64,6 @@ class Command(BaseCommand):
             ['2021-07-01-2021-09-30.csv', 'elic'],
             ['2021-10-01-2021-12-31.csv', 'elic'],
         ]
-        kontrollregimeName = "Wassenaar Arrangement 18 1"
-        Geschaefte.objects.filter(exportkontrollnummer__kontrollregime__name__en=kontrollregimeName).delete()
         for f in files:
             if(f[1] in ["elic", "elic2014", "elic2015"]):
                 path="/code/export-control-statistics-original-data/sorted-for-automated-handling/du+bmg-elic/" + f[0]
@@ -104,8 +102,8 @@ class Command(BaseCommand):
                             print("Line is too short: " + str(line))
                             continue
                         
-                        if(line[11] != ""):
-                            # it's special military goods
+                        if(line[11] != "" or line[10] != ""):
+                            # it's special military goods or dual use goods
 
                             d=line[3].split("/")
                             if(len(d) != 3):
@@ -123,7 +121,12 @@ class Command(BaseCommand):
                                 assert(False)
                             e=b
 
-                            line = [line[1], line[4], "Besondere militärische Güter", "", "", line[11], line[16]]
+                            if(line[11] != ""):
+                                tname = "Besondere militärische Güter"
+                            else:
+                                tname = "Dual Use Güter"
+
+                            line = [line[1], line[4], tname, "", "", line[11], line[16]]
 
                     elif(f[1] == "trackerV2"):
                         # line has old "tracker" format and needs to be transformed into new format
@@ -132,8 +135,8 @@ class Command(BaseCommand):
                             print("Line is too short: " + str(line))
                             continue
 
-                        if(line[8] != ""):
-                            # it's special military goods
+                        if(line[8] != "" or line[7] != ""):
+                            # it's special military goods or dual use goods
 
                             d=line[1].split("-")
                             if(len(d) != 3):
@@ -150,15 +153,19 @@ class Command(BaseCommand):
                                 assert(False)
                             e=b
 
-                            line = [line[0], line[2], "Besondere militärische Güter", "", "", "ML" + line[8], line[13]]
+                            if(line[8] != ""):
+                                tname = "Besondere militärische Güter"
+                            else:
+                                tname = "Dual Use Güter"
+
+                            line = [line[0], line[2], tname, "", "", "ML" + line[8], line[13]]
 
                     else:
                         # it's some kind of goods which doesn't interest us now
                         line=["","",""]
 
-                    if("Besondere militärische Güter" in line[2].splitlines()):
-                        code = line[5]
-
+                    code = line[5]
+                    if("Besondere militärische Güter" in line[2].splitlines()):  
                         # sometimes there are multiple codes. need to complain about that
                         # fix some of them:
                         code = code.replace("ML10.b,h", "ML10.")
@@ -202,8 +209,30 @@ class Command(BaseCommand):
                         if(code in [" .", "ML8.a2a2.", "ML8.e.25.", "ML11.e.", "ML11.g.", "ML18.c.",  "ML18.d.", "ML21.b.1.d.", "ML28.a.", "ML28.c.",  "70."]):
                             continue
 
+                        kontrollRegime=Kontrollregimes.objects.get(name__en="Wassenaar Arrangement 18 1", gueterArt=gueterArt.objects.get(name__de="Besondere militärische Güter"))
+                    elif("Dual Use Güter" in line[2].splitlines()):
+                        codeNumber = line[2].splitlines().index("Dual Use Güter")
+                        code = code.splitlines()[codeNumber]
+
+                        # normalize capitalization the same way as in the DB
+                        code = code[0] + code[1].upper() + code[2:].lower()
+                        
+                        # remove leading zeros from numbers
+                        code = re.sub(r"([^0-9])0*([1-9])", r"\1\2", code)
+
+                        # make sure the code ends with a dot
+                        if(code[-1] != "."):
+                            code += "."
+
+                        # add missing dots between parts
+                        code = re.sub(r"([0-9]+)([a-z]+)", r"\1.\2", code)
+                        code = re.sub(r"([a-z]+)([0-9]+)", r"\1.\2", code)
+
+                        kontrollRegime=Kontrollregimes.objects.get(name__en="Wassenaar Arrangement 18 1", gueterArt=gueterArt.objects.get(name__de="Dual Use Güter"))
+                    
+                    if("Besondere militärische Güter" in line[2].splitlines() or "Dual Use Güter" in line[2].splitlines()):
                         try:
-                            ekn=Exportkontrollnummern.objects.get(nummer=code, kontrollregime__name__en=kontrollregimeName)
+                            ekn=Exportkontrollnummern.objects.get(nummer=code, kontrollregime=kontrollRegime)
                         except geschaefte.Exportkontrollnummern.DoesNotExist:
                             print("Export control code \"" + code + "\" could not be found (original: \"" + line[5] + "\" in file " + path + " for country " + line[1] + ").")
                             continue

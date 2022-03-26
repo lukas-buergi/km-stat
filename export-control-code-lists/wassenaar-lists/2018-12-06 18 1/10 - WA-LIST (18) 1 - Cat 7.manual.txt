@@ -1,5 +1,5 @@
-﻿
-7.A. SYSTEMS, EQUIPMENT AND COMPONENTS
+
+7.A.	SYSTEMS, EQUIPMENT AND COMPONENTS
 7.A.N.B.	For automatic pilots for underwater vehicles, see Category 8.
 7.A.N.B.	For radar, see Category 6.
 

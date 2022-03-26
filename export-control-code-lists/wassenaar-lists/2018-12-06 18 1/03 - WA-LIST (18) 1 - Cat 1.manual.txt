@@ -1,4 +1,4 @@
-﻿1.A.	SYSTEMS, EQUIPMENT AND COMPONENTS
+1.A.	SYSTEMS, EQUIPMENT AND COMPONENTS
 1.A.1.	Components made from fluorinated compounds, as follows:
 1.A.1.a.	Seals, gaskets, sealants or fuel bladders, specially designed for "aircraft" or aerospace use, made from more than 50 % by weight of any of the materials specified by 1.C.9.b. or 1.C.9.c.;
 1.A.1.b.	Not used since 2015
@@ -33,7 +33,7 @@
 1.A.4.	Protective and detection equipment and components, not specially designed for military use, as follows:
 1.A.4.a.	Full face masks, filter canisters and decontamination equipment therefor, designed or modified for defence against any of the following, and specially designed components therefor:
 1.A.4.a.Note.	1.A.4.a. includes Powered Air Purifying Respirators (PAPR) that are designed or modified for defence against agents or materials, listed in 1.A.4.a.
-1.A.4.a.Technical Notes.
+
 1.A.4.a.Technical Notes.	For the purposes of 1.A.4.a.:
 1.A.4.a.Technical Notes.1.	Full face masks are also known as gas masks.
 1.A.4.a.Technical Notes.2.	Filter canisters include filter cartridges.
@@ -58,8 +58,8 @@
 1.A.4.c.2.	'Radioactive materials'; or
 1.A.4.c.3.	Chemical warfare (CW) agents.
 1.A.4.d.	Electronic equipment designed for automatically detecting or identifying the presence of "explosives" residues and utilising 'trace detection' techniques (e.g., surface acoustic wave, ion mobility spectrometry, differential mobility spectrometry, mass spectrometry).
-1.A.4.d.Technical Note.
-1.A.4.d.Technical Note. 'Trace detection' is defined as the capability to detect less than 1 ppm vapour, or 1 mg solid or liquid.
+
+1.A.4.d.Technical Note.	'Trace detection' is defined as the capability to detect less than 1 ppm vapour, or 1 mg solid or liquid.
 1.A.4.d.Note 1.	1.A.4.d. does not apply to equipment specially designed for laboratory use.
 1.A.4.d.Note 2.	1.A.4.d. does not apply to non-contact walk-through security portals.
 1.A.4.Note.	1.A.4. does not apply to:
@@ -74,7 +74,7 @@
 1.A.4.Note.b.7.	environmental;
 1.A.4.Note.b.8.	waste management;
 1.A.4.Note.b.9.	food industry.
-1.A.4.Technical Notes.
+
 1.A.4.Technical Notes.1.	1.A.4. includes equipment and components that have been identified, successfully tested to national standards or otherwise proven effective, for the detection of or defence against 'radioactive materials', "biological agents", chemical warfare agents, 'simulants' or  "riot control agents", even if such equipment or components are used in civil industries such as mining, quarrying, agriculture, pharmaceuticals, medical, veterinary, environmental, waste management, or the food industry.
 1.A.4.Technical Notes.2.	'Simulant': A substance or material that is used in place of toxic agent (chemical or biological) in training, research, testing or evaluation.
 1.A.4.Technical Notes.3.	For the purposes of 1.A.4., 'radioactive materials' are those selected or modified to increase their effectiveness in producing casualties in humans or animals, degrading equipment or damaging crops or the environment.
@@ -89,8 +89,8 @@
 1.A.6.	Equipment, specially designed or modified for the disposal of improvised explosive devices, as follows, and specially designed components and accessories therefor:
 1.A.6.a.	Remotely operated vehicles;
 1.A.6.b.	'Disruptors';
-1.A.6.b.Technical Note.
-1.A.6.b.Technical Note. 'Disruptors' – Devices specially designed for the purpose of preventing the operation of an explosive device by projecting a liquid, solid or frangible projectile.
+
+1.A.6.b.Technical Note.	'Disruptors' – Devices specially designed for the purpose of preventing the operation of an explosive device by projecting a liquid, solid or frangible projectile.
 1.A.6.N.B.	For equipment specially designed for military use for the disposal of improvised explosive devices, see also ML4.
 1.A.6.Note.	1.A.6. does not apply to equipment when accompanying its operator .
 1.A.7.	Equipment and devices, specially designed to initiate charges and devices containing "energetic materials", by electrical means, as follows:
@@ -100,7 +100,7 @@
 1.A.7.b.2.	Exploding bridge wire (EBW);
 1.A.7.b.3.	Slapper;
 1.A.7.b.4.	Exploding foil initiators (EFI).
-1.A.7.Technical Notes.
+
 1.A.7.Technical Notes.1.	The word initiator or igniter is sometimes used in place of the word detonator.
 1.A.7.Technical Notes.2.	For the purpose of 1.A.7.b. the detonators of concern all utilise a small electrical conductor (bridge, bridge wire, or foil) that explosively vaporises when a fast, high-current electrical pulse is passed through it. In non-slapper types, the exploding conductor starts a chemical detonation in a contacting high explosive material such as PETN (pentaerythritoltetranitrate). In slapper detonators, the explosive vaporisation of the electrical conductor drives a flyer or slapper across a gap, and the impact of the slapper on an explosive starts a chemical detonation. The slapper in some designs is driven by magnetic force. The term exploding foil detonator may refer to either an EB or a slapper-type detonator.
 1.A.7.N.B.	For equipment and devices specially designed for military use see the Munitions List.
@@ -114,17 +114,17 @@
 1.A.8.c.	Detonating cord with explosive core load greater than 64 g/m;
 1.A.8.d.	Cutters, other than those specified by 1.A.8.b., and severing tools, having a NEQ greater than 3.5 kg.
 1.A.8.Note.	The only charges and devices specified in 1.A.8. are those containing "explosives" listed in the Annex to Category 1 and mixtures thereof.
-1.A.8.Technical Note.
-1.A.8.Technical Note. 'Shaped charges' are explosive charges shaped to focus the effects of the explosive blast.
+
+1.A.8.Technical Note.	'Shaped charges' are explosive charges shaped to focus the effects of the explosive blast.
 1.B.	TEST, INSPECTION AND PRODUCTION EQUIPMENT
 1.B.1.	Equipment for the production or inspection of "composite" structures or laminates specified by 1.A.2. or "fibrous or filamentary materials" specified by 1.C.10., as follows, and specially designed components and accessories therefor:
 1.B.1.a.	Filament winding machines, of which the motions for positioning, wrapping and winding fibres are coordinated and programmed in three or more 'primary servo positioning' axes, specially designed for the manufacture of "composite" structures or laminates, from "fibrous or filamentary materials";
 1.B.1.b.	'Tape-laying machines', of which the motions for positioning and laying tape are coordinated and programmed in five or more 'primary servo positioning' axes, specially designed for the manufacture of "composite" airframe or missile structures;
-1.B.1.b.Technical Note.
-1.B.1.b.Technical Note. For the purposes of 1.B.1.b., 'tape-laying machines' have the ability to lay one or more 'filament bands' limited to widths greater than 25.4 mm and less than or equal to 304.8 mm, and to cut and restart individual 'filament band' courses during the laying process.
+
+1.B.1.b.Technical Note.	For the purposes of 1.B.1.b., 'tape-laying machines' have the ability to lay one or more 'filament bands' limited to widths greater than 25.4 mm and less than or equal to 304.8 mm, and to cut and restart individual 'filament band' courses during the laying process.
 1.B.1.c.	Multidirectional, multidimensional weaving machines or interlacing machines, including adapters and modification kits, specially designed or modified for weaving, interlacing or braiding fibres for "composite" structures;
-1.B.1.c.Technical Note.
-1.B.1.c.Technical Note. For the purposes of 1.B.1.c., the technique of interlacing includes knitting.
+
+1.B.1.c.Technical Note.	For the purposes of 1.B.1.c., the technique of interlacing includes knitting.
 1.B.1.d.	Equipment specially designed or adapted for the production of reinforcement fibres, as follows:
 1.B.1.d.1.	Equipment for converting polymeric fibres (such as polyacrylonitrile, rayon, pitch or polycarbosilane) into carbon fibres or silicon carbide fibres, including special equipment to strain the fibre during heating;
 1.B.1.d.2.	Equipment for the chemical vapour deposition of elements or compounds, on heated filamentary substrates, to manufacture silicon carbide fibres;
@@ -135,9 +135,9 @@
 1.B.1.f.1.	X-ray tomography systems for three dimensional defect inspection;
 1.B.1.f.2.	Numerically controlled ultrasonic testing machines of which the motions for positioning transmitters or receivers are simultaneously coordinated and programmed in four or more axes to follow the three dimensional contours of the component under inspection;
 1.B.1.g.	'Tow-placement machines', of which the motions for positioning and laying tows are coordinated and programmed in two or more 'primary servo positioning' axes, specially designed for the manufacture of "composite" airframe or missile structures.
-1.B.1.g.Technical Note.
-1.B.1.g.Technical Note. For the purposes of 1.B.1.g., 'tow-placement machines' have the ability to place one or more 'filament bands' having widths less than or equal to 25.4 mm, and to cut and restart individual 'filament band' courses during the placement process.
-1.B.1.Technical Notes.
+
+1.B.1.g.Technical Note.	For the purposes of 1.B.1.g., 'tow-placement machines' have the ability to place one or more 'filament bands' having widths less than or equal to 25.4 mm, and to cut and restart individual 'filament band' courses during the placement process.
+
 1.B.1.Technical Notes.1.	For the purposes of 1.B.1., 'primary servo positioning' axes control, under computer program direction, the position of the end effector (i.e., head) in space relative to the work piece at the correct orientation and direction to achieve the desired process.
 1.B.1.Technical Notes.2.	For the purposes of 1.B.1., a 'filament band' is a single continuous width of fully or partially resin-impregnated tape, tow or fibre.  Fully or partially resin-impregnated 'filament bands' include those coated with dry powder that tacks upon heating.
 1.B.2.	Equipment for producing metal alloys, metal alloy powder or alloyed materials, specially designed to avoid contamination and specially designed for use in one of the processes specified by 1.C.2.c.2.
@@ -146,12 +146,12 @@
 1.B.3.b.	"Aircraft" or aerospace engines; or
 1.B.3.c.	Specially designed components for structures specified by 1.B.3.a. or for engines specified by 1.B.3.b.
 1.C.	MATERIALS
-1.C.Technical Note.
+
 1.C.Technical Note.	Metals and alloys
 1.C.Technical Note.	Unless provision to the contrary is made, the words 'metals' and 'alloys' cover crude and semi-fabricated forms, as follows:
 1.C.Technical Note.	Crude forms
 1.C.Technical Note.	Anodes, balls, bars (including notched bars and wire bars), billets, blocks, blooms, brickets, cakes, cathodes, crystals, cubes, dice, grains, granules, ingots, lumps, pellets, pigs, powder, rondelles, shot, slabs, slugs, sponge, sticks;
-1.C.Technical Note.	Technical Note cont.
+
 1.C.Technical Note.	Semi-fabricated forms (whether or not coated, plated, drilled or punched):
 1.C.Technical Note.a.	Wrought or worked materials fabricated by rolling, drawing, extruding, forging, impact extruding, pressing, graining, atomising, and grinding, i.e.: angles, channels, circles, discs, dust, flakes, foils and leaf, forging, plate, powder, pressings and stampings, ribbons, rings, rods (including bare welding rods, wire rods, and rolled wire), sections, shapes, sheets, strip, pipe and tubes (including tube rounds, squares, and hollows), drawn or extruded wire;
 1.C.Technical Note.b.	Cast material produced by casting in sand, die, metal, plaster or other types of moulds, including high pressure castings, sintered forms, and forms made by powder metallurgy.
@@ -165,16 +165,16 @@
 1.C.1.a.Note 1.c.1.	Made from any of the following:
 1.C.1.a.Note 1.c.1.a.	Plastic foam materials (flexible or non-flexible) with carbon-loading, or organic materials, including binders, providing more than 5% echo compared with metal over a bandwidth exceeding ±15% of the centre frequency of the incident energy, and not capable of withstanding temperatures exceeding 450 K (177° C); or
 1.C.1.a.Note 1.c.1.b.	Ceramic materials providing more than 20% echo compared with metal over a bandwidth exceeding ±15% of the centre frequency of the incident energy, and not capable of withstanding temperatures exceeding 800 K (527°C);
-1.C.1.a.Note 1.c.1.Technical Note.
+
 1.C.1.a.Note 1.c.1.Technical Note.	Absorption test samples for 1.C.1.a. Note 1.c.1. should be a square at least 5 wavelengths of the centre frequency on a side and positioned in the far field of the radiating element.
 1.C.1.a.Note 1.c.2.	Tensile strength less than 7 x 106 N/m2; and
 1.C.1.a.Note 1.c.3.	Compressive strength less than 14 x 106 N/m2;
 1.C.1.a.Note 1.d.	Planar absorbers made of sintered ferrite, having all of the following:
 1.C.1.a.Note 1.d.1.	A specific gravity exceeding 4.4; and
 1.C.1.a.Note 1.d.2.	A maximum operating temperature of 548 K (275°C);
-1.C.1.a.Note 1.	Note 1 cont.
+
 1.C.1.a.Note 1.e.	Planar absorbers having no magnetic loss and fabricated from 'open-cell foam' plastic material with a density of 0.15 grams/cm3 or less.
-1.C.1.a.Note 1.e.Technical Note.
+
 1.C.1.a.Note 1.e.Technical Note.	'Open-cell foams' are flexible and porous materials, having an inner structure open to the atmosphere.  'Open-cell foams' are also known as reticulated foams.
 1.C.1.a.Note 2.	Nothing in Note 1 releases magnetic materials to provide absorption when contained in paint.
 1.C.1.b.	Materials not transparent to visible light and specially designed for absorbing near-infrared radiation having a wavelength exceeding 810 nm but less than 2000 nm (frequencies exceeding 150 THz but less than 370 THz);
@@ -187,12 +187,12 @@
 1.C.1.c.3.	Polythiophene;
 1.C.1.c.4.	Poly phenylene-vinylene; or
 1.C.1.c.5.	Poly thienylene-vinylene.
-1.C.1.c.Technical Note.
+
 1.C.1.c.Technical Note.	'Bulk electrical conductivity' and 'sheet (surface) resistivity' should be determined using ASTM D-257 or national equivalents.
 1.C.1.c.Note.	1.C.1.c. does not apply to materials in a liquid form.
 1.C.2.	Metal alloys, metal alloy powder and alloyed materials, as follows:
 1.C.2.Note.	1.C.2. does not apply to metal alloys, metal alloy powder and alloyed materials, specially formulated for coating purposes.
-1.C.2.Technical Notes.
+
 1.C.2.Technical Notes.1.	The metal alloys in 1.C.2. are those containing a higher percentage by weight of the stated metal than of any other element.
 1.C.2.Technical Notes.2.	'Stress-rupture life' should be measured in accordance with ASTM standard E-139 or national equivalents.
 1.C.2.Technical Notes.3.	'Low cycle fatigue life' should be measured in accordance with ASTM Standard E-606 'Recommended Practice for Constant-Amplitude Low-Cycle Fatigue Testing' or national equivalents. Testing should be axial with an average stress ratio equal to 1 and a stress-concentration factor (Kt) equal to 1. The average stress is defined as maximum stress minus minimum stress divided by maximum stress.
@@ -217,7 +217,7 @@
 1.C.2.b.5.b.	A corrosion rate of less than 1 mm/year in 3% sodium chloride aqueous solution measured in accordance with ASTM standard G-31 or national equivalents;
 1.C.2.c.	Metal alloy powder or particulate material, having all of the following:
 1.C.2.c.1.	Made from any of the following composition systems:
-1.C.2.c.1.Technical Note.
+
 1.C.2.c.1.Technical Note.	X in the following equals one or more alloying elements.
 1.C.2.c.1.a.	Nickel alloys (Ni-Al-X, Ni-X-Al) qualified for turbine engine parts or components, i.e. with less than 3 non-metallic particles (introduced during the manufacturing process) larger than 100 µm in 109 alloy particles;
 1.C.2.c.1.b.	Niobium alloys (Nb-Al-X or Nb-X-Al, Nb-Si-X or Nb-X-Si, Nb-Ti-X or Nb-X-Ti);
@@ -242,7 +242,7 @@
 1.C.2.d.3.a.	'Splat quenching';
 1.C.2.d.3.b.	'Melt spinning'; or
 1.C.2.d.3.c.	'Melt extraction';
-Technical Notes.
+
 Technical Notes.1.	'Vacuum atomisation' is a process to reduce a molten stream of metal to droplets of a diameter of 500 μm or less by the rapid evolution of a dissolved gas upon exposure to a vacuum.
 Technical Notes.2.	'Gas atomisation' is a process to reduce a molten stream of metal alloy to droplets of 500 μm diameter or less by a high pressure gas stream.
 Technical Notes.3.	'Rotary atomisation' is a process to reduce a stream or pool of molten metal to droplets to a diameter of 500 μm or less by centrifugal force.
@@ -255,7 +255,7 @@ Technical Notes.9.	'Plasma atomisation' is a process to reduce a molten stream o
 Technical Notes.10.	'Solidify rapidly' is a process involving the solidification of molten material at cooling rates exceeding 1000 K/sec.
 1.C.3.	Magnetic metals, of all types and of whatever form, having any of the following:
 1.C.3.a.	Initial relative permeability of 120,000 or more and a thickness of 0.05 mm or less;
-1.C.3.a.Technical Note.
+
 1.C.3.a.Technical Note.	Measurement of initial relative permeability must be performed on fully annealed materials.
 1.C.3.b.	Magnetostrictive alloys having any of the following:
 1.C.3.b.1.	A saturation magnetostriction of more than 5 x 10-4; or
@@ -266,7 +266,7 @@ Technical Notes.10.	'Solidify rapidly' is a process involving the solidification
 1.C.3.c.3.	Any of the following:
 1.C.3.c.3.a.	A strip thickness of 0.02 mm or less; or
 1.C.3.c.3.b.	An electrical resistivity of 2 x 10-4 ohm cm or more.
-1.C.3.c.Technical Note.
+
 1.C.3.c.Technical Note.	'Nanocrystalline' materials in 1.C.3.c. are those materials having a crystal grain size of 50 nm or less, as determined by X-ray diffraction.
 1.C.4.	Uranium titanium alloys or tungsten alloys with a "matrix" based on iron, nickel or copper, having all of the following:
 1.C.4.a.	A density exceeding 17.5 g/cm3;
@@ -282,7 +282,7 @@ Technical Notes.10.	'Solidify rapidly' is a process involving the solidification
 1.C.5.b.2.	Remaining in the "superconductive" state at a temperature of 4.2 K 
 1.C.5.b.2.	(-268.96°C) when exposed to a magnetic field oriented in any direction perpendicular to the longitudinal axis of conductor and corresponding to a magnetic induction of 12 T with critical current density exceeding 1,750 A/mm2 on overall cross-section of the conductor.
 1.C.5.c.	"Superconductive" "composite" conductors consisting of one or more "superconductive" 'filaments', which remain "superconductive" above 115 K (-158.16oC).
-1.C.5.Technical Note.
+
 1.C.5.Technical Note.	For the purpose of 1.C.5., 'filaments' may be in wire, cylinder, film, tape or ribbon form.
 1.C.6.	Fluids and lubricating materials, as follows:
 1.C.6.a.	Not used since 2015
@@ -323,14 +323,14 @@ Technical Notes.10.	'Solidify rapidly' is a process involving the solidification
 1.C.7.c.1.b.1.d.	Si-O-N; and
 1.C.7.c.1.b.2.	Having a "specific tensile strength" exceeding 12.7 x 103m;
 1.C.7.c.2.	Ceramic-"matrix" "composite" materials with a "matrix" formed of carbides or nitrides of silicon, zirconium or boron;
-N.B.	For items previously specified by 1.C.7.c. see 1.C.7.c.1.b.
+1.C.7.c.N.B.	For items previously specified by 1.C.7.c. see 1.C.7.c.1.b.
 1.C.7.d.	Not used since 2016
 1.C.7.d.N.B.	For items previously specified by 1.C.7.d. see 1.C.7.c.2.
 1.C.7.e.	'Precursor materials' specially designed for the "production" of materials specified by 1.C.7.c., as follows:
 1.C.7.e.1.	Polydiorganosilanes;
 1.C.7.e.2.	Polysilazanes;
 1.C.7.e.3.	Polycarbosilazanes;
-1.C.7.Technical Note.
+
 1.C.7.Technical Note.	For the purposes of 1.C.7., 'precursor materials' are special purpose polymeric or metallo-organic materials used for the "production" of silicon carbide, silicon nitride, or ceramics with silicon, carbon and nitrogen. 
 1.C.7.f.	Not used since 2016
 1.C.7.f.N.B.	For items previously specified by 1.C.7.f. see 1.C.7.c.1.a.
@@ -347,7 +347,7 @@ N.B.	For items previously specified by 1.C.7.c. see 1.C.7.c.1.b.
 1.C.8.d.	Polyarylene ketones;
 1.C.8.e.	Polyarylene sulphides, where the arylene group is biphenylene, triphenylene or combinations thereof;
 1.C.8.f.	Polybiphenylenethersulphone having a 'glass transition temperature (Tg)' exceeding 563 K (290° C).
-1.C.8.Technical Notes.
+
 1.C.8.Technical Notes.1.	The 'glass transition temperature (Tg)' for 1.C.8.a.2. thermoplastic materials, 1.C.8.a.4. materials and 1.C.8.f. materials is determined using the method described in ISO 11357-2 (1999) or national equivalents.
 1.C.8.Technical Notes.2.	The 'glass transition temperature (Tg)' for 1.C.8.a.2. thermosetting materials and 1.C.8.a.3. materials is determined using the 3-point bend method described in ASTM D 7028-07 or equivalent national standard.  The test is to be performed using a dry test specimen which has attained a minimum of 90% degree of cure as specified by ASTM E 2160-04 or equivalent national standard, and was cured using the combination of standard- and post-cure processes that yield the highest Tg.
 1.C.9.	Unprocessed fluorinated compounds as follows:
@@ -355,7 +355,7 @@ N.B.	For items previously specified by 1.C.7.c. see 1.C.7.c.1.b.
 1.C.9.b.	Fluorinated polyimides containing 10% by weight or more of combined fluorine;
 1.C.9.c.	Fluorinated phosphazene elastomers containing 30% by weight or more of combined fluorine.
 1.C.10.	"Fibrous or filamentary materials" as follows:
-1.C.10.Technical Notes.
+
 1.C.10.Technical Notes.1.	For the purpose of calculating "specific tensile strength", "specific modulus" or specific weight of "fibrous or filamentary materials" in 1.C.10.a., 1.C.10.b., 1.C.10.c. or 1.C.10.e.1.b., the tensile strength and modulus should be determined by using Method A described in ISO 10618 (2004) or national equivalents.
 1.C.10.Technical Notes.2.	Assessing the "specific tensile strength", "specific modulus" or specific weight of non-unidirectional "fibrous or filamentary materials" (e.g., fabrics, random mats or braids) in 1.C.10. is to be based on the mechanical properties of the constituent unidirectional monofilaments (e.g., monofilaments, yarns, rovings or tows) prior to processing into the non-unidirectional "fibrous or filamentary materials".
 1.C.10.a.	Organic "fibrous or filamentary materials", having all of the following:
@@ -384,7 +384,7 @@ N.B.	For items previously specified by 1.C.7.c. see 1.C.7.c.1.b.
 1.C.10.d.1.a.	Polyetherimides specified by 1.C.8.a.; or
 1.C.10.d.1.b.	Materials specified by 1.C.8.d. to 1.C.8.f.; or
 1.C.10.d.2.	Composed of materials specified by 1.C.10.d.1.a. or 1.C.10.d.1.b. and 'commingled' with other fibres specified by 1.C.10.a., 1.C.10.b. or 1.C.10.c.;
-1.C.10.d.2.Technical Note.
+
 1.C.10.d.2.Technical Note.	'Commingled' is filament to filament blending of thermoplastic fibres and reinforcement fibres in order to produce a fibre reinforcement "matrix" mix in total fibre form.
 1.C.10.e.	Fully or partially resin-impregnated or pitch-impregnated "fibrous or filamentary materials" (prepregs), metal or carbon-coated "fibrous or filamentary materials" (preforms) or 'carbon fibre preforms', having all of the following:
 1.C.10.e.1.	Having any of the following:
@@ -403,13 +403,13 @@ Note 2.a.1.	An area not exceeding 1 m2;
 Note 2.a.2.	A length not exceeding 2.5 m; and
 Note 2.a.3.	A width exceeding 15 mm;
 Note 2.b.	Fully or partially resin-impregnated or pitch-impregnated mechanically chopped, milled or cut carbon "fibrous or filamentary materials" 25.0 mm or less in length when using a resin or pitch other than those specified by 1.C.8. or 1.C.9.b.
-Technical Notes.
+
 Technical Notes.1.	'Carbon fibre preforms' are an ordered arrangement of uncoated or coated fibres intended to constitute a framework of a part before the "matrix" is introduced to form a "composite".
 Technical Notes.2.	The 'Dynamic Mechanical Analysis glass transition temperature (DMA Tg)' for materials specified by 1.C.10.e. is determined using the method described in ASTM D 7028-07, or equivalent national standard, on a dry test specimen.  In the case of thermoset materials, degree of cure of a dry test specimen shall be a minimum of 90% as defined by ASTM E 2160-04 or equivalent national standard.
 1.C.11.	Metals and compounds, as follows:
 1.C.11.a.	Metals in particle sizes of less than 60 µm whether spherical, atomised, spheroidal, flaked or ground, manufactured from material consisting of 99% or more of zirconium, magnesium and alloys thereof;
 1.C.11.a.Note.	The metals or alloys specified by 1.C.11.a. also refer to metals or alloys encapsulated in aluminium, magnesium, zirconium or beryllium.
-Technical Note.
+
 Technical Note.	The natural content of hafnium in the zirconium (typically 2% to 7%) is counted with the zirconium.
 1.C.11.b.	Boron or boron alloys, with a particle size of 60 µm or less, as follows:
 1.C.11.b.1.	Boron with a purity of 85% by weight or more;
@@ -419,17 +419,17 @@ Technical Note.	The natural content of hafnium in the zirconium (typically 2% to
 1.C.11.d.	Nitroguanidine (NQ) (CAS 556-88-7).
 N.B.	See ML8.c.5.b. for metal powders mixed with other substances to form a mixture formulated for military purposes.
 1.C.12.	Materials as follows:
-1.C.12.Technical Note.
+
 1.C.12.Technical Note.	These materials are typically used for nuclear heat sources.
 1.C.12.a.	Plutonium in any form with a plutonium isotopic assay of plutonium-238 of more than 50% by weight;
 1.C.12.a.Note.	1.C.12.a. does not apply to:
 1.C.12.a.Note.a.	Shipments with a plutonium content of 1 g or less;
 1.C.12.a.Note.b.	Shipments of 3 'effective grams' or less when contained in a sensing component in instruments.
-1.C.12.a.Technical Note.
+
 1.C.12.a.Technical Note.	'Effective grams' for plutonium isotope is defined as the isotope weight in grams.
 1.C.12.b.	'Previously separated' neptunium-237 in any form.
 1.C.12.b.Note.	1.C.12.b. does not apply to shipments with a neptunium-237 content of 1 g or less.
-1.C.12.b.Technical Note.
+
 1.C.12.b.Technical Note.	'Previously separated' is the application of any process intended to increase the concentration of the controlled isotope.
 1.D.	SOFTWARE
 1.D.1.	"Software" specially designed or modified for the "development", "production" or "use" of equipment specified by 1.B.
@@ -460,7 +460,7 @@ N.B.	See ML8.c.5.b. for metal powders mixed with other substances to form a mixt
 1.E.2.f.	"Technology" for the repair of "composite" structures, laminates or materials specified by 1.A.2. or 1.C.7.c.;
 1.E.2.f.Note.	1.E.2.f. does not apply to "technology" for the repair of "civil aircraft" structures using carbon "fibrous or filamentary materials" and epoxy resins, contained in "aircraft" manufacturers' manuals.
 1.E.2.g.	"Libraries" specially designed or modified to enable equipment to perform the functions of equipment specified by 1.A.4.c. or 1.A.4.d.
-1.ANNEX.
+
 1.ANNEX.Explosives.	List - "explosives"
 1.ANNEX.Explosives.1.	ADNBF (aminodinitrobenzofuroxan or 7-amino-4,6-dinitrobenzofurazane-1-oxide) (CAS 97096-78-1);
 1.ANNEX.Explosives.2.	BNCP (cis-bis (5-nitrotetrazolato) tetra amine-cobalt (III) perchlorate)

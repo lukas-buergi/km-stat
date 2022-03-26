@@ -72,19 +72,22 @@ class Kontrollregimes(models.Model):
     verbose_name_plural = 'Kontrollregimes'
 
 class Exportkontrollnummern(models.Model):
-  """ Enthält die Anhänge mit den Beschreibungen der Nummern. Die Beschreibung wird erst bei Gelegenheit eingelesen, aber zumindest die Nummern selbst braucht es bevor ein Geschäft mit dieser Nummer eingetragen wird. """
+  """The export control codes (i.e. categories of goods) with their descriptions."""
+
   kontrollregime = models.ForeignKey(Kontrollregimes, on_delete=models.PROTECT)
-  """ Zu welchem Kontrollregime die Nummer gehört. Vor allem relevant falls es doppelte Nummern gibt oder der Inhalt der Listen geändert wird (dann würde man ein neues Kontrollregime erstellen und da eintragen). """
-  nummer = models.CharField(max_length=30)
-  """ Die Nummer. """
+  """Which control regime the code belongs to. There can be duplicate codes in different regimes and when a regime changes this is entered as a new regime."""
+
+  nummer = models.CharField(max_length=50)
+  """The code. """
+
   beschreibung = models.ForeignKey(Uebersetzungen, on_delete=models.PROTECT, blank=True, null=True)
-  """ Die Beschreibung aus der Liste. Ich bin nicht sicher ob die übersetzt werden, falls nicht bleiben die anderen Spalten der fehlenden Sprachen halt leer. Ist zumindest vorerst optional."""
+  """The description of the code (might not be available in all languages)."""
   
   def __str__(self):
     if(self.nummer != ""):
       return(str(self.nummer))
-    else: # Ich glaube nicht dass das eine gute Lösung ist, andererseits sollte der Fall eh nicht eintreten. TODO
-      return("Exportkontrollnummern " + self.pk)
+    else:
+      return("EKN PROBLEM " + self.pk)
   
   class Meta:
     verbose_name = 'Exportkontrollnummer'

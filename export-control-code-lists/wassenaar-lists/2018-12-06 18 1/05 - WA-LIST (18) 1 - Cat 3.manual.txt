@@ -1,4 +1,4 @@
-﻿
+
 3.A.	SYSTEMS, EQUIPMENT AND COMPONENTS
 
 3.A.Note 1.	The status of equipment and components described in 3.A., other than those described in 3.A.1.a.3. to 3.A.1.a.10., or 3.A.1.a.12. to 3.A.1.a.14., which are specially designed for or which have the same functional characteristics as other equipment is determined by the status of the other equipment.
@@ -286,7 +286,7 @@
 3.A.1.b.12.c.	Any planar side with length d (in cm) equal to or less than 15 divided by the lowest operating frequency in GHz [d ≤ 15cm*GHz*N/fGHz] where N is the number of transmit or transmit/receive channels; and
 3.A.1.b.12.d.	An electronically variable phase shifter per channel. 
 
-3.A.1.b.12.Technical Notes.
+
 3.A.1.b.12.Technical Notes.1.	A 'transmit/receive module': is a multifunction "electronic assembly" that provides bi-directional amplitude and phase control for transmission and reception of signals.
 3.A.1.b.12.Technical Notes.2.	A 'transmit module': is an "electronic assembly" that provides amplitude and phase control for transmission of signals. 
 3.A.1.b.12.Technical Notes.3.	A 'transmit/receive MMIC': is a multifunction "MMIC" that provides bi-directional amplitude and phase control for transmission and reception of signals. 
@@ -363,13 +363,13 @@
 3.A.1.g.2.a.	An off-state peak voltage equal to or greater than 3,000 V; and 
 3.A.1.g.2.b.	A peak (surge) current equal to or greater than 3,000 A;
 3.A.1.g.Note 1.	3.A.1.g. includes:
-3.A.1.g.Note 1. - Silicon Controlled Rectifiers (SCRs)
-3.A.1.g.Note 1. - Electrical Triggering Thyristors (ETTs)
-3.A.1.g.Note 1. - Light Triggering Thyristors (LTTs)
-3.A.1.g.Note 1. - Integrated Gate Commutated Thyristors (IGCTs)
-3.A.1.g.Note 1. - Gate Turn-off Thyristors (GTOs)
-3.A.1.g.Note 1. - MOS Controlled Thyristors (MCTs)
-3.A.1.g.Note 1. - Solidtrons
+3.A.1.g.Note 1.	- Silicon Controlled Rectifiers (SCRs)
+3.A.1.g.Note 1.	- Electrical Triggering Thyristors (ETTs)
+3.A.1.g.Note 1.	- Light Triggering Thyristors (LTTs)
+3.A.1.g.Note 1.	- Integrated Gate Commutated Thyristors (IGCTs)
+3.A.1.g.Note 1.	- Gate Turn-off Thyristors (GTOs)
+3.A.1.g.Note 1.	- MOS Controlled Thyristors (MCTs)
+3.A.1.g.Note 1.	- Solidtrons
 3.A.1.g.Note 2.	3.A.1.g. does not apply to thyristor devices and 'thyristor modules'  incorporated into equipment designed for civil railway or "civil aircraft" applications.
 
 3.A.1.g.Technical Note.	For the purposes of 3.A.1.g., a 'thyristor module' contains one or more thyristor devices.

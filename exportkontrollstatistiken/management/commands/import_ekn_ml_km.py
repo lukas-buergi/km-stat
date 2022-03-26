@@ -26,35 +26,38 @@ from django.core.management.base import BaseCommand
 
 class Command(BaseCommand):
     help="""
-    Warning: Overwrites important database entries without prompting. Make sure to backup any important changes before running this.
-
-    TODO: Makes a mess because it doesn't thoroughly delete entries not used anymore and creates duplicate entries.
+    Warning: Makes a mess if run multiple times without deleting all export control codes in between each run.
 
     Imports the Wassenaar munitions list(s) into the database. It saves them into the export control regime "Wassenaar Arrangement" - while this can be directly used for exports, long term we should verify how and when Switzerland accepts changes to the upstream lists and make a Swiss version of the upstream lists.
     Right now it only imports the 2018 list and gives it validity over the whole period.
     
     Also KM."""
     def handle(self, **options):
-        # once the km and bmg exports can be re-imported from the files, delete all of them from the db and uncomment the following lines to get rid of bad old data:
-        #Exportkontrollnummern.objects.all().delete()
-        #Kontrollregimes.objects.all().delete()
+
         for mlv in [
+            ["/code/export-control-code-lists/wassenaar-lists/2018-12-06 18 1/03 - WA-LIST (18) 1 - Cat 1.manual.txt", "Wassenaar Arrangement 18 1", "Dual-Use Goods",  datetime.date(1900, 1, 1), datetime.date(2200, 12, 31), "en"],
+            ["/code/export-control-code-lists/wassenaar-lists/2018-12-06 18 1/04 - WA-LIST (18) 1 - Cat 2.manual.txt", "Wassenaar Arrangement 18 1", "Dual-Use Goods",  datetime.date(1900, 1, 1), datetime.date(2200, 12, 31), "en"],
+            ["/code/export-control-code-lists/wassenaar-lists/2018-12-06 18 1/05 - WA-LIST (18) 1 - Cat 3.manual.txt", "Wassenaar Arrangement 18 1", "Dual-Use Goods",  datetime.date(1900, 1, 1), datetime.date(2200, 12, 31), "en"],
+            ["/code/export-control-code-lists/wassenaar-lists/2018-12-06 18 1/06 - WA-LIST (18) 1 - Cat 4.manual.txt", "Wassenaar Arrangement 18 1", "Dual-Use Goods",  datetime.date(1900, 1, 1), datetime.date(2200, 12, 31), "en"],
+            ["/code/export-control-code-lists/wassenaar-lists/2018-12-06 18 1/07 - WA-LIST (18) 1 - Cat 5P1.manual.txt", "Wassenaar Arrangement 18 1", "Dual-Use Goods",  datetime.date(1900, 1, 1), datetime.date(2200, 12, 31), "en"],
+            ["/code/export-control-code-lists/wassenaar-lists/2018-12-06 18 1/08 - WA-LIST (18) 1 - Cat 5P2.manual.txt", "Wassenaar Arrangement 18 1", "Dual-Use Goods",  datetime.date(1900, 1, 1), datetime.date(2200, 12, 31), "en"],
+            ["/code/export-control-code-lists/wassenaar-lists/2018-12-06 18 1/09 - WA-LIST (18) 1 - Cat 6.manual.txt", "Wassenaar Arrangement 18 1", "Dual-Use Goods",  datetime.date(1900, 1, 1), datetime.date(2200, 12, 31), "en"],
+            ["/code/export-control-code-lists/wassenaar-lists/2018-12-06 18 1/10 - WA-LIST (18) 1 - Cat 7.manual.txt", "Wassenaar Arrangement 18 1", "Dual-Use Goods",  datetime.date(1900, 1, 1), datetime.date(2200, 12, 31), "en"],
+            ["/code/export-control-code-lists/wassenaar-lists/2018-12-06 18 1/11 - WA-LIST (18) 1 - Cat 8.manual.txt", "Wassenaar Arrangement 18 1", "Dual-Use Goods",  datetime.date(1900, 1, 1), datetime.date(2200, 12, 31), "en"],
+            ["/code/export-control-code-lists/wassenaar-lists/2018-12-06 18 1/12 - WA-LIST (18) 1 - Cat 9.manual.txt", "Wassenaar Arrangement 18 1", "Dual-Use Goods",  datetime.date(1900, 1, 1), datetime.date(2200, 12, 31), "en"],
             ["/code/export-control-code-lists/wassenaar-lists/2018-12-06 18 1/15 - WA-LIST (18) 1 - ML.manual.txt", "Wassenaar Arrangement 18 1", "Special Military Goods",  datetime.date(1900, 1, 1), datetime.date(2200, 12, 31), "en"],
             ["/code/export-control-code-lists/km-swiss/2022-01-01.manual.txt", "SR 514.511 Anhang 1 (KMV) 2022-01-01", "Kriegsmaterial",  datetime.date(2022, 1, 1), datetime.date(2200, 12, 31), "de"]
         ]:
             # find/create the right export control regime 
             kontrollregimeName = mlv[1]
             try:
-                kontrollregime=Kontrollregimes.objects.get(**{"name__" + mlv[5] : kontrollregimeName})
+                kontrollregime=Kontrollregimes.objects.get(**{"name__" + mlv[5] : kontrollregimeName, "gueterArt__name__" + mlv[5] : mlv[2]})
             except geschaefte.Kontrollregimes.DoesNotExist:
                 print("Added Kontrollregime " + kontrollregimeName)
                 name=Uebersetzungen(**{mlv[5] : kontrollregimeName})
                 name.save()
                 kontrollregime=Kontrollregimes(name=name, gueterArt=GueterArten.objects.get(**{"name__" + mlv[5] : mlv[2]}), inkrafttreten=mlv[3], aufgehobenwerden=mlv[4])
                 kontrollregime.save()
-            
-            # delete all existing entries in this export contol regime because we are reimporting them
-            Exportkontrollnummern.objects.filter(kontrollregime=kontrollregime).delete()
 
             # import the export control codes
             # step 1 put them into list
@@ -67,7 +70,7 @@ class Command(BaseCommand):
                         assert(len(row) in [0,2])
                     except AssertionError:
                         print(row)
-                        raise
+                        continue # needs to be raise when the lists are correct
                     if(len(row) == 2):
                         descList.append(row)
                         codesSet.add(row[0])

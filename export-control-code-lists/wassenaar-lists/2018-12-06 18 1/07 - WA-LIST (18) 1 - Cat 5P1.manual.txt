@@ -1,4 +1,4 @@
-﻿
+
 5.A.1.	Part 1 - TELECOMMUNICATIONS
 
 5.A.1.Note 1.	The status of components, test and "production" equipment and "software" therefor which are specially designed for telecommunications equipment or systems is determined in Category 5 – Part 1.
@@ -120,9 +120,9 @@
 5.A.1.j.2.a.	Execution of searches on the basis of 'hard selectors'; and
 5.A.1.j.2.b.	Mapping of the relational network of an individual or of a group of people. 
 5.A.1.j.Note.	5.A.1.j. does not apply to systems or equipment, specially designed for any of the following:
-5.A.1.j.Note.a. Marketing purpose; 
-5.A.1.j.Note.b. Network Quality of Service (QoS);or
-5.A.1.j.Note.c. Quality of Experience (QoE).
+5.A.1.j.Note.a.	Marketing purpose; 
+5.A.1.j.Note.b.	Network Quality of Service (QoS); or
+5.A.1.j.Note.c.	Quality of Experience (QoE).
 
 5.A.1.j.Technical Note.	'Hard selectors': data or set of data, related to an individual (e.g., family name, given name, e-mail, street address, phone number or group affiliations).
 

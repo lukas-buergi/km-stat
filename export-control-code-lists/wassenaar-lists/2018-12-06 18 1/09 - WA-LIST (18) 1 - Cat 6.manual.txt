@@ -1,4 +1,4 @@
-﻿
+
 6.A.	SYSTEMS, EQUIPMENT AND COMPONENTS
 
 6.A.1.	ACOUSTICS
@@ -380,7 +380,7 @@
 6.A.3.b.4.Note 3.b.1.	Having a minimum horizontal or vertical 'Instantaneous-Field-of-View (IFOV)' of at least 2 mrad (milliradians);
 6.A.3.b.4.Note 3.b.2.	Incorporating a fixed focal-length lens that is not designed to be removed;
 6.A.3.b.4.Note 3.b.3.	Not incorporating a 'direct view' display; and
- 
+
 6.A.3.b.4.Note 3.b.3.Technical Note.	'Direct view' refers to an imaging camera operating in the infrared spectrum that presents a visual image to a human observer using a near-to-eye micro display incorporating any light-security mechanism.
 6.A.3.b.4.Note 3.b.4.	Having any of the following:
 6.A.3.b.4.Note 3.b.4.a.	No facility to obtain a viewable image of the detected field-of-view; or 
@@ -890,8 +890,8 @@
 6.A.8.c.	Capable of operating simultaneously on more than two carrier frequencies;
 6.A.8.d.	Capable of operating in synthetic aperture (SAR), inverse synthetic aperture (ISAR) radar mode, or sidelooking airborne (SLAR) radar mode;
 6.A.8.e.	Incorporating electronically scanned array antennae;
-6.A.8.e.Technical Note.
-6.A.8.e.Technical Note.Electronically scanned array antennae are also known as electronically steerable array antennae.
+
+6.A.8.e.Technical Note.	Electronically scanned array antennae are also known as electronically steerable array antennae.
 
 6.A.8.f.	Capable of heightfinding non-cooperative targets;
 6.A.8.g.	Specially designed for airborne (balloon or airframe mounted) operation and having Doppler "signal processing" for the detection of moving targets;
@@ -945,7 +945,7 @@
 6.A.8.l.3.	Not used since 2010
 6.A.8.l.4.	Configured to provide superposition and correlation, or fusion, of target data within six seconds from two or more 'geographically dispersed' radar sensors to improve the aggregate performance beyond that of any single sensor specified by 6.A.8.f. or 6.A.8.i.
 
-6.A.8.l.4.Technical Note.Sensors are considered 'geographically dispersed' when each location is distant from any other more than 1,500 m in any direction. Mobile sensors are always considered 'geographically dispersed'.
+6.A.8.l.4.Technical Note.	Sensors are considered 'geographically dispersed' when each location is distant from any other more than 1,500 m in any direction. Mobile sensors are always considered 'geographically dispersed'.
 6.A.8.l.4.N.B.	See also ML5.b.
 6.A.8.l.Note.	6.A.8.l. does not apply to systems, equipment and assemblies used for 'vessel traffic services'.
 
