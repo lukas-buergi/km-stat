@@ -1,0 +1,343 @@
+﻿
+9.A.	SYSTEMS, EQUIPMENT AND COMPONENTS
+
+9.A.N.B.	For propulsion systems designed or rated against neutron or transient ionizing radiation, see the Munitions List.* 
+
+9.A.1.	Aero gas turbine engines having any of the following:
+9.A.1.a.	Incorporating any of the "technologies" specified by 9.E.3.a., 9.E.3.h. or 9.E.3.i.; or
+9.A.1.a.Note 1.	9.A.1.a. does not apply to aero gas turbine engines which meet all of the following:
+9.A.1.a.Note 1.a.	Certified by civil aviation authorities of one or more Wassenaar Arrangement Participating States; and
+9.A.1.a.Note 1.b.	Intended to power non-military manned "aircraft" for which any of the following has been issued by civil aviation authorities of one or more Wassenaar Arrangement Participating States for the "aircraft" with this specific engine type:
+9.A.1.a.Note 1.b.1.	A civil type certificate; or
+9.A.1.a.Note 1.b.2.	An equivalent document recognised by the International Civil Aviation Organisation (ICAO).
+9.A.1.a.Note 2.	9.A.1.a. does not apply to aero gas turbine engines designed for Auxiliary Power Units (APUs) approved by the civil aviation authority in a Wassenaar Arrangement Participating State.
+
+9.A.1.b.	Designed to power an "aircraft" designed to cruise at Mach 1 or higher, for more than 30 minutes.
+
+9.A.2.	'Marine gas turbine engines' designed to use liquid fuel and having all of the following, and specially designed assemblies and components therefor:
+9.A.2.a.	Maximum continuous power when operating in "steady state mode" at standard reference conditions specified by ISO 3977-2:1997 (or national equivalent) of 24,245 kW or more; and
+9.A.2.b.	'Corrected specific fuel consumption' not exceeding 0.219 kg/kWh at 35% of the maximum continuous power when using liquid fuel.
+9.A.2.Note.	The term 'marine gas turbine engines' includes those industrial, or aero-derivative, gas turbine engines adapted for a ship's electric power generation or propulsion.
+
+9.A.2.Technical Note.	For the purposes of 9.A.2., 'corrected specific fuel consumption' is the specific fuel consumption of the engine corrected to a marine distillate liquid fuel having a net specific energy (i.e., net heating value) of 42MJ/kg (ISO 3977-2:1997).
+
+9.A.3.	Specially designed assemblies or components, incorporating any of the "technologies" specified by 9.E.3.a., 9.E.3.h. or 9.E.3.i., for any of the following aero gas turbine engines:
+9.A.3.a.	Specified by 9.A.1. or;
+9.A.3.b.	Whose design or production origins are either not from a Wassenaar Arrangement Participating State or unknown to the manufacturer.
+
+9.A.4.	Space launch vehicles, "spacecraft", "spacecraft buses", "spacecraft payloads", "spacecraft" on-board systems or equipment, terrestrial equipment, and air-launch platforms, as follows:
+9.A.4.a.	Space launch vehicles; 
+9.A.4.b.	"Spacecraft";
+9.A.4.c.	"Spacecraft buses";
+9.A.4.d.	"Spacecraft payloads" incorporating items specified by 3.A.1.b.1.a.4., 3.A.2.g., 5.A.1.a.1., 5.A.1.b.3., 5.A.2.c., 5.A.2.e., 6.A.2.a.1., 6.A.2.a.2., 6.A.2.b., 6.A.2.d., 6.A.3.b., 6.A.4.c., 6.A.4.e., 6.A.8.d., 6.A.8.e., 6.A.8.k., 6.A.8.l. or 9.A.10.c.;
+9.A.4.e.	On-board systems or equipment, specially designed for "spacecraft" and having any of the following functions:
+9.A.4.e.1.	'Command and telemetry data handling';
+9.A.4.e.1.Note.	For the purpose of 9.A.4.e.1., 'command and telemetry data handling' includes bus data management, storage, and processing.
+9.A.4.e.2.	'Payload data handling'; or
+9.A.4.e.2.Note.	For the purpose of 9.A.4.e.2., 'payload data handling' includes payload data management, storage, and processing.
+9.A.4.e.3.	'Attitude and orbit control';
+9.A.4.e.3.Note.	For the purpose of 9.A.4.e.3., 'attitude and orbit control' includes sensing and actuation to determine and control the position and orientation of a "spacecraft".
+9.A.4.e.N.B.	For equipment specially designed for military use, see ML 11.c.
+
+9.A.4.f.	Terrestrial equipment specially designed for "spacecraft", as follows:
+9.A.4.f.1.	Telemetry and telecommand equipment specially designed for any of the following data processing functions:
+9.A.4.f.1.a.	Telemetry data processing of frame synchronisation and error corrections, for monitoring of operational status (also known as health and safe status) of the "spacecraft bus"; or
+9.A.4.f.1.b.	Command data processing for formatting command data being sent to the "spacecraft" to control the "spacecraft bus";
+9.A.4.f.2.	Simulators specially designed for 'verification of operational procedures' of "spacecraft".
+
+9.A.4.f.2.Technical Note.	For the purposes of 9.A.4.f.2., 'verification of operational procedures' is any of the following:
+9.A.4.f.2.Technical Note.1.	Command sequence confirmation;
+9.A.4.f.2.Technical Note.2.	Operational training;
+9.A.4.f.2.Technical Note.3.	Operational rehearsals; or
+9.A.4.f.2.Technical Note.4.	Operational analysis.
+
+9.A.4.g.	"Aircraft" specially designed or modified to be air-launch platforms for space launch vehicles.
+
+9.A.5.	Liquid rocket propulsion systems containing any of the systems or components, specified by 9.A.6.
+
+9.A.6.	Systems and components, specially designed for liquid rocket propulsion systems, as follows:
+9.A.6.a.	Cryogenic refrigerators, flightweight dewars, cryogenic heat pipes or cryogenic systems, specially designed for use in space vehicles and capable of restricting cryogenic fluid losses to less than 30% per year;
+9.A.6.b.	Cryogenic containers or closed-cycle refrigeration systems, capable of providing temperatures of 100 K (-173°C) or less for "aircraft" capable of sustained flight at speeds exceeding Mach 3, launch vehicles or "spacecraft";
+9.A.6.c.	Slush hydrogen storage or transfer systems;
+9.A.6.d.	High pressure (exceeding 17.5 MPa) turbo pumps, pump components or their associated gas generator or expander cycle turbine drive systems;
+9.A.6.e.	High-pressure (exceeding 10.6 MPa) thrust chambers and nozzles therefor;
+9.A.6.f.	Propellant storage systems using the principle of capillary containment or positive expulsion (i.e., with flexible bladders);
+9.A.6.g.	Liquid propellant injectors with individual orifices of 0.381 mm or smaller in diameter (an area of 1.14 x 10-³ cm² or smaller for non-circular orifices) and specially designed for liquid rocket engines;
+9.A.6.h.	One-piece carbon-carbon thrust chambers or one-piece carbon-carbon exit cones, with densities exceeding 1.4 g/cm³ and tensile strengths exceeding 48 MPa.
+
+9.A.7.	Solid rocket propulsion systems having any of the following:
+9.A.7.a.	Total impulse capacity exceeding 1.1 MNs;
+9.A.7.b.	Specific impulse of 2.4 kNs/kg or more, when the nozzle flow is expanded to ambient sea level conditions for an adjusted chamber pressure of 7 MPa;
+9.A.7.c.	Stage mass fractions exceeding 88% and propellant solid loadings exceeding 86%;
+9.A.7.d.	Components specified by 9.A.8.; or
+9.A.7.e.	Insulation and propellant bonding systems, using direct-bonded motor designs to provide a 'strong mechanical bond' or a barrier to chemical migration between the solid propellant and case insulation material.
+
+9.A.7.e.Technical Note.	A 'strong mechanical bond' means bond strength equal to or more than propellant strength.
+
+9.A.8.	Components specially designed for solid rocket propulsion systems, as follows:
+9.A.8.a.	Insulation and propellant bonding systems, using liners to provide a 'strong mechanical bond' or a barrier to chemical migration between the solid propellant and case insulation material;
+9.A.8.b.	Filament-wound "composite" motor cases exceeding 0.61 m in diameter or having 'structural efficiency ratios (PV/W)' exceeding 25 km;
+
+9.A.8.b.Technical Note.	'Structural efficiency ratio (PV/W)' is the burst pressure (P) multiplied by the vessel volume (V) divided by the total pressure vessel weight (W).
+
+9.A.8.c.	Nozzles with thrust levels exceeding 45 kN or nozzle throat erosion rates of less than 0.075 mm/s;
+9.A.8.d.	Movable nozzle or secondary fluid injection thrust vector control systems, capable of any of the following:
+9.A.8.d.1.	Omni-axial movement exceeding ± 5°;
+9.A.8.d.2.	Angular vector rotations of 20°/s or more; or
+9.A.8.d.3.	Angular vector accelerations of 40°/s2 or more.
+
+9.A.9.	Hybrid rocket propulsion systems having any of the following:
+9.A.9.a.	Total impulse capacity exceeding 1.1 MNs; or
+9.A.9.b.	Thrust levels exceeding 220 kN in vacuum exit conditions.
+
+9.A.10.	Specially designed components, systems and structures, for launch vehicles, launch vehicle propulsion systems or "spacecraft", as follows:
+9.A.10.a.	Components and structures, each exceeding 10 kg and specially designed for launch vehicles manufactured using any of the following:
+9.A.10.a.1.	"Composite" materials consisting of "fibrous or filamentary materials" specified by 1.C.10.e. and resins specified by 1.C.8. or 1.C.9.b.; 
+9.A.10.a.2.	Metal "matrix" "composites" reinforced by any of the following: 
+					a.	Materials specified by 1.C.7.; 
+					b.	"Fibrous or filamentary materials" specified by 1.C.10.; or 
+					c.	Aluminides specified by 1.C.2.a.; or
+9.A.10.a.3.	Ceramic "matrix" "composite" materials specified by 1.C.7.; 
+9.A.10.a.Note.	The weight cut-off is not relevant for nose cones.
+
+9.A.10.b.	Components and structures, specially designed for launch vehicle propulsion systems specified by 9.A.5. to 9.A.9. manufactured using any of the following:
+9.A.10.b.1.	"Fibrous or filamentary materials" specified by 1.C.10.e. and resins specified by 1.C.8. or 1.C.9.b.; 
+9.A.10.b.2.	Metal "matrix" "composite" materials reinforced by any of the following: 
+9.A.10.b.2.a.	Materials specified by 1.C.7.; 
+9.A.10.b.2.b.	"Fibrous or filamentary materials" specified by 1.C.10.; or 
+9.A.10.b.2.c.	Aluminides specified by 1.C.2.a.; or
+9.A.10.b.3.	Ceramic "matrix" "composite" materials specified by 1.C.7.; 
+9.A.10.c.	Structural components and isolation systems, specially designed to control actively the dynamic response or distortion of "spacecraft" structures;
+9.A.10.d.	Pulsed liquid rocket engines with thrust-to-weight ratios equal to or more than 1 kN/kg and a 'response time' of less than 30 ms.
+
+9.A.10.d.Technical Note.	For the purposes of 9.A.10.d., 'response time' is the time required to achieve 90% of total rated thrust from start-up.
+
+9.A.11.	Ramjet, scramjet or combined cycle engines, and specially designed components therefor.
+
+9.A.12.	"Unmanned Aerial Vehicles" ("UAVs"), unmanned "airships", related equipment and components, as follows: 
+9.A.12.a.	"UAVs" or unmanned "airships", designed to have controlled flight out of the direct 'natural vision' of the 'operator' and having any of the following:  
+9.A.12.a.1.	Having all of the following:
+9.A.12.a.1.a.	A maximum 'endurance' greater than or equal to 30 minutes but less than 1 hour; and
+9.A.12.a.1.b.	Designed to take-off and have stable controlled flight in wind gusts equal to or exceeding 46.3 km/h (25 knots); or
+9.A.12.a.2.	A maximum 'endurance' of 1 hour or greater;
+
+9.A.12.a.Technical Notes.1.	For the purposes of 9.A.12.a., 'operator' is a person who initiates or commands the "UAV" or unmanned "airship" flight. 
+9.A.12.a.Technical Notes.2.	For the purposes of 9.A.12.a., 'endurance' is to be calculated for ISA conditions (ISO 2533:1975) at sea level in zero wind.
+9.A.12.a.Technical Notes.3.	For the purposes of 9.A.12.a., 'natural vision' means unaided human sight, with or without corrective lenses.
+
+9.A.12.b.	related equipment and components, as follows:
+9.A.12.b.1.	Not used since 2014
+9.A.12.b.2.	Not used since 2014
+9.A.12.b.3.	Equipment or components, specially designed to convert a manned "aircraft" or a manned "airship" to a "UAV" or unmanned "airship", specified by 9.A.12.a.; 
+9.A.12.b.4.	Air breathing reciprocating or rotary internal combustion type engines, specially designed or modified to propel "UAVs" or unmanned "airships", at altitudes above 15,240 meters (50,000 feet). 
+
+
+9.B.	TEST, INSPECTION AND PRODUCTION EQUIPMENT
+
+9.B.1.	Manufacturing equipment, tooling or fixtures, as follows:
+9.B.1.a.	Directional solidification or single crystal casting equipment designed for "superalloys";
+9.B.1.b.	Casting tooling, specially designed for manufacturing gas turbine engine blades, vanes or "tip shrouds", manufactured from refractory metals or ceramics, as follows:
+9.B.1.b.1.	Cores;
+9.B.1.b.2.	Shells (moulds);
+9.B.1.b.3.	Combined core and shell (mould) units;
+9.B.1.c.	Directional-solidification or single-crystal additive-manufacturing equipment, specially designed for manufacturing gas turbine engine blades, vanes or "tip shrouds".
+
+9.B.2.	On-line (real time) control systems, instrumentation (including sensors) or automated data acquisition and processing equipment, having all of the following:
+9.B.2.a.	Specially designed for the "development" of gas turbine engines, assemblies or components; and 
+9.B.2.b.	Incorporating any of the "technologies" specified by 9.E.3.h. or 9.E.3.i.
+
+9.B.3.	Equipment specially designed for the "production" or test of gas turbine brush seals designed to operate at tip speeds exceeding 335 m/s and temperatures in excess of 773 K (500°C), and specially designed components or accessories therefor.
+
+9.B.4.	Tools, dies or fixtures, for the solid state joining of "superalloy", titanium or intermetallic airfoil-to-disk combinations described in 9.E.3.a.3. or 9.E.3.a.6. for gas turbines.
+
+9.B.5.	On-line (real time) control systems, instrumentation (including sensors) or automated data acquisition and processing equipment, specially designed for use with any of the following:
+9.B.5.a.	Wind tunnels designed for speeds of Mach 1.2 or more;
+9.B.5.a.Note.	9.B.5.a. does not apply to wind tunnels specially designed for educational purposes and having a 'test section size' (measured laterally) of less than 250 mm.
+
+9.B.5.a.Note.Technical Note.	'Test section size' means the diameter of the circle, or the side of the square, or the longest side of the rectangle, at the largest test section location.
+
+9.B.5.b.	Devices for simulating flow-environments at speeds exceeding Mach 5, including hot-shot tunnels, plasma arc tunnels, shock tubes, shock tunnels, gas tunnels and light gas guns; or
+9.B.5.c.	Wind tunnels or devices, other than two-dimensional sections, capable of simulating Reynolds number flows exceeding 25 x 106.
+
+9.B.6.	Acoustic vibration test equipment capable of producing sound pressure levels of 160 dB or more (referenced to 20 Pa) with a rated output of 4 kW or more at a test cell temperature exceeding 1,273 K (1,000°C), and specially designed quartz heaters therefor.
+
+9.B.7.	Equipment specially designed for inspecting the integrity of rocket motors and using Non-Destructive Test (NDT) techniques other than planar x-ray or basic physical or chemical analysis.
+
+9.B.8.	Direct measurement wall skin friction transducers specially designed to operate at a test flow total (stagnation) temperature exceeding 833 K (560°C).
+
+9.B.9.	Tooling specially designed for producing gas turbine engine powder metallurgy rotor components having all of the following:
+9.B.9.a.	Designed to operate at stress levels of 60% of Ultimate Tensile Strength (UTS) or more measured at a temperature of 873 K (600°C); and
+9.B.9.b.	Designed to operate at 873 K (600°C) or more.
+9.B.9.Note	9.B.9. does not specify tooling for the production of powder.
+
+9.B.10.	Equipment specially designed for the production of items specified by 9.A.12.
+
+
+9.C.	MATERIALS - None
+
+
+9.D.	SOFTWARE
+
+9.D.1.	"Software", not specified in 9.D.3. or 9.D.4., specially designed or modified for the "development" of equipment or "technology", specified by 9.A., 9.B. or 9.E.3.
+
+9.D.2.	"Software", not specified in 9.D.3. or 9.D.4., specially designed or modified for the "production" of equipment specified by 9.A. or 9.B.
+
+9.D.3.	"Software" incorporating "technology" specified by 9.E.3.h. and used in "FADEC Systems" for systems specified by 9.A. or equipment specified by 9.B.
+
+9.D.4.	Other "software" as follows:
+9.D.4.a.	2D or 3D viscous "software", validated with wind tunnel or flight test data required for detailed engine flow modelling;
+9.D.4.b.	"Software" for testing aero gas turbine engines, assemblies or components, having all of the following:
+9.D.4.b.1.	Specially designed for testing any of the following:
+9.D.4.b.1.a.	Aero gas turbine engines, assemblies or components, incorporating "technology" specified by 9.E.3.a., 9.E.3.h. or 9.E.3.i.; or
+9.D.4.b.1.b.	Multi-stage compressors providing either bypass or core flow, specially designed for aero gas turbine engines incorporating "technology" specified by 9.E.3.a. or 9.E.3.h.; and
+9.D.4.b.2.	Specially designed for all of the following:
+9.D.4.b.2.a.	Acquisition and processing of data, in real time; and
+9.D.4.b.2.b.	Feedback control of the test article or test conditions (e.g., temperature, pressure, flow rate) while the test is in progress;
+9.D.4.b.Note.	9.D.4.b. does not specify software for operation of the test facility or operator safety (e.g., overspeed shutdown, fire detection and suppression), or production, repair or maintenance acceptance-testing limited to determining if the item has been properly assembled or repaired.
+
+9.D.4.c.	"Software" specially designed to control directional-solidification or single-crystal material growth in equipment specified by 9.B.1.a. or 9.B.1.c.;
+9.D.4.d.	Not used since 2011
+9.D.4.e.	"Software" specially designed or modified for the operation of items specified by 9.A.12;
+9.D.4.f.	"Software" specially designed to design the internal cooling passages of aero gas turbine engine blades, vanes and "tip shrouds";
+9.D.4.g.	"Software" having all of the following:
+9.D.4.g.1.	Specially designed to predict aero thermal, aeromechanical and combustion conditions in aero gas turbine engines; and
+9.D.4.g.2.	Theoretical modelling predictions of the aero thermal, aeromechanical and combustion conditions, which have been validated with actual aero gas turbine engine (experimental or production) performance data.
+
+9.D.5.	"Software" specially designed or modified for the operation of items specified by 9.A.4.e. or 9.A.4.f.
+
+9.E.	TECHNOLOGY
+
+9.E.Note.	"Development" or "production" "technology" specified by 9.E. for gas turbine engines remains specified by 9.E. when used for repair or overhaul. Excluded from 9.E. are: technical data, drawings or documentation for maintenance activities directly associated with calibration, removal or replacement of damaged or unserviceable line replaceable units, including replacement of whole engines or engine modules.
+
+9.E.1.	"Technology" according to the General Technology Note for the "development" of equipment or "software", specified by 9.A.1.b., 9.A.4. to 9.A.12., 9.B. or 9.D.
+9.E.2.	"Technology" according to the General Technology Note for the "production" of equipment specified by 9.A.1.b., 9.A.4. to 9.A.11. or 9.B.
+9.E.N.B.	For "technology" for the repair of specified structures, laminates or materials, see 1.E.2.f.
+
+9.E.3.	Other "technology" as follows:
+9.E.3.a.	"Technology" "required" for the "development" or "production" of any of the following gas turbine engine components or systems:
+9.E.3.a.1.	Gas turbine blades, vanes or "tip shrouds", made from directionally solidified (DS) or single crystal (SC) alloys and having (in the 001 Miller Index Direction) a stress-rupture life exceeding 400 hours at 1,273 K (1,000°C) at a stress of 200 MPa, based on the average property values;
+
+9.E.3.a.1.Technical Note.	For the purposes of 9.E.3.a.1., stress-rupture life testing is typically conducted on a test specimen. 
+9.E.3.a.2.	Combustors having any of the following:
+9.E.3.a.2.a.	'Thermally decoupled liners' designed to operate at 'combustor exit temperature' exceeding 1,883K (1,610°C);
+9.E.3.a.2.b.	Non-metallic liners;
+9.E.3.a.2.c.	Non-metallic shells; or
+9.E.3.a.2.d.	Liners designed to operate at 'combustor exit temperature' exceeding 1,883K (1,610°C) and having holes that meet the parameters specified by 9.E.3.c.; 
+9.E.3.a.2.Note.	The "required" "technology" for holes in 9.E.3.a.2. is limited to the derivation of the geometry and location of the holes.
+
+9.E.3.a.2.Technical Notes.1.	'Thermally decoupled liners' are liners that feature at least a support structure designed to carry mechanical loads and a combustion facing structure designed to protect the support structure from the heat of combustion.  The combustion facing structure and support structure have independent thermal displacement (mechanical displacement due to thermal load) with respect to one another, i.e. they are thermally decoupled.
+9.E.3.a.2.Technical Notes.2.	'Combustor exit temperature' is the bulk average gas path total (stagnation) temperature between the combustor exit plane and the leading edge of the turbine inlet guide vane (i.e., measured at engine station T40 as defined in SAE ARP 755A) when the engine is running in a "steady state mode" of operation at the certificated maximum continuous operating temperature.
+9.E.3.a.N.B.	See 9.E.3.c. for "technology" "required" for manufacturing cooling holes.
+
+9.E.3.a.3.	Components that are any of the following:
+9.E.3.a.3.a.	Manufactured from organic "composite" materials designed to operate above 588 K (315°C);
+9.E.3.a.3.b.	Manufactured from any of the following:
+9.E.3.a.3.b.1.	Metal "matrix" "composites" reinforced by any of the following:
+9.E.3.a.3.b.1.a.	Materials specified by 1.C.7.; 
+9.E.3.a.3.b.1.b.	"Fibrous or filamentary materials" specified by 1.C.10.; or 
+9.E.3.a.3.b.1.c.	Aluminides specified by 1.C.2.a.; or
+9.E.3.a.3.b.2.	Ceramic "matrix" "composites" specified by 1.C.7.; or
+9.E.3.a.3.c.	Stators, vanes, blades, tip seals (shrouds), rotating blings, rotating blisks, or 'splitter ducts', that are all of the following:
+9.E.3.a.3.c.1.	Not specified in 9.E.3.a.3.a.;
+9.E.3.a.3.c.2.	Designed for compressors or fans; and
+9.E.3.a.3.c.3.	Manufactured from material specified by 1.C.10.e. with resins specified by 1.C.8.;
+
+9.E.3.a.3.c.Technical Note.	A 'splitter duct' performs the initial separation of the air-mass flow between the bypass and core sections of the engine.
+
+9.E.3.a.4.	Uncooled turbine blades, vanes or "tip-shrouds", designed to operate at a 'gas path temperature' of 1,373 K (1,100°C) or more;
+
+9.E.3.a.5.	Cooled turbine blades, vanes, "tip-shrouds" other than those described in 9.E.3.a.1., designed to operate at a 'gas path temperature' of 1,693 K (1,420°C) or more;
+
+9.E.3.a.5.Technical Note.	'Gas path temperature' is the bulk average gas path total (stagnation) temperature at the leading edge plane of the turbine component when the engine is running in a "steady state mode" of operation at the certificated or specified maximum continuous operating temperature.
+
+9.E.3.a.6.	Airfoil-to-disk blade combinations using solid state joining;
+
+9.E.3.a.7.	Not used since 2018
+
+9.E.3.a.8.	'Damage tolerant' gas turbine engine rotor components using powder metallurgy materials specified by 1.C.2.b.; or
+
+9.E.3.a.8.Technical Note.	'Damage tolerant' components are designed using methodology and substantiation to predict and limit crack growth.
+
+9.E.3.a.9.	Not used since 2009
+9.E.3.a.9.N.B.	For "FADEC systems", see 9.E.3.h.
+
+9.E.3.a.10.	Not used since 2010
+9.E.3.a.10.N.B.	For adjustable flow path geometry, see 9.E.3.i.
+
+9.E.3.a.11.	Hollow fan blades;
+
+9.E.3.b.	"Technology" "required" for the "development" or "production" of any of the following:
+9.E.3.b.1.	Wind tunnel aero-models equipped with non-intrusive sensors capable of transmitting data from the sensors to the data acquisition system; or
+9.E.3.b.2.	"Composite" propeller blades or prop fans, capable of absorbing more than 2,000 kW at flight speeds exceeding Mach 0.55;
+
+9.E.3.c.	"Technology" "required" for manufacturing cooling holes, in gas turbine engine components incorporating any of the "technologies" specified by 9.E.3.a.1., 9.E.3.a.2. or 9.E.3.a.5., and having any of the following:
+9.E.3.c.1.	Having all of the following:
+9.E.3.c.1.a.	Minimum 'cross-sectional area' less than 0.45 mm2;
+9.E.3.c.1.b.	'Hole shape ratio' greater than 4.52; and
+9.E.3.c.1.c.	'Incidence angle' equal to or less than 25°; or
+9.E.3.c.2.	Having all of the following:
+9.E.3.c.2.a.	Minimum 'cross-sectional area' less than 0.12 mm2;
+9.E.3.c.2.b.	'Hole shape ratio' greater than 5.65; and
+9.E.3.c.2.c.	'Incidence angle' more than 25°;
+9.E.3.c.Note.	9.E.3.c. does not apply to "technology" for manufacturing constant radius cylindrical holes that are straight through and enter and exit on the external surfaces of the component.
+
+9.E.3.c.Technical Notes.1.	For the purposes of 9.E.3.c., the 'cross-sectional area' is the area of the hole in the plane perpendicular to the hole axis.
+9.E.3.c.Technical Notes.2.	For the purposes of 9.E.3.c., 'hole shape ratio' is the nominal length of the axis of the hole divided by the square root of its minimum 'cross-sectional area'.
+9.E.3.c.Technical Notes.3.	For the purposes of 9.E.3.c., 'incidence angle' is the acute angle measured between the plane tangential to the aerofoil surface and the hole axis at the point where the hole axis enters the aerofoil surface.
+9.E.3.c.Technical Notes.4.	Methods for manufacturing holes in 9.E.3.c. include "laser" beam machining, water jet machining, Electro-Chemical Machining (ECM) or Electrical Discharge Machining (EDM).
+
+9.E.3.d.	"Technology" "required" for the "development" or "production" of helicopter power transfer systems or tilt rotor or tilt wing "aircraft" power transfer systems; 
+
+9.E.3.e.	"Technology" for the "development" or "production" of reciprocating diesel engine ground vehicle propulsion systems having all of the following:
+9.E.3.e.1.	'Box volume' of 1.2 m3 or less;
+9.E.3.e.2.	An overall power output of more than 750 kW based on 80/1269/EEC, ISO 2534 or national equivalents; and
+9.E.3.e.3.	Power density of more than 700 kW/m3 of 'box volume';
+
+
+9.E.3.e.Technical Note.	'Box volume' is the product of three perpendicular dimensions measured in the following way:
+9.E.3.e.Technical Note.Length.	The length of the crankshaft from front flange to flywheel face;
+9.E.3.e.Technical Note.Width.	The widest of any of the following:
+9.E.3.e.Technical Note.Width.a.	The outside dimension from valve cover to valve cover;
+9.E.3.e.Technical Note.Width.b.	The dimensions of the outside edges of the cylinder heads; or
+9.E.3.e.Technical Note.Width.c.	The diameter of the flywheel housing;
+9.E.3.e.Technical Note.Height.	The largest of any of the following:
+9.E.3.e.Technical Note.Height.a.	The dimension of the crankshaft centre-line to the top plane of the valve cover (or cylinder head) plus twice the stroke; or
+9.E.3.e.Technical Note.Height.b.	The diameter of the flywheel housing.
+
+9.E.3.f.	"Technology" "required" for the "production" of specially designed components for high output diesel engines, as follows:
+9.E.3.f.1.	"Technology" "required" for the "production" of engine systems having all of the following components employing ceramics materials specified by 1.C.7.:
+9.E.3.f.1.a.	Cylinder liners;
+9.E.3.f.1.b.	Pistons;
+9.E.3.f.1.c.	Cylinder heads; and
+9.E.3.f.1.d.	One or more other components (including exhaust ports, turbochargers, valve guides, valve assemblies or insulated fuel injectors);
+9.E.3.f.2.	"Technology" "required" for the "production" of turbocharger systems with single-stage compressors and having all of the following:
+9.E.3.f.2.a.	Operating at pressure ratios of 4:1 or higher;
+9.E.3.f.2.b.	Mass flow in the range from 30 to 130 kg per minute; and
+9.E.3.f.2.c.	Variable flow area capability within the compressor or turbine sections;
+9.E.3.f.3.	"Technology" "required" for the "production" of fuel injection systems with a specially designed multifuel (e.g., diesel or jet fuel) capability covering a viscosity range from diesel fuel (2.5 cSt at 310.8 K (37.8°C)) down to gasoline fuel (0.5 cSt at 310.8 K (37.8°C)) and having all of the following:
+9.E.3.f.3.a.	Injection amount in excess of 230 mm3 per injection per cylinder; and
+9.E.3.f.3.b.	Electronic control features specially designed for switching governor characteristics automatically depending on fuel property to provide the same torque characteristics by using the appropriate sensors;
+
+9.E.3.g.	"Technology" "required" for the "development" or "production" of 'high output diesel engines' for solid, gas phase or liquid film (or combinations thereof) cylinder wall lubrication and permitting operation to temperatures exceeding 723 K (450°C), measured on the cylinder wall at the top limit of travel of the top ring of the piston;
+
+9.E.3.g.Technical Note.	'High output diesel engines' are diesel engines with a specified brake mean effective pressure of 1.8 MPa or more at a speed of 2,300 r.p.m., provided the rated speed is 2,300 r.p.m. or more.
+
+9.E.3.h.	"Technology" for gas turbine engine "FADEC systems" as follows:
+9.E.3.h.1.	"Development" "technology" for deriving the functional requirements for the components necessary for the "FADEC system" to regulate engine thrust or shaft power (e.g., feedback sensor time constants and accuracies, fuel valve slew rate);
+9.E.3.h.2.	"Development" or "production" "technology" for control and diagnostic components unique to the "FADEC system" and used to regulate engine thrust or shaft power;
+9.E.3.h.3.	"Development" "technology" for the control law algorithms, including "source code", unique to the "FADEC system" and used to regulate engine thrust or shaft power;
+9.E.3.h.Note.	9.E.3.h. does not apply to technical data related to engine-"aircraft" integration required by civil aviation authorities of one or more Wassenaar Arrangement Participating States to be published for general airline use (e.g., installation manuals, operating instructions, instructions for continued airworthiness) or interface functions (e.g., input/output processing, airframe thrust or shaft power demand).
+
+9.E.3.i.	"Technology" for adjustable flow path systems designed to maintain engine stability for gas generator turbines, fan or power turbines, or propelling nozzles, as follows:
+9.E.3.i.1.	"Development" "technology" for deriving the functional requirements for the components that maintain engine stability;
+9.E.3.i.2.	"Development" or "production" "technology" for components unique to the adjustable flow path system and that maintain engine stability;
+9.E.3.i.3.	"Development" "technology" for the control law algorithms, including "source code", unique to the adjustable flow path system and that maintain engine stability.
+9.E.3.i.Note.	9.E.3.i. does not apply to "technology" for any of the following:
+9.E.3.i.Note.a.	Inlet guide vanes;
+9.E.3.i.Note.b.	Variable pitch fans or prop-fans;
+9.E.3.i.Note.c.	Variable compressor vanes;
+9.E.3.i.Note.d.	Compressor bleed valves; or
+9.E.3.i.Note.e.	Adjustable flow path geometry for reverse thrust.
+
+9.E.3.j.	"Technology" "required" for the "development" of wing-folding systems designed for fixed-wing "aircraft" powered by gas turbine engines.
+9.E.3.j.N.B.	For "technology" "required" for the "development" of wing-folding systems designed for fixed-wing "aircraft" specified in ML10., see ML22.

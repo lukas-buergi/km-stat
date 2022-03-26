@@ -7,11 +7,11 @@
 
 6.A.1.a.	Marine acoustic systems, equipment and specially designed components therefor, as follows:
 6.A.1.a.1.	Active (transmitting or transmitting-and-receiving) systems, equipment and specially designed components therefor, as follows:
-Note	6.A.1.a.1. does not apply to equipment as follows:
-a.	Depth sounders operating vertically below the apparatus, not including a scanning function exceeding ± 20°, and limited to measuring the depth of water, the distance of submerged or buried objects or fish finding;
-b.	Acoustic beacons, as follows:
-1.	Acoustic emergency beacons;
-2.	Pingers specially designed for relocating or returning to an underwater position.
+6.A.1.a.1.Note.	6.A.1.a.1. does not apply to equipment as follows:
+6.A.1.a.1.Note.a.	Depth sounders operating vertically below the apparatus, not including a scanning function exceeding ± 20°, and limited to measuring the depth of water, the distance of submerged or buried objects or fish finding;
+6.A.1.a.1.Note.b.	Acoustic beacons, as follows:
+6.A.1.a.1.Note.b.1.	Acoustic emergency beacons;
+6.A.1.a.1.Note.b.2.	Pingers specially designed for relocating or returning to an underwater position.
 6.A.1.a.1.a.	Acoustic seabed survey equipment as follows:
 6.A.1.a.1.a.1.	Surface vessel survey equipment designed for seabed topographic mapping and having all of the following:
 6.A.1.a.1.a.1.a.	Designed to take measurements at an angle exceeding 20° from the vertical;
@@ -21,9 +21,9 @@ b.	Acoustic beacons, as follows:
 6.A.1.a.1.a.1.d.1.	Motion of the acoustic sensor;
 6.A.1.a.1.a.1.d.2.	In-water propagation from sensor to the seabed and back; and
 6.A.1.a.1.a.1.d.3.	Sound speed at the sensor;
-Technical Notes
-1.	'Sounding resolution' is the swath width (degrees) divided by the maximum number of soundings per swath.
-2.	'Enhancement' includes the ability to compensate by external means. 
+
+6.A.1.a.1.a.1.Technical Notes.1.	'Sounding resolution' is the swath width (degrees) divided by the maximum number of soundings per swath.
+6.A.1.a.1.a.1.Technical Notes.2.	'Enhancement' includes the ability to compensate by external means. 
 
 6.A.1.a.1.a.2.	Underwater survey equipment designed for seabed topographic mapping and having any of the following:
 
@@ -385,18 +385,18 @@ Technical Notes
 6.A.3.b.4.Note 3.b.4.	Having any of the following:
 6.A.3.b.4.Note 3.b.4.a.	No facility to obtain a viewable image of the detected field-of-view; or 
 6.A.3.b.4.Note 3.b.4.b.	The camera is designed for a single kind of application and designed not to be user modified; or
-Note 3 to 6.A.3.b.4.b. cont.
-Technical Note
-'Instantaneous Field of View (IFOV)' specified in Note 3.b. is the lesser figure of the 'Horizontal IFOV' or the 'Vertical IFOV'.
-'Horizontal IFOV' = horizontal Field of View (FOV)/number of horizontal detector elements
-'Vertical IFOV'= vertical Field of View (FOV)/number of vertical detector elements.
-c.	The camera is specially designed for installation into a civilian passenger land vehicle and having all of the following:
-1.	The placement and configuration of the camera within the vehicle are solely to assist the driver in the safe operation of the vehicle;
-2.	Is only operable when installed in any of the following:
-a. 	The civilian passenger land vehicle for which it was intended and the vehicle weighs less than 4,500 kg (gross vehicle weight); or
-b. 	A specially designed, authorized maintenance test facility; and
-3.	Incorporates an active mechanism that forces the camera not to function when it is removed from the vehicle for which it was intended.
-Note	When necessary, details of the item will be provided, upon request, to the appropriate authority in the exporter's country in order to ascertain compliance with the conditions described in Note 3.b.4. and Note 3.c. above.
+
+
+6.A.3.b.4.Note 3.b.Technical Note.	'Instantaneous Field of View (IFOV)' specified in Note 3.b. is the lesser figure of the 'Horizontal IFOV' or the 'Vertical IFOV'.
+6.A.3.b.4.Note 3.b.Technical Note.	'Horizontal IFOV' = horizontal Field of View (FOV)/number of horizontal detector elements
+6.A.3.b.4.Note 3.b.Technical Note.	'Vertical IFOV'= vertical Field of View (FOV)/number of vertical detector elements.
+6.A.3.b.4.Note 3.c.	The camera is specially designed for installation into a civilian passenger land vehicle and having all of the following:
+6.A.3.b.4.Note 3.c.1.	The placement and configuration of the camera within the vehicle are solely to assist the driver in the safe operation of the vehicle;
+6.A.3.b.4.Note 3.c.2.	Is only operable when installed in any of the following:
+6.A.3.b.4.Note 3.c.2.a. 	The civilian passenger land vehicle for which it was intended and the vehicle weighs less than 4,500 kg (gross vehicle weight); or
+6.A.3.b.4.Note 3.c.2.b. 	A specially designed, authorized maintenance test facility; and
+6.A.3.b.4.Note 3.c.3.	Incorporates an active mechanism that forces the camera not to function when it is removed from the vehicle for which it was intended.
+6.A.3.b.4.Note 3.Note.	When necessary, details of the item will be provided, upon request, to the appropriate authority in the exporter's country in order to ascertain compliance with the conditions described in Note 3.b.4. and Note 3.c. above.
 
 6.A.3.b.4.Note 4.	6.A.3.b.4.c. does not apply to imaging cameras having any of the following characteristics:
 6.A.3.b.4.Note 4.a.	Having all of the following:

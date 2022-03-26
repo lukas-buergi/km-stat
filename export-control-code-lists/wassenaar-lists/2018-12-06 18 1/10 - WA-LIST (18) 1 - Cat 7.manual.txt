@@ -1,7 +1,7 @@
 ﻿
 7.A. SYSTEMS, EQUIPMENT AND COMPONENTS
 7.A.N.B.	For automatic pilots for underwater vehicles, see Category 8.
-	For radar, see Category 6.
+7.A.N.B.	For radar, see Category 6.
 
 7.A.1.	Accelerometers as follows and specially designed components therefor:
 7.A.1.N.B.	For angular or rotational accelerometers, see 7.A.1.b.
@@ -126,10 +126,10 @@
 7.B.3.Note.	- Fibre optic gyro coil winding machines.
 
 
-7.C. MATERIALS - None
+7.C.	MATERIALS - None
 
 
-7.D. SOFTWARE
+7.D.	SOFTWARE
 
 7.D.1.	"Software" specially designed or modified for the "development" or "production" of equipment specified by 7.A. or 7.B.
 
@@ -182,7 +182,7 @@
 7.E.4.a.3.	Three dimensional displays for "aircraft";
 7.E.4.a.4.	Not used since 2010
 7.E.4.a.5.	Electric actuators (i.e., electromechanical, electrohydrostatic and integrated actuator package) specially designed for 'primary flight control';
-7.E.4.a.5.Technical Note.
+
 7.E.4.a.5.Technical Note.	'Primary flight control' is "aircraft" stability or manoeuvring control using force/moment generators, i.e. aerodynamic control surfaces or propulsive thrust vectoring.
 
 7.E.4.a.6.	'Flight control optical sensor array' specially designed for implementing "active flight control systems"; or

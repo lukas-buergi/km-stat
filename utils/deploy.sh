@@ -28,7 +28,7 @@
 
 set -euxo pipefail # be careful
 
-container="km-stat_web_1"
+container="km-stat-web-1"
 
 # will not actually deploy the new versions, but as a kind reminder to update the packages it will break your dev containers if the project doesn't work with the new versions (and the changes will get into the next commit if they aren't reversed)
 docker exec $container pip install --upgrade Django mysqlclient pytz sqlparse

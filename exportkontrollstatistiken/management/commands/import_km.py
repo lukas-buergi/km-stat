@@ -144,3 +144,6 @@ class Command(BaseCommand):
                             print("Must go through exports by increasing date.")
                             assert(False)
             lastYear = b.year
+        
+        # remove entries with value 0
+        Geschaefte.objects.filter(umfang=0).delete()

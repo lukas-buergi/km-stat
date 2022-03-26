@@ -1,0 +1,205 @@
+﻿
+8.A.	SYSTEMS, EQUIPMENT AND COMPONENTS
+
+8.A.1.	Submersible vehicles and surface vessels, as follows:
+8.A.1.N.B.	For the status of equipment for submersible vehicles, see:
+8.A.1.N.B.	- Category 6 for sensors;
+8.A.1.N.B.	- Categories 7 and 8 for navigation equipment;
+8.A.1.N.B.	- Category 8.A. for underwater equipment.
+
+8.A.1.a.	Manned, tethered submersible vehicles designed to operate at depths exceeding 1,000 m;
+
+8.A.1.b.	Manned, untethered submersible vehicles having any of the following:
+8.A.1.b.1.	Designed to 'operate autonomously' and having a lifting capacity of all the following:
+8.A.1.b.1.a.	10% or more of their weight in air; and
+8.A.1.b.1.b.	15 kN or more;
+8.A.1.b.2.	Designed to operate at depths exceeding 1,000 m; or
+8.A.1.b.3.	Having all of the following:
+8.A.1.b.3.a.	Designed to continuously 'operate autonomously' for 10 hours or more; and
+8.A.1.b.3.b.	'Range' of 25 nautical miles or more; 
+
+8.A.1.b.Technical Notes.1.	For the purposes of 8.A.1.b., 'operate autonomously' means fully submerged, without snorkel, all systems working and cruising at minimum speed at which the submersible can safely control its depth dynamically by using its depth planes only, with no need for a support vessel or support base on the surface, sea-bed or shore, and containing a propulsion system for submerged or surface use.
+8.A.1.b.Technical Notes.2.	For the purposes of 8.A.1.b., 'range' means half the maximum distance a submersible vehicle can 'operate autonomously'.
+
+8.A.1.c.	Unmanned submersible vehicles, as follows:
+8.A.1.c.1.	Unmanned submersible vehicles having any of the following:
+8.A.1.c.1.a.	Designed for deciding a course relative to any geographical reference without real-time human assistance;
+8.A.1.c.1.b.	Acoustic data or command link; or
+8.A.1.c.1.c.	Optical data or command link exceeding 1,000 m;
+8.A.1.c.2.	Unmanned submersible vehicles, not specified in 8.A.1c.1., having all of the following:
+8.A.1.c.2.a.	Designed to operate with a tether;
+8.A.1.c.2.b.	Designed to operate at depths exceeding 1,000 m; and
+8.A.1.c.2.c.	Having any of the following:
+8.A.1.c.2.c.1.	Designed for self-propelled manoeuvre using propulsion motors or thrusters specified by 8.A.2.a.2.; or
+8.A.1.c.2.c.2.	Fibre optic data link;
+
+8.A.1.d.	Not used since 2018
+
+8.A.1.e.	Ocean salvage systems with a lifting capacity exceeding 5 MN for salvaging objects from depths exceeding 250 m and having any of the following:
+8.A.1.e.1.	Dynamic positioning systems capable of position keeping within 20 m of a given point provided by the navigation system; or
+8.A.1.e.2.	Seafloor navigation and navigation integration systems, for depths exceeding 1,000 m and with positioning "accuracies" to within 10 m of a predetermined point.
+
+8.A.1.f.	Not used since 2014
+
+8.A.1.g.	Not used since 2014
+
+8.A.1.h.	Not used since 2014
+
+8.A.1.i.	Not used since 2014
+
+8.A.2.	Marine systems, equipment and components, as follows:
+8.A.2.N.B.	For underwater communications systems, see Category 5 – Part 1 - Telecommunications.
+8.A.2.a.	Systems, equipment and components, specially designed or modified for submersible vehicles and designed to operate at depths exceeding 1,000 m, as follows:
+8.A.2.a.1.	Pressure housings or pressure hulls with a maximum inside chamber diameter exceeding 1.5 m; 
+8.A.2.a.2.	Direct current propulsion motors or thrusters;
+8.A.2.a.3.	Umbilical cables, and connectors therefor, using optical fibre and having synthetic strength members;
+
+8.A.2.a.4.	Components manufactured from material specified by 8.C.1.;
+
+8.A.2.a.4.Technical Note.	The objective of 8.A.2.a.4. should not be defeated by the export of 'syntactic foam' specified by 8.C.1. when an intermediate stage of manufacture has been performed and it is not yet in its final component form.
+
+8.A.2.b.	Systems specially designed or modified for the automated control of the motion of submersible vehicles specified by 8.A.1., using navigation data, having closed loop servo-controls and having any of the following:
+8.A.2.b.1.	Enabling a vehicle to move within 10 m of a predetermined point in the water column;
+8.A.2.b.2.	Maintaining the position of the vehicle within 10 m of a predetermined point in the water column; or
+8.A.2.b.3.	Maintaining the position of the vehicle within 10 m while following a cable on or under the seabed;
+
+8.A.2.c.	Fibre optic pressure hull penetrators;
+
+8.A.2.d.	Underwater vision systems having all of the following:
+8.A.2.d.1.	Specially designed or modified for remote operation with an underwater vehicle; and
+8.A.2.d.2.	Employing any of the following techniques to minimise the effects of back scatter:
+8.A.2.d.2.a.	Range-gated illuminators; or
+8.A.2.d.2.b.	Range-gated laser systems;
+
+8.A.2.e.	Not used since 2015
+
+8.A.2.f.	Not used since 2009
+8.A.2.f.1.	Not used since 2009
+8.A.2.f.1.N.B.	For electronic imaging systems specially designed or modified for underwater use incorporating image intensifier tubes specified by 6.A.2.a.2.a. or 6.A.2.a.2.b., see 6.A.3.b.3.
+8.A.2.f.2.	Not used since 2009
+8.A.2.f.2.N.B.	For electronic imaging systems specially designed or modified for underwater use incorporating "focal plane arrays" specified by 6.A.2.a.3.g., see 6.A.3.b.4.c.
+
+8.A.2.g.	Light systems specially designed or modified for underwater use, as follows:
+8.A.2.g.1.	Stroboscopic light systems capable of a light output energy of more than 300 J per flash and a flash rate of more than 5 flashes per second;
+8.A.2.g.2.	Argon arc light systems specially designed for use below 1,000 m;
+
+8.A.2.h.	"Robots" specially designed for underwater use, controlled by using a dedicated computer and  having any of the following:
+8.A.2.h.1.	Systems that control the "robot" using information from sensors which measure force or torque applied to an external object, distance to an external object, or tactile sense between the "robot" and an external object; or
+8.A.2.h.2.	The ability to exert a force of 250 N or more or a torque of 250 Nm or more and using titanium based alloys or "composite" "fibrous or filamentary materials" in their structural members;
+
+8.A.2.i.	Remotely controlled articulated manipulators specially designed or modified for use with submersible vehicles and having any of the following:
+8.A.2.i.1.	Systems which control the manipulator using information from sensors which measure any of the following:
+8.A.2.i.1.a.	Torque or force applied to an external object; or
+8.A.2.i.1.b.	Tactile sense between the manipulator and an external object; or
+8.A.2.i.2.	Controlled by proportional master-slave techniques and having 5 degrees of 'freedom of movement' or more;
+
+8.A.2.i.2.Technical Note.	Only functions having proportionally related motion control using positional feedback are counted when determining the number of degrees of 'freedom of movement'.
+
+8.A.2.j.	Air independent power systems specially designed for underwater use, as follows:
+8.A.2.j.1.	Brayton or Rankine cycle engine air independent power systems having any of the following:
+8.A.2.j.1.a.	Chemical scrubber or absorber systems, specially designed to remove carbon dioxide, carbon monoxide and particulates from recirculated engine exhaust;
+8.A.2.j.1.b.	Systems specially designed to use a monoatomic gas;
+8.A.2.j.1.c.	Devices or enclosures, specially designed for underwater noise reduction in frequencies below 10 kHz, or special mounting devices for shock mitigation; or
+8.A.2.j.1.d.	Systems having all of the following:
+8.A.2.j.1.d.1.	Specially designed to pressurise the products of reaction or for fuel reformation;
+8.A.2.j.1.d.2.	Specially designed to store the products of the reaction; and
+8.A.2.j.1.d.3.	Specially designed to discharge the products of the reaction against a pressure of 100 kPa or more;
+
+8.A.2.j.2.	Diesel cycle engine air independent systems having all of the following:
+8.A.2.j.2.a.	Chemical scrubber or absorber systems, specially designed to remove carbon dioxide, carbon monoxide and particulates from recirculated engine exhaust;
+8.A.2.j.2.b.	Systems specially designed to use a monoatomic gas;
+8.A.2.j.2.c.	Devices or enclosures, specially designed for underwater noise reduction in frequencies below 10 kHz, or special mounting devices for shock mitigation; and
+8.A.2.j.2.d.	Specially designed exhaust systems that do not exhaust continuously the products of combustion;
+
+8.A.2.j.3.	"Fuel cell" air independent power systems with an output exceeding 2 kW and having any of the following:
+8.A.2.j.3.a.	Devices or enclosures, specially designed for underwater noise reduction in frequencies below 10 kHz, or special mounting devices for shock mitigation; or
+8.A.2.j.3.b.	Systems having all of the following:
+8.A.2.j.3.b.1.	 Specially designed to pressurise the products of reaction or for fuel reformation;
+8.A.2.j.3.b.2.	Specially designed to store the products of the reaction; and
+8.A.2.j.3.b.3.	Specially designed to discharge the products of the reaction against a pressure of 100 kPa or more;
+
+8.A.2.j.4.	Stirling cycle engine air independent power systems having all of the following:
+8.A.2.j.4.a.	Devices or enclosures, specially designed for underwater noise reduction in frequencies below 10 kHz, or special mounting devices for shock mitigation; and 
+8.A.2.j.4.b.	Specially designed exhaust systems which discharge the products of combustion against a pressure of 100 kPa or more;
+
+8.A.2.k.	Not used since 2014
+
+8.A.2.l.	Not used since 2014
+
+8.A.2.m.	Not used since 2014
+
+8.A.2.n.	Not used since 2014
+
+8.A.2.o.	Propellers, power transmission systems, power generation systems and noise reduction systems, as follows:
+8.A.2.o.1.	Not used since 2014
+8.A.2.o.2.	Water-screw propeller, power generation systems or transmission systems, designed for use on vessels, as follows:
+8.A.2.o.2.a.	Controllable-pitch propellers and hub assemblies, rated at more than 30 MW;
+8.A.2.o.2.b.	Internally liquid-cooled electric propulsion engines with a power output exceeding 2.5 MW;
+8.A.2.o.2.c.	"Superconductive" propulsion engines or permanent magnet electric propulsion engines, with a power output exceeding 0.1 MW;
+8.A.2.o.2.d.	Power transmission shaft systems incorporating "composite" material components and capable of transmitting more than 2 MW;
+8.A.2.o.2.e.	Ventilated or base-ventilated propeller systems, rated at more than 2.5 MW;
+8.A.2.o.3.	Noise reduction systems designed for use on vessels of 1,000 tonnes displacement or more, as follows:
+8.A.2.o.3.a.	Systems that attenuate underwater noise at frequencies below 500 Hz and consist of compound acoustic mounts for the acoustic isolation of diesel engines, diesel generator sets, gas turbines, gas turbine generator sets, propulsion motors or propulsion reduction gears, specially designed for sound or vibration isolation and having an intermediate mass exceeding 30% of the equipment to be mounted;
+
+8.A.2.o.3.b.	'Active noise reduction or cancellation systems' or magnetic bearings, specially designed for power transmission systems;
+
+8.A.2.o.3.b.Technical Note.	'Active noise reduction or cancellation systems' incorporate electronic control systems capable of actively reducing equipment vibration by the generation of anti-noise or anti-vibration signals directly to the source.
+
+8.A.2.p.	Pumpjet propulsion systems having all of the following:
+8.A.2.p.1.	Power output exceeding 2.5 MW; and
+8.A.2.p.2.	Using divergent nozzle and flow conditioning vane techniques to improve propulsive efficiency or reduce propulsion-generated underwater-radiated noise;
+
+8.A.2.q.	Underwater swimming and diving equipment as follows:
+8.A.2.q.1.	Closed circuit rebreathers;
+8.A.2.q.2.	Semi-closed circuit rebreathers;
+8.A.2.q.Note.	8.A.2.q. does not apply to individual rebreathers for personal use when accompanying their users.
+8.A.2.q.N.B.	For equipment and devices specially designed for military use, see ML17.a. on the Munitions List.
+
+8.A.2.r.	Diver deterrent acoustic systems specially designed or modified to disrupt divers and having a sound pressure level equal to or exceeding 190 dB (reference 1 µPa at 1 m) at frequencies of 200 Hz and below.
+8.A.2.r.Note 1.	8.A.2.r. does not apply to diver deterrent systems based on underwater explosive devices, air guns or combustible sources.
+8.A.2.r.Note 2.	8.A.2.r. includes diver deterrent acoustic systems that use spark gap sources, also known as plasma sound sources.
+
+
+8.B.	TEST, INSPECTION AND PRODUCTION EQUIPMENT
+
+8.B.1.	Water tunnels designed to have a background noise of less than 100 dB (reference 1 µPa, 1 Hz) within the frequency range exceeding 0 Hz but not exceeding 500 Hz and designed for measuring acoustic fields generated by a hydro-flow around propulsion system models.
+
+
+8.C.	MATERIALS
+
+8.C.1.	'Syntactic foam' designed for underwater use and having all of the following:
+8.C.1.a.	Designed for marine depths exceeding 1,000 m; and
+8.C.1.b.	A density less than 561 kg/m3.
+
+8.C.1.Technical Note.	'Syntactic foam' consists of hollow spheres of plastic or glass embedded in a resin "matrix".
+8.C.1.N.B.	See also 8.A.2.a.4.
+
+
+8.D.	SOFTWARE
+
+8.D.1.	"Software" specially designed or modified for the "development", "production" or "use" of equipment or materials, specified by 8.A., 8.B. or 8.C.
+
+8.D.2.	Specific "software" specially designed or modified for the "development", "production", repair, overhaul or refurbishing (re-machining) of propellers specially designed for underwater noise reduction.
+
+
+8.E.	TECHNOLOGY
+
+8.E.1.	"Technology" according to the General Technology Note for the "development" or "production" of equipment or materials, specified by 8.A., 8.B. or 8.C.
+
+8.E.2.	Other "technology" as follows:
+8.E.2.a.	"Technology" for the "development", "production", repair, overhaul or refurbishing (re-machining) of propellers specially designed for underwater noise reduction;
+8.E.2.b.	"Technology" for the overhaul or refurbishing of equipment specified by 8.A.1., 8.A.2.b., 8.A.2.j., 8.A.2.o. or 8.A.2.p.
+
+8.E.2.c.	"Technology" according to the General Technology Note for the "development" or "production" of any of the following:
+8.E.2.c.1.	Surface-effect vehicles (fully skirted variety) having all of the following:
+8.E.2.c.1.a.	Maximum design speed, fully loaded, exceeding 30 knots in a significant wave height of 1.25 m or more;
+8.E.2.c.1.b.	Cushion pressure exceeding 3,830 Pa; and
+8.E.2.c.1.c.	Light-ship-to-full-load displacement ratio of less than 0.70;
+8.E.2.c.2.	Surface-effect vehicles (rigid sidewalls) with a maximum design speed, fully loaded, exceeding 40 knots in a significant wave height of 3.25 m or more;
+8.E.2.c.3.	Hydrofoil vessels with active systems for automatically controlling foil systems, with a maximum design speed, fully loaded, of 40 knots or more in a significant wave height of 3.25 m or more; or
+8.E.2.c.4.	'Small waterplane area vessels' having any of the following:
+8.E.2.c.4.a.	Full load displacement exceeding 500 tonnes with a maximum design speed, fully loaded, exceeding 35 knots in a significant wave height of 3.25 m or more; or
+8.E.2.c.4.b.	Full load displacement exceeding 1,500 tonnes with a maximum design speed, fully loaded, exceeding 25 knots in a significant wave height of 4 m or more.
+
+8.E.2.c.4.Technical Note.	A 'small waterplane area vessel' is defined by the following formula: waterplane area at an operational design draft less than 2x (displaced volume at the operational design draft)2/3.
+
