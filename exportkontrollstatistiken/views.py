@@ -211,10 +211,10 @@ def mainpage(request, granularity, countries, types, year1, year2, sortBy, perPa
     raise # TODO: This line is not for production.
     return(HttpResponse("Invalid parameter."))
   template = loader.get_template('exportkontrollstatistiken/index.html')
-  params.typesChoices = { # hides du from interface. TODO: finish import
+  params.typesChoices = {
     "k" : ["Kriegsmaterial", "Kriegsmaterial"],
     "b" : ["Besondere militärische Güter", "Besonderen militärischen Gütern"],
-    "d" : ["Dual Use Güter", "Dual Use Gütern"],
+    "d" : ["Dual Use Güter", "Dual Use Gütern"], # comment this line to hide DU
   } 
   context = {
     'p' : params,
@@ -226,7 +226,7 @@ def mainpage(request, granularity, countries, types, year1, year2, sortBy, perPa
   return HttpResponse(template.render(context, request))
 
 def index(request):
-  return(mainpage(request, "s", "all", "kbd", Geschaefte.getFirstYear(), Geschaefte.getLastYear(), "v", 10, 1))
+  return(mainpage(request, "s", "all", "kb", Geschaefte.getFirstYear(), Geschaefte.getLastYear(), "v", 10, 1))
 
 def webmanifest(request):
   return(render(request, 'exportkontrollstatistiken/favicon/site.webmanifest', {}))

@@ -71,7 +71,7 @@ and wait until startup completes, then the site should be available on [localhos
 ## Push to staging for first time:
 
 * Make sure your public key was added to the server
-* Add remote: `git remote add km-staging git+ssh://6860452@git.sd3.gpaas.net/default.git`
+* Add remote: git config --local include.path ../gitconfig (this is a security risk, you might want to add it directly instead of including this file)
 * Configure ssh:
 ```
 Host km-staging
