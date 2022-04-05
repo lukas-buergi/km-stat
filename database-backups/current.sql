@@ -1,1 +1,1 @@
-./utils/../database-backups/2022-04-05.sql
+2022-04-05.sql
