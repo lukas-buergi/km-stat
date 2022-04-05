@@ -28,4 +28,4 @@ fname=$(date '+20%y-%m-%d').sql
 basedir="$(dirname "$0")"/..
 docker exec $container sh -c 'mysqldump -p$MYSQL_PASSWORD kriegsmaterialch > /'"$fname"
 docker cp $container:/$fname "$basedir"/database-backups/$fname
-ln -fs "$basedir"/database-backups/$fname "$basedir"/database-backups/current.sql
+ln -fs "$fname" "$basedir"/database-backups/current.sql
