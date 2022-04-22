@@ -20,6 +20,8 @@
 
 import os
 
+from kriegsmaterialch.settings import INTERNAL_IPS, INSTALLED_APPS
+
 # SECURITY WARNING: keep the secret key used in production secret!
 # just generate an arbitrary string of similar strength to replace this!
 SECRET_KEY = 'l#9ts+=wbie*^bu#1e-zyzero$*@5-!edo@qw_hpa_0t3f7c+o'
@@ -36,6 +38,12 @@ DATABASES = {
         'PASSWORD' : os.environ.get('DB_PASSWORD'),
     }
 }
+
+INTERNAL_IPS = (
+    '127.0.0.1',
+    '172.31.0.1',
+    '192.168.32.1'
+)
 
 STATIC_URL = '/static/'
 STATIC_ROOT = None
