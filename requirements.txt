@@ -1,4 +1,4 @@
 Django==4.0.3
 mysqlclient==2.1.0
 pytz==2022.1
-sqlparse==0.4.2
+sqlparse==0.4.4
