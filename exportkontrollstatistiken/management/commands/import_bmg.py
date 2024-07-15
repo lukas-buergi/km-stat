@@ -63,6 +63,8 @@ class Command(BaseCommand):
             ['2021-04-01-2021-06-30.csv', 'elic'],
             ['2021-07-01-2021-09-30.csv', 'elic'],
             ['2021-10-01-2021-12-31.csv', 'elic'],
+            ['2022-01-01-2022-03-31.csv', 'elic'],
+            ['2022-01-01-2022-06-30.csv', 'elic'],
         ]
         for f in files:
             if(f[1] in ["elic", "elic2014", "elic2015"]):
