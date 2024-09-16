@@ -24,6 +24,7 @@ function Params(p){
   // constructor ///////////////////////////////////////////////////////
   // Takes either json as returned by Python view or another js Params object
   this.paramNames = p.paramNames;
+  this.urlParamNames = [ 'granularity', 'countries', 'types', 'year1', 'year2', 'sortBy', 'perPage', 'pageNumber' ];
   for (let index = 0; index < p.paramNames.length; ++index){
     const name = p.paramNames[index];
     const attr = p[name];
@@ -37,9 +38,8 @@ function Params(p){
   this.getURL = function(){
       this.assembleTypes();
       let url = '';
-      const urlParamNames = [ 'granularity', 'countries', 'types', 'year1', 'year2', 'sortBy', 'perPage', 'pageNumber' ];
-      for (let index = 0; index < urlParamNames.length; ++index){
-        url += '/' + this[urlParamNames[index]];
+      for (let index = 0; index < this.urlParamNames.length; ++index){
+        url += '/' + this[this.urlParamNames[index]];
       }
       return(url);
   };
@@ -80,6 +80,13 @@ function Params(p){
       copy[types[t]] = this[types[t]];
     }
     return(copy);
+  };
+  this.getReadableSearchString = function(oldParam){
+    return this.urlParamNames.reduce((search, urlParam) => {
+      return oldParam[urlParam] !== this[urlParam]
+        ? search + urlParam + '="' +this[urlParam] + '" '
+        : search;
+    }, '');
   };
 }
 
@@ -124,36 +131,24 @@ function Filter(name, p){
     d3.select(id).property(propertyName, this.p[paramName]);
   };
   this.showExtended = function(){
+    _paq.push(['trackEvent', 'Filter', 'More Options']);
     d3.select('div.filter_constrainer').style('max-width', '100%');
-    {
-      const list = document.getElementsByClassName("minimized");
-      for (let i = 0; i < list.length; i++) {
-        list[i].style.display = 'none';
-      }
-    }
-    {
-      const list = document.getElementsByClassName("extended");
-      for (let i = 0; i < list.length; i++) {
-        list[i].style.display = 'flex';
-      }
-    }
-
+    this.toggleExtendedFilter(true);
   };
   this.hideExtended = function(){
+    _paq.push(['trackEvent', 'Filter', 'Less Options']);
     d3.select('div.filter_constrainer').style('max-width', '50rem');
-    {
-      const list = document.getElementsByClassName("extended");
-      for (let i = 0; i < list.length; i++) {
-        list[i].style.display = 'none';
-      }
-    }
-    {
-      const list = document.getElementsByClassName("minimized");
-      for (let i = 0; i < list.length; i++) {
-        list[i].style.display = 'flex';
-      }
-    }
+    this.toggleExtendedFilter(false);
   };
+  this.toggleExtendedFilter = function(extended){
+    Array.prototype.forEach.call(document.getElementsByClassName("extended"), function(el) {
+      el.style.display = extended ? 'flex' : 'none';
+    });
+    
+    Array.prototype.forEach.call(document.getElementsByClassName("minimized"), function(el) {
+      el.style.display = extended ? 'none' : 'flex';
+    });
+  }
   this.buildYearDropDown = function (id, pa){
     let years = []
     let year;
@@ -221,7 +216,10 @@ function Filter(name, p){
 function Controller(p, countriesURL){
   // methods ///////////////////////////////////////////////////////////
   this.updateWidgets = function(p, updateHistory=true){
+    var oldParam = this.p;
     this.p = new Params(p);
+    _paq.push(['trackSiteSearch', this.p.getReadableSearchString(oldParam), false, false]);
+    
     if(updateHistory){
       //console.log("Saving previous state: " + this.p.getURL());
       history.pushState(this.p.getSerializableCopy(), "", this.p.getURL());
